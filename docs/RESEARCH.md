@@ -29,9 +29,9 @@ Full detail with sources lives in `.research/comfyui-pbr-generation/FINDINGS.md`
 
 ## Facts the design leans on
 
-- ComfyUI runs headless; workflows are API-format JSON submitted to POST /prompt, polled on /history, images fetched from /view. Proven local pattern exists (censurado brain client, stdlib only).
-- The local ComfyUI image (comfyui-strix-docker) is stock: custom nodes (seamless-tiling, controlnet_aux, estimator nodes) must be added via a custom_nodes bind mount or Dockerfile step, or they vanish on rebuild.
-- Models on disk today: FLUX.2 klein 4B set only. An SDXL checkpoint must be downloaded (check ~/models first).
+- ComfyUI runs headless; workflows are API-format JSON submitted to POST /prompt, polled on /history, images fetched from /view. Proven local pattern exists (a prior stdlib-only client).
+- The local ComfyUI image is stock: custom nodes (seamless-tiling, controlnet_aux, estimator nodes) must be added via a custom_nodes bind mount or Dockerfile step, or they vanish on rebuild.
+- Models on disk today: FLUX.2 klein 4B set only. An SDXL checkpoint must be downloaded (check the local model store first).
 - Map conventions: basecolor and emission sRGB, all other maps linear; metallic-roughness workflow (three.js/GLB consumers).
 - Prompting for flat tiles (from glb-buildings texture research): "long telephoto lens straight on" instead of render language, name the material finish and scale, seam falls on solid material, standard negative prompt, pure-material-field append for plain surfaces.
 
