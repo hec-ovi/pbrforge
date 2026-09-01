@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/wood/poor",
+    "alignment": "tile",
+    "description": "worn wooden floor planks, scratches and grey patina, dull faded brown",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.85,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wood/mid",
+    "alignment": "tile",
+    "description": "oiled wooden floor planks, light wear, medium warm brown",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.7,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wood/rich",
+    "alignment": "tile",
+    "description": "polished oak parquet floor, clean fine grain, warm honey brown",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.45,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wood/high_rich",
+    "alignment": "tile",
+    "description": "polished dark walnut floor planks, immaculate, deep brown",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.35,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  }
+]

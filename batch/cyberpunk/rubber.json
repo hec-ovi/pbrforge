@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/rubber/poor",
+    "alignment": "tile",
+    "description": "worn studded rubber floor surface, round low studs, scuffed dark grey",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/rubber/mid",
+    "alignment": "tile",
+    "description": "studded rubber floor surface, round low studs, even dark grey",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.85,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/rubber/rich",
+    "alignment": "tile",
+    "description": "fine textured rubber floor surface, subtle grain, clean anthracite",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.8,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/rubber/high_rich",
+    "alignment": "tile",
+    "description": "smooth premium rubber floor surface, faint sheen, deep black",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.7,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  }
+]

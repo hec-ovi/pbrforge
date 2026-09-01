@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/tile/poor",
+    "alignment": "tile",
+    "description": "old small square ceramic wall tiles, grimy grout, few chipped corners, dull white",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.55,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/tile/mid",
+    "alignment": "tile",
+    "description": "small square ceramic tiles, clean grout, matte light grey",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.45,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/tile/rich",
+    "alignment": "tile",
+    "description": "large format ceramic tiles, thin grout lines, polished warm grey",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/tile/high_rich",
+    "alignment": "tile",
+    "description": "large format polished stone tiles, hairline grout lines, deep charcoal",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.25,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  }
+]

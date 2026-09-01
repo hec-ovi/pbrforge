@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/fabric/poor",
+    "alignment": "tile",
+    "description": "worn woven upholstery fabric surface, coarse weave, faded grey-brown",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.95,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/fabric/mid",
+    "alignment": "tile",
+    "description": "woven upholstery fabric surface, even weave, muted grey-blue",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/fabric/rich",
+    "alignment": "tile",
+    "description": "fine woven wool fabric surface, tight weave, warm dark taupe",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/fabric/high_rich",
+    "alignment": "tile",
+    "description": "premium fine weave fabric surface, immaculate, deep charcoal",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.88,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  }
+]

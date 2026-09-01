@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/metal/poor",
+    "alignment": "tile",
+    "description": "scuffed galvanized steel surface, dull grey, faint oxidation haze",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.65,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/metal/mid",
+    "alignment": "tile",
+    "description": "brushed aluminium surface with fine horizontal grain, even medium grey",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.45,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/metal/rich",
+    "alignment": "tile",
+    "description": "brushed stainless steel surface with fine grain, clean charcoal",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.35,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/metal/high_rich",
+    "alignment": "tile",
+    "description": "matte black powder-coated metal surface, flawless satin finish",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.25,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  }
+]

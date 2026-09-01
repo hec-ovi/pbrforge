@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/concrete/poor",
+    "alignment": "tile",
+    "description": "stained raw concrete surface, patched repairs, oil marks, dull grey",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/concrete/mid",
+    "alignment": "tile",
+    "description": "cast concrete surface, light wear, even grey",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.85,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/concrete/rich",
+    "alignment": "tile",
+    "description": "polished concrete surface, fine aggregate, clean warm grey",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/concrete/high_rich",
+    "alignment": "tile",
+    "description": "polished micro-finished concrete surface, immaculate, cool graphite",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.45,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  }
+]

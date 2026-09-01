@@ -1,0 +1,74 @@
+[
+  {
+    "key": "cyberpunk/elevator_door/poor",
+    "alignment": "exact",
+    "description": "photograph of closed worn brushed steel elevator doors filling the frame, straight-on front view, center seam, scuffs and grime streaks, flat even light",
+    "aspect": [
+      1,
+      2
+    ],
+    "resolution": [
+      832,
+      1216
+    ],
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/elevator_door/mid",
+    "alignment": "exact",
+    "description": "photograph of closed brushed steel elevator doors filling the frame, straight-on front view, center seam, light scuffs, flat even light",
+    "aspect": [
+      1,
+      2
+    ],
+    "resolution": [
+      832,
+      1216
+    ],
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/elevator_door/rich",
+    "alignment": "exact",
+    "description": "photograph of closed polished steel elevator doors filling the frame, straight-on front view, thin center seam, clean charcoal finish, flat even light",
+    "aspect": [
+      1,
+      2
+    ],
+    "resolution": [
+      832,
+      1216
+    ],
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/elevator_door/high_rich",
+    "alignment": "exact",
+    "description": "photograph of closed immaculate black brushed metal elevator doors filling the frame, straight-on front view, hairline center seam, flat even light",
+    "aspect": [
+      1,
+      2
+    ],
+    "resolution": [
+      832,
+      1216
+    ],
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  }
+]

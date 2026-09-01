@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/plaster/poor",
+    "alignment": "tile",
+    "description": "stained painted plaster wall surface, hairline cracks, water marks, faded dirty beige",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/plaster/mid",
+    "alignment": "tile",
+    "description": "matte painted plaster wall surface, light scuffs, warm off-white",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.8,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/plaster/rich",
+    "alignment": "tile",
+    "description": "smooth painted plaster wall surface, clean, soft warm white",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.65,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/plaster/high_rich",
+    "alignment": "tile",
+    "description": "flawless smooth painted plaster wall surface, immaculate, cool white",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  }
+]

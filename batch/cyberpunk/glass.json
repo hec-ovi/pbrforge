@@ -1,0 +1,90 @@
+[
+  {
+    "key": "cyberpunk/glass/poor",
+    "alignment": "tile",
+    "description": "flat glass surface, synthesized",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "breakable": true,
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0,
+      "transmission": 0.7,
+      "ior": 1.5,
+      "tint": "#a8b0aa"
+    },
+    "variants": 2,
+    "flatColor": "#d6dbd6",
+    "flatNoise": 0.07
+  },
+  {
+    "key": "cyberpunk/glass/mid",
+    "alignment": "tile",
+    "description": "flat glass surface, synthesized",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "breakable": true,
+      "roughnessFactor": 0.15,
+      "metallicFactor": 0,
+      "transmission": 0.85,
+      "ior": 1.5,
+      "tint": "#c0cbcf"
+    },
+    "variants": 2,
+    "flatColor": "#e2e7e8",
+    "flatNoise": 0.04
+  },
+  {
+    "key": "cyberpunk/glass/rich",
+    "alignment": "tile",
+    "description": "flat glass surface, synthesized",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "breakable": true,
+      "roughnessFactor": 0.06,
+      "metallicFactor": 0,
+      "transmission": 0.92,
+      "ior": 1.5,
+      "tint": "#c9dde4"
+    },
+    "variants": 2,
+    "flatColor": "#edf3f4",
+    "flatNoise": 0.025
+  },
+  {
+    "key": "cyberpunk/glass/high_rich",
+    "alignment": "tile",
+    "description": "flat glass surface, synthesized",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "breakable": true,
+      "roughnessFactor": 0.03,
+      "metallicFactor": 0,
+      "transmission": 0.95,
+      "ior": 1.5,
+      "tint": "#d3e2ef"
+    },
+    "variants": 2,
+    "flatColor": "#f1f6fa",
+    "flatNoise": 0.015
+  }
+]

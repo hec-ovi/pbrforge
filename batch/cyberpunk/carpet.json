@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/carpet/poor",
+    "alignment": "tile",
+    "description": "threadbare stained office carpet surface, flattened pile, dirty grey",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.98,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/carpet/mid",
+    "alignment": "tile",
+    "description": "short pile office carpet surface, even weave, medium grey",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.95,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/carpet/rich",
+    "alignment": "tile",
+    "description": "dense cut pile carpet surface, soft even texture, warm taupe",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/carpet/high_rich",
+    "alignment": "tile",
+    "description": "plush deep pile carpet surface, immaculate, dark charcoal",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  }
+]
