@@ -30,6 +30,9 @@ import requestSchema from '../../schema/create-request.schema.json' with { type:
 
 const KEY = /^([a-z0-9_-]+)\/([a-z0-9_-]+)\/([a-z0-9_-]+)$/;
 
+/** Map order in the index, so an entry reads the same whichever lane built it. */
+const MAP_ORDER: MapName[] = ['basecolor', 'normal', 'roughness', 'metallic', 'height', 'ao', 'emission'];
+
 /** What one variant is built from: the surface, its own relief and gloss when it has them, and the screen lane. */
 interface Source {
   basecolor: Rgb;
@@ -218,6 +221,8 @@ export class Generator {
           ? await emissionMap(source.basecolor, mode)
           : await derivedMaps(source, target, mode)),
     ];
+
+    files.sort((a, b) => MAP_ORDER.indexOf(a[0]) - MAP_ORDER.indexOf(b[0]));
 
     const relDir = join('assets', target.kind, target.tier, id);
     const absDir = join(this.db.themeDir(target.theme), relDir);
