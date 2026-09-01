@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urbe-materials/create-request",
+  "$id": "urn:urbe:create-request",
   "title": "CreateRequest",
   "type": "object",
   "required": ["key", "alignment", "description"],
@@ -64,7 +64,7 @@
     "seed": { "type": "integer", "minimum": 0, "description": "default: derived from the description" },
     "resolution": {
       "type": "array",
-      "items": { "type": "integer", "minimum": 256 },
+      "items": { "type": "integer", "minimum": 64 },
       "minItems": 2,
       "maxItems": 2,
       "default": [1024, 1024]

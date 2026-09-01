@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urbe-materials/material-entry",
+  "$id": "urn:urbe:material-entry",
   "title": "MaterialEntry",
   "type": "object",
   "required": ["key", "alignment", "physical", "variants"],

@@ -1,0 +1,1 @@
+seamless tileable texture, shot dead flat-on with a long telephoto lens so there is no perspective and no convergence, sharp across the whole frame, even detail edge to edge, no vignette, no depth of field, hyper realistic, extreme realism

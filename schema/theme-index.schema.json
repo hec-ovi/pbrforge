@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urbe-materials/theme-index",
+  "$id": "urn:urbe:theme-index",
   "title": "ThemeIndex",
   "type": "object",
   "required": ["theme", "entries"],
@@ -11,7 +11,7 @@
       "type": "object",
       "description": "key -> MaterialEntry; every entry.key equals its map key, aliases must not collide with keys",
       "propertyNames": { "pattern": "^[a-z0-9_-]+/[a-z0-9_-]+/[a-z0-9_-]+$" },
-      "additionalProperties": { "$ref": "urbe-materials/material-entry" }
+      "additionalProperties": { "$ref": "urn:urbe:material-entry" }
     }
   }
 }

@@ -1,0 +1,4 @@
+services:
+  comfyui:
+    volumes:
+      - ${MATERIALS_CUSTOM_NODES}:/app/ComfyUI/custom_nodes
