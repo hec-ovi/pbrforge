@@ -1,0 +1,218 @@
+[
+  {
+    "key": "cyberpunk/letter-atlas/poor",
+    "alignment": "exact",
+    "resolution": [
+      1024,
+      768
+    ],
+    "emission": "luminance",
+    "description": "neon tube letter sheet, one glyph per cell",
+    "aspect": [
+      4,
+      3
+    ],
+    "physical": {
+      "roughnessFactor": 0.35,
+      "metallicFactor": 0,
+      "emissiveStrength": 5
+    },
+    "variantId": "neon",
+    "pattern": {
+      "kind": "glyph-atlas",
+      "colors": [
+        "#fff2d4",
+        "#ffcf7a",
+        "#141210"
+      ],
+      "line": 0.045,
+      "bevel": 0.05,
+      "depth": 0.5
+    }
+  },
+  {
+    "key": "cyberpunk/letter-atlas/poor",
+    "alignment": "exact",
+    "resolution": [
+      1024,
+      768
+    ],
+    "emission": "luminance",
+    "append": true,
+    "description": "backlit panel letter sheet, one glyph per cell",
+    "variantId": "panel",
+    "pattern": {
+      "kind": "glyph-atlas",
+      "colors": [
+        "#fff2d4",
+        "#ffcf7a",
+        "#141210"
+      ],
+      "line": 0.11,
+      "bevel": 0.015,
+      "depth": 0.3
+    }
+  },
+  {
+    "key": "cyberpunk/letter-atlas/mid",
+    "alignment": "exact",
+    "resolution": [
+      1024,
+      768
+    ],
+    "emission": "luminance",
+    "description": "neon tube letter sheet, one glyph per cell",
+    "aspect": [
+      4,
+      3
+    ],
+    "physical": {
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0,
+      "emissiveStrength": 5
+    },
+    "variantId": "neon",
+    "pattern": {
+      "kind": "glyph-atlas",
+      "colors": [
+        "#eafcff",
+        "#7fe8ff",
+        "#10161a"
+      ],
+      "line": 0.045,
+      "bevel": 0.05,
+      "depth": 0.5
+    }
+  },
+  {
+    "key": "cyberpunk/letter-atlas/mid",
+    "alignment": "exact",
+    "resolution": [
+      1024,
+      768
+    ],
+    "emission": "luminance",
+    "append": true,
+    "description": "backlit panel letter sheet, one glyph per cell",
+    "variantId": "panel",
+    "pattern": {
+      "kind": "glyph-atlas",
+      "colors": [
+        "#eafcff",
+        "#7fe8ff",
+        "#10161a"
+      ],
+      "line": 0.11,
+      "bevel": 0.015,
+      "depth": 0.3
+    }
+  },
+  {
+    "key": "cyberpunk/letter-atlas/rich",
+    "alignment": "exact",
+    "resolution": [
+      1024,
+      768
+    ],
+    "emission": "luminance",
+    "description": "neon tube letter sheet, one glyph per cell",
+    "aspect": [
+      4,
+      3
+    ],
+    "physical": {
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0,
+      "emissiveStrength": 5
+    },
+    "variantId": "neon",
+    "pattern": {
+      "kind": "glyph-atlas",
+      "colors": [
+        "#ffeaf7",
+        "#ffc0e6",
+        "#140f16"
+      ],
+      "line": 0.045,
+      "bevel": 0.05,
+      "depth": 0.5
+    }
+  },
+  {
+    "key": "cyberpunk/letter-atlas/rich",
+    "alignment": "exact",
+    "resolution": [
+      1024,
+      768
+    ],
+    "emission": "luminance",
+    "append": true,
+    "description": "backlit panel letter sheet, one glyph per cell",
+    "variantId": "panel",
+    "pattern": {
+      "kind": "glyph-atlas",
+      "colors": [
+        "#ffeaf7",
+        "#ffc0e6",
+        "#140f16"
+      ],
+      "line": 0.11,
+      "bevel": 0.015,
+      "depth": 0.3
+    }
+  },
+  {
+    "key": "cyberpunk/letter-atlas/high_rich",
+    "alignment": "exact",
+    "resolution": [
+      1024,
+      768
+    ],
+    "emission": "luminance",
+    "description": "neon tube letter sheet, one glyph per cell",
+    "aspect": [
+      4,
+      3
+    ],
+    "physical": {
+      "roughnessFactor": 0.25,
+      "metallicFactor": 0,
+      "emissiveStrength": 5
+    },
+    "variantId": "neon",
+    "pattern": {
+      "kind": "glyph-atlas",
+      "colors": [
+        "#ffffff",
+        "#cfe9ff",
+        "#0d1116"
+      ],
+      "line": 0.045,
+      "bevel": 0.05,
+      "depth": 0.5
+    }
+  },
+  {
+    "key": "cyberpunk/letter-atlas/high_rich",
+    "alignment": "exact",
+    "resolution": [
+      1024,
+      768
+    ],
+    "emission": "luminance",
+    "append": true,
+    "description": "backlit panel letter sheet, one glyph per cell",
+    "variantId": "panel",
+    "pattern": {
+      "kind": "glyph-atlas",
+      "colors": [
+        "#ffffff",
+        "#cfe9ff",
+        "#0d1116"
+      ],
+      "line": 0.11,
+      "bevel": 0.015,
+      "depth": 0.3
+    }
+  }
+]

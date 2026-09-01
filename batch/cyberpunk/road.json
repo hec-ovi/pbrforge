@@ -1,0 +1,238 @@
+[
+  {
+    "key": "cyberpunk/road/poor",
+    "alignment": "tile",
+    "description": "dark asphalt with aggregate and wear",
+    "tiling": {
+      "worldSize": [
+        6,
+        6
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.95,
+      "metallicFactor": 0
+    },
+    "variantId": "street",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#232527",
+        "#34373a"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "octaves": 4,
+      "depth": 0.25,
+      "grain": 0.035
+    }
+  },
+  {
+    "key": "cyberpunk/road/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "highway",
+    "description": "coarser sun bleached asphalt",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#2b2d30",
+        "#3c4045"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 4,
+      "depth": 0.2,
+      "grain": 0.03
+    }
+  },
+  {
+    "key": "cyberpunk/road/mid",
+    "alignment": "tile",
+    "description": "dark asphalt with aggregate and wear",
+    "tiling": {
+      "worldSize": [
+        6,
+        6
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0
+    },
+    "variantId": "street",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#26282a",
+        "#33363a"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "octaves": 4,
+      "depth": 0.25,
+      "grain": 0.035
+    }
+  },
+  {
+    "key": "cyberpunk/road/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "highway",
+    "description": "coarser sun bleached asphalt",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#2e3134",
+        "#3c4045"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 4,
+      "depth": 0.2,
+      "grain": 0.03
+    }
+  },
+  {
+    "key": "cyberpunk/road/rich",
+    "alignment": "tile",
+    "description": "dark asphalt with aggregate and wear",
+    "tiling": {
+      "worldSize": [
+        6,
+        6
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.88,
+      "metallicFactor": 0
+    },
+    "variantId": "street",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#2a2c2f",
+        "#35383c"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "octaves": 4,
+      "depth": 0.25,
+      "grain": 0.035
+    }
+  },
+  {
+    "key": "cyberpunk/road/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "highway",
+    "description": "coarser sun bleached asphalt",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#32353a",
+        "#40444a"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 4,
+      "depth": 0.2,
+      "grain": 0.03
+    }
+  },
+  {
+    "key": "cyberpunk/road/high_rich",
+    "alignment": "tile",
+    "description": "dark asphalt with aggregate and wear",
+    "tiling": {
+      "worldSize": [
+        6,
+        6
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.85,
+      "metallicFactor": 0
+    },
+    "variantId": "street",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#2d3033",
+        "#3a3d41"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "octaves": 4,
+      "depth": 0.25,
+      "grain": 0.035
+    }
+  },
+  {
+    "key": "cyberpunk/road/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "highway",
+    "description": "coarser sun bleached asphalt",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#35383d",
+        "#44484e"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 4,
+      "depth": 0.2,
+      "grain": 0.03
+    }
+  }
+]

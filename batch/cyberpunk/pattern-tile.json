@@ -1,0 +1,110 @@
+[
+  {
+    "key": "cyberpunk/tile/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "slab",
+    "description": "large format floor slabs with thin joints",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#b4b1a8"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.008,
+      "bevel": 0.005,
+      "depth": 0.35,
+      "joint": 0.45,
+      "variation": 0.06,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "slab",
+    "description": "large format floor slabs with thin joints",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#aeb2b2"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.008,
+      "bevel": 0.005,
+      "depth": 0.35,
+      "joint": 0.45,
+      "variation": 0.06,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "slab",
+    "description": "large format floor slabs with thin joints",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#c3c0ba"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.008,
+      "bevel": 0.005,
+      "depth": 0.35,
+      "joint": 0.45,
+      "variation": 0.06,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "slab",
+    "description": "large format floor slabs with thin joints",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#34383d"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.008,
+      "bevel": 0.005,
+      "depth": 0.35,
+      "joint": 0.45,
+      "variation": 0.06,
+      "grain": 0.02
+    }
+  }
+]

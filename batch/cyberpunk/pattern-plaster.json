@@ -1,0 +1,322 @@
+[
+  {
+    "key": "cyberpunk/plaster/poor",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "hex",
+    "description": "hexagon printed wall panel",
+    "pattern": {
+      "kind": "hexagon",
+      "colors": [
+        "#a09585"
+      ],
+      "cells": [
+        7,
+        4
+      ],
+      "line": 0.012,
+      "joint": 0.2,
+      "sheen": 0.16,
+      "variation": 0.04,
+      "depth": 0.08,
+      "grain": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/poor",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "panel",
+    "description": "inset wall panels with chamfered edges",
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#a09585"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.025,
+      "bevel": 0.035,
+      "depth": 0.5,
+      "joint": 0.38,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/poor",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "two-tone",
+    "description": "wainscot panel under a painted wall, with a trim line",
+    "pattern": {
+      "kind": "two-tone",
+      "colors": [
+        "#514a40",
+        "#a09585",
+        "#8a6f42"
+      ],
+      "axis": "y",
+      "split": 0.42,
+      "line": 0.03,
+      "depth": 0.12,
+      "joint": 0.3,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/mid",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "hex",
+    "description": "hexagon printed wall panel",
+    "pattern": {
+      "kind": "hexagon",
+      "colors": [
+        "#b9bcbb"
+      ],
+      "cells": [
+        7,
+        4
+      ],
+      "line": 0.012,
+      "joint": 0.12,
+      "sheen": 0.16,
+      "variation": 0.04,
+      "depth": 0.08,
+      "grain": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/mid",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "panel",
+    "description": "inset wall panels with chamfered edges",
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#b9bcbb"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.025,
+      "bevel": 0.035,
+      "depth": 0.5,
+      "joint": 0.38,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/mid",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "two-tone",
+    "description": "wainscot panel under a painted wall, with a trim line",
+    "pattern": {
+      "kind": "two-tone",
+      "colors": [
+        "#2e6b73",
+        "#b9bcbb",
+        "#cfe9ee"
+      ],
+      "axis": "y",
+      "split": 0.42,
+      "line": 0.03,
+      "depth": 0.12,
+      "joint": 0.3,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/rich",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "hex",
+    "description": "hexagon printed wall panel",
+    "pattern": {
+      "kind": "hexagon",
+      "colors": [
+        "#c9cccb"
+      ],
+      "cells": [
+        7,
+        4
+      ],
+      "line": 0.012,
+      "joint": 0.12,
+      "sheen": 0.16,
+      "variation": 0.04,
+      "depth": 0.08,
+      "grain": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/rich",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "panel",
+    "description": "inset wall panels with chamfered edges",
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#c9cccb"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.025,
+      "bevel": 0.035,
+      "depth": 0.5,
+      "joint": 0.38,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/rich",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "two-tone",
+    "description": "wainscot panel under a painted wall, with a trim line",
+    "pattern": {
+      "kind": "two-tone",
+      "colors": [
+        "#1f6f7a",
+        "#c9cccb",
+        "#bdf0ff"
+      ],
+      "axis": "y",
+      "split": 0.42,
+      "line": 0.03,
+      "depth": 0.12,
+      "joint": 0.3,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "hex",
+    "description": "hexagon printed wall panel",
+    "pattern": {
+      "kind": "hexagon",
+      "colors": [
+        "#d6dadb"
+      ],
+      "cells": [
+        7,
+        4
+      ],
+      "line": 0.012,
+      "joint": 0.12,
+      "sheen": 0.16,
+      "variation": 0.04,
+      "depth": 0.08,
+      "grain": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "panel",
+    "description": "inset wall panels with chamfered edges",
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#d6dadb"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.025,
+      "bevel": 0.035,
+      "depth": 0.5,
+      "joint": 0.38,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "two-tone",
+    "description": "wainscot panel under a painted wall, with a trim line",
+    "pattern": {
+      "kind": "two-tone",
+      "colors": [
+        "#2b3440",
+        "#d6dadb",
+        "#bdf0ff"
+      ],
+      "axis": "y",
+      "split": 0.42,
+      "line": 0.03,
+      "depth": 0.12,
+      "joint": 0.3,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  }
+]

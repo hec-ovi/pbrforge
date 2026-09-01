@@ -1,0 +1,258 @@
+[
+  {
+    "key": "cyberpunk/sidewalk/poor",
+    "alignment": "tile",
+    "description": "large rectangular pavement slabs with visible joints",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.95,
+      "metallicFactor": 0
+    },
+    "variantId": "slab",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#6f6d67"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "cells": [
+        3,
+        3
+      ],
+      "variation": 0.08
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "bond",
+    "description": "pavement slabs laid in a running bond",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#6f6d67"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "cells": [
+        3,
+        4
+      ],
+      "bond": "running",
+      "variation": 0.09
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/mid",
+    "alignment": "tile",
+    "description": "large rectangular pavement slabs with visible joints",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
+    "variantId": "slab",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#8d8f8a"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "cells": [
+        3,
+        3
+      ],
+      "variation": 0.08
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "bond",
+    "description": "pavement slabs laid in a running bond",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#8d8f8a"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "cells": [
+        3,
+        4
+      ],
+      "bond": "running",
+      "variation": 0.09
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/rich",
+    "alignment": "tile",
+    "description": "large rectangular pavement slabs with visible joints",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.85,
+      "metallicFactor": 0
+    },
+    "variantId": "slab",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#a5a7a2"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "cells": [
+        3,
+        3
+      ],
+      "variation": 0.08
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "bond",
+    "description": "pavement slabs laid in a running bond",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#a5a7a2"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "cells": [
+        3,
+        4
+      ],
+      "bond": "running",
+      "variation": 0.09
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/high_rich",
+    "alignment": "tile",
+    "description": "large rectangular pavement slabs with visible joints",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.8,
+      "metallicFactor": 0
+    },
+    "variantId": "slab",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#b9bbb7"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "cells": [
+        3,
+        3
+      ],
+      "variation": 0.08
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "bond",
+    "description": "pavement slabs laid in a running bond",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#b9bbb7"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "cells": [
+        3,
+        4
+      ],
+      "bond": "running",
+      "variation": 0.09
+    }
+  }
+]

@@ -2,7 +2,7 @@
   {
     "key": "cyberpunk/light-fixture/poor",
     "alignment": "tile",
-    "description": "backlit panel glow, synthesized",
+    "description": "linear luminaire: diffuser strips in a dark housing",
     "tiling": {
       "worldSize": [
         1,
@@ -14,15 +14,64 @@
       "metallicFactor": 0,
       "emissiveStrength": 3
     },
-    "variants": 2,
+    "variantId": "strip",
+    "resolution": [
+      512,
+      512
+    ],
     "emission": "luminance",
-    "flatColor": "#eee5cc",
-    "flatNoise": 0.06
+    "overwrite": true,
+    "pattern": {
+      "kind": "stripe",
+      "colors": [
+        "#efe4c8",
+        "#2a2724"
+      ],
+      "axis": "y",
+      "cells": [
+        1,
+        2
+      ],
+      "split": 0.34,
+      "line": 0.012,
+      "joint": 0.5,
+      "depth": 0.45,
+      "variation": 0.02,
+      "grain": 0.01
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "panel",
+    "description": "panel luminaire: one diffuser inset in a dark housing frame",
+    "resolution": [
+      512,
+      512
+    ],
+    "emission": "luminance",
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#efe4c8"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.1,
+      "bevel": 0.05,
+      "depth": 0.6,
+      "joint": 0.88,
+      "variation": 0.02,
+      "grain": 0.01
+    }
   },
   {
     "key": "cyberpunk/light-fixture/mid",
     "alignment": "tile",
-    "description": "backlit panel glow, synthesized",
+    "description": "linear luminaire: diffuser strips in a dark housing",
     "tiling": {
       "worldSize": [
         1,
@@ -34,15 +83,64 @@
       "metallicFactor": 0,
       "emissiveStrength": 3
     },
-    "variants": 2,
+    "variantId": "strip",
+    "resolution": [
+      512,
+      512
+    ],
     "emission": "luminance",
-    "flatColor": "#f1f1ee",
-    "flatNoise": 0.03
+    "overwrite": true,
+    "pattern": {
+      "kind": "stripe",
+      "colors": [
+        "#eef2f2",
+        "#23262a"
+      ],
+      "axis": "y",
+      "cells": [
+        1,
+        2
+      ],
+      "split": 0.34,
+      "line": 0.012,
+      "joint": 0.5,
+      "depth": 0.45,
+      "variation": 0.02,
+      "grain": 0.01
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "panel",
+    "description": "panel luminaire: one diffuser inset in a dark housing frame",
+    "resolution": [
+      512,
+      512
+    ],
+    "emission": "luminance",
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#eef2f2"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.1,
+      "bevel": 0.05,
+      "depth": 0.6,
+      "joint": 0.88,
+      "variation": 0.02,
+      "grain": 0.01
+    }
   },
   {
     "key": "cyberpunk/light-fixture/rich",
     "alignment": "tile",
-    "description": "backlit panel glow, synthesized",
+    "description": "linear luminaire: diffuser strips in a dark housing",
     "tiling": {
       "worldSize": [
         1,
@@ -54,15 +152,64 @@
       "metallicFactor": 0,
       "emissiveStrength": 3
     },
-    "variants": 2,
+    "variantId": "strip",
+    "resolution": [
+      512,
+      512
+    ],
     "emission": "luminance",
-    "flatColor": "#edf3f8",
-    "flatNoise": 0.02
+    "overwrite": true,
+    "pattern": {
+      "kind": "stripe",
+      "colors": [
+        "#eaf3f8",
+        "#1d2226"
+      ],
+      "axis": "y",
+      "cells": [
+        1,
+        2
+      ],
+      "split": 0.34,
+      "line": 0.012,
+      "joint": 0.5,
+      "depth": 0.45,
+      "variation": 0.02,
+      "grain": 0.01
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "panel",
+    "description": "panel luminaire: one diffuser inset in a dark housing frame",
+    "resolution": [
+      512,
+      512
+    ],
+    "emission": "luminance",
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#eaf3f8"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.1,
+      "bevel": 0.05,
+      "depth": 0.6,
+      "joint": 0.88,
+      "variation": 0.02,
+      "grain": 0.01
+    }
   },
   {
     "key": "cyberpunk/light-fixture/high_rich",
     "alignment": "tile",
-    "description": "backlit panel glow, synthesized",
+    "description": "linear luminaire: diffuser strips in a dark housing",
     "tiling": {
       "worldSize": [
         1,
@@ -74,9 +221,58 @@
       "metallicFactor": 0,
       "emissiveStrength": 3
     },
-    "variants": 2,
+    "variantId": "strip",
+    "resolution": [
+      512,
+      512
+    ],
     "emission": "luminance",
-    "flatColor": "#fafafa",
-    "flatNoise": 0.012
+    "overwrite": true,
+    "pattern": {
+      "kind": "stripe",
+      "colors": [
+        "#f4fbff",
+        "#181c22"
+      ],
+      "axis": "y",
+      "cells": [
+        1,
+        2
+      ],
+      "split": 0.34,
+      "line": 0.012,
+      "joint": 0.5,
+      "depth": 0.45,
+      "variation": 0.02,
+      "grain": 0.01
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "panel",
+    "description": "panel luminaire: one diffuser inset in a dark housing frame",
+    "resolution": [
+      512,
+      512
+    ],
+    "emission": "luminance",
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#f4fbff"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.1,
+      "bevel": 0.05,
+      "depth": 0.6,
+      "joint": 0.88,
+      "variation": 0.02,
+      "grain": 0.01
+    }
   }
 ]

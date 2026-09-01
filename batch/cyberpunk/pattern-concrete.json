@@ -1,0 +1,110 @@
+[
+  {
+    "key": "cyberpunk/concrete/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "panel",
+    "description": "precast concrete panel with chamfered joints on the tile boundary",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#6e6f6c"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.03,
+      "bevel": 0.045,
+      "depth": 0.6,
+      "joint": 0.42,
+      "variation": 0.03,
+      "grain": 0.035
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "panel",
+    "description": "precast concrete panel with chamfered joints on the tile boundary",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#8a8b88"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.03,
+      "bevel": 0.045,
+      "depth": 0.6,
+      "joint": 0.42,
+      "variation": 0.03,
+      "grain": 0.035
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "panel",
+    "description": "precast concrete panel with chamfered joints on the tile boundary",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#a3a09a"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.03,
+      "bevel": 0.045,
+      "depth": 0.6,
+      "joint": 0.42,
+      "variation": 0.03,
+      "grain": 0.035
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "panel",
+    "description": "precast concrete panel with chamfered joints on the tile boundary",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#b6b8b8"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.03,
+      "bevel": 0.045,
+      "depth": 0.6,
+      "joint": 0.42,
+      "variation": 0.03,
+      "grain": 0.035
+    }
+  }
+]
