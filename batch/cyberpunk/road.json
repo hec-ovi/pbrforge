@@ -14,6 +14,7 @@
       "metallicFactor": 0
     },
     "variantId": "street",
+    "seed": 4100,
     "resolution": [
       1024,
       1024
@@ -21,24 +22,26 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#232527",
-        "#34373a"
+        "#202225",
+        "#2e3134"
       ],
       "cells": [
         8,
         8
       ],
-      "octaves": 4,
-      "depth": 0.25,
-      "grain": 0.035
+      "octaves": 3,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
     }
   },
   {
     "key": "cyberpunk/road/poor",
     "alignment": "tile",
     "append": true,
-    "variantId": "highway",
     "description": "coarser sun bleached asphalt",
+    "variantId": "highway",
+    "seed": 4101,
     "resolution": [
       1024,
       1024
@@ -46,16 +49,44 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#2b2d30",
-        "#3c4045"
+        "#282a2d",
+        "#363a3f"
       ],
       "cells": [
         6,
         6
       ],
-      "octaves": 4,
-      "depth": 0.2,
-      "grain": 0.03
+      "octaves": 3,
+      "depth": 0.12,
+      "grain": 0.025,
+      "variation": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/road/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt patched in slabs of different age",
+    "variantId": "patched",
+    "seed": 4102,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#1c1e21",
+        "#33373c"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 3,
+      "depth": 0.16,
+      "grain": 0.03,
+      "variation": 0.14
     }
   },
   {
@@ -73,6 +104,7 @@
       "metallicFactor": 0
     },
     "variantId": "street",
+    "seed": 4110,
     "resolution": [
       1024,
       1024
@@ -80,24 +112,26 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#26282a",
-        "#33363a"
+        "#232527",
+        "#303338"
       ],
       "cells": [
         8,
         8
       ],
-      "octaves": 4,
-      "depth": 0.25,
-      "grain": 0.035
+      "octaves": 3,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
     }
   },
   {
     "key": "cyberpunk/road/mid",
     "alignment": "tile",
     "append": true,
-    "variantId": "highway",
     "description": "coarser sun bleached asphalt",
+    "variantId": "highway",
+    "seed": 4111,
     "resolution": [
       1024,
       1024
@@ -105,16 +139,44 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#2e3134",
-        "#3c4045"
+        "#2b2e31",
+        "#393d42"
       ],
       "cells": [
         6,
         6
       ],
-      "octaves": 4,
-      "depth": 0.2,
-      "grain": 0.03
+      "octaves": 3,
+      "depth": 0.12,
+      "grain": 0.025,
+      "variation": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/road/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt patched in slabs of different age",
+    "variantId": "patched",
+    "seed": 4112,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#1f2124",
+        "#363a40"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 3,
+      "depth": 0.16,
+      "grain": 0.03,
+      "variation": 0.14
     }
   },
   {
@@ -132,6 +194,7 @@
       "metallicFactor": 0
     },
     "variantId": "street",
+    "seed": 4120,
     "resolution": [
       1024,
       1024
@@ -139,24 +202,26 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#2a2c2f",
-        "#35383c"
+        "#26282b",
+        "#33363b"
       ],
       "cells": [
         8,
         8
       ],
-      "octaves": 4,
-      "depth": 0.25,
-      "grain": 0.035
+      "octaves": 3,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
     }
   },
   {
     "key": "cyberpunk/road/rich",
     "alignment": "tile",
     "append": true,
-    "variantId": "highway",
     "description": "coarser sun bleached asphalt",
+    "variantId": "highway",
+    "seed": 4121,
     "resolution": [
       1024,
       1024
@@ -164,16 +229,44 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#32353a",
-        "#40444a"
+        "#2f3236",
+        "#3d4147"
       ],
       "cells": [
         6,
         6
       ],
-      "octaves": 4,
-      "depth": 0.2,
-      "grain": 0.03
+      "octaves": 3,
+      "depth": 0.12,
+      "grain": 0.025,
+      "variation": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/road/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt patched in slabs of different age",
+    "variantId": "patched",
+    "seed": 4122,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#222427",
+        "#3a3e44"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 3,
+      "depth": 0.16,
+      "grain": 0.03,
+      "variation": 0.14
     }
   },
   {
@@ -191,6 +284,7 @@
       "metallicFactor": 0
     },
     "variantId": "street",
+    "seed": 4130,
     "resolution": [
       1024,
       1024
@@ -198,24 +292,26 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#2d3033",
-        "#3a3d41"
+        "#292c2f",
+        "#36393e"
       ],
       "cells": [
         8,
         8
       ],
-      "octaves": 4,
-      "depth": 0.25,
-      "grain": 0.035
+      "octaves": 3,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
     }
   },
   {
     "key": "cyberpunk/road/high_rich",
     "alignment": "tile",
     "append": true,
-    "variantId": "highway",
     "description": "coarser sun bleached asphalt",
+    "variantId": "highway",
+    "seed": 4131,
     "resolution": [
       1024,
       1024
@@ -223,16 +319,44 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#35383d",
-        "#44484e"
+        "#33363b",
+        "#41454c"
       ],
       "cells": [
         6,
         6
       ],
-      "octaves": 4,
-      "depth": 0.2,
-      "grain": 0.03
+      "octaves": 3,
+      "depth": 0.12,
+      "grain": 0.025,
+      "variation": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/road/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt patched in slabs of different age",
+    "variantId": "patched",
+    "seed": 4132,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#25282b",
+        "#3d4148"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 3,
+      "depth": 0.16,
+      "grain": 0.03,
+      "variation": 0.14
     }
   }
 ]

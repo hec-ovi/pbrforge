@@ -6023,6 +6023,22 @@
             "height": "assets/sidewalk/poor/bond/height.png",
             "ao": "assets/sidewalk/poor/bond/ao.png"
           }
+        },
+        {
+          "id": "plate",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/sidewalk/poor/plate/basecolor.png",
+            "normal": "assets/sidewalk/poor/plate/normal.png",
+            "roughness": "assets/sidewalk/poor/plate/roughness.png",
+            "metallic": "assets/sidewalk/poor/plate/metallic.png",
+            "height": "assets/sidewalk/poor/plate/height.png",
+            "ao": "assets/sidewalk/poor/plate/ao.png"
+          }
         }
       ]
     },
@@ -6070,6 +6086,22 @@
             "metallic": "assets/sidewalk/mid/bond/metallic.png",
             "height": "assets/sidewalk/mid/bond/height.png",
             "ao": "assets/sidewalk/mid/bond/ao.png"
+          }
+        },
+        {
+          "id": "plate",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/sidewalk/mid/plate/basecolor.png",
+            "normal": "assets/sidewalk/mid/plate/normal.png",
+            "roughness": "assets/sidewalk/mid/plate/roughness.png",
+            "metallic": "assets/sidewalk/mid/plate/metallic.png",
+            "height": "assets/sidewalk/mid/plate/height.png",
+            "ao": "assets/sidewalk/mid/plate/ao.png"
           }
         }
       ]
@@ -6119,6 +6151,22 @@
             "height": "assets/sidewalk/rich/bond/height.png",
             "ao": "assets/sidewalk/rich/bond/ao.png"
           }
+        },
+        {
+          "id": "plate",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/sidewalk/rich/plate/basecolor.png",
+            "normal": "assets/sidewalk/rich/plate/normal.png",
+            "roughness": "assets/sidewalk/rich/plate/roughness.png",
+            "metallic": "assets/sidewalk/rich/plate/metallic.png",
+            "height": "assets/sidewalk/rich/plate/height.png",
+            "ao": "assets/sidewalk/rich/plate/ao.png"
+          }
         }
       ]
     },
@@ -6166,6 +6214,22 @@
             "metallic": "assets/sidewalk/high_rich/bond/metallic.png",
             "height": "assets/sidewalk/high_rich/bond/height.png",
             "ao": "assets/sidewalk/high_rich/bond/ao.png"
+          }
+        },
+        {
+          "id": "plate",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/sidewalk/high_rich/plate/basecolor.png",
+            "normal": "assets/sidewalk/high_rich/plate/normal.png",
+            "roughness": "assets/sidewalk/high_rich/plate/roughness.png",
+            "metallic": "assets/sidewalk/high_rich/plate/metallic.png",
+            "height": "assets/sidewalk/high_rich/plate/height.png",
+            "ao": "assets/sidewalk/high_rich/plate/ao.png"
           }
         }
       ]
@@ -6215,6 +6279,22 @@
             "height": "assets/road/poor/highway/height.png",
             "ao": "assets/road/poor/highway/ao.png"
           }
+        },
+        {
+          "id": "patched",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/road/poor/patched/basecolor.png",
+            "normal": "assets/road/poor/patched/normal.png",
+            "roughness": "assets/road/poor/patched/roughness.png",
+            "metallic": "assets/road/poor/patched/metallic.png",
+            "height": "assets/road/poor/patched/height.png",
+            "ao": "assets/road/poor/patched/ao.png"
+          }
         }
       ]
     },
@@ -6262,6 +6342,22 @@
             "metallic": "assets/road/mid/highway/metallic.png",
             "height": "assets/road/mid/highway/height.png",
             "ao": "assets/road/mid/highway/ao.png"
+          }
+        },
+        {
+          "id": "patched",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/road/mid/patched/basecolor.png",
+            "normal": "assets/road/mid/patched/normal.png",
+            "roughness": "assets/road/mid/patched/roughness.png",
+            "metallic": "assets/road/mid/patched/metallic.png",
+            "height": "assets/road/mid/patched/height.png",
+            "ao": "assets/road/mid/patched/ao.png"
           }
         }
       ]
@@ -6311,6 +6407,22 @@
             "height": "assets/road/rich/highway/height.png",
             "ao": "assets/road/rich/highway/ao.png"
           }
+        },
+        {
+          "id": "patched",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/road/rich/patched/basecolor.png",
+            "normal": "assets/road/rich/patched/normal.png",
+            "roughness": "assets/road/rich/patched/roughness.png",
+            "metallic": "assets/road/rich/patched/metallic.png",
+            "height": "assets/road/rich/patched/height.png",
+            "ao": "assets/road/rich/patched/ao.png"
+          }
         }
       ]
     },
@@ -6358,6 +6470,22 @@
             "metallic": "assets/road/high_rich/highway/metallic.png",
             "height": "assets/road/high_rich/highway/height.png",
             "ao": "assets/road/high_rich/highway/ao.png"
+          }
+        },
+        {
+          "id": "patched",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/road/high_rich/patched/basecolor.png",
+            "normal": "assets/road/high_rich/patched/normal.png",
+            "roughness": "assets/road/high_rich/patched/roughness.png",
+            "metallic": "assets/road/high_rich/patched/metallic.png",
+            "height": "assets/road/high_rich/patched/height.png",
+            "ao": "assets/road/high_rich/patched/ao.png"
           }
         }
       ]

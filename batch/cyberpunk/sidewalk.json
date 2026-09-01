@@ -14,6 +14,7 @@
       "metallicFactor": 0
     },
     "variantId": "slab",
+    "seed": 4200,
     "resolution": [
       1024,
       1024
@@ -21,26 +22,27 @@
     "pattern": {
       "kind": "slab",
       "colors": [
-        "#6f6d67"
+        "#3a3b3d"
+      ],
+      "cells": [
+        3,
+        3
       ],
       "line": 0.012,
       "bevel": 0.008,
       "depth": 0.5,
       "joint": 0.5,
       "grain": 0.03,
-      "cells": [
-        3,
-        3
-      ],
-      "variation": 0.08
+      "variation": 0.11
     }
   },
   {
     "key": "cyberpunk/sidewalk/poor",
     "alignment": "tile",
     "append": true,
-    "variantId": "bond",
     "description": "pavement slabs laid in a running bond",
+    "variantId": "bond",
+    "seed": 4201,
     "resolution": [
       1024,
       1024
@@ -48,18 +50,46 @@
     "pattern": {
       "kind": "slab",
       "colors": [
-        "#6f6d67"
+        "#3a3b3d"
       ],
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
       "cells": [
         3,
         4
       ],
       "bond": "running",
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "variation": 0.13
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "oversized pavement plates with wide chamfered joints",
+    "variantId": "plate",
+    "seed": 4202,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#3a3b3d"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.022,
+      "bevel": 0.014,
+      "depth": 0.55,
+      "joint": 0.55,
+      "grain": 0.025,
       "variation": 0.09
     }
   },
@@ -78,6 +108,7 @@
       "metallicFactor": 0
     },
     "variantId": "slab",
+    "seed": 4210,
     "resolution": [
       1024,
       1024
@@ -85,26 +116,27 @@
     "pattern": {
       "kind": "slab",
       "colors": [
-        "#8d8f8a"
+        "#45474a"
+      ],
+      "cells": [
+        3,
+        3
       ],
       "line": 0.012,
       "bevel": 0.008,
       "depth": 0.5,
       "joint": 0.5,
       "grain": 0.03,
-      "cells": [
-        3,
-        3
-      ],
-      "variation": 0.08
+      "variation": 0.11
     }
   },
   {
     "key": "cyberpunk/sidewalk/mid",
     "alignment": "tile",
     "append": true,
-    "variantId": "bond",
     "description": "pavement slabs laid in a running bond",
+    "variantId": "bond",
+    "seed": 4211,
     "resolution": [
       1024,
       1024
@@ -112,18 +144,46 @@
     "pattern": {
       "kind": "slab",
       "colors": [
-        "#8d8f8a"
+        "#45474a"
       ],
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
       "cells": [
         3,
         4
       ],
       "bond": "running",
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "variation": 0.13
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "oversized pavement plates with wide chamfered joints",
+    "variantId": "plate",
+    "seed": 4212,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#45474a"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.022,
+      "bevel": 0.014,
+      "depth": 0.55,
+      "joint": 0.55,
+      "grain": 0.025,
       "variation": 0.09
     }
   },
@@ -142,6 +202,7 @@
       "metallicFactor": 0
     },
     "variantId": "slab",
+    "seed": 4220,
     "resolution": [
       1024,
       1024
@@ -149,26 +210,27 @@
     "pattern": {
       "kind": "slab",
       "colors": [
-        "#a5a7a2"
+        "#4f5257"
+      ],
+      "cells": [
+        3,
+        3
       ],
       "line": 0.012,
       "bevel": 0.008,
       "depth": 0.5,
       "joint": 0.5,
       "grain": 0.03,
-      "cells": [
-        3,
-        3
-      ],
-      "variation": 0.08
+      "variation": 0.11
     }
   },
   {
     "key": "cyberpunk/sidewalk/rich",
     "alignment": "tile",
     "append": true,
-    "variantId": "bond",
     "description": "pavement slabs laid in a running bond",
+    "variantId": "bond",
+    "seed": 4221,
     "resolution": [
       1024,
       1024
@@ -176,18 +238,46 @@
     "pattern": {
       "kind": "slab",
       "colors": [
-        "#a5a7a2"
+        "#4f5257"
       ],
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
       "cells": [
         3,
         4
       ],
       "bond": "running",
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "variation": 0.13
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "oversized pavement plates with wide chamfered joints",
+    "variantId": "plate",
+    "seed": 4222,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#4f5257"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.022,
+      "bevel": 0.014,
+      "depth": 0.55,
+      "joint": 0.55,
+      "grain": 0.025,
       "variation": 0.09
     }
   },
@@ -206,6 +296,7 @@
       "metallicFactor": 0
     },
     "variantId": "slab",
+    "seed": 4230,
     "resolution": [
       1024,
       1024
@@ -213,26 +304,27 @@
     "pattern": {
       "kind": "slab",
       "colors": [
-        "#b9bbb7"
+        "#5a5e64"
+      ],
+      "cells": [
+        3,
+        3
       ],
       "line": 0.012,
       "bevel": 0.008,
       "depth": 0.5,
       "joint": 0.5,
       "grain": 0.03,
-      "cells": [
-        3,
-        3
-      ],
-      "variation": 0.08
+      "variation": 0.11
     }
   },
   {
     "key": "cyberpunk/sidewalk/high_rich",
     "alignment": "tile",
     "append": true,
-    "variantId": "bond",
     "description": "pavement slabs laid in a running bond",
+    "variantId": "bond",
+    "seed": 4231,
     "resolution": [
       1024,
       1024
@@ -240,18 +332,46 @@
     "pattern": {
       "kind": "slab",
       "colors": [
-        "#b9bbb7"
+        "#5a5e64"
       ],
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
       "cells": [
         3,
         4
       ],
       "bond": "running",
+      "line": 0.012,
+      "bevel": 0.008,
+      "depth": 0.5,
+      "joint": 0.5,
+      "grain": 0.03,
+      "variation": 0.13
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "oversized pavement plates with wide chamfered joints",
+    "variantId": "plate",
+    "seed": 4232,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#5a5e64"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.022,
+      "bevel": 0.014,
+      "depth": 0.55,
+      "joint": 0.55,
+      "grain": 0.025,
       "variation": 0.09
     }
   }
