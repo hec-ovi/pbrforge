@@ -1,0 +1,34 @@
+[
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "description": "grimy stained concrete wall panels of a cheap residential megablock, soot streaks, patched repairs, faded and dirty, cold sodium-tinged grey",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.92, "metallicFactor": 0 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "description": "precast concrete wall panels with hairline seams, light urban weathering and faint rain streaks, neutral grey",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.85, "metallicFactor": 0 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "description": "polished architectural concrete wall panels with fine aggregate, clean and precise, warm light grey",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.7, "metallicFactor": 0 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "description": "pristine micro-textured composite wall cladding of a corporate tower, matte dark graphite with subtle panel lines",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.55, "metallicFactor": 0.15 },
+    "variants": 2
+  }
+]

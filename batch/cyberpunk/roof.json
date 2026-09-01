@@ -1,0 +1,34 @@
+[
+  {
+    "key": "cyberpunk/roof/poor",
+    "alignment": "tile",
+    "description": "patched bitumen roofing membrane seen straight from above, tar repairs, scattered fine gravel, weathered black-grey",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.95, "metallicFactor": 0 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/roof/mid",
+    "alignment": "tile",
+    "description": "grey roofing membrane seen straight from above, welded seams, light weathering",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.85, "metallicFactor": 0 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/roof/rich",
+    "alignment": "tile",
+    "description": "clean standing-seam metal roof panels seen straight from above, tight parallel seams, dark zinc grey",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.5, "metallicFactor": 1 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/roof/high_rich",
+    "alignment": "tile",
+    "description": "pristine dark solar-skin roof panels seen straight from above, thin cell grid, deep blue-black",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.35, "metallicFactor": 0.5 },
+    "variants": 2
+  }
+]

@@ -50,7 +50,10 @@ export class Generator {
 
     const [width, height] = request.resolution ?? [1024, 1024];
     const baseSeed = request.seed ?? seedFrom(request.description);
-    const positive = `${request.description}, ${loadPrompt('tile-suffix')} ${loadPrompt('material-field')}`;
+    const positive =
+      request.alignment === 'tile'
+        ? `${request.description}, ${loadPrompt('tile-suffix')} ${loadPrompt('material-field')}`
+        : `${request.description}, ${loadPrompt('exact-suffix')}`;
     const negative = loadPrompt('negative');
 
     const variants: Variant[] = [];

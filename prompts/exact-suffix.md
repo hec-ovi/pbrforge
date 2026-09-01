@@ -1,0 +1,1 @@
+flat frontal view shot dead straight-on with a long telephoto lens so there is no perspective and no convergence, the subject fills the entire frame edge to edge, sharp across the whole frame, even lighting, no vignette, no depth of field, hyper realistic, extreme realism

@@ -17,7 +17,7 @@ Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/
 - `list(filter?: {theme?, kind?, tier?}): string[]` returns matching keys, sorted, deterministic.
 - `create(request: CreateRequest): MaterialEntry` generates a full set via ComfyUI, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json).
 
-CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>`.
+CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable).
 
 ## Out
 

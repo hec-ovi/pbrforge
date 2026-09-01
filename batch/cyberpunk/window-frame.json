@@ -1,0 +1,34 @@
+[
+  {
+    "key": "cyberpunk/window-frame/poor",
+    "alignment": "tile",
+    "description": "corroded aluminium window frame metal, flaking grey paint, oxidation spots and grime",
+    "tiling": { "worldSize": [1, 1] },
+    "physical": { "roughnessFactor": 0.65, "metallicFactor": 1 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/window-frame/mid",
+    "alignment": "tile",
+    "description": "anodised aluminium window frame metal, brushed finish, minor scuffs, medium grey",
+    "tiling": { "worldSize": [1, 1] },
+    "physical": { "roughnessFactor": 0.45, "metallicFactor": 1 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/window-frame/rich",
+    "alignment": "tile",
+    "description": "brushed dark steel window frame metal, clean precise finish, charcoal",
+    "tiling": { "worldSize": [1, 1] },
+    "physical": { "roughnessFactor": 0.35, "metallicFactor": 1 },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/window-frame/high_rich",
+    "alignment": "tile",
+    "description": "matte black premium window frame metal, flawless satin finish",
+    "tiling": { "worldSize": [1, 1] },
+    "physical": { "roughnessFactor": 0.25, "metallicFactor": 1 },
+    "variants": 2
+  }
+]
