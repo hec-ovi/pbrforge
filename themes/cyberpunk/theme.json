@@ -414,21 +414,6 @@
             "height": "assets/window-frame/poor/1/height.png",
             "ao": "assets/window-frame/poor/1/ao.png"
           }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/window-frame/poor/2/basecolor.png",
-            "normal": "assets/window-frame/poor/2/normal.png",
-            "roughness": "assets/window-frame/poor/2/roughness.png",
-            "metallic": "assets/window-frame/poor/2/metallic.png",
-            "height": "assets/window-frame/poor/2/height.png",
-            "ao": "assets/window-frame/poor/2/ao.png"
-          }
         }
       ]
     },
@@ -585,8 +570,8 @@
         {
           "id": "1",
           "resolution": [
-            512,
-            1024
+            832,
+            1216
           ],
           "maps": {
             "basecolor": "assets/door/poor/1/basecolor.png",
@@ -595,21 +580,6 @@
             "metallic": "assets/door/poor/1/metallic.png",
             "height": "assets/door/poor/1/height.png",
             "ao": "assets/door/poor/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            512,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/door/poor/2/basecolor.png",
-            "normal": "assets/door/poor/2/normal.png",
-            "roughness": "assets/door/poor/2/roughness.png",
-            "metallic": "assets/door/poor/2/metallic.png",
-            "height": "assets/door/poor/2/height.png",
-            "ao": "assets/door/poor/2/ao.png"
           }
         }
       ]
