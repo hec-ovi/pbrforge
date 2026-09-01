@@ -1,6 +1,9 @@
 [
   {
     "key": "cyberpunk/wall/poor",
+    "aliases": [
+      "cyberpunk/parapet/poor"
+    ],
     "alignment": "tile",
     "description": "grimy stained concrete wall panels of a cheap residential megablock, soot streaks, patched repairs, faded and dirty, cold sodium-tinged grey",
     "tiling": {
@@ -25,8 +28,11 @@
   },
   {
     "key": "cyberpunk/wall/mid",
+    "aliases": [
+      "cyberpunk/parapet/mid"
+    ],
     "alignment": "tile",
-    "description": "precast concrete wall panels with hairline seams, light urban weathering and faint rain streaks, neutral grey",
+    "description": "precast concrete wall panels with hairline seams, light urban weathering, dry chalky surface, neutral grey",
     "tiling": {
       "worldSize": [
         3,
@@ -49,6 +55,9 @@
   },
   {
     "key": "cyberpunk/wall/rich",
+    "aliases": [
+      "cyberpunk/parapet/rich"
+    ],
     "alignment": "tile",
     "description": "polished architectural concrete wall panels with fine aggregate, clean and precise, warm light grey",
     "tiling": {
@@ -73,6 +82,9 @@
   },
   {
     "key": "cyberpunk/wall/high_rich",
+    "aliases": [
+      "cyberpunk/parapet/high_rich"
+    ],
     "alignment": "tile",
     "description": "polished dark grey granite wall surface, flat, subtle stone veining, immaculate",
     "tiling": {

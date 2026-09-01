@@ -47,16 +47,16 @@ export function fromHsv(h: number, s: number, v: number): Color {
 }
 
 /**
- * Moves a color part of the way to a target hue and saturation and scales its
- * brightness. Pulling toward a target rather than rotating the hue is what a
- * near-grey photograph needs: rotating leaves it grey and multiplying its
- * saturation amplifies whatever color noise it happens to carry.
+ * Repaints a color: the hue is the paint's, the strength is how much pigment is
+ * in it, and the brightness is the surface's own, scaled. A near-grey
+ * photograph has an arbitrary hue of its own, so the paint hue is taken whole
+ * and the saturation is what moves; that is what makes a blue paint read blue
+ * instead of landing halfway between the photograph and the can.
  */
 export function tintToward(c: Color, target: Color, strength: number, value: number): Color {
-  const { h, s, v } = toHsv(c);
+  const { s, v } = toHsv(c);
   const aim = toHsv(target);
-  const turn = (((aim.h - h + 540) % 360) - 180) * strength;
-  return fromHsv(h + turn, clamp01(s + (aim.s - s) * strength), clamp01(v * value));
+  return fromHsv(aim.h, clamp01(s + (aim.s - s) * strength), clamp01(v * value));
 }
 
 export function clamp01(x: number): number {

@@ -18,10 +18,32 @@ Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/
 - `create(request: CreateRequest): MaterialEntry` generates a full set, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json). Basecolor comes from ComfyUI, from the pattern class below, from a tint of a variant already in the entry (`recolor`), or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box.
 - `append: true` adds the generated variant to the entry the key already resolves to, which keeps its alignment, tiling, aliases and physical; `variantId` names it (and its asset folder). Appending an id that exists is `E_KEY_EXISTS`, so a batch stays resumable.
 - `recolor` writes a tint variant: the basecolor of another variant of the same entry pulled toward a color. It is the same surface in different paint, so it points at that variant's relief maps instead of copying them.
+- `finish` states how a photographed surface is read into relief and gloss (see Finish below). An appended variant inherits the entry's finish, so every photographed variant of one entry shares a band. The pattern, recolor and screen lanes carry their own maps and ignore it.
+- `refinish(request: RefinishRequest): MaterialEntry` re-reads the relief and gloss maps of every photographed variant of a `tile` entry from its stored basecolor, under a stated finish, and updates the entry. The basecolor is never touched, so a set already approved keeps its look. Request: `{ key, finish? }`. An `exact` entry (a screen, a door) is `E_SCHEMA`, and so is an entry with no photographed variant.
 
 Screens (`emission: "image"`) turn that around: the basecolor is flat dark display glass and the picture lives in the emission map. `screens` lists one display per variant and sets the variant count. ComfyUI paints each advertisement as flat brandless artwork; the box makes it a screen: the pixel structure of its `kind` (`led-dot` dot lattice, `scanline-billboard` scan bands, `glyph-panel` abstract with no lattice), colour fringing, blown-out hotspots, and the `brandName` wordmark stroked in from a built-in alphabet. `brandName` never enters the diffusion prompt, so a screen rebrands without a new render; `businessKind` does steer the artwork. Both take a per-screen override.
 
-CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable).
+CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable), `npm run refinish -- <request.json>` (re-reads every key in the file that states a finish).
+
+## Finish
+
+A photograph carries its own gloss and grain in every pixel. Read straight out, bright specks come back shiny and dark blotches come back damp, which at night is glitter on the walls and wet patches on dry concrete. The finish is what the surface is instead:
+
+- `roughness: [min, max]` is the band the roughness map stays inside. It is read off a blurred relief, so gloss moves over centimetres of surface and never per pixel. Default: the entry's `roughnessFactor` plus or minus 0.05.
+- `grain` (default 0.2) is how much of the pixel-scale speckle survives into the relief. Everything above the feature scale (joints, bricks, aggregate, trowel strokes) comes through at full gain either way.
+- `relief` (default 2) is the gain on that feature-scale relief.
+
+Dry matte is the default across the library: moisture staining and heavy grime live in the poor tier's basecolor and nowhere else. Bands per kind and tier, all four tiers left to right (poor, mid, rich, high_rich):
+
+| kind | poor | mid | rich | high_rich |
+| --- | --- | --- | --- | --- |
+| wall | 0.88-0.96 | 0.82-0.92 | 0.70-0.80 | 0.54-0.64 |
+| concrete | 0.90-0.97 | 0.84-0.92 | 0.60-0.70 | 0.46-0.56 |
+| plaster | 0.88-0.95 | 0.80-0.88 | 0.66-0.74 | 0.50-0.60 |
+| tile | 0.54-0.62 | 0.44-0.52 | 0.30-0.38 | 0.24-0.32 |
+| every other photographed kind | the roughness factor, plus or minus 0.05 | | | |
+
+Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2, 0.15, 0.1 and relief 2, 2, 1.6, 1.2. A drawn pattern states its own gloss instead: it sits at the entry's roughness factor, plus the joint bump (`joint` times 0.4) on the joint lines and the `sheen` spread from cell to cell. Asphalt is a three-octave noise field, so its finest aggregate sits around five centimetres of road and not on one pixel.
 
 ## Pattern class
 
@@ -41,7 +63,7 @@ Kinds and the parameters each one reads (full ranges in the request schema):
 
 Shared over all of them: `colors` (face first), `depth` (relief), `joint` (how much darker and rougher a joint reads), `variation` (tone per cell), `sheen` (gloss per cell), `grain` (fine mottling). `line` and `bevel` are in metres, read against the entry's `tiling.worldSize`; `cells` are whole counts per tile, which is what makes the pattern wrap. On an `exact` entry the sheet stands in for the tile, so those two are fractions of the sheet (of a cell, for `glyph-atlas`).
 
-Cyberpunk pattern library, per tier: plaster (`hex`, `panel`, `two-tone`), tile (`slab`), concrete (`panel`, one panel per tile so joints land on whole-tile faces), ceiling (`panel`, `plain`), sidewalk (`slab`, `bond`), road (`street`, `highway`), light-fixture (`strip`, `panel`: dark housing, lit diffuser). wall and concrete also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
+Cyberpunk pattern library, per tier: plaster (`hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`panel`, one panel per tile so joints land on whole-tile faces, plus `rib` and `block`), ceiling (`panel`, `plain`), sidewalk (`slab`, `bond`, `plate`), road (`street`, `highway`, `patched`), light-fixture (`strip`, `panel`: dark housing, lit diffuser). Variants of one kind are laid out to read apart at a glance: they differ in tone, in cell size and in bond, not in fine detail. wall, concrete and plaster also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
 
 ## Letter atlas
 
@@ -51,7 +73,7 @@ The grid is 8 columns by 6 rows, row-major, and the charset is `ABCDEFGHIJKLMNOP
 
 ## Out
 
-MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), and one or more variants, each a set of map files. Variant 0 is canonical; consumers may pick variants deterministically by seed. A variant carries `class` (`image` by default, `pattern` when it was drawn from parameters): provenance only, the map set and its use are identical.
+MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), and one or more variants, each a set of map files. Variant 0 is canonical; consumers may pick variants deterministically by seed. A variant carries `class` (`image` by default, `pattern` when it was drawn from parameters): provenance only, the map set and its use are identical. An entry with photographed variants also carries the `finish` its maps were read under.
 
 Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](schema/theme-index.schema.json)) plus map files under `themes/<theme>/assets/<kind>/<tier>/<variant>/`. The JSON is the index; the folder is the theme. First theme: `cyberpunk`.
 
@@ -84,6 +106,8 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 ## Preview
 
 `npm run preview`: the classic material sphere viewer (lighting, orbit), loads any key from the database. UI in `src/ui/` with `views/`, `widgets/`, `components/`.
+
+`npm run sheet -- <kind> [tier]`: a contact sheet of every variant of a kind, basecolor, roughness and normal side by side, written to `out/`. A family is checked as a family: whether its variants read apart, and whether the gloss map is calm.
 
 ## Depends on
 

@@ -1,6 +1,9 @@
 [
   {
     "key": "cyberpunk/window-glass/poor",
+    "aliases": [
+      "cyberpunk/door-glass/poor"
+    ],
     "alignment": "tile",
     "description": "flat glass surface, synthesized",
     "tiling": {
@@ -27,6 +30,9 @@
   },
   {
     "key": "cyberpunk/window-glass/mid",
+    "aliases": [
+      "cyberpunk/door-glass/mid"
+    ],
     "alignment": "tile",
     "description": "flat glass surface, synthesized",
     "tiling": {
@@ -53,6 +59,9 @@
   },
   {
     "key": "cyberpunk/window-glass/rich",
+    "aliases": [
+      "cyberpunk/door-glass/rich"
+    ],
     "alignment": "tile",
     "description": "flat glass surface, synthesized",
     "tiling": {
@@ -79,6 +88,9 @@
   },
   {
     "key": "cyberpunk/window-glass/high_rich",
+    "aliases": [
+      "cyberpunk/door-glass/high_rich"
+    ],
     "alignment": "tile",
     "description": "flat glass surface, synthesized",
     "tiling": {

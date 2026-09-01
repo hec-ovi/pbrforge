@@ -106,5 +106,233 @@
       "variation": 0.06,
       "grain": 0.02
     }
+  },
+  {
+    "key": "cyberpunk/tile/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "mosaic",
+    "description": "small square mosaic tiles with thin grout",
+    "seed": 3800,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#8e8b81"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "line": 0.01,
+      "bevel": 0.005,
+      "depth": 0.3,
+      "joint": 0.55,
+      "variation": 0.09,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "bond",
+    "description": "rectangular floor tiles laid in a running bond",
+    "seed": 3850,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#a3a69f"
+      ],
+      "cells": [
+        3,
+        4
+      ],
+      "bond": "running",
+      "line": 0.012,
+      "bevel": 0.007,
+      "depth": 0.35,
+      "joint": 0.5,
+      "variation": 0.08,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "mosaic",
+    "description": "small square mosaic tiles with thin grout",
+    "seed": 3801,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#7f8a8c"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "line": 0.01,
+      "bevel": 0.005,
+      "depth": 0.3,
+      "joint": 0.55,
+      "variation": 0.09,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "bond",
+    "description": "rectangular floor tiles laid in a running bond",
+    "seed": 3851,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#9aa0a0"
+      ],
+      "cells": [
+        3,
+        4
+      ],
+      "bond": "running",
+      "line": 0.012,
+      "bevel": 0.007,
+      "depth": 0.35,
+      "joint": 0.5,
+      "variation": 0.08,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "mosaic",
+    "description": "small square mosaic tiles with thin grout",
+    "seed": 3802,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#a9a49a"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "line": 0.01,
+      "bevel": 0.005,
+      "depth": 0.3,
+      "joint": 0.55,
+      "variation": 0.09,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "bond",
+    "description": "rectangular floor tiles laid in a running bond",
+    "seed": 3852,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#b0aca4"
+      ],
+      "cells": [
+        3,
+        4
+      ],
+      "bond": "running",
+      "line": 0.012,
+      "bevel": 0.007,
+      "depth": 0.35,
+      "joint": 0.5,
+      "variation": 0.08,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "mosaic",
+    "description": "small square mosaic tiles with thin grout",
+    "seed": 3803,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#22262b"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "line": 0.01,
+      "bevel": 0.005,
+      "depth": 0.3,
+      "joint": 0.55,
+      "variation": 0.09,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/tile/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "bond",
+    "description": "rectangular floor tiles laid in a running bond",
+    "seed": 3853,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#43484e"
+      ],
+      "cells": [
+        3,
+        4
+      ],
+      "bond": "running",
+      "line": 0.012,
+      "bevel": 0.007,
+      "depth": 0.35,
+      "joint": 0.5,
+      "variation": 0.08,
+      "grain": 0.02
+    }
   }
 ]

@@ -1,6 +1,10 @@
 [
   {
     "key": "cyberpunk/window-frame/poor",
+    "aliases": [
+      "cyberpunk/balcony-rail/poor",
+      "cyberpunk/aperture-frame/poor"
+    ],
     "alignment": "tile",
     "description": "weathered aluminium surface, dull grey, faint oxidation haze and smudges",
     "tiling": {
@@ -21,6 +25,10 @@
   },
   {
     "key": "cyberpunk/window-frame/mid",
+    "aliases": [
+      "cyberpunk/balcony-rail/mid",
+      "cyberpunk/aperture-frame/mid"
+    ],
     "alignment": "tile",
     "description": "brushed aluminium surface with fine horizontal grain, even medium grey",
     "tiling": {
@@ -41,6 +49,10 @@
   },
   {
     "key": "cyberpunk/window-frame/rich",
+    "aliases": [
+      "cyberpunk/balcony-rail/rich",
+      "cyberpunk/aperture-frame/rich"
+    ],
     "alignment": "tile",
     "description": "brushed dark steel surface with fine horizontal grain, even charcoal grey",
     "tiling": {
@@ -61,6 +73,10 @@
   },
   {
     "key": "cyberpunk/window-frame/high_rich",
+    "aliases": [
+      "cyberpunk/balcony-rail/high_rich",
+      "cyberpunk/aperture-frame/high_rich"
+    ],
     "alignment": "tile",
     "description": "matte black powder-coated metal surface, flawless satin finish, nearly uniform",
     "tiling": {

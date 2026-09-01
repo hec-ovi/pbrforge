@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "3",
+    "description": "weathered red brick wall, spalled bricks, blackened mortar joints, soot",
+    "seed": 3300
+  },
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "4",
+    "description": "cracked painted stucco wall surface, peeling paint over grey render, faded teal",
+    "seed": 3301
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "3",
+    "description": "beige brick wall with even mortar joints, light soot, dry",
+    "seed": 3310
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "4",
+    "description": "painted cinder block wall surface, even courses, chalky pale grey paint",
+    "seed": 3311
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "3",
+    "description": "brushed anodized aluminium cladding panel surface, fine vertical grain, warm champagne",
+    "seed": 3320
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "4",
+    "description": "beige limestone ashlar masonry wall, fine sawn faces, tight joints",
+    "seed": 3321
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "3",
+    "description": "polished dark green marble wall slab, white veining, immaculate",
+    "seed": 3330
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "4",
+    "description": "bronze anodized metal panel surface, fine brushed grain, deep warm bronze",
+    "seed": 3331
+  }
+]

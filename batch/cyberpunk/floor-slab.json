@@ -1,6 +1,9 @@
 [
   {
     "key": "cyberpunk/floor-slab/poor",
+    "aliases": [
+      "cyberpunk/balcony-slab/poor"
+    ],
     "alignment": "tile",
     "description": "stained cast concrete floor slab surface, oil spots, cracks filled with grime, dull grey",
     "tiling": {
@@ -21,6 +24,9 @@
   },
   {
     "key": "cyberpunk/floor-slab/mid",
+    "aliases": [
+      "cyberpunk/balcony-slab/mid"
+    ],
     "alignment": "tile",
     "description": "cast concrete floor slab surface, light wear and faint scuffing, even grey",
     "tiling": {
@@ -41,6 +47,9 @@
   },
   {
     "key": "cyberpunk/floor-slab/rich",
+    "aliases": [
+      "cyberpunk/balcony-slab/rich"
+    ],
     "alignment": "tile",
     "description": "polished terrazzo floor surface seen straight from above, small marble chips in light grey cement, flat",
     "tiling": {
@@ -61,6 +70,9 @@
   },
   {
     "key": "cyberpunk/floor-slab/high_rich",
+    "aliases": [
+      "cyberpunk/balcony-slab/high_rich"
+    ],
     "alignment": "tile",
     "description": "polished black granite floor surface seen straight from above, faint mirror sheen, deep graphite",
     "tiling": {

@@ -75,6 +75,51 @@
             "height": "assets/wall/poor/2/height.png",
             "ao": "assets/wall/poor/2/ao.png"
           }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/poor/3/basecolor.png",
+            "normal": "assets/wall/poor/3/normal.png",
+            "roughness": "assets/wall/poor/3/roughness.png",
+            "metallic": "assets/wall/poor/3/metallic.png",
+            "height": "assets/wall/poor/3/height.png",
+            "ao": "assets/wall/poor/3/ao.png"
+          }
+        },
+        {
+          "id": "4",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/poor/4/basecolor.png",
+            "normal": "assets/wall/poor/4/normal.png",
+            "roughness": "assets/wall/poor/4/roughness.png",
+            "metallic": "assets/wall/poor/4/metallic.png",
+            "height": "assets/wall/poor/4/height.png",
+            "ao": "assets/wall/poor/4/ao.png"
+          }
+        },
+        {
+          "id": "tint-teal",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/poor/tint-teal/basecolor.png",
+            "normal": "assets/wall/poor/4/normal.png",
+            "roughness": "assets/wall/poor/4/roughness.png",
+            "metallic": "assets/wall/poor/4/metallic.png",
+            "height": "assets/wall/poor/4/height.png",
+            "ao": "assets/wall/poor/4/ao.png"
+          }
         }
       ],
       "aliases": [
@@ -91,6 +136,9 @@
     },
     "cyberpunk/wall/mid": {
       "key": "cyberpunk/wall/mid",
+      "aliases": [
+        "cyberpunk/parapet/mid"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -101,6 +149,14 @@
       "physical": {
         "roughnessFactor": 0.85,
         "metallicFactor": 0
+      },
+      "finish": {
+        "roughness": [
+          0.82,
+          0.92
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
@@ -134,6 +190,36 @@
           }
         },
         {
+          "id": "3",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/mid/3/basecolor.png",
+            "normal": "assets/wall/mid/3/normal.png",
+            "roughness": "assets/wall/mid/3/roughness.png",
+            "metallic": "assets/wall/mid/3/metallic.png",
+            "height": "assets/wall/mid/3/height.png",
+            "ao": "assets/wall/mid/3/ao.png"
+          }
+        },
+        {
+          "id": "4",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/mid/4/basecolor.png",
+            "normal": "assets/wall/mid/4/normal.png",
+            "roughness": "assets/wall/mid/4/roughness.png",
+            "metallic": "assets/wall/mid/4/metallic.png",
+            "height": "assets/wall/mid/4/height.png",
+            "ao": "assets/wall/mid/4/ao.png"
+          }
+        },
+        {
           "id": "tint-ochre",
           "resolution": [
             1024,
@@ -162,19 +248,23 @@
             "height": "assets/wall/mid/2/height.png",
             "ao": "assets/wall/mid/2/ao.png"
           }
+        },
+        {
+          "id": "tint-teal",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/mid/tint-teal/basecolor.png",
+            "normal": "assets/wall/mid/4/normal.png",
+            "roughness": "assets/wall/mid/4/roughness.png",
+            "metallic": "assets/wall/mid/4/metallic.png",
+            "height": "assets/wall/mid/4/height.png",
+            "ao": "assets/wall/mid/4/ao.png"
+          }
         }
-      ],
-      "aliases": [
-        "cyberpunk/parapet/mid"
-      ],
-      "finish": {
-        "roughness": [
-          0.82,
-          0.92
-        ],
-        "grain": 0.2,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/wall/rich": {
       "key": "cyberpunk/wall/rich",
@@ -248,6 +338,51 @@
             "metallic": "assets/wall/rich/2/metallic.png",
             "height": "assets/wall/rich/2/height.png",
             "ao": "assets/wall/rich/2/ao.png"
+          }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/rich/3/basecolor.png",
+            "normal": "assets/wall/rich/3/normal.png",
+            "roughness": "assets/wall/rich/3/roughness.png",
+            "metallic": "assets/wall/rich/3/metallic.png",
+            "height": "assets/wall/rich/3/height.png",
+            "ao": "assets/wall/rich/3/ao.png"
+          }
+        },
+        {
+          "id": "4",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/rich/4/basecolor.png",
+            "normal": "assets/wall/rich/4/normal.png",
+            "roughness": "assets/wall/rich/4/roughness.png",
+            "metallic": "assets/wall/rich/4/metallic.png",
+            "height": "assets/wall/rich/4/height.png",
+            "ao": "assets/wall/rich/4/ao.png"
+          }
+        },
+        {
+          "id": "tint-teal",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/rich/tint-teal/basecolor.png",
+            "normal": "assets/wall/rich/4/normal.png",
+            "roughness": "assets/wall/rich/4/roughness.png",
+            "metallic": "assets/wall/rich/4/metallic.png",
+            "height": "assets/wall/rich/4/height.png",
+            "ao": "assets/wall/rich/4/ao.png"
           }
         }
       ],
@@ -335,6 +470,51 @@
             "metallic": "assets/wall/high_rich/2/metallic.png",
             "height": "assets/wall/high_rich/2/height.png",
             "ao": "assets/wall/high_rich/2/ao.png"
+          }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/high_rich/3/basecolor.png",
+            "normal": "assets/wall/high_rich/3/normal.png",
+            "roughness": "assets/wall/high_rich/3/roughness.png",
+            "metallic": "assets/wall/high_rich/3/metallic.png",
+            "height": "assets/wall/high_rich/3/height.png",
+            "ao": "assets/wall/high_rich/3/ao.png"
+          }
+        },
+        {
+          "id": "4",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/high_rich/4/basecolor.png",
+            "normal": "assets/wall/high_rich/4/normal.png",
+            "roughness": "assets/wall/high_rich/4/roughness.png",
+            "metallic": "assets/wall/high_rich/4/metallic.png",
+            "height": "assets/wall/high_rich/4/height.png",
+            "ao": "assets/wall/high_rich/4/ao.png"
+          }
+        },
+        {
+          "id": "tint-teal",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/high_rich/tint-teal/basecolor.png",
+            "normal": "assets/wall/high_rich/4/normal.png",
+            "roughness": "assets/wall/high_rich/4/roughness.png",
+            "metallic": "assets/wall/high_rich/4/metallic.png",
+            "height": "assets/wall/high_rich/4/height.png",
+            "ao": "assets/wall/high_rich/4/ao.png"
           }
         }
       ],
@@ -1753,6 +1933,36 @@
             "height": "assets/plaster/poor/two-tone/height.png",
             "ao": "assets/plaster/poor/two-tone/ao.png"
           }
+        },
+        {
+          "id": "tint-rose",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/poor/tint-rose/basecolor.png",
+            "normal": "assets/plaster/poor/1/normal.png",
+            "roughness": "assets/plaster/poor/1/roughness.png",
+            "metallic": "assets/plaster/poor/1/metallic.png",
+            "height": "assets/plaster/poor/1/height.png",
+            "ao": "assets/plaster/poor/1/ao.png"
+          }
+        },
+        {
+          "id": "tint-sage",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/poor/tint-sage/basecolor.png",
+            "normal": "assets/plaster/poor/2/normal.png",
+            "roughness": "assets/plaster/poor/2/roughness.png",
+            "metallic": "assets/plaster/poor/2/metallic.png",
+            "height": "assets/plaster/poor/2/height.png",
+            "ao": "assets/plaster/poor/2/ao.png"
+          }
         }
       ],
       "finish": {
@@ -1854,6 +2064,36 @@
             "metallic": "assets/plaster/mid/two-tone/metallic.png",
             "height": "assets/plaster/mid/two-tone/height.png",
             "ao": "assets/plaster/mid/two-tone/ao.png"
+          }
+        },
+        {
+          "id": "tint-rose",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/mid/tint-rose/basecolor.png",
+            "normal": "assets/plaster/mid/1/normal.png",
+            "roughness": "assets/plaster/mid/1/roughness.png",
+            "metallic": "assets/plaster/mid/1/metallic.png",
+            "height": "assets/plaster/mid/1/height.png",
+            "ao": "assets/plaster/mid/1/ao.png"
+          }
+        },
+        {
+          "id": "tint-sage",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/mid/tint-sage/basecolor.png",
+            "normal": "assets/plaster/mid/2/normal.png",
+            "roughness": "assets/plaster/mid/2/roughness.png",
+            "metallic": "assets/plaster/mid/2/metallic.png",
+            "height": "assets/plaster/mid/2/height.png",
+            "ao": "assets/plaster/mid/2/ao.png"
           }
         }
       ],
@@ -1957,6 +2197,36 @@
             "height": "assets/plaster/rich/two-tone/height.png",
             "ao": "assets/plaster/rich/two-tone/ao.png"
           }
+        },
+        {
+          "id": "tint-rose",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/rich/tint-rose/basecolor.png",
+            "normal": "assets/plaster/rich/1/normal.png",
+            "roughness": "assets/plaster/rich/1/roughness.png",
+            "metallic": "assets/plaster/rich/1/metallic.png",
+            "height": "assets/plaster/rich/1/height.png",
+            "ao": "assets/plaster/rich/1/ao.png"
+          }
+        },
+        {
+          "id": "tint-sage",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/rich/tint-sage/basecolor.png",
+            "normal": "assets/plaster/rich/2/normal.png",
+            "roughness": "assets/plaster/rich/2/roughness.png",
+            "metallic": "assets/plaster/rich/2/metallic.png",
+            "height": "assets/plaster/rich/2/height.png",
+            "ao": "assets/plaster/rich/2/ao.png"
+          }
         }
       ],
       "finish": {
@@ -2059,6 +2329,36 @@
             "height": "assets/plaster/high_rich/two-tone/height.png",
             "ao": "assets/plaster/high_rich/two-tone/ao.png"
           }
+        },
+        {
+          "id": "tint-rose",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/high_rich/tint-rose/basecolor.png",
+            "normal": "assets/plaster/high_rich/1/normal.png",
+            "roughness": "assets/plaster/high_rich/1/roughness.png",
+            "metallic": "assets/plaster/high_rich/1/metallic.png",
+            "height": "assets/plaster/high_rich/1/height.png",
+            "ao": "assets/plaster/high_rich/1/ao.png"
+          }
+        },
+        {
+          "id": "tint-sage",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/high_rich/tint-sage/basecolor.png",
+            "normal": "assets/plaster/high_rich/2/normal.png",
+            "roughness": "assets/plaster/high_rich/2/roughness.png",
+            "metallic": "assets/plaster/high_rich/2/metallic.png",
+            "height": "assets/plaster/high_rich/2/height.png",
+            "ao": "assets/plaster/high_rich/2/ao.png"
+          }
         }
       ],
       "finish": {
@@ -2128,6 +2428,38 @@
             "metallic": "assets/tile/poor/slab/metallic.png",
             "height": "assets/tile/poor/slab/height.png",
             "ao": "assets/tile/poor/slab/ao.png"
+          }
+        },
+        {
+          "id": "mosaic",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/tile/poor/mosaic/basecolor.png",
+            "normal": "assets/tile/poor/mosaic/normal.png",
+            "roughness": "assets/tile/poor/mosaic/roughness.png",
+            "metallic": "assets/tile/poor/mosaic/metallic.png",
+            "height": "assets/tile/poor/mosaic/height.png",
+            "ao": "assets/tile/poor/mosaic/ao.png"
+          }
+        },
+        {
+          "id": "bond",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/tile/poor/bond/basecolor.png",
+            "normal": "assets/tile/poor/bond/normal.png",
+            "roughness": "assets/tile/poor/bond/roughness.png",
+            "metallic": "assets/tile/poor/bond/metallic.png",
+            "height": "assets/tile/poor/bond/height.png",
+            "ao": "assets/tile/poor/bond/ao.png"
           }
         }
       ],
@@ -2199,6 +2531,38 @@
             "height": "assets/tile/mid/slab/height.png",
             "ao": "assets/tile/mid/slab/ao.png"
           }
+        },
+        {
+          "id": "mosaic",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/tile/mid/mosaic/basecolor.png",
+            "normal": "assets/tile/mid/mosaic/normal.png",
+            "roughness": "assets/tile/mid/mosaic/roughness.png",
+            "metallic": "assets/tile/mid/mosaic/metallic.png",
+            "height": "assets/tile/mid/mosaic/height.png",
+            "ao": "assets/tile/mid/mosaic/ao.png"
+          }
+        },
+        {
+          "id": "bond",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/tile/mid/bond/basecolor.png",
+            "normal": "assets/tile/mid/bond/normal.png",
+            "roughness": "assets/tile/mid/bond/roughness.png",
+            "metallic": "assets/tile/mid/bond/metallic.png",
+            "height": "assets/tile/mid/bond/height.png",
+            "ao": "assets/tile/mid/bond/ao.png"
+          }
         }
       ],
       "finish": {
@@ -2269,6 +2633,38 @@
             "height": "assets/tile/rich/slab/height.png",
             "ao": "assets/tile/rich/slab/ao.png"
           }
+        },
+        {
+          "id": "mosaic",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/tile/rich/mosaic/basecolor.png",
+            "normal": "assets/tile/rich/mosaic/normal.png",
+            "roughness": "assets/tile/rich/mosaic/roughness.png",
+            "metallic": "assets/tile/rich/mosaic/metallic.png",
+            "height": "assets/tile/rich/mosaic/height.png",
+            "ao": "assets/tile/rich/mosaic/ao.png"
+          }
+        },
+        {
+          "id": "bond",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/tile/rich/bond/basecolor.png",
+            "normal": "assets/tile/rich/bond/normal.png",
+            "roughness": "assets/tile/rich/bond/roughness.png",
+            "metallic": "assets/tile/rich/bond/metallic.png",
+            "height": "assets/tile/rich/bond/height.png",
+            "ao": "assets/tile/rich/bond/ao.png"
+          }
         }
       ],
       "finish": {
@@ -2338,6 +2734,38 @@
             "metallic": "assets/tile/high_rich/slab/metallic.png",
             "height": "assets/tile/high_rich/slab/height.png",
             "ao": "assets/tile/high_rich/slab/ao.png"
+          }
+        },
+        {
+          "id": "mosaic",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/tile/high_rich/mosaic/basecolor.png",
+            "normal": "assets/tile/high_rich/mosaic/normal.png",
+            "roughness": "assets/tile/high_rich/mosaic/roughness.png",
+            "metallic": "assets/tile/high_rich/mosaic/metallic.png",
+            "height": "assets/tile/high_rich/mosaic/height.png",
+            "ao": "assets/tile/high_rich/mosaic/ao.png"
+          }
+        },
+        {
+          "id": "bond",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/tile/high_rich/bond/basecolor.png",
+            "normal": "assets/tile/high_rich/bond/normal.png",
+            "roughness": "assets/tile/high_rich/bond/roughness.png",
+            "metallic": "assets/tile/high_rich/bond/metallic.png",
+            "height": "assets/tile/high_rich/bond/height.png",
+            "ao": "assets/tile/high_rich/bond/ao.png"
           }
         }
       ],
@@ -3087,6 +3515,68 @@
             "height": "assets/concrete/poor/2/height.png",
             "ao": "assets/concrete/poor/2/ao.png"
           }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/poor/3/basecolor.png",
+            "normal": "assets/concrete/poor/3/normal.png",
+            "roughness": "assets/concrete/poor/3/roughness.png",
+            "metallic": "assets/concrete/poor/3/metallic.png",
+            "height": "assets/concrete/poor/3/height.png",
+            "ao": "assets/concrete/poor/3/ao.png"
+          }
+        },
+        {
+          "id": "rib",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/poor/rib/basecolor.png",
+            "normal": "assets/concrete/poor/rib/normal.png",
+            "roughness": "assets/concrete/poor/rib/roughness.png",
+            "metallic": "assets/concrete/poor/rib/metallic.png",
+            "height": "assets/concrete/poor/rib/height.png",
+            "ao": "assets/concrete/poor/rib/ao.png"
+          }
+        },
+        {
+          "id": "block",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/poor/block/basecolor.png",
+            "normal": "assets/concrete/poor/block/normal.png",
+            "roughness": "assets/concrete/poor/block/roughness.png",
+            "metallic": "assets/concrete/poor/block/metallic.png",
+            "height": "assets/concrete/poor/block/height.png",
+            "ao": "assets/concrete/poor/block/ao.png"
+          }
+        },
+        {
+          "id": "tint-steel",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/poor/tint-steel/basecolor.png",
+            "normal": "assets/concrete/poor/3/normal.png",
+            "roughness": "assets/concrete/poor/3/roughness.png",
+            "metallic": "assets/concrete/poor/3/metallic.png",
+            "height": "assets/concrete/poor/3/height.png",
+            "ao": "assets/concrete/poor/3/ao.png"
+          }
         }
       ],
       "finish": {
@@ -3186,6 +3676,68 @@
             "metallic": "assets/concrete/mid/2/metallic.png",
             "height": "assets/concrete/mid/2/height.png",
             "ao": "assets/concrete/mid/2/ao.png"
+          }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/mid/3/basecolor.png",
+            "normal": "assets/concrete/mid/3/normal.png",
+            "roughness": "assets/concrete/mid/3/roughness.png",
+            "metallic": "assets/concrete/mid/3/metallic.png",
+            "height": "assets/concrete/mid/3/height.png",
+            "ao": "assets/concrete/mid/3/ao.png"
+          }
+        },
+        {
+          "id": "rib",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/mid/rib/basecolor.png",
+            "normal": "assets/concrete/mid/rib/normal.png",
+            "roughness": "assets/concrete/mid/rib/roughness.png",
+            "metallic": "assets/concrete/mid/rib/metallic.png",
+            "height": "assets/concrete/mid/rib/height.png",
+            "ao": "assets/concrete/mid/rib/ao.png"
+          }
+        },
+        {
+          "id": "block",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/mid/block/basecolor.png",
+            "normal": "assets/concrete/mid/block/normal.png",
+            "roughness": "assets/concrete/mid/block/roughness.png",
+            "metallic": "assets/concrete/mid/block/metallic.png",
+            "height": "assets/concrete/mid/block/height.png",
+            "ao": "assets/concrete/mid/block/ao.png"
+          }
+        },
+        {
+          "id": "tint-steel",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/mid/tint-steel/basecolor.png",
+            "normal": "assets/concrete/mid/3/normal.png",
+            "roughness": "assets/concrete/mid/3/roughness.png",
+            "metallic": "assets/concrete/mid/3/metallic.png",
+            "height": "assets/concrete/mid/3/height.png",
+            "ao": "assets/concrete/mid/3/ao.png"
           }
         }
       ],
@@ -3287,6 +3839,68 @@
             "height": "assets/concrete/rich/2/height.png",
             "ao": "assets/concrete/rich/2/ao.png"
           }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/rich/3/basecolor.png",
+            "normal": "assets/concrete/rich/3/normal.png",
+            "roughness": "assets/concrete/rich/3/roughness.png",
+            "metallic": "assets/concrete/rich/3/metallic.png",
+            "height": "assets/concrete/rich/3/height.png",
+            "ao": "assets/concrete/rich/3/ao.png"
+          }
+        },
+        {
+          "id": "rib",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/rich/rib/basecolor.png",
+            "normal": "assets/concrete/rich/rib/normal.png",
+            "roughness": "assets/concrete/rich/rib/roughness.png",
+            "metallic": "assets/concrete/rich/rib/metallic.png",
+            "height": "assets/concrete/rich/rib/height.png",
+            "ao": "assets/concrete/rich/rib/ao.png"
+          }
+        },
+        {
+          "id": "block",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/rich/block/basecolor.png",
+            "normal": "assets/concrete/rich/block/normal.png",
+            "roughness": "assets/concrete/rich/block/roughness.png",
+            "metallic": "assets/concrete/rich/block/metallic.png",
+            "height": "assets/concrete/rich/block/height.png",
+            "ao": "assets/concrete/rich/block/ao.png"
+          }
+        },
+        {
+          "id": "tint-steel",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/rich/tint-steel/basecolor.png",
+            "normal": "assets/concrete/rich/3/normal.png",
+            "roughness": "assets/concrete/rich/3/roughness.png",
+            "metallic": "assets/concrete/rich/3/metallic.png",
+            "height": "assets/concrete/rich/3/height.png",
+            "ao": "assets/concrete/rich/3/ao.png"
+          }
         }
       ],
       "finish": {
@@ -3386,6 +4000,68 @@
             "metallic": "assets/concrete/high_rich/2/metallic.png",
             "height": "assets/concrete/high_rich/2/height.png",
             "ao": "assets/concrete/high_rich/2/ao.png"
+          }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/high_rich/3/basecolor.png",
+            "normal": "assets/concrete/high_rich/3/normal.png",
+            "roughness": "assets/concrete/high_rich/3/roughness.png",
+            "metallic": "assets/concrete/high_rich/3/metallic.png",
+            "height": "assets/concrete/high_rich/3/height.png",
+            "ao": "assets/concrete/high_rich/3/ao.png"
+          }
+        },
+        {
+          "id": "rib",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/high_rich/rib/basecolor.png",
+            "normal": "assets/concrete/high_rich/rib/normal.png",
+            "roughness": "assets/concrete/high_rich/rib/roughness.png",
+            "metallic": "assets/concrete/high_rich/rib/metallic.png",
+            "height": "assets/concrete/high_rich/rib/height.png",
+            "ao": "assets/concrete/high_rich/rib/ao.png"
+          }
+        },
+        {
+          "id": "block",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/high_rich/block/basecolor.png",
+            "normal": "assets/concrete/high_rich/block/normal.png",
+            "roughness": "assets/concrete/high_rich/block/roughness.png",
+            "metallic": "assets/concrete/high_rich/block/metallic.png",
+            "height": "assets/concrete/high_rich/block/height.png",
+            "ao": "assets/concrete/high_rich/block/ao.png"
+          }
+        },
+        {
+          "id": "tint-steel",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/high_rich/tint-steel/basecolor.png",
+            "normal": "assets/concrete/high_rich/3/normal.png",
+            "roughness": "assets/concrete/high_rich/3/roughness.png",
+            "metallic": "assets/concrete/high_rich/3/metallic.png",
+            "height": "assets/concrete/high_rich/3/height.png",
+            "ao": "assets/concrete/high_rich/3/ao.png"
           }
         }
       ],
