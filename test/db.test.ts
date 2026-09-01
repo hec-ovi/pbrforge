@@ -1,6 +1,7 @@
 import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { Database } from '../src/db/Database.js';
 import { MaterialsError } from '../src/db/errors.js';
@@ -97,5 +98,33 @@ describe('database contract', () => {
       return;
     }
     expect.unreachable();
+  });
+});
+
+/** The kind vocabulary the contract guarantees, aliases included. */
+const KINDS = [
+  'wall', 'wall-trim', 'column', 'window-glass', 'window-frame', 'curtain', 'door', 'door-glass',
+  'balcony-slab', 'balcony-rail', 'roof', 'floor-slab', 'parapet', 'signage', 'ad-screen',
+  'light-fixture', 'fire-escape', 'aperture-frame', 'roof-artifact',
+  'plaster', 'tile', 'ceiling', 'wood', 'carpet', 'rubber', 'concrete', 'metal', 'elevator_door', 'fabric', 'glass',
+  'sidewalk', 'road', 'plastic', 'letter-atlas',
+];
+
+describe('shipped cyberpunk coverage', () => {
+  const db = new Database(join(dirname(fileURLToPath(import.meta.url)), '..', 'themes'));
+
+  it('resolves every guaranteed kind at all four tiers', () => {
+    const missing = KINDS.flatMap((kind) =>
+      ['poor', 'mid', 'rich', 'high_rich']
+        .map((tier) => `cyberpunk/${kind}/${tier}`)
+        .filter((key) => {
+          try {
+            return db.resolve(key).variants.length === 0;
+          } catch {
+            return true;
+          }
+        }),
+    );
+    expect(missing).toEqual([]);
   });
 });

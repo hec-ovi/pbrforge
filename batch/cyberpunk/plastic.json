@@ -1,0 +1,44 @@
+[
+  {
+    "key": "cyberpunk/plastic/poor",
+    "aliases": [
+      "cyberpunk/plastic/mid",
+      "cyberpunk/plastic/rich",
+      "cyberpunk/plastic/high_rich"
+    ],
+    "alignment": "tile",
+    "description": "crumpled black refuse sack, glossy sheet plastic",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.25,
+      "metallicFactor": 0
+    },
+    "variantId": "bag",
+    "seed": 4200,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#0e0f11",
+        "#1d1f23"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 3,
+      "depth": 0.75,
+      "sheen": 0.08,
+      "variation": 0.05,
+      "grain": 0.02
+    }
+  }
+]

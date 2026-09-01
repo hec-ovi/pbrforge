@@ -7425,6 +7425,43 @@
           }
         }
       ]
+    },
+    "cyberpunk/plastic/poor": {
+      "key": "cyberpunk/plastic/poor",
+      "aliases": [
+        "cyberpunk/plastic/mid",
+        "cyberpunk/plastic/rich",
+        "cyberpunk/plastic/high_rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.25,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "bag",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plastic/poor/bag/basecolor.png",
+            "normal": "assets/plastic/poor/bag/normal.png",
+            "roughness": "assets/plastic/poor/bag/roughness.png",
+            "metallic": "assets/plastic/poor/bag/metallic.png",
+            "height": "assets/plastic/poor/bag/height.png",
+            "ao": "assets/plastic/poor/bag/ao.png"
+          }
+        }
+      ]
     }
   }
 }
