@@ -8,6 +8,7 @@ import type { CreateRequest, MaterialEntry, Variant } from '../db/types.js';
 import { ComfyClient } from './ComfyClient.js';
 import { Template, loadPrompt } from './Template.js';
 import { decodeRgb, encodeGrayPng, encodeRgbPng } from './pixels.js';
+import { synthesizeFlat } from './flat.js';
 import { deriveAo, deriveEmission, deriveHeight, deriveMetallic, deriveNormal, deriveRoughness } from './maps.js';
 import { isSeamless, seamScore } from './seam.js';
 import requestSchema from '../../schema/create-request.schema.json' with { type: 'json' };
@@ -50,17 +51,19 @@ export class Generator {
 
     const [width, height] = request.resolution ?? [1024, 1024];
     const baseSeed = request.seed ?? seedFrom(request.description);
+    // Tile lane gets the field-style suffixes; the exact lane is a composed photograph,
+    // so the description alone carries the composition.
     const positive =
       request.alignment === 'tile'
         ? `${request.description}, ${loadPrompt('tile-suffix')} ${loadPrompt('material-field')}`
-        : `${request.description}, ${loadPrompt('exact-suffix')}`;
-    const negative = loadPrompt('negative');
+        : request.description;
+    const negative = loadPrompt(request.alignment === 'tile' ? 'negative' : 'exact-negative');
 
     const variants: Variant[] = [];
     for (let v = 0; v < (request.variants ?? 1); v++) {
-      const png = await this.comfy.render(
-        this.template.build({ positive, negative, seed: baseSeed + v, width, height }),
-      );
+      const png = request.flatColor
+        ? await encodeRgbPng(synthesizeFlat(request.flatColor, baseSeed + v, width, height, request.flatNoise))
+        : await this.comfy.render(this.template.build({ positive, negative, seed: baseSeed + v, width, height }));
       variants.push(await this.buildVariant(theme, kind, tier, String(v + 1), png, request));
     }
 

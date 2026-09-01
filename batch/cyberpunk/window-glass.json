@@ -2,33 +2,89 @@
   {
     "key": "cyberpunk/window-glass/poor",
     "alignment": "tile",
-    "description": "dirty smudged window glass surface, dust film, faint greasy streaks and water spots, murky green-grey",
-    "tiling": { "worldSize": [1.5, 1.5] },
-    "physical": { "breakable": true, "roughnessFactor": 0.35, "metallicFactor": 0, "transmission": 0.6, "ior": 1.5, "tint": "#9aa39e" },
-    "variants": 2
+    "description": "flat glass surface, synthesized",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "breakable": true,
+      "roughnessFactor": 0.35,
+      "metallicFactor": 0,
+      "transmission": 0.6,
+      "ior": 1.5,
+      "tint": "#9aa39e"
+    },
+    "variants": 2,
+    "flatColor": "#d4dad2",
+    "flatNoise": 0.08
   },
   {
     "key": "cyberpunk/window-glass/mid",
     "alignment": "tile",
-    "description": "window glass surface with light dust and few faint smudges, neutral cool grey",
-    "tiling": { "worldSize": [1.5, 1.5] },
-    "physical": { "breakable": true, "roughnessFactor": 0.2, "metallicFactor": 0, "transmission": 0.8, "ior": 1.5, "tint": "#b8c4c9" },
-    "variants": 2
+    "description": "flat glass surface, synthesized",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "breakable": true,
+      "roughnessFactor": 0.2,
+      "metallicFactor": 0,
+      "transmission": 0.8,
+      "ior": 1.5,
+      "tint": "#b8c4c9"
+    },
+    "variants": 2,
+    "flatColor": "#dde3e4",
+    "flatNoise": 0.05
   },
   {
     "key": "cyberpunk/window-glass/rich",
     "alignment": "tile",
-    "description": "clean low-e coated window glass surface, very subtle reflective sheen, pale blue-green",
-    "tiling": { "worldSize": [1.5, 1.5] },
-    "physical": { "breakable": true, "roughnessFactor": 0.08, "metallicFactor": 0, "transmission": 0.9, "ior": 1.5, "tint": "#a9c9d8" },
-    "variants": 2
+    "description": "flat glass surface, synthesized",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "breakable": true,
+      "roughnessFactor": 0.08,
+      "metallicFactor": 0,
+      "transmission": 0.9,
+      "ior": 1.5,
+      "tint": "#a9c9d8"
+    },
+    "variants": 2,
+    "flatColor": "#e9f1f2",
+    "flatNoise": 0.03
   },
   {
     "key": "cyberpunk/window-glass/high_rich",
     "alignment": "tile",
-    "description": "flawless corporate curtain-wall glass surface, deep blue coated, immaculate",
-    "tiling": { "worldSize": [1.5, 1.5] },
-    "physical": { "breakable": true, "roughnessFactor": 0.04, "metallicFactor": 0, "transmission": 0.95, "ior": 1.5, "tint": "#8fb8d0" },
-    "variants": 2
+    "description": "flat glass surface, synthesized",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "breakable": true,
+      "roughnessFactor": 0.04,
+      "metallicFactor": 0,
+      "transmission": 0.95,
+      "ior": 1.5,
+      "tint": "#8fb8d0"
+    },
+    "variants": 2,
+    "flatColor": "#eef4f8",
+    "flatNoise": 0.02
   }
 ]

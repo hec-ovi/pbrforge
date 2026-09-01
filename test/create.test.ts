@@ -90,4 +90,16 @@ describe('create contract', () => {
     const offline = new Generator(db, new ComfyClient('http://127.0.0.1:9', 1000));
     await expect(offline.create(request)).rejects.toMatchObject({ code: 'E_COMFY_UNAVAILABLE' });
   });
+
+  it('synthesizes a flatColor set without ComfyUI and it passes the seam gate', async () => {
+    const offline = new Generator(db, new ComfyClient('http://127.0.0.1:9', 1000));
+    const entry = await offline.create({
+      ...request,
+      key: 'cyberpunk/window-glass/poor',
+      flatColor: '#d8ddd8',
+      emission: 'none',
+    });
+    expect(entry.variants[0].maps.basecolor).toBeDefined();
+    expect(existsSync(join(themesDir, 'cyberpunk', entry.variants[0].maps.basecolor))).toBe(true);
+  });
 });

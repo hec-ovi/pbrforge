@@ -3,32 +3,64 @@
     "key": "cyberpunk/floor-slab/poor",
     "alignment": "tile",
     "description": "stained cast concrete floor slab surface, oil spots, cracks filled with grime, dull grey",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.9, "metallicFactor": 0 },
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/floor-slab/mid",
     "alignment": "tile",
     "description": "cast concrete floor slab surface, light wear and faint scuffing, even grey",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.8, "metallicFactor": 0 },
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.8,
+      "metallicFactor": 0
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/floor-slab/rich",
     "alignment": "tile",
-    "description": "terrazzo-finish floor slab surface with fine stone aggregate, clean, warm grey",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.5, "metallicFactor": 0 },
+    "description": "polished terrazzo floor surface seen straight from above, small marble chips in light grey cement, flat",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/floor-slab/high_rich",
     "alignment": "tile",
-    "description": "polished dark stone composite floor slab surface, mirror-smooth, deep graphite",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.35, "metallicFactor": 0 },
+    "description": "polished black granite floor surface seen straight from above, faint mirror sheen, deep graphite",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.35,
+      "metallicFactor": 0
+    },
     "variants": 2
   }
 ]

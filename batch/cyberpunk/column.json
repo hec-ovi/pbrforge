@@ -3,32 +3,64 @@
     "key": "cyberpunk/column/poor",
     "alignment": "tile",
     "description": "raw concrete structural column surface, formwork board marks, grime and moisture stains",
-    "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.92, "metallicFactor": 0 },
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/column/mid",
     "alignment": "tile",
     "description": "smooth finished concrete column surface, light wear at edges, even grey",
-    "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.8, "metallicFactor": 0 },
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.8,
+      "metallicFactor": 0
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/column/rich",
     "alignment": "tile",
-    "description": "brushed steel column cladding panels, clean vertical grain, charcoal",
-    "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.4, "metallicFactor": 1 },
+    "description": "brushed stainless steel surface with fine vertical grain, even charcoal grey",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 1
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/column/high_rich",
     "alignment": "tile",
-    "description": "black polished composite column cladding, seamless panels with hairline joints, immaculate",
-    "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.3, "metallicFactor": 0.4 },
+    "description": "honed black granite surface, flat and immaculate, faint stone veining",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0.4
+    },
     "variants": 2
   }
 ]

@@ -40,6 +40,8 @@ export interface CreateRequest {
   tiling?: { worldSize: [number, number] };
   aspect?: [number, number];
   physical?: Physical;
+  flatColor?: string;
+  flatNoise?: number;
   emission?: 'none' | 'luminance' | 'color-mask';
   variants?: number;
   seed?: number;

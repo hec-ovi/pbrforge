@@ -2,37 +2,73 @@
   {
     "key": "cyberpunk/door/poor",
     "alignment": "exact",
-    "description": "dented steel service door, flat front view filling the whole frame, rust streaks, peeling grey paint, stickers torn off",
-    "aspect": [1, 2],
-    "resolution": [512, 1024],
-    "physical": { "roughnessFactor": 0.7, "metallicFactor": 1 },
+    "description": "photograph of one closed grey steel door filling the frame, straight-on front view, a worn metal handle on the right side, a scuffed kick plate at the bottom, rust streaks and peeling paint, flat even daylight",
+    "aspect": [
+      1,
+      2
+    ],
+    "resolution": [
+      832,
+      1216
+    ],
+    "physical": {
+      "roughnessFactor": 0.7,
+      "metallicFactor": 1
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/door/mid",
     "alignment": "exact",
-    "description": "utilitarian metal apartment door, flat front view filling the whole frame, scuffed edges, flat grey paint",
-    "aspect": [1, 2],
-    "resolution": [512, 1024],
-    "physical": { "roughnessFactor": 0.55, "metallicFactor": 1 },
+    "description": "photograph of one closed plain metal apartment door filling the frame, straight-on front view, a simple metal handle on the right side, scuffed flat grey paint, flat even light",
+    "aspect": [
+      1,
+      2
+    ],
+    "resolution": [
+      832,
+      1216
+    ],
+    "physical": {
+      "roughnessFactor": 0.55,
+      "metallicFactor": 1
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/door/rich",
     "alignment": "exact",
-    "description": "brushed steel security door with recessed panel lines, flat front view filling the whole frame, clean charcoal finish",
-    "aspect": [1, 2],
-    "resolution": [512, 1024],
-    "physical": { "roughnessFactor": 0.4, "metallicFactor": 1 },
+    "description": "photograph of one closed brushed steel security door filling the frame, straight-on front view, a sleek vertical bar handle on the right side, recessed panel lines, clean charcoal finish, flat even light",
+    "aspect": [
+      1,
+      2
+    ],
+    "resolution": [
+      832,
+      1216
+    ],
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 1
+    },
     "variants": 2
   },
   {
     "key": "cyberpunk/door/high_rich",
     "alignment": "exact",
-    "description": "sleek dark composite corporate door with minimal seam lines, flat front view filling the whole frame, immaculate matte black",
-    "aspect": [1, 2],
-    "resolution": [512, 1024],
-    "physical": { "roughnessFactor": 0.3, "metallicFactor": 0.6 },
+    "description": "photograph of one closed sleek matte black door filling the frame, straight-on front view, a minimal recessed handle on the right side, thin seam lines, immaculate, flat even light",
+    "aspect": [
+      1,
+      2
+    ],
+    "resolution": [
+      832,
+      1216
+    ],
+    "physical": {
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0.6
+    },
     "variants": 2
   }
 ]

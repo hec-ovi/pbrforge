@@ -15,7 +15,7 @@ Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/
 
 - `resolve(key: string): MaterialEntry` resolves a key (or alias) against the database.
 - `list(filter?: {theme?, kind?, tier?}): string[]` returns matching keys, sorted, deterministic.
-- `create(request: CreateRequest): MaterialEntry` generates a full set via ComfyUI, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json).
+- `create(request: CreateRequest): MaterialEntry` generates a full set, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json). Basecolor comes from ComfyUI, or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box.
 
 CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable).
 

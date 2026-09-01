@@ -55,6 +55,18 @@
         "alphaMode": { "enum": ["OPAQUE", "BLEND", "MASK"] }
       }
     },
+    "flatColor": {
+      "type": "string",
+      "pattern": "^#[0-9a-f]{6}$",
+      "description": "when set, the basecolor is synthesized procedurally from this color (glass, plain colors) instead of generated via ComfyUI"
+    },
+    "flatNoise": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 0.2,
+      "default": 0.04,
+      "description": "noise amplitude for flatColor synthesis"
+    },
     "emission": {
       "enum": ["none", "luminance", "color-mask"],
       "default": "none",

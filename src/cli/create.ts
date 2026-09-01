@@ -12,9 +12,10 @@ if (!requestPath) {
   console.error('usage: npm run create -- <request.json>  (a single request or an array; array mode skips existing keys)');
   process.exit(2);
 }
+const forceOverwrite = process.argv.includes('--overwrite');
 const parsed = JSON.parse(readFileSync(requestPath, 'utf8')) as CreateRequest | CreateRequest[];
 const batch = Array.isArray(parsed);
-const requests = batch ? parsed : [parsed];
+const requests = (batch ? parsed : [parsed]).map((r) => (forceOverwrite ? { ...r, overwrite: true } : r));
 const generator = new Generator(new Database(themesDir));
 
 try {
