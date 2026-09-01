@@ -46,6 +46,9 @@
             "ao": "assets/wall/poor/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/parapet/poor"
       ]
     },
     "cyberpunk/wall/mid": {
@@ -92,6 +95,9 @@
             "ao": "assets/wall/mid/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/parapet/mid"
       ]
     },
     "cyberpunk/wall/rich": {
@@ -138,6 +144,9 @@
             "ao": "assets/wall/rich/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/parapet/rich"
       ]
     },
     "cyberpunk/wall/high_rich": {
@@ -184,6 +193,9 @@
             "ao": "assets/wall/high_rich/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/parapet/high_rich"
       ]
     },
     "cyberpunk/window-glass/poor": {
@@ -234,6 +246,9 @@
             "ao": "assets/window-glass/poor/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/door-glass/poor"
       ]
     },
     "cyberpunk/window-glass/mid": {
@@ -284,6 +299,9 @@
             "ao": "assets/window-glass/mid/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/door-glass/mid"
       ]
     },
     "cyberpunk/window-glass/rich": {
@@ -334,6 +352,9 @@
             "ao": "assets/window-glass/rich/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/door-glass/rich"
       ]
     },
     "cyberpunk/window-glass/high_rich": {
@@ -384,6 +405,9 @@
             "ao": "assets/window-glass/high_rich/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/door-glass/high_rich"
       ]
     },
     "cyberpunk/window-frame/poor": {
@@ -430,6 +454,10 @@
             "ao": "assets/window-frame/poor/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/balcony-rail/poor",
+        "cyberpunk/aperture-frame/poor"
       ]
     },
     "cyberpunk/window-frame/mid": {
@@ -476,6 +504,10 @@
             "ao": "assets/window-frame/mid/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/balcony-rail/mid",
+        "cyberpunk/aperture-frame/mid"
       ]
     },
     "cyberpunk/window-frame/rich": {
@@ -522,6 +554,10 @@
             "ao": "assets/window-frame/rich/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/balcony-rail/rich",
+        "cyberpunk/aperture-frame/rich"
       ]
     },
     "cyberpunk/window-frame/high_rich": {
@@ -568,6 +604,10 @@
             "ao": "assets/window-frame/high_rich/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/balcony-rail/high_rich",
+        "cyberpunk/aperture-frame/high_rich"
       ]
     },
     "cyberpunk/door/poor": {
@@ -790,6 +830,9 @@
             "ao": "assets/floor-slab/poor/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/balcony-slab/poor"
       ]
     },
     "cyberpunk/floor-slab/mid": {
@@ -836,6 +879,9 @@
             "ao": "assets/floor-slab/mid/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/balcony-slab/mid"
       ]
     },
     "cyberpunk/floor-slab/rich": {
@@ -882,6 +928,9 @@
             "ao": "assets/floor-slab/rich/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/balcony-slab/rich"
       ]
     },
     "cyberpunk/floor-slab/high_rich": {
@@ -928,6 +977,9 @@
             "ao": "assets/floor-slab/high_rich/2/ao.png"
           }
         }
+      ],
+      "aliases": [
+        "cyberpunk/balcony-slab/high_rich"
       ]
     },
     "cyberpunk/roof/poor": {

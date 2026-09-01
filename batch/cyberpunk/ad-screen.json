@@ -1,0 +1,82 @@
+[
+  {
+    "key": "cyberpunk/ad-screen/poor",
+    "alignment": "exact",
+    "description": "vibrant neon cyberpunk advertisement on an LED billboard screen, glitch lines, dead pixel patches, colorful glowing abstract shapes",
+    "aspect": [
+      16,
+      9
+    ],
+    "resolution": [
+      1344,
+      768
+    ],
+    "physical": {
+      "roughnessFactor": 0.2,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "emission": "color-mask",
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/ad-screen/mid",
+    "alignment": "exact",
+    "description": "vibrant neon cyberpunk advertisement on an LED billboard screen, colorful glowing geometric shapes",
+    "aspect": [
+      16,
+      9
+    ],
+    "resolution": [
+      1344,
+      768
+    ],
+    "physical": {
+      "roughnessFactor": 0.2,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "emission": "color-mask",
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/ad-screen/rich",
+    "alignment": "exact",
+    "description": "sleek holographic style advertisement on a crisp LED screen, vibrant gradients, glowing accents",
+    "aspect": [
+      16,
+      9
+    ],
+    "resolution": [
+      1344,
+      768
+    ],
+    "physical": {
+      "roughnessFactor": 0.2,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "emission": "color-mask",
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/ad-screen/high_rich",
+    "alignment": "exact",
+    "description": "minimal luxury advertisement on a flawless LED screen, deep saturated colors, elegant glowing lines",
+    "aspect": [
+      16,
+      9
+    ],
+    "resolution": [
+      1344,
+      768
+    ],
+    "physical": {
+      "roughnessFactor": 0.2,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "emission": "color-mask",
+    "variants": 2
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "key": "cyberpunk/light-fixture/poor",
+    "alignment": "tile",
+    "description": "glowing frosted glass light diffuser surface, dim yellowish light, dusty",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "variants": 2,
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/light-fixture/mid",
+    "alignment": "tile",
+    "description": "glowing frosted glass light diffuser surface, even neutral white light",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.45,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "variants": 2,
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/light-fixture/rich",
+    "alignment": "tile",
+    "description": "glowing frosted glass light diffuser surface, crisp cool white light",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "variants": 2,
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/light-fixture/high_rich",
+    "alignment": "tile",
+    "description": "glowing frosted glass light diffuser surface, pure even white light, immaculate",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.35,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "variants": 2,
+    "emission": "luminance"
+  }
+]

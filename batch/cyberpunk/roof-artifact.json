@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/roof-artifact/poor",
+    "alignment": "tile",
+    "description": "weathered galvanized steel sheet surface, dull zinc crystalline pattern, grime streaks",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.75,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/roof-artifact/mid",
+    "alignment": "tile",
+    "description": "galvanized steel sheet surface, zinc crystalline pattern, light weathering",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.65,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/roof-artifact/rich",
+    "alignment": "tile",
+    "description": "brushed steel sheet surface, even fine grain, clean grey",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/roof-artifact/high_rich",
+    "alignment": "tile",
+    "description": "matte dark grey coated metal surface, flawless even finish",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  }
+]

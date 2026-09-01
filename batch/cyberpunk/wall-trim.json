@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/wall-trim/poor",
+    "alignment": "tile",
+    "description": "scuffed painted steel surface, chipped dark grey paint, faint rust spots",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.6,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wall-trim/mid",
+    "alignment": "tile",
+    "description": "painted steel surface, flat medium grey, light scuffs",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wall-trim/rich",
+    "alignment": "tile",
+    "description": "anodised dark bronze metal surface, even satin finish",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/wall-trim/high_rich",
+    "alignment": "tile",
+    "description": "polished black metal surface, immaculate satin finish",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.3,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  }
+]

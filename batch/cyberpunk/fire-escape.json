@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/fire-escape/poor",
+    "alignment": "tile",
+    "description": "weathered riveted steel surface, old black paint worn to bare metal, rust patches",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.8,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/fire-escape/mid",
+    "alignment": "tile",
+    "description": "painted riveted steel surface, matte black paint, light wear and faint rust",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.7,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/fire-escape/rich",
+    "alignment": "tile",
+    "description": "painted steel surface, clean matte black, subtle wear at rivets",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.55,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/fire-escape/high_rich",
+    "alignment": "tile",
+    "description": "powder-coated steel surface, flawless matte black",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.45,
+      "metallicFactor": 1
+    },
+    "variants": 2
+  }
+]

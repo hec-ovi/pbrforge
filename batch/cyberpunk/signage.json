@@ -1,0 +1,74 @@
+[
+  {
+    "key": "cyberpunk/signage/poor",
+    "alignment": "tile",
+    "description": "glowing backlit acrylic panel surface, uneven pale pink light, dim patches and grime",
+    "tiling": {
+      "worldSize": [
+        2,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0,
+      "emissiveStrength": 2.5
+    },
+    "variants": 2,
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/signage/mid",
+    "alignment": "tile",
+    "description": "glowing backlit acrylic panel surface, even cyan light",
+    "tiling": {
+      "worldSize": [
+        2,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 0,
+      "emissiveStrength": 2.5
+    },
+    "variants": 2,
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/signage/rich",
+    "alignment": "tile",
+    "description": "glowing backlit acrylic panel surface, even magenta light, crisp",
+    "tiling": {
+      "worldSize": [
+        2,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.35,
+      "metallicFactor": 0,
+      "emissiveStrength": 2.5
+    },
+    "variants": 2,
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/signage/high_rich",
+    "alignment": "tile",
+    "description": "glowing backlit acrylic panel surface, even cool white light, immaculate",
+    "tiling": {
+      "worldSize": [
+        2,
+        1
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0,
+      "emissiveStrength": 2.5
+    },
+    "variants": 2,
+    "emission": "luminance"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cyberpunk/curtain/poor",
+    "alignment": "tile",
+    "description": "hanging fabric curtain surface with soft vertical folds, faded grey-green, dusty",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.95,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/curtain/mid",
+    "alignment": "tile",
+    "description": "hanging fabric curtain surface with soft vertical folds, muted grey",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.95,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/curtain/rich",
+    "alignment": "tile",
+    "description": "heavy fabric curtain surface with deep vertical folds, dark blue-grey",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  },
+  {
+    "key": "cyberpunk/curtain/high_rich",
+    "alignment": "tile",
+    "description": "smooth heavy fabric curtain surface with even vertical folds, deep charcoal, immaculate",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
+    "variants": 2
+  }
+]
