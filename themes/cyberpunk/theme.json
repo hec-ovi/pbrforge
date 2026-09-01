@@ -2033,6 +2033,190 @@
           }
         }
       ]
+    },
+    "cyberpunk/rubber/poor": {
+      "key": "cyberpunk/rubber/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.9,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rubber/poor/1/basecolor.png",
+            "normal": "assets/rubber/poor/1/normal.png",
+            "roughness": "assets/rubber/poor/1/roughness.png",
+            "metallic": "assets/rubber/poor/1/metallic.png",
+            "height": "assets/rubber/poor/1/height.png",
+            "ao": "assets/rubber/poor/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rubber/poor/2/basecolor.png",
+            "normal": "assets/rubber/poor/2/normal.png",
+            "roughness": "assets/rubber/poor/2/roughness.png",
+            "metallic": "assets/rubber/poor/2/metallic.png",
+            "height": "assets/rubber/poor/2/height.png",
+            "ao": "assets/rubber/poor/2/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/rubber/mid": {
+      "key": "cyberpunk/rubber/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.85,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rubber/mid/1/basecolor.png",
+            "normal": "assets/rubber/mid/1/normal.png",
+            "roughness": "assets/rubber/mid/1/roughness.png",
+            "metallic": "assets/rubber/mid/1/metallic.png",
+            "height": "assets/rubber/mid/1/height.png",
+            "ao": "assets/rubber/mid/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rubber/mid/2/basecolor.png",
+            "normal": "assets/rubber/mid/2/normal.png",
+            "roughness": "assets/rubber/mid/2/roughness.png",
+            "metallic": "assets/rubber/mid/2/metallic.png",
+            "height": "assets/rubber/mid/2/height.png",
+            "ao": "assets/rubber/mid/2/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/rubber/rich": {
+      "key": "cyberpunk/rubber/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.8,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rubber/rich/1/basecolor.png",
+            "normal": "assets/rubber/rich/1/normal.png",
+            "roughness": "assets/rubber/rich/1/roughness.png",
+            "metallic": "assets/rubber/rich/1/metallic.png",
+            "height": "assets/rubber/rich/1/height.png",
+            "ao": "assets/rubber/rich/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rubber/rich/2/basecolor.png",
+            "normal": "assets/rubber/rich/2/normal.png",
+            "roughness": "assets/rubber/rich/2/roughness.png",
+            "metallic": "assets/rubber/rich/2/metallic.png",
+            "height": "assets/rubber/rich/2/height.png",
+            "ao": "assets/rubber/rich/2/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/rubber/high_rich": {
+      "key": "cyberpunk/rubber/high_rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.7,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rubber/high_rich/1/basecolor.png",
+            "normal": "assets/rubber/high_rich/1/normal.png",
+            "roughness": "assets/rubber/high_rich/1/roughness.png",
+            "metallic": "assets/rubber/high_rich/1/metallic.png",
+            "height": "assets/rubber/high_rich/1/height.png",
+            "ao": "assets/rubber/high_rich/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rubber/high_rich/2/basecolor.png",
+            "normal": "assets/rubber/high_rich/2/normal.png",
+            "roughness": "assets/rubber/high_rich/2/roughness.png",
+            "metallic": "assets/rubber/high_rich/2/metallic.png",
+            "height": "assets/rubber/high_rich/2/height.png",
+            "ao": "assets/rubber/high_rich/2/ao.png"
+          }
+        }
+      ]
     }
   }
 }
