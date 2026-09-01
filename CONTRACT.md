@@ -9,7 +9,7 @@ Status: v0.2. Schema stable to build against; additive fields may come, breaking
 Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/window-glass/rich`). Consumers (exterior, interior) name GLB materials with exactly this key; the index resolves it to maps, tiling config and alignment mode.
 
 - tier slugs are atlas's, passed verbatim by consumers: `poor`, `mid`, `rich`, `high_rich`.
-- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers: wall, wall-trim, column, window-glass, window-frame, curtain, door, door-glass, balcony-slab, balcony-rail, roof, floor-slab, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact (exterior), plaster, tile, ceiling, wood, carpet, rubber, concrete, metal, elevator_door, fabric, glass (interior) sidewalk, road (ground) and letter-atlas (signage). door-glass, balcony-slab, balcony-rail, parapet and aperture-frame resolve via aliases.
+- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers: wall, wall-trim, column, window-glass, window-frame, curtain, door, door-glass, balcony-slab, balcony-rail, roof, floor-slab, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact (exterior), plaster, tile, ceiling, wood, carpet, rubber, concrete, metal, elevator_door, fabric, glass (interior), sidewalk, road (ground) and letter-atlas (signage). door-glass, balcony-slab, balcony-rail, parapet and aperture-frame resolve via aliases.
 
 ## In
 
@@ -41,13 +41,13 @@ Kinds and the parameters each one reads (full ranges in the request schema):
 
 Shared over all of them: `colors` (face first), `depth` (relief), `joint` (how much darker and rougher a joint reads), `variation` (tone per cell), `sheen` (gloss per cell), `grain` (fine mottling). `line` and `bevel` are in metres, read against the entry's `tiling.worldSize`; `cells` are whole counts per tile, which is what makes the pattern wrap. On an `exact` entry the sheet stands in for the tile, so those two are fractions of the sheet (of a cell, for `glyph-atlas`).
 
+Cyberpunk pattern library, per tier: plaster (`hex`, `panel`, `two-tone`), tile (`slab`), concrete (`panel`, one panel per tile so joints land on whole-tile faces), ceiling (`panel`, `plain`), sidewalk (`slab`, `bond`), road (`street`, `highway`), light-fixture (`strip`, `panel`: dark housing, lit diffuser). wall and concrete also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
+
 ## Letter atlas
 
 `cyberpunk/letter-atlas/<tier>` is one `exact` sheet of lit glyph cells for the modular sign system: aspect 4:3, 1024 by 768, two variants, `neon` (thin core, wide halo) and `panel` (backlit diffuser). The emission map carries the lit glyph; the basecolor is the unlit tube over a dark plate.
 
 The grid is 8 columns by 6 rows, row-major, and the charset is `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.,'!?:/&+` plus a trailing space, 47 characters in 48 cells. A consumer maps one letter to `index = charset.indexOf(letter.toUpperCase())` and the UV rect `[ (index % 8) / 8, floor(index / 8) / 6, 1/8, 1/6 ]`. An unknown character has no index and gets a blank cell.
-
-Cyberpunk pattern library, per tier: plaster (`hex`, `panel`, `two-tone`), tile (`slab`), concrete (`panel`, one panel per tile so joints land on whole-tile faces), ceiling (`panel`, `plain`), sidewalk (`slab`, `bond`), road (`street`, `highway`), light-fixture (`strip`, `panel`: dark housing, lit diffuser). wall and concrete also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
 
 ## Out
 
@@ -58,7 +58,7 @@ Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](sc
 Conventions (fixed, not per entry):
 - Metallic-roughness workflow. basecolor and emission are sRGB; normal, roughness, metallic, height, ao are linear. Normals are OpenGL-style, +Y up.
 - Tiled maps are seamless at exact resolution, verified; never stretched, never cut mid-feature.
-- `exact` entries (screens, video ads, image ads) are 1:1 UV placements: no tiling config, aspect ratio instead, and no seam gate. Screen entries carry flat normal, height and ao: a display has no relief.
+- `exact` entries (screens, image ads, the letter atlas) are 1:1 UV placements: no tiling config, aspect ratio instead, and no seam gate. Screen entries carry flat normal, height and ao: a display has no relief.
 - Glass semantics follow glTF `KHR_materials_transmission` (+ `KHR_materials_emissive_strength` for emissives).
 
 ## Errors
