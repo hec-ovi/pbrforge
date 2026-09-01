@@ -11,6 +11,19 @@ export interface Physical {
   alphaMode?: 'OPAQUE' | 'BLEND' | 'MASK';
 }
 
+/** How a photographed surface is read into relief and gloss: stated on the entry, resolved. */
+export interface Finish {
+  /** The band the roughness map stays inside, [min, max]. */
+  roughness: [number, number];
+  /** How much of the pixel-scale speckle survives into the relief: 0 keeps feature scale alone. */
+  grain: number;
+  /** Gain on the feature-scale relief: joints, bricks, aggregate. */
+  relief: number;
+}
+
+/** A finish as authored: what a request leaves out comes from the surface's own roughness. */
+export type FinishSpec = Partial<Finish>;
+
 export interface Variant {
   id: string;
   /** How the maps were made. Consumers read the maps the same way either way. */
@@ -26,6 +39,8 @@ export interface MaterialEntry {
   tiling?: { worldSize: [number, number] };
   aspect?: [number, number];
   physical: Physical;
+  /** Present when the entry has photographed variants: the finish their maps were read under. */
+  finish?: Finish;
   variants: Variant[];
 }
 
@@ -85,6 +100,7 @@ export interface CreateRequest {
   tiling?: { worldSize: [number, number] };
   aspect?: [number, number];
   physical?: Physical;
+  finish?: FinishSpec;
   flatColor?: string;
   flatNoise?: number;
   pattern?: PatternSpec;

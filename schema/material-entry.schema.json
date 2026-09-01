@@ -57,6 +57,28 @@
         "alphaMode": { "enum": ["OPAQUE", "BLEND", "MASK"], "default": "OPAQUE" }
       }
     },
+    "finish": {
+      "$comment": "written on entries with photographed variants; a pattern and a screen carry their own maps",
+      "type": "object",
+      "required": ["roughness", "grain", "relief"],
+      "additionalProperties": false,
+      "properties": {
+        "roughness": {
+          "type": "array",
+          "items": { "type": "number", "minimum": 0, "maximum": 1 },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "[min, max] band the roughness map stays inside"
+        },
+        "grain": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "how much of the pixel-scale speckle survives into the relief"
+        },
+        "relief": { "type": "number", "minimum": 0, "maximum": 4, "description": "gain on the feature-scale relief" }
+      }
+    },
     "variants": {
       "type": "array",
       "minItems": 1,

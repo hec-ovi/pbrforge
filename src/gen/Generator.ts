@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { Ajv2020 as Ajv, type ValidateFunction } from 'ajv/dist/2020.js';
 import { Database } from '../db/Database.js';
 import { MaterialsError } from '../db/errors.js';
-import type { CreateRequest, MapName, MaterialEntry, Physical, Screen, Variant } from '../db/types.js';
+import type { CreateRequest, Finish, MapName, MaterialEntry, Physical, Screen, Variant } from '../db/types.js';
 import { ComfyClient } from './ComfyClient.js';
 import { Template, loadPrompt } from './Template.js';
 import { type Gray, type Rgb, decodeRgb, encodeGrayPng, encodeRgbPng } from './pixels.js';
@@ -19,6 +19,7 @@ import {
   deriveRoughness,
   flatNormal,
 } from './maps.js';
+import { resolveFinish } from './finish.js';
 import { buildPattern } from './pattern/build.js';
 import { renderPattern } from './pattern/render.js';
 import { recolor } from './recolor.js';
@@ -47,6 +48,7 @@ interface Target {
   alignment: CreateRequest['alignment'];
   tiling?: { worldSize: [number, number] };
   physical: Physical;
+  finish: Finish;
   base?: MaterialEntry;
 }
 
@@ -76,16 +78,18 @@ export class Generator {
     const start = target.base?.variants.length ?? 0;
 
     const variants: Variant[] = [];
+    let photographed = false;
     for (let v = 0; v < count; v++) {
       const id = request.variantId ?? String(start + v + 1);
       if (target.base?.variants.some((existing) => existing.id === id) && !request.overwrite) {
         throw new MaterialsError('E_KEY_EXISTS', `variant ${id} of ${target.base.key} exists; pass overwrite to replace`);
       }
       const source = await this.render(request, target, v, baseSeed + v, width, height);
+      photographed ||= !source.screen && !source.reuse && source.height === undefined;
       variants.push(await this.buildVariant(target, id, source, request));
     }
 
-    const entry = this.assemble(request, target, variants);
+    const entry = this.assemble(request, target, variants, photographed);
     this.db.write(entry, target.base !== undefined || (request.overwrite ?? false));
     return entry;
   }
@@ -127,10 +131,18 @@ export class Generator {
       throw new MaterialsError('E_SCHEMA', 'exact alignment needs aspect');
     }
     const [, theme, kind, tier] = KEY.exec(base?.key ?? request.key)!;
-    return { theme, kind, tier, alignment, tiling, physical: base?.physical ?? request.physical ?? {}, base };
+    const physical = base?.physical ?? request.physical ?? {};
+    // an appended variant joins the entry's finish, so every photographed variant of one entry shares a band
+    const finish = base?.finish ?? resolveFinish(request.finish, physical);
+    return { theme, kind, tier, alignment, tiling, physical, finish, base };
   }
 
-  private assemble(request: CreateRequest, target: Target, variants: Variant[]): MaterialEntry {
+  private assemble(
+    request: CreateRequest,
+    target: Target,
+    variants: Variant[],
+    photographed: boolean,
+  ): MaterialEntry {
     if (target.base) {
       const existing = target.base.variants;
       const kept = existing.map((v) => variants.find((added) => added.id === v.id) ?? v);
@@ -143,6 +155,8 @@ export class Generator {
       ...(request.tiling ? { tiling: request.tiling } : {}),
       ...(request.aspect ? { aspect: request.aspect } : {}),
       physical: target.physical,
+      // only a photographed surface reads a finish: a pattern and a screen carry their own maps
+      ...(photographed ? { finish: target.finish } : {}),
       variants,
     };
   }
@@ -186,13 +200,6 @@ export class Generator {
     return { basecolor: await decodeRgb(await this.paint(request, index, seed, width, height)) };
   }
 
-  /** The basecolor a tint variant is made from: another variant of the entry it joins. */
-  private async sourceVariant(target: Target, id: string): Promise<Rgb> {
-    const variant = target.base?.variants.find((v) => v.id === id);
-    if (!variant) throw new MaterialsError('E_SCHEMA', `no variant ${id} to recolor on ${target.base?.key}`);
-    return decodeRgb(readFileSync(join(this.db.themeDir(target.theme), variant.maps.basecolor)));
-  }
-
   private paint(request: CreateRequest, index: number, seed: number, width: number, height: number): Promise<Buffer> {
     const job = { ...prompts(request, index), seed, width, height };
     return this.comfy.render(this.templates[request.alignment].build(job));
@@ -209,7 +216,7 @@ export class Generator {
         ? await screenMaps(source.basecolor, source.screen, target.physical, request)
         : source.reuse
           ? await emissionMap(source.basecolor, mode)
-          : await derivedMaps(source, target.physical, mode)),
+          : await derivedMaps(source, target, mode)),
     ];
 
     const relDir = join('assets', target.kind, target.tier, id);
@@ -254,15 +261,15 @@ async function emissionMap(
  */
 async function derivedMaps(
   source: Source,
-  physical: Physical,
+  target: Target,
   mode: NonNullable<CreateRequest['emission']>,
 ): Promise<[MapName, Buffer][]> {
-  const height = source.height ?? deriveHeight(source.basecolor);
-  const roughness = source.roughness ?? deriveRoughness(height, physical);
+  const height = source.height ?? deriveHeight(source.basecolor, target.finish);
+  const roughness = source.roughness ?? deriveRoughness(height, target.finish);
   return [
     ['normal', await encodeRgbPng(deriveNormal(height))],
     ['roughness', await encodeGrayPng(roughness)],
-    ['metallic', await encodeGrayPng(deriveMetallic(source.basecolor, physical))],
+    ['metallic', await encodeGrayPng(deriveMetallic(source.basecolor, target.physical))],
     ['height', await encodeGrayPng(height)],
     ['ao', await encodeGrayPng(deriveAo(height))],
     ...(mode === 'luminance' || mode === 'color-mask'

@@ -1,4 +1,5 @@
-import type { Physical } from '../db/types.js';
+import type { Finish, Physical } from '../db/types.js';
+import { clamp01 } from './color.js';
 import { type Gray, type Rgb, luminance, wrapBlur, wrapSobel } from './pixels.js';
 
 type Size = { width: number; height: number };
@@ -9,12 +10,33 @@ type Size = { width: number; height: number };
  * (Marigold/DSINE inside ComfyUI) plugs in behind the same signatures later.
  */
 
-/** Height: band-passed luminance (fine relief without the large-scale shading), centered at 0.5. */
-export function deriveHeight(basecolor: Rgb): Gray {
+/**
+ * The two scales a photographed surface is read at: `feature` is the finest
+ * blur that still holds a joint, a brick edge or a piece of aggregate, and
+ * `shading` is the one that holds the large-scale lighting of the photograph.
+ * What sits below the feature scale is the camera's speckle, not relief.
+ */
+function scales(width: number): { feature: number; shading: number } {
+  const feature = Math.max(1, Math.round(width / 384));
+  return { feature, shading: Math.max(feature * 4, Math.round(width / 64)) };
+}
+
+/**
+ * Height: the surface between the two scales, centered at 0.5. Shape comes
+ * through at full gain; the pixel-scale speckle under it is attenuated to the
+ * finish's grain, which is what keeps a normal map from glittering at night.
+ */
+export function deriveHeight(basecolor: Rgb, finish: Finish): Gray {
   const lum = luminance(basecolor);
-  const low = wrapBlur(lum, Math.max(4, Math.round(basecolor.width / 64)));
+  const { feature, shading } = scales(basecolor.width);
+  const shape = wrapBlur(lum, feature);
+  const flat = wrapBlur(lum, shading);
   const out = new Float32Array(lum.data.length);
-  for (let i = 0; i < out.length; i++) out[i] = Math.min(1, Math.max(0, 0.5 + (lum.data[i] - low.data[i]) * 2));
+  for (let i = 0; i < out.length; i++) {
+    const relief = shape.data[i] - flat.data[i];
+    const speckle = lum.data[i] - shape.data[i];
+    out[i] = clamp01(0.5 + finish.relief * (relief + finish.grain * speckle));
+  }
   return { data: out, width: lum.width, height: lum.height };
 }
 
@@ -33,12 +55,20 @@ export function deriveNormal(height: Gray, strength = 2): Rgb {
   return { data: out, width: height.width, height: height.height };
 }
 
-/** Roughness: the material's factor as base, brighter in cavities (rough dirt settles low). */
-export function deriveRoughness(height: Gray, physical: Physical): Gray {
-  const base = physical.roughnessFactor ?? 1;
+/**
+ * Roughness: the finish's band, rougher in cavities (dirt settles low) and
+ * smoother on the crests. It is read off a blurred relief and clamped to the
+ * band, so gloss moves over centimetres of surface and never per pixel: no
+ * glitter on the specks, no damp patch where the photograph happened to be dark.
+ */
+export function deriveRoughness(height: Gray, finish: Finish): Gray {
+  const [lo, hi] = finish.roughness;
+  const mid = (lo + hi) / 2;
+  const slope = 2 * (hi - lo);
+  const shape = wrapBlur(height, Math.max(2, Math.round(height.width / 128)));
   const out = new Float32Array(height.data.length);
   for (let i = 0; i < out.length; i++) {
-    out[i] = Math.min(1, Math.max(0, base * (1 + (0.5 - height.data[i]) * 0.4)));
+    out[i] = Math.min(hi, Math.max(lo, mid + (0.5 - shape.data[i]) * slope));
   }
   return { data: out, width: height.width, height: height.height };
 }

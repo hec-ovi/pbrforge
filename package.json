@@ -6,6 +6,8 @@
   "scripts": {
     "resolve": "tsx src/cli/resolve.ts",
     "create": "tsx src/cli/create.ts",
+    "refinish": "tsx src/cli/refinish.ts",
+    "sheet": "tsx src/cli/sheet.ts",
     "preview": "vite --config src/ui/vite.config.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"

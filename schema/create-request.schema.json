@@ -65,6 +65,34 @@
         "alphaMode": { "enum": ["OPAQUE", "BLEND", "MASK"] }
       }
     },
+    "finish": {
+      "type": "object",
+      "description": "how a photographed surface is read into relief and gloss; ignored by the pattern, recolor and screen lanes, and inherited from the entry when appending",
+      "additionalProperties": false,
+      "properties": {
+        "roughness": {
+          "type": "array",
+          "items": { "type": "number", "minimum": 0, "maximum": 1 },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "[min, max] band the roughness map stays inside; default: the roughness factor plus or minus 0.05"
+        },
+        "grain": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.2,
+          "description": "how much of the pixel-scale speckle survives into the relief; 0 keeps feature scale alone"
+        },
+        "relief": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 4,
+          "default": 2,
+          "description": "gain on the feature-scale relief: joints, bricks, aggregate"
+        }
+      }
+    },
     "flatColor": {
       "type": "string",
       "pattern": "^#[0-9a-f]{6}$",

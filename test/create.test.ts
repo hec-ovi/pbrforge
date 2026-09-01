@@ -48,6 +48,13 @@ describe('create contract', () => {
   let themesDir: string;
   let db: Database;
 
+  /** How far a normal map leans off flat, on average: what a moving light glitters on. */
+  async function tilt(path: string): Promise<number> {
+    const normal = await sharp(join(themesDir, 'cyberpunk', path)).raw().toBuffer();
+    const lean = normal.filter((_, i) => i % 3 !== 2).reduce((sum, v) => sum + Math.abs(v - 128), 0);
+    return lean / (normal.length / 3) / 2;
+  }
+
   beforeEach(() => {
     themesDir = mkdtempSync(join(tmpdir(), 'materials-'));
     db = new Database(themesDir);
@@ -135,6 +142,27 @@ describe('create contract', () => {
     expect(Math.max(...base)).toBeLessThan(40); // near-black glass, not the ad
     expect(new Set(base).size).toBeGreaterThan(1); // carrying the faint dot structure
     expect([...new Set(await read(0, 'normal'))].sort()).toEqual([128, 255]); // no relief
+  });
+
+  it('keeps the gloss inside the finish band and the pixel speckle out of the relief', async () => {
+    // the fixture is per-pixel noise: read straight out it is exactly the glitter case
+    const entry = await new Generator(db, mockComfy(tileablePng)).create({
+      ...request,
+      finish: { roughness: [0.8, 0.9], grain: 0 },
+    });
+    expect(entry.finish).toEqual({ roughness: [0.8, 0.9], grain: 0, relief: 2 });
+
+    const roughness = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.roughness)).raw().toBuffer();
+    expect(Math.min(...roughness) / 255).toBeGreaterThanOrEqual(0.79);
+    expect(Math.max(...roughness) / 255).toBeLessThanOrEqual(0.91);
+
+    // the same surface with its speckle kept: the grain is what decides how much light the relief catches
+    const speckled = await new Generator(db, mockComfy(tileablePng)).create({
+      ...request,
+      key: 'cyberpunk/wall/mid',
+      finish: { roughness: [0.8, 0.9], grain: 1 },
+    });
+    expect(await tilt(entry.variants[0].maps.normal)).toBeLessThan(0.3 * (await tilt(speckled.variants[0].maps.normal)));
   });
 
   it('synthesizes a flatColor set without ComfyUI and it passes the seam gate', async () => {

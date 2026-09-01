@@ -17,6 +17,10 @@
       "ior": 1.5,
       "tint": "#9aa39e"
     },
+    "finish": {
+      "grain": 0.25,
+      "relief": 2
+    },
     "variants": 2,
     "flatColor": "#d4dad2",
     "flatNoise": 0.08
@@ -38,6 +42,10 @@
       "transmission": 0.8,
       "ior": 1.5,
       "tint": "#b8c4c9"
+    },
+    "finish": {
+      "grain": 0.2,
+      "relief": 2
     },
     "variants": 2,
     "flatColor": "#dde3e4",
@@ -61,6 +69,10 @@
       "ior": 1.5,
       "tint": "#a9c9d8"
     },
+    "finish": {
+      "grain": 0.15,
+      "relief": 1.6
+    },
     "variants": 2,
     "flatColor": "#e9f1f2",
     "flatNoise": 0.03
@@ -82,6 +94,10 @@
       "transmission": 0.95,
       "ior": 1.5,
       "tint": "#8fb8d0"
+    },
+    "finish": {
+      "grain": 0.1,
+      "relief": 1.2
     },
     "variants": 2,
     "flatColor": "#eef4f8",

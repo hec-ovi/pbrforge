@@ -79,7 +79,15 @@
       ],
       "aliases": [
         "cyberpunk/parapet/poor"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.88,
+          0.96
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/wall/mid": {
       "key": "cyberpunk/wall/mid",
@@ -158,7 +166,15 @@
       ],
       "aliases": [
         "cyberpunk/parapet/mid"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.82,
+          0.92
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/wall/rich": {
       "key": "cyberpunk/wall/rich",
@@ -237,7 +253,15 @@
       ],
       "aliases": [
         "cyberpunk/parapet/rich"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.7,
+          0.8
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/wall/high_rich": {
       "key": "cyberpunk/wall/high_rich",
@@ -316,7 +340,15 @@
       ],
       "aliases": [
         "cyberpunk/parapet/high_rich"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.54,
+          0.64
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/window-glass/poor": {
       "key": "cyberpunk/window-glass/poor",
@@ -369,7 +401,15 @@
       ],
       "aliases": [
         "cyberpunk/door-glass/poor"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.3,
+          0.4
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/window-glass/mid": {
       "key": "cyberpunk/window-glass/mid",
@@ -422,7 +462,15 @@
       ],
       "aliases": [
         "cyberpunk/door-glass/mid"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.15,
+          0.25
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/window-glass/rich": {
       "key": "cyberpunk/window-glass/rich",
@@ -475,7 +523,15 @@
       ],
       "aliases": [
         "cyberpunk/door-glass/rich"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.03,
+          0.13
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/window-glass/high_rich": {
       "key": "cyberpunk/window-glass/high_rich",
@@ -528,7 +584,15 @@
       ],
       "aliases": [
         "cyberpunk/door-glass/high_rich"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0,
+          0.09
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/window-frame/poor": {
       "key": "cyberpunk/window-frame/poor",
@@ -578,7 +642,15 @@
       "aliases": [
         "cyberpunk/balcony-rail/poor",
         "cyberpunk/aperture-frame/poor"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.6,
+          0.7
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/window-frame/mid": {
       "key": "cyberpunk/window-frame/mid",
@@ -628,7 +700,15 @@
       "aliases": [
         "cyberpunk/balcony-rail/mid",
         "cyberpunk/aperture-frame/mid"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.4,
+          0.5
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/window-frame/rich": {
       "key": "cyberpunk/window-frame/rich",
@@ -678,7 +758,15 @@
       "aliases": [
         "cyberpunk/balcony-rail/rich",
         "cyberpunk/aperture-frame/rich"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.3,
+          0.4
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/window-frame/high_rich": {
       "key": "cyberpunk/window-frame/high_rich",
@@ -728,7 +816,15 @@
       "aliases": [
         "cyberpunk/balcony-rail/high_rich",
         "cyberpunk/aperture-frame/high_rich"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.2,
+          0.3
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/door/poor": {
       "key": "cyberpunk/door/poor",
@@ -953,7 +1049,15 @@
       ],
       "aliases": [
         "cyberpunk/balcony-slab/poor"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.85,
+          0.95
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/floor-slab/mid": {
       "key": "cyberpunk/floor-slab/mid",
@@ -1002,7 +1106,15 @@
       ],
       "aliases": [
         "cyberpunk/balcony-slab/mid"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.75,
+          0.85
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/floor-slab/rich": {
       "key": "cyberpunk/floor-slab/rich",
@@ -1051,7 +1163,15 @@
       ],
       "aliases": [
         "cyberpunk/balcony-slab/rich"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/floor-slab/high_rich": {
       "key": "cyberpunk/floor-slab/high_rich",
@@ -1100,7 +1220,15 @@
       ],
       "aliases": [
         "cyberpunk/balcony-slab/high_rich"
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.3,
+          0.4
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/roof/poor": {
       "key": "cyberpunk/roof/poor",
@@ -1146,7 +1274,15 @@
             "ao": "assets/roof/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.9,
+          1
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/roof/mid": {
       "key": "cyberpunk/roof/mid",
@@ -1192,7 +1328,15 @@
             "ao": "assets/roof/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.8,
+          0.9
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/roof/rich": {
       "key": "cyberpunk/roof/rich",
@@ -1238,7 +1382,15 @@
             "ao": "assets/roof/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/roof/high_rich": {
       "key": "cyberpunk/roof/high_rich",
@@ -1284,7 +1436,15 @@
             "ao": "assets/roof/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.3,
+          0.4
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/column/poor": {
       "key": "cyberpunk/column/poor",
@@ -1330,7 +1490,15 @@
             "ao": "assets/column/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.87,
+          0.97
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/column/mid": {
       "key": "cyberpunk/column/mid",
@@ -1376,7 +1544,15 @@
             "ao": "assets/column/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.75,
+          0.85
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/column/rich": {
       "key": "cyberpunk/column/rich",
@@ -1422,7 +1598,15 @@
             "ao": "assets/column/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.35,
+          0.45
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/column/high_rich": {
       "key": "cyberpunk/column/high_rich",
@@ -1468,7 +1652,15 @@
             "ao": "assets/column/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.25,
+          0.35
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/plaster/poor": {
       "key": "cyberpunk/plaster/poor",
@@ -1562,7 +1754,15 @@
             "ao": "assets/plaster/poor/two-tone/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.88,
+          0.95
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/plaster/mid": {
       "key": "cyberpunk/plaster/mid",
@@ -1656,7 +1856,15 @@
             "ao": "assets/plaster/mid/two-tone/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.8,
+          0.88
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/plaster/rich": {
       "key": "cyberpunk/plaster/rich",
@@ -1750,7 +1958,15 @@
             "ao": "assets/plaster/rich/two-tone/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.66,
+          0.74
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/plaster/high_rich": {
       "key": "cyberpunk/plaster/high_rich",
@@ -1844,7 +2060,15 @@
             "ao": "assets/plaster/high_rich/two-tone/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.5,
+          0.6
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/tile/poor": {
       "key": "cyberpunk/tile/poor",
@@ -1906,7 +2130,15 @@
             "ao": "assets/tile/poor/slab/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.54,
+          0.62
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/tile/mid": {
       "key": "cyberpunk/tile/mid",
@@ -1968,7 +2200,15 @@
             "ao": "assets/tile/mid/slab/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.44,
+          0.52
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/tile/rich": {
       "key": "cyberpunk/tile/rich",
@@ -2030,7 +2270,15 @@
             "ao": "assets/tile/rich/slab/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.3,
+          0.38
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/tile/high_rich": {
       "key": "cyberpunk/tile/high_rich",
@@ -2092,7 +2340,15 @@
             "ao": "assets/tile/high_rich/slab/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.24,
+          0.32
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/wood/poor": {
       "key": "cyberpunk/wood/poor",
@@ -2138,7 +2394,15 @@
             "ao": "assets/wood/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.8,
+          0.9
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/wood/mid": {
       "key": "cyberpunk/wood/mid",
@@ -2184,7 +2448,15 @@
             "ao": "assets/wood/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.65,
+          0.75
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/wood/rich": {
       "key": "cyberpunk/wood/rich",
@@ -2230,7 +2502,15 @@
             "ao": "assets/wood/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.4,
+          0.5
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/wood/high_rich": {
       "key": "cyberpunk/wood/high_rich",
@@ -2276,7 +2556,15 @@
             "ao": "assets/wood/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.3,
+          0.4
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/carpet/poor": {
       "key": "cyberpunk/carpet/poor",
@@ -2322,7 +2610,15 @@
             "ao": "assets/carpet/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.93,
+          1
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/carpet/mid": {
       "key": "cyberpunk/carpet/mid",
@@ -2368,7 +2664,15 @@
             "ao": "assets/carpet/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.9,
+          1
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/carpet/rich": {
       "key": "cyberpunk/carpet/rich",
@@ -2414,7 +2718,15 @@
             "ao": "assets/carpet/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.87,
+          0.97
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/carpet/high_rich": {
       "key": "cyberpunk/carpet/high_rich",
@@ -2460,7 +2772,15 @@
             "ao": "assets/carpet/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.85,
+          0.95
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/rubber/poor": {
       "key": "cyberpunk/rubber/poor",
@@ -2506,7 +2826,15 @@
             "ao": "assets/rubber/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.85,
+          0.95
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/rubber/mid": {
       "key": "cyberpunk/rubber/mid",
@@ -2552,7 +2880,15 @@
             "ao": "assets/rubber/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.8,
+          0.9
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/rubber/rich": {
       "key": "cyberpunk/rubber/rich",
@@ -2598,7 +2934,15 @@
             "ao": "assets/rubber/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.75,
+          0.85
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/rubber/high_rich": {
       "key": "cyberpunk/rubber/high_rich",
@@ -2644,7 +2988,15 @@
             "ao": "assets/rubber/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.65,
+          0.75
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/concrete/poor": {
       "key": "cyberpunk/concrete/poor",
@@ -2736,7 +3088,15 @@
             "ao": "assets/concrete/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.9,
+          0.97
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/concrete/mid": {
       "key": "cyberpunk/concrete/mid",
@@ -2828,7 +3188,15 @@
             "ao": "assets/concrete/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.84,
+          0.92
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/concrete/rich": {
       "key": "cyberpunk/concrete/rich",
@@ -2920,7 +3288,15 @@
             "ao": "assets/concrete/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.6,
+          0.7
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/concrete/high_rich": {
       "key": "cyberpunk/concrete/high_rich",
@@ -3012,7 +3388,15 @@
             "ao": "assets/concrete/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.46,
+          0.56
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/metal/poor": {
       "key": "cyberpunk/metal/poor",
@@ -3058,7 +3442,15 @@
             "ao": "assets/metal/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.6,
+          0.7
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/metal/mid": {
       "key": "cyberpunk/metal/mid",
@@ -3104,7 +3496,15 @@
             "ao": "assets/metal/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.4,
+          0.5
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/metal/rich": {
       "key": "cyberpunk/metal/rich",
@@ -3150,7 +3550,15 @@
             "ao": "assets/metal/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.3,
+          0.4
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/metal/high_rich": {
       "key": "cyberpunk/metal/high_rich",
@@ -3196,7 +3604,15 @@
             "ao": "assets/metal/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.2,
+          0.3
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/fabric/poor": {
       "key": "cyberpunk/fabric/poor",
@@ -3242,7 +3658,15 @@
             "ao": "assets/fabric/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.9,
+          1
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/fabric/mid": {
       "key": "cyberpunk/fabric/mid",
@@ -3288,7 +3712,15 @@
             "ao": "assets/fabric/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.87,
+          0.97
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/fabric/rich": {
       "key": "cyberpunk/fabric/rich",
@@ -3334,7 +3766,15 @@
             "ao": "assets/fabric/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.85,
+          0.95
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/fabric/high_rich": {
       "key": "cyberpunk/fabric/high_rich",
@@ -3380,7 +3820,15 @@
             "ao": "assets/fabric/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.83,
+          0.93
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/glass/poor": {
       "key": "cyberpunk/glass/poor",
@@ -3430,7 +3878,15 @@
             "ao": "assets/glass/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.25,
+          0.35
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/glass/mid": {
       "key": "cyberpunk/glass/mid",
@@ -3480,7 +3936,15 @@
             "ao": "assets/glass/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.1,
+          0.2
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/glass/rich": {
       "key": "cyberpunk/glass/rich",
@@ -3530,7 +3994,15 @@
             "ao": "assets/glass/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.01,
+          0.11
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/glass/high_rich": {
       "key": "cyberpunk/glass/high_rich",
@@ -3580,7 +4052,15 @@
             "ao": "assets/glass/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0,
+          0.08
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/elevator_door/poor": {
       "key": "cyberpunk/elevator_door/poor",
@@ -3802,7 +4282,15 @@
             "ao": "assets/wall-trim/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.55,
+          0.65
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/wall-trim/mid": {
       "key": "cyberpunk/wall-trim/mid",
@@ -3848,7 +4336,15 @@
             "ao": "assets/wall-trim/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/wall-trim/rich": {
       "key": "cyberpunk/wall-trim/rich",
@@ -3894,7 +4390,15 @@
             "ao": "assets/wall-trim/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.35,
+          0.45
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/wall-trim/high_rich": {
       "key": "cyberpunk/wall-trim/high_rich",
@@ -3940,7 +4444,15 @@
             "ao": "assets/wall-trim/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.25,
+          0.35
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/curtain/poor": {
       "key": "cyberpunk/curtain/poor",
@@ -3986,7 +4498,15 @@
             "ao": "assets/curtain/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.9,
+          1
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/curtain/mid": {
       "key": "cyberpunk/curtain/mid",
@@ -4032,7 +4552,15 @@
             "ao": "assets/curtain/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.9,
+          1
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/curtain/rich": {
       "key": "cyberpunk/curtain/rich",
@@ -4078,7 +4606,15 @@
             "ao": "assets/curtain/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.87,
+          0.97
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/curtain/high_rich": {
       "key": "cyberpunk/curtain/high_rich",
@@ -4124,7 +4660,15 @@
             "ao": "assets/curtain/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.85,
+          0.95
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/fire-escape/poor": {
       "key": "cyberpunk/fire-escape/poor",
@@ -4170,7 +4714,15 @@
             "ao": "assets/fire-escape/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.75,
+          0.85
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/fire-escape/mid": {
       "key": "cyberpunk/fire-escape/mid",
@@ -4216,7 +4768,15 @@
             "ao": "assets/fire-escape/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.65,
+          0.75
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/fire-escape/rich": {
       "key": "cyberpunk/fire-escape/rich",
@@ -4262,7 +4822,15 @@
             "ao": "assets/fire-escape/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.5,
+          0.6
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/fire-escape/high_rich": {
       "key": "cyberpunk/fire-escape/high_rich",
@@ -4308,7 +4876,15 @@
             "ao": "assets/fire-escape/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.4,
+          0.5
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/roof-artifact/poor": {
       "key": "cyberpunk/roof-artifact/poor",
@@ -4354,7 +4930,15 @@
             "ao": "assets/roof-artifact/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.7,
+          0.8
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/roof-artifact/mid": {
       "key": "cyberpunk/roof-artifact/mid",
@@ -4400,7 +4984,15 @@
             "ao": "assets/roof-artifact/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.6,
+          0.7
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/roof-artifact/rich": {
       "key": "cyberpunk/roof-artifact/rich",
@@ -4446,7 +5038,15 @@
             "ao": "assets/roof-artifact/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/roof-artifact/high_rich": {
       "key": "cyberpunk/roof-artifact/high_rich",
@@ -4492,7 +5092,15 @@
             "ao": "assets/roof-artifact/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.35,
+          0.45
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/signage/poor": {
       "key": "cyberpunk/signage/poor",
@@ -4541,7 +5149,15 @@
             "emission": "assets/signage/poor/2/emission.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.25,
+        "relief": 2
+      }
     },
     "cyberpunk/signage/mid": {
       "key": "cyberpunk/signage/mid",
@@ -4590,7 +5206,15 @@
             "emission": "assets/signage/mid/2/emission.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.35,
+          0.45
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/signage/rich": {
       "key": "cyberpunk/signage/rich",
@@ -4639,7 +5263,15 @@
             "emission": "assets/signage/rich/2/emission.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.3,
+          0.4
+        ],
+        "grain": 0.15,
+        "relief": 1.6
+      }
     },
     "cyberpunk/signage/high_rich": {
       "key": "cyberpunk/signage/high_rich",
@@ -4688,7 +5320,15 @@
             "emission": "assets/signage/high_rich/2/emission.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.25,
+          0.35
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      }
     },
     "cyberpunk/light-fixture/poor": {
       "key": "cyberpunk/light-fixture/poor",

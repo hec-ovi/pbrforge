@@ -13,6 +13,14 @@
       "roughnessFactor": 0.92,
       "metallicFactor": 0
     },
+    "finish": {
+      "roughness": [
+        0.88,
+        0.96
+      ],
+      "grain": 0.25,
+      "relief": 2
+    },
     "variants": 2
   },
   {
@@ -28,6 +36,14 @@
     "physical": {
       "roughnessFactor": 0.85,
       "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.82,
+        0.92
+      ],
+      "grain": 0.2,
+      "relief": 2
     },
     "variants": 2
   },
@@ -45,6 +61,14 @@
       "roughnessFactor": 0.7,
       "metallicFactor": 0
     },
+    "finish": {
+      "roughness": [
+        0.7,
+        0.8
+      ],
+      "grain": 0.15,
+      "relief": 1.6
+    },
     "variants": 2
   },
   {
@@ -60,6 +84,14 @@
     "physical": {
       "roughnessFactor": 0.55,
       "metallicFactor": 0.15
+    },
+    "finish": {
+      "roughness": [
+        0.54,
+        0.64
+      ],
+      "grain": 0.1,
+      "relief": 1.2
     },
     "variants": 2
   }
