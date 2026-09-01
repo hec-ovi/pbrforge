@@ -9,7 +9,9 @@ Status: v0.1. Schema stable to build against; additive fields may come, breaking
 Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/window-glass/rich`). Consumers (exterior, interior) name GLB materials with exactly this key; the index resolves it to maps, tiling config and alignment mode.
 
 - tier slugs are atlas's, passed verbatim by consumers: `poor`, `mid`, `rich`, `high_rich`.
-- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers: wall, wall-trim, column, window-glass, window-frame, curtain, door, door-glass, balcony-slab, balcony-rail, roof, floor-slab, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact.
+- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers.
+- Covered now: wall, column, window-glass, window-frame, door, floor-slab, roof (exterior); plaster, tile, wood, carpet, rubber, concrete, metal, elevator_door, fabric, glass (interior).
+- Pending, generation queued: wall-trim, curtain, door-glass, balcony-slab, balcony-rail, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact. Consumers get E_KEY_NOT_FOUND on these until they land.
 
 ## In
 
