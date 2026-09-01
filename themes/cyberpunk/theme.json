@@ -3933,6 +3933,202 @@
           }
         }
       ]
+    },
+    "cyberpunk/signage/poor": {
+      "key": "cyberpunk/signage/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0,
+        "emissiveStrength": 2.5
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/signage/poor/1/basecolor.png",
+            "normal": "assets/signage/poor/1/normal.png",
+            "roughness": "assets/signage/poor/1/roughness.png",
+            "metallic": "assets/signage/poor/1/metallic.png",
+            "height": "assets/signage/poor/1/height.png",
+            "ao": "assets/signage/poor/1/ao.png",
+            "emission": "assets/signage/poor/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/signage/poor/2/basecolor.png",
+            "normal": "assets/signage/poor/2/normal.png",
+            "roughness": "assets/signage/poor/2/roughness.png",
+            "metallic": "assets/signage/poor/2/metallic.png",
+            "height": "assets/signage/poor/2/height.png",
+            "ao": "assets/signage/poor/2/ao.png",
+            "emission": "assets/signage/poor/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/signage/mid": {
+      "key": "cyberpunk/signage/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.4,
+        "metallicFactor": 0,
+        "emissiveStrength": 2.5
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/signage/mid/1/basecolor.png",
+            "normal": "assets/signage/mid/1/normal.png",
+            "roughness": "assets/signage/mid/1/roughness.png",
+            "metallic": "assets/signage/mid/1/metallic.png",
+            "height": "assets/signage/mid/1/height.png",
+            "ao": "assets/signage/mid/1/ao.png",
+            "emission": "assets/signage/mid/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/signage/mid/2/basecolor.png",
+            "normal": "assets/signage/mid/2/normal.png",
+            "roughness": "assets/signage/mid/2/roughness.png",
+            "metallic": "assets/signage/mid/2/metallic.png",
+            "height": "assets/signage/mid/2/height.png",
+            "ao": "assets/signage/mid/2/ao.png",
+            "emission": "assets/signage/mid/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/signage/rich": {
+      "key": "cyberpunk/signage/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.35,
+        "metallicFactor": 0,
+        "emissiveStrength": 2.5
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/signage/rich/1/basecolor.png",
+            "normal": "assets/signage/rich/1/normal.png",
+            "roughness": "assets/signage/rich/1/roughness.png",
+            "metallic": "assets/signage/rich/1/metallic.png",
+            "height": "assets/signage/rich/1/height.png",
+            "ao": "assets/signage/rich/1/ao.png",
+            "emission": "assets/signage/rich/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/signage/rich/2/basecolor.png",
+            "normal": "assets/signage/rich/2/normal.png",
+            "roughness": "assets/signage/rich/2/roughness.png",
+            "metallic": "assets/signage/rich/2/metallic.png",
+            "height": "assets/signage/rich/2/height.png",
+            "ao": "assets/signage/rich/2/ao.png",
+            "emission": "assets/signage/rich/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/signage/high_rich": {
+      "key": "cyberpunk/signage/high_rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.3,
+        "metallicFactor": 0,
+        "emissiveStrength": 2.5
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/signage/high_rich/1/basecolor.png",
+            "normal": "assets/signage/high_rich/1/normal.png",
+            "roughness": "assets/signage/high_rich/1/roughness.png",
+            "metallic": "assets/signage/high_rich/1/metallic.png",
+            "height": "assets/signage/high_rich/1/height.png",
+            "ao": "assets/signage/high_rich/1/ao.png",
+            "emission": "assets/signage/high_rich/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/signage/high_rich/2/basecolor.png",
+            "normal": "assets/signage/high_rich/2/normal.png",
+            "roughness": "assets/signage/high_rich/2/roughness.png",
+            "metallic": "assets/signage/high_rich/2/metallic.png",
+            "height": "assets/signage/high_rich/2/height.png",
+            "ao": "assets/signage/high_rich/2/ao.png",
+            "emission": "assets/signage/high_rich/2/emission.png"
+          }
+        }
+      ]
     }
   }
 }
