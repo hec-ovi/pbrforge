@@ -10,6 +10,7 @@ Status: draft, schema pending research.
 ## Out (must cover)
 - material set on disk: themes/[name]/assets plus JSON entry: map files, tiling configuration, physical properties, alignment mode (tile or exact placement)
 - database index queryable by kind, theme and tier
+- index primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/glass-office/high`). Consumers (exterior, interior) name GLB materials with exactly this key; the index resolves it to maps, tiling config and alignment mode.
 
 ## Errors
 Closed set, to be defined.
