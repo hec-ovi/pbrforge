@@ -4129,6 +4129,202 @@
           }
         }
       ]
+    },
+    "cyberpunk/light-fixture/poor": {
+      "key": "cyberpunk/light-fixture/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0,
+        "emissiveStrength": 3
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/poor/1/basecolor.png",
+            "normal": "assets/light-fixture/poor/1/normal.png",
+            "roughness": "assets/light-fixture/poor/1/roughness.png",
+            "metallic": "assets/light-fixture/poor/1/metallic.png",
+            "height": "assets/light-fixture/poor/1/height.png",
+            "ao": "assets/light-fixture/poor/1/ao.png",
+            "emission": "assets/light-fixture/poor/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/poor/2/basecolor.png",
+            "normal": "assets/light-fixture/poor/2/normal.png",
+            "roughness": "assets/light-fixture/poor/2/roughness.png",
+            "metallic": "assets/light-fixture/poor/2/metallic.png",
+            "height": "assets/light-fixture/poor/2/height.png",
+            "ao": "assets/light-fixture/poor/2/ao.png",
+            "emission": "assets/light-fixture/poor/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/light-fixture/mid": {
+      "key": "cyberpunk/light-fixture/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.45,
+        "metallicFactor": 0,
+        "emissiveStrength": 3
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/mid/1/basecolor.png",
+            "normal": "assets/light-fixture/mid/1/normal.png",
+            "roughness": "assets/light-fixture/mid/1/roughness.png",
+            "metallic": "assets/light-fixture/mid/1/metallic.png",
+            "height": "assets/light-fixture/mid/1/height.png",
+            "ao": "assets/light-fixture/mid/1/ao.png",
+            "emission": "assets/light-fixture/mid/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/mid/2/basecolor.png",
+            "normal": "assets/light-fixture/mid/2/normal.png",
+            "roughness": "assets/light-fixture/mid/2/roughness.png",
+            "metallic": "assets/light-fixture/mid/2/metallic.png",
+            "height": "assets/light-fixture/mid/2/height.png",
+            "ao": "assets/light-fixture/mid/2/ao.png",
+            "emission": "assets/light-fixture/mid/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/light-fixture/rich": {
+      "key": "cyberpunk/light-fixture/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.4,
+        "metallicFactor": 0,
+        "emissiveStrength": 3
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/rich/1/basecolor.png",
+            "normal": "assets/light-fixture/rich/1/normal.png",
+            "roughness": "assets/light-fixture/rich/1/roughness.png",
+            "metallic": "assets/light-fixture/rich/1/metallic.png",
+            "height": "assets/light-fixture/rich/1/height.png",
+            "ao": "assets/light-fixture/rich/1/ao.png",
+            "emission": "assets/light-fixture/rich/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/rich/2/basecolor.png",
+            "normal": "assets/light-fixture/rich/2/normal.png",
+            "roughness": "assets/light-fixture/rich/2/roughness.png",
+            "metallic": "assets/light-fixture/rich/2/metallic.png",
+            "height": "assets/light-fixture/rich/2/height.png",
+            "ao": "assets/light-fixture/rich/2/ao.png",
+            "emission": "assets/light-fixture/rich/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/light-fixture/high_rich": {
+      "key": "cyberpunk/light-fixture/high_rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.35,
+        "metallicFactor": 0,
+        "emissiveStrength": 3
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/high_rich/1/basecolor.png",
+            "normal": "assets/light-fixture/high_rich/1/normal.png",
+            "roughness": "assets/light-fixture/high_rich/1/roughness.png",
+            "metallic": "assets/light-fixture/high_rich/1/metallic.png",
+            "height": "assets/light-fixture/high_rich/1/height.png",
+            "ao": "assets/light-fixture/high_rich/1/ao.png",
+            "emission": "assets/light-fixture/high_rich/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/high_rich/2/basecolor.png",
+            "normal": "assets/light-fixture/high_rich/2/normal.png",
+            "roughness": "assets/light-fixture/high_rich/2/roughness.png",
+            "metallic": "assets/light-fixture/high_rich/2/metallic.png",
+            "height": "assets/light-fixture/high_rich/2/height.png",
+            "ao": "assets/light-fixture/high_rich/2/ao.png",
+            "emission": "assets/light-fixture/high_rich/2/emission.png"
+          }
+        }
+      ]
     }
   }
 }
