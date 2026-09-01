@@ -2,7 +2,7 @@
   {
     "key": "cyberpunk/light-fixture/poor",
     "alignment": "tile",
-    "description": "glowing frosted glass light diffuser surface, dim yellowish light, dusty",
+    "description": "backlit panel glow, synthesized",
     "tiling": {
       "worldSize": [
         1,
@@ -15,12 +15,14 @@
       "emissiveStrength": 3
     },
     "variants": 2,
-    "emission": "luminance"
+    "emission": "luminance",
+    "flatColor": "#eee5cc",
+    "flatNoise": 0.06
   },
   {
     "key": "cyberpunk/light-fixture/mid",
     "alignment": "tile",
-    "description": "glowing frosted glass light diffuser surface, even neutral white light",
+    "description": "backlit panel glow, synthesized",
     "tiling": {
       "worldSize": [
         1,
@@ -33,12 +35,14 @@
       "emissiveStrength": 3
     },
     "variants": 2,
-    "emission": "luminance"
+    "emission": "luminance",
+    "flatColor": "#f1f1ee",
+    "flatNoise": 0.03
   },
   {
     "key": "cyberpunk/light-fixture/rich",
     "alignment": "tile",
-    "description": "glowing frosted glass light diffuser surface, crisp cool white light",
+    "description": "backlit panel glow, synthesized",
     "tiling": {
       "worldSize": [
         1,
@@ -51,12 +55,14 @@
       "emissiveStrength": 3
     },
     "variants": 2,
-    "emission": "luminance"
+    "emission": "luminance",
+    "flatColor": "#edf3f8",
+    "flatNoise": 0.02
   },
   {
     "key": "cyberpunk/light-fixture/high_rich",
     "alignment": "tile",
-    "description": "glowing frosted glass light diffuser surface, pure even white light, immaculate",
+    "description": "backlit panel glow, synthesized",
     "tiling": {
       "worldSize": [
         1,
@@ -69,6 +75,8 @@
       "emissiveStrength": 3
     },
     "variants": 2,
-    "emission": "luminance"
+    "emission": "luminance",
+    "flatColor": "#fafafa",
+    "flatNoise": 0.012
   }
 ]

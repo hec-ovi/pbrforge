@@ -2,7 +2,7 @@
   {
     "key": "cyberpunk/signage/poor",
     "alignment": "tile",
-    "description": "glowing backlit acrylic panel surface, uneven pale pink light, dim patches and grime",
+    "description": "backlit panel glow, synthesized",
     "tiling": {
       "worldSize": [
         2,
@@ -15,12 +15,14 @@
       "emissiveStrength": 2.5
     },
     "variants": 2,
-    "emission": "luminance"
+    "emission": "luminance",
+    "flatColor": "#e3ccd6",
+    "flatNoise": 0.08
   },
   {
     "key": "cyberpunk/signage/mid",
     "alignment": "tile",
-    "description": "glowing backlit acrylic panel surface, even cyan light",
+    "description": "backlit panel glow, synthesized",
     "tiling": {
       "worldSize": [
         2,
@@ -33,12 +35,14 @@
       "emissiveStrength": 2.5
     },
     "variants": 2,
-    "emission": "luminance"
+    "emission": "luminance",
+    "flatColor": "#cdeef2",
+    "flatNoise": 0.04
   },
   {
     "key": "cyberpunk/signage/rich",
     "alignment": "tile",
-    "description": "glowing backlit acrylic panel surface, even magenta light, crisp",
+    "description": "backlit panel glow, synthesized",
     "tiling": {
       "worldSize": [
         2,
@@ -51,12 +55,14 @@
       "emissiveStrength": 2.5
     },
     "variants": 2,
-    "emission": "luminance"
+    "emission": "luminance",
+    "flatColor": "#f2cceb",
+    "flatNoise": 0.025
   },
   {
     "key": "cyberpunk/signage/high_rich",
     "alignment": "tile",
-    "description": "glowing backlit acrylic panel surface, even cool white light, immaculate",
+    "description": "backlit panel glow, synthesized",
     "tiling": {
       "worldSize": [
         2,
@@ -69,6 +75,8 @@
       "emissiveStrength": 2.5
     },
     "variants": 2,
-    "emission": "luminance"
+    "emission": "luminance",
+    "flatColor": "#f2f5f7",
+    "flatNoise": 0.015
   }
 ]
