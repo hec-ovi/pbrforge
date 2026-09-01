@@ -1,36 +1,42 @@
 import type { Rgb } from './pixels.js';
 
 /**
- * Seam metric: mean absolute difference across the wrap edges, relative to the
- * image's mean neighbor difference. A seamless image scores near 1; a hard seam
- * scores several times the interior contrast.
+ * Seam metric: the mean absolute difference across the wrap edge, relative to
+ * the LARGEST interior column/row difference. A toroidal image's wrap column
+ * behaves like any interior column (structure boundaries included), so its
+ * ratio stays near or below 1; a genuine seam is a discontinuity harder than
+ * anything inside the image and scores well above it.
  */
 export function seamScore(img: Rgb): { x: number; y: number } {
-  const { data, width: w, height: h } = img;
-  const px = (x: number, y: number, c: number) => data[(y * w + x) * 3 + c];
-
-  let interior = 0;
-  let count = 0;
-  for (let y = 0; y < h; y++) {
-    for (let x = 0; x < w - 1; x++) {
-      for (let c = 0; c < 3; c++) interior += Math.abs(px(x, y, c) - px(x + 1, y, c));
-      count += 3;
+  const { width: w, height: h } = img;
+  const colDiff = (a: number, b: number) => {
+    let sum = 0;
+    for (let y = 0; y < h; y++) {
+      const i = (y * w + a) * 3;
+      const j = (y * w + b) * 3;
+      sum += Math.abs(img.data[i] - img.data[j]) + Math.abs(img.data[i + 1] - img.data[j + 1]) + Math.abs(img.data[i + 2] - img.data[j + 2]);
     }
-  }
-  const meanInterior = Math.max(interior / count, 1e-3);
+    return sum / (h * 3);
+  };
+  const rowDiff = (a: number, b: number) => {
+    let sum = 0;
+    for (let x = 0; x < w; x++) {
+      const i = (a * w + x) * 3;
+      const j = (b * w + x) * 3;
+      sum += Math.abs(img.data[i] - img.data[j]) + Math.abs(img.data[i + 1] - img.data[j + 1]) + Math.abs(img.data[i + 2] - img.data[j + 2]);
+    }
+    return sum / (w * 3);
+  };
 
-  let seamX = 0;
-  for (let y = 0; y < h; y++) {
-    for (let c = 0; c < 3; c++) seamX += Math.abs(px(w - 1, y, c) - px(0, y, c));
-  }
-  let seamY = 0;
-  for (let x = 0; x < w; x++) {
-    for (let c = 0; c < 3; c++) seamY += Math.abs(px(x, h - 1, c) - px(x, 0, c));
-  }
-  return { x: seamX / (h * 3) / meanInterior, y: seamY / (w * 3) / meanInterior };
+  let maxInteriorX = 1e-3;
+  for (let x = 0; x < w - 1; x++) maxInteriorX = Math.max(maxInteriorX, colDiff(x, x + 1));
+  let maxInteriorY = 1e-3;
+  for (let y = 0; y < h - 1; y++) maxInteriorY = Math.max(maxInteriorY, rowDiff(y, y + 1));
+
+  return { x: colDiff(w - 1, 0) / maxInteriorX, y: rowDiff(h - 1, 0) / maxInteriorY };
 }
 
-export const SEAM_THRESHOLD = 2.5;
+export const SEAM_THRESHOLD = 1.2;
 
 export function isSeamless(img: Rgb): boolean {
   const score = seamScore(img);

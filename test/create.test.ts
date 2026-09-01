@@ -19,12 +19,12 @@ async function tileablePng(size = 64): Promise<Buffer> {
   return sharp(data, { raw: { width: size, height: size, channels: 3 } }).png().toBuffer();
 }
 
-/** Hard vertical seam: left half dark, right half bright. */
+/** Classic non-tiling failure: a smooth ramp whose only hard step is at the wrap edge. */
 async function seamyPng(size = 64): Promise<Buffer> {
   const data = new Uint8Array(size * size * 3);
   for (let y = 0; y < size; y++) {
     for (let x = 0; x < size; x++) {
-      data.fill(x < size / 2 ? 20 : 235, (y * size + x) * 3, (y * size + x) * 3 + 3);
+      data.fill(Math.round((x / (size - 1)) * 220 + 20), (y * size + x) * 3, (y * size + x) * 3 + 3);
     }
   }
   return sharp(data, { raw: { width: size, height: size, channels: 3 } }).png().toBuffer();
