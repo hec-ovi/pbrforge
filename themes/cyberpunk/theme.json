@@ -1,0 +1,52 @@
+{
+  "theme": "cyberpunk",
+  "entries": {
+    "cyberpunk/wall/poor": {
+      "key": "cyberpunk/wall/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          3,
+          3
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.92,
+        "metallicFactor": 0,
+        "breakable": false
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/poor/1/basecolor.png",
+            "normal": "assets/wall/poor/1/normal.png",
+            "roughness": "assets/wall/poor/1/roughness.png",
+            "metallic": "assets/wall/poor/1/metallic.png",
+            "height": "assets/wall/poor/1/height.png",
+            "ao": "assets/wall/poor/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/poor/2/basecolor.png",
+            "normal": "assets/wall/poor/2/normal.png",
+            "roughness": "assets/wall/poor/2/roughness.png",
+            "metallic": "assets/wall/poor/2/metallic.png",
+            "height": "assets/wall/poor/2/height.png",
+            "ao": "assets/wall/poor/2/ao.png"
+          }
+        }
+      ]
+    }
+  }
+}

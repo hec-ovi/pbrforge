@@ -1,0 +1,23 @@
+:root {
+  --bg: #101014;
+  --panel: #17171d;
+  --border: #2a2a33;
+  --text: #d8d8de;
+  --muted: #82828e;
+  --accent: #47c8ff;
+}
+* { box-sizing: border-box; border-radius: 0; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 13px/1.4 system-ui, sans-serif; }
+.preview { display: grid; grid-template-columns: 260px 1fr; height: 100vh; }
+.sidebar { background: var(--panel); border-right: 1px solid var(--border); overflow-y: auto; padding: 8px; }
+.sidebar h1 { font-size: 13px; margin: 4px 4px 10px; font-weight: 600; }
+.material-list { display: flex; flex-direction: column; gap: 2px; }
+.material-list button { text-align: left; background: none; border: 1px solid transparent; color: var(--text); padding: 5px 8px; cursor: pointer; font: inherit; }
+.material-list button:hover { border-color: var(--border); }
+.material-list button.active { border-color: var(--accent); color: var(--accent); }
+.material-list .empty { color: var(--muted); padding: 8px; }
+.stage { position: relative; }
+.stage canvas { display: block; }
+.controls { position: absolute; top: 8px; right: 8px; display: flex; gap: 6px; background: var(--panel); border: 1px solid var(--border); padding: 6px 8px; }
+.controls label { color: var(--muted); }
+.controls select { background: var(--bg); color: var(--text); border: 1px solid var(--border); font: inherit; }
