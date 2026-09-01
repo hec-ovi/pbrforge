@@ -27,6 +27,20 @@ Full detail with sources lives in `.research/comfyui-pbr-generation/FINDINGS.md`
 - Brand names are stroked in from a built-in geometric alphabet, not diffused: SDXL garbles lettering, and a composited wordmark lets one render serve any business name.
 - Seam gate: wrap-edge mean diff relative to the worst interior column or row, threshold 1.2. Comparing to the global mean false-positives on grid textures (grout on the wrap column).
 
+## Procedural pattern surfaces (2026-09)
+
+Structured surfaces (hexagon walls, panel grids, floor slabs) are arithmetic on where a point sits on the surface in metres, not diffusion: a drawn pattern is crisp at any size, cannot jog where it is cut to tile, and costs a fraction of the file size. Diffusion keeps what it is good at, which is stochastic grain, wear and grime.
+
+- Two numbers carry every pattern: how far the point is from the nearest joint, and one number per cell. The finish reads them; the shapes stay separate from the look.
+- Hexagons: the lattice period is (1, sqrt3) in units of one hexagon width, as two staggered lattices; a point takes whichever centre is nearer, and its distance from the boundary is `0.5 - max(|x|/2 + |y|*sqrt3/2, |x|)`. Whole cell counts per tile in both axes are what makes it wrap; hexagons come out regular when the column count is about 1.73 times the row-pair count (7 by 4, 12 by 7).
+- The finish, not the pattern, decides how hard it reads: a joint darkens the face by 0.35 to 0.6 and roughens it by 0.4 of that; per-cell tone spread runs 0.03 to 0.12. A printed wall is the same pattern with no joint darkening and a gloss spread of 0.14 to 0.26, so it exists only in the reflection. That is what makes a hexagon wall subtle instead of a drawn grid.
+- Scales that read right in a room: floor tiles 0.45 to 0.6 m, hexagons 0.3 to 0.5 m across, ceiling panels 1.2 m, wall hexagons 0.45 to 0.5 m, planks 0.2 m by 1.7 m.
+- Joint widths: a live shader draws a 6 mm joint with a 4 mm fade. A baked 1024 map over a 3 m tile is 2.9 mm per pixel, so joints are authored at 12 to 30 mm (panel joints and pavement joints are that wide anyway) and anti-aliased against the pixel they are sampled for.
+- Interior roughness: floors 0.22 to 0.55, walls 0.34 to 0.70, ceilings 0.5 to 0.9. No interior surface is metal: a dark colour at low roughness catches the room's own light, where a mirror indoors comes out a hole.
+- Palettes that hold up: a cool graphite interior (surfaces 0x3a3d42 to 0x6e7175, structure 0x2b2f34, pale tops 0xc7c3b9, one teal accent 0x1f6f7a, cool white strips 0xbdf0ff) and a warm one (surfaces 0x655a60 to 0x968a8d, plum accent 0x8e2338, warm strips 0xff6478). One saturated accent per room, everything else neutral.
+- Emissive strips are authored by luminance, not by a multiplier: 0xbdf0ff carries 0.80 of luminance and 0xff6478 only 0.32, so one strength over both makes one strip architecture and the other a painted line.
+- An image laid under a pattern is grain, not a multiplier: divide it by its own mean so it sits around 1, or the colour that was asked for comes out a fraction of itself.
+
 ## Facts the design leans on
 
 - ComfyUI runs headless; workflows are API-format JSON submitted to POST /prompt, polled on /history, images fetched from /view. Proven local pattern exists (a prior stdlib-only client).

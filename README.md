@@ -20,15 +20,23 @@ npm test
 
 - `resolve(key)` returns the entry for a key or one of its aliases.
 - `list(filter?)` returns matching keys, sorted and deterministic.
-- `create(request)` generates a full map set, verifies its seams and writes it. The request (`schema/create-request.schema.json`) names the theme, kind, tier, prompt material and options. Basecolor comes from ComfyUI, or is synthesized procedurally when `flatColor` is set (glass, plain colors); normal, roughness, metallic, height and AO always derive in-box from the basecolor.
+- `create(request)` generates a full map set, verifies its seams and writes it. The request (`schema/create-request.schema.json`) names the theme, kind, tier, prompt material and options. Basecolor comes from ComfyUI, from a drawn pattern, from a tint of a variant already in the entry, or is synthesized from `flatColor` (glass, plain colors); normal, roughness, metallic, height and AO always derive in-box. `append` adds a variant to an entry that exists instead of writing a new one.
 
 ## Out
 
 A `MaterialEntry` (`schema/material-entry.schema.json`): alignment mode (`tile` or `exact`), physical properties (metallic and roughness factors, transmission for glass, emissive strength, breakable), tiling config in meters covered by one repeat, and one or more variants, each a set of map files. Variant 0 is canonical; a consumer can pick a variant deterministically by seed.
 
-The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers 29 kinds at four tiers (96 entries plus 20 alias keys): walls, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens, light fixtures, fire escapes and roof artifacts for exteriors, and plaster, tile, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors.
+The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers 33 kinds at four tiers (112 entries plus 20 alias keys, 264 variants): walls, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens, light fixtures, fire escapes and roof artifacts for exteriors, plaster, tile, ceilings, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors, sidewalk and road for the ground, and a lit letter atlas for signs.
 
 Conventions are fixed, not per entry: metallic-roughness workflow, basecolor and emission sRGB with every other map linear, OpenGL-style normals, glass following glTF `KHR_materials_transmission`.
+
+## Patterns
+
+Structured surfaces are drawn, not diffused. A `pattern` in the request states shapes and colors and the box renders the maps in code: hexagon grids, inset panel grids, large floor and pavement slabs, stripes, two-tone blocking, and noise in up to four octaves for asphalt. Every one is anti-aliased against the pixel it is sampled for and periodic over one tile by construction, so it is crisp at any distance, tiles with nothing to hide, and costs a few tens of kilobytes. Joint and chamfer widths are in metres and read against the entry's tiling, so a joint is the same width on a 3 m wall and a 12 m one.
+
+A pattern variant resolves under the same key and the same entry shape as a photographed one: consumers read maps and never ask which class a variant is. Diffusion keeps what it is good at, which is grain, wear and grime.
+
+The same lane draws the letter atlas: one lit glyph per cell in an 8 by 6 grid, as a neon tube or a backlit panel, so a sign system spells any name by picking cells. The grid and charset are in `CONTRACT.md`.
 
 ## Screens
 
