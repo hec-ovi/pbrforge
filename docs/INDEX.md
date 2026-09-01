@@ -1,3 +1,3 @@
 # Box map
 
-- root box: see CONTRACT.md. No inner boxes yet.
+- root box: database + generator + preview, see CONTRACT.md. Schemas in schema/. No inner boxes yet.

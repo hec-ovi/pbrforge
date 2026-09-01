@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urbe-materials/create-request",
+  "title": "CreateRequest",
+  "type": "object",
+  "required": ["key", "alignment", "description"],
+  "additionalProperties": false,
+  "properties": {
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+/[a-z0-9_-]+/[a-z0-9_-]+$",
+      "description": "theme/kind/tier the new entry is written under"
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9_-]+/[a-z0-9_-]+/[a-z0-9_-]+$" }
+    },
+    "alignment": { "enum": ["tile", "exact"] },
+    "description": {
+      "type": "string",
+      "minLength": 3,
+      "description": "what the surface is, in plain words; the template turns it into the full prompt"
+    },
+    "tiling": {
+      "type": "object",
+      "required": ["worldSize"],
+      "additionalProperties": false,
+      "properties": {
+        "worldSize": {
+          "type": "array",
+          "items": { "type": "number", "exclusiveMinimum": 0 },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "aspect": {
+      "type": "array",
+      "items": { "type": "number", "exclusiveMinimum": 0 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "physical": {
+      "$comment": "same shape as material-entry physical; authored, not estimated",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "breakable": { "type": "boolean" },
+        "metallicFactor": { "type": "number", "minimum": 0, "maximum": 1 },
+        "roughnessFactor": { "type": "number", "minimum": 0, "maximum": 1 },
+        "transmission": { "type": "number", "minimum": 0, "maximum": 1 },
+        "ior": { "type": "number", "minimum": 1 },
+        "tint": { "type": "string", "pattern": "^#[0-9a-f]{6}$" },
+        "emissiveStrength": { "type": "number", "minimum": 0 },
+        "alphaMode": { "enum": ["OPAQUE", "BLEND", "MASK"] }
+      }
+    },
+    "emission": {
+      "enum": ["none", "luminance", "color-mask"],
+      "default": "none",
+      "description": "how the emission map is derived from the base color"
+    },
+    "variants": { "type": "integer", "minimum": 1, "maximum": 8, "default": 1 },
+    "seed": { "type": "integer", "minimum": 0, "description": "default: derived from the description" },
+    "resolution": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 256 },
+      "minItems": 2,
+      "maxItems": 2,
+      "default": [1024, 1024]
+    },
+    "overwrite": { "type": "boolean", "default": false }
+  }
+}

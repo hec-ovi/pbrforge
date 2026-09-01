@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urbe-materials/material-entry",
+  "title": "MaterialEntry",
+  "type": "object",
+  "required": ["key", "alignment", "physical", "variants"],
+  "additionalProperties": false,
+  "properties": {
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+/[a-z0-9_-]+/[a-z0-9_-]+$",
+      "description": "theme/kind/tier, lowercase slugs"
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9_-]+/[a-z0-9_-]+/[a-z0-9_-]+$" },
+      "default": []
+    },
+    "alignment": { "enum": ["tile", "exact"] },
+    "tiling": {
+      "type": "object",
+      "description": "required when alignment is tile: meters covered by one tile repeat; 1 UV unit = 1 tile",
+      "required": ["worldSize"],
+      "additionalProperties": false,
+      "properties": {
+        "worldSize": {
+          "type": "array",
+          "items": { "type": "number", "exclusiveMinimum": 0 },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "[width, height] in meters"
+        }
+      }
+    },
+    "aspect": {
+      "type": "array",
+      "items": { "type": "number", "exclusiveMinimum": 0 },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "required when alignment is exact: [w, h] aspect ratio of the placement face"
+    },
+    "physical": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "breakable": { "type": "boolean", "default": false },
+        "metallicFactor": { "type": "number", "minimum": 0, "maximum": 1, "default": 1 },
+        "roughnessFactor": { "type": "number", "minimum": 0, "maximum": 1, "default": 1 },
+        "transmission": { "type": "number", "minimum": 0, "maximum": 1, "default": 0 },
+        "ior": { "type": "number", "minimum": 1, "default": 1.5 },
+        "tint": {
+          "type": "string",
+          "pattern": "^#[0-9a-f]{6}$",
+          "description": "attenuation color for transmissive materials"
+        },
+        "emissiveStrength": { "type": "number", "minimum": 0, "default": 1 },
+        "alphaMode": { "enum": ["OPAQUE", "BLEND", "MASK"], "default": "OPAQUE" }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "description": "variant 0 is canonical; consumers may pick by seed",
+      "items": {
+        "type": "object",
+        "required": ["id", "resolution", "maps"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+          "resolution": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 64 },
+            "minItems": 2,
+            "maxItems": 2,
+            "description": "[px width, px height], shared by every map of the variant"
+          },
+          "maps": {
+            "type": "object",
+            "required": ["basecolor", "normal", "roughness", "metallic"],
+            "additionalProperties": false,
+            "properties": {
+              "basecolor": { "$ref": "#/$defs/mapPath" },
+              "normal": { "$ref": "#/$defs/mapPath" },
+              "roughness": { "$ref": "#/$defs/mapPath" },
+              "metallic": { "$ref": "#/$defs/mapPath" },
+              "height": { "$ref": "#/$defs/mapPath" },
+              "ao": { "$ref": "#/$defs/mapPath" },
+              "emission": { "$ref": "#/$defs/mapPath" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "mapPath": {
+      "type": "string",
+      "pattern": "^assets/[a-z0-9_/-]+\\.png$",
+      "description": "path relative to the theme folder"
+    }
+  }
+}
