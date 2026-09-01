@@ -185,6 +185,206 @@
           }
         }
       ]
+    },
+    "cyberpunk/window-glass/poor": {
+      "key": "cyberpunk/window-glass/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "breakable": true,
+        "roughnessFactor": 0.35,
+        "metallicFactor": 0,
+        "transmission": 0.6,
+        "ior": 1.5,
+        "tint": "#9aa39e"
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-glass/poor/1/basecolor.png",
+            "normal": "assets/window-glass/poor/1/normal.png",
+            "roughness": "assets/window-glass/poor/1/roughness.png",
+            "metallic": "assets/window-glass/poor/1/metallic.png",
+            "height": "assets/window-glass/poor/1/height.png",
+            "ao": "assets/window-glass/poor/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-glass/poor/2/basecolor.png",
+            "normal": "assets/window-glass/poor/2/normal.png",
+            "roughness": "assets/window-glass/poor/2/roughness.png",
+            "metallic": "assets/window-glass/poor/2/metallic.png",
+            "height": "assets/window-glass/poor/2/height.png",
+            "ao": "assets/window-glass/poor/2/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/window-glass/mid": {
+      "key": "cyberpunk/window-glass/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "breakable": true,
+        "roughnessFactor": 0.2,
+        "metallicFactor": 0,
+        "transmission": 0.8,
+        "ior": 1.5,
+        "tint": "#b8c4c9"
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-glass/mid/1/basecolor.png",
+            "normal": "assets/window-glass/mid/1/normal.png",
+            "roughness": "assets/window-glass/mid/1/roughness.png",
+            "metallic": "assets/window-glass/mid/1/metallic.png",
+            "height": "assets/window-glass/mid/1/height.png",
+            "ao": "assets/window-glass/mid/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-glass/mid/2/basecolor.png",
+            "normal": "assets/window-glass/mid/2/normal.png",
+            "roughness": "assets/window-glass/mid/2/roughness.png",
+            "metallic": "assets/window-glass/mid/2/metallic.png",
+            "height": "assets/window-glass/mid/2/height.png",
+            "ao": "assets/window-glass/mid/2/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/window-glass/rich": {
+      "key": "cyberpunk/window-glass/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "breakable": true,
+        "roughnessFactor": 0.08,
+        "metallicFactor": 0,
+        "transmission": 0.9,
+        "ior": 1.5,
+        "tint": "#a9c9d8"
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-glass/rich/1/basecolor.png",
+            "normal": "assets/window-glass/rich/1/normal.png",
+            "roughness": "assets/window-glass/rich/1/roughness.png",
+            "metallic": "assets/window-glass/rich/1/metallic.png",
+            "height": "assets/window-glass/rich/1/height.png",
+            "ao": "assets/window-glass/rich/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-glass/rich/2/basecolor.png",
+            "normal": "assets/window-glass/rich/2/normal.png",
+            "roughness": "assets/window-glass/rich/2/roughness.png",
+            "metallic": "assets/window-glass/rich/2/metallic.png",
+            "height": "assets/window-glass/rich/2/height.png",
+            "ao": "assets/window-glass/rich/2/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/window-glass/high_rich": {
+      "key": "cyberpunk/window-glass/high_rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "breakable": true,
+        "roughnessFactor": 0.04,
+        "metallicFactor": 0,
+        "transmission": 0.95,
+        "ior": 1.5,
+        "tint": "#8fb8d0"
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-glass/high_rich/1/basecolor.png",
+            "normal": "assets/window-glass/high_rich/1/normal.png",
+            "roughness": "assets/window-glass/high_rich/1/roughness.png",
+            "metallic": "assets/window-glass/high_rich/1/metallic.png",
+            "height": "assets/window-glass/high_rich/1/height.png",
+            "ao": "assets/window-glass/high_rich/1/ao.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-glass/high_rich/2/basecolor.png",
+            "normal": "assets/window-glass/high_rich/2/normal.png",
+            "roughness": "assets/window-glass/high_rich/2/roughness.png",
+            "metallic": "assets/window-glass/high_rich/2/metallic.png",
+            "height": "assets/window-glass/high_rich/2/height.png",
+            "ao": "assets/window-glass/high_rich/2/ao.png"
+          }
+        }
+      ]
     }
   }
 }
