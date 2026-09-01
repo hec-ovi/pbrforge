@@ -24,6 +24,7 @@ import { buildPattern } from './pattern/build.js';
 import { renderPattern } from './pattern/render.js';
 import { recolor } from './recolor.js';
 import { screenEmission, screenGlass } from './screen.js';
+import { SourceImage } from './SourceImage.js';
 import { stampBrand } from './text.js';
 import { isSeamless, seamScore } from './seam.js';
 import requestSchema from '../../schema/create-request.schema.json' with { type: 'json' };
@@ -65,6 +66,7 @@ export class Generator {
       tile: new Template('sdxl-tile'),
       exact: new Template('sdxl-exact'),
     },
+    private sources: SourceImage = new SourceImage(comfy),
   ) {
     this.validateRequest = new Ajv({ useDefaults: true }).compile(requestSchema);
   }
@@ -194,10 +196,11 @@ export class Generator {
     const flat = () => synthesizeFlat(request.flatColor!, seed, width, height, request.flatNoise);
     if (request.emission === 'image') {
       const spec = request.screens![index];
-      return {
-        basecolor: screenGlass(flat(), spec),
-        screen: { spec, artwork: await decodeRgb(await this.paint(request, index, seed, width, height)) },
-      };
+      // a provided source replaces the diffusion, and nothing downstream of it changes
+      const artwork = spec.imagePath
+        ? await this.sources.load(spec.imagePath, width, height)
+        : await decodeRgb(await this.paint(request, index, seed, width, height));
+      return { basecolor: screenGlass(flat(), spec), screen: { spec, artwork } };
     }
     if (request.flatColor) return { basecolor: flat() };
     return { basecolor: await decodeRgb(await this.paint(request, index, seed, width, height)) };

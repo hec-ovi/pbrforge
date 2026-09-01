@@ -29,13 +29,13 @@ npm test
 
 A `MaterialEntry` (`schema/material-entry.schema.json`): alignment mode (`tile` or `exact`), physical properties (metallic and roughness factors, transmission for glass, emissive strength, breakable), tiling config in meters covered by one repeat, and one or more variants, each a set of map files. Variant 0 is canonical; a consumer can pick a variant deterministically by seed.
 
-The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers 33 kinds at four tiers (112 entries plus 20 alias keys, 316 variants): walls, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens, light fixtures, fire escapes and roof artifacts for exteriors, plaster, tile, ceilings, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors, sidewalk and road for the ground, and a lit letter atlas for signs. The families that cover the most surface carry the most variants per tier: seven walls (four photographed surfaces and three paints), nine concretes, seven plasters, five tiles, three pavements and three road surfaces, laid out to read apart in tone, cell size and bond.
+The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers 35 kinds at four tiers (114 entries plus 26 alias keys, 327 variants): walls, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens landscape and portrait, light fixtures, fire escapes and roof artifacts for exteriors, plaster, tile, ceilings, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors, sidewalk, road and plastic for the street, and a lit letter atlas for signs. The families that cover the most surface carry the most variants per tier: seven walls (four photographed surfaces and three paints), nine concretes, seven plasters, five tiles, three pavements and four road surfaces, laid out to read apart in tone, cell size and bond.
 
 Conventions are fixed, not per entry: metallic-roughness workflow, basecolor and emission sRGB with every other map linear, OpenGL-style normals, glass following glTF `KHR_materials_transmission`.
 
 ## Patterns
 
-Structured surfaces are drawn, not diffused. A `pattern` in the request states shapes and colors and the box renders the maps in code: hexagon grids, inset panel grids, large floor and pavement slabs, stripes, two-tone blocking, and noise in up to four octaves for asphalt. Every one is anti-aliased against the pixel it is sampled for and periodic over one tile by construction, so it is crisp at any distance, tiles with nothing to hide, and costs a few tens of kilobytes. Joint and chamfer widths are in metres and read against the entry's tiling, so a joint is the same width on a 3 m wall and a 12 m one.
+Structured surfaces are drawn, not diffused. A `pattern` in the request states shapes and colors and the box renders the maps in code: hexagon grids, inset panel grids, large floor and pavement slabs, stripes, two-tone blocking, noise in up to four octaves for asphalt, and that asphalt under standing water, where the pools go flat and mirror-smooth in the roughness map so the environment reflects off the street. Every one is anti-aliased against the pixel it is sampled for and periodic over one tile by construction, so it is crisp at any distance, tiles with nothing to hide, and costs a few tens of kilobytes. Joint and chamfer widths are in metres and read against the entry's tiling, so a joint is the same width on a 3 m wall and a 12 m one.
 
 A pattern variant resolves under the same key and the same entry shape as a photographed one: consumers read maps and never ask which class a variant is. Diffusion keeps what it is good at, which is grain, wear and grime.
 
@@ -48,6 +48,8 @@ A photograph carries its gloss and grain in every pixel. Read straight out, brig
 ## Screens
 
 Ad screens invert the usual path. The basecolor is dark display glass and the picture lives in the emission map at high emissive strength. ComfyUI paints each advertisement brandless and flat; the box turns it into a display: the pixel structure of its kind (`led-dot` lattice, `scanline-billboard` bands, `glyph-panel` with no lattice), colour fringing, blown-out hotspots, and the business name stroked in from a built-in alphabet. Because the name never enters the diffusion prompt, rebranding a screen costs no render.
+
+A screen can also be painted from a picture that already exists: `imagePath` on a screen names a file, which goes through a ComfyUI 4x upscale and then the same display treatment, so a billboard-scale screen carries real detail instead of an enlarged thumbnail.
 
 ## How it works
 

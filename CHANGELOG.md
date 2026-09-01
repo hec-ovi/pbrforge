@@ -1,5 +1,7 @@
 # Changelog
 
+0.7: screens from provided sources. `imagePath` on a `screens[]` entry names a picture that already exists; it goes through a ComfyUI 4x upscale (4x-UltraSharp, fetched by comfy/setup.sh) and is fitted to the entry's resolution, then through the same lattice, fringing, hotspot and wordmark treatment every other screen gets. The upscale is feed-forward, so the same file always comes back the same picture, and no diffusion prompt is built. Two premium screens ship from the approved sources at 4096 on the long side: `premium-soda` on `cyberpunk/ad-screen/high_rich` (16:9) and the new `cyberpunk/ad-screen-tall` kind, a 9:16 portrait billboard whose four tiers share one entry. 114 entries, 327 variants.
+
 0.6.4: flat upholstery. Every fabric tier carries a `flat` pattern variant beside its photographed weaves: even cloth, matte, tonal drift at tile scale and a normal map that leans under one code value off flat, so interior parts small enough to minify a weave have nothing left to alias.
 
 0.6.3: plastic kind for street props: a crumpled near-black sheet at 0.25 roughness, the glossy response of a refuse sack, drawn by the pattern class. All four tiers resolve to the one entry. The suite gained the coverage gate behind the contract's guarantee: every kind in the vocabulary resolves at all four tiers of the shipped cyberpunk database.

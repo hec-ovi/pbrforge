@@ -1,0 +1,61 @@
+[
+  {
+    "key": "cyberpunk/ad-screen/high_rich",
+    "alignment": "exact",
+    "append": true,
+    "description": "corporate tower advertisement painted from a provided source",
+    "variantId": "premium-soda",
+    "resolution": [
+      4096,
+      2304
+    ],
+    "emission": "image",
+    "flatColor": "#050507",
+    "flatNoise": 0.015,
+    "screens": [
+      {
+        "kind": "scanline-billboard",
+        "pitch": 16,
+        "imagePath": "sources/ads-grok/ad-retro-soda-wide.png",
+        "brandName": "KOSHI SODA",
+        "description": "a woman drinking amber soda from a chilled glass bottle against a black backdrop"
+      }
+    ]
+  },
+  {
+    "key": "cyberpunk/ad-screen-tall/high_rich",
+    "aliases": [
+      "cyberpunk/ad-screen-tall/poor",
+      "cyberpunk/ad-screen-tall/mid",
+      "cyberpunk/ad-screen-tall/rich"
+    ],
+    "alignment": "exact",
+    "description": "portrait tower advertisement painted from a provided source",
+    "aspect": [
+      9,
+      16
+    ],
+    "resolution": [
+      2304,
+      4096
+    ],
+    "physical": {
+      "roughnessFactor": 0.04,
+      "metallicFactor": 0,
+      "emissiveStrength": 10
+    },
+    "emission": "image",
+    "flatColor": "#050507",
+    "flatNoise": 0.015,
+    "screens": [
+      {
+        "kind": "led-dot",
+        "pitch": 14,
+        "imagePath": "sources/ads-grok/ad-android-perfume-tall.png",
+        "brandName": "HELIOS KAI",
+        "description": "an android holding a faceted crystal perfume bottle against a black backdrop"
+      }
+    ],
+    "variantId": "premium-perfume"
+  }
+]

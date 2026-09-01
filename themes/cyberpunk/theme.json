@@ -6523,6 +6523,22 @@
             "ao": "assets/ad-screen/high_rich/3/ao.png",
             "emission": "assets/ad-screen/high_rich/3/emission.png"
           }
+        },
+        {
+          "id": "premium-soda",
+          "resolution": [
+            4096,
+            2304
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/premium-soda/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/premium-soda/normal.png",
+            "roughness": "assets/ad-screen/high_rich/premium-soda/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/premium-soda/metallic.png",
+            "height": "assets/ad-screen/high_rich/premium-soda/height.png",
+            "ao": "assets/ad-screen/high_rich/premium-soda/ao.png",
+            "emission": "assets/ad-screen/high_rich/premium-soda/emission.png"
+          }
         }
       ]
     },
@@ -7523,6 +7539,42 @@
             "metallic": "assets/plastic/poor/bag/metallic.png",
             "height": "assets/plastic/poor/bag/height.png",
             "ao": "assets/plastic/poor/bag/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ad-screen-tall/high_rich": {
+      "key": "cyberpunk/ad-screen-tall/high_rich",
+      "aliases": [
+        "cyberpunk/ad-screen-tall/poor",
+        "cyberpunk/ad-screen-tall/mid",
+        "cyberpunk/ad-screen-tall/rich"
+      ],
+      "alignment": "exact",
+      "aspect": [
+        9,
+        16
+      ],
+      "physical": {
+        "roughnessFactor": 0.04,
+        "metallicFactor": 0,
+        "emissiveStrength": 10
+      },
+      "variants": [
+        {
+          "id": "premium-perfume",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/premium-perfume/emission.png"
           }
         }
       ]

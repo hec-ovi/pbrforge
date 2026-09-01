@@ -18,6 +18,22 @@ export class ComfyClient {
     }
   }
 
+  /** Puts a file in ComfyUI's input folder and returns the name a LoadImage node reads it back by. */
+  async upload(image: Buffer, name: string): Promise<string> {
+    if (!(await this.ready())) {
+      throw new MaterialsError('E_COMFY_UNAVAILABLE', `ComfyUI not reachable at ${this.baseUrl}`);
+    }
+    const form = new FormData();
+    form.append('image', new Blob([new Uint8Array(image)], { type: 'image/png' }), name);
+    form.append('overwrite', 'true');
+    const res = await fetch(`${this.baseUrl}/upload/image`, { method: 'POST', body: form });
+    if (!res.ok) {
+      throw new MaterialsError('E_GENERATION_FAILED', `upload rejected: ${res.status} ${await res.text()}`);
+    }
+    const stored = (await res.json()) as { name: string; subfolder?: string };
+    return stored.subfolder ? `${stored.subfolder}/${stored.name}` : stored.name;
+  }
+
   async render(graph: Graph): Promise<Buffer> {
     if (!(await this.ready())) {
       throw new MaterialsError('E_COMFY_UNAVAILABLE', `ComfyUI not reachable at ${this.baseUrl}`);

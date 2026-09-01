@@ -53,6 +53,8 @@ export interface ThemeIndex {
 export interface Screen {
   kind: 'led-dot' | 'scanline-billboard' | 'glyph-panel';
   description: string;
+  /** A provided source image used as the artwork, instead of diffusing one. */
+  imagePath?: string;
   brandName?: string;
   businessKind?: string;
   pitch?: number;

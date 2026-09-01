@@ -176,7 +176,12 @@
             "enum": ["led-dot", "scanline-billboard", "glyph-panel"],
             "description": "led-dot and scanline-billboard show photographic ad artwork through their pixel structure; glyph-panel is an abstract glowing panel"
           },
-          "description": { "type": "string", "minLength": 3, "description": "the advertisement itself, as flat brandless artwork" },
+          "description": { "type": "string", "minLength": 3, "description": "the advertisement itself, as flat brandless artwork; what the source shows when imagePath is set" },
+          "imagePath": {
+            "type": "string",
+            "minLength": 1,
+            "description": "a provided source image, relative to the box folder, used as the artwork instead of diffusing one; it goes through a ComfyUI 4x upscale and then the same screen treatment"
+          },
           "brandName": { "type": "string", "minLength": 1, "description": "overrides the request brandName for this screen" },
           "businessKind": { "type": "string", "minLength": 1, "description": "overrides the request businessKind for this screen" },
           "pitch": { "type": "integer", "minimum": 2, "description": "pixels per LED cell or scan band; default: width/160" }

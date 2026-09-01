@@ -144,6 +144,74 @@ describe('create contract', () => {
     expect([...new Set(await read(0, 'normal'))].sort()).toEqual([128, 255]); // no relief
   });
 
+  it('paints a screen from a provided source through the upscale, with nothing diffused', async () => {
+    // stands in for the 4x model output: flat and bright, so the display structure over it is visible
+    const upscaled = await sharp(new Uint8Array(512 * 288 * 3).fill(200), {
+      raw: { width: 512, height: 288, channels: 3 },
+    })
+      .png()
+      .toBuffer();
+    const graphs: Record<string, { class_type: string; inputs: Record<string, unknown> }>[] = [];
+    const uploads: string[] = [];
+    const comfy = {
+      ready: async () => true,
+      upload: async (image: Buffer, name: string) => {
+        uploads.push(`${name}:${image.length}`);
+        return 'stored.png';
+      },
+      render: async (graph: Record<string, { class_type: string; inputs: Record<string, unknown> }>) => {
+        graphs.push(graph);
+        return upscaled;
+      },
+    } as unknown as ComfyClient;
+
+    const entry = await new Generator(db, comfy).create({
+      key: 'cyberpunk/ad-screen/high_rich',
+      alignment: 'exact',
+      description: 'corporate tower advertisement painted from a provided source',
+      aspect: [16, 9],
+      resolution: [128, 72],
+      physical: { roughnessFactor: 0.04, metallicFactor: 0, emissiveStrength: 10 },
+      emission: 'image',
+      flatColor: '#050507',
+      screens: [
+        {
+          kind: 'scanline-billboard',
+          pitch: 4,
+          imagePath: 'sources/ads-grok/ad-retro-soda-wide.png',
+          description: 'a woman drinking amber soda from a chilled glass bottle',
+        },
+      ],
+    });
+
+    expect(uploads).toHaveLength(1);
+    expect(uploads[0]).toContain('ad-retro-soda-wide.png'); // the file on disk, not a prompt
+    expect(graphs).toHaveLength(1);
+    expect(graphs[0]['3'].class_type).toBe('ImageUpscaleWithModel');
+    expect(graphs[0]['1'].inputs.image).toBe('stored.png');
+    expect(Object.values(graphs[0]).some((node) => node.class_type === 'KSampler')).toBe(false);
+
+    // fitted to the screen, and the same scan bands every other billboard carries
+    expect(entry.variants[0].resolution).toEqual([128, 72]);
+    const emission = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.emission!)).raw().toBuffer();
+    expect(Math.min(...emission)).toBeLessThan(0.5 * Math.max(...emission));
+  });
+
+  it('throws E_SCHEMA when a screen names a source that is not there', async () => {
+    await expect(
+      new Generator(db, mockComfy(tileablePng)).create({
+        key: 'cyberpunk/ad-screen/rich',
+        alignment: 'exact',
+        description: 'advertisement from a provided source',
+        aspect: [16, 9],
+        resolution: [128, 72],
+        emission: 'image',
+        flatColor: '#050507',
+        screens: [{ kind: 'led-dot', imagePath: 'sources/ads-grok/absent.png', description: 'an advertisement' }],
+      }),
+    ).rejects.toMatchObject({ code: 'E_SCHEMA' });
+  });
+
   it('keeps the gloss inside the finish band and the pixel speckle out of the relief', async () => {
     // the fixture is per-pixel noise: read straight out it is exactly the glitter case
     const entry = await new Generator(db, mockComfy(tileablePng)).create({

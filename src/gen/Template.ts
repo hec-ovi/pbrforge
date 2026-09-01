@@ -3,9 +3,15 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { MaterialsError } from '../db/errors.js';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
+/** The box folder: templates, prompts and provided source images are all named relative to it. */
+export const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
-type Graph = Record<string, { class_type: string; inputs: Record<string, unknown> }>;
+export type Graph = Record<string, { class_type: string; inputs: Record<string, unknown> }>;
+
+/** A workflow from templates/, in ComfyUI API format, ready to have its params injected. */
+export function loadGraph(name: string): Graph {
+  return JSON.parse(readFileSync(join(root, 'templates', `${name}.json`), 'utf8')) as Graph;
+}
 
 // Injection points in templates/sdxl-tile.json, by node id.
 const N_POSITIVE = '3';
@@ -25,7 +31,7 @@ export class Template {
   private graph: Graph;
 
   constructor(name = 'sdxl-tile') {
-    this.graph = JSON.parse(readFileSync(join(root, 'templates', `${name}.json`), 'utf8'));
+    this.graph = loadGraph(name);
   }
 
   build(job: TileJob): Graph {
