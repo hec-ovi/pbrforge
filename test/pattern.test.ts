@@ -1,6 +1,7 @@
 import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { Database } from '../src/db/Database.js';
@@ -209,5 +210,27 @@ describe('pattern class', () => {
     };
     expect(await warmth(entry.variants[0].maps.basecolor)).toBeLessThan(5); // the source is near neutral
     expect(await warmth(entry.variants[1].maps.basecolor)).toBeGreaterThan(15);
+  });
+});
+
+describe('shipped flat upholstery', () => {
+  const shipped = new Database(join(dirname(fileURLToPath(import.meta.url)), '..', 'themes'));
+
+  /** How far a normal map leans off flat, on average: what a minified weave aliases on. */
+  async function tilt(file: string): Promise<number> {
+    const normal = await sharp(join(shipped.themeDir('cyberpunk'), file)).raw().toBuffer();
+    const lean = normal.filter((_, i) => i % 3 !== 2).reduce((sum, v) => sum + Math.abs(v - 128), 0);
+    return lean / (normal.length / 3) / 2;
+  }
+
+  it('gives every fabric tier a flat variant whose normal carries nothing that can alias', async () => {
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = shipped.resolve(`cyberpunk/fabric/${tier}`);
+      const flat = entry.variants.find((v) => v.id === 'flat');
+      expect(flat?.class, tier).toBe('pattern');
+      // the contract's bound: under one code value of lean, against the tens a photographed weave carries
+      expect(await tilt(flat!.maps.normal), tier).toBeLessThan(1);
+      expect(entry.variants.filter((v) => v.id !== 'flat').length, tier).toBeGreaterThan(0);
+    }
   });
 });

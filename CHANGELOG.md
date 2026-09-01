@@ -1,5 +1,7 @@
 # Changelog
 
+0.6.4: flat upholstery. Every fabric tier carries a `flat` pattern variant beside its photographed weaves: even cloth, matte, tonal drift at tile scale and a normal map that leans under one code value off flat, so interior parts small enough to minify a weave have nothing left to alias.
+
 0.6.3: plastic kind for street props: a crumpled near-black sheet at 0.25 roughness, the glossy response of a refuse sack, drawn by the pattern class. All four tiers resolve to the one entry. The suite gained the coverage gate behind the contract's guarantee: every kind in the vocabulary resolves at all four tiers of the shipped cyberpunk database.
 
 0.6.2: wet streets. New `puddle` pattern kind: the asphalt of a noise field with standing water pooled over it, the pools flat, dark and mirror-smooth in the roughness map so the renderer's environment reflects off the road. The mask runs on the same wrapping lattice as the aggregate, so it tiles with the road and the same parameters draw the same pools; `wet` moves the waterline. Every road tier carries a `puddle` variant beside street, highway and patched.

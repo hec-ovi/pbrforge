@@ -1,0 +1,114 @@
+[
+  {
+    "key": "cyberpunk/fabric/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "flat upholstery cloth, even tone, no weave to alias",
+    "variantId": "flat",
+    "seed": 4300,
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#56504a",
+        "#625b53"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 1,
+      "depth": 0.06,
+      "sheen": 0.03,
+      "variation": 0.04,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/fabric/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "flat upholstery cloth, even tone, no weave to alias",
+    "variantId": "flat",
+    "seed": 4310,
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#4e565e",
+        "#59616a"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 1,
+      "depth": 0.06,
+      "sheen": 0.03,
+      "variation": 0.04,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/fabric/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "flat upholstery cloth, even tone, no weave to alias",
+    "variantId": "flat",
+    "seed": 4320,
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#4a423b",
+        "#554c44"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 1,
+      "depth": 0.06,
+      "sheen": 0.03,
+      "variation": 0.04,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/fabric/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "flat upholstery cloth, even tone, no weave to alias",
+    "variantId": "flat",
+    "seed": 4330,
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#2f3134",
+        "#383b3f"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 1,
+      "depth": 0.06,
+      "sheen": 0.03,
+      "variation": 0.04,
+      "grain": 0.015
+    }
+  }
+]

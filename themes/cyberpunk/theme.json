@@ -4333,6 +4333,22 @@
             "height": "assets/fabric/poor/2/height.png",
             "ao": "assets/fabric/poor/2/ao.png"
           }
+        },
+        {
+          "id": "flat",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/fabric/poor/flat/basecolor.png",
+            "normal": "assets/fabric/poor/flat/normal.png",
+            "roughness": "assets/fabric/poor/flat/roughness.png",
+            "metallic": "assets/fabric/poor/flat/metallic.png",
+            "height": "assets/fabric/poor/flat/height.png",
+            "ao": "assets/fabric/poor/flat/ao.png"
+          }
         }
       ],
       "finish": {
@@ -4386,6 +4402,22 @@
             "metallic": "assets/fabric/mid/2/metallic.png",
             "height": "assets/fabric/mid/2/height.png",
             "ao": "assets/fabric/mid/2/ao.png"
+          }
+        },
+        {
+          "id": "flat",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/fabric/mid/flat/basecolor.png",
+            "normal": "assets/fabric/mid/flat/normal.png",
+            "roughness": "assets/fabric/mid/flat/roughness.png",
+            "metallic": "assets/fabric/mid/flat/metallic.png",
+            "height": "assets/fabric/mid/flat/height.png",
+            "ao": "assets/fabric/mid/flat/ao.png"
           }
         }
       ],
@@ -4441,6 +4473,22 @@
             "height": "assets/fabric/rich/2/height.png",
             "ao": "assets/fabric/rich/2/ao.png"
           }
+        },
+        {
+          "id": "flat",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/fabric/rich/flat/basecolor.png",
+            "normal": "assets/fabric/rich/flat/normal.png",
+            "roughness": "assets/fabric/rich/flat/roughness.png",
+            "metallic": "assets/fabric/rich/flat/metallic.png",
+            "height": "assets/fabric/rich/flat/height.png",
+            "ao": "assets/fabric/rich/flat/ao.png"
+          }
         }
       ],
       "finish": {
@@ -4494,6 +4542,22 @@
             "metallic": "assets/fabric/high_rich/2/metallic.png",
             "height": "assets/fabric/high_rich/2/height.png",
             "ao": "assets/fabric/high_rich/2/ao.png"
+          }
+        },
+        {
+          "id": "flat",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/fabric/high_rich/flat/basecolor.png",
+            "normal": "assets/fabric/high_rich/flat/normal.png",
+            "roughness": "assets/fabric/high_rich/flat/roughness.png",
+            "metallic": "assets/fabric/high_rich/flat/metallic.png",
+            "height": "assets/fabric/high_rich/flat/height.png",
+            "ao": "assets/fabric/high_rich/flat/ao.png"
           }
         }
       ],
