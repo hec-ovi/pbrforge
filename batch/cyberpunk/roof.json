@@ -50,7 +50,7 @@
   {
     "key": "cyberpunk/roof/high_rich",
     "alignment": "tile",
-    "description": "dark blue monocrystalline solar panel surface seen straight from above, straight rows of square photovoltaic cells, thin silver grid lines",
+    "description": "clean smooth dark grey rooftop surface seen straight from above, even matte finish, faint hairline seams",
     "tiling": {
       "worldSize": [
         3,
