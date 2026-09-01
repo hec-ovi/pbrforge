@@ -14,6 +14,16 @@ Full detail with sources lives in `.research/comfyui-pbr-generation/FINDINGS.md`
 6. Resolution: generate and ship 1024. If 2K is ever needed: wrap-pad, upscale, crop (plain ESRGAN zero-padding breaks seams). Never diffusion-upscale a tile.
 7. Verification on every set (hard requirement): 50 percent offset in x and y must show no seam, plus a 3x3 tiled render check. The tiling transform applies identically to every map of a set; delighting applies to albedo only.
 
+## Generation lessons (validated on hardware)
+
+- Checkpoint: RealVisXL V5.0 (photoreal SDXL fine-tune). Base SDXL over-structures flat material fields into abstract 3D collages; the fine-tune resolves metals, stone, fabric, wood.
+- Describe the surface material, never the building element: "window frame metal" draws frames, "column cladding panels" draws blocks. Real photographic materials only; invented ones (composite cladding, solar-skin) go abstract.
+- Near-uniform surfaces (glass, plain colors) cannot be diffused: CFG forces structure. They use the flat synthesis path (flatColor + seeded wrap noise), no ComfyUI involved.
+- Regular geometry (solar cell grids) comes out warped; prefer concepts without strict regularity.
+- Tile lane prompts: description + tile suffix + material-field block, negative without uniformity or symmetry terms (negating those poisons flat fields). Exact lane: bare description with concrete object anchors (a handle, a kick plate), minimal negative.
+- Composed objects (door, elevator_door) still tend to collage; usable results need anchors and stay on the polish list.
+- Seam gate: wrap-edge mean diff relative to the worst interior column or row, threshold 1.2. Comparing to the global mean false-positives on grid textures (grout on the wrap column).
+
 ## Facts the design leans on
 
 - ComfyUI runs headless; workflows are API-format JSON submitted to POST /prompt, polled on /history, images fetched from /view. Proven local pattern exists (censurado brain client, stdlib only).
