@@ -358,5 +358,121 @@
       "grain": 0.03,
       "variation": 0.14
     }
+  },
+  {
+    "key": "cyberpunk/road/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "wet asphalt with standing puddles",
+    "variantId": "puddle",
+    "seed": 4103,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "puddle",
+      "colors": [
+        "#202225",
+        "#2e3134",
+        "#0d0f12"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "octaves": 3,
+      "wet": 0.42,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
+    }
+  },
+  {
+    "key": "cyberpunk/road/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "wet asphalt with standing puddles",
+    "variantId": "puddle",
+    "seed": 4113,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "puddle",
+      "colors": [
+        "#232527",
+        "#303338",
+        "#0f1114"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "octaves": 3,
+      "wet": 0.36,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
+    }
+  },
+  {
+    "key": "cyberpunk/road/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "wet asphalt with standing puddles",
+    "variantId": "puddle",
+    "seed": 4123,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "puddle",
+      "colors": [
+        "#26282b",
+        "#33363b",
+        "#101317"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "octaves": 3,
+      "wet": 0.3,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
+    }
+  },
+  {
+    "key": "cyberpunk/road/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "wet asphalt with standing puddles",
+    "variantId": "puddle",
+    "seed": 4133,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "puddle",
+      "colors": [
+        "#292c2f",
+        "#36393e",
+        "#121519"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "octaves": 3,
+      "wet": 0.26,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
+    }
   }
 ]

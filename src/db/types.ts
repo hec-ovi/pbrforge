@@ -58,7 +58,15 @@ export interface Screen {
   pitch?: number;
 }
 
-export type PatternKind = 'hexagon' | 'panel-grid' | 'slab' | 'stripe' | 'two-tone' | 'noise' | 'glyph-atlas';
+export type PatternKind =
+  | 'hexagon'
+  | 'panel-grid'
+  | 'slab'
+  | 'stripe'
+  | 'two-tone'
+  | 'noise'
+  | 'puddle'
+  | 'glyph-atlas';
 
 /** A surface stated as parameters instead of photographed: what the pattern class draws. */
 export interface PatternSpec {
@@ -76,6 +84,7 @@ export interface PatternSpec {
   sheen?: number;
   grain?: number;
   octaves?: number;
+  wet?: number;
   bond?: 'stack' | 'running';
   axis?: 'x' | 'y';
   split?: number;

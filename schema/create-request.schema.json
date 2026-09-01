@@ -111,7 +111,7 @@
       "required": ["kind", "colors"],
       "additionalProperties": false,
       "properties": {
-        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "glyph-atlas"] },
+        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "puddle", "glyph-atlas"] },
         "colors": {
           "type": "array",
           "items": { "type": "string", "pattern": "^#[0-9a-f]{6}$" },
@@ -134,6 +134,12 @@
         "sheen": { "type": "number", "minimum": 0, "maximum": 1, "description": "gloss spread from one cell to the next: a printed pattern" },
         "grain": { "type": "number", "minimum": 0, "maximum": 0.2, "description": "fine tonal mottling over everything" },
         "octaves": { "type": "integer", "minimum": 1, "maximum": 4, "description": "octaves of a noise field: one is a plain wall, four is asphalt" },
+        "wet": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "puddle only: how much of the surface stands under water; 0 is a dry road, 0.5 floods about half of it"
+        },
         "bond": { "enum": ["stack", "running"], "description": "running shifts every other row half a cell; needs an even row count" },
         "axis": { "enum": ["x", "y"], "description": "which way stripe bands and the two-tone split run" },
         "split": { "type": "number", "minimum": 0, "maximum": 1, "description": "where the band boundary sits, as a fraction of the tile" }

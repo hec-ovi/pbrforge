@@ -6,6 +6,7 @@ import { HexagonGrid } from './HexagonGrid.js';
 import { NoiseField } from './NoiseField.js';
 import { PanelGrid } from './PanelGrid.js';
 import { Pattern, type PatternParams } from './Pattern.js';
+import { PuddleField } from './PuddleField.js';
 import { SlabTiling } from './SlabTiling.js';
 import { Stripe } from './Stripe.js';
 import { TwoTone } from './TwoTone.js';
@@ -21,13 +22,14 @@ const DEFAULTS = {
   sheen: 0,
   grain: 0.02,
   octaves: 1,
+  wet: 0.35,
   bond: 'stack' as const,
   axis: 'y' as const,
   split: 0.5,
 };
 
 /** Kinds that read as two materials meeting, so they need a second color. */
-const TWO_COLOR: PatternSpec['kind'][] = ['stripe', 'two-tone', 'noise', 'glyph-atlas'];
+const TWO_COLOR: PatternSpec['kind'][] = ['stripe', 'two-tone', 'noise', 'puddle', 'glyph-atlas'];
 
 /**
  * The pattern a spec asks for, with defaults filled in and the cross-field
@@ -63,6 +65,7 @@ export function buildPattern(
     sheen: spec.sheen ?? DEFAULTS.sheen,
     grain: spec.grain ?? DEFAULTS.grain,
     octaves: spec.octaves ?? DEFAULTS.octaves,
+    wet: spec.wet ?? DEFAULTS.wet,
     bond: spec.bond ?? DEFAULTS.bond,
     axis: spec.axis ?? DEFAULTS.axis,
     split: spec.split ?? DEFAULTS.split,
@@ -84,6 +87,8 @@ export function buildPattern(
       return new TwoTone(params);
     case 'noise':
       return new NoiseField(params);
+    case 'puddle':
+      return new PuddleField(params);
     case 'glyph-atlas':
       return new GlyphAtlas(params);
   }

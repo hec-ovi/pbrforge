@@ -23,6 +23,8 @@ export interface PatternParams {
   grain: number;
   /** How many octaves of noise a noise field carries: one is a plain wall, four is asphalt. */
   octaves: number;
+  /** How much of a puddle field stands under water: 0 is a dry road. */
+  wet: number;
   bond: 'stack' | 'running';
   axis: 'x' | 'y';
   /** Where the band boundary sits, as a fraction of the tile. */

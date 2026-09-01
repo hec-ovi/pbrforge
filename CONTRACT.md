@@ -76,11 +76,14 @@ Kinds and the parameters each one reads (full ranges in the request schema):
 | `stripe` | bands across one axis | cells, axis, split, line |
 | `two-tone` | one split across the tile with a trim line | axis, split, line, three colors |
 | `noise` | mottling in one to four octaves: plain wall to asphalt | cells, octaves, depth |
+| `puddle` | a noise field with standing water pooled over it | everything `noise` reads, plus wet, plus a third color for the water |
 | `glyph-atlas` | the letter sheet below: one lit glyph per cell | line (core width), bevel (halo reach), three colors |
+
+Inside a puddle the surface goes flat, dark and mirror-smooth (roughness 0.04): one water level over the asphalt, so the normal map is unbroken there and the renderer's environment lands on the road. `wet` moves the waterline, 0 leaving it dry and 0.5 flooding about half the tile; the mask is two octaves of the same wrapping lattice as the asphalt, so puddles tile with the road they sit in.
 
 Shared over all of them: `colors` (face first), `depth` (relief), `joint` (how much darker and rougher a joint reads), `variation` (tone per cell), `sheen` (gloss per cell), `grain` (fine mottling). `line` and `bevel` are in metres, read against the entry's `tiling.worldSize`; `cells` are whole counts per tile, which is what makes the pattern wrap. On an `exact` entry the sheet stands in for the tile, so those two are fractions of the sheet (of a cell, for `glyph-atlas`).
 
-Cyberpunk pattern library, per tier: plaster (`hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`panel`, one panel per tile so joints land on whole-tile faces, plus `rib` and `block`), ceiling (`panel`, `plain`), sidewalk (`slab`, `bond`, `plate`), road (`street`, `highway`, `patched`), light-fixture (`strip`, `panel`: dark housing, lit diffuser). Variants of one kind are laid out to read apart at a glance: they differ in tone, in cell size and in bond, not in fine detail. wall, concrete and plaster also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
+Cyberpunk pattern library, per tier: plaster (`hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`panel`, one panel per tile so joints land on whole-tile faces, plus `rib` and `block`), ceiling (`panel`, `plain`), sidewalk (`slab`, `bond`, `plate`), road (`street`, `highway`, `patched`, `puddle`), light-fixture (`strip`, `panel`: dark housing, lit diffuser). Variants of one kind are laid out to read apart at a glance: they differ in tone, in cell size and in bond, not in fine detail. wall, concrete and plaster also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
 
 ## Letter atlas
 

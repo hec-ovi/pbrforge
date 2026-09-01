@@ -31,8 +31,20 @@ const kinds: PatternSpec[] = [
   { kind: 'stripe', colors: ['#eef2f2', '#23262a'], cells: [1, 2], split: 0.34 },
   { kind: 'two-tone', colors: ['#2e6b73', '#b9bcbb', '#cfe9ee'], split: 0.42 },
   { kind: 'noise', colors: ['#26282a', '#33363a'], cells: [8, 8], octaves: 4 },
+  { kind: 'puddle', colors: ['#202225', '#2e3134', '#0d0f12'], cells: [8, 8], octaves: 3, wet: 0.42 },
   { kind: 'glyph-atlas', colors: ['#eafcff', '#7fe8ff', '#10161a'], line: 0.045, bevel: 0.05 },
 ];
+
+/** The road the puddle variant is drawn on: dry asphalt is the base, the mask floods part of it. */
+const road: CreateRequest = {
+  key: 'cyberpunk/road/poor',
+  alignment: 'tile',
+  description: 'wet asphalt with standing puddles',
+  tiling: { worldSize: [6, 6] },
+  physical: { roughnessFactor: 0.95, metallicFactor: 0 },
+  resolution: [128, 128],
+  pattern: { kind: 'puddle', colors: ['#202225', '#2e3134', '#0d0f12'], cells: [8, 8], octaves: 3, wet: 0.42 },
+};
 
 describe('pattern class', () => {
   let themesDir: string;
@@ -149,6 +161,26 @@ describe('pattern class', () => {
     };
     expect(await cell(CHARSET.indexOf('A'))).toBeGreaterThan(200); // a lit glyph
     expect(await cell(CHARSET.indexOf(' '))).toBe(0); // the blank cell stays dark
+  });
+
+  it('floods part of a road with mirror-smooth puddles and leaves the rest dry', async () => {
+    const generator = offline(db);
+    const share = async (request: CreateRequest, key: string) => {
+      const entry = await generator.create({ ...request, key });
+      const gloss = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.roughness)).raw().toBuffer();
+      return {
+        mirror: gloss.filter((v) => v / 255 < 0.1).length / gloss.length,
+        dry: gloss.filter((v) => v / 255 > 0.85).length / gloss.length,
+      };
+    };
+
+    const wet = await share(road, 'cyberpunk/road/poor');
+    expect(wet.mirror).toBeGreaterThan(0.1); // water enough to reflect the street back
+    expect(wet.dry).toBeGreaterThan(0.3); // over asphalt that is still asphalt
+
+    // the same road with the mask closed: the puddles are the mask's doing, not the asphalt's
+    const dry = await share({ ...road, pattern: { ...road.pattern!, wet: 0 } }, 'cyberpunk/road/mid');
+    expect(dry.mirror).toBe(0);
   });
 
   it('appends a tint variant of a variant already in the entry', async () => {
