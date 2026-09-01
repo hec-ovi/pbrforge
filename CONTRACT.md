@@ -121,7 +121,7 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 - Resolution is pure and deterministic: same database state, same key, same entry.
 - A key present in the index always has every referenced map file on disk. Variants may point at the same map file (a tint shares the relief it was made from).
 - Every `tile` entry passed the seam check (50 percent offset in x and y, no visible seam) before it was written. Pattern variants are periodic over one tile by construction and pass the same gate.
-- Generation is deterministic per lane: the same pattern parameters, or the same seed and prompt, draw the same maps.
+- Generation is deterministic per lane: the same pattern parameters, the same seed and prompt, or the same provided source file, draw the same maps.
 - All maps of one variant share one resolution and are pixel-aligned with each other.
 - Generation is agentic tooling on top; the database read path works standalone with no ComfyUI and no other layer present.
 
