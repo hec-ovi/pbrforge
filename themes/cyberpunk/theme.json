@@ -4325,6 +4325,194 @@
           }
         }
       ]
+    },
+    "cyberpunk/ad-screen/poor": {
+      "key": "cyberpunk/ad-screen/poor",
+      "alignment": "exact",
+      "aspect": [
+        16,
+        9
+      ],
+      "physical": {
+        "roughnessFactor": 0.2,
+        "metallicFactor": 0,
+        "emissiveStrength": 3
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1344,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/1/basecolor.png",
+            "normal": "assets/ad-screen/poor/1/normal.png",
+            "roughness": "assets/ad-screen/poor/1/roughness.png",
+            "metallic": "assets/ad-screen/poor/1/metallic.png",
+            "height": "assets/ad-screen/poor/1/height.png",
+            "ao": "assets/ad-screen/poor/1/ao.png",
+            "emission": "assets/ad-screen/poor/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1344,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/2/basecolor.png",
+            "normal": "assets/ad-screen/poor/2/normal.png",
+            "roughness": "assets/ad-screen/poor/2/roughness.png",
+            "metallic": "assets/ad-screen/poor/2/metallic.png",
+            "height": "assets/ad-screen/poor/2/height.png",
+            "ao": "assets/ad-screen/poor/2/ao.png",
+            "emission": "assets/ad-screen/poor/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ad-screen/mid": {
+      "key": "cyberpunk/ad-screen/mid",
+      "alignment": "exact",
+      "aspect": [
+        16,
+        9
+      ],
+      "physical": {
+        "roughnessFactor": 0.2,
+        "metallicFactor": 0,
+        "emissiveStrength": 3
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1344,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/mid/1/basecolor.png",
+            "normal": "assets/ad-screen/mid/1/normal.png",
+            "roughness": "assets/ad-screen/mid/1/roughness.png",
+            "metallic": "assets/ad-screen/mid/1/metallic.png",
+            "height": "assets/ad-screen/mid/1/height.png",
+            "ao": "assets/ad-screen/mid/1/ao.png",
+            "emission": "assets/ad-screen/mid/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1344,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/mid/2/basecolor.png",
+            "normal": "assets/ad-screen/mid/2/normal.png",
+            "roughness": "assets/ad-screen/mid/2/roughness.png",
+            "metallic": "assets/ad-screen/mid/2/metallic.png",
+            "height": "assets/ad-screen/mid/2/height.png",
+            "ao": "assets/ad-screen/mid/2/ao.png",
+            "emission": "assets/ad-screen/mid/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ad-screen/rich": {
+      "key": "cyberpunk/ad-screen/rich",
+      "alignment": "exact",
+      "aspect": [
+        16,
+        9
+      ],
+      "physical": {
+        "roughnessFactor": 0.2,
+        "metallicFactor": 0,
+        "emissiveStrength": 3
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1344,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/rich/1/basecolor.png",
+            "normal": "assets/ad-screen/rich/1/normal.png",
+            "roughness": "assets/ad-screen/rich/1/roughness.png",
+            "metallic": "assets/ad-screen/rich/1/metallic.png",
+            "height": "assets/ad-screen/rich/1/height.png",
+            "ao": "assets/ad-screen/rich/1/ao.png",
+            "emission": "assets/ad-screen/rich/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1344,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/rich/2/basecolor.png",
+            "normal": "assets/ad-screen/rich/2/normal.png",
+            "roughness": "assets/ad-screen/rich/2/roughness.png",
+            "metallic": "assets/ad-screen/rich/2/metallic.png",
+            "height": "assets/ad-screen/rich/2/height.png",
+            "ao": "assets/ad-screen/rich/2/ao.png",
+            "emission": "assets/ad-screen/rich/2/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ad-screen/high_rich": {
+      "key": "cyberpunk/ad-screen/high_rich",
+      "alignment": "exact",
+      "aspect": [
+        16,
+        9
+      ],
+      "physical": {
+        "roughnessFactor": 0.2,
+        "metallicFactor": 0,
+        "emissiveStrength": 3
+      },
+      "variants": [
+        {
+          "id": "1",
+          "resolution": [
+            1344,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/1/normal.png",
+            "roughness": "assets/ad-screen/high_rich/1/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/1/metallic.png",
+            "height": "assets/ad-screen/high_rich/1/height.png",
+            "ao": "assets/ad-screen/high_rich/1/ao.png",
+            "emission": "assets/ad-screen/high_rich/1/emission.png"
+          }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            1344,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/2/normal.png",
+            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
+            "height": "assets/ad-screen/high_rich/2/height.png",
+            "ao": "assets/ad-screen/high_rich/2/ao.png",
+            "emission": "assets/ad-screen/high_rich/2/emission.png"
+          }
+        }
+      ]
     }
   }
 }
