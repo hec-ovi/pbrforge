@@ -5,7 +5,7 @@
       "cyberpunk/door-glass/poor"
     ],
     "alignment": "tile",
-    "description": "flat glass surface, synthesized",
+    "description": "residential window pane, worn single glazing, synthesized",
     "tiling": {
       "worldSize": [
         1.5,
@@ -14,18 +14,18 @@
     },
     "physical": {
       "breakable": true,
-      "roughnessFactor": 0.35,
+      "roughnessFactor": 0.15,
       "metallicFactor": 0,
       "transmission": 0.6,
       "ior": 1.5,
-      "tint": "#9aa39e"
+      "tint": "#b4b8b4"
     },
     "finish": {
       "grain": 0.25,
       "relief": 2
     },
     "variants": 2,
-    "flatColor": "#d4dad2",
+    "flatColor": "#cbd0cb",
     "flatNoise": 0.08
   },
   {
@@ -34,7 +34,7 @@
       "cyberpunk/door-glass/mid"
     ],
     "alignment": "tile",
-    "description": "flat glass surface, synthesized",
+    "description": "residential window pane, maintained glazing, synthesized",
     "tiling": {
       "worldSize": [
         1.5,
@@ -43,18 +43,18 @@
     },
     "physical": {
       "breakable": true,
-      "roughnessFactor": 0.2,
+      "roughnessFactor": 0.1,
       "metallicFactor": 0,
-      "transmission": 0.8,
+      "transmission": 0.52,
       "ior": 1.5,
-      "tint": "#b8c4c9"
+      "tint": "#bcc4c2"
     },
     "finish": {
       "grain": 0.2,
       "relief": 2
     },
     "variants": 2,
-    "flatColor": "#dde3e4",
+    "flatColor": "#d4dbd9",
     "flatNoise": 0.05
   },
   {
@@ -63,7 +63,7 @@
       "cyberpunk/door-glass/rich"
     ],
     "alignment": "tile",
-    "description": "flat glass surface, synthesized",
+    "description": "office curtain wall glazing, blue-green coating, synthesized",
     "tiling": {
       "worldSize": [
         1.5,
@@ -72,18 +72,18 @@
     },
     "physical": {
       "breakable": true,
-      "roughnessFactor": 0.08,
+      "roughnessFactor": 0.06,
       "metallicFactor": 0,
-      "transmission": 0.9,
+      "transmission": 0.42,
       "ior": 1.5,
-      "tint": "#a9c9d8"
+      "tint": "#93b4ac"
     },
     "finish": {
       "grain": 0.15,
       "relief": 1.6
     },
     "variants": 2,
-    "flatColor": "#e9f1f2",
+    "flatColor": "#d8e3e0",
     "flatNoise": 0.03
   },
   {
@@ -92,7 +92,7 @@
       "cyberpunk/door-glass/high_rich"
     ],
     "alignment": "tile",
-    "description": "flat glass surface, synthesized",
+    "description": "corporate curtain wall glazing, deep blue-green coating, synthesized",
     "tiling": {
       "worldSize": [
         1.5,
@@ -103,16 +103,16 @@
       "breakable": true,
       "roughnessFactor": 0.04,
       "metallicFactor": 0,
-      "transmission": 0.95,
+      "transmission": 0.35,
       "ior": 1.5,
-      "tint": "#8fb8d0"
+      "tint": "#7fa5a6"
     },
     "finish": {
       "grain": 0.1,
       "relief": 1.2
     },
     "variants": 2,
-    "flatColor": "#eef4f8",
+    "flatColor": "#dae6e6",
     "flatNoise": 0.02
   }
 ]

@@ -532,6 +532,9 @@
     },
     "cyberpunk/window-glass/poor": {
       "key": "cyberpunk/window-glass/poor",
+      "aliases": [
+        "cyberpunk/door-glass/poor"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -541,11 +544,19 @@
       },
       "physical": {
         "breakable": true,
-        "roughnessFactor": 0.35,
+        "roughnessFactor": 0.15,
         "metallicFactor": 0,
         "transmission": 0.6,
         "ior": 1.5,
-        "tint": "#9aa39e"
+        "tint": "#b4b8b4"
+      },
+      "finish": {
+        "roughness": [
+          0.1,
+          0.2
+        ],
+        "grain": 0.25,
+        "relief": 2
       },
       "variants": [
         {
@@ -578,21 +589,13 @@
             "ao": "assets/window-glass/poor/2/ao.png"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/door-glass/poor"
-      ],
-      "finish": {
-        "roughness": [
-          0.3,
-          0.4
-        ],
-        "grain": 0.25,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/window-glass/mid": {
       "key": "cyberpunk/window-glass/mid",
+      "aliases": [
+        "cyberpunk/door-glass/mid"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -602,11 +605,19 @@
       },
       "physical": {
         "breakable": true,
-        "roughnessFactor": 0.2,
+        "roughnessFactor": 0.1,
         "metallicFactor": 0,
-        "transmission": 0.8,
+        "transmission": 0.52,
         "ior": 1.5,
-        "tint": "#b8c4c9"
+        "tint": "#bcc4c2"
+      },
+      "finish": {
+        "roughness": [
+          0.05,
+          0.15
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
@@ -639,21 +650,13 @@
             "ao": "assets/window-glass/mid/2/ao.png"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/door-glass/mid"
-      ],
-      "finish": {
-        "roughness": [
-          0.15,
-          0.25
-        ],
-        "grain": 0.2,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/window-glass/rich": {
       "key": "cyberpunk/window-glass/rich",
+      "aliases": [
+        "cyberpunk/door-glass/rich"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -663,11 +666,19 @@
       },
       "physical": {
         "breakable": true,
-        "roughnessFactor": 0.08,
+        "roughnessFactor": 0.06,
         "metallicFactor": 0,
-        "transmission": 0.9,
+        "transmission": 0.42,
         "ior": 1.5,
-        "tint": "#a9c9d8"
+        "tint": "#93b4ac"
+      },
+      "finish": {
+        "roughness": [
+          0.01,
+          0.11
+        ],
+        "grain": 0.15,
+        "relief": 1.6
       },
       "variants": [
         {
@@ -700,21 +711,13 @@
             "ao": "assets/window-glass/rich/2/ao.png"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/door-glass/rich"
-      ],
-      "finish": {
-        "roughness": [
-          0.03,
-          0.13
-        ],
-        "grain": 0.15,
-        "relief": 1.6
-      }
+      ]
     },
     "cyberpunk/window-glass/high_rich": {
       "key": "cyberpunk/window-glass/high_rich",
+      "aliases": [
+        "cyberpunk/door-glass/high_rich"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -726,9 +729,17 @@
         "breakable": true,
         "roughnessFactor": 0.04,
         "metallicFactor": 0,
-        "transmission": 0.95,
+        "transmission": 0.35,
         "ior": 1.5,
-        "tint": "#8fb8d0"
+        "tint": "#7fa5a6"
+      },
+      "finish": {
+        "roughness": [
+          0,
+          0.09
+        ],
+        "grain": 0.1,
+        "relief": 1.2
       },
       "variants": [
         {
@@ -761,18 +772,7 @@
             "ao": "assets/window-glass/high_rich/2/ao.png"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/door-glass/high_rich"
-      ],
-      "finish": {
-        "roughness": [
-          0,
-          0.09
-        ],
-        "grain": 0.1,
-        "relief": 1.2
-      }
+      ]
     },
     "cyberpunk/window-frame/poor": {
       "key": "cyberpunk/window-frame/poor",

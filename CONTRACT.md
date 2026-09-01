@@ -45,6 +45,23 @@ Dry matte is the default across the library: moisture staining and heavy grime l
 
 Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2, 0.15, 0.1 and relief 2, 2, 1.6, 1.2. A drawn pattern states its own gloss instead: it sits at the entry's roughness factor, plus the joint bump (`joint` times 0.4) on the joint lines and the `sheen` spread from cell to cell. Asphalt is a three-octave noise field, so its finest aggregate sits around five centimetres of road and not on one pixel.
 
+## Window glass
+
+A pane at full transmission is an open hole: it passes everything the renderer puts behind it and keeps none of the reflection in front of it, so a facade reads as empty frames. A window keeps part of the light instead, which is what lets the environment read on the glass. Reflection itself comes from the renderer's environment; the entry's job is to leave room for it.
+
+`transmission` is the glTF `KHR_materials_transmission` factor and `tint` is the glass's own colour. Roughness stays low, so the roughness band is the factor plus or minus 0.05, the default of the table above.
+
+The tier is the building. poor and mid are residential windows: neutral glass, worn at the bottom of the range. rich and high_rich are office curtain wall: blue-green coated, the lowest transmission in the family, so reflection dominates.
+
+| kind | tier | transmission | tint | roughness factor |
+| --- | --- | --- | --- | --- |
+| window-glass (`door-glass` aliases to it) | poor | 0.60 | `#b4b8b4` neutral | 0.15 |
+| | mid | 0.52 | `#bcc4c2` neutral | 0.10 |
+| | rich | 0.42 | `#93b4ac` blue-green | 0.06 |
+| | high_rich | 0.35 | `#7fa5a6` blue-green | 0.04 |
+
+The interior `glass` kind is clear glazing for partitions and carries its own values.
+
 ## Pattern class
 
 A variant whose maps are drawn from parameters instead of photographed: `pattern` in the create request states the shapes and colors, and the box renders basecolor, relief and gloss in code, anti-aliased and periodic over one tile by construction. No diffusion, no ComfyUI, small files, and crisp at any distance. It resolves under the same key and the same MaterialEntry shape as everything else, so a consumer never asks which class a variant is: it reads the maps.
