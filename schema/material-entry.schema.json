@@ -67,6 +67,11 @@
         "additionalProperties": false,
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+          "class": {
+            "enum": ["image", "pattern"],
+            "default": "image",
+            "description": "how the maps were made; consumers read them the same way either way"
+          },
           "resolution": {
             "type": "array",
             "items": { "type": "integer", "minimum": 64 },

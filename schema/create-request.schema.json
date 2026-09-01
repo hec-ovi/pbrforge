@@ -77,6 +77,52 @@
       "default": 0.04,
       "description": "noise amplitude for flatColor synthesis"
     },
+    "pattern": {
+      "type": "object",
+      "description": "procedural lane: the surface is drawn from these parameters instead of photographed, crisp and tileable by construction",
+      "required": ["kind", "colors"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "glyph-atlas"] },
+        "colors": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^#[0-9a-f]{6}$" },
+          "minItems": 1,
+          "maxItems": 3,
+          "description": "face color first, then the band color and the trim color for the kinds that take them"
+        },
+        "cells": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1 },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "cells across one tile; for hexagon, columns and staggered row pairs (x about 1.73 times y keeps them regular)"
+        },
+        "line": { "type": "number", "minimum": 0, "description": "joint or edge line width, in metres" },
+        "bevel": { "type": "number", "minimum": 0, "description": "chamfer width beside a joint, in metres" },
+        "depth": { "type": "number", "minimum": 0, "maximum": 1, "description": "relief between a face and a joint" },
+        "joint": { "type": "number", "minimum": 0, "maximum": 1, "description": "how much darker and rougher a joint reads" },
+        "variation": { "type": "number", "minimum": 0, "maximum": 1, "description": "tone spread from one cell to the next" },
+        "sheen": { "type": "number", "minimum": 0, "maximum": 1, "description": "gloss spread from one cell to the next: a printed pattern" },
+        "grain": { "type": "number", "minimum": 0, "maximum": 0.2, "description": "fine tonal mottling over everything" },
+        "octaves": { "type": "integer", "minimum": 1, "maximum": 4, "description": "octaves of a noise field: one is a plain wall, four is asphalt" },
+        "bond": { "enum": ["stack", "running"], "description": "running shifts every other row half a cell; needs an even row count" },
+        "axis": { "enum": ["x", "y"], "description": "which way stripe bands and the two-tone split run" },
+        "split": { "type": "number", "minimum": 0, "maximum": 1, "description": "where the band boundary sits, as a fraction of the tile" }
+      }
+    },
+    "recolor": {
+      "type": "object",
+      "description": "tint lane: another variant of the entry this one is appended to, moved in color",
+      "required": ["from", "color"],
+      "additionalProperties": false,
+      "properties": {
+        "from": { "type": "string", "pattern": "^[a-z0-9_-]+$", "description": "the variant id the tint is made from" },
+        "color": { "type": "string", "pattern": "^#[0-9a-f]{6}$", "description": "the color the source is pulled toward" },
+        "strength": { "type": "number", "minimum": 0, "maximum": 1, "description": "how far it is pulled" },
+        "value": { "type": "number", "minimum": 0, "maximum": 4, "description": "brightness multiplier" }
+      }
+    },
     "emission": {
       "enum": ["none", "luminance", "color-mask", "image"],
       "default": "none",
@@ -104,6 +150,16 @@
       }
     },
     "variants": { "type": "integer", "minimum": 1, "maximum": 8, "default": 1 },
+    "variantId": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$",
+      "description": "id and asset folder for the variant; default: its position in the entry"
+    },
+    "append": {
+      "type": "boolean",
+      "default": false,
+      "description": "add the variant to the existing entry, which keeps its alignment, tiling and physical, instead of writing a new entry"
+    },
     "seed": { "type": "integer", "minimum": 0, "description": "default: derived from the description" },
     "resolution": {
       "type": "array",

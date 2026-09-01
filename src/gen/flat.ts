@@ -1,3 +1,4 @@
+import { parseHex } from './color.js';
 import type { Rgb } from './pixels.js';
 import { wrapBlur } from './pixels.js';
 
@@ -7,9 +8,7 @@ import { wrapBlur } from './pixels.js';
  * noise so the derived maps get believable micro-detail. Deterministic.
  */
 export function synthesizeFlat(hex: string, seed: number, width: number, height: number, amplitude = 0.04): Rgb {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
+  const { r, g, b } = parseHex(hex);
 
   let state = (seed >>> 0) || 1;
   const rand = () => {
@@ -23,7 +22,7 @@ export function synthesizeFlat(hex: string, seed: number, width: number, height:
 
   const data = new Uint8Array(width * height * 3);
   for (let i = 0; i < raw.length; i++) {
-    const n = 1 + ((fine.data[i] - 0.5) * 0.6 + (coarse.data[i] - 0.5)) * 2 * amplitude;
+    const n = 255 * (1 + ((fine.data[i] - 0.5) * 0.6 + (coarse.data[i] - 0.5)) * 2 * amplitude);
     data[i * 3] = Math.max(0, Math.min(255, Math.round(r * n)));
     data[i * 3 + 1] = Math.max(0, Math.min(255, Math.round(g * n)));
     data[i * 3 + 2] = Math.max(0, Math.min(255, Math.round(b * n)));
