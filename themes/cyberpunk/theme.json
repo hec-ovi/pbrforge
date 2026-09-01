@@ -596,6 +596,21 @@
             "height": "assets/door/poor/1/height.png",
             "ao": "assets/door/poor/1/ao.png"
           }
+        },
+        {
+          "id": "2",
+          "resolution": [
+            832,
+            1216
+          ],
+          "maps": {
+            "basecolor": "assets/door/poor/2/basecolor.png",
+            "normal": "assets/door/poor/2/normal.png",
+            "roughness": "assets/door/poor/2/roughness.png",
+            "metallic": "assets/door/poor/2/metallic.png",
+            "height": "assets/door/poor/2/height.png",
+            "ao": "assets/door/poor/2/ao.png"
+          }
         }
       ]
     },
@@ -614,8 +629,8 @@
         {
           "id": "1",
           "resolution": [
-            512,
-            1024
+            832,
+            1216
           ],
           "maps": {
             "basecolor": "assets/door/mid/1/basecolor.png",
@@ -629,8 +644,8 @@
         {
           "id": "2",
           "resolution": [
-            512,
-            1024
+            832,
+            1216
           ],
           "maps": {
             "basecolor": "assets/door/mid/2/basecolor.png",
@@ -658,8 +673,8 @@
         {
           "id": "1",
           "resolution": [
-            512,
-            1024
+            832,
+            1216
           ],
           "maps": {
             "basecolor": "assets/door/rich/1/basecolor.png",
@@ -673,8 +688,8 @@
         {
           "id": "2",
           "resolution": [
-            512,
-            1024
+            832,
+            1216
           ],
           "maps": {
             "basecolor": "assets/door/rich/2/basecolor.png",
@@ -702,8 +717,8 @@
         {
           "id": "1",
           "resolution": [
-            512,
-            1024
+            832,
+            1216
           ],
           "maps": {
             "basecolor": "assets/door/high_rich/1/basecolor.png",
@@ -717,8 +732,8 @@
         {
           "id": "2",
           "resolution": [
-            512,
-            1024
+            832,
+            1216
           ],
           "maps": {
             "basecolor": "assets/door/high_rich/2/basecolor.png",
