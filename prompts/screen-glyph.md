@@ -1,0 +1,1 @@
+dense abstract pattern of circuit traces and invented glyphs, thin bright strokes on solid black, flat graphic filling the whole frame edge to edge, even density corner to corner, straight on, crisp thin lines

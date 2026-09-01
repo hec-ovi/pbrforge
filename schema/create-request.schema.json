@@ -21,6 +21,16 @@
       "minLength": 3,
       "description": "what the surface is, in plain words; the template turns it into the full prompt"
     },
+    "brandName": {
+      "type": "string",
+      "minLength": 1,
+      "description": "business the advertisement is for; never enters the diffusion prompt, it is stroked into the emission map afterwards, so the named world can rebrand a screen without a new render"
+    },
+    "businessKind": {
+      "type": "string",
+      "minLength": 1,
+      "description": "what that business sells, in plain words (noodle bar, pawn shop, parfumery); this one does steer the artwork"
+    },
     "tiling": {
       "type": "object",
       "required": ["worldSize"],
@@ -68,9 +78,30 @@
       "description": "noise amplitude for flatColor synthesis"
     },
     "emission": {
-      "enum": ["none", "luminance", "color-mask"],
+      "enum": ["none", "luminance", "color-mask", "image"],
       "default": "none",
-      "description": "how the emission map is derived from the base color"
+      "description": "how the emission map is made: derived from the base color, or `image` for a screen, where ComfyUI paints the artwork straight into the emission map and flatColor becomes the dark display glass"
+    },
+    "screens": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "description": "screen lane only: one display per variant, in order; its length sets the variant count",
+      "items": {
+        "type": "object",
+        "required": ["kind", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": ["led-dot", "scanline-billboard", "glyph-panel"],
+            "description": "led-dot and scanline-billboard show photographic ad artwork through their pixel structure; glyph-panel is an abstract glowing panel"
+          },
+          "description": { "type": "string", "minLength": 3, "description": "the advertisement itself, as flat brandless artwork" },
+          "brandName": { "type": "string", "minLength": 1, "description": "overrides the request brandName for this screen" },
+          "businessKind": { "type": "string", "minLength": 1, "description": "overrides the request businessKind for this screen" },
+          "pitch": { "type": "integer", "minimum": 2, "description": "pixels per LED cell or scan band; default: width/160" }
+        }
+      }
     },
     "variants": { "type": "integer", "minimum": 1, "maximum": 8, "default": 1 },
     "seed": { "type": "integer", "minimum": 0, "description": "default: derived from the description" },
@@ -82,5 +113,10 @@
       "default": [1024, 1024]
     },
     "overwrite": { "type": "boolean", "default": false }
-  }
+  },
+  "if": {
+    "properties": { "emission": { "const": "image" } },
+    "required": ["emission"]
+  },
+  "then": { "required": ["flatColor", "screens"] }
 }

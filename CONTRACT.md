@@ -17,6 +17,8 @@ Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/
 - `list(filter?: {theme?, kind?, tier?}): string[]` returns matching keys, sorted, deterministic.
 - `create(request: CreateRequest): MaterialEntry` generates a full set, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json). Basecolor comes from ComfyUI, or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box.
 
+Screens (`emission: "image"`) turn that around: the basecolor is flat dark display glass and the picture lives in the emission map. `screens` lists one display per variant and sets the variant count. ComfyUI paints each advertisement as flat brandless artwork; the box makes it a screen: the pixel structure of its `kind` (`led-dot` dot lattice, `scanline-billboard` scan bands, `glyph-panel` abstract with no lattice), colour fringing, blown-out hotspots, and the `brandName` wordmark stroked in from a built-in alphabet. `brandName` never enters the diffusion prompt, so a screen rebrands without a new render; `businessKind` does steer the artwork. Both take a per-screen override.
+
 CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable).
 
 ## Out
@@ -28,7 +30,7 @@ Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](sc
 Conventions (fixed, not per entry):
 - Metallic-roughness workflow. basecolor and emission are sRGB; normal, roughness, metallic, height, ao are linear. Normals are OpenGL-style, +Y up.
 - Tiled maps are seamless at exact resolution, verified; never stretched, never cut mid-feature.
-- `exact` entries (screens, video ads, image ads) are 1:1 UV placements: no tiling config, aspect ratio instead.
+- `exact` entries (screens, video ads, image ads) are 1:1 UV placements: no tiling config, aspect ratio instead, and no seam gate. Screen entries carry flat normal, height and ao: a display has no relief.
 - Glass semantics follow glTF `KHR_materials_transmission` (+ `KHR_materials_emissive_strength` for emissives).
 
 ## Errors

@@ -1,0 +1,1 @@
+photograph, person, face, product, landscape, building, street, perspective, tilted, glow, bloom, lens flare, depth of field, blur, vignette, border, frame, margin, watermark, empty areas, large blank background, words, headline, paragraphs of text, 3d render, cgi

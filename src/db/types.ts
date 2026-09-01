@@ -32,17 +32,29 @@ export interface ThemeIndex {
   entries: Record<string, MaterialEntry>;
 }
 
+/** One screen variant: what the advertisement shows and which display it is shown on. */
+export interface Screen {
+  kind: 'led-dot' | 'scanline-billboard' | 'glyph-panel';
+  description: string;
+  brandName?: string;
+  businessKind?: string;
+  pitch?: number;
+}
+
 export interface CreateRequest {
   key: string;
   aliases?: string[];
   alignment: 'tile' | 'exact';
   description: string;
+  brandName?: string;
+  businessKind?: string;
   tiling?: { worldSize: [number, number] };
   aspect?: [number, number];
   physical?: Physical;
   flatColor?: string;
   flatNoise?: number;
-  emission?: 'none' | 'luminance' | 'color-mask';
+  emission?: 'none' | 'luminance' | 'color-mask' | 'image';
+  screens?: Screen[];
   variants?: number;
   seed?: number;
   resolution?: [number, number];

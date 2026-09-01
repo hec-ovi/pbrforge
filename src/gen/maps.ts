@@ -1,6 +1,8 @@
 import type { Physical } from '../db/types.js';
 import { type Gray, type Rgb, luminance, wrapBlur, wrapSobel } from './pixels.js';
 
+type Size = { width: number; height: number };
+
 /**
  * Deterministic derivation of the non-color maps from a seamless basecolor.
  * v1 estimator lane: procedural, wrap-aware, standalone. The neural lane
@@ -42,9 +44,24 @@ export function deriveRoughness(height: Gray, physical: Physical): Gray {
 }
 
 /** Metallic: flat fill from the factor; per-pixel variation comes with the neural lane. */
-export function deriveMetallic(size: { width: number; height: number }, physical: Physical): Gray {
-  const value = physical.metallicFactor ?? 0;
+export function deriveMetallic(size: Size, physical: Physical): Gray {
+  return constantGray(size, physical.metallicFactor ?? 0);
+}
+
+/** Single-channel constant fill (a factor with no per-pixel variation). */
+export function constantGray(size: Size, value: number): Gray {
   return { data: new Float32Array(size.width * size.height).fill(value), width: size.width, height: size.height };
+}
+
+/** Tangent-space normal with no relief: every texel points straight out. Screens are flat glass. */
+export function flatNormal(size: Size): Rgb {
+  const data = new Uint8Array(size.width * size.height * 3);
+  for (let i = 0; i < size.width * size.height; i++) {
+    data[i * 3] = 128;
+    data[i * 3 + 1] = 128;
+    data[i * 3 + 2] = 255;
+  }
+  return { data, width: size.width, height: size.height };
 }
 
 /** AO: occlusion where height sits below its local average. */

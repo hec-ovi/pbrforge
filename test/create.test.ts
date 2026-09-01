@@ -91,6 +91,52 @@ describe('create contract', () => {
     await expect(offline.create(request)).rejects.toMatchObject({ code: 'E_COMFY_UNAVAILABLE' });
   });
 
+  it('shows the ad through the display structure and leaves the screen surface flat', async () => {
+    const artwork = await tileablePng(64);
+    const graphs: Record<string, { inputs: Record<string, unknown> }>[] = [];
+    const comfy = {
+      ready: async () => true,
+      render: async (graph: Record<string, { inputs: Record<string, unknown> }>) => {
+        graphs.push(graph);
+        return artwork;
+      },
+    } as unknown as ComfyClient;
+
+    const entry = await new Generator(db, comfy).create({
+      key: 'cyberpunk/ad-screen/poor',
+      alignment: 'exact',
+      description: 'district advertisement',
+      brandName: 'NOODLE-9',
+      businessKind: 'noodle bar',
+      aspect: [16, 9],
+      resolution: [64, 64],
+      physical: { roughnessFactor: 0.1, metallicFactor: 0, emissiveStrength: 6 },
+      emission: 'image',
+      flatColor: '#08080a',
+      screens: [
+        { kind: 'led-dot', pitch: 8, description: 'a man eating noodles from a cup' },
+        { kind: 'glyph-panel', description: 'cyan circuit glyphs' },
+      ],
+    });
+    const read = (variant: number, name: keyof (typeof entry.variants)[0]['maps']) =>
+      sharp(join(themesDir, 'cyberpunk', entry.variants[variant].maps[name]!)).raw().toBuffer();
+
+    expect(entry.variants).toHaveLength(2); // screens set the variant count
+    expect(graphs[0]['3'].inputs.text).toContain('a noodle bar'); // the business steers the artwork
+    expect(graphs[0]['3'].inputs.text).not.toContain('NOODLE-9'); // the brand never enters the prompt
+
+    const led = await read(0, 'emission');
+    expect(Math.min(...led)).toBeLessThan(20); // dark gaps between the lit dots
+    expect(Math.max(...led)).toBeGreaterThan(90); // the dots carry the ad
+    // glyph panel: no lattice, but the wordmark is stroked in far brighter than the artwork
+    expect(Math.max(...(await read(1, 'emission')))).toBeGreaterThan(200);
+
+    const base = await read(0, 'basecolor');
+    expect(Math.max(...base)).toBeLessThan(40); // near-black glass, not the ad
+    expect(new Set(base).size).toBeGreaterThan(1); // carrying the faint dot structure
+    expect([...new Set(await read(0, 'normal'))].sort()).toEqual([128, 255]); // no relief
+  });
+
   it('synthesizes a flatColor set without ComfyUI and it passes the seam gate', async () => {
     const offline = new Generator(db, new ComfyClient('http://127.0.0.1:9', 1000));
     const entry = await offline.create({

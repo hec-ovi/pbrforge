@@ -4334,16 +4334,16 @@
         9
       ],
       "physical": {
-        "roughnessFactor": 0.2,
+        "roughnessFactor": 0.12,
         "metallicFactor": 0,
-        "emissiveStrength": 3
+        "emissiveStrength": 6
       },
       "variants": [
         {
           "id": "1",
           "resolution": [
-            1344,
-            768
+            1280,
+            720
           ],
           "maps": {
             "basecolor": "assets/ad-screen/poor/1/basecolor.png",
@@ -4358,8 +4358,8 @@
         {
           "id": "2",
           "resolution": [
-            1344,
-            768
+            1280,
+            720
           ],
           "maps": {
             "basecolor": "assets/ad-screen/poor/2/basecolor.png",
@@ -4369,6 +4369,22 @@
             "height": "assets/ad-screen/poor/2/height.png",
             "ao": "assets/ad-screen/poor/2/ao.png",
             "emission": "assets/ad-screen/poor/2/emission.png"
+          }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
+            "normal": "assets/ad-screen/poor/3/normal.png",
+            "roughness": "assets/ad-screen/poor/3/roughness.png",
+            "metallic": "assets/ad-screen/poor/3/metallic.png",
+            "height": "assets/ad-screen/poor/3/height.png",
+            "ao": "assets/ad-screen/poor/3/ao.png",
+            "emission": "assets/ad-screen/poor/3/emission.png"
           }
         }
       ]
@@ -4381,16 +4397,16 @@
         9
       ],
       "physical": {
-        "roughnessFactor": 0.2,
+        "roughnessFactor": 0.09,
         "metallicFactor": 0,
-        "emissiveStrength": 3
+        "emissiveStrength": 7
       },
       "variants": [
         {
           "id": "1",
           "resolution": [
-            1344,
-            768
+            1280,
+            720
           ],
           "maps": {
             "basecolor": "assets/ad-screen/mid/1/basecolor.png",
@@ -4405,8 +4421,8 @@
         {
           "id": "2",
           "resolution": [
-            1344,
-            768
+            1280,
+            720
           ],
           "maps": {
             "basecolor": "assets/ad-screen/mid/2/basecolor.png",
@@ -4416,6 +4432,22 @@
             "height": "assets/ad-screen/mid/2/height.png",
             "ao": "assets/ad-screen/mid/2/ao.png",
             "emission": "assets/ad-screen/mid/2/emission.png"
+          }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/mid/3/basecolor.png",
+            "normal": "assets/ad-screen/mid/3/normal.png",
+            "roughness": "assets/ad-screen/mid/3/roughness.png",
+            "metallic": "assets/ad-screen/mid/3/metallic.png",
+            "height": "assets/ad-screen/mid/3/height.png",
+            "ao": "assets/ad-screen/mid/3/ao.png",
+            "emission": "assets/ad-screen/mid/3/emission.png"
           }
         }
       ]
@@ -4428,16 +4460,16 @@
         9
       ],
       "physical": {
-        "roughnessFactor": 0.2,
+        "roughnessFactor": 0.06,
         "metallicFactor": 0,
-        "emissiveStrength": 3
+        "emissiveStrength": 8
       },
       "variants": [
         {
           "id": "1",
           "resolution": [
-            1344,
-            768
+            1280,
+            720
           ],
           "maps": {
             "basecolor": "assets/ad-screen/rich/1/basecolor.png",
@@ -4452,8 +4484,8 @@
         {
           "id": "2",
           "resolution": [
-            1344,
-            768
+            1280,
+            720
           ],
           "maps": {
             "basecolor": "assets/ad-screen/rich/2/basecolor.png",
@@ -4463,6 +4495,22 @@
             "height": "assets/ad-screen/rich/2/height.png",
             "ao": "assets/ad-screen/rich/2/ao.png",
             "emission": "assets/ad-screen/rich/2/emission.png"
+          }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/rich/3/basecolor.png",
+            "normal": "assets/ad-screen/rich/3/normal.png",
+            "roughness": "assets/ad-screen/rich/3/roughness.png",
+            "metallic": "assets/ad-screen/rich/3/metallic.png",
+            "height": "assets/ad-screen/rich/3/height.png",
+            "ao": "assets/ad-screen/rich/3/ao.png",
+            "emission": "assets/ad-screen/rich/3/emission.png"
           }
         }
       ]
@@ -4475,16 +4523,16 @@
         9
       ],
       "physical": {
-        "roughnessFactor": 0.2,
+        "roughnessFactor": 0.04,
         "metallicFactor": 0,
-        "emissiveStrength": 3
+        "emissiveStrength": 10
       },
       "variants": [
         {
           "id": "1",
           "resolution": [
-            1344,
-            768
+            1280,
+            720
           ],
           "maps": {
             "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
@@ -4499,8 +4547,8 @@
         {
           "id": "2",
           "resolution": [
-            1344,
-            768
+            1280,
+            720
           ],
           "maps": {
             "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
@@ -4510,6 +4558,22 @@
             "height": "assets/ad-screen/high_rich/2/height.png",
             "ao": "assets/ad-screen/high_rich/2/ao.png",
             "emission": "assets/ad-screen/high_rich/2/emission.png"
+          }
+        },
+        {
+          "id": "3",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/3/normal.png",
+            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
+            "height": "assets/ad-screen/high_rich/3/height.png",
+            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "emission": "assets/ad-screen/high_rich/3/emission.png"
           }
         }
       ]

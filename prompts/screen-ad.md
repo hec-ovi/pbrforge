@@ -1,0 +1,1 @@
+studio advertising photograph, flat frontal composition, one subject centred and filling the whole frame, plain solid saturated colour backdrop, even flat studio light, sharp focus edge to edge, unbranded plain packaging with no writing on it, clean advertising layout

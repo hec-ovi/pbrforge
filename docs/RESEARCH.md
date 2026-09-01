@@ -22,6 +22,9 @@ Full detail with sources lives in `.research/comfyui-pbr-generation/FINDINGS.md`
 - Regular geometry (solar cell grids) comes out warped; prefer concepts without strict regularity.
 - Tile lane prompts: description + tile suffix + material-field block, negative without uniformity or symmetry terms (negating those poisons flat fields). Exact lane: bare description with concrete object anchors (a handle, a kick plate), minimal negative.
 - Composed objects (door, elevator_door) still tend to collage; usable results need anchors and stay on the polish list.
+- Ad screens: prompt the advertisement, never the screen. Asking for a glowing neon billboard image gives coloured plastic slabs. The artwork is generated flat (studio light, no glow, no lettering, no perspective, no building) and every display phenomenon is applied procedurally over it: dot lattice or scan bands, per-channel fringing, blown-out hotspots bleeding past the gaps, plus the same lattice faintly imprinted in the near-black basecolor so an unlit screen still reads as one.
+- Ad prompt technique, three compared at one seed: "studio advertising photograph, flat frontal composition, one subject filling the frame, plain solid saturated backdrop" wins. A magazine-page framing brings the page fold, body columns and paper margins; a poster key-visual framing brings white paper and a duplicated product. Negative must carry text, letters, logo (the wordmark is composited later), halftone and dots (the structure is ours), and child/teenager (ad subjects otherwise skew young).
+- Brand names are stroked in from a built-in geometric alphabet, not diffused: SDXL garbles lettering, and a composited wordmark lets one render serve any business name.
 - Seam gate: wrap-edge mean diff relative to the worst interior column or row, threshold 1.2. Comparing to the global mean false-positives on grid textures (grout on the wrap column).
 
 ## Facts the design leans on
