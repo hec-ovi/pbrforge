@@ -81,10 +81,10 @@ export interface PatternSpec {
   split?: number;
 }
 
-/** A tint variant: another variant of the same entry, pulled toward another color. */
+/** A tint variant: another variant of the same entry, repainted. */
 export interface Recolor {
   from: string;
-  /** The color the source is pulled toward. */
+  /** The paint: its hue is taken whole. */
   color: string;
   strength?: number;
   value?: number;

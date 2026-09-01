@@ -27,6 +27,14 @@ Full detail with sources lives in `.research/comfyui-pbr-generation/FINDINGS.md`
 - Brand names are stroked in from a built-in geometric alphabet, not diffused: SDXL garbles lettering, and a composited wordmark lets one render serve any business name.
 - Seam gate: wrap-edge mean diff relative to the worst interior column or row, threshold 1.2. Comparing to the global mean false-positives on grid textures (grout on the wrap column).
 
+## Reading a photograph into maps (2026-09)
+
+- A photographed albedo carries its gloss and grain in every pixel. Maps read straight out of it put a specular highlight on every bright speck and a smooth patch under every dark blotch, which at night is glitter on the walls and damp-looking concrete.
+- The split that works is two blurs of the luminance: a radius of width/384 keeps joints, bricks, aggregate and trowel strokes, and a radius of width/64 holds the photograph's own lighting. What lies between them is shape; what lies below the finer one is the camera's speckle, kept at 0.1 to 0.25 of its amplitude.
+- Roughness belongs to the material, not to the pixel: a band of about 0.1 wide, centred a little above the surface's roughness factor, read off a blurred relief. Measured on the cyberpunk library, that takes the neighbouring-pixel step of a roughness map from 4-9/255 down to under 0.2/255, and the normal map's average lean from 30/255 to 4-12/255, where what is left is the surface's real structure.
+- A noise field's finest octave has to land above roughly 8 px of the map, or it aliases into sparkle under a moving light. At 1024 over a 6 m road, three octaves from 8 cells puts the aggregate at 5 cm; four puts it on two pixels.
+- Repainting a near-grey photograph takes the paint's hue whole and moves only the saturation. Meeting the paint halfway lands on a third hue (grey pulled halfway to blue comes out green), and multiplying the photograph's own saturation amplifies its colour noise.
+
 ## Procedural pattern surfaces (2026-09)
 
 Structured surfaces (hexagon walls, panel grids, floor slabs) are arithmetic on where a point sits on the surface in metres, not diffusion: a drawn pattern is crisp at any size, cannot jog where it is cut to tile, and costs a fraction of the file size. Diffusion keeps what it is good at, which is stochastic grain, wear and grime.

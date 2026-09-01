@@ -4,8 +4,8 @@ import type { Database } from '../db/Database.js';
 import { MaterialsError } from '../db/errors.js';
 import type { FinishSpec, MaterialEntry, Variant } from '../db/types.js';
 import { resolveFinish } from './finish.js';
-import { deriveAo, deriveHeight, deriveNormal, deriveRoughness } from './maps.js';
-import { decodeRgb, encodeGrayPng, encodeRgbPng } from './pixels.js';
+import { deriveHeight, deriveRoughness, reliefMaps } from './maps.js';
+import { decodeRgb } from './pixels.js';
 
 /** What to re-read, and under which finish. */
 export interface RefinishRequest {
@@ -37,13 +37,7 @@ export class Refinisher {
     for (const variant of wanted) {
       const basecolor = await decodeRgb(readFileSync(join(themeDir, variant.maps.basecolor)));
       const height = deriveHeight(basecolor, finish);
-      const files: [keyof Variant['maps'], Buffer][] = [
-        ['normal', await encodeRgbPng(deriveNormal(height))],
-        ['roughness', await encodeGrayPng(deriveRoughness(height, finish))],
-        ['height', await encodeGrayPng(height)],
-        ['ao', await encodeGrayPng(deriveAo(height))],
-      ];
-      for (const [name, buffer] of files) {
+      for (const [name, buffer] of await reliefMaps(height, deriveRoughness(height, finish))) {
         const path = variant.maps[name];
         if (path) writeFileSync(join(themeDir, path), buffer);
       }

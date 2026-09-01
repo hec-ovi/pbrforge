@@ -1,6 +1,6 @@
-import type { Finish, Physical } from '../db/types.js';
+import type { Finish, MapName, Physical } from '../db/types.js';
 import { clamp01 } from './color.js';
-import { type Gray, type Rgb, luminance, wrapBlur, wrapSobel } from './pixels.js';
+import { type Gray, type Rgb, encodeGrayPng, encodeRgbPng, luminance, wrapBlur, wrapSobel } from './pixels.js';
 
 type Size = { width: number; height: number };
 
@@ -71,6 +71,20 @@ export function deriveRoughness(height: Gray, finish: Finish): Gray {
     out[i] = Math.min(hi, Math.max(lo, mid + (0.5 - shape.data[i]) * slope));
   }
   return { data: out, width: height.width, height: height.height };
+}
+
+/**
+ * The four maps that carry a surface's shape and gloss, encoded. One lane makes
+ * them at generation and one re-reads them later, and they are the same maps
+ * either way.
+ */
+export async function reliefMaps(height: Gray, roughness: Gray): Promise<[MapName, Buffer][]> {
+  return [
+    ['normal', await encodeRgbPng(deriveNormal(height))],
+    ['roughness', await encodeGrayPng(roughness)],
+    ['height', await encodeGrayPng(height)],
+    ['ao', await encodeGrayPng(deriveAo(height))],
+  ];
 }
 
 /** Metallic: flat fill from the factor; per-pixel variation comes with the neural lane. */

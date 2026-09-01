@@ -141,13 +141,13 @@
     },
     "recolor": {
       "type": "object",
-      "description": "tint lane: another variant of the entry this one is appended to, moved in color",
+      "description": "tint lane: another variant of the entry this one is appended to, repainted",
       "required": ["from", "color"],
       "additionalProperties": false,
       "properties": {
         "from": { "type": "string", "pattern": "^[a-z0-9_-]+$", "description": "the variant id the tint is made from" },
-        "color": { "type": "string", "pattern": "^#[0-9a-f]{6}$", "description": "the color the source is pulled toward" },
-        "strength": { "type": "number", "minimum": 0, "maximum": 1, "description": "how far it is pulled" },
+        "color": { "type": "string", "pattern": "^#[0-9a-f]{6}$", "description": "the paint: its hue is taken whole" },
+        "strength": { "type": "number", "minimum": 0, "maximum": 1, "description": "how much pigment is in the paint" },
         "value": { "type": "number", "minimum": 0, "maximum": 4, "description": "brightness multiplier" }
       }
     },

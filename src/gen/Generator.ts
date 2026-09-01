@@ -11,13 +11,13 @@ import { type Gray, type Rgb, decodeRgb, encodeGrayPng, encodeRgbPng } from './p
 import { synthesizeFlat } from './flat.js';
 import {
   constantGray,
-  deriveAo,
   deriveEmission,
   deriveHeight,
   deriveMetallic,
   deriveNormal,
   deriveRoughness,
   flatNormal,
+  reliefMaps,
 } from './maps.js';
 import { resolveFinish } from './finish.js';
 import { buildPattern } from './pattern/build.js';
@@ -267,11 +267,8 @@ async function derivedMaps(
   const height = source.height ?? deriveHeight(source.basecolor, target.finish);
   const roughness = source.roughness ?? deriveRoughness(height, target.finish);
   return [
-    ['normal', await encodeRgbPng(deriveNormal(height))],
-    ['roughness', await encodeGrayPng(roughness)],
+    ...(await reliefMaps(height, roughness)),
     ['metallic', await encodeGrayPng(deriveMetallic(source.basecolor, target.physical))],
-    ['height', await encodeGrayPng(height)],
-    ['ao', await encodeGrayPng(deriveAo(height))],
     ...(mode === 'luminance' || mode === 'color-mask'
       ? ([['emission', await encodeRgbPng(deriveEmission(source.basecolor, mode))]] as [MapName, Buffer][])
       : []),
