@@ -6127,216 +6127,224 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.75,
+        "roughnessFactor": 0.78,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.73,
+          0.83
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/roof-artifact/poor/1/basecolor.png",
-            "normal": "assets/roof-artifact/poor/1/normal.png",
-            "roughness": "assets/roof-artifact/poor/1/roughness.png",
-            "metallic": "assets/roof-artifact/poor/1/metallic.png",
-            "height": "assets/roof-artifact/poor/1/height.png",
-            "ao": "assets/roof-artifact/poor/1/ao.png"
+            "basecolor": "assets/roof-artifact/poor/paint/basecolor.png",
+            "normal": "assets/roof-artifact/poor/paint/normal.png",
+            "roughness": "assets/roof-artifact/poor/paint/roughness.png",
+            "metallic": "assets/roof-artifact/poor/paint/metallic.png",
+            "height": "assets/roof-artifact/poor/paint/height.png",
+            "ao": "assets/roof-artifact/poor/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/roof-artifact/poor/2/basecolor.png",
-            "normal": "assets/roof-artifact/poor/2/normal.png",
-            "roughness": "assets/roof-artifact/poor/2/roughness.png",
-            "metallic": "assets/roof-artifact/poor/2/metallic.png",
-            "height": "assets/roof-artifact/poor/2/height.png",
-            "ao": "assets/roof-artifact/poor/2/ao.png"
+            "basecolor": "assets/roof-artifact/poor/zinc/basecolor.png",
+            "normal": "assets/roof-artifact/poor/zinc/normal.png",
+            "roughness": "assets/roof-artifact/poor/zinc/roughness.png",
+            "metallic": "assets/roof-artifact/poor/zinc/metallic.png",
+            "height": "assets/roof-artifact/poor/zinc/height.png",
+            "ao": "assets/roof-artifact/poor/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.7,
-          0.8
-        ],
-        "grain": 0.05,
-        "relief": 1
-      }
+      ]
     },
     "cyberpunk/roof-artifact/mid": {
       "key": "cyberpunk/roof-artifact/mid",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.65,
+        "roughnessFactor": 0.7,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.65,
+          0.75
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/roof-artifact/mid/1/basecolor.png",
-            "normal": "assets/roof-artifact/mid/1/normal.png",
-            "roughness": "assets/roof-artifact/mid/1/roughness.png",
-            "metallic": "assets/roof-artifact/mid/1/metallic.png",
-            "height": "assets/roof-artifact/mid/1/height.png",
-            "ao": "assets/roof-artifact/mid/1/ao.png"
+            "basecolor": "assets/roof-artifact/mid/paint/basecolor.png",
+            "normal": "assets/roof-artifact/mid/paint/normal.png",
+            "roughness": "assets/roof-artifact/mid/paint/roughness.png",
+            "metallic": "assets/roof-artifact/mid/paint/metallic.png",
+            "height": "assets/roof-artifact/mid/paint/height.png",
+            "ao": "assets/roof-artifact/mid/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/roof-artifact/mid/2/basecolor.png",
-            "normal": "assets/roof-artifact/mid/2/normal.png",
-            "roughness": "assets/roof-artifact/mid/2/roughness.png",
-            "metallic": "assets/roof-artifact/mid/2/metallic.png",
-            "height": "assets/roof-artifact/mid/2/height.png",
-            "ao": "assets/roof-artifact/mid/2/ao.png"
+            "basecolor": "assets/roof-artifact/mid/zinc/basecolor.png",
+            "normal": "assets/roof-artifact/mid/zinc/normal.png",
+            "roughness": "assets/roof-artifact/mid/zinc/roughness.png",
+            "metallic": "assets/roof-artifact/mid/zinc/metallic.png",
+            "height": "assets/roof-artifact/mid/zinc/height.png",
+            "ao": "assets/roof-artifact/mid/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.6,
-          0.7
-        ],
-        "grain": 0.05,
-        "relief": 1
-      }
+      ]
     },
     "cyberpunk/roof-artifact/rich": {
       "key": "cyberpunk/roof-artifact/rich",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.62,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.57,
+          0.67
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/roof-artifact/rich/1/basecolor.png",
-            "normal": "assets/roof-artifact/rich/1/normal.png",
-            "roughness": "assets/roof-artifact/rich/1/roughness.png",
-            "metallic": "assets/roof-artifact/rich/1/metallic.png",
-            "height": "assets/roof-artifact/rich/1/height.png",
-            "ao": "assets/roof-artifact/rich/1/ao.png"
+            "basecolor": "assets/roof-artifact/rich/paint/basecolor.png",
+            "normal": "assets/roof-artifact/rich/paint/normal.png",
+            "roughness": "assets/roof-artifact/rich/paint/roughness.png",
+            "metallic": "assets/roof-artifact/rich/paint/metallic.png",
+            "height": "assets/roof-artifact/rich/paint/height.png",
+            "ao": "assets/roof-artifact/rich/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/roof-artifact/rich/2/basecolor.png",
-            "normal": "assets/roof-artifact/rich/2/normal.png",
-            "roughness": "assets/roof-artifact/rich/2/roughness.png",
-            "metallic": "assets/roof-artifact/rich/2/metallic.png",
-            "height": "assets/roof-artifact/rich/2/height.png",
-            "ao": "assets/roof-artifact/rich/2/ao.png"
+            "basecolor": "assets/roof-artifact/rich/zinc/basecolor.png",
+            "normal": "assets/roof-artifact/rich/zinc/normal.png",
+            "roughness": "assets/roof-artifact/rich/zinc/roughness.png",
+            "metallic": "assets/roof-artifact/rich/zinc/metallic.png",
+            "height": "assets/roof-artifact/rich/zinc/height.png",
+            "ao": "assets/roof-artifact/rich/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.46,
-          0.56
-        ],
-        "grain": 0.05,
-        "relief": 0.8
-      }
+      ]
     },
     "cyberpunk/roof-artifact/high_rich": {
       "key": "cyberpunk/roof-artifact/high_rich",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.54,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.49,
+          0.59
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/roof-artifact/high_rich/1/basecolor.png",
-            "normal": "assets/roof-artifact/high_rich/1/normal.png",
-            "roughness": "assets/roof-artifact/high_rich/1/roughness.png",
-            "metallic": "assets/roof-artifact/high_rich/1/metallic.png",
-            "height": "assets/roof-artifact/high_rich/1/height.png",
-            "ao": "assets/roof-artifact/high_rich/1/ao.png"
+            "basecolor": "assets/roof-artifact/high_rich/paint/basecolor.png",
+            "normal": "assets/roof-artifact/high_rich/paint/normal.png",
+            "roughness": "assets/roof-artifact/high_rich/paint/roughness.png",
+            "metallic": "assets/roof-artifact/high_rich/paint/metallic.png",
+            "height": "assets/roof-artifact/high_rich/paint/height.png",
+            "ao": "assets/roof-artifact/high_rich/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/roof-artifact/high_rich/2/basecolor.png",
-            "normal": "assets/roof-artifact/high_rich/2/normal.png",
-            "roughness": "assets/roof-artifact/high_rich/2/roughness.png",
-            "metallic": "assets/roof-artifact/high_rich/2/metallic.png",
-            "height": "assets/roof-artifact/high_rich/2/height.png",
-            "ao": "assets/roof-artifact/high_rich/2/ao.png"
+            "basecolor": "assets/roof-artifact/high_rich/zinc/basecolor.png",
+            "normal": "assets/roof-artifact/high_rich/zinc/normal.png",
+            "roughness": "assets/roof-artifact/high_rich/zinc/roughness.png",
+            "metallic": "assets/roof-artifact/high_rich/zinc/metallic.png",
+            "height": "assets/roof-artifact/high_rich/zinc/height.png",
+            "ao": "assets/roof-artifact/high_rich/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.46,
-          0.56
-        ],
-        "grain": 0.05,
-        "relief": 0.8
-      }
+      ]
     },
     "cyberpunk/signage/poor": {
       "key": "cyberpunk/signage/poor",

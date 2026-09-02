@@ -2,89 +2,89 @@
   {
     "key": "cyberpunk/roof-artifact/poor",
     "alignment": "tile",
-    "description": "weathered galvanized steel sheet surface, dull zinc crystalline pattern, grime streaks",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.75,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "grain": 0.05,
-      "relief": 1
-    },
-    "variants": 2
+    "description": "aged charcoal rooftop equipment steel, even matte coating",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.78, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#343638",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/roof-artifact/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "aged zinc rooftop equipment steel, even matte finish",
+    "variantId": "zinc",
+    "flatColor": "#727573",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/roof-artifact/mid",
     "alignment": "tile",
-    "description": "galvanized steel sheet surface, zinc crystalline pattern, light weathering",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.65,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "grain": 0.05,
-      "relief": 1
-    },
-    "variants": 2
+    "description": "dark rooftop equipment steel, even matte coating",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.70, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#2d3033",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/roof-artifact/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "galvanized rooftop equipment steel, even matte finish",
+    "variantId": "zinc",
+    "flatColor": "#808584",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/roof-artifact/rich",
     "alignment": "tile",
-    "description": "brushed steel sheet surface, even fine grain, clean grey",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "roughness": [
-        0.46,
-        0.56
-      ],
-      "grain": 0.05,
-      "relief": 0.8
-    },
-    "variants": 2
+    "description": "clean graphite rooftop equipment steel, even matte coating",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.62, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#25292d",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/roof-artifact/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "clean cool rooftop equipment steel, even matte finish",
+    "variantId": "zinc",
+    "flatColor": "#8d9394",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/roof-artifact/high_rich",
     "alignment": "tile",
-    "description": "matte dark grey coated metal surface, flawless even finish",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "roughness": [
-        0.46,
-        0.56
-      ],
-      "grain": 0.05,
-      "relief": 0.8
-    },
-    "variants": 2
+    "description": "black powder-coated rooftop equipment steel, even satin-matte finish",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.54, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#1d2226",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/roof-artifact/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "clean pale rooftop equipment steel, even satin-matte finish",
+    "variantId": "zinc",
+    "flatColor": "#9ba1a3",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   }
 ]

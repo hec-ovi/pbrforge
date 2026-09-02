@@ -140,6 +140,7 @@ describe('shipped cyberpunk coverage', () => {
       column: { id: 'plain', metallic: 0 },
       metal: { id: 'paint', metallic: 1 },
       'fire-escape': { id: 'paint', metallic: 1 },
+      'roof-artifact': { id: 'paint', metallic: 1 },
     };
     for (const [kind, { id, metallic }] of Object.entries(steel)) {
       for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
@@ -159,7 +160,7 @@ describe('shipped cyberpunk coverage', () => {
           expect(entry.variants.map((variant) => variant.id)).toEqual(['plain', 'warm']);
           expect(lead.resolution).toEqual([256, 512]);
         }
-        if (kind === 'metal' || kind === 'fire-escape') {
+        if (kind === 'metal' || kind === 'fire-escape' || kind === 'roof-artifact') {
           expect(entry.variants.map((variant) => variant.id)).toEqual(['paint', 'zinc']);
         }
       }
@@ -217,7 +218,7 @@ describe('shipped cyberpunk coverage', () => {
 
   it('ships the steel kinds off the grain ramp, so a photograph of steel does not come back as speckle', () => {
     const offences: string[] = [];
-    for (const kind of ['elevator_door', 'roof-artifact']) {
+    for (const kind of ['elevator_door']) {
       for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
         const finish = db.resolve(`cyberpunk/${kind}/${tier}`).finish;
         if (finish?.grain !== 0.05) offences.push(`${kind}/${tier} grain ${finish?.grain}`);
