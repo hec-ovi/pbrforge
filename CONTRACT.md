@@ -49,7 +49,7 @@ Dry matte is the default across the library: moisture staining and heavy grime l
 | tile | 0.56-0.64 | 0.51-0.59 | 0.46-0.54 | 0.45-0.52 |
 | every other photographed kind | the roughness factor, plus or minus 0.05, floored at 0.46 | | | |
 
-Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2, 0.15, 0.1 and relief 2, 2, 1.6, 1.2. A drawn pattern states its own gloss instead: it sits at the entry's roughness factor, plus the joint bump (`joint` times 0.4) on the joint lines and the `sheen` spread from cell to cell. Asphalt is a three-octave noise field, so its finest aggregate sits around five centimetres of road and not on one pixel.
+Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2, 0.15, 0.1 and relief 2, 2, 1.6, 1.2. Two families leave that ramp, because a photograph of them is film grain rather than surface. The steel kinds (`metal`, `elevator_door`, `fire-escape`, `roof-artifact`) hold grain 0.05 at every tier, with relief 1, 1, 0.8, 0.8, so a lamp on a steel panel lands on the panel and its seams and not on the speckle between them; held by a test over the shipped database. `wood` and `floor-slab` drop to grain 0.08 and 0.06 on their two finished tiers, where the surface is sealed, and `floor-slab` sits rougher with them (factors 0.67 and 0.63). A drawn pattern states its own gloss instead: it sits at the entry's roughness factor, plus the joint bump (`joint` times 0.4) on the joint lines and the `sheen` spread from cell to cell. Asphalt is a three-octave noise field, so its finest aggregate sits around five centimetres of road and not on one pixel.
 
 ## Frame steel
 

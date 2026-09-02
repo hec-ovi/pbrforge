@@ -155,6 +155,18 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
+  it('ships the steel kinds off the grain ramp, so a photograph of steel does not come back as speckle', () => {
+    const offences: string[] = [];
+    for (const kind of ['metal', 'elevator_door', 'fire-escape', 'roof-artifact']) {
+      for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+        const finish = db.resolve(`cyberpunk/${kind}/${tier}`).finish;
+        if (finish?.grain !== 0.05) offences.push(`${kind}/${tier} grain ${finish?.grain}`);
+        if (!finish || finish.relief === undefined || finish.relief > 1) offences.push(`${kind}/${tier} relief ${finish?.relief}`);
+      }
+    }
+    expect(offences).toEqual([]);
+  });
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');

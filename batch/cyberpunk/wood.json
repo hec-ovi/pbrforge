@@ -58,8 +58,8 @@
         0.5,
         0.6
       ],
-      "grain": 0.15,
-      "relief": 1.6
+      "grain": 0.08,
+      "relief": 1.2
     },
     "variants": 2
   },
@@ -82,8 +82,8 @@
         0.46,
         0.56
       ],
-      "grain": 0.1,
-      "relief": 1.2
+      "grain": 0.06,
+      "relief": 1
     },
     "variants": 2
   }

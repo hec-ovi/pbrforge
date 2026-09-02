@@ -14,8 +14,8 @@
       "metallicFactor": 1
     },
     "finish": {
-      "grain": 0.25,
-      "relief": 2
+      "grain": 0.05,
+      "relief": 1
     },
     "variants": 2
   },
@@ -34,8 +34,8 @@
       "metallicFactor": 1
     },
     "finish": {
-      "grain": 0.2,
-      "relief": 2
+      "grain": 0.05,
+      "relief": 1
     },
     "variants": 2
   },
@@ -54,8 +54,8 @@
       "metallicFactor": 1
     },
     "finish": {
-      "grain": 0.15,
-      "relief": 1.6
+      "grain": 0.05,
+      "relief": 0.8
     },
     "variants": 2
   },
@@ -78,8 +78,8 @@
         0.46,
         0.56
       ],
-      "grain": 0.1,
-      "relief": 1.2
+      "grain": 0.05,
+      "relief": 0.8
     },
     "variants": 2
   }

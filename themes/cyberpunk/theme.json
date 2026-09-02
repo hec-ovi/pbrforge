@@ -1550,7 +1550,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.55,
+        "roughnessFactor": 0.67,
         "metallicFactor": 0
       },
       "variants": [
@@ -1590,10 +1590,10 @@
       ],
       "finish": {
         "roughness": [
-          0.5,
-          0.6
+          0.62,
+          0.72
         ],
-        "grain": 0.15,
+        "grain": 0.08,
         "relief": 1.6
       }
     },
@@ -1607,7 +1607,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.63,
         "metallicFactor": 0
       },
       "variants": [
@@ -1647,10 +1647,10 @@
       ],
       "finish": {
         "roughness": [
-          0.46,
-          0.56
+          0.58,
+          0.68
         ],
-        "grain": 0.1,
+        "grain": 0.06,
         "relief": 1.2
       }
     },
@@ -3184,8 +3184,8 @@
           0.5,
           0.6
         ],
-        "grain": 0.15,
-        "relief": 1.6
+        "grain": 0.08,
+        "relief": 1.2
       }
     },
     "cyberpunk/wood/high_rich": {
@@ -3238,8 +3238,8 @@
           0.46,
           0.56
         ],
-        "grain": 0.1,
-        "relief": 1.2
+        "grain": 0.06,
+        "relief": 1
       }
     },
     "cyberpunk/carpet/poor": {
@@ -4436,8 +4436,8 @@
           0.65,
           0.75
         ],
-        "grain": 0.25,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 1
       }
     },
     "cyberpunk/metal/mid": {
@@ -4490,8 +4490,8 @@
           0.55,
           0.65
         ],
-        "grain": 0.2,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 1
       }
     },
     "cyberpunk/metal/rich": {
@@ -4544,8 +4544,8 @@
           0.5,
           0.6
         ],
-        "grain": 0.15,
-        "relief": 1.6
+        "grain": 0.05,
+        "relief": 0.8
       }
     },
     "cyberpunk/metal/high_rich": {
@@ -4598,8 +4598,8 @@
           0.46,
           0.56
         ],
-        "grain": 0.1,
-        "relief": 1.2
+        "grain": 0.05,
+        "relief": 0.8
       }
     },
     "cyberpunk/fabric/poor": {
@@ -5162,8 +5162,8 @@
           0.55,
           0.65
         ],
-        "grain": 0.2,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 1
       }
     },
     "cyberpunk/elevator_door/mid": {
@@ -5214,8 +5214,8 @@
           0.5,
           0.6
         ],
-        "grain": 0.2,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 1
       }
     },
     "cyberpunk/elevator_door/rich": {
@@ -5266,8 +5266,8 @@
           0.46,
           0.56
         ],
-        "grain": 0.2,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 0.8
       }
     },
     "cyberpunk/elevator_door/high_rich": {
@@ -5318,8 +5318,8 @@
           0.46,
           0.56
         ],
-        "grain": 0.2,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 0.8
       }
     },
     "cyberpunk/wall-trim/poor": {
@@ -5744,8 +5744,8 @@
           0.75,
           0.85
         ],
-        "grain": 0.25,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 1
       }
     },
     "cyberpunk/fire-escape/mid": {
@@ -5798,8 +5798,8 @@
           0.65,
           0.75
         ],
-        "grain": 0.2,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 1
       }
     },
     "cyberpunk/fire-escape/rich": {
@@ -5852,8 +5852,8 @@
           0.5,
           0.6
         ],
-        "grain": 0.15,
-        "relief": 1.6
+        "grain": 0.05,
+        "relief": 0.8
       }
     },
     "cyberpunk/fire-escape/high_rich": {
@@ -5906,8 +5906,8 @@
           0.46,
           0.56
         ],
-        "grain": 0.1,
-        "relief": 1.2
+        "grain": 0.05,
+        "relief": 0.8
       }
     },
     "cyberpunk/roof-artifact/poor": {
@@ -5960,8 +5960,8 @@
           0.7,
           0.8
         ],
-        "grain": 0.25,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 1
       }
     },
     "cyberpunk/roof-artifact/mid": {
@@ -6014,8 +6014,8 @@
           0.6,
           0.7
         ],
-        "grain": 0.2,
-        "relief": 2
+        "grain": 0.05,
+        "relief": 1
       }
     },
     "cyberpunk/roof-artifact/rich": {
@@ -6068,8 +6068,8 @@
           0.46,
           0.56
         ],
-        "grain": 0.15,
-        "relief": 1.6
+        "grain": 0.05,
+        "relief": 0.8
       }
     },
     "cyberpunk/roof-artifact/high_rich": {
@@ -6122,8 +6122,8 @@
           0.46,
           0.56
         ],
-        "grain": 0.1,
-        "relief": 1.2
+        "grain": 0.05,
+        "relief": 0.8
       }
     },
     "cyberpunk/signage/poor": {
