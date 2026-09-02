@@ -2,89 +2,89 @@
   {
     "key": "cyberpunk/column/poor",
     "alignment": "tile",
-    "description": "honed dark stone column: flat, even, no relief",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 0
-    },
+    "description": "chalky charcoal concrete support column, flat surface",
+    "tiling": { "worldSize": [1.5, 3] },
+    "physical": { "roughnessFactor": 0.76, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#3b3d41",
-    "flatNoise": 0.04,
-    "resolution": [
-      256,
-      256
-    ]
+    "flatColor": "#4b4b48",
+    "flatNoise": 0,
+    "resolution": [256, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/column/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "warm grey concrete support column, flat surface",
+    "variantId": "warm",
+    "flatColor": "#5a5650",
+    "flatNoise": 0,
+    "resolution": [256, 512]
   },
   {
     "key": "cyberpunk/column/mid",
     "alignment": "tile",
-    "description": "honed dark stone column: flat, even, no relief",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 0
-    },
+    "description": "dark precast concrete support column, flat surface",
+    "tiling": { "worldSize": [1.5, 3] },
+    "physical": { "roughnessFactor": 0.68, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#3b3d41",
-    "flatNoise": 0.04,
-    "resolution": [
-      256,
-      256
-    ]
+    "flatColor": "#44474a",
+    "flatNoise": 0,
+    "resolution": [256, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/column/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "warm graphite concrete support column, flat surface",
+    "variantId": "warm",
+    "flatColor": "#504d49",
+    "flatNoise": 0,
+    "resolution": [256, 512]
   },
   {
     "key": "cyberpunk/column/rich",
     "alignment": "tile",
-    "description": "honed dark stone column: flat, even, no relief",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 0
-    },
+    "description": "honed graphite stone support column, flat surface",
+    "tiling": { "worldSize": [1.5, 3] },
+    "physical": { "roughnessFactor": 0.60, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#3b3d41",
-    "flatNoise": 0.04,
-    "resolution": [
-      256,
-      256
-    ]
+    "flatColor": "#3b3e41",
+    "flatNoise": 0,
+    "resolution": [256, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/column/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "warm honed stone support column, flat surface",
+    "variantId": "warm",
+    "flatColor": "#47443f",
+    "flatNoise": 0,
+    "resolution": [256, 512]
   },
   {
     "key": "cyberpunk/column/high_rich",
     "alignment": "tile",
-    "description": "honed dark stone column: flat, even, no relief",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 0
-    },
+    "description": "honed black stone support column, flat surface",
+    "tiling": { "worldSize": [1.5, 3] },
+    "physical": { "roughnessFactor": 0.54, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#3b3d41",
-    "flatNoise": 0.04,
-    "resolution": [
-      256,
-      256
-    ]
+    "flatColor": "#303337",
+    "flatNoise": 0,
+    "resolution": [256, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/column/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "warm black stone support column, flat surface",
+    "variantId": "warm",
+    "flatColor": "#393733",
+    "flatNoise": 0,
+    "resolution": [256, 512]
   }
 ]

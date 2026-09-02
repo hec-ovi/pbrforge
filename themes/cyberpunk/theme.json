@@ -2008,13 +2008,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.76,
         "metallicFactor": 0
       },
       "finish": {
         "roughness": [
-          0.45,
-          0.55
+          0.71,
+          0.81
         ],
         "grain": 0.2,
         "relief": 2
@@ -2022,9 +2022,10 @@
       "variants": [
         {
           "id": "plain",
+          "class": "flat",
           "resolution": [
             256,
-            256
+            512
           ],
           "maps": {
             "basecolor": "assets/column/poor/plain/basecolor.png",
@@ -2033,6 +2034,22 @@
             "metallic": "assets/column/poor/plain/metallic.png",
             "height": "assets/column/poor/plain/height.png",
             "ao": "assets/column/poor/plain/ao.png"
+          }
+        },
+        {
+          "id": "warm",
+          "class": "flat",
+          "resolution": [
+            256,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/column/poor/warm/basecolor.png",
+            "normal": "assets/column/poor/warm/normal.png",
+            "roughness": "assets/column/poor/warm/roughness.png",
+            "metallic": "assets/column/poor/warm/metallic.png",
+            "height": "assets/column/poor/warm/height.png",
+            "ao": "assets/column/poor/warm/ao.png"
           }
         }
       ]
@@ -2047,13 +2064,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.68,
         "metallicFactor": 0
       },
       "finish": {
         "roughness": [
-          0.45,
-          0.55
+          0.63,
+          0.73
         ],
         "grain": 0.2,
         "relief": 2
@@ -2061,9 +2078,10 @@
       "variants": [
         {
           "id": "plain",
+          "class": "flat",
           "resolution": [
             256,
-            256
+            512
           ],
           "maps": {
             "basecolor": "assets/column/mid/plain/basecolor.png",
@@ -2072,6 +2090,22 @@
             "metallic": "assets/column/mid/plain/metallic.png",
             "height": "assets/column/mid/plain/height.png",
             "ao": "assets/column/mid/plain/ao.png"
+          }
+        },
+        {
+          "id": "warm",
+          "class": "flat",
+          "resolution": [
+            256,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/column/mid/warm/basecolor.png",
+            "normal": "assets/column/mid/warm/normal.png",
+            "roughness": "assets/column/mid/warm/roughness.png",
+            "metallic": "assets/column/mid/warm/metallic.png",
+            "height": "assets/column/mid/warm/height.png",
+            "ao": "assets/column/mid/warm/ao.png"
           }
         }
       ]
@@ -2086,13 +2120,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.6,
         "metallicFactor": 0
       },
       "finish": {
         "roughness": [
-          0.45,
-          0.55
+          0.55,
+          0.65
         ],
         "grain": 0.2,
         "relief": 2
@@ -2100,9 +2134,10 @@
       "variants": [
         {
           "id": "plain",
+          "class": "flat",
           "resolution": [
             256,
-            256
+            512
           ],
           "maps": {
             "basecolor": "assets/column/rich/plain/basecolor.png",
@@ -2111,6 +2146,22 @@
             "metallic": "assets/column/rich/plain/metallic.png",
             "height": "assets/column/rich/plain/height.png",
             "ao": "assets/column/rich/plain/ao.png"
+          }
+        },
+        {
+          "id": "warm",
+          "class": "flat",
+          "resolution": [
+            256,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/column/rich/warm/basecolor.png",
+            "normal": "assets/column/rich/warm/normal.png",
+            "roughness": "assets/column/rich/warm/roughness.png",
+            "metallic": "assets/column/rich/warm/metallic.png",
+            "height": "assets/column/rich/warm/height.png",
+            "ao": "assets/column/rich/warm/ao.png"
           }
         }
       ]
@@ -2125,13 +2176,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.54,
         "metallicFactor": 0
       },
       "finish": {
         "roughness": [
-          0.45,
-          0.55
+          0.49,
+          0.59
         ],
         "grain": 0.2,
         "relief": 2
@@ -2139,9 +2190,10 @@
       "variants": [
         {
           "id": "plain",
+          "class": "flat",
           "resolution": [
             256,
-            256
+            512
           ],
           "maps": {
             "basecolor": "assets/column/high_rich/plain/basecolor.png",
@@ -2150,6 +2202,22 @@
             "metallic": "assets/column/high_rich/plain/metallic.png",
             "height": "assets/column/high_rich/plain/height.png",
             "ao": "assets/column/high_rich/plain/ao.png"
+          }
+        },
+        {
+          "id": "warm",
+          "class": "flat",
+          "resolution": [
+            256,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/column/high_rich/warm/basecolor.png",
+            "normal": "assets/column/high_rich/warm/normal.png",
+            "roughness": "assets/column/high_rich/warm/roughness.png",
+            "metallic": "assets/column/high_rich/warm/metallic.png",
+            "height": "assets/column/high_rich/warm/height.png",
+            "ao": "assets/column/high_rich/warm/ao.png"
           }
         }
       ]

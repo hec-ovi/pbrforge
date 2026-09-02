@@ -153,6 +153,10 @@ describe('shipped cyberpunk coverage', () => {
         const normal = await sharp(join(themeDir, lead.maps.normal)).raw().toBuffer();
         const lean = normal.filter((_, i) => i % 3 !== 2).reduce((sum, v) => sum + Math.abs(v - 128), 0) / (normal.length / 3) / 2;
         expect(lean, `${kind}/${tier} normal`).toBeLessThan(1);
+        if (kind === 'column') {
+          expect(entry.variants.map((variant) => variant.id)).toEqual(['plain', 'warm']);
+          expect(lead.resolution).toEqual([256, 512]);
+        }
       }
     }
   });
