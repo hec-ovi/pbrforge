@@ -51,7 +51,7 @@ export class Database {
       throw new MaterialsError('E_KEY_EXISTS', `${entry.key} exists; pass overwrite to replace`);
     }
     for (const variant of entry.variants) {
-      for (const file of Object.values(variant.maps)) {
+      for (const file of [...Object.values(variant.maps), ...(variant.screen ? [variant.screen.artwork] : [])]) {
         if (!existsSync(join(this.themesDir, theme, file))) {
           throw new MaterialsError('E_SCHEMA', `map file missing on disk: ${file}`);
         }

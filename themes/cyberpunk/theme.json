@@ -6301,6 +6301,11 @@
             "height": "assets/ad-screen/poor/1/height.png",
             "ao": "assets/ad-screen/poor/1/ao.png",
             "emission": "assets/ad-screen/poor/1/emission.png"
+          },
+          "screen": {
+            "kind": "led-dot",
+            "pitch": 16,
+            "artwork": "assets/ad-screen/poor/1/artwork.png"
           }
         },
         {
@@ -6317,6 +6322,11 @@
             "height": "assets/ad-screen/poor/2/height.png",
             "ao": "assets/ad-screen/poor/2/ao.png",
             "emission": "assets/ad-screen/poor/2/emission.png"
+          },
+          "screen": {
+            "kind": "scanline-billboard",
+            "pitch": 8,
+            "artwork": "assets/ad-screen/poor/2/artwork.png"
           }
         },
         {
@@ -6333,6 +6343,10 @@
             "height": "assets/ad-screen/poor/3/height.png",
             "ao": "assets/ad-screen/poor/3/ao.png",
             "emission": "assets/ad-screen/poor/3/emission.png"
+          },
+          "screen": {
+            "kind": "glyph-panel",
+            "artwork": "assets/ad-screen/poor/3/artwork.png"
           }
         }
       ]
@@ -6364,6 +6378,11 @@
             "height": "assets/ad-screen/mid/1/height.png",
             "ao": "assets/ad-screen/mid/1/ao.png",
             "emission": "assets/ad-screen/mid/1/emission.png"
+          },
+          "screen": {
+            "kind": "led-dot",
+            "pitch": 12,
+            "artwork": "assets/ad-screen/mid/1/artwork.png"
           }
         },
         {
@@ -6380,6 +6399,11 @@
             "height": "assets/ad-screen/mid/2/height.png",
             "ao": "assets/ad-screen/mid/2/ao.png",
             "emission": "assets/ad-screen/mid/2/emission.png"
+          },
+          "screen": {
+            "kind": "scanline-billboard",
+            "pitch": 7,
+            "artwork": "assets/ad-screen/mid/2/artwork.png"
           }
         },
         {
@@ -6396,6 +6420,10 @@
             "height": "assets/ad-screen/mid/3/height.png",
             "ao": "assets/ad-screen/mid/3/ao.png",
             "emission": "assets/ad-screen/mid/3/emission.png"
+          },
+          "screen": {
+            "kind": "glyph-panel",
+            "artwork": "assets/ad-screen/mid/3/artwork.png"
           }
         }
       ]
@@ -6427,6 +6455,11 @@
             "height": "assets/ad-screen/rich/1/height.png",
             "ao": "assets/ad-screen/rich/1/ao.png",
             "emission": "assets/ad-screen/rich/1/emission.png"
+          },
+          "screen": {
+            "kind": "led-dot",
+            "pitch": 10,
+            "artwork": "assets/ad-screen/rich/1/artwork.png"
           }
         },
         {
@@ -6443,6 +6476,11 @@
             "height": "assets/ad-screen/rich/2/height.png",
             "ao": "assets/ad-screen/rich/2/ao.png",
             "emission": "assets/ad-screen/rich/2/emission.png"
+          },
+          "screen": {
+            "kind": "scanline-billboard",
+            "pitch": 6,
+            "artwork": "assets/ad-screen/rich/2/artwork.png"
           }
         },
         {
@@ -6459,6 +6497,10 @@
             "height": "assets/ad-screen/rich/3/height.png",
             "ao": "assets/ad-screen/rich/3/ao.png",
             "emission": "assets/ad-screen/rich/3/emission.png"
+          },
+          "screen": {
+            "kind": "glyph-panel",
+            "artwork": "assets/ad-screen/rich/3/artwork.png"
           }
         }
       ]
@@ -6490,6 +6532,11 @@
             "height": "assets/ad-screen/high_rich/1/height.png",
             "ao": "assets/ad-screen/high_rich/1/ao.png",
             "emission": "assets/ad-screen/high_rich/1/emission.png"
+          },
+          "screen": {
+            "kind": "led-dot",
+            "pitch": 8,
+            "artwork": "assets/ad-screen/high_rich/1/artwork.png"
           }
         },
         {
@@ -6506,6 +6553,11 @@
             "height": "assets/ad-screen/high_rich/2/height.png",
             "ao": "assets/ad-screen/high_rich/2/ao.png",
             "emission": "assets/ad-screen/high_rich/2/emission.png"
+          },
+          "screen": {
+            "kind": "scanline-billboard",
+            "pitch": 5,
+            "artwork": "assets/ad-screen/high_rich/2/artwork.png"
           }
         },
         {
@@ -6522,6 +6574,10 @@
             "height": "assets/ad-screen/high_rich/3/height.png",
             "ao": "assets/ad-screen/high_rich/3/ao.png",
             "emission": "assets/ad-screen/high_rich/3/emission.png"
+          },
+          "screen": {
+            "kind": "glyph-panel",
+            "artwork": "assets/ad-screen/high_rich/3/artwork.png"
           }
         },
         {
@@ -6538,6 +6594,27 @@
             "height": "assets/ad-screen/high_rich/premium-soda/height.png",
             "ao": "assets/ad-screen/high_rich/premium-soda/ao.png",
             "emission": "assets/ad-screen/high_rich/premium-soda/emission.png"
+          },
+          "screen": {
+            "kind": "scanline-billboard",
+            "pitch": 16,
+            "artwork": "assets/ad-screen/high_rich/premium-soda/artwork.png"
+          }
+        },
+        {
+          "id": "brand:the-grand-meridian-hotel",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/3/normal.png",
+            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
+            "height": "assets/ad-screen/high_rich/3/height.png",
+            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/the-grand-meridian-hotel/emission.png"
           }
         }
       ]
@@ -7575,6 +7652,27 @@
             "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
             "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
             "emission": "assets/ad-screen-tall/high_rich/premium-perfume/emission.png"
+          },
+          "screen": {
+            "kind": "led-dot",
+            "pitch": 14,
+            "artwork": "assets/ad-screen-tall/high_rich/premium-perfume/artwork.png"
+          }
+        },
+        {
+          "id": "brand:the-grand-meridian-hotel",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/the-grand-meridian-hotel/emission.png"
           }
         }
       ]

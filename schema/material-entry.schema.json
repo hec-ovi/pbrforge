@@ -88,7 +88,11 @@
         "required": ["id", "resolution", "maps"],
         "additionalProperties": false,
         "properties": {
-          "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+(:[a-z0-9_-]+)?$",
+            "description": "a slug, or a namespaced one: brand:<slug> is a rebranded screen"
+          },
           "class": {
             "enum": ["image", "pattern"],
             "default": "image",
@@ -113,6 +117,17 @@
               "height": { "$ref": "#/$defs/mapPath" },
               "ao": { "$ref": "#/$defs/mapPath" },
               "emission": { "$ref": "#/$defs/mapPath" }
+            }
+          },
+          "screen": {
+            "type": "object",
+            "description": "on a screen variant painted by the create lane: the display it is shown on and the brandless picture behind its emission, which a rebrand re-composites text over",
+            "required": ["kind", "artwork"],
+            "additionalProperties": false,
+            "properties": {
+              "kind": { "enum": ["led-dot", "scanline-billboard", "glyph-panel"] },
+              "pitch": { "type": "integer", "minimum": 2 },
+              "artwork": { "$ref": "#/$defs/mapPath" }
             }
           }
         }

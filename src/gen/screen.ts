@@ -1,4 +1,4 @@
-import type { Screen } from '../db/types.js';
+import type { Display } from '../db/types.js';
 import { type Rgb, luminance, wrapBlur } from './pixels.js';
 
 /**
@@ -8,7 +8,7 @@ import { type Rgb, luminance, wrapBlur } from './pixels.js';
  */
 
 /** Emission map of one screen: the artwork seen through its pixel structure. */
-export function screenEmission(artwork: Rgb, screen: Screen): Rgb {
+export function screenEmission(artwork: Rgb, screen: Display): Rgb {
   if (screen.kind === 'glyph-panel') return artwork;
   const pitch = pitchOf(screen, artwork.width);
   const { mask, rowShift } = lattice(screen, artwork.width, artwork.height, pitch);
@@ -16,7 +16,7 @@ export function screenEmission(artwork: Rgb, screen: Screen): Rgb {
 }
 
 /** Unlit basecolor: near-black display glass with the faint structure of its own pixels. */
-export function screenGlass(glass: Rgb, screen: Screen): Rgb {
+export function screenGlass(glass: Rgb, screen: Display): Rgb {
   if (screen.kind === 'glyph-panel') return glass;
   const { mask } = lattice(screen, glass.width, glass.height, pitchOf(screen, glass.width));
   const data = new Uint8Array(glass.data.length);
@@ -27,12 +27,12 @@ export function screenGlass(glass: Rgb, screen: Screen): Rgb {
   return { data, width: glass.width, height: glass.height };
 }
 
-function pitchOf(screen: Screen, width: number): number {
+function pitchOf(screen: Display, width: number): number {
   return screen.pitch ?? Math.max(4, Math.round(width / 160));
 }
 
 /** Per-pixel structure amount, plus the horizontal sample shift that breaks scan bands apart. */
-function lattice(screen: Screen, w: number, h: number, pitch: number): { mask: Float32Array; rowShift: Int32Array } {
+function lattice(screen: Display, w: number, h: number, pitch: number): { mask: Float32Array; rowShift: Int32Array } {
   const mask = new Float32Array(w * h);
   const rowShift = new Int32Array(h);
   if (screen.kind === 'led-dot') {

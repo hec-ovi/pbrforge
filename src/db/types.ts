@@ -24,12 +24,25 @@ export interface Finish {
 /** A finish as authored: what a request leaves out comes from the surface's own roughness. */
 export type FinishSpec = Partial<Finish>;
 
+/** The pixel structure a screen is shown through. */
+export interface Display {
+  kind: 'led-dot' | 'scanline-billboard' | 'glyph-panel';
+  pitch?: number;
+}
+
+/** What a screen variant shows: the display it is shown on and the brandless picture behind it, so a rebrand re-composites text only. */
+export interface ScreenShown extends Display {
+  artwork: string;
+}
+
 export interface Variant {
   id: string;
   /** How the maps were made. Consumers read the maps the same way either way. */
   class?: 'image' | 'pattern';
   resolution: [number, number];
   maps: Partial<Record<MapName, string>> & { basecolor: string; normal: string; roughness: string; metallic: string };
+  /** Present on a screen variant painted by the create lane; a brand variant derives from one of these. */
+  screen?: ScreenShown;
 }
 
 export interface MaterialEntry {
@@ -50,14 +63,12 @@ export interface ThemeIndex {
 }
 
 /** One screen variant: what the advertisement shows and which display it is shown on. */
-export interface Screen {
-  kind: 'led-dot' | 'scanline-billboard' | 'glyph-panel';
+export interface Screen extends Display {
   description: string;
   /** A provided source image used as the artwork, instead of diffusing one. */
   imagePath?: string;
   brandName?: string;
   businessKind?: string;
-  pitch?: number;
 }
 
 export type PatternKind =
@@ -124,4 +135,19 @@ export interface CreateRequest {
   seed?: number;
   resolution?: [number, number];
   overwrite?: boolean;
+}
+
+/** The parcel types that advertise: what a business is, for the rebrand lane. */
+export type BusinessKind = 'hotel' | 'commerce' | 'mall' | 'restaurant' | 'coffee_shop' | 'corpo' | 'clinic';
+
+/** One establishment of the named world, to be advertised on its own screens. */
+export interface Business {
+  brandName: string;
+  businessKind: BusinessKind;
+  tier: string;
+}
+
+export interface RebrandRequest {
+  theme: string;
+  businesses: Business[];
 }

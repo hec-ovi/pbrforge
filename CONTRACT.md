@@ -25,7 +25,11 @@ Screens (`emission: "image"`) turn that around: the basecolor is flat dark displ
 
 A screen can be painted from a picture that already exists instead: `imagePath` on a `screens[]` entry names a file relative to the box folder, which goes through a ComfyUI 4x upscale and is fitted to the entry's resolution, so a billboard-scale screen has real detail behind it rather than an enlarged thumbnail. Nothing downstream changes: the same lattice, fringing, hotspots and wordmark run over it, and the diffusion prompt is never built. The upscale is feed-forward with no sampling, so the same file always comes back the same picture. A path with no file behind it is `E_SCHEMA`.
 
-CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable), `npm run refinish -- <request.json>` (re-reads every key in the file that states a finish).
+Every screen variant keeps the brandless picture it shows beside its maps, with the display it is shown on (`screen` on the variant, see Out). That is what the rebrand lane composites a name over.
+
+- `rebrand(request: RebrandRequest): Branded[]` spells the businesses of a named world over the screens of their tier, one `brand:<slug>` variant per business on `ad-screen` and on `ad-screen-tall`, with no render (see Rebrand below).
+
+CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable), `npm run refinish -- <request.json>` (re-reads every key in the file that states a finish), `npm run rebrand -- --theme <theme> --businesses <businesses.json>` (`--themes <dir>` points it at another database folder).
 
 ## Finish
 
@@ -87,6 +91,20 @@ Shared over all of them: `colors` (face first), `depth` (relief), `joint` (how m
 
 Cyberpunk pattern library, per tier: plaster (`hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`panel`, one panel per tile so joints land on whole-tile faces, plus `rib` and `block`), ceiling (`panel`, `plain`), fabric (`flat`: even upholstery cloth, matte, whose normal map leans under one code value off flat, so a part small enough to minify a photographed weave has nothing left to alias), sidewalk (`slab`, `bond`, `plate`), road (`street`, `highway`, `patched`, `puddle`), plastic (`bag`: crumpled near-black sheet at 0.25 roughness, the glossy response of a refuse sack), light-fixture (`strip`, `panel`: dark housing, lit diffuser). Variants of one kind are laid out to read apart at a glance: they differ in tone, in cell size and in bond, not in fine detail. wall, concrete and plaster also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
 
+## Rebrand
+
+A business of the named world gets its own screens. `rebrand({ theme, businesses })` writes, for every business, one variant of `<theme>/ad-screen/<tier>` and one of `<theme>/ad-screen-tall/<tier>`: the brandless artwork of a screen variant already in that entry with the brand name spelled over it from `<theme>/letter-atlas/<tier>` cells, shown through the same display as the screen it came from. Image work only: no ComfyUI, no render, and the same list writes the same maps every time. `businesses` is [schema/rebrand-request.schema.json](schema/rebrand-request.schema.json), a list of `{ brandName, businessKind, tier }`, `businessKind` one of the parcel types that advertise: `hotel`, `commerce`, `mall`, `restaurant`, `coffee_shop`, `corpo`, `clinic`.
+
+- Variant id: `brand:<slug>`, the name lowercased with every run of characters outside `a-z0-9` collapsed to one hyphen, so `Kiro's Clinic` is `brand:kiro-s-clinic`. A consumer resolves the entry and takes `variants.find((v) => v.id === 'brand:' + slug)`, the way it picks any variant by id. The maps live under `assets/<kind>/<tier>/brand/<slug>/`.
+- Which picture: a stable pick among the entry's screen variants (those carrying `screen`), from `businessKind` and the slug together, so a name always lands on the same picture and a street of businesses spreads over the tier's artwork.
+- The wordmark: the name trimmed, single-spaced and uppercased, every character one cell of the atlas. It sits centred over the bottom of the picture, cap height a tenth of a landscape screen's height or 0.16 of a portrait screen's width. A line wider than 0.86 of the screen breaks at the space nearest its middle; a line still too wide shrinks to fit. poor and mid spell in the `neon` sheet, rich and high_rich in `panel`. The picture under the letters goes behind a soft dark scrim, so the name reads over any artwork.
+- A brand variant shares the base variant's surface maps (basecolor, relief, gloss) and carries its own emission. The base variants and their files stay untouched, and rerunning the same list replaces the same variants with the same maps.
+- `ad-screen-tall` is one entry across tiers, so a business's tall variant lands on that entry whichever tier it states, spelled in its own tier's look.
+
+Errors, thrown before anything is written: a business kind outside the parcel types, a name with a character outside the atlas charset after uppercasing, or a name with no letter or digit to make a slug of is `E_SCHEMA`; a tier with no `ad-screen`, `ad-screen-tall` or `letter-atlas` entry, or an entry with no screen variant behind it, is `E_KEY_NOT_FOUND`.
+
+`batch/cyberpunk/businesses.json` is the request shape with one business, and its two variants ship in the database.
+
 ## Letter atlas
 
 `cyberpunk/letter-atlas/<tier>` is one `exact` sheet of lit glyph cells for the modular sign system: aspect 4:3, 1024 by 768, two variants, `neon` (thin core, wide halo) and `panel` (backlit diffuser). The emission map carries the lit glyph; the basecolor is the unlit tube over a dark plate.
@@ -95,7 +113,7 @@ The grid is 8 columns by 6 rows, row-major, and the charset is `ABCDEFGHIJKLMNOP
 
 ## Out
 
-MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), and one or more variants, each a set of map files. Variant 0 is canonical; consumers may pick variants deterministically by seed. A variant carries `class` (`image` by default, `pattern` when it was drawn from parameters): provenance only, the map set and its use are identical. An entry with photographed variants also carries the `finish` its maps were read under.
+MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), and one or more variants, each a set of map files. Variant 0 is canonical; consumers may pick variants deterministically by seed or by id (`flat`, `brand:<slug>`). A variant carries `class` (`image` by default, `pattern` when it was drawn from parameters): provenance only, the map set and its use are identical. A screen variant painted by the create lane also carries `screen`: the display it is shown on (`kind`, `pitch`) and `artwork`, the brandless picture behind its emission, which the rebrand lane composites over; consumers never bind it. An entry with photographed variants also carries the `finish` its maps were read under.
 
 Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](schema/theme-index.schema.json)) plus map files under `themes/<theme>/assets/<kind>/<tier>/<variant>/`. The JSON is the index; the folder is the theme. First theme: `cyberpunk`.
 
@@ -123,7 +141,8 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 - Every `tile` entry passed the seam check (50 percent offset in x and y, no visible seam) before it was written. Pattern variants are periodic over one tile by construction and pass the same gate.
 - Generation is deterministic per lane: the same pattern parameters, the same seed and prompt, or the same provided source file, draw the same maps.
 - All maps of one variant share one resolution and are pixel-aligned with each other.
-- Generation is agentic tooling on top; the database read path works standalone with no ComfyUI and no other layer present.
+- A rebrand never touches a base variant or its files: a brand variant points at the base's surface maps and carries its own emission, and the same business list writes the same maps every time.
+- Generation is agentic tooling on top; the database read path and the rebrand lane work standalone with no ComfyUI and no other layer present.
 
 ## Preview
 

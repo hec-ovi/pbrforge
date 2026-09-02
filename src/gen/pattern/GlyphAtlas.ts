@@ -7,7 +7,7 @@ export const CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.,'!?:/&+ ";
 export const GRID = { columns: 8, rows: 6 };
 
 /** How much of a cell the cap height fills; the rest is the margin a lit glyph glows into. */
-const CAP_FILL = 0.62;
+export const CAP_FILL = 0.62;
 
 /**
  * A lit letter sheet: every character of the charset stroked into its own cell,

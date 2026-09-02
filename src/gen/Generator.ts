@@ -4,7 +4,8 @@ import { join } from 'node:path';
 import { Ajv2020 as Ajv, type ValidateFunction } from 'ajv/dist/2020.js';
 import { Database } from '../db/Database.js';
 import { MaterialsError } from '../db/errors.js';
-import type { CreateRequest, Finish, MapName, MaterialEntry, Physical, Screen, Variant } from '../db/types.js';
+import { variantDir } from '../db/paths.js';
+import type { CreateRequest, Finish, MapName, MaterialEntry, Physical, Screen, ScreenShown, Variant } from '../db/types.js';
 import { ComfyClient } from './ComfyClient.js';
 import { Template, loadPrompt } from './Template.js';
 import { type Gray, type Rgb, decodeRgb, encodeGrayPng, encodeRgbPng } from './pixels.js';
@@ -227,7 +228,7 @@ export class Generator {
 
     files.sort((a, b) => MAP_ORDER.indexOf(a[0]) - MAP_ORDER.indexOf(b[0]));
 
-    const relDir = join('assets', target.kind, target.tier, id);
+    const relDir = variantDir(target.kind, target.tier, id);
     const absDir = join(this.db.themeDir(target.theme), relDir);
     mkdirSync(absDir, { recursive: true });
     // a tint keeps the relief of the variant it came from: same surface, different paint
@@ -242,7 +243,15 @@ export class Generator {
       ...(request.pattern ? { class: 'pattern' as const } : {}),
       resolution: [source.basecolor.width, source.basecolor.height],
       maps,
+      ...(source.screen ? { screen: await this.keepArtwork(source.screen, absDir, relDir) } : {}),
     };
+  }
+
+  /** The brandless picture behind a screen, kept beside its maps, so the rebrand lane composites a name over it without a render. */
+  private async keepArtwork(screen: NonNullable<Source['screen']>, absDir: string, relDir: string): Promise<ScreenShown> {
+    writeFileSync(join(absDir, 'artwork.png'), await encodeRgbPng(screen.artwork));
+    const { kind, pitch } = screen.spec;
+    return { kind, ...(pitch !== undefined ? { pitch } : {}), artwork: join(relDir, 'artwork.png') };
   }
 }
 
