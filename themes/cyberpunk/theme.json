@@ -792,16 +792,23 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.7,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
           "id": "paint",
-          "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            256
           ],
           "maps": {
             "basecolor": "assets/window-frame/poor/paint/basecolor.png",
@@ -828,16 +835,23 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.65,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
           "id": "paint",
-          "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            256
           ],
           "maps": {
             "basecolor": "assets/window-frame/mid/paint/basecolor.png",
@@ -864,16 +878,23 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
           "id": "paint",
-          "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            256
           ],
           "maps": {
             "basecolor": "assets/window-frame/rich/paint/basecolor.png",
@@ -900,16 +921,23 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.55,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
           "id": "paint",
-          "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            256
           ],
           "maps": {
             "basecolor": "assets/window-frame/high_rich/paint/basecolor.png",
@@ -932,16 +960,23 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.7,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
           "id": "paint",
-          "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            256
           ],
           "maps": {
             "basecolor": "assets/door/poor/paint/basecolor.png",
@@ -964,16 +999,23 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.65,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
           "id": "paint",
-          "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            256
           ],
           "maps": {
             "basecolor": "assets/door/mid/paint/basecolor.png",
@@ -996,16 +1038,23 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
           "id": "paint",
-          "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            256
           ],
           "maps": {
             "basecolor": "assets/door/rich/paint/basecolor.png",
@@ -1028,16 +1077,23 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.55,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
           "id": "paint",
-          "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            256
           ],
           "maps": {
             "basecolor": "assets/door/high_rich/paint/basecolor.png",
@@ -1504,49 +1560,34 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.92,
+        "roughnessFactor": 0.5,
         "metallicFactor": 0
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "plain",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/column/poor/1/basecolor.png",
-            "normal": "assets/column/poor/1/normal.png",
-            "roughness": "assets/column/poor/1/roughness.png",
-            "metallic": "assets/column/poor/1/metallic.png",
-            "height": "assets/column/poor/1/height.png",
-            "ao": "assets/column/poor/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/column/poor/2/basecolor.png",
-            "normal": "assets/column/poor/2/normal.png",
-            "roughness": "assets/column/poor/2/roughness.png",
-            "metallic": "assets/column/poor/2/metallic.png",
-            "height": "assets/column/poor/2/height.png",
-            "ao": "assets/column/poor/2/ao.png"
+            "basecolor": "assets/column/poor/plain/basecolor.png",
+            "normal": "assets/column/poor/plain/normal.png",
+            "roughness": "assets/column/poor/plain/roughness.png",
+            "metallic": "assets/column/poor/plain/metallic.png",
+            "height": "assets/column/poor/plain/height.png",
+            "ao": "assets/column/poor/plain/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.87,
-          0.97
-        ],
-        "grain": 0.25,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/column/mid": {
       "key": "cyberpunk/column/mid",
@@ -1558,49 +1599,34 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.8,
+        "roughnessFactor": 0.5,
         "metallicFactor": 0
       },
-      "variants": [
-        {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/column/mid/1/basecolor.png",
-            "normal": "assets/column/mid/1/normal.png",
-            "roughness": "assets/column/mid/1/roughness.png",
-            "metallic": "assets/column/mid/1/metallic.png",
-            "height": "assets/column/mid/1/height.png",
-            "ao": "assets/column/mid/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/column/mid/2/basecolor.png",
-            "normal": "assets/column/mid/2/normal.png",
-            "roughness": "assets/column/mid/2/roughness.png",
-            "metallic": "assets/column/mid/2/metallic.png",
-            "height": "assets/column/mid/2/height.png",
-            "ao": "assets/column/mid/2/ao.png"
-          }
-        }
-      ],
       "finish": {
         "roughness": [
-          0.75,
-          0.85
+          0.45,
+          0.55
         ],
         "grain": 0.2,
         "relief": 2
-      }
+      },
+      "variants": [
+        {
+          "id": "plain",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/column/mid/plain/basecolor.png",
+            "normal": "assets/column/mid/plain/normal.png",
+            "roughness": "assets/column/mid/plain/roughness.png",
+            "metallic": "assets/column/mid/plain/metallic.png",
+            "height": "assets/column/mid/plain/height.png",
+            "ao": "assets/column/mid/plain/ao.png"
+          }
+        }
+      ]
     },
     "cyberpunk/column/rich": {
       "key": "cyberpunk/column/rich",
@@ -1613,48 +1639,33 @@
       },
       "physical": {
         "roughnessFactor": 0.5,
-        "metallicFactor": 1
+        "metallicFactor": 0
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "plain",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/column/rich/1/basecolor.png",
-            "normal": "assets/column/rich/1/normal.png",
-            "roughness": "assets/column/rich/1/roughness.png",
-            "metallic": "assets/column/rich/1/metallic.png",
-            "height": "assets/column/rich/1/height.png",
-            "ao": "assets/column/rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/column/rich/2/basecolor.png",
-            "normal": "assets/column/rich/2/normal.png",
-            "roughness": "assets/column/rich/2/roughness.png",
-            "metallic": "assets/column/rich/2/metallic.png",
-            "height": "assets/column/rich/2/height.png",
-            "ao": "assets/column/rich/2/ao.png"
+            "basecolor": "assets/column/rich/plain/basecolor.png",
+            "normal": "assets/column/rich/plain/normal.png",
+            "roughness": "assets/column/rich/plain/roughness.png",
+            "metallic": "assets/column/rich/plain/metallic.png",
+            "height": "assets/column/rich/plain/height.png",
+            "ao": "assets/column/rich/plain/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.46,
-          0.56
-        ],
-        "grain": 0.15,
-        "relief": 1.6
-      }
+      ]
     },
     "cyberpunk/column/high_rich": {
       "key": "cyberpunk/column/high_rich",
@@ -1666,49 +1677,34 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.55,
+        "roughnessFactor": 0.5,
         "metallicFactor": 0
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "plain",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/column/high_rich/1/basecolor.png",
-            "normal": "assets/column/high_rich/1/normal.png",
-            "roughness": "assets/column/high_rich/1/roughness.png",
-            "metallic": "assets/column/high_rich/1/metallic.png",
-            "height": "assets/column/high_rich/1/height.png",
-            "ao": "assets/column/high_rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/column/high_rich/2/basecolor.png",
-            "normal": "assets/column/high_rich/2/normal.png",
-            "roughness": "assets/column/high_rich/2/roughness.png",
-            "metallic": "assets/column/high_rich/2/metallic.png",
-            "height": "assets/column/high_rich/2/height.png",
-            "ao": "assets/column/high_rich/2/ao.png"
+            "basecolor": "assets/column/high_rich/plain/basecolor.png",
+            "normal": "assets/column/high_rich/plain/normal.png",
+            "roughness": "assets/column/high_rich/plain/roughness.png",
+            "metallic": "assets/column/high_rich/plain/metallic.png",
+            "height": "assets/column/high_rich/plain/height.png",
+            "ao": "assets/column/high_rich/plain/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.52,
-          0.62
-        ],
-        "grain": 0.1,
-        "relief": 1.2
-      }
+      ]
     },
     "cyberpunk/plaster/poor": {
       "key": "cyberpunk/plaster/poor",
@@ -6440,6 +6436,246 @@
             "kind": "glyph-panel",
             "artwork": "assets/ad-screen/poor/3/artwork.png"
           }
+        },
+        {
+          "id": "brand:sluice-grub",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
+            "normal": "assets/ad-screen/poor/3/normal.png",
+            "roughness": "assets/ad-screen/poor/3/roughness.png",
+            "metallic": "assets/ad-screen/poor/3/metallic.png",
+            "height": "assets/ad-screen/poor/3/height.png",
+            "ao": "assets/ad-screen/poor/3/ao.png",
+            "emission": "assets/ad-screen/poor/brand/sluice-grub/emission.png"
+          }
+        },
+        {
+          "id": "brand:sump-exchange",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/2/basecolor.png",
+            "normal": "assets/ad-screen/poor/2/normal.png",
+            "roughness": "assets/ad-screen/poor/2/roughness.png",
+            "metallic": "assets/ad-screen/poor/2/metallic.png",
+            "height": "assets/ad-screen/poor/2/height.png",
+            "ao": "assets/ad-screen/poor/2/ao.png",
+            "emission": "assets/ad-screen/poor/brand/sump-exchange/emission.png"
+          }
+        },
+        {
+          "id": "brand:rust-bucket-eatery",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
+            "normal": "assets/ad-screen/poor/3/normal.png",
+            "roughness": "assets/ad-screen/poor/3/roughness.png",
+            "metallic": "assets/ad-screen/poor/3/metallic.png",
+            "height": "assets/ad-screen/poor/3/height.png",
+            "ao": "assets/ad-screen/poor/3/ao.png",
+            "emission": "assets/ad-screen/poor/brand/rust-bucket-eatery/emission.png"
+          }
+        },
+        {
+          "id": "brand:dredge-feed",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
+            "normal": "assets/ad-screen/poor/3/normal.png",
+            "roughness": "assets/ad-screen/poor/3/roughness.png",
+            "metallic": "assets/ad-screen/poor/3/metallic.png",
+            "height": "assets/ad-screen/poor/3/height.png",
+            "ao": "assets/ad-screen/poor/3/ao.png",
+            "emission": "assets/ad-screen/poor/brand/dredge-feed/emission.png"
+          }
+        },
+        {
+          "id": "brand:sump-locks",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
+            "normal": "assets/ad-screen/poor/3/normal.png",
+            "roughness": "assets/ad-screen/poor/3/roughness.png",
+            "metallic": "assets/ad-screen/poor/3/metallic.png",
+            "height": "assets/ad-screen/poor/3/height.png",
+            "ao": "assets/ad-screen/poor/3/ao.png",
+            "emission": "assets/ad-screen/poor/brand/sump-locks/emission.png"
+          }
+        },
+        {
+          "id": "brand:sump-grime",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/1/basecolor.png",
+            "normal": "assets/ad-screen/poor/1/normal.png",
+            "roughness": "assets/ad-screen/poor/1/roughness.png",
+            "metallic": "assets/ad-screen/poor/1/metallic.png",
+            "height": "assets/ad-screen/poor/1/height.png",
+            "ao": "assets/ad-screen/poor/1/ao.png",
+            "emission": "assets/ad-screen/poor/brand/sump-grime/emission.png"
+          }
+        },
+        {
+          "id": "brand:levee-chow",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
+            "normal": "assets/ad-screen/poor/3/normal.png",
+            "roughness": "assets/ad-screen/poor/3/roughness.png",
+            "metallic": "assets/ad-screen/poor/3/metallic.png",
+            "height": "assets/ad-screen/poor/3/height.png",
+            "ao": "assets/ad-screen/poor/3/ao.png",
+            "emission": "assets/ad-screen/poor/brand/levee-chow/emission.png"
+          }
+        },
+        {
+          "id": "brand:tide-mare-tavern",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
+            "normal": "assets/ad-screen/poor/3/normal.png",
+            "roughness": "assets/ad-screen/poor/3/roughness.png",
+            "metallic": "assets/ad-screen/poor/3/metallic.png",
+            "height": "assets/ad-screen/poor/3/height.png",
+            "ao": "assets/ad-screen/poor/3/ao.png",
+            "emission": "assets/ad-screen/poor/brand/tide-mare-tavern/emission.png"
+          }
+        },
+        {
+          "id": "brand:muck-mesh",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
+            "normal": "assets/ad-screen/poor/3/normal.png",
+            "roughness": "assets/ad-screen/poor/3/roughness.png",
+            "metallic": "assets/ad-screen/poor/3/metallic.png",
+            "height": "assets/ad-screen/poor/3/height.png",
+            "ao": "assets/ad-screen/poor/3/ao.png",
+            "emission": "assets/ad-screen/poor/brand/muck-mesh/emission.png"
+          }
+        },
+        {
+          "id": "brand:barrel-bottom-bistro",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/2/basecolor.png",
+            "normal": "assets/ad-screen/poor/2/normal.png",
+            "roughness": "assets/ad-screen/poor/2/roughness.png",
+            "metallic": "assets/ad-screen/poor/2/metallic.png",
+            "height": "assets/ad-screen/poor/2/height.png",
+            "ao": "assets/ad-screen/poor/2/ao.png",
+            "emission": "assets/ad-screen/poor/brand/barrel-bottom-bistro/emission.png"
+          }
+        },
+        {
+          "id": "brand:weir-watcher-s-table",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/2/basecolor.png",
+            "normal": "assets/ad-screen/poor/2/normal.png",
+            "roughness": "assets/ad-screen/poor/2/roughness.png",
+            "metallic": "assets/ad-screen/poor/2/metallic.png",
+            "height": "assets/ad-screen/poor/2/height.png",
+            "ao": "assets/ad-screen/poor/2/ao.png",
+            "emission": "assets/ad-screen/poor/brand/weir-watcher-s-table/emission.png"
+          }
+        },
+        {
+          "id": "brand:damp-rat-diner",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/1/basecolor.png",
+            "normal": "assets/ad-screen/poor/1/normal.png",
+            "roughness": "assets/ad-screen/poor/1/roughness.png",
+            "metallic": "assets/ad-screen/poor/1/metallic.png",
+            "height": "assets/ad-screen/poor/1/height.png",
+            "ao": "assets/ad-screen/poor/1/ao.png",
+            "emission": "assets/ad-screen/poor/brand/damp-rat-diner/emission.png"
+          }
+        },
+        {
+          "id": "brand:sump-soup-stand",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/1/basecolor.png",
+            "normal": "assets/ad-screen/poor/1/normal.png",
+            "roughness": "assets/ad-screen/poor/1/roughness.png",
+            "metallic": "assets/ad-screen/poor/1/metallic.png",
+            "height": "assets/ad-screen/poor/1/height.png",
+            "ao": "assets/ad-screen/poor/1/ao.png",
+            "emission": "assets/ad-screen/poor/brand/sump-soup-stand/emission.png"
+          }
+        },
+        {
+          "id": "brand:rusty-weir",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/1/basecolor.png",
+            "normal": "assets/ad-screen/poor/1/normal.png",
+            "roughness": "assets/ad-screen/poor/1/roughness.png",
+            "metallic": "assets/ad-screen/poor/1/metallic.png",
+            "height": "assets/ad-screen/poor/1/height.png",
+            "ao": "assets/ad-screen/poor/1/ao.png",
+            "emission": "assets/ad-screen/poor/brand/rusty-weir/emission.png"
+          }
+        },
+        {
+          "id": "brand:grime-grain",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/poor/1/basecolor.png",
+            "normal": "assets/ad-screen/poor/1/normal.png",
+            "roughness": "assets/ad-screen/poor/1/roughness.png",
+            "metallic": "assets/ad-screen/poor/1/metallic.png",
+            "height": "assets/ad-screen/poor/1/height.png",
+            "ao": "assets/ad-screen/poor/1/ao.png",
+            "emission": "assets/ad-screen/poor/brand/grime-grain/emission.png"
+          }
         }
       ]
     },
@@ -6517,6 +6753,22 @@
             "kind": "glyph-panel",
             "artwork": "assets/ad-screen/mid/3/artwork.png"
           }
+        },
+        {
+          "id": "brand:yard-exchange",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/mid/3/basecolor.png",
+            "normal": "assets/ad-screen/mid/3/normal.png",
+            "roughness": "assets/ad-screen/mid/3/roughness.png",
+            "metallic": "assets/ad-screen/mid/3/metallic.png",
+            "height": "assets/ad-screen/mid/3/height.png",
+            "ao": "assets/ad-screen/mid/3/ao.png",
+            "emission": "assets/ad-screen/mid/brand/yard-exchange/emission.png"
+          }
         }
       ]
     },
@@ -6593,6 +6845,54 @@
           "screen": {
             "kind": "glyph-panel",
             "artwork": "assets/ad-screen/rich/3/artwork.png"
+          }
+        },
+        {
+          "id": "brand:vantablack",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/rich/2/basecolor.png",
+            "normal": "assets/ad-screen/rich/2/normal.png",
+            "roughness": "assets/ad-screen/rich/2/roughness.png",
+            "metallic": "assets/ad-screen/rich/2/metallic.png",
+            "height": "assets/ad-screen/rich/2/height.png",
+            "ao": "assets/ad-screen/rich/2/ao.png",
+            "emission": "assets/ad-screen/rich/brand/vantablack/emission.png"
+          }
+        },
+        {
+          "id": "brand:high-glass-holdings",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/rich/2/basecolor.png",
+            "normal": "assets/ad-screen/rich/2/normal.png",
+            "roughness": "assets/ad-screen/rich/2/roughness.png",
+            "metallic": "assets/ad-screen/rich/2/metallic.png",
+            "height": "assets/ad-screen/rich/2/height.png",
+            "ao": "assets/ad-screen/rich/2/ao.png",
+            "emission": "assets/ad-screen/rich/brand/high-glass-holdings/emission.png"
+          }
+        },
+        {
+          "id": "brand:the-meridian",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/rich/2/basecolor.png",
+            "normal": "assets/ad-screen/rich/2/normal.png",
+            "roughness": "assets/ad-screen/rich/2/roughness.png",
+            "metallic": "assets/ad-screen/rich/2/metallic.png",
+            "height": "assets/ad-screen/rich/2/height.png",
+            "ao": "assets/ad-screen/rich/2/ao.png",
+            "emission": "assets/ad-screen/rich/brand/the-meridian/emission.png"
           }
         }
       ]
@@ -6707,6 +7007,374 @@
             "height": "assets/ad-screen/high_rich/3/height.png",
             "ao": "assets/ad-screen/high_rich/3/ao.png",
             "emission": "assets/ad-screen/high_rich/brand/the-grand-meridian-hotel/emission.png"
+          }
+        },
+        {
+          "id": "brand:aurelian-hydro",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/2/normal.png",
+            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
+            "height": "assets/ad-screen/high_rich/2/height.png",
+            "ao": "assets/ad-screen/high_rich/2/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/aurelian-hydro/emission.png"
+          }
+        },
+        {
+          "id": "brand:lumina",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/3/normal.png",
+            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
+            "height": "assets/ad-screen/high_rich/3/height.png",
+            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/lumina/emission.png"
+          }
+        },
+        {
+          "id": "brand:the-apex-weir",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/1/normal.png",
+            "roughness": "assets/ad-screen/high_rich/1/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/1/metallic.png",
+            "height": "assets/ad-screen/high_rich/1/height.png",
+            "ao": "assets/ad-screen/high_rich/1/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/the-apex-weir/emission.png"
+          }
+        },
+        {
+          "id": "brand:vantablack-dynamics",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/1/normal.png",
+            "roughness": "assets/ad-screen/high_rich/1/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/1/metallic.png",
+            "height": "assets/ad-screen/high_rich/1/height.png",
+            "ao": "assets/ad-screen/high_rich/1/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/vantablack-dynamics/emission.png"
+          }
+        },
+        {
+          "id": "brand:apex-void",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/1/normal.png",
+            "roughness": "assets/ad-screen/high_rich/1/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/1/metallic.png",
+            "height": "assets/ad-screen/high_rich/1/height.png",
+            "ao": "assets/ad-screen/high_rich/1/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/apex-void/emission.png"
+          }
+        },
+        {
+          "id": "brand:vault-spire",
+          "resolution": [
+            4096,
+            2304
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/premium-soda/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/premium-soda/normal.png",
+            "roughness": "assets/ad-screen/high_rich/premium-soda/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/premium-soda/metallic.png",
+            "height": "assets/ad-screen/high_rich/premium-soda/height.png",
+            "ao": "assets/ad-screen/high_rich/premium-soda/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/vault-spire/emission.png"
+          }
+        },
+        {
+          "id": "brand:solara-prime",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/1/normal.png",
+            "roughness": "assets/ad-screen/high_rich/1/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/1/metallic.png",
+            "height": "assets/ad-screen/high_rich/1/height.png",
+            "ao": "assets/ad-screen/high_rich/1/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/solara-prime/emission.png"
+          }
+        },
+        {
+          "id": "brand:aether",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/2/normal.png",
+            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
+            "height": "assets/ad-screen/high_rich/2/height.png",
+            "ao": "assets/ad-screen/high_rich/2/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/aether/emission.png"
+          }
+        },
+        {
+          "id": "brand:orbis-levee",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/3/normal.png",
+            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
+            "height": "assets/ad-screen/high_rich/3/height.png",
+            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/orbis-levee/emission.png"
+          }
+        },
+        {
+          "id": "brand:zenith-tower",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/2/normal.png",
+            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
+            "height": "assets/ad-screen/high_rich/2/height.png",
+            "ao": "assets/ad-screen/high_rich/2/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/zenith-tower/emission.png"
+          }
+        },
+        {
+          "id": "brand:vitalis-spire-clinic",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/1/normal.png",
+            "roughness": "assets/ad-screen/high_rich/1/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/1/metallic.png",
+            "height": "assets/ad-screen/high_rich/1/height.png",
+            "ao": "assets/ad-screen/high_rich/1/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/vitalis-spire-clinic/emission.png"
+          }
+        },
+        {
+          "id": "brand:glass-citadel",
+          "resolution": [
+            4096,
+            2304
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/premium-soda/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/premium-soda/normal.png",
+            "roughness": "assets/ad-screen/high_rich/premium-soda/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/premium-soda/metallic.png",
+            "height": "assets/ad-screen/high_rich/premium-soda/height.png",
+            "ao": "assets/ad-screen/high_rich/premium-soda/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/glass-citadel/emission.png"
+          }
+        },
+        {
+          "id": "brand:zenith-tides",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/3/normal.png",
+            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
+            "height": "assets/ad-screen/high_rich/3/height.png",
+            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/zenith-tides/emission.png"
+          }
+        },
+        {
+          "id": "brand:zenith-pure",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/1/normal.png",
+            "roughness": "assets/ad-screen/high_rich/1/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/1/metallic.png",
+            "height": "assets/ad-screen/high_rich/1/height.png",
+            "ao": "assets/ad-screen/high_rich/1/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/zenith-pure/emission.png"
+          }
+        },
+        {
+          "id": "brand:oxide-filter",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/2/normal.png",
+            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
+            "height": "assets/ad-screen/high_rich/2/height.png",
+            "ao": "assets/ad-screen/high_rich/2/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/oxide-filter/emission.png"
+          }
+        },
+        {
+          "id": "brand:apex-weir-corp",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/2/normal.png",
+            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
+            "height": "assets/ad-screen/high_rich/2/height.png",
+            "ao": "assets/ad-screen/high_rich/2/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/apex-weir-corp/emission.png"
+          }
+        },
+        {
+          "id": "brand:oculus",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/3/normal.png",
+            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
+            "height": "assets/ad-screen/high_rich/3/height.png",
+            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/oculus/emission.png"
+          }
+        },
+        {
+          "id": "brand:zenith-dining",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/3/normal.png",
+            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
+            "height": "assets/ad-screen/high_rich/3/height.png",
+            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/zenith-dining/emission.png"
+          }
+        },
+        {
+          "id": "brand:apex-lounge",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/2/normal.png",
+            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
+            "height": "assets/ad-screen/high_rich/2/height.png",
+            "ao": "assets/ad-screen/high_rich/2/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/apex-lounge/emission.png"
+          }
+        },
+        {
+          "id": "brand:the-glass-house",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/3/normal.png",
+            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
+            "height": "assets/ad-screen/high_rich/3/height.png",
+            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/the-glass-house/emission.png"
+          }
+        },
+        {
+          "id": "brand:elysium",
+          "resolution": [
+            1280,
+            720
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/2/normal.png",
+            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
+            "height": "assets/ad-screen/high_rich/2/height.png",
+            "ao": "assets/ad-screen/high_rich/2/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/elysium/emission.png"
+          }
+        },
+        {
+          "id": "brand:void",
+          "resolution": [
+            4096,
+            2304
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/premium-soda/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/premium-soda/normal.png",
+            "roughness": "assets/ad-screen/high_rich/premium-soda/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/premium-soda/metallic.png",
+            "height": "assets/ad-screen/high_rich/premium-soda/height.png",
+            "ao": "assets/ad-screen/high_rich/premium-soda/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/void/emission.png"
+          }
+        },
+        {
+          "id": "brand:stratos",
+          "resolution": [
+            4096,
+            2304
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen/high_rich/premium-soda/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/premium-soda/normal.png",
+            "roughness": "assets/ad-screen/high_rich/premium-soda/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/premium-soda/metallic.png",
+            "height": "assets/ad-screen/high_rich/premium-soda/height.png",
+            "ao": "assets/ad-screen/high_rich/premium-soda/ao.png",
+            "emission": "assets/ad-screen/high_rich/brand/stratos/emission.png"
           }
         }
       ]
@@ -7765,6 +8433,678 @@
             "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
             "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
             "emission": "assets/ad-screen-tall/high_rich/brand/the-grand-meridian-hotel/emission.png"
+          }
+        },
+        {
+          "id": "brand:aurelian-hydro",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/aurelian-hydro/emission.png"
+          }
+        },
+        {
+          "id": "brand:sluice-grub",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/sluice-grub/emission.png"
+          }
+        },
+        {
+          "id": "brand:lumina",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/lumina/emission.png"
+          }
+        },
+        {
+          "id": "brand:the-apex-weir",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/the-apex-weir/emission.png"
+          }
+        },
+        {
+          "id": "brand:sump-exchange",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/sump-exchange/emission.png"
+          }
+        },
+        {
+          "id": "brand:vantablack-dynamics",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/vantablack-dynamics/emission.png"
+          }
+        },
+        {
+          "id": "brand:rust-bucket-eatery",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/rust-bucket-eatery/emission.png"
+          }
+        },
+        {
+          "id": "brand:dredge-feed",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/dredge-feed/emission.png"
+          }
+        },
+        {
+          "id": "brand:apex-void",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/apex-void/emission.png"
+          }
+        },
+        {
+          "id": "brand:vault-spire",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/vault-spire/emission.png"
+          }
+        },
+        {
+          "id": "brand:solara-prime",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/solara-prime/emission.png"
+          }
+        },
+        {
+          "id": "brand:aether",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/aether/emission.png"
+          }
+        },
+        {
+          "id": "brand:sump-locks",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/sump-locks/emission.png"
+          }
+        },
+        {
+          "id": "brand:orbis-levee",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/orbis-levee/emission.png"
+          }
+        },
+        {
+          "id": "brand:zenith-tower",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/zenith-tower/emission.png"
+          }
+        },
+        {
+          "id": "brand:sump-grime",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/sump-grime/emission.png"
+          }
+        },
+        {
+          "id": "brand:levee-chow",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/levee-chow/emission.png"
+          }
+        },
+        {
+          "id": "brand:tide-mare-tavern",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/tide-mare-tavern/emission.png"
+          }
+        },
+        {
+          "id": "brand:muck-mesh",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/muck-mesh/emission.png"
+          }
+        },
+        {
+          "id": "brand:vitalis-spire-clinic",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/vitalis-spire-clinic/emission.png"
+          }
+        },
+        {
+          "id": "brand:glass-citadel",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/glass-citadel/emission.png"
+          }
+        },
+        {
+          "id": "brand:barrel-bottom-bistro",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/barrel-bottom-bistro/emission.png"
+          }
+        },
+        {
+          "id": "brand:zenith-tides",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/zenith-tides/emission.png"
+          }
+        },
+        {
+          "id": "brand:zenith-pure",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/zenith-pure/emission.png"
+          }
+        },
+        {
+          "id": "brand:weir-watcher-s-table",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/weir-watcher-s-table/emission.png"
+          }
+        },
+        {
+          "id": "brand:damp-rat-diner",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/damp-rat-diner/emission.png"
+          }
+        },
+        {
+          "id": "brand:sump-soup-stand",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/sump-soup-stand/emission.png"
+          }
+        },
+        {
+          "id": "brand:oxide-filter",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/oxide-filter/emission.png"
+          }
+        },
+        {
+          "id": "brand:vantablack",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/vantablack/emission.png"
+          }
+        },
+        {
+          "id": "brand:apex-weir-corp",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/apex-weir-corp/emission.png"
+          }
+        },
+        {
+          "id": "brand:high-glass-holdings",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/high-glass-holdings/emission.png"
+          }
+        },
+        {
+          "id": "brand:rusty-weir",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/rusty-weir/emission.png"
+          }
+        },
+        {
+          "id": "brand:grime-grain",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/grime-grain/emission.png"
+          }
+        },
+        {
+          "id": "brand:oculus",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/oculus/emission.png"
+          }
+        },
+        {
+          "id": "brand:yard-exchange",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/yard-exchange/emission.png"
+          }
+        },
+        {
+          "id": "brand:zenith-dining",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/zenith-dining/emission.png"
+          }
+        },
+        {
+          "id": "brand:the-meridian",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/the-meridian/emission.png"
+          }
+        },
+        {
+          "id": "brand:apex-lounge",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/apex-lounge/emission.png"
+          }
+        },
+        {
+          "id": "brand:the-glass-house",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/the-glass-house/emission.png"
+          }
+        },
+        {
+          "id": "brand:elysium",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/elysium/emission.png"
+          }
+        },
+        {
+          "id": "brand:void",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/void/emission.png"
+          }
+        },
+        {
+          "id": "brand:stratos",
+          "resolution": [
+            2304,
+            4096
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/brand/stratos/emission.png"
           }
         }
       ]

@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.3: window frames, aperture frames, balcony rails and doors are one even dark painted steel (metallic, roughness 0.5); columns one honed dark stone: flat parametric sets, no noise pattern, no relief.
 0.9.2: the linear luminaire is one uniform diffuser; its housing is the fixture geometry, so a strip reads as one lit line at any angle its UVs run.
 
 0.9.1: the wall entry leads with its panel variant (tonal variation, chamfered seams) so a consumer taking the canonical one gets a flat wall; the linear luminaire's diffuser runs along the fixture, its housing along the sides, so a strip reads as one lit line however long it is.

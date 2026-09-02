@@ -2,47 +2,7 @@
   {
     "key": "cyberpunk/column/poor",
     "alignment": "tile",
-    "description": "raw concrete structural column surface, formwork board marks, grime and moisture stains",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.92,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.25,
-      "relief": 2
-    },
-    "variants": 2
-  },
-  {
-    "key": "cyberpunk/column/mid",
-    "alignment": "tile",
-    "description": "smooth finished concrete column surface, light wear at edges, even grey",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.8,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.2,
-      "relief": 2
-    },
-    "variants": 2
-  },
-  {
-    "key": "cyberpunk/column/rich",
-    "alignment": "tile",
-    "description": "brushed stainless steel surface with fine vertical grain, even charcoal grey",
+    "description": "honed dark stone column: flat, even, no relief",
     "tiling": {
       "worldSize": [
         1.5,
@@ -51,22 +11,20 @@
     },
     "physical": {
       "roughnessFactor": 0.5,
-      "metallicFactor": 1
+      "metallicFactor": 0
     },
-    "finish": {
-      "roughness": [
-        0.46,
-        0.56
-      ],
-      "grain": 0.15,
-      "relief": 1.6
-    },
-    "variants": 2
+    "variantId": "plain",
+    "flatColor": "#3b3d41",
+    "flatNoise": 0.04,
+    "resolution": [
+      256,
+      256
+    ]
   },
   {
-    "key": "cyberpunk/column/high_rich",
+    "key": "cyberpunk/column/mid",
     "alignment": "tile",
-    "description": "honed black granite surface, flat and immaculate, faint stone veining",
+    "description": "honed dark stone column: flat, even, no relief",
     "tiling": {
       "worldSize": [
         1.5,
@@ -74,17 +32,59 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.55,
+      "roughnessFactor": 0.5,
       "metallicFactor": 0
     },
-    "finish": {
-      "roughness": [
-        0.52,
-        0.62
-      ],
-      "grain": 0.1,
-      "relief": 1.2
+    "variantId": "plain",
+    "flatColor": "#3b3d41",
+    "flatNoise": 0.04,
+    "resolution": [
+      256,
+      256
+    ]
+  },
+  {
+    "key": "cyberpunk/column/rich",
+    "alignment": "tile",
+    "description": "honed dark stone column: flat, even, no relief",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
     },
-    "variants": 2
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0
+    },
+    "variantId": "plain",
+    "flatColor": "#3b3d41",
+    "flatNoise": 0.04,
+    "resolution": [
+      256,
+      256
+    ]
+  },
+  {
+    "key": "cyberpunk/column/high_rich",
+    "alignment": "tile",
+    "description": "honed dark stone column: flat, even, no relief",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0
+    },
+    "variantId": "plain",
+    "flatColor": "#3b3d41",
+    "flatNoise": 0.04,
+    "resolution": [
+      256,
+      256
+    ]
   }
 ]

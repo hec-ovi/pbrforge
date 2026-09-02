@@ -2,7 +2,7 @@
   {
     "key": "cyberpunk/door/poor",
     "alignment": "tile",
-    "description": "smooth dark painted steel door leaf and casing, even matte paint",
+    "description": "painted steel door leaf and casing: one even dark paint, a little metal in the reflection",
     "tiling": {
       "worldSize": [
         0.5,
@@ -10,34 +10,21 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.7,
-      "metallicFactor": 0
+      "roughnessFactor": 0.5,
+      "metallicFactor": 1
     },
     "variantId": "paint",
     "resolution": [
-      512,
-      512
+      256,
+      256
     ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#4a4642",
-        "#524e4a"
-      ],
-      "cells": [
-        6,
-        6
-      ],
-      "octaves": 2,
-      "depth": 0.03,
-      "variation": 0.02,
-      "grain": 0.012
-    }
+    "flatColor": "#25282c",
+    "flatNoise": 0.02
   },
   {
     "key": "cyberpunk/door/mid",
     "alignment": "tile",
-    "description": "smooth dark painted steel door leaf and casing, even matte paint",
+    "description": "painted steel door leaf and casing: one even dark paint, a little metal in the reflection",
     "tiling": {
       "worldSize": [
         0.5,
@@ -45,34 +32,21 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.65,
-      "metallicFactor": 0
+      "roughnessFactor": 0.5,
+      "metallicFactor": 1
     },
     "variantId": "paint",
     "resolution": [
-      512,
-      512
+      256,
+      256
     ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#33373c",
-        "#3a3e43"
-      ],
-      "cells": [
-        6,
-        6
-      ],
-      "octaves": 2,
-      "depth": 0.03,
-      "variation": 0.02,
-      "grain": 0.012
-    }
+    "flatColor": "#25282c",
+    "flatNoise": 0.02
   },
   {
     "key": "cyberpunk/door/rich",
     "alignment": "tile",
-    "description": "smooth dark painted steel door leaf and casing, even matte paint",
+    "description": "painted steel door leaf and casing: one even dark paint, a little metal in the reflection",
     "tiling": {
       "worldSize": [
         0.5,
@@ -80,34 +54,21 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.6,
-      "metallicFactor": 0
+      "roughnessFactor": 0.5,
+      "metallicFactor": 1
     },
     "variantId": "paint",
     "resolution": [
-      512,
-      512
+      256,
+      256
     ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#2a2c30",
-        "#303236"
-      ],
-      "cells": [
-        6,
-        6
-      ],
-      "octaves": 2,
-      "depth": 0.03,
-      "variation": 0.02,
-      "grain": 0.012
-    }
+    "flatColor": "#25282c",
+    "flatNoise": 0.02
   },
   {
     "key": "cyberpunk/door/high_rich",
     "alignment": "tile",
-    "description": "smooth dark painted steel door leaf and casing, even matte paint",
+    "description": "painted steel door leaf and casing: one even dark paint, a little metal in the reflection",
     "tiling": {
       "worldSize": [
         0.5,
@@ -115,28 +76,15 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 0
+      "roughnessFactor": 0.5,
+      "metallicFactor": 1
     },
     "variantId": "paint",
     "resolution": [
-      512,
-      512
+      256,
+      256
     ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#1e2024",
-        "#232529"
-      ],
-      "cells": [
-        6,
-        6
-      ],
-      "octaves": 2,
-      "depth": 0.03,
-      "variation": 0.02,
-      "grain": 0.012
-    }
+    "flatColor": "#25282c",
+    "flatNoise": 0.02
   }
 ]
