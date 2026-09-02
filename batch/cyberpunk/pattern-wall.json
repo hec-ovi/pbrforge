@@ -106,5 +106,545 @@
       "variation": 0.04,
       "grain": 0.02
     }
+  },
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "slate painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-slate",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#4d5561"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "graphite painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-graphite",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#33363a"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "bone painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-bone",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#b9b2a4"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "rust painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-rust",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#7a4a2e"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "teal painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-teal",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#2f5a5c"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "slate painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-slate",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#4d5561"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "graphite painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-graphite",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#33363a"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "bone painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-bone",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#b9b2a4"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "rust painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-rust",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#7a4a2e"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "teal painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-teal",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#2f5a5c"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "slate painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-slate",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#4d5561"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "graphite painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-graphite",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#33363a"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "bone painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-bone",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#b9b2a4"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "rust painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-rust",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#7a4a2e"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "teal painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-teal",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#2f5a5c"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "slate painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-slate",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#4d5561"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "graphite painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-graphite",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#33363a"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "bone painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-bone",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#b9b2a4"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "rust painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-rust",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#7a4a2e"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "teal painted precast panels, one metre by half, chamfered seams, tonal variation only",
+    "variantId": "panel-teal",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#2f5a5c"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
   }
 ]

@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.4: six panel families on the same one-by-half module (ochre, slate, graphite, bone, rust, teal) as pattern variants of every wall tier.
 0.9.3: window frames, aperture frames, balcony rails and doors are one even dark painted steel (metallic, roughness 0.5); columns one honed dark stone: flat parametric sets, no noise pattern, no relief.
 0.9.2: the linear luminaire is one uniform diffuser; its housing is the fixture geometry, so a strip reads as one lit line at any angle its UVs run.
 
