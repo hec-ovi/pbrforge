@@ -216,16 +216,18 @@ describe('shipped cyberpunk coverage', () => {
     expect(offences).toEqual([]);
   }, 30_000);
 
-  it('ships the steel kinds off the grain ramp, so a photograph of steel does not come back as speckle', () => {
-    const offences: string[] = [];
-    for (const kind of ['elevator_door']) {
-      for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
-        const finish = db.resolve(`cyberpunk/${kind}/${tier}`).finish;
-        if (finish?.grain !== 0.05) offences.push(`${kind}/${tier} grain ${finish?.grain}`);
-        if (!finish || finish.relief === undefined || finish.relief > 1) offences.push(`${kind}/${tier} relief ${finish?.relief}`);
+  it('fits elevator-door maps to the published exact face with no photographed source', () => {
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = db.resolve(`cyberpunk/elevator_door/${tier}`);
+      expect(entry.alignment).toBe('exact');
+      expect(entry.aspect).toEqual([1, 2]);
+      expect(entry.finish).toBeUndefined();
+      expect(entry.variants.map((variant) => variant.id)).toEqual(['split', 'graphite']);
+      for (const variant of entry.variants) {
+        expect(variant.class).toBe('pattern');
+        expect(variant.resolution).toEqual([512, 1024]);
       }
     }
-    expect(offences).toEqual([]);
   });
 
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {

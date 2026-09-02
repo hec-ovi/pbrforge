@@ -2,105 +2,161 @@
   {
     "key": "cyberpunk/elevator_door/poor",
     "alignment": "exact",
-    "description": "photograph of closed worn brushed steel elevator doors filling the frame, straight-on front view, center seam, scuffs and grime streaks, flat even light",
-    "aspect": [
-      1,
-      2
-    ],
-    "resolution": [
-      832,
-      1216
-    ],
-    "physical": {
-      "roughnessFactor": 0.6,
-      "metallicFactor": 1
+    "description": "two-leaf service lift door with a narrow center seam",
+    "aspect": [1, 2],
+    "physical": { "roughnessFactor": 0.75, "metallicFactor": 1 },
+    "variantId": "split",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#656967"],
+      "cells": [2, 1],
+      "line": 0.008,
+      "bevel": 0.008,
+      "depth": 0.12,
+      "joint": 0.35,
+      "variation": 0.015,
+      "grain": 0
     },
-    "variants": 2,
-    "finish": {
-      "roughness": [
-        0.55,
-        0.65
-      ],
-      "grain": 0.05,
-      "relief": 1
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/elevator_door/poor",
+    "alignment": "exact",
+    "append": true,
+    "description": "two-leaf dark service lift door with a narrow center seam",
+    "variantId": "graphite",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#3d4142"],
+      "cells": [2, 1],
+      "line": 0.008,
+      "bevel": 0.008,
+      "depth": 0.12,
+      "joint": 0.35,
+      "variation": 0.015,
+      "grain": 0
     }
   },
   {
     "key": "cyberpunk/elevator_door/mid",
     "alignment": "exact",
-    "description": "photograph of closed brushed steel elevator doors filling the frame, straight-on front view, center seam, light scuffs, flat even light",
-    "aspect": [
-      1,
-      2
-    ],
-    "resolution": [
-      832,
-      1216
-    ],
-    "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 1
+    "description": "two-leaf brushed-grey lift door with a narrow center seam",
+    "aspect": [1, 2],
+    "physical": { "roughnessFactor": 0.66, "metallicFactor": 1 },
+    "variantId": "split",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#777d7f"],
+      "cells": [2, 1],
+      "line": 0.007,
+      "bevel": 0.007,
+      "depth": 0.10,
+      "joint": 0.32,
+      "variation": 0.012,
+      "grain": 0
     },
-    "variants": 2,
-    "finish": {
-      "roughness": [
-        0.5,
-        0.6
-      ],
-      "grain": 0.05,
-      "relief": 1
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/elevator_door/mid",
+    "alignment": "exact",
+    "append": true,
+    "description": "two-leaf charcoal lift door with a narrow center seam",
+    "variantId": "graphite",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#383d40"],
+      "cells": [2, 1],
+      "line": 0.007,
+      "bevel": 0.007,
+      "depth": 0.10,
+      "joint": 0.32,
+      "variation": 0.012,
+      "grain": 0
     }
   },
   {
     "key": "cyberpunk/elevator_door/rich",
     "alignment": "exact",
-    "description": "photograph of closed polished steel elevator doors filling the frame, straight-on front view, thin center seam, clean charcoal finish, flat even light",
-    "aspect": [
-      1,
-      2
-    ],
-    "resolution": [
-      832,
-      1216
-    ],
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
+    "description": "two-leaf clean steel lift door with a hairline center seam",
+    "aspect": [1, 2],
+    "physical": { "roughnessFactor": 0.58, "metallicFactor": 1 },
+    "variantId": "split",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#697176"],
+      "cells": [2, 1],
+      "line": 0.006,
+      "bevel": 0.006,
+      "depth": 0.08,
+      "joint": 0.28,
+      "variation": 0.01,
+      "grain": 0
     },
-    "variants": 2,
-    "finish": {
-      "roughness": [
-        0.46,
-        0.56
-      ],
-      "grain": 0.05,
-      "relief": 0.8
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/elevator_door/rich",
+    "alignment": "exact",
+    "append": true,
+    "description": "two-leaf clean graphite lift door with a hairline center seam",
+    "variantId": "graphite",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#30363b"],
+      "cells": [2, 1],
+      "line": 0.006,
+      "bevel": 0.006,
+      "depth": 0.08,
+      "joint": 0.28,
+      "variation": 0.01,
+      "grain": 0
     }
   },
   {
     "key": "cyberpunk/elevator_door/high_rich",
     "alignment": "exact",
-    "description": "photograph of closed immaculate black brushed metal elevator doors filling the frame, straight-on front view, hairline center seam, flat even light",
-    "aspect": [
-      1,
-      2
-    ],
-    "resolution": [
-      832,
-      1216
-    ],
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
+    "description": "two-leaf black steel lift door with a hairline center seam",
+    "aspect": [1, 2],
+    "physical": { "roughnessFactor": 0.52, "metallicFactor": 1 },
+    "variantId": "split",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#343a3f"],
+      "cells": [2, 1],
+      "line": 0.005,
+      "bevel": 0.005,
+      "depth": 0.07,
+      "joint": 0.25,
+      "variation": 0.008,
+      "grain": 0
     },
-    "variants": 2,
-    "finish": {
-      "roughness": [
-        0.46,
-        0.56
-      ],
-      "grain": 0.05,
-      "relief": 0.8
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/elevator_door/high_rich",
+    "alignment": "exact",
+    "append": true,
+    "description": "two-leaf pale steel lift door with a hairline center seam",
+    "variantId": "graphite",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#7d8589"],
+      "cells": [2, 1],
+      "line": 0.005,
+      "bevel": 0.005,
+      "depth": 0.07,
+      "joint": 0.25,
+      "variation": 0.008,
+      "grain": 0
     }
   }
 ]
