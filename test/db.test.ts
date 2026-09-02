@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
@@ -112,7 +113,8 @@ const KINDS = [
 ];
 
 describe('shipped cyberpunk coverage', () => {
-  const db = new Database(join(dirname(fileURLToPath(import.meta.url)), '..', 'themes'));
+  const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+  const db = new Database(join(root, 'themes'));
 
   it('resolves every guaranteed kind at all four tiers', () => {
     const missing = KINDS.flatMap((kind) =>
@@ -153,6 +155,20 @@ describe('shipped cyberpunk coverage', () => {
         expect(lean, `${kind}/${tier} normal`).toBeLessThan(1);
       }
     }
+  });
+
+  it('references only maps that are in the repo, so a fresh clone resolves every key', () => {
+    // local rebrand output sits in the same tree but is never committed: the index must not point at it
+    const tracked = new Set(execFileSync('git', ['ls-files', 'themes/cyberpunk'], { cwd: root, encoding: 'utf8' }).split('\n'));
+    const stray: string[] = [];
+    for (const key of db.list({ theme: 'cyberpunk' })) {
+      for (const variant of db.resolve(key).variants) {
+        for (const file of Object.values(variant.maps)) {
+          if (!tracked.has(`themes/cyberpunk/${file}`)) stray.push(`${key}:${variant.id} ${file}`);
+        }
+      }
+    }
+    expect(stray).toEqual([]);
   });
 
   it('leads the flat-face kinds with a solid variant, so a face that is not a whole number of tiles shows no cut joint', async () => {

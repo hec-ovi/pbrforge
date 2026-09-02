@@ -128,7 +128,7 @@ A business of the named world gets its own screens. `rebrand({ theme, businesses
 
 An empty list is valid input: a world with no advertising parcel brands nothing and the lane returns an empty result. Errors, thrown before anything is written: a business kind outside the parcel types, a name with a character outside the atlas charset after uppercasing, or a name with no letter or digit to make a slug of is `E_SCHEMA`; a tier with no `ad-screen`, `ad-screen-tall` or `letter-atlas` entry, or an entry with no screen variant behind it, is `E_KEY_NOT_FOUND`.
 
-`batch/cyberpunk/businesses.json` is the request shape with one business, and its two variants ship in the database.
+`batch/cyberpunk/businesses.json` is the request shape with one business, and its two variants ship in the database as the sample. A world's own brands belong to that world: point `--themes <dir>` at the world's copy of the theme folder, and the maps and index entries land there. The shipped library carries only the sample, held by a test that every map the index references is in the repo, so a fresh clone resolves every key.
 
 ## Letter atlas
 

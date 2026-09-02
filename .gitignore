@@ -10,3 +10,5 @@ comfy/custom_nodes/
 CLAUDE.md
 session
 out/
+# a world's branded screens: rebrand writes them locally from the world's business list
+themes/*/assets/*/*/brand/
