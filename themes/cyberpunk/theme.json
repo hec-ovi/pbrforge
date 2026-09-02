@@ -5012,49 +5012,34 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/wall-trim/poor/1/basecolor.png",
-            "normal": "assets/wall-trim/poor/1/normal.png",
-            "roughness": "assets/wall-trim/poor/1/roughness.png",
-            "metallic": "assets/wall-trim/poor/1/metallic.png",
-            "height": "assets/wall-trim/poor/1/height.png",
-            "ao": "assets/wall-trim/poor/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall-trim/poor/2/basecolor.png",
-            "normal": "assets/wall-trim/poor/2/normal.png",
-            "roughness": "assets/wall-trim/poor/2/roughness.png",
-            "metallic": "assets/wall-trim/poor/2/metallic.png",
-            "height": "assets/wall-trim/poor/2/height.png",
-            "ao": "assets/wall-trim/poor/2/ao.png"
+            "basecolor": "assets/wall-trim/poor/paint/basecolor.png",
+            "normal": "assets/wall-trim/poor/paint/normal.png",
+            "roughness": "assets/wall-trim/poor/paint/roughness.png",
+            "metallic": "assets/wall-trim/poor/paint/metallic.png",
+            "height": "assets/wall-trim/poor/paint/height.png",
+            "ao": "assets/wall-trim/poor/paint/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.6,
-          0.7
-        ],
-        "grain": 0.25,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/wall-trim/mid": {
       "key": "cyberpunk/wall-trim/mid",
@@ -5066,49 +5051,34 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
       },
-      "variants": [
-        {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall-trim/mid/1/basecolor.png",
-            "normal": "assets/wall-trim/mid/1/normal.png",
-            "roughness": "assets/wall-trim/mid/1/roughness.png",
-            "metallic": "assets/wall-trim/mid/1/metallic.png",
-            "height": "assets/wall-trim/mid/1/height.png",
-            "ao": "assets/wall-trim/mid/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall-trim/mid/2/basecolor.png",
-            "normal": "assets/wall-trim/mid/2/normal.png",
-            "roughness": "assets/wall-trim/mid/2/roughness.png",
-            "metallic": "assets/wall-trim/mid/2/metallic.png",
-            "height": "assets/wall-trim/mid/2/height.png",
-            "ao": "assets/wall-trim/mid/2/ao.png"
-          }
-        }
-      ],
       "finish": {
         "roughness": [
-          0.55,
-          0.65
+          0.45,
+          0.55
         ],
         "grain": 0.2,
         "relief": 2
-      }
+      },
+      "variants": [
+        {
+          "id": "paint",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/wall-trim/mid/paint/basecolor.png",
+            "normal": "assets/wall-trim/mid/paint/normal.png",
+            "roughness": "assets/wall-trim/mid/paint/roughness.png",
+            "metallic": "assets/wall-trim/mid/paint/metallic.png",
+            "height": "assets/wall-trim/mid/paint/height.png",
+            "ao": "assets/wall-trim/mid/paint/ao.png"
+          }
+        }
+      ]
     },
     "cyberpunk/wall-trim/rich": {
       "key": "cyberpunk/wall-trim/rich",
@@ -5120,49 +5090,34 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/wall-trim/rich/1/basecolor.png",
-            "normal": "assets/wall-trim/rich/1/normal.png",
-            "roughness": "assets/wall-trim/rich/1/roughness.png",
-            "metallic": "assets/wall-trim/rich/1/metallic.png",
-            "height": "assets/wall-trim/rich/1/height.png",
-            "ao": "assets/wall-trim/rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall-trim/rich/2/basecolor.png",
-            "normal": "assets/wall-trim/rich/2/normal.png",
-            "roughness": "assets/wall-trim/rich/2/roughness.png",
-            "metallic": "assets/wall-trim/rich/2/metallic.png",
-            "height": "assets/wall-trim/rich/2/height.png",
-            "ao": "assets/wall-trim/rich/2/ao.png"
+            "basecolor": "assets/wall-trim/rich/paint/basecolor.png",
+            "normal": "assets/wall-trim/rich/paint/normal.png",
+            "roughness": "assets/wall-trim/rich/paint/roughness.png",
+            "metallic": "assets/wall-trim/rich/paint/metallic.png",
+            "height": "assets/wall-trim/rich/paint/height.png",
+            "ao": "assets/wall-trim/rich/paint/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.5,
-          0.6
-        ],
-        "grain": 0.15,
-        "relief": 1.6
-      }
+      ]
     },
     "cyberpunk/wall-trim/high_rich": {
       "key": "cyberpunk/wall-trim/high_rich",
@@ -5174,49 +5129,34 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
-        "metallicFactor": 0
+        "roughnessFactor": 0.5,
+        "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/wall-trim/high_rich/1/basecolor.png",
-            "normal": "assets/wall-trim/high_rich/1/normal.png",
-            "roughness": "assets/wall-trim/high_rich/1/roughness.png",
-            "metallic": "assets/wall-trim/high_rich/1/metallic.png",
-            "height": "assets/wall-trim/high_rich/1/height.png",
-            "ao": "assets/wall-trim/high_rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall-trim/high_rich/2/basecolor.png",
-            "normal": "assets/wall-trim/high_rich/2/normal.png",
-            "roughness": "assets/wall-trim/high_rich/2/roughness.png",
-            "metallic": "assets/wall-trim/high_rich/2/metallic.png",
-            "height": "assets/wall-trim/high_rich/2/height.png",
-            "ao": "assets/wall-trim/high_rich/2/ao.png"
+            "basecolor": "assets/wall-trim/high_rich/paint/basecolor.png",
+            "normal": "assets/wall-trim/high_rich/paint/normal.png",
+            "roughness": "assets/wall-trim/high_rich/paint/roughness.png",
+            "metallic": "assets/wall-trim/high_rich/paint/metallic.png",
+            "height": "assets/wall-trim/high_rich/paint/height.png",
+            "ao": "assets/wall-trim/high_rich/paint/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.46,
-          0.56
-        ],
-        "grain": 0.1,
-        "relief": 1.2
-      }
+      ]
     },
     "cyberpunk/curtain/poor": {
       "key": "cyberpunk/curtain/poor",
