@@ -3,7 +3,7 @@
     "key": "cyberpunk/wall/poor",
     "alignment": "tile",
     "append": true,
-    "description": "ochre painted precast panels with chamfered seams, tonal variation only",
+    "description": "ochre painted precast panels, one metre square, chamfered seams, tonal variation only",
     "variantId": "panel-ochre",
     "resolution": [
       1024,
@@ -15,8 +15,8 @@
         "#7a5533"
       ],
       "cells": [
-        2,
-        2
+        3,
+        3
       ],
       "line": 0.02,
       "bevel": 0.03,
@@ -30,7 +30,7 @@
     "key": "cyberpunk/wall/mid",
     "alignment": "tile",
     "append": true,
-    "description": "ochre painted precast panels with chamfered seams, tonal variation only",
+    "description": "ochre painted precast panels, one metre square, chamfered seams, tonal variation only",
     "variantId": "panel-ochre",
     "resolution": [
       1024,
@@ -42,8 +42,8 @@
         "#8c6239"
       ],
       "cells": [
-        2,
-        2
+        3,
+        3
       ],
       "line": 0.02,
       "bevel": 0.03,
@@ -57,7 +57,7 @@
     "key": "cyberpunk/wall/rich",
     "alignment": "tile",
     "append": true,
-    "description": "ochre painted precast panels with chamfered seams, tonal variation only",
+    "description": "ochre painted precast panels, one metre square, chamfered seams, tonal variation only",
     "variantId": "panel-ochre",
     "resolution": [
       1024,
@@ -69,8 +69,8 @@
         "#996b3e"
       ],
       "cells": [
-        2,
-        2
+        3,
+        3
       ],
       "line": 0.02,
       "bevel": 0.03,
@@ -84,7 +84,7 @@
     "key": "cyberpunk/wall/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "ochre painted precast panels with chamfered seams, tonal variation only",
+    "description": "ochre painted precast panels, one metre square, chamfered seams, tonal variation only",
     "variantId": "panel-ochre",
     "resolution": [
       1024,
@@ -96,8 +96,8 @@
         "#8f6238"
       ],
       "cells": [
-        2,
-        2
+        3,
+        3
       ],
       "line": 0.02,
       "bevel": 0.03,
