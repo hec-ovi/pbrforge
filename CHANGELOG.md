@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.18: curtains are deterministic 1.5 x 3 m bay materials at 384 x 768 px: twelve shallow vertical blind slats or a plain blackout shade. Both keep equal texel density and avoid photographed weave noise behind glass.
 0.9.17: elevator doors are exact 1:2 procedural faces at 512 x 1024 px. Each tier carries two matte steel tones with a fitted center seam, replacing photographs whose aspect did not match the placement face.
 0.9.16: rooftop equipment uses flat dark paint and zinc finishes on 0.5 m tiles. Utility boxes and machine shells keep their geometry without random photographed plate patterns crossing them.
 0.9.15: fire escapes use flat dark paint and zinc finishes on 0.5 m tiles. The shaped stair, rail and tread geometry keeps its silhouette without photographic pebbles, folds or plate seams crossing it.

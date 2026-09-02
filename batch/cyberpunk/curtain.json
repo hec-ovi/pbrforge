@@ -2,81 +2,85 @@
   {
     "key": "cyberpunk/curtain/poor",
     "alignment": "tile",
-    "description": "hanging fabric curtain surface with soft vertical folds, faded grey-green, dusty",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.95,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.25,
-      "relief": 2
-    },
-    "variants": 2
+    "description": "faded grey-green vertical office blind, matte and evenly pleated",
+    "tiling": { "worldSize": [1.5, 3] },
+    "physical": { "roughnessFactor": 0.95, "metallicFactor": 0 },
+    "variantId": "blind",
+    "resolution": [384, 768],
+    "pattern": { "kind": "stripe", "colors": ["#676d68", "#5d625e"], "cells": [12, 1], "axis": "x", "split": 0.88, "line": 0.006, "depth": 0.10, "joint": 0.10, "variation": 0.01, "grain": 0 },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/curtain/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "faded grey blackout shade, plain matte cloth",
+    "variantId": "shade",
+    "flatColor": "#62635f",
+    "flatNoise": 0,
+    "resolution": [384, 768]
   },
   {
     "key": "cyberpunk/curtain/mid",
     "alignment": "tile",
-    "description": "hanging fabric curtain surface with soft vertical folds, muted grey",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.95,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.2,
-      "relief": 2
-    },
-    "variants": 2
+    "description": "muted grey vertical office blind, matte and evenly pleated",
+    "tiling": { "worldSize": [1.5, 3] },
+    "physical": { "roughnessFactor": 0.93, "metallicFactor": 0 },
+    "variantId": "blind",
+    "resolution": [384, 768],
+    "pattern": { "kind": "stripe", "colors": ["#777b7a", "#6d7170"], "cells": [12, 1], "axis": "x", "split": 0.88, "line": 0.006, "depth": 0.09, "joint": 0.09, "variation": 0.01, "grain": 0 },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/curtain/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "muted grey blackout shade, plain matte cloth",
+    "variantId": "shade",
+    "flatColor": "#727574",
+    "flatNoise": 0,
+    "resolution": [384, 768]
   },
   {
     "key": "cyberpunk/curtain/rich",
     "alignment": "tile",
-    "description": "heavy fabric curtain surface with deep vertical folds, dark blue-grey",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.92,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.15,
-      "relief": 1.6
-    },
-    "variants": 2
+    "description": "dark blue-grey vertical office blind, matte and evenly pleated",
+    "tiling": { "worldSize": [1.5, 3] },
+    "physical": { "roughnessFactor": 0.90, "metallicFactor": 0 },
+    "variantId": "blind",
+    "resolution": [384, 768],
+    "pattern": { "kind": "stripe", "colors": ["#4d5860", "#444e55"], "cells": [12, 1], "axis": "x", "split": 0.88, "line": 0.005, "depth": 0.08, "joint": 0.08, "variation": 0.008, "grain": 0 },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/curtain/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "deep blue-grey blackout shade, plain matte cloth",
+    "variantId": "shade",
+    "flatColor": "#444e55",
+    "flatNoise": 0,
+    "resolution": [384, 768]
   },
   {
     "key": "cyberpunk/curtain/high_rich",
     "alignment": "tile",
-    "description": "smooth heavy fabric curtain surface with even vertical folds, deep charcoal, immaculate",
-    "tiling": {
-      "worldSize": [
-        1.5,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.9,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.1,
-      "relief": 1.2
-    },
-    "variants": 2
+    "description": "deep charcoal vertical office blind, matte and evenly pleated",
+    "tiling": { "worldSize": [1.5, 3] },
+    "physical": { "roughnessFactor": 0.88, "metallicFactor": 0 },
+    "variantId": "blind",
+    "resolution": [384, 768],
+    "pattern": { "kind": "stripe", "colors": ["#30353a", "#292e32"], "cells": [12, 1], "axis": "x", "split": 0.88, "line": 0.005, "depth": 0.07, "joint": 0.07, "variation": 0.006, "grain": 0 },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/curtain/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "deep charcoal blackout shade, plain matte cloth",
+    "variantId": "shade",
+    "flatColor": "#292e32",
+    "flatNoise": 0,
+    "resolution": [384, 768]
   }
 ]

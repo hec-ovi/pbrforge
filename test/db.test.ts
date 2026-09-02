@@ -230,6 +230,18 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
+  it('fits deterministic curtains to the 1.5 x 3 m bay without stretching', () => {
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = db.resolve(`cyberpunk/curtain/${tier}`);
+      expect(entry.tiling?.worldSize).toEqual([1.5, 3]);
+      expect(entry.finish).toBeUndefined();
+      expect(entry.variants.map((variant) => [variant.id, variant.class, variant.resolution])).toEqual([
+        ['blind', 'pattern', [384, 768]],
+        ['shade', 'flat', [384, 768]],
+      ]);
+    }
+  });
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');

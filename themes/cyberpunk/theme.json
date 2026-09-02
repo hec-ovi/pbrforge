@@ -5673,44 +5673,38 @@
       },
       "variants": [
         {
-          "id": "1",
+          "id": "blind",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            384,
+            768
           ],
           "maps": {
-            "basecolor": "assets/curtain/poor/1/basecolor.png",
-            "normal": "assets/curtain/poor/1/normal.png",
-            "roughness": "assets/curtain/poor/1/roughness.png",
-            "metallic": "assets/curtain/poor/1/metallic.png",
-            "height": "assets/curtain/poor/1/height.png",
-            "ao": "assets/curtain/poor/1/ao.png"
+            "basecolor": "assets/curtain/poor/blind/basecolor.png",
+            "normal": "assets/curtain/poor/blind/normal.png",
+            "roughness": "assets/curtain/poor/blind/roughness.png",
+            "metallic": "assets/curtain/poor/blind/metallic.png",
+            "height": "assets/curtain/poor/blind/height.png",
+            "ao": "assets/curtain/poor/blind/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "shade",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            384,
+            768
           ],
           "maps": {
-            "basecolor": "assets/curtain/poor/2/basecolor.png",
-            "normal": "assets/curtain/poor/2/normal.png",
-            "roughness": "assets/curtain/poor/2/roughness.png",
-            "metallic": "assets/curtain/poor/2/metallic.png",
-            "height": "assets/curtain/poor/2/height.png",
-            "ao": "assets/curtain/poor/2/ao.png"
+            "basecolor": "assets/curtain/poor/shade/basecolor.png",
+            "normal": "assets/curtain/poor/shade/normal.png",
+            "roughness": "assets/curtain/poor/shade/roughness.png",
+            "metallic": "assets/curtain/poor/shade/metallic.png",
+            "height": "assets/curtain/poor/shade/height.png",
+            "ao": "assets/curtain/poor/shade/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.9,
-          1
-        ],
-        "grain": 0.25,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/curtain/mid": {
       "key": "cyberpunk/curtain/mid",
@@ -5722,106 +5716,46 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.95,
+        "roughnessFactor": 0.93,
         "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "1",
+          "id": "blind",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            384,
+            768
           ],
           "maps": {
-            "basecolor": "assets/curtain/mid/1/basecolor.png",
-            "normal": "assets/curtain/mid/1/normal.png",
-            "roughness": "assets/curtain/mid/1/roughness.png",
-            "metallic": "assets/curtain/mid/1/metallic.png",
-            "height": "assets/curtain/mid/1/height.png",
-            "ao": "assets/curtain/mid/1/ao.png"
+            "basecolor": "assets/curtain/mid/blind/basecolor.png",
+            "normal": "assets/curtain/mid/blind/normal.png",
+            "roughness": "assets/curtain/mid/blind/roughness.png",
+            "metallic": "assets/curtain/mid/blind/metallic.png",
+            "height": "assets/curtain/mid/blind/height.png",
+            "ao": "assets/curtain/mid/blind/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "shade",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            384,
+            768
           ],
           "maps": {
-            "basecolor": "assets/curtain/mid/2/basecolor.png",
-            "normal": "assets/curtain/mid/2/normal.png",
-            "roughness": "assets/curtain/mid/2/roughness.png",
-            "metallic": "assets/curtain/mid/2/metallic.png",
-            "height": "assets/curtain/mid/2/height.png",
-            "ao": "assets/curtain/mid/2/ao.png"
+            "basecolor": "assets/curtain/mid/shade/basecolor.png",
+            "normal": "assets/curtain/mid/shade/normal.png",
+            "roughness": "assets/curtain/mid/shade/roughness.png",
+            "metallic": "assets/curtain/mid/shade/metallic.png",
+            "height": "assets/curtain/mid/shade/height.png",
+            "ao": "assets/curtain/mid/shade/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.9,
-          1
-        ],
-        "grain": 0.2,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/curtain/rich": {
       "key": "cyberpunk/curtain/rich",
-      "alignment": "tile",
-      "tiling": {
-        "worldSize": [
-          1.5,
-          3
-        ]
-      },
-      "physical": {
-        "roughnessFactor": 0.92,
-        "metallicFactor": 0
-      },
-      "variants": [
-        {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/curtain/rich/1/basecolor.png",
-            "normal": "assets/curtain/rich/1/normal.png",
-            "roughness": "assets/curtain/rich/1/roughness.png",
-            "metallic": "assets/curtain/rich/1/metallic.png",
-            "height": "assets/curtain/rich/1/height.png",
-            "ao": "assets/curtain/rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/curtain/rich/2/basecolor.png",
-            "normal": "assets/curtain/rich/2/normal.png",
-            "roughness": "assets/curtain/rich/2/roughness.png",
-            "metallic": "assets/curtain/rich/2/metallic.png",
-            "height": "assets/curtain/rich/2/height.png",
-            "ao": "assets/curtain/rich/2/ao.png"
-          }
-        }
-      ],
-      "finish": {
-        "roughness": [
-          0.87,
-          0.97
-        ],
-        "grain": 0.15,
-        "relief": 1.6
-      }
-    },
-    "cyberpunk/curtain/high_rich": {
-      "key": "cyberpunk/curtain/high_rich",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -5835,44 +5769,86 @@
       },
       "variants": [
         {
-          "id": "1",
+          "id": "blind",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            384,
+            768
           ],
           "maps": {
-            "basecolor": "assets/curtain/high_rich/1/basecolor.png",
-            "normal": "assets/curtain/high_rich/1/normal.png",
-            "roughness": "assets/curtain/high_rich/1/roughness.png",
-            "metallic": "assets/curtain/high_rich/1/metallic.png",
-            "height": "assets/curtain/high_rich/1/height.png",
-            "ao": "assets/curtain/high_rich/1/ao.png"
+            "basecolor": "assets/curtain/rich/blind/basecolor.png",
+            "normal": "assets/curtain/rich/blind/normal.png",
+            "roughness": "assets/curtain/rich/blind/roughness.png",
+            "metallic": "assets/curtain/rich/blind/metallic.png",
+            "height": "assets/curtain/rich/blind/height.png",
+            "ao": "assets/curtain/rich/blind/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "shade",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            384,
+            768
           ],
           "maps": {
-            "basecolor": "assets/curtain/high_rich/2/basecolor.png",
-            "normal": "assets/curtain/high_rich/2/normal.png",
-            "roughness": "assets/curtain/high_rich/2/roughness.png",
-            "metallic": "assets/curtain/high_rich/2/metallic.png",
-            "height": "assets/curtain/high_rich/2/height.png",
-            "ao": "assets/curtain/high_rich/2/ao.png"
+            "basecolor": "assets/curtain/rich/shade/basecolor.png",
+            "normal": "assets/curtain/rich/shade/normal.png",
+            "roughness": "assets/curtain/rich/shade/roughness.png",
+            "metallic": "assets/curtain/rich/shade/metallic.png",
+            "height": "assets/curtain/rich/shade/height.png",
+            "ao": "assets/curtain/rich/shade/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.85,
-          0.95
-        ],
-        "grain": 0.1,
-        "relief": 1.2
-      }
+      ]
+    },
+    "cyberpunk/curtain/high_rich": {
+      "key": "cyberpunk/curtain/high_rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          3
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.88,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "blind",
+          "class": "pattern",
+          "resolution": [
+            384,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/curtain/high_rich/blind/basecolor.png",
+            "normal": "assets/curtain/high_rich/blind/normal.png",
+            "roughness": "assets/curtain/high_rich/blind/roughness.png",
+            "metallic": "assets/curtain/high_rich/blind/metallic.png",
+            "height": "assets/curtain/high_rich/blind/height.png",
+            "ao": "assets/curtain/high_rich/blind/ao.png"
+          }
+        },
+        {
+          "id": "shade",
+          "class": "flat",
+          "resolution": [
+            384,
+            768
+          ],
+          "maps": {
+            "basecolor": "assets/curtain/high_rich/shade/basecolor.png",
+            "normal": "assets/curtain/high_rich/shade/normal.png",
+            "roughness": "assets/curtain/high_rich/shade/roughness.png",
+            "metallic": "assets/curtain/high_rich/shade/metallic.png",
+            "height": "assets/curtain/high_rich/shade/height.png",
+            "ao": "assets/curtain/high_rich/shade/ao.png"
+          }
+        }
+      ]
     },
     "cyberpunk/fire-escape/poor": {
       "key": "cyberpunk/fire-escape/poor",
