@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.6: the contract states the frame steel as shipped: window-frame, door and wall-trim one flat near-black steel (metallic 1, constant roughness 0.5, flat normal, no drift), column honed stone, and a test over the shipped database holds every tier there.
 0.9.5: new kind `ac-unit` for the facade condensers exterior hangs: one face per 1 x 1 m unit, exact, drawn by the new `grille` pattern kind (rings on four spokes over the fan cavity, in a painted housing with a flange), four tiers from rusted off-white to clean graphite.
 0.9.4: six panel families on the same one-by-half module (ochre, slate, graphite, bone, rust, teal) as pattern variants of every wall tier.
 0.9.3: window frames, aperture frames, balcony rails and doors are one even dark painted steel (metallic, roughness 0.5); columns one honed dark stone: flat parametric sets, no noise pattern, no relief.

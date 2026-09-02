@@ -129,6 +129,32 @@ describe('shipped cyberpunk coverage', () => {
     expect(missing).toEqual([]);
   });
 
+  it('ships frames, doors, trim and columns as one even tone: no drift, flat normal, constant roughness', async () => {
+    const themeDir = db.themeDir('cyberpunk');
+    const steel: Record<string, { id: string; metallic: number }> = {
+      'window-frame': { id: 'paint', metallic: 1 },
+      door: { id: 'paint', metallic: 1 },
+      'wall-trim': { id: 'paint', metallic: 1 },
+      column: { id: 'plain', metallic: 0 },
+    };
+    for (const [kind, { id, metallic }] of Object.entries(steel)) {
+      for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+        const entry = db.resolve(`cyberpunk/${kind}/${tier}`);
+        const lead = entry.variants[0];
+        expect(lead.id, `${kind}/${tier}`).toBe(id);
+        expect(entry.physical.metallicFactor, `${kind}/${tier}`).toBe(metallic);
+        // the contract's bound: a tonal drift under two percent, which is five code values
+        const paint = (await sharp(join(themeDir, lead.maps.basecolor)).stats()).channels.slice(0, 3);
+        expect(Math.max(...paint.map((c) => c.max - c.min)), `${kind}/${tier} basecolor`).toBeLessThanOrEqual(5);
+        const gloss = (await sharp(join(themeDir, lead.maps.roughness)).stats()).channels[0];
+        expect(gloss.max - gloss.min, `${kind}/${tier} roughness`).toBeLessThanOrEqual(1);
+        const normal = await sharp(join(themeDir, lead.maps.normal)).raw().toBuffer();
+        const lean = normal.filter((_, i) => i % 3 !== 2).reduce((sum, v) => sum + Math.abs(v - 128), 0) / (normal.length / 3) / 2;
+        expect(lean, `${kind}/${tier} normal`).toBeLessThan(1);
+      }
+    }
+  });
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');
