@@ -3,6 +3,114 @@
     "key": "cyberpunk/plaster/poor",
     "alignment": "tile",
     "append": true,
+    "canonical": true,
+    "description": "plain painted plaster, faint tonal drift",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#a09585",
+        "#a79c8c"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 1,
+      "depth": 0.04,
+      "variation": 0.02,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/mid",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain painted plaster, faint tonal drift",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#b9bcbb",
+        "#bfc2c1"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 1,
+      "depth": 0.04,
+      "variation": 0.02,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/rich",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain painted plaster, faint tonal drift",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#c9cccb",
+        "#ced1d0"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 1,
+      "depth": 0.04,
+      "variation": 0.02,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain painted plaster, faint tonal drift",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#d6dadb",
+        "#dadedf"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 1,
+      "depth": 0.04,
+      "variation": 0.02,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/plaster/poor",
+    "alignment": "tile",
+    "append": true,
     "resolution": [
       1024,
       1024
@@ -260,7 +368,7 @@
       ],
       "line": 0.012,
       "joint": 0.12,
-      "sheen": 0.16,
+      "sheen": 0.12,
       "variation": 0.04,
       "depth": 0.08,
       "grain": 0.025

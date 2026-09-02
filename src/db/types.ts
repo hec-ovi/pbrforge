@@ -78,7 +78,9 @@ export type PatternKind =
   | 'stripe'
   | 'two-tone'
   | 'noise'
+  | 'lane'
   | 'puddle'
+  | 'lamp'
   | 'glyph-atlas';
 
 /** A surface stated as parameters instead of photographed: what the pattern class draws. */
@@ -98,6 +100,7 @@ export interface PatternSpec {
   grain?: number;
   octaves?: number;
   wet?: number;
+  wear?: number;
   bond?: 'stack' | 'running';
   axis?: 'x' | 'y';
   split?: number;
@@ -132,6 +135,8 @@ export interface CreateRequest {
   variants?: number;
   variantId?: string;
   append?: boolean;
+  /** On append, the variant becomes variant 0, the canonical one. */
+  canonical?: boolean;
   seed?: number;
   resolution?: [number, number];
   overwrite?: boolean;

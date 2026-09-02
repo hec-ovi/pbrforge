@@ -1,20 +1,21 @@
 import { mixColor, scaleColor } from '../color.js';
+import { DAMP } from './LaneField.js';
 import { NoiseField } from './NoiseField.js';
 import { smoothstep, type Point, type Texel } from './Pattern.js';
 import { fbmNoise } from './noise.js';
 
-/** Still water is a mirror: this is the roughness the environment reflects off. */
-const MIRROR = 0.04;
-/** Water finds one level, so every texel under it stands at the same height: a flat normal, an unbroken reflection. */
+/** Water finds one level, so every texel under it stands at the same height: a flat normal, an unbroken patch. */
 const WATER_LEVEL = 0.42;
 /** How wide the rim is, in mask units: a puddle edge is crisp but not aliased. */
 const RIM = 0.06;
 
 /**
- * Asphalt with standing water: the dry road of a noise field, and over it a
- * mask of pooled patches where the surface goes flat, mirror-smooth and dark.
- * The mask is two octaves of the same wrapping lattice, so the puddles tile
- * with the road they sit in and the same parameters draw them the same way.
+ * Asphalt after rain: the dry road of a noise field, and over it a mask of
+ * pooled patches where the surface goes flat, dark and damp, its roughness
+ * settling at the same value a wheel track wears to, so a lamp lands on it as a
+ * soft reflection. The mask is two octaves of the same
+ * wrapping lattice, so the patches tile with the road they sit in and the same
+ * parameters draw them the same way.
  */
 export class PuddleField extends NoiseField {
   protected texel(at: Point): Texel {
@@ -22,19 +23,20 @@ export class PuddleField extends NoiseField {
     const cover = this.cover(at);
     if (cover === 0) return dry;
     const { colors } = this.params;
-    // wet asphalt darkens; a third color states the water's own tone instead
+    // damp asphalt darkens; a third color states the patch's own tone instead
     const water = colors[2] ?? scaleColor(colors[0], 0.55);
     return {
       color: mixColor(dry.color, water, cover),
       height: dry.height + (WATER_LEVEL - dry.height) * cover,
-      roughness: dry.roughness + (MIRROR - dry.roughness) * cover,
+      roughness: dry.roughness + (DAMP - dry.roughness) * cover,
     };
   }
 
   /**
-   * How deep under water a point is, 0 on dry road to 1 in open water. Puddles
-   * are metre-scale, so the mask runs at half the aggregate's lattice, and `wet`
-   * moves the waterline: 0 leaves the road dry, 0.5 floods about half of it.
+   * How deep under the patch a point is, 0 on dry road to 1 in the middle of
+   * one. Puddles are metre-scale, so the mask runs at half the aggregate's
+   * lattice, and `wet` moves the waterline: 0 leaves the road dry, 0.5 floods
+   * about half of it.
    */
   private cover(at: Point): number {
     const { cells, world, wet, seed } = this.params;

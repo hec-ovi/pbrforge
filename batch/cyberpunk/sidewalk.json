@@ -2,11 +2,11 @@
   {
     "key": "cyberpunk/sidewalk/poor",
     "alignment": "tile",
-    "description": "large rectangular pavement slabs with visible joints",
+    "description": "large square pavement slabs with clean joints",
     "tiling": {
       "worldSize": [
-        3,
-        3
+        2,
+        2
       ]
     },
     "physical": {
@@ -14,7 +14,6 @@
       "metallicFactor": 0
     },
     "variantId": "slab",
-    "seed": 4200,
     "resolution": [
       1024,
       1024
@@ -25,8 +24,8 @@
         "#3a3b3d"
       ],
       "cells": [
-        3,
-        3
+        2,
+        2
       ],
       "line": 0.012,
       "bevel": 0.008,
@@ -42,7 +41,6 @@
     "append": true,
     "description": "pavement slabs laid in a running bond",
     "variantId": "bond",
-    "seed": 4201,
     "resolution": [
       1024,
       1024
@@ -53,7 +51,7 @@
         "#3a3b3d"
       ],
       "cells": [
-        3,
+        2,
         4
       ],
       "bond": "running",
@@ -71,7 +69,6 @@
     "append": true,
     "description": "oversized pavement plates with wide chamfered joints",
     "variantId": "plate",
-    "seed": 4202,
     "resolution": [
       1024,
       1024
@@ -82,8 +79,8 @@
         "#3a3b3d"
       ],
       "cells": [
-        2,
-        2
+        1,
+        1
       ],
       "line": 0.022,
       "bevel": 0.014,
@@ -96,11 +93,11 @@
   {
     "key": "cyberpunk/sidewalk/mid",
     "alignment": "tile",
-    "description": "large rectangular pavement slabs with visible joints",
+    "description": "large square pavement slabs with clean joints",
     "tiling": {
       "worldSize": [
-        3,
-        3
+        2,
+        2
       ]
     },
     "physical": {
@@ -108,7 +105,6 @@
       "metallicFactor": 0
     },
     "variantId": "slab",
-    "seed": 4210,
     "resolution": [
       1024,
       1024
@@ -119,8 +115,8 @@
         "#45474a"
       ],
       "cells": [
-        3,
-        3
+        2,
+        2
       ],
       "line": 0.012,
       "bevel": 0.008,
@@ -136,7 +132,6 @@
     "append": true,
     "description": "pavement slabs laid in a running bond",
     "variantId": "bond",
-    "seed": 4211,
     "resolution": [
       1024,
       1024
@@ -147,7 +142,7 @@
         "#45474a"
       ],
       "cells": [
-        3,
+        2,
         4
       ],
       "bond": "running",
@@ -165,7 +160,6 @@
     "append": true,
     "description": "oversized pavement plates with wide chamfered joints",
     "variantId": "plate",
-    "seed": 4212,
     "resolution": [
       1024,
       1024
@@ -176,8 +170,8 @@
         "#45474a"
       ],
       "cells": [
-        2,
-        2
+        1,
+        1
       ],
       "line": 0.022,
       "bevel": 0.014,
@@ -190,11 +184,11 @@
   {
     "key": "cyberpunk/sidewalk/rich",
     "alignment": "tile",
-    "description": "large rectangular pavement slabs with visible joints",
+    "description": "large square pavement slabs with clean joints",
     "tiling": {
       "worldSize": [
-        3,
-        3
+        2,
+        2
       ]
     },
     "physical": {
@@ -202,7 +196,6 @@
       "metallicFactor": 0
     },
     "variantId": "slab",
-    "seed": 4220,
     "resolution": [
       1024,
       1024
@@ -213,8 +206,8 @@
         "#4f5257"
       ],
       "cells": [
-        3,
-        3
+        2,
+        2
       ],
       "line": 0.012,
       "bevel": 0.008,
@@ -230,7 +223,6 @@
     "append": true,
     "description": "pavement slabs laid in a running bond",
     "variantId": "bond",
-    "seed": 4221,
     "resolution": [
       1024,
       1024
@@ -241,7 +233,7 @@
         "#4f5257"
       ],
       "cells": [
-        3,
+        2,
         4
       ],
       "bond": "running",
@@ -259,7 +251,6 @@
     "append": true,
     "description": "oversized pavement plates with wide chamfered joints",
     "variantId": "plate",
-    "seed": 4222,
     "resolution": [
       1024,
       1024
@@ -270,8 +261,8 @@
         "#4f5257"
       ],
       "cells": [
-        2,
-        2
+        1,
+        1
       ],
       "line": 0.022,
       "bevel": 0.014,
@@ -284,11 +275,11 @@
   {
     "key": "cyberpunk/sidewalk/high_rich",
     "alignment": "tile",
-    "description": "large rectangular pavement slabs with visible joints",
+    "description": "large square pavement slabs with clean joints",
     "tiling": {
       "worldSize": [
-        3,
-        3
+        2,
+        2
       ]
     },
     "physical": {
@@ -296,7 +287,6 @@
       "metallicFactor": 0
     },
     "variantId": "slab",
-    "seed": 4230,
     "resolution": [
       1024,
       1024
@@ -307,8 +297,8 @@
         "#5a5e64"
       ],
       "cells": [
-        3,
-        3
+        2,
+        2
       ],
       "line": 0.012,
       "bevel": 0.008,
@@ -324,7 +314,6 @@
     "append": true,
     "description": "pavement slabs laid in a running bond",
     "variantId": "bond",
-    "seed": 4231,
     "resolution": [
       1024,
       1024
@@ -335,7 +324,7 @@
         "#5a5e64"
       ],
       "cells": [
-        3,
+        2,
         4
       ],
       "bond": "running",
@@ -353,7 +342,6 @@
     "append": true,
     "description": "oversized pavement plates with wide chamfered joints",
     "variantId": "plate",
-    "seed": 4232,
     "resolution": [
       1024,
       1024
@@ -364,8 +352,8 @@
         "#5a5e64"
       ],
       "cells": [
-        2,
-        2
+        1,
+        1
       ],
       "line": 0.022,
       "bevel": 0.014,

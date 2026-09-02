@@ -94,13 +94,13 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 0.15
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0
     },
     "finish": {
       "roughness": [
-        0.54,
-        0.64
+        0.56,
+        0.66
       ],
       "grain": 0.1,
       "relief": 1.2

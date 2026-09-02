@@ -3,6 +3,8 @@ import type { PatternSpec } from '../../db/types.js';
 import { parseHex } from '../color.js';
 import { GlyphAtlas } from './GlyphAtlas.js';
 import { HexagonGrid } from './HexagonGrid.js';
+import { Lamp } from './Lamp.js';
+import { LaneField } from './LaneField.js';
 import { NoiseField } from './NoiseField.js';
 import { PanelGrid } from './PanelGrid.js';
 import { Pattern, type PatternParams } from './Pattern.js';
@@ -23,13 +25,14 @@ const DEFAULTS = {
   grain: 0.02,
   octaves: 1,
   wet: 0.35,
+  wear: 0,
   bond: 'stack' as const,
   axis: 'y' as const,
   split: 0.5,
 };
 
 /** Kinds that read as two materials meeting, so they need a second color. */
-const TWO_COLOR: PatternSpec['kind'][] = ['stripe', 'two-tone', 'noise', 'puddle', 'glyph-atlas'];
+const TWO_COLOR: PatternSpec['kind'][] = ['stripe', 'two-tone', 'noise', 'lane', 'puddle', 'glyph-atlas'];
 
 /**
  * The pattern a spec asks for, with defaults filled in and the cross-field
@@ -66,6 +69,7 @@ export function buildPattern(
     grain: spec.grain ?? DEFAULTS.grain,
     octaves: spec.octaves ?? DEFAULTS.octaves,
     wet: spec.wet ?? DEFAULTS.wet,
+    wear: spec.wear ?? DEFAULTS.wear,
     bond: spec.bond ?? DEFAULTS.bond,
     axis: spec.axis ?? DEFAULTS.axis,
     split: spec.split ?? DEFAULTS.split,
@@ -87,8 +91,12 @@ export function buildPattern(
       return new TwoTone(params);
     case 'noise':
       return new NoiseField(params);
+    case 'lane':
+      return new LaneField(params);
     case 'puddle':
       return new PuddleField(params);
+    case 'lamp':
+      return new Lamp(params);
     case 'glyph-atlas':
       return new GlyphAtlas(params);
   }

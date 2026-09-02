@@ -2,6 +2,7 @@ import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { Database } from '../src/db/Database.js';
 import { MaterialsError } from '../src/db/errors.js';
@@ -107,7 +108,7 @@ const KINDS = [
   'balcony-slab', 'balcony-rail', 'roof', 'floor-slab', 'parapet', 'signage', 'ad-screen',
   'light-fixture', 'fire-escape', 'aperture-frame', 'roof-artifact',
   'plaster', 'tile', 'ceiling', 'wood', 'carpet', 'rubber', 'concrete', 'metal', 'elevator_door', 'fabric', 'glass',
-  'sidewalk', 'road', 'plastic', 'ad-screen-tall', 'letter-atlas',
+  'sidewalk', 'road', 'curb', 'plastic', 'ad-screen-tall', 'letter-atlas',
 ];
 
 describe('shipped cyberpunk coverage', () => {
@@ -127,4 +128,27 @@ describe('shipped cyberpunk coverage', () => {
     );
     expect(missing).toEqual([]);
   });
+
+  it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
+    const floor = Math.floor(0.45 * 255);
+    const themeDir = db.themeDir('cyberpunk');
+    const offences: string[] = [];
+    for (const key of db.list({ theme: 'cyberpunk' })) {
+      const entry = db.resolve(key);
+      const glass = (entry.physical.transmission ?? 0) > 0;
+      const lit = entry.variants.some((v) => v.maps.emission);
+      if (glass || lit) continue;
+      const metallic = entry.physical.metallicFactor ?? 0;
+      if (metallic !== 0 && metallic !== 1) offences.push(`${key} metallic ${metallic}`);
+      if ((entry.physical.roughnessFactor ?? 1) < 0.45) offences.push(`${key} roughness factor`);
+      if (entry.finish && entry.finish.roughness[0] < 0.45) offences.push(`${key} finish band`);
+      for (const variant of entry.variants) {
+        const gloss = (await sharp(join(themeDir, variant.maps.roughness)).stats()).channels[0];
+        if (gloss.min < floor) offences.push(`${key}:${variant.id} roughness map ${gloss.min}`);
+        const fill = (await sharp(join(themeDir, variant.maps.metallic)).stats()).channels[0];
+        if (fill.min !== fill.max || fill.min !== Math.round(metallic * 255)) offences.push(`${key}:${variant.id} metallic map`);
+      }
+    }
+    expect(offences).toEqual([]);
+  }, 120_000);
 });

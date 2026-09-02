@@ -11,7 +11,7 @@ npm install
 npm run resolve -- cyberpunk/window-glass/rich   # look up a key
 npm run create -- request.json                   # generate a set (needs ComfyUI)
 npm run preview                                  # material sphere viewer with lighting and orbit
-npm run refinish -- request.json                 # re-read the maps of a family under a finish
+npm run refinish -- request.json                 # re-read the maps of a family under a finish and factors
 npm run rebrand -- --theme cyberpunk --businesses businesses.json   # spell business names over the screens of their tier
 npm run sheet -- wall                            # contact sheet of a kind, into out/
 npm test
@@ -23,21 +23,23 @@ npm test
 
 - `resolve(key)` returns the entry for a key or one of its aliases.
 - `list(filter?)` returns matching keys, sorted and deterministic.
-- `create(request)` generates a full map set, verifies its seams and writes it. The request (`schema/create-request.schema.json`) names the theme, kind, tier, prompt material and options. Basecolor comes from ComfyUI, from a drawn pattern, from a tint of a variant already in the entry, or is synthesized from `flatColor` (glass, plain colors); normal, roughness, metallic, height and AO always derive in-box. `append` adds a variant to an entry that exists instead of writing a new one.
-- `refinish(request)` re-reads the relief and gloss maps of a family already in the database from its stored basecolor, under a stated finish.
+- `create(request)` generates a full map set, verifies its seams and writes it. The request (`schema/create-request.schema.json`) names the theme, kind, tier, prompt material and options. Basecolor comes from ComfyUI, from a drawn pattern, from a tint of a variant already in the entry, or is synthesized from `flatColor` (glass, plain colors); normal, roughness, metallic, height and AO always derive in-box. `append` adds a variant to an entry that exists instead of writing a new one, and `canonical` puts it first.
+- `refinish(request)` re-reads the relief, gloss and metallic maps of a family already in the database from its stored basecolor, under a stated finish and factors.
 - `rebrand(request)` writes a `brand:<slug>` variant of the landscape and the portrait screen of a business's tier, its name spelled from the letter atlas over artwork already in the database. No render.
 
 ## Out
 
 A `MaterialEntry` (`schema/material-entry.schema.json`): alignment mode (`tile` or `exact`), physical properties (metallic and roughness factors, transmission for glass, emissive strength, breakable), tiling config in meters covered by one repeat, and one or more variants, each a set of map files. Variant 0 is canonical; a consumer can pick a variant deterministically by seed.
 
-The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers 35 kinds at four tiers (114 entries plus 26 alias keys, 329 variants): walls, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens landscape and portrait, light fixtures, fire escapes and roof artifacts for exteriors, plaster, tile, ceilings, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors, sidewalk, road and plastic for the street, and a lit letter atlas for signs. The families that cover the most surface carry the most variants per tier: seven walls (four photographed surfaces and three paints), nine concretes, seven plasters, five tiles, three pavements and four road surfaces, laid out to read apart in tone, cell size and bond.
+The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers 36 kinds at four tiers (115 entries plus 29 alias keys, 334 variants): walls, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens landscape and portrait, light fixtures, fire escapes and roof artifacts for exteriors, plaster, tile, ceilings, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors, sidewalk, road, curb and plastic for the street, and a lit letter atlas for signs. The families that cover the most surface carry the most variants per tier: seven walls (four photographed surfaces, two paints and a drawn ochre panel), ten concretes, eight plasters, five tiles, three pavements and four road surfaces, laid out to read apart in tone, cell size and bond. Plaster, concrete and ceiling lead with a plain matte variant; frames and doors are smooth dark painted steel.
+
+The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds) and no roughness below 0.45 in its factor, its band or any pixel of its roughness map, glass and lit entries excepted, and a test over the shipped database holds it there. The ground kinds carry the tile sizes the engine lays on its millimetre grid: road 3.5 x 7 m (one lane wide, with wheel tracks), sidewalk 2 x 2 m (1 m slabs with the joint on the tile edge), curb 2 x 0.15 m (two kerb stones), and a light fixture is one luminaire per 0.16 x 0.28 m tile.
 
 Conventions are fixed, not per entry: metallic-roughness workflow, basecolor and emission sRGB with every other map linear, OpenGL-style normals, glass following glTF `KHR_materials_transmission`.
 
 ## Patterns
 
-Structured surfaces are drawn, not diffused. A `pattern` in the request states shapes and colors and the box renders the maps in code: hexagon grids, inset panel grids, large floor and pavement slabs, stripes, two-tone blocking, noise in up to four octaves for asphalt, and that asphalt under standing water, where the pools go flat and mirror-smooth in the roughness map so the environment reflects off the street. Every one is anti-aliased against the pixel it is sampled for and periodic over one tile by construction, so it is crisp at any distance, tiles with nothing to hide, and costs a few tens of kilobytes. Joint and chamfer widths are in metres and read against the entry's tiling, so a joint is the same width on a 3 m wall and a 12 m one.
+Structured surfaces are drawn, not diffused. A `pattern` in the request states shapes and colors and the box renders the maps in code: hexagon grids, inset panel grids, large floor and pavement slabs, stripes, two-tone blocking, noise in up to four octaves for asphalt, that asphalt with two wheel tracks worn along the lane, the same asphalt after rain with damp patches pooled in its low spots, and a luminaire with a lens, a hot centre and a housing bezel. Every one is anti-aliased against the pixel it is sampled for and periodic over one tile by construction, so it is crisp at any distance, tiles with nothing to hide, and costs a few tens of kilobytes. Joint and chamfer widths are in metres and read against the entry's tiling, so a joint is the same width on a 3 m wall and a 12 m one.
 
 A pattern variant resolves under the same key and the same entry shape as a photographed one: consumers read maps and never ask which class a variant is. Diffusion keeps what it is good at, which is grain, wear and grime.
 

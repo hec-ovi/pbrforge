@@ -25,6 +25,8 @@ export interface PatternParams {
   octaves: number;
   /** How much of a puddle field stands under water: 0 is a dry road. */
   wet: number;
+  /** How dark and damp the wheel tracks of a lane are: 0 is an unworn road. */
+  wear: number;
   bond: 'stack' | 'running';
   axis: 'x' | 'y';
   /** Where the band boundary sits, as a fraction of the tile. */

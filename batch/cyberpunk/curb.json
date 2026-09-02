@@ -1,0 +1,43 @@
+[
+  {
+    "key": "cyberpunk/curb/poor",
+    "aliases": [
+      "cyberpunk/curb/mid",
+      "cyberpunk/curb/rich",
+      "cyberpunk/curb/high_rich"
+    ],
+    "alignment": "tile",
+    "description": "concrete kerb stones, chamfered arris, one joint per metre",
+    "tiling": {
+      "worldSize": [
+        2,
+        0.15
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.85,
+      "metallicFactor": 0
+    },
+    "variantId": "stone",
+    "resolution": [
+      2048,
+      160
+    ],
+    "pattern": {
+      "kind": "slab",
+      "colors": [
+        "#7d7f7c"
+      ],
+      "cells": [
+        2,
+        1
+      ],
+      "line": 0.01,
+      "bevel": 0.012,
+      "depth": 0.5,
+      "joint": 0.45,
+      "variation": 0.06,
+      "grain": 0.025
+    }
+  }
+]

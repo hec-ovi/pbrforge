@@ -9,17 +9,17 @@ Status: v0.2. Schema stable to build against; additive fields may come, breaking
 Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/window-glass/rich`). Consumers (exterior, interior) name GLB materials with exactly this key; the index resolves it to maps, tiling config and alignment mode.
 
 - tier slugs are atlas's, passed verbatim by consumers: `poor`, `mid`, `rich`, `high_rich`.
-- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers: wall, wall-trim, column, window-glass, window-frame, curtain, door, door-glass, balcony-slab, balcony-rail, roof, floor-slab, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact (exterior), plaster, tile, ceiling, wood, carpet, rubber, concrete, metal, elevator_door, fabric, glass (interior), sidewalk, road (ground), plastic (street props), ad-screen-tall (a 9:16 portrait billboard, where `ad-screen` is 16:9) and letter-atlas (signage). door-glass, balcony-slab, balcony-rail, parapet and aperture-frame resolve via aliases; the four tiers of plastic and of ad-screen-tall each resolve to one entry, a refuse sack and a portrait billboard being the same in every district.
+- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers: wall, wall-trim, column, window-glass, window-frame, curtain, door, door-glass, balcony-slab, balcony-rail, roof, floor-slab, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact (exterior), plaster, tile, ceiling, wood, carpet, rubber, concrete, metal, elevator_door, fabric, glass (interior), sidewalk, road, curb (ground), plastic (street props), ad-screen-tall (a 9:16 portrait billboard, where `ad-screen` is 16:9) and letter-atlas (signage). door-glass, balcony-slab, balcony-rail, parapet and aperture-frame resolve via aliases; the four tiers of plastic, of curb and of ad-screen-tall each resolve to one entry, a refuse sack, a kerb stone and a portrait billboard being the same in every district.
 
 ## In
 
 - `resolve(key: string): MaterialEntry` resolves a key (or alias) against the database.
 - `list(filter?: {theme?, kind?, tier?}): string[]` returns matching keys, sorted, deterministic.
 - `create(request: CreateRequest): MaterialEntry` generates a full set, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json). Basecolor comes from ComfyUI, from the pattern class below, from a tint of a variant already in the entry (`recolor`), or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box.
-- `append: true` adds the generated variant to the entry the key already resolves to, which keeps its alignment, tiling, aliases and physical; `variantId` names it (and its asset folder). Appending an id that exists is `E_KEY_EXISTS`, so a batch stays resumable.
+- `append: true` adds the generated variant to the entry the key already resolves to, which keeps its alignment, tiling, aliases and physical; `variantId` names it (and its asset folder). Appending an id that exists is `E_KEY_EXISTS`, so a batch stays resumable. `canonical: true` on an append puts the variant first, so it is the one a consumer gets when it does not pick.
 - `recolor` writes a tint variant: another variant of the same entry repainted. The paint's hue is taken whole and `strength` is how much pigment is in it, so a blue paint reads blue over a near-grey photograph. It is the same surface in different paint, so it points at that variant's relief maps instead of copying them.
 - `finish` states how a photographed surface is read into relief and gloss (see Finish below). An appended variant inherits the entry's finish, so every photographed variant of one entry shares a band. The pattern, recolor and screen lanes carry their own maps and ignore it.
-- `refinish(request: RefinishRequest): { entry, variants }` re-reads the relief and gloss maps of every photographed variant of a `tile` entry from its stored basecolor, under a stated finish, updates the entry, and names the variants it touched. The basecolor is never touched, so a set already approved keeps its look. Request: `{ key, finish? }`. An `exact` entry (a screen, a door) is `E_SCHEMA`, and so is an entry with no photographed variant.
+- `refinish(request: RefinishRequest): { entry, variants }` re-reads the relief, gloss and metallic maps of every photographed variant of an entry from its stored basecolor, under a stated finish and factors, updates the entry, and names the variants it touched. The basecolor is never touched, so a set already approved keeps its look. Request: `{ key, finish?, physical? }`, where `physical` is merged into the entry's before the maps are read. An entry with no photographed variant (a screen, a drawn pattern) is `E_SCHEMA`.
 
 Screens (`emission: "image"`) turn that around: the basecolor is flat dark display glass and the picture lives in the emission map. `screens` lists one display per variant and sets the variant count. ComfyUI paints each advertisement as flat brandless artwork; the box makes it a screen: the pixel structure of its `kind` (`led-dot` dot lattice, `scanline-billboard` scan bands, `glyph-panel` abstract with no lattice), colour fringing, blown-out hotspots, and the `brandName` wordmark stroked in from a built-in alphabet. `brandName` never enters the diffusion prompt, so a screen rebrands without a new render; `businessKind` does steer the artwork. Both take a per-screen override.
 
@@ -39,17 +39,35 @@ A photograph carries its own gloss and grain in every pixel. Read straight out, 
 - `grain` (default 0.2) is how much of the pixel-scale speckle survives into the relief. Everything above the feature scale (joints, bricks, aggregate, trowel strokes) comes through at full gain either way.
 - `relief` (default 2) is the gain on that feature-scale relief.
 
-Dry matte is the default across the library: moisture staining and heavy grime live in the poor tier's basecolor and nowhere else. Bands per kind and tier, all four tiers left to right (poor, mid, rich, high_rich):
+Dry matte is the default across the library: moisture staining and heavy grime live in the poor tier's basecolor and nowhere else. The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds: metal, wall-trim, elevator_door, fire-escape, roof-artifact, the steel column and the zinc roof) and no roughness below 0.45, in its factor, its band and every pixel of its roughness map, so nothing sparkles under a street lamp. Glass (an entry with transmission) and lit entries (screens, signage, light fixtures, the letter atlas) are the exceptions. Bands per kind and tier, all four tiers left to right (poor, mid, rich, high_rich):
 
 | kind | poor | mid | rich | high_rich |
 | --- | --- | --- | --- | --- |
-| wall | 0.88-0.96 | 0.82-0.92 | 0.70-0.80 | 0.54-0.64 |
-| concrete | 0.90-0.97 | 0.84-0.92 | 0.60-0.70 | 0.46-0.56 |
-| plaster | 0.88-0.95 | 0.80-0.88 | 0.66-0.74 | 0.50-0.60 |
-| tile | 0.54-0.62 | 0.44-0.52 | 0.30-0.38 | 0.24-0.32 |
-| every other photographed kind | the roughness factor, plus or minus 0.05 | | | |
+| wall | 0.88-0.96 | 0.82-0.92 | 0.70-0.80 | 0.56-0.66 |
+| concrete | 0.90-0.97 | 0.84-0.92 | 0.60-0.70 | 0.52-0.62 |
+| plaster | 0.88-0.95 | 0.80-0.88 | 0.66-0.74 | 0.55-0.65 |
+| tile | 0.56-0.64 | 0.51-0.59 | 0.46-0.54 | 0.45-0.52 |
+| every other photographed kind | the roughness factor, plus or minus 0.05, floored at 0.46 | | | |
 
 Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2, 0.15, 0.1 and relief 2, 2, 1.6, 1.2. A drawn pattern states its own gloss instead: it sits at the entry's roughness factor, plus the joint bump (`joint` times 0.4) on the joint lines and the `sheen` spread from cell to cell. Asphalt is a three-octave noise field, so its finest aggregate sits around five centimetres of road and not on one pixel.
+
+## Frame steel
+
+`window-frame` (with `balcony-rail` and `aperture-frame` aliased to it) and `door` (the leaf and its casing) are smooth dark painted steel at every tier: one drawn `paint` variant, tile 0.5 x 0.5 m at 512 px (1 mm per pixel), metallic 0, roughness flat at 0.7, 0.65, 0.6, 0.55 from poor to high_rich, and nothing in the basecolor beyond a tonal drift under two percent, so a 0.06 m member shows no speckle and no repeat. Doors are tiled like the frames and laid with the same world-metre UVs; the frame reads a shade darker than the leaf in every tier.
+
+## Ground
+
+The ground kinds carry the tile sizes the engine lays on its 1 mm grid, so a cut lands on a joint and never inside a slab:
+
+| kind | tile | maps | variants |
+| --- | --- | --- | --- |
+| `road` | 3.5 x 7 m, one lane wide, V along the lane | 512 x 1024 | `street` (canonical) and `highway` wear two wheel tracks 0.4 m wide at 0.8 m either side of the lane centre, darker and damp (roughness 0.5 in the track, the factor between); `patched` and `puddle` are isotropic |
+| `sidewalk` | 2 x 2 m | 1024 | `slab` (canonical): 1 m squares with the joint on the tile edge; `bond`: 1 x 0.5 m running; `plate`: one 2 m plate |
+| `curb` | 2 x 0.15 m, one entry at all tiers | 2048 x 160 | `stone`: two 1 m kerb stones with a chamfered arris |
+
+Lay `road` with U across the lane from its left boundary so the tracks sit under the wheels; a consumer that lays planar world UVs over a merged roadway takes `patched` or `puddle`. Lay `sidewalk` with its UV origin on the kerb line so the first joint runs parallel to it. The `curb` tile spans the 0.15 m face with V from the road up, and the same tile lays the 0.15 m top. `puddle` is asphalt after rain: damp patches pooled in the low spots, flat and dark, roughness 0.5 inside them.
+
+`light-fixture` is one luminaire per tile of 0.16 x 0.28 m at 256 x 448 px, so a fixture face of that size spans exactly one tile: `lamp` (canonical) is a recessed lens with a hot centre inside a 12 mm housing bezel, `strip` a diffuser band along a dark housing, `panel` a flat diffuser inset in a frame; emission comes off the lens.
 
 ## Window glass
 
@@ -82,14 +100,16 @@ Kinds and the parameters each one reads (full ranges in the request schema):
 | `stripe` | bands across one axis | cells, axis, split, line |
 | `two-tone` | one split across the tile with a trim line | axis, split, line, three colors |
 | `noise` | mottling in one to four octaves: plain wall to asphalt | cells, octaves, depth |
-| `puddle` | a noise field with standing water pooled over it | everything `noise` reads, plus wet, plus a third color for the water |
+| `lane` | asphalt with two wheel tracks worn along it | everything `noise` reads, plus axis (the lane's direction), split (track spacing across the tile), line (track width), wear |
+| `puddle` | a noise field with damp patches pooled over it | everything `noise` reads, plus wet, plus a third color for the patch |
+| `lamp` | one luminaire: a housing bezel around a lens with a hot centre | line (bezel width), bevel (chamfer to the lens), split (hot centre reach), three colors (lens, housing, centre) |
 | `glyph-atlas` | the letter sheet below: one lit glyph per cell | line (core width), bevel (halo reach), three colors |
 
-Inside a puddle the surface goes flat, dark and mirror-smooth (roughness 0.04): one water level over the asphalt, so the normal map is unbroken there and the renderer's environment lands on the road. `wet` moves the waterline, 0 leaving it dry and 0.5 flooding about half the tile; the mask is two octaves of the same wrapping lattice as the asphalt, so puddles tile with the road they sit in.
+Inside a puddle the surface goes flat, dark and damp: one level over the asphalt, so the normal map is unbroken there, and roughness 0.5, the same a wheel track wears to, so a lamp lands on it as a soft reflection. `wet` moves the waterline, 0 leaving it dry and 0.5 flooding about half the tile; the mask is two octaves of the same wrapping lattice as the asphalt, so puddles tile with the road they sit in. A lane's tracks darken the asphalt by up to 35 percent and pull its roughness toward the same 0.5 by `wear`, breathing along the run on the lane's own lattice.
 
 Shared over all of them: `colors` (face first), `depth` (relief), `joint` (how much darker and rougher a joint reads), `variation` (tone per cell), `sheen` (gloss per cell), `grain` (fine mottling). `line` and `bevel` are in metres, read against the entry's `tiling.worldSize`; `cells` are whole counts per tile, which is what makes the pattern wrap. On an `exact` entry the sheet stands in for the tile, so those two are fractions of the sheet (of a cell, for `glyph-atlas`).
 
-Cyberpunk pattern library, per tier: plaster (`hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`panel`, one panel per tile so joints land on whole-tile faces, plus `rib` and `block`), ceiling (`panel`, `plain`), fabric (`flat`: even upholstery cloth, matte, whose normal map leans under one code value off flat, so a part small enough to minify a photographed weave has nothing left to alias), sidewalk (`slab`, `bond`, `plate`), road (`street`, `highway`, `patched`, `puddle`), plastic (`bag`: crumpled near-black sheet at 0.25 roughness, the glossy response of a refuse sack), light-fixture (`strip`, `panel`: dark housing, lit diffuser). Variants of one kind are laid out to read apart at a glance: they differ in tone, in cell size and in bond, not in fine detail. wall, concrete and plaster also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
+Cyberpunk pattern library, per tier: plaster (`plain`, canonical, then `hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`plain`, canonical: tonal variation only, then `panel`, one panel per tile so joints land on whole-tile faces, `rib` and `block`), ceiling (`plain`, canonical, then `panel`), wall (`panel-ochre`: ochre painted precast panels with chamfered seams, tonal variation only), fabric (`flat`: even upholstery cloth, matte, whose normal map leans under one code value off flat, so a part small enough to minify a photographed weave has nothing left to alias), sidewalk (`slab`, `bond`, `plate`), road (`street`, `highway`, `patched`, `puddle`), curb (`stone`), plastic (`bag`: crumpled near-black sheet at 0.55 roughness, the sheen of a refuse sack), light-fixture (`lamp`, `strip`, `panel`), window-frame and door (`paint`). Variants of one kind are laid out to read apart at a glance: they differ in tone, in cell size and in bond, not in fine detail. wall, concrete and plaster also carry tint variants of their photographed surfaces, so adjacent buildings read as different paint.
 
 ## Rebrand
 
@@ -113,7 +133,7 @@ The grid is 8 columns by 6 rows, row-major, and the charset is `ABCDEFGHIJKLMNOP
 
 ## Out
 
-MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), and one or more variants, each a set of map files. Variant 0 is canonical; consumers may pick variants deterministically by seed or by id (`flat`, `brand:<slug>`). A variant carries `class` (`image` by default, `pattern` when it was drawn from parameters): provenance only, the map set and its use are identical. A screen variant painted by the create lane also carries `screen`: the display it is shown on (`kind`, `pitch`) and `artwork`, the brandless picture behind its emission, which the rebrand lane composites over; consumers never bind it. An entry with photographed variants also carries the `finish` its maps were read under.
+MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), and one or more variants, each a set of map files. Variant 0 is canonical (the plain or the lead variant of its kind); consumers may pick variants deterministically by seed or by id (`flat`, `plain`, `brand:<slug>`). A variant carries `class` (`image` by default, `pattern` when it was drawn from parameters): provenance only, the map set and its use are identical. A screen variant painted by the create lane also carries `screen`: the display it is shown on (`kind`, `pitch`) and `artwork`, the brandless picture behind its emission, which the rebrand lane composites over; consumers never bind it. An entry with photographed variants also carries the `finish` its maps were read under.
 
 Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](schema/theme-index.schema.json)) plus map files under `themes/<theme>/assets/<kind>/<tier>/<variant>/`. The JSON is the index; the folder is the theme. First theme: `cyberpunk`.
 
@@ -143,6 +163,7 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 - All maps of one variant share one resolution and are pixel-aligned with each other.
 - A rebrand never touches a base variant or its files: a brand variant points at the base's surface maps and carries its own emission, and the same business list writes the same maps every time.
 - Generation is agentic tooling on top; the database read path and the rebrand lane work standalone with no ComfyUI and no other layer present.
+- Matte floor: every non-emissive entry carries metallic 0 or 1 and no roughness below 0.45 in its factor, its finish band and every pixel of every variant's roughness map, and its metallic map is a constant fill of the factor; glass (transmission above 0) and lit entries (an emission map) are exempt. Checked by a test over the shipped database.
 
 ## Preview
 

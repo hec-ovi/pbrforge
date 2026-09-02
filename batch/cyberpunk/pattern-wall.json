@@ -1,0 +1,110 @@
+[
+  {
+    "key": "cyberpunk/wall/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "ochre painted precast panels with chamfered seams, tonal variation only",
+    "variantId": "panel-ochre",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#7a5533"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "ochre painted precast panels with chamfered seams, tonal variation only",
+    "variantId": "panel-ochre",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#8c6239"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "ochre painted precast panels with chamfered seams, tonal variation only",
+    "variantId": "panel-ochre",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#996b3e"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/wall/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "ochre painted precast panels with chamfered seams, tonal variation only",
+    "variantId": "panel-ochre",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#8f6238"
+      ],
+      "cells": [
+        2,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.03,
+      "depth": 0.5,
+      "joint": 0.4,
+      "variation": 0.04,
+      "grain": 0.02
+    }
+  }
+]

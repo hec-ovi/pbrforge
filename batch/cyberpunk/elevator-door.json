@@ -12,10 +12,16 @@
       1216
     ],
     "physical": {
-      "roughnessFactor": 0.4,
+      "roughnessFactor": 0.6,
       "metallicFactor": 1
     },
-    "variants": 2
+    "variants": 2,
+    "finish": {
+      "roughness": [
+        0.55,
+        0.65
+      ]
+    }
   },
   {
     "key": "cyberpunk/elevator_door/mid",
@@ -30,10 +36,16 @@
       1216
     ],
     "physical": {
-      "roughnessFactor": 0.4,
+      "roughnessFactor": 0.55,
       "metallicFactor": 1
     },
-    "variants": 2
+    "variants": 2,
+    "finish": {
+      "roughness": [
+        0.5,
+        0.6
+      ]
+    }
   },
   {
     "key": "cyberpunk/elevator_door/rich",
@@ -48,10 +60,16 @@
       1216
     ],
     "physical": {
-      "roughnessFactor": 0.4,
+      "roughnessFactor": 0.5,
       "metallicFactor": 1
     },
-    "variants": 2
+    "variants": 2,
+    "finish": {
+      "roughness": [
+        0.46,
+        0.56
+      ]
+    }
   },
   {
     "key": "cyberpunk/elevator_door/high_rich",
@@ -66,9 +84,15 @@
       1216
     ],
     "physical": {
-      "roughnessFactor": 0.4,
+      "roughnessFactor": 0.5,
       "metallicFactor": 1
     },
-    "variants": 2
+    "variants": 2,
+    "finish": {
+      "roughness": [
+        0.46,
+        0.56
+      ]
+    }
   }
 ]

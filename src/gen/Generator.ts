@@ -113,6 +113,9 @@ export class Generator {
     if (request.variantId && variantCount(request) > 1) {
       throw new MaterialsError('E_SCHEMA', 'variantId names one variant; drop it or ask for one variant');
     }
+    if (request.canonical && !request.append) {
+      throw new MaterialsError('E_SCHEMA', 'canonical orders an appended variant first; a new entry already leads with its own');
+    }
     if ((request.pattern || request.recolor) && (request.variants ?? 1) > 1) {
       throw new MaterialsError('E_SCHEMA', 'the pattern and recolor lanes make one variant per request');
     }
@@ -152,7 +155,12 @@ export class Generator {
     if (target.base) {
       const existing = target.base.variants;
       const kept = existing.map((v) => variants.find((added) => added.id === v.id) ?? v);
-      return { ...target.base, variants: [...kept, ...variants.filter((a) => !existing.some((v) => v.id === a.id))] };
+      const fresh = variants.filter((a) => !existing.some((v) => v.id === a.id));
+      // a canonical append leads the list, so a consumer that does not pick gets it
+      const ordered = request.canonical
+        ? [...variants, ...kept.filter((v) => !variants.includes(v))]
+        : [...kept, ...fresh];
+      return { ...target.base, variants: ordered };
     }
     return {
       key: request.key,

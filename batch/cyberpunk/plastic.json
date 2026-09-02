@@ -7,7 +7,7 @@
       "cyberpunk/plastic/high_rich"
     ],
     "alignment": "tile",
-    "description": "crumpled black refuse sack, glossy sheet plastic",
+    "description": "crumpled black refuse sack, matte sheet plastic",
     "tiling": {
       "worldSize": [
         1,
@@ -15,7 +15,7 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.25,
+      "roughnessFactor": 0.55,
       "metallicFactor": 0
     },
     "variantId": "bag",

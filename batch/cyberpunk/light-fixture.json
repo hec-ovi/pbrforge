@@ -2,11 +2,11 @@
   {
     "key": "cyberpunk/light-fixture/poor",
     "alignment": "tile",
-    "description": "linear luminaire: diffuser strips in a dark housing",
+    "description": "wall pack luminaire: a recessed lens with a hot centre in a dark housing",
     "tiling": {
       "worldSize": [
-        1,
-        1
+        0.16,
+        0.28
       ]
     },
     "physical": {
@@ -14,26 +14,50 @@
       "metallicFactor": 0,
       "emissiveStrength": 3
     },
+    "emission": "luminance",
+    "variantId": "lamp",
+    "resolution": [
+      256,
+      448
+    ],
+    "pattern": {
+      "kind": "lamp",
+      "colors": [
+        "#e0d0a6",
+        "#2a2724",
+        "#fff7e6"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "split": 0.9,
+      "depth": 0.5,
+      "grain": 0.01
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "linear luminaire: a diffuser strip along a dark housing",
+    "emission": "luminance",
     "variantId": "strip",
     "resolution": [
-      512,
-      512
+      256,
+      448
     ],
-    "emission": "luminance",
-    "overwrite": true,
     "pattern": {
       "kind": "stripe",
       "colors": [
-        "#efe4c8",
+        "#fff7e6",
         "#2a2724"
       ],
       "axis": "y",
       "cells": [
         1,
-        2
+        1
       ],
-      "split": 0.34,
-      "line": 0.012,
+      "split": 0.5,
+      "line": 0.01,
       "joint": 0.5,
       "depth": 0.45,
       "variation": 0.02,
@@ -44,24 +68,24 @@
     "key": "cyberpunk/light-fixture/poor",
     "alignment": "tile",
     "append": true,
-    "variantId": "panel",
-    "description": "panel luminaire: one diffuser inset in a dark housing frame",
-    "resolution": [
-      512,
-      512
-    ],
+    "description": "panel luminaire: one flat diffuser inset in a dark housing frame",
     "emission": "luminance",
+    "variantId": "panel",
+    "resolution": [
+      256,
+      448
+    ],
     "pattern": {
       "kind": "panel-grid",
       "colors": [
-        "#efe4c8"
+        "#fff7e6"
       ],
       "cells": [
         1,
         1
       ],
-      "line": 0.1,
-      "bevel": 0.05,
+      "line": 0.012,
+      "bevel": 0.008,
       "depth": 0.6,
       "joint": 0.88,
       "variation": 0.02,
@@ -71,11 +95,11 @@
   {
     "key": "cyberpunk/light-fixture/mid",
     "alignment": "tile",
-    "description": "linear luminaire: diffuser strips in a dark housing",
+    "description": "wall pack luminaire: a recessed lens with a hot centre in a dark housing",
     "tiling": {
       "worldSize": [
-        1,
-        1
+        0.16,
+        0.28
       ]
     },
     "physical": {
@@ -83,26 +107,50 @@
       "metallicFactor": 0,
       "emissiveStrength": 3
     },
+    "emission": "luminance",
+    "variantId": "lamp",
+    "resolution": [
+      256,
+      448
+    ],
+    "pattern": {
+      "kind": "lamp",
+      "colors": [
+        "#cfd6d8",
+        "#23262a",
+        "#ffffff"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "split": 0.9,
+      "depth": 0.5,
+      "grain": 0.01
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "linear luminaire: a diffuser strip along a dark housing",
+    "emission": "luminance",
     "variantId": "strip",
     "resolution": [
-      512,
-      512
+      256,
+      448
     ],
-    "emission": "luminance",
-    "overwrite": true,
     "pattern": {
       "kind": "stripe",
       "colors": [
-        "#eef2f2",
+        "#ffffff",
         "#23262a"
       ],
       "axis": "y",
       "cells": [
         1,
-        2
+        1
       ],
-      "split": 0.34,
-      "line": 0.012,
+      "split": 0.5,
+      "line": 0.01,
       "joint": 0.5,
       "depth": 0.45,
       "variation": 0.02,
@@ -113,24 +161,24 @@
     "key": "cyberpunk/light-fixture/mid",
     "alignment": "tile",
     "append": true,
-    "variantId": "panel",
-    "description": "panel luminaire: one diffuser inset in a dark housing frame",
-    "resolution": [
-      512,
-      512
-    ],
+    "description": "panel luminaire: one flat diffuser inset in a dark housing frame",
     "emission": "luminance",
+    "variantId": "panel",
+    "resolution": [
+      256,
+      448
+    ],
     "pattern": {
       "kind": "panel-grid",
       "colors": [
-        "#eef2f2"
+        "#ffffff"
       ],
       "cells": [
         1,
         1
       ],
-      "line": 0.1,
-      "bevel": 0.05,
+      "line": 0.012,
+      "bevel": 0.008,
       "depth": 0.6,
       "joint": 0.88,
       "variation": 0.02,
@@ -140,11 +188,11 @@
   {
     "key": "cyberpunk/light-fixture/rich",
     "alignment": "tile",
-    "description": "linear luminaire: diffuser strips in a dark housing",
+    "description": "wall pack luminaire: a recessed lens with a hot centre in a dark housing",
     "tiling": {
       "worldSize": [
-        1,
-        1
+        0.16,
+        0.28
       ]
     },
     "physical": {
@@ -152,26 +200,50 @@
       "metallicFactor": 0,
       "emissiveStrength": 3
     },
+    "emission": "luminance",
+    "variantId": "lamp",
+    "resolution": [
+      256,
+      448
+    ],
+    "pattern": {
+      "kind": "lamp",
+      "colors": [
+        "#c9d9e2",
+        "#1d2226",
+        "#ffffff"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "split": 0.9,
+      "depth": 0.5,
+      "grain": 0.01
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "linear luminaire: a diffuser strip along a dark housing",
+    "emission": "luminance",
     "variantId": "strip",
     "resolution": [
-      512,
-      512
+      256,
+      448
     ],
-    "emission": "luminance",
-    "overwrite": true,
     "pattern": {
       "kind": "stripe",
       "colors": [
-        "#eaf3f8",
+        "#ffffff",
         "#1d2226"
       ],
       "axis": "y",
       "cells": [
         1,
-        2
+        1
       ],
-      "split": 0.34,
-      "line": 0.012,
+      "split": 0.5,
+      "line": 0.01,
       "joint": 0.5,
       "depth": 0.45,
       "variation": 0.02,
@@ -182,24 +254,24 @@
     "key": "cyberpunk/light-fixture/rich",
     "alignment": "tile",
     "append": true,
-    "variantId": "panel",
-    "description": "panel luminaire: one diffuser inset in a dark housing frame",
-    "resolution": [
-      512,
-      512
-    ],
+    "description": "panel luminaire: one flat diffuser inset in a dark housing frame",
     "emission": "luminance",
+    "variantId": "panel",
+    "resolution": [
+      256,
+      448
+    ],
     "pattern": {
       "kind": "panel-grid",
       "colors": [
-        "#eaf3f8"
+        "#ffffff"
       ],
       "cells": [
         1,
         1
       ],
-      "line": 0.1,
-      "bevel": 0.05,
+      "line": 0.012,
+      "bevel": 0.008,
       "depth": 0.6,
       "joint": 0.88,
       "variation": 0.02,
@@ -209,11 +281,11 @@
   {
     "key": "cyberpunk/light-fixture/high_rich",
     "alignment": "tile",
-    "description": "linear luminaire: diffuser strips in a dark housing",
+    "description": "wall pack luminaire: a recessed lens with a hot centre in a dark housing",
     "tiling": {
       "worldSize": [
-        1,
-        1
+        0.16,
+        0.28
       ]
     },
     "physical": {
@@ -221,26 +293,50 @@
       "metallicFactor": 0,
       "emissiveStrength": 3
     },
+    "emission": "luminance",
+    "variantId": "lamp",
+    "resolution": [
+      256,
+      448
+    ],
+    "pattern": {
+      "kind": "lamp",
+      "colors": [
+        "#c4d8e4",
+        "#181c22",
+        "#ffffff"
+      ],
+      "line": 0.012,
+      "bevel": 0.008,
+      "split": 0.9,
+      "depth": 0.5,
+      "grain": 0.01
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "linear luminaire: a diffuser strip along a dark housing",
+    "emission": "luminance",
     "variantId": "strip",
     "resolution": [
-      512,
-      512
+      256,
+      448
     ],
-    "emission": "luminance",
-    "overwrite": true,
     "pattern": {
       "kind": "stripe",
       "colors": [
-        "#f4fbff",
+        "#ffffff",
         "#181c22"
       ],
       "axis": "y",
       "cells": [
         1,
-        2
+        1
       ],
-      "split": 0.34,
-      "line": 0.012,
+      "split": 0.5,
+      "line": 0.01,
       "joint": 0.5,
       "depth": 0.45,
       "variation": 0.02,
@@ -251,24 +347,24 @@
     "key": "cyberpunk/light-fixture/high_rich",
     "alignment": "tile",
     "append": true,
-    "variantId": "panel",
-    "description": "panel luminaire: one diffuser inset in a dark housing frame",
-    "resolution": [
-      512,
-      512
-    ],
+    "description": "panel luminaire: one flat diffuser inset in a dark housing frame",
     "emission": "luminance",
+    "variantId": "panel",
+    "resolution": [
+      256,
+      448
+    ],
     "pattern": {
       "kind": "panel-grid",
       "colors": [
-        "#f4fbff"
+        "#ffffff"
       ],
       "cells": [
         1,
         1
       ],
-      "line": 0.1,
-      "bevel": 0.05,
+      "line": 0.012,
+      "bevel": 0.008,
       "depth": 0.6,
       "joint": 0.88,
       "variation": 0.02,

@@ -58,7 +58,8 @@
       "octaves": 2,
       "depth": 0.15,
       "grain": 0.02
-    }
+    },
+    "canonical": true
   },
   {
     "key": "cyberpunk/ceiling/mid",
@@ -119,7 +120,8 @@
       "octaves": 2,
       "depth": 0.15,
       "grain": 0.02
-    }
+    },
+    "canonical": true
   },
   {
     "key": "cyberpunk/ceiling/rich",
@@ -180,7 +182,8 @@
       "octaves": 2,
       "depth": 0.15,
       "grain": 0.02
-    }
+    },
+    "canonical": true
   },
   {
     "key": "cyberpunk/ceiling/high_rich",
@@ -241,6 +244,7 @@
       "octaves": 2,
       "depth": 0.15,
       "grain": 0.02
-    }
+    },
+    "canonical": true
   }
 ]

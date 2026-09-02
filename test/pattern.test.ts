@@ -8,6 +8,7 @@ import { Database } from '../src/db/Database.js';
 import { ComfyClient } from '../src/gen/ComfyClient.js';
 import { Generator } from '../src/gen/Generator.js';
 import { buildPattern } from '../src/gen/pattern/build.js';
+import { DAMP } from '../src/gen/pattern/LaneField.js';
 import { CHARSET, GRID } from '../src/gen/pattern/GlyphAtlas.js';
 import type { CreateRequest, PatternSpec } from '../src/db/types.js';
 
@@ -32,7 +33,9 @@ const kinds: PatternSpec[] = [
   { kind: 'stripe', colors: ['#eef2f2', '#23262a'], cells: [1, 2], split: 0.34 },
   { kind: 'two-tone', colors: ['#2e6b73', '#b9bcbb', '#cfe9ee'], split: 0.42 },
   { kind: 'noise', colors: ['#26282a', '#33363a'], cells: [8, 8], octaves: 4 },
+  { kind: 'lane', colors: ['#202225', '#2e3134'], cells: [4, 8], octaves: 3, axis: 'y', split: 0.457, line: 0.4, wear: 0.6 },
   { kind: 'puddle', colors: ['#202225', '#2e3134', '#0d0f12'], cells: [8, 8], octaves: 3, wet: 0.42 },
+  { kind: 'lamp', colors: ['#e0d0a6', '#2a2724', '#fff7e6'], line: 0.012, bevel: 0.008, split: 0.9 },
   { kind: 'glyph-atlas', colors: ['#eafcff', '#7fe8ff', '#10161a'], line: 0.045, bevel: 0.05 },
 ];
 
@@ -102,6 +105,7 @@ describe('pattern class', () => {
       generator.create({ ...wall, pattern: { kind: 'stripe', colors: ['#8d8f8a'] } }),
     ).rejects.toMatchObject({ code: 'E_SCHEMA' });
     await expect(generator.create({ ...wall, variants: 2 })).rejects.toMatchObject({ code: 'E_SCHEMA' });
+    await expect(generator.create({ ...wall, canonical: true })).rejects.toMatchObject({ code: 'E_SCHEMA' });
   });
 
   it('appends a variant to an existing entry, which keeps its tiling and physical', async () => {
@@ -119,6 +123,18 @@ describe('pattern class', () => {
     expect(entry.variants.map((v) => v.id)).toEqual(['1', 'two-tone']);
     expect(entry.physical.roughnessFactor).toBe(0.8);
     expect(entry.tiling?.worldSize).toEqual([3, 3]);
+    // a canonical append leads the list, so a consumer that does not pick gets it
+    const led = await generator.create({
+      key: 'cyberpunk/plaster/mid',
+      alignment: 'tile',
+      append: true,
+      canonical: true,
+      variantId: 'plain',
+      description: 'plain painted plaster',
+      resolution: [128, 128],
+      pattern: { kind: 'noise', colors: ['#b9bcbb', '#bfc2c1'], cells: [3, 3] },
+    });
+    expect(led.variants.map((v) => v.id)).toEqual(['plain', '1', 'two-tone']);
     await expect(
       generator.create({
         key: 'cyberpunk/plaster/mid',
@@ -164,24 +180,64 @@ describe('pattern class', () => {
     expect(await cell(CHARSET.indexOf(' '))).toBe(0); // the blank cell stays dark
   });
 
-  it('floods part of a road with mirror-smooth puddles and leaves the rest dry', async () => {
+  it('pools damp patches over part of a road, never below the damp roughness, and leaves the rest dry', async () => {
     const generator = offline(db);
     const share = async (request: CreateRequest, key: string) => {
       const entry = await generator.create({ ...request, key });
       const gloss = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.roughness)).raw().toBuffer();
       return {
-        mirror: gloss.filter((v) => v / 255 < 0.1).length / gloss.length,
+        damp: gloss.filter((v) => v / 255 < DAMP + 0.05).length / gloss.length,
         dry: gloss.filter((v) => v / 255 > 0.85).length / gloss.length,
+        floor: Math.min(...gloss) / 255,
       };
     };
 
     const wet = await share(road, 'cyberpunk/road/poor');
-    expect(wet.mirror).toBeGreaterThan(0.1); // water enough to reflect the street back
+    expect(wet.damp).toBeGreaterThan(0.1); // patches enough for a lamp to land on
     expect(wet.dry).toBeGreaterThan(0.3); // over asphalt that is still asphalt
+    expect(wet.floor).toBeGreaterThanOrEqual(DAMP - 0.01); // damp asphalt keeps its floor
 
-    // the same road with the mask closed: the puddles are the mask's doing, not the asphalt's
+    // the same road with the mask closed: the patches are the mask's doing, not the asphalt's
     const dry = await share({ ...road, pattern: { ...road.pattern!, wet: 0 } }, 'cyberpunk/road/mid');
-    expect(dry.mirror).toBe(0);
+    expect(dry.damp).toBe(0);
+  });
+
+  it('wears two damp wheel tracks along a lane and leaves the road between them dry', () => {
+    const lane = buildPattern(
+      { kind: 'lane', colors: ['#202225', '#2e3134'], cells: [4, 8], octaves: 3, axis: 'y', split: 0.457, line: 0.4, wear: 0.6 },
+      [3.5, 7],
+      0.9,
+      5,
+    );
+    const across = (x: number) => {
+      let sum = 0;
+      for (let i = 0; i < 32; i++) sum += lane.sample(x / 3.5, (i + 0.5) / 32, 1 / 512, 1 / 1024).roughness;
+      return sum / 32;
+    };
+    const track = across(1.75 - 0.8);
+    const centre = across(1.75);
+    expect(track).toBeLessThan(centre - 0.1); // the track is damper than the crown of the lane
+    expect(track).toBeGreaterThanOrEqual(DAMP); // and keeps the damp floor
+    expect(across(1.75 + 0.8)).toBeCloseTo(track, 1); // two tracks, one under each wheel
+  });
+
+  it('draws a luminaire whose lens is lit with a hot centre and whose housing stays dark', async () => {
+    const entry = await offline(db).create({
+      key: 'cyberpunk/light-fixture/mid',
+      alignment: 'tile',
+      description: 'wall pack luminaire',
+      tiling: { worldSize: [0.16, 0.28] },
+      physical: { roughnessFactor: 0.45, metallicFactor: 0, emissiveStrength: 3 },
+      emission: 'luminance',
+      resolution: [64, 112],
+      pattern: { kind: 'lamp', colors: ['#cfd6d8', '#23262a', '#ffffff'], line: 0.012, bevel: 0.008, split: 0.9 },
+    });
+    const emission = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.emission!)).raw().toBuffer();
+    const at = (x: number, y: number) => emission[(y * 64 + x) * 3 + 1];
+    expect(at(32, 56)).toBeGreaterThan(240); // the hot centre
+    expect(at(32, 56)).toBeGreaterThan(at(8, 56) + 40); // brighter than the lens near its rim
+    expect(at(8, 56)).toBeGreaterThan(60); // which is still lit
+    expect(at(1, 56)).toBe(0); // the housing bezel is not
   });
 
   it('appends a tint variant of a variant already in the entry', async () => {
@@ -199,7 +255,7 @@ describe('pattern class', () => {
       key: 'cyberpunk/wall/mid',
       alignment: 'tile',
       append: true,
-      variantId: 'tint-ochre',
+      variantId: 'tint-rust',
       description: 'wall in another paint',
       recolor: { from: '1', color: '#a2683c', strength: 0.4 },
     });

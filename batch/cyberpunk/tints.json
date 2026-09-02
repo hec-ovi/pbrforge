@@ -3,19 +3,6 @@
     "key": "cyberpunk/wall/poor",
     "alignment": "tile",
     "append": true,
-    "variantId": "tint-ochre",
-    "description": "wall in another paint",
-    "recolor": {
-      "from": "1",
-      "color": "#b06a2e",
-      "strength": 0.55,
-      "value": 1.05
-    }
-  },
-  {
-    "key": "cyberpunk/wall/poor",
-    "alignment": "tile",
-    "append": true,
     "variantId": "tint-slate",
     "description": "wall in another paint",
     "recolor": {
@@ -42,19 +29,6 @@
     "key": "cyberpunk/wall/mid",
     "alignment": "tile",
     "append": true,
-    "variantId": "tint-ochre",
-    "description": "wall in another paint",
-    "recolor": {
-      "from": "1",
-      "color": "#b06a2e",
-      "strength": 0.55,
-      "value": 1.05
-    }
-  },
-  {
-    "key": "cyberpunk/wall/mid",
-    "alignment": "tile",
-    "append": true,
     "variantId": "tint-slate",
     "description": "wall in another paint",
     "recolor": {
@@ -81,19 +55,6 @@
     "key": "cyberpunk/wall/rich",
     "alignment": "tile",
     "append": true,
-    "variantId": "tint-ochre",
-    "description": "wall in another paint",
-    "recolor": {
-      "from": "1",
-      "color": "#b06a2e",
-      "strength": 0.55,
-      "value": 1.05
-    }
-  },
-  {
-    "key": "cyberpunk/wall/rich",
-    "alignment": "tile",
-    "append": true,
     "variantId": "tint-slate",
     "description": "wall in another paint",
     "recolor": {
@@ -114,19 +75,6 @@
       "color": "#2c6f6a",
       "strength": 0.45,
       "value": 1.0
-    }
-  },
-  {
-    "key": "cyberpunk/wall/high_rich",
-    "alignment": "tile",
-    "append": true,
-    "variantId": "tint-ochre",
-    "description": "wall in another paint",
-    "recolor": {
-      "from": "1",
-      "color": "#b06a2e",
-      "strength": 0.55,
-      "value": 1.05
     }
   },
   {

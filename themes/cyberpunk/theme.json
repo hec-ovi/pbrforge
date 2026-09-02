@@ -47,21 +47,6 @@
           }
         },
         {
-          "id": "tint-ochre",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/tint-ochre/basecolor.png",
-            "normal": "assets/wall/poor/1/normal.png",
-            "roughness": "assets/wall/poor/1/roughness.png",
-            "metallic": "assets/wall/poor/1/metallic.png",
-            "height": "assets/wall/poor/1/height.png",
-            "ao": "assets/wall/poor/1/ao.png"
-          }
-        },
-        {
           "id": "tint-slate",
           "resolution": [
             1024,
@@ -119,6 +104,22 @@
             "metallic": "assets/wall/poor/4/metallic.png",
             "height": "assets/wall/poor/4/height.png",
             "ao": "assets/wall/poor/4/ao.png"
+          }
+        },
+        {
+          "id": "panel-ochre",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/poor/panel-ochre/basecolor.png",
+            "normal": "assets/wall/poor/panel-ochre/normal.png",
+            "roughness": "assets/wall/poor/panel-ochre/roughness.png",
+            "metallic": "assets/wall/poor/panel-ochre/metallic.png",
+            "height": "assets/wall/poor/panel-ochre/height.png",
+            "ao": "assets/wall/poor/panel-ochre/ao.png"
           }
         }
       ],
@@ -220,21 +221,6 @@
           }
         },
         {
-          "id": "tint-ochre",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/tint-ochre/basecolor.png",
-            "normal": "assets/wall/mid/1/normal.png",
-            "roughness": "assets/wall/mid/1/roughness.png",
-            "metallic": "assets/wall/mid/1/metallic.png",
-            "height": "assets/wall/mid/1/height.png",
-            "ao": "assets/wall/mid/1/ao.png"
-          }
-        },
-        {
           "id": "tint-slate",
           "resolution": [
             1024,
@@ -262,6 +248,22 @@
             "metallic": "assets/wall/mid/4/metallic.png",
             "height": "assets/wall/mid/4/height.png",
             "ao": "assets/wall/mid/4/ao.png"
+          }
+        },
+        {
+          "id": "panel-ochre",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/mid/panel-ochre/basecolor.png",
+            "normal": "assets/wall/mid/panel-ochre/normal.png",
+            "roughness": "assets/wall/mid/panel-ochre/roughness.png",
+            "metallic": "assets/wall/mid/panel-ochre/metallic.png",
+            "height": "assets/wall/mid/panel-ochre/height.png",
+            "ao": "assets/wall/mid/panel-ochre/ao.png"
           }
         }
       ]
@@ -308,21 +310,6 @@
             "metallic": "assets/wall/rich/2/metallic.png",
             "height": "assets/wall/rich/2/height.png",
             "ao": "assets/wall/rich/2/ao.png"
-          }
-        },
-        {
-          "id": "tint-ochre",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/tint-ochre/basecolor.png",
-            "normal": "assets/wall/rich/1/normal.png",
-            "roughness": "assets/wall/rich/1/roughness.png",
-            "metallic": "assets/wall/rich/1/metallic.png",
-            "height": "assets/wall/rich/1/height.png",
-            "ao": "assets/wall/rich/1/ao.png"
           }
         },
         {
@@ -384,6 +371,22 @@
             "height": "assets/wall/rich/4/height.png",
             "ao": "assets/wall/rich/4/ao.png"
           }
+        },
+        {
+          "id": "panel-ochre",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/rich/panel-ochre/basecolor.png",
+            "normal": "assets/wall/rich/panel-ochre/normal.png",
+            "roughness": "assets/wall/rich/panel-ochre/roughness.png",
+            "metallic": "assets/wall/rich/panel-ochre/metallic.png",
+            "height": "assets/wall/rich/panel-ochre/height.png",
+            "ao": "assets/wall/rich/panel-ochre/ao.png"
+          }
         }
       ],
       "aliases": [
@@ -408,8 +411,8 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.55,
-        "metallicFactor": 0.15
+        "roughnessFactor": 0.6,
+        "metallicFactor": 0
       },
       "variants": [
         {
@@ -440,21 +443,6 @@
             "metallic": "assets/wall/high_rich/2/metallic.png",
             "height": "assets/wall/high_rich/2/height.png",
             "ao": "assets/wall/high_rich/2/ao.png"
-          }
-        },
-        {
-          "id": "tint-ochre",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/tint-ochre/basecolor.png",
-            "normal": "assets/wall/high_rich/1/normal.png",
-            "roughness": "assets/wall/high_rich/1/roughness.png",
-            "metallic": "assets/wall/high_rich/1/metallic.png",
-            "height": "assets/wall/high_rich/1/height.png",
-            "ao": "assets/wall/high_rich/1/ao.png"
           }
         },
         {
@@ -516,6 +504,22 @@
             "height": "assets/wall/high_rich/4/height.png",
             "ao": "assets/wall/high_rich/4/ao.png"
           }
+        },
+        {
+          "id": "panel-ochre",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/high_rich/panel-ochre/basecolor.png",
+            "normal": "assets/wall/high_rich/panel-ochre/normal.png",
+            "roughness": "assets/wall/high_rich/panel-ochre/roughness.png",
+            "metallic": "assets/wall/high_rich/panel-ochre/metallic.png",
+            "height": "assets/wall/high_rich/panel-ochre/height.png",
+            "ao": "assets/wall/high_rich/panel-ochre/ao.png"
+          }
         }
       ],
       "aliases": [
@@ -523,8 +527,8 @@
       ],
       "finish": {
         "roughness": [
-          0.54,
-          0.64
+          0.56,
+          0.66
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -776,408 +780,272 @@
     },
     "cyberpunk/window-frame/poor": {
       "key": "cyberpunk/window-frame/poor",
-      "alignment": "tile",
-      "tiling": {
-        "worldSize": [
-          1,
-          1
-        ]
-      },
-      "physical": {
-        "roughnessFactor": 0.65,
-        "metallicFactor": 1
-      },
-      "variants": [
-        {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/window-frame/poor/1/basecolor.png",
-            "normal": "assets/window-frame/poor/1/normal.png",
-            "roughness": "assets/window-frame/poor/1/roughness.png",
-            "metallic": "assets/window-frame/poor/1/metallic.png",
-            "height": "assets/window-frame/poor/1/height.png",
-            "ao": "assets/window-frame/poor/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/window-frame/poor/2/basecolor.png",
-            "normal": "assets/window-frame/poor/2/normal.png",
-            "roughness": "assets/window-frame/poor/2/roughness.png",
-            "metallic": "assets/window-frame/poor/2/metallic.png",
-            "height": "assets/window-frame/poor/2/height.png",
-            "ao": "assets/window-frame/poor/2/ao.png"
-          }
-        }
-      ],
       "aliases": [
         "cyberpunk/balcony-rail/poor",
         "cyberpunk/aperture-frame/poor"
       ],
-      "finish": {
-        "roughness": [
-          0.6,
-          0.7
-        ],
-        "grain": 0.25,
-        "relief": 2
-      }
-    },
-    "cyberpunk/window-frame/mid": {
-      "key": "cyberpunk/window-frame/mid",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.45,
-        "metallicFactor": 1
+        "roughnessFactor": 0.7,
+        "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/window-frame/mid/1/basecolor.png",
-            "normal": "assets/window-frame/mid/1/normal.png",
-            "roughness": "assets/window-frame/mid/1/roughness.png",
-            "metallic": "assets/window-frame/mid/1/metallic.png",
-            "height": "assets/window-frame/mid/1/height.png",
-            "ao": "assets/window-frame/mid/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/window-frame/mid/2/basecolor.png",
-            "normal": "assets/window-frame/mid/2/normal.png",
-            "roughness": "assets/window-frame/mid/2/roughness.png",
-            "metallic": "assets/window-frame/mid/2/metallic.png",
-            "height": "assets/window-frame/mid/2/height.png",
-            "ao": "assets/window-frame/mid/2/ao.png"
+            "basecolor": "assets/window-frame/poor/paint/basecolor.png",
+            "normal": "assets/window-frame/poor/paint/normal.png",
+            "roughness": "assets/window-frame/poor/paint/roughness.png",
+            "metallic": "assets/window-frame/poor/paint/metallic.png",
+            "height": "assets/window-frame/poor/paint/height.png",
+            "ao": "assets/window-frame/poor/paint/ao.png"
           }
         }
-      ],
+      ]
+    },
+    "cyberpunk/window-frame/mid": {
+      "key": "cyberpunk/window-frame/mid",
       "aliases": [
         "cyberpunk/balcony-rail/mid",
         "cyberpunk/aperture-frame/mid"
       ],
-      "finish": {
-        "roughness": [
-          0.4,
-          0.5
-        ],
-        "grain": 0.2,
-        "relief": 2
-      }
-    },
-    "cyberpunk/window-frame/rich": {
-      "key": "cyberpunk/window-frame/rich",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.35,
-        "metallicFactor": 1
+        "roughnessFactor": 0.65,
+        "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/window-frame/rich/1/basecolor.png",
-            "normal": "assets/window-frame/rich/1/normal.png",
-            "roughness": "assets/window-frame/rich/1/roughness.png",
-            "metallic": "assets/window-frame/rich/1/metallic.png",
-            "height": "assets/window-frame/rich/1/height.png",
-            "ao": "assets/window-frame/rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/window-frame/rich/2/basecolor.png",
-            "normal": "assets/window-frame/rich/2/normal.png",
-            "roughness": "assets/window-frame/rich/2/roughness.png",
-            "metallic": "assets/window-frame/rich/2/metallic.png",
-            "height": "assets/window-frame/rich/2/height.png",
-            "ao": "assets/window-frame/rich/2/ao.png"
+            "basecolor": "assets/window-frame/mid/paint/basecolor.png",
+            "normal": "assets/window-frame/mid/paint/normal.png",
+            "roughness": "assets/window-frame/mid/paint/roughness.png",
+            "metallic": "assets/window-frame/mid/paint/metallic.png",
+            "height": "assets/window-frame/mid/paint/height.png",
+            "ao": "assets/window-frame/mid/paint/ao.png"
           }
         }
-      ],
+      ]
+    },
+    "cyberpunk/window-frame/rich": {
+      "key": "cyberpunk/window-frame/rich",
       "aliases": [
         "cyberpunk/balcony-rail/rich",
         "cyberpunk/aperture-frame/rich"
       ],
-      "finish": {
-        "roughness": [
-          0.3,
-          0.4
-        ],
-        "grain": 0.15,
-        "relief": 1.6
-      }
-    },
-    "cyberpunk/window-frame/high_rich": {
-      "key": "cyberpunk/window-frame/high_rich",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.25,
-        "metallicFactor": 1
+        "roughnessFactor": 0.6,
+        "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/window-frame/high_rich/1/basecolor.png",
-            "normal": "assets/window-frame/high_rich/1/normal.png",
-            "roughness": "assets/window-frame/high_rich/1/roughness.png",
-            "metallic": "assets/window-frame/high_rich/1/metallic.png",
-            "height": "assets/window-frame/high_rich/1/height.png",
-            "ao": "assets/window-frame/high_rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/window-frame/high_rich/2/basecolor.png",
-            "normal": "assets/window-frame/high_rich/2/normal.png",
-            "roughness": "assets/window-frame/high_rich/2/roughness.png",
-            "metallic": "assets/window-frame/high_rich/2/metallic.png",
-            "height": "assets/window-frame/high_rich/2/height.png",
-            "ao": "assets/window-frame/high_rich/2/ao.png"
+            "basecolor": "assets/window-frame/rich/paint/basecolor.png",
+            "normal": "assets/window-frame/rich/paint/normal.png",
+            "roughness": "assets/window-frame/rich/paint/roughness.png",
+            "metallic": "assets/window-frame/rich/paint/metallic.png",
+            "height": "assets/window-frame/rich/paint/height.png",
+            "ao": "assets/window-frame/rich/paint/ao.png"
           }
         }
-      ],
+      ]
+    },
+    "cyberpunk/window-frame/high_rich": {
+      "key": "cyberpunk/window-frame/high_rich",
       "aliases": [
         "cyberpunk/balcony-rail/high_rich",
         "cyberpunk/aperture-frame/high_rich"
       ],
-      "finish": {
-        "roughness": [
-          0.2,
-          0.3
-        ],
-        "grain": 0.1,
-        "relief": 1.2
-      }
-    },
-    "cyberpunk/door/poor": {
-      "key": "cyberpunk/door/poor",
-      "alignment": "exact",
-      "aspect": [
-        1,
-        2
-      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
       "physical": {
-        "roughnessFactor": 0.7,
-        "metallicFactor": 1
+        "roughnessFactor": 0.55,
+        "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "pattern",
           "resolution": [
-            832,
-            1216
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/door/poor/1/basecolor.png",
-            "normal": "assets/door/poor/1/normal.png",
-            "roughness": "assets/door/poor/1/roughness.png",
-            "metallic": "assets/door/poor/1/metallic.png",
-            "height": "assets/door/poor/1/height.png",
-            "ao": "assets/door/poor/1/ao.png"
+            "basecolor": "assets/window-frame/high_rich/paint/basecolor.png",
+            "normal": "assets/window-frame/high_rich/paint/normal.png",
+            "roughness": "assets/window-frame/high_rich/paint/roughness.png",
+            "metallic": "assets/window-frame/high_rich/paint/metallic.png",
+            "height": "assets/window-frame/high_rich/paint/height.png",
+            "ao": "assets/window-frame/high_rich/paint/ao.png"
           }
-        },
+        }
+      ]
+    },
+    "cyberpunk/door/poor": {
+      "key": "cyberpunk/door/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.7,
+        "metallicFactor": 0
+      },
+      "variants": [
         {
-          "id": "2",
+          "id": "paint",
+          "class": "pattern",
           "resolution": [
-            832,
-            1216
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/door/poor/2/basecolor.png",
-            "normal": "assets/door/poor/2/normal.png",
-            "roughness": "assets/door/poor/2/roughness.png",
-            "metallic": "assets/door/poor/2/metallic.png",
-            "height": "assets/door/poor/2/height.png",
-            "ao": "assets/door/poor/2/ao.png"
+            "basecolor": "assets/door/poor/paint/basecolor.png",
+            "normal": "assets/door/poor/paint/normal.png",
+            "roughness": "assets/door/poor/paint/roughness.png",
+            "metallic": "assets/door/poor/paint/metallic.png",
+            "height": "assets/door/poor/paint/height.png",
+            "ao": "assets/door/poor/paint/ao.png"
           }
         }
       ]
     },
     "cyberpunk/door/mid": {
       "key": "cyberpunk/door/mid",
-      "alignment": "exact",
-      "aspect": [
-        1,
-        2
-      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
       "physical": {
-        "roughnessFactor": 0.55,
-        "metallicFactor": 1
+        "roughnessFactor": 0.65,
+        "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "pattern",
           "resolution": [
-            832,
-            1216
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/door/mid/1/basecolor.png",
-            "normal": "assets/door/mid/1/normal.png",
-            "roughness": "assets/door/mid/1/roughness.png",
-            "metallic": "assets/door/mid/1/metallic.png",
-            "height": "assets/door/mid/1/height.png",
-            "ao": "assets/door/mid/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            832,
-            1216
-          ],
-          "maps": {
-            "basecolor": "assets/door/mid/2/basecolor.png",
-            "normal": "assets/door/mid/2/normal.png",
-            "roughness": "assets/door/mid/2/roughness.png",
-            "metallic": "assets/door/mid/2/metallic.png",
-            "height": "assets/door/mid/2/height.png",
-            "ao": "assets/door/mid/2/ao.png"
+            "basecolor": "assets/door/mid/paint/basecolor.png",
+            "normal": "assets/door/mid/paint/normal.png",
+            "roughness": "assets/door/mid/paint/roughness.png",
+            "metallic": "assets/door/mid/paint/metallic.png",
+            "height": "assets/door/mid/paint/height.png",
+            "ao": "assets/door/mid/paint/ao.png"
           }
         }
       ]
     },
     "cyberpunk/door/rich": {
       "key": "cyberpunk/door/rich",
-      "alignment": "exact",
-      "aspect": [
-        1,
-        2
-      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
       "physical": {
-        "roughnessFactor": 0.4,
-        "metallicFactor": 1
+        "roughnessFactor": 0.6,
+        "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "pattern",
           "resolution": [
-            832,
-            1216
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/door/rich/1/basecolor.png",
-            "normal": "assets/door/rich/1/normal.png",
-            "roughness": "assets/door/rich/1/roughness.png",
-            "metallic": "assets/door/rich/1/metallic.png",
-            "height": "assets/door/rich/1/height.png",
-            "ao": "assets/door/rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            832,
-            1216
-          ],
-          "maps": {
-            "basecolor": "assets/door/rich/2/basecolor.png",
-            "normal": "assets/door/rich/2/normal.png",
-            "roughness": "assets/door/rich/2/roughness.png",
-            "metallic": "assets/door/rich/2/metallic.png",
-            "height": "assets/door/rich/2/height.png",
-            "ao": "assets/door/rich/2/ao.png"
+            "basecolor": "assets/door/rich/paint/basecolor.png",
+            "normal": "assets/door/rich/paint/normal.png",
+            "roughness": "assets/door/rich/paint/roughness.png",
+            "metallic": "assets/door/rich/paint/metallic.png",
+            "height": "assets/door/rich/paint/height.png",
+            "ao": "assets/door/rich/paint/ao.png"
           }
         }
       ]
     },
     "cyberpunk/door/high_rich": {
       "key": "cyberpunk/door/high_rich",
-      "alignment": "exact",
-      "aspect": [
-        1,
-        2
-      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
       "physical": {
-        "roughnessFactor": 0.3,
-        "metallicFactor": 0.6
+        "roughnessFactor": 0.55,
+        "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "pattern",
           "resolution": [
-            832,
-            1216
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/door/high_rich/1/basecolor.png",
-            "normal": "assets/door/high_rich/1/normal.png",
-            "roughness": "assets/door/high_rich/1/roughness.png",
-            "metallic": "assets/door/high_rich/1/metallic.png",
-            "height": "assets/door/high_rich/1/height.png",
-            "ao": "assets/door/high_rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            832,
-            1216
-          ],
-          "maps": {
-            "basecolor": "assets/door/high_rich/2/basecolor.png",
-            "normal": "assets/door/high_rich/2/normal.png",
-            "roughness": "assets/door/high_rich/2/roughness.png",
-            "metallic": "assets/door/high_rich/2/metallic.png",
-            "height": "assets/door/high_rich/2/height.png",
-            "ao": "assets/door/high_rich/2/ao.png"
+            "basecolor": "assets/door/high_rich/paint/basecolor.png",
+            "normal": "assets/door/high_rich/paint/normal.png",
+            "roughness": "assets/door/high_rich/paint/roughness.png",
+            "metallic": "assets/door/high_rich/paint/metallic.png",
+            "height": "assets/door/high_rich/paint/height.png",
+            "ao": "assets/door/high_rich/paint/ao.png"
           }
         }
       ]
@@ -1306,7 +1174,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.55,
         "metallicFactor": 0
       },
       "variants": [
@@ -1346,8 +1214,8 @@
       ],
       "finish": {
         "roughness": [
-          0.45,
-          0.55
+          0.5,
+          0.6
         ],
         "grain": 0.15,
         "relief": 1.6
@@ -1363,7 +1231,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.35,
+        "roughnessFactor": 0.5,
         "metallicFactor": 0
       },
       "variants": [
@@ -1403,8 +1271,8 @@
       ],
       "finish": {
         "roughness": [
-          0.3,
-          0.4
+          0.46,
+          0.56
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -1528,7 +1396,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.55,
         "metallicFactor": 1
       },
       "variants": [
@@ -1565,8 +1433,8 @@
       ],
       "finish": {
         "roughness": [
-          0.45,
-          0.55
+          0.5,
+          0.6
         ],
         "grain": 0.15,
         "relief": 1.6
@@ -1582,8 +1450,8 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.35,
-        "metallicFactor": 0.5
+        "roughnessFactor": 0.55,
+        "metallicFactor": 0
       },
       "variants": [
         {
@@ -1619,8 +1487,8 @@
       ],
       "finish": {
         "roughness": [
-          0.3,
-          0.4
+          0.5,
+          0.6
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -1744,7 +1612,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.4,
+        "roughnessFactor": 0.5,
         "metallicFactor": 1
       },
       "variants": [
@@ -1781,8 +1649,8 @@
       ],
       "finish": {
         "roughness": [
-          0.35,
-          0.45
+          0.46,
+          0.56
         ],
         "grain": 0.15,
         "relief": 1.6
@@ -1798,8 +1666,8 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.3,
-        "metallicFactor": 0.4
+        "roughnessFactor": 0.55,
+        "metallicFactor": 0
       },
       "variants": [
         {
@@ -1835,8 +1703,8 @@
       ],
       "finish": {
         "roughness": [
-          0.25,
-          0.35
+          0.52,
+          0.62
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -1856,6 +1724,22 @@
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/poor/plain/basecolor.png",
+            "normal": "assets/plaster/poor/plain/normal.png",
+            "roughness": "assets/plaster/poor/plain/roughness.png",
+            "metallic": "assets/plaster/poor/plain/metallic.png",
+            "height": "assets/plaster/poor/plain/height.png",
+            "ao": "assets/plaster/poor/plain/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -1989,6 +1873,22 @@
       },
       "variants": [
         {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/mid/plain/basecolor.png",
+            "normal": "assets/plaster/mid/plain/normal.png",
+            "roughness": "assets/plaster/mid/plain/roughness.png",
+            "metallic": "assets/plaster/mid/plain/metallic.png",
+            "height": "assets/plaster/mid/plain/height.png",
+            "ao": "assets/plaster/mid/plain/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -2121,6 +2021,22 @@
       },
       "variants": [
         {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/rich/plain/basecolor.png",
+            "normal": "assets/plaster/rich/plain/normal.png",
+            "roughness": "assets/plaster/rich/plain/roughness.png",
+            "metallic": "assets/plaster/rich/plain/metallic.png",
+            "height": "assets/plaster/rich/plain/height.png",
+            "ao": "assets/plaster/rich/plain/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -2248,10 +2164,26 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.58,
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/plaster/high_rich/plain/basecolor.png",
+            "normal": "assets/plaster/high_rich/plain/normal.png",
+            "roughness": "assets/plaster/high_rich/plain/roughness.png",
+            "metallic": "assets/plaster/high_rich/plain/metallic.png",
+            "height": "assets/plaster/high_rich/plain/height.png",
+            "ao": "assets/plaster/high_rich/plain/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -2363,8 +2295,8 @@
       ],
       "finish": {
         "roughness": [
-          0.5,
-          0.6
+          0.55,
+          0.65
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -2380,7 +2312,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.55,
+        "roughnessFactor": 0.6,
         "metallicFactor": 0
       },
       "variants": [
@@ -2465,8 +2397,8 @@
       ],
       "finish": {
         "roughness": [
-          0.54,
-          0.62
+          0.56,
+          0.64
         ],
         "grain": 0.25,
         "relief": 2
@@ -2482,7 +2414,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.45,
+        "roughnessFactor": 0.55,
         "metallicFactor": 0
       },
       "variants": [
@@ -2567,8 +2499,8 @@
       ],
       "finish": {
         "roughness": [
-          0.44,
-          0.52
+          0.51,
+          0.59
         ],
         "grain": 0.2,
         "relief": 2
@@ -2584,7 +2516,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.3,
+        "roughnessFactor": 0.5,
         "metallicFactor": 0
       },
       "variants": [
@@ -2669,8 +2601,8 @@
       ],
       "finish": {
         "roughness": [
-          0.3,
-          0.38
+          0.46,
+          0.54
         ],
         "grain": 0.15,
         "relief": 1.6
@@ -2686,7 +2618,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.25,
+        "roughnessFactor": 0.48,
         "metallicFactor": 0
       },
       "variants": [
@@ -2771,8 +2703,8 @@
       ],
       "finish": {
         "roughness": [
-          0.24,
-          0.32
+          0.45,
+          0.52
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -2896,7 +2828,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.45,
+        "roughnessFactor": 0.55,
         "metallicFactor": 0
       },
       "variants": [
@@ -2933,8 +2865,8 @@
       ],
       "finish": {
         "roughness": [
-          0.4,
-          0.5
+          0.5,
+          0.6
         ],
         "grain": 0.15,
         "relief": 1.6
@@ -2950,7 +2882,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.35,
+        "roughnessFactor": 0.5,
         "metallicFactor": 0
       },
       "variants": [
@@ -2987,8 +2919,8 @@
       ],
       "finish": {
         "roughness": [
-          0.3,
-          0.4
+          0.46,
+          0.56
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -3441,6 +3373,22 @@
       },
       "variants": [
         {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/poor/plain/basecolor.png",
+            "normal": "assets/concrete/poor/plain/normal.png",
+            "roughness": "assets/concrete/poor/plain/roughness.png",
+            "metallic": "assets/concrete/poor/plain/metallic.png",
+            "height": "assets/concrete/poor/plain/height.png",
+            "ao": "assets/concrete/poor/plain/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -3602,6 +3550,22 @@
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/mid/plain/basecolor.png",
+            "normal": "assets/concrete/mid/plain/normal.png",
+            "roughness": "assets/concrete/mid/plain/roughness.png",
+            "metallic": "assets/concrete/mid/plain/metallic.png",
+            "height": "assets/concrete/mid/plain/height.png",
+            "ao": "assets/concrete/mid/plain/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -3765,6 +3729,22 @@
       },
       "variants": [
         {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/rich/plain/basecolor.png",
+            "normal": "assets/concrete/rich/plain/normal.png",
+            "roughness": "assets/concrete/rich/plain/roughness.png",
+            "metallic": "assets/concrete/rich/plain/metallic.png",
+            "height": "assets/concrete/rich/plain/height.png",
+            "ao": "assets/concrete/rich/plain/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -3922,10 +3902,26 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.45,
+        "roughnessFactor": 0.55,
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete/high_rich/plain/basecolor.png",
+            "normal": "assets/concrete/high_rich/plain/normal.png",
+            "roughness": "assets/concrete/high_rich/plain/roughness.png",
+            "metallic": "assets/concrete/high_rich/plain/metallic.png",
+            "height": "assets/concrete/high_rich/plain/height.png",
+            "ao": "assets/concrete/high_rich/plain/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -4067,8 +4063,8 @@
       ],
       "finish": {
         "roughness": [
-          0.46,
-          0.56
+          0.52,
+          0.62
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -4084,7 +4080,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.65,
+        "roughnessFactor": 0.7,
         "metallicFactor": 1
       },
       "variants": [
@@ -4121,8 +4117,8 @@
       ],
       "finish": {
         "roughness": [
-          0.6,
-          0.7
+          0.65,
+          0.75
         ],
         "grain": 0.25,
         "relief": 2
@@ -4138,7 +4134,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.45,
+        "roughnessFactor": 0.6,
         "metallicFactor": 1
       },
       "variants": [
@@ -4175,8 +4171,8 @@
       ],
       "finish": {
         "roughness": [
-          0.4,
-          0.5
+          0.55,
+          0.65
         ],
         "grain": 0.2,
         "relief": 2
@@ -4192,7 +4188,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.35,
+        "roughnessFactor": 0.55,
         "metallicFactor": 1
       },
       "variants": [
@@ -4229,8 +4225,8 @@
       ],
       "finish": {
         "roughness": [
-          0.3,
-          0.4
+          0.5,
+          0.6
         ],
         "grain": 0.15,
         "relief": 1.6
@@ -4246,7 +4242,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.25,
+        "roughnessFactor": 0.5,
         "metallicFactor": 1
       },
       "variants": [
@@ -4283,8 +4279,8 @@
       ],
       "finish": {
         "roughness": [
-          0.2,
-          0.3
+          0.46,
+          0.56
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -4810,7 +4806,7 @@
         2
       ],
       "physical": {
-        "roughnessFactor": 0.4,
+        "roughnessFactor": 0.6,
         "metallicFactor": 1
       },
       "variants": [
@@ -4844,7 +4840,15 @@
             "ao": "assets/elevator_door/poor/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.55,
+          0.65
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/elevator_door/mid": {
       "key": "cyberpunk/elevator_door/mid",
@@ -4854,7 +4858,7 @@
         2
       ],
       "physical": {
-        "roughnessFactor": 0.4,
+        "roughnessFactor": 0.55,
         "metallicFactor": 1
       },
       "variants": [
@@ -4888,7 +4892,15 @@
             "ao": "assets/elevator_door/mid/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.5,
+          0.6
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/elevator_door/rich": {
       "key": "cyberpunk/elevator_door/rich",
@@ -4898,7 +4910,7 @@
         2
       ],
       "physical": {
-        "roughnessFactor": 0.4,
+        "roughnessFactor": 0.5,
         "metallicFactor": 1
       },
       "variants": [
@@ -4932,7 +4944,15 @@
             "ao": "assets/elevator_door/rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.46,
+          0.56
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/elevator_door/high_rich": {
       "key": "cyberpunk/elevator_door/high_rich",
@@ -4942,7 +4962,7 @@
         2
       ],
       "physical": {
-        "roughnessFactor": 0.4,
+        "roughnessFactor": 0.5,
         "metallicFactor": 1
       },
       "variants": [
@@ -4976,7 +4996,15 @@
             "ao": "assets/elevator_door/high_rich/2/ao.png"
           }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.46,
+          0.56
+        ],
+        "grain": 0.2,
+        "relief": 2
+      }
     },
     "cyberpunk/wall-trim/poor": {
       "key": "cyberpunk/wall-trim/poor",
@@ -4988,7 +5016,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
+        "roughnessFactor": 0.65,
         "metallicFactor": 1
       },
       "variants": [
@@ -5025,8 +5053,8 @@
       ],
       "finish": {
         "roughness": [
-          0.55,
-          0.65
+          0.6,
+          0.7
         ],
         "grain": 0.25,
         "relief": 2
@@ -5042,7 +5070,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.6,
         "metallicFactor": 1
       },
       "variants": [
@@ -5079,8 +5107,8 @@
       ],
       "finish": {
         "roughness": [
-          0.45,
-          0.55
+          0.55,
+          0.65
         ],
         "grain": 0.2,
         "relief": 2
@@ -5096,7 +5124,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.4,
+        "roughnessFactor": 0.55,
         "metallicFactor": 1
       },
       "variants": [
@@ -5133,8 +5161,8 @@
       ],
       "finish": {
         "roughness": [
-          0.35,
-          0.45
+          0.5,
+          0.6
         ],
         "grain": 0.15,
         "relief": 1.6
@@ -5150,7 +5178,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.3,
+        "roughnessFactor": 0.5,
         "metallicFactor": 1
       },
       "variants": [
@@ -5187,8 +5215,8 @@
       ],
       "finish": {
         "roughness": [
-          0.25,
-          0.35
+          0.46,
+          0.56
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -5582,7 +5610,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.45,
+        "roughnessFactor": 0.5,
         "metallicFactor": 1
       },
       "variants": [
@@ -5619,8 +5647,8 @@
       ],
       "finish": {
         "roughness": [
-          0.4,
-          0.5
+          0.46,
+          0.56
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -5781,8 +5809,8 @@
       ],
       "finish": {
         "roughness": [
-          0.45,
-          0.55
+          0.46,
+          0.56
         ],
         "grain": 0.15,
         "relief": 1.6
@@ -5798,7 +5826,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.4,
+        "roughnessFactor": 0.5,
         "metallicFactor": 1
       },
       "variants": [
@@ -5835,8 +5863,8 @@
       ],
       "finish": {
         "roughness": [
-          0.35,
-          0.45
+          0.46,
+          0.56
         ],
         "grain": 0.1,
         "relief": 1.2
@@ -6075,8 +6103,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.16,
+          0.28
         ]
       },
       "physical": {
@@ -6086,11 +6114,28 @@
       },
       "variants": [
         {
+          "id": "lamp",
+          "class": "pattern",
+          "resolution": [
+            256,
+            448
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/poor/lamp/basecolor.png",
+            "normal": "assets/light-fixture/poor/lamp/normal.png",
+            "roughness": "assets/light-fixture/poor/lamp/roughness.png",
+            "metallic": "assets/light-fixture/poor/lamp/metallic.png",
+            "height": "assets/light-fixture/poor/lamp/height.png",
+            "ao": "assets/light-fixture/poor/lamp/ao.png",
+            "emission": "assets/light-fixture/poor/lamp/emission.png"
+          }
+        },
+        {
           "id": "strip",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            448
           ],
           "maps": {
             "basecolor": "assets/light-fixture/poor/strip/basecolor.png",
@@ -6106,8 +6151,8 @@
           "id": "panel",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            448
           ],
           "maps": {
             "basecolor": "assets/light-fixture/poor/panel/basecolor.png",
@@ -6126,8 +6171,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.16,
+          0.28
         ]
       },
       "physical": {
@@ -6137,11 +6182,28 @@
       },
       "variants": [
         {
+          "id": "lamp",
+          "class": "pattern",
+          "resolution": [
+            256,
+            448
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/mid/lamp/basecolor.png",
+            "normal": "assets/light-fixture/mid/lamp/normal.png",
+            "roughness": "assets/light-fixture/mid/lamp/roughness.png",
+            "metallic": "assets/light-fixture/mid/lamp/metallic.png",
+            "height": "assets/light-fixture/mid/lamp/height.png",
+            "ao": "assets/light-fixture/mid/lamp/ao.png",
+            "emission": "assets/light-fixture/mid/lamp/emission.png"
+          }
+        },
+        {
           "id": "strip",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            448
           ],
           "maps": {
             "basecolor": "assets/light-fixture/mid/strip/basecolor.png",
@@ -6157,8 +6219,8 @@
           "id": "panel",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            448
           ],
           "maps": {
             "basecolor": "assets/light-fixture/mid/panel/basecolor.png",
@@ -6177,8 +6239,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.16,
+          0.28
         ]
       },
       "physical": {
@@ -6188,11 +6250,28 @@
       },
       "variants": [
         {
+          "id": "lamp",
+          "class": "pattern",
+          "resolution": [
+            256,
+            448
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/rich/lamp/basecolor.png",
+            "normal": "assets/light-fixture/rich/lamp/normal.png",
+            "roughness": "assets/light-fixture/rich/lamp/roughness.png",
+            "metallic": "assets/light-fixture/rich/lamp/metallic.png",
+            "height": "assets/light-fixture/rich/lamp/height.png",
+            "ao": "assets/light-fixture/rich/lamp/ao.png",
+            "emission": "assets/light-fixture/rich/lamp/emission.png"
+          }
+        },
+        {
           "id": "strip",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            448
           ],
           "maps": {
             "basecolor": "assets/light-fixture/rich/strip/basecolor.png",
@@ -6208,8 +6287,8 @@
           "id": "panel",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            448
           ],
           "maps": {
             "basecolor": "assets/light-fixture/rich/panel/basecolor.png",
@@ -6228,8 +6307,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.16,
+          0.28
         ]
       },
       "physical": {
@@ -6239,11 +6318,28 @@
       },
       "variants": [
         {
+          "id": "lamp",
+          "class": "pattern",
+          "resolution": [
+            256,
+            448
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/high_rich/lamp/basecolor.png",
+            "normal": "assets/light-fixture/high_rich/lamp/normal.png",
+            "roughness": "assets/light-fixture/high_rich/lamp/roughness.png",
+            "metallic": "assets/light-fixture/high_rich/lamp/metallic.png",
+            "height": "assets/light-fixture/high_rich/lamp/height.png",
+            "ao": "assets/light-fixture/high_rich/lamp/ao.png",
+            "emission": "assets/light-fixture/high_rich/lamp/emission.png"
+          }
+        },
+        {
           "id": "strip",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            448
           ],
           "maps": {
             "basecolor": "assets/light-fixture/high_rich/strip/basecolor.png",
@@ -6259,8 +6355,8 @@
           "id": "panel",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            256,
+            448
           ],
           "maps": {
             "basecolor": "assets/light-fixture/high_rich/panel/basecolor.png",
@@ -6634,22 +6730,6 @@
       },
       "variants": [
         {
-          "id": "panel",
-          "class": "pattern",
-          "resolution": [
-            512,
-            512
-          ],
-          "maps": {
-            "basecolor": "assets/ceiling/poor/panel/basecolor.png",
-            "normal": "assets/ceiling/poor/panel/normal.png",
-            "roughness": "assets/ceiling/poor/panel/roughness.png",
-            "metallic": "assets/ceiling/poor/panel/metallic.png",
-            "height": "assets/ceiling/poor/panel/height.png",
-            "ao": "assets/ceiling/poor/panel/ao.png"
-          }
-        },
-        {
           "id": "plain",
           "class": "pattern",
           "resolution": [
@@ -6663,6 +6743,22 @@
             "metallic": "assets/ceiling/poor/plain/metallic.png",
             "height": "assets/ceiling/poor/plain/height.png",
             "ao": "assets/ceiling/poor/plain/ao.png"
+          }
+        },
+        {
+          "id": "panel",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/ceiling/poor/panel/basecolor.png",
+            "normal": "assets/ceiling/poor/panel/normal.png",
+            "roughness": "assets/ceiling/poor/panel/roughness.png",
+            "metallic": "assets/ceiling/poor/panel/metallic.png",
+            "height": "assets/ceiling/poor/panel/height.png",
+            "ao": "assets/ceiling/poor/panel/ao.png"
           }
         }
       ]
@@ -6682,22 +6778,6 @@
       },
       "variants": [
         {
-          "id": "panel",
-          "class": "pattern",
-          "resolution": [
-            512,
-            512
-          ],
-          "maps": {
-            "basecolor": "assets/ceiling/mid/panel/basecolor.png",
-            "normal": "assets/ceiling/mid/panel/normal.png",
-            "roughness": "assets/ceiling/mid/panel/roughness.png",
-            "metallic": "assets/ceiling/mid/panel/metallic.png",
-            "height": "assets/ceiling/mid/panel/height.png",
-            "ao": "assets/ceiling/mid/panel/ao.png"
-          }
-        },
-        {
           "id": "plain",
           "class": "pattern",
           "resolution": [
@@ -6711,6 +6791,22 @@
             "metallic": "assets/ceiling/mid/plain/metallic.png",
             "height": "assets/ceiling/mid/plain/height.png",
             "ao": "assets/ceiling/mid/plain/ao.png"
+          }
+        },
+        {
+          "id": "panel",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/ceiling/mid/panel/basecolor.png",
+            "normal": "assets/ceiling/mid/panel/normal.png",
+            "roughness": "assets/ceiling/mid/panel/roughness.png",
+            "metallic": "assets/ceiling/mid/panel/metallic.png",
+            "height": "assets/ceiling/mid/panel/height.png",
+            "ao": "assets/ceiling/mid/panel/ao.png"
           }
         }
       ]
@@ -6730,22 +6826,6 @@
       },
       "variants": [
         {
-          "id": "panel",
-          "class": "pattern",
-          "resolution": [
-            512,
-            512
-          ],
-          "maps": {
-            "basecolor": "assets/ceiling/rich/panel/basecolor.png",
-            "normal": "assets/ceiling/rich/panel/normal.png",
-            "roughness": "assets/ceiling/rich/panel/roughness.png",
-            "metallic": "assets/ceiling/rich/panel/metallic.png",
-            "height": "assets/ceiling/rich/panel/height.png",
-            "ao": "assets/ceiling/rich/panel/ao.png"
-          }
-        },
-        {
           "id": "plain",
           "class": "pattern",
           "resolution": [
@@ -6759,6 +6839,22 @@
             "metallic": "assets/ceiling/rich/plain/metallic.png",
             "height": "assets/ceiling/rich/plain/height.png",
             "ao": "assets/ceiling/rich/plain/ao.png"
+          }
+        },
+        {
+          "id": "panel",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/ceiling/rich/panel/basecolor.png",
+            "normal": "assets/ceiling/rich/panel/normal.png",
+            "roughness": "assets/ceiling/rich/panel/roughness.png",
+            "metallic": "assets/ceiling/rich/panel/metallic.png",
+            "height": "assets/ceiling/rich/panel/height.png",
+            "ao": "assets/ceiling/rich/panel/ao.png"
           }
         }
       ]
@@ -6778,22 +6874,6 @@
       },
       "variants": [
         {
-          "id": "panel",
-          "class": "pattern",
-          "resolution": [
-            512,
-            512
-          ],
-          "maps": {
-            "basecolor": "assets/ceiling/high_rich/panel/basecolor.png",
-            "normal": "assets/ceiling/high_rich/panel/normal.png",
-            "roughness": "assets/ceiling/high_rich/panel/roughness.png",
-            "metallic": "assets/ceiling/high_rich/panel/metallic.png",
-            "height": "assets/ceiling/high_rich/panel/height.png",
-            "ao": "assets/ceiling/high_rich/panel/ao.png"
-          }
-        },
-        {
           "id": "plain",
           "class": "pattern",
           "resolution": [
@@ -6808,6 +6888,22 @@
             "height": "assets/ceiling/high_rich/plain/height.png",
             "ao": "assets/ceiling/high_rich/plain/ao.png"
           }
+        },
+        {
+          "id": "panel",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/ceiling/high_rich/panel/basecolor.png",
+            "normal": "assets/ceiling/high_rich/panel/normal.png",
+            "roughness": "assets/ceiling/high_rich/panel/roughness.png",
+            "metallic": "assets/ceiling/high_rich/panel/metallic.png",
+            "height": "assets/ceiling/high_rich/panel/height.png",
+            "ao": "assets/ceiling/high_rich/panel/ao.png"
+          }
         }
       ]
     },
@@ -6816,8 +6912,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
@@ -6880,8 +6976,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
@@ -6944,8 +7040,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
@@ -7008,8 +7104,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
@@ -7072,8 +7168,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          6,
-          6
+          3.5,
+          7
         ]
       },
       "physical": {
@@ -7085,7 +7181,7 @@
           "id": "street",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7101,7 +7197,7 @@
           "id": "highway",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7117,7 +7213,7 @@
           "id": "patched",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7133,7 +7229,7 @@
           "id": "puddle",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7152,8 +7248,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          6,
-          6
+          3.5,
+          7
         ]
       },
       "physical": {
@@ -7165,7 +7261,7 @@
           "id": "street",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7181,7 +7277,7 @@
           "id": "highway",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7197,7 +7293,7 @@
           "id": "patched",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7213,7 +7309,7 @@
           "id": "puddle",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7232,8 +7328,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          6,
-          6
+          3.5,
+          7
         ]
       },
       "physical": {
@@ -7245,7 +7341,7 @@
           "id": "street",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7261,7 +7357,7 @@
           "id": "highway",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7277,7 +7373,7 @@
           "id": "patched",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7293,7 +7389,7 @@
           "id": "puddle",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7312,8 +7408,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          6,
-          6
+          3.5,
+          7
         ]
       },
       "physical": {
@@ -7325,7 +7421,7 @@
           "id": "street",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7341,7 +7437,7 @@
           "id": "highway",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7357,7 +7453,7 @@
           "id": "patched",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7373,7 +7469,7 @@
           "id": "puddle",
           "class": "pattern",
           "resolution": [
-            1024,
+            512,
             1024
           ],
           "maps": {
@@ -7598,7 +7694,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.25,
+        "roughnessFactor": 0.55,
         "metallicFactor": 0
       },
       "variants": [
@@ -7673,6 +7769,43 @@
             "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
             "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
             "emission": "assets/ad-screen-tall/high_rich/brand/the-grand-meridian-hotel/emission.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/curb/poor": {
+      "key": "cyberpunk/curb/poor",
+      "aliases": [
+        "cyberpunk/curb/mid",
+        "cyberpunk/curb/rich",
+        "cyberpunk/curb/high_rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          0.15
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.85,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "stone",
+          "class": "pattern",
+          "resolution": [
+            2048,
+            160
+          ],
+          "maps": {
+            "basecolor": "assets/curb/poor/stone/basecolor.png",
+            "normal": "assets/curb/poor/stone/normal.png",
+            "roughness": "assets/curb/poor/stone/roughness.png",
+            "metallic": "assets/curb/poor/stone/metallic.png",
+            "height": "assets/curb/poor/stone/height.png",
+            "ao": "assets/curb/poor/stone/ao.png"
           }
         }
       ]

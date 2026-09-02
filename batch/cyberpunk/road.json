@@ -2,11 +2,11 @@
   {
     "key": "cyberpunk/road/poor",
     "alignment": "tile",
-    "description": "dark asphalt with aggregate and wear",
+    "description": "dark asphalt with aggregate and the wear of two wheel tracks",
     "tiling": {
       "worldSize": [
-        6,
-        6
+        3.5,
+        7
       ]
     },
     "physical": {
@@ -14,22 +14,25 @@
       "metallicFactor": 0
     },
     "variantId": "street",
-    "seed": 4100,
     "resolution": [
-      1024,
+      512,
       1024
     ],
     "pattern": {
-      "kind": "noise",
+      "kind": "lane",
       "colors": [
         "#202225",
         "#2e3134"
       ],
       "cells": [
-        8,
+        4,
         8
       ],
       "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.4,
+      "wear": 0.7,
       "depth": 0.14,
       "grain": 0.03,
       "variation": 0.05
@@ -39,24 +42,27 @@
     "key": "cyberpunk/road/poor",
     "alignment": "tile",
     "append": true,
-    "description": "coarser sun bleached asphalt",
+    "description": "coarser sun bleached asphalt with lighter wheel tracks",
     "variantId": "highway",
-    "seed": 4101,
     "resolution": [
-      1024,
+      512,
       1024
     ],
     "pattern": {
-      "kind": "noise",
+      "kind": "lane",
       "colors": [
         "#282a2d",
         "#363a3f"
       ],
       "cells": [
-        6,
+        3,
         6
       ],
       "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.4,
+      "wear": 0.49,
       "depth": 0.12,
       "grain": 0.025,
       "variation": 0.04
@@ -68,9 +74,8 @@
     "append": true,
     "description": "asphalt patched in slabs of different age",
     "variantId": "patched",
-    "seed": 4102,
     "resolution": [
-      1024,
+      512,
       1024
     ],
     "pattern": {
@@ -80,277 +85,7 @@
         "#33373c"
       ],
       "cells": [
-        4,
-        4
-      ],
-      "octaves": 3,
-      "depth": 0.16,
-      "grain": 0.03,
-      "variation": 0.14
-    }
-  },
-  {
-    "key": "cyberpunk/road/mid",
-    "alignment": "tile",
-    "description": "dark asphalt with aggregate and wear",
-    "tiling": {
-      "worldSize": [
-        6,
-        6
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.92,
-      "metallicFactor": 0
-    },
-    "variantId": "street",
-    "seed": 4110,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#232527",
-        "#303338"
-      ],
-      "cells": [
-        8,
-        8
-      ],
-      "octaves": 3,
-      "depth": 0.14,
-      "grain": 0.03,
-      "variation": 0.05
-    }
-  },
-  {
-    "key": "cyberpunk/road/mid",
-    "alignment": "tile",
-    "append": true,
-    "description": "coarser sun bleached asphalt",
-    "variantId": "highway",
-    "seed": 4111,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#2b2e31",
-        "#393d42"
-      ],
-      "cells": [
-        6,
-        6
-      ],
-      "octaves": 3,
-      "depth": 0.12,
-      "grain": 0.025,
-      "variation": 0.04
-    }
-  },
-  {
-    "key": "cyberpunk/road/mid",
-    "alignment": "tile",
-    "append": true,
-    "description": "asphalt patched in slabs of different age",
-    "variantId": "patched",
-    "seed": 4112,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#1f2124",
-        "#363a40"
-      ],
-      "cells": [
-        4,
-        4
-      ],
-      "octaves": 3,
-      "depth": 0.16,
-      "grain": 0.03,
-      "variation": 0.14
-    }
-  },
-  {
-    "key": "cyberpunk/road/rich",
-    "alignment": "tile",
-    "description": "dark asphalt with aggregate and wear",
-    "tiling": {
-      "worldSize": [
-        6,
-        6
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.88,
-      "metallicFactor": 0
-    },
-    "variantId": "street",
-    "seed": 4120,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#26282b",
-        "#33363b"
-      ],
-      "cells": [
-        8,
-        8
-      ],
-      "octaves": 3,
-      "depth": 0.14,
-      "grain": 0.03,
-      "variation": 0.05
-    }
-  },
-  {
-    "key": "cyberpunk/road/rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "coarser sun bleached asphalt",
-    "variantId": "highway",
-    "seed": 4121,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#2f3236",
-        "#3d4147"
-      ],
-      "cells": [
-        6,
-        6
-      ],
-      "octaves": 3,
-      "depth": 0.12,
-      "grain": 0.025,
-      "variation": 0.04
-    }
-  },
-  {
-    "key": "cyberpunk/road/rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "asphalt patched in slabs of different age",
-    "variantId": "patched",
-    "seed": 4122,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#222427",
-        "#3a3e44"
-      ],
-      "cells": [
-        4,
-        4
-      ],
-      "octaves": 3,
-      "depth": 0.16,
-      "grain": 0.03,
-      "variation": 0.14
-    }
-  },
-  {
-    "key": "cyberpunk/road/high_rich",
-    "alignment": "tile",
-    "description": "dark asphalt with aggregate and wear",
-    "tiling": {
-      "worldSize": [
-        6,
-        6
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.85,
-      "metallicFactor": 0
-    },
-    "variantId": "street",
-    "seed": 4130,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#292c2f",
-        "#36393e"
-      ],
-      "cells": [
-        8,
-        8
-      ],
-      "octaves": 3,
-      "depth": 0.14,
-      "grain": 0.03,
-      "variation": 0.05
-    }
-  },
-  {
-    "key": "cyberpunk/road/high_rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "coarser sun bleached asphalt",
-    "variantId": "highway",
-    "seed": 4131,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#33363b",
-        "#41454c"
-      ],
-      "cells": [
-        6,
-        6
-      ],
-      "octaves": 3,
-      "depth": 0.12,
-      "grain": 0.025,
-      "variation": 0.04
-    }
-  },
-  {
-    "key": "cyberpunk/road/high_rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "asphalt patched in slabs of different age",
-    "variantId": "patched",
-    "seed": 4132,
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#25282b",
-        "#3d4148"
-      ],
-      "cells": [
-        4,
+        2,
         4
       ],
       "octaves": 3,
@@ -363,11 +98,10 @@
     "key": "cyberpunk/road/poor",
     "alignment": "tile",
     "append": true,
-    "description": "wet asphalt with standing puddles",
+    "description": "asphalt after rain with damp patches pooled in the low spots",
     "variantId": "puddle",
-    "seed": 4103,
     "resolution": [
-      1024,
+      512,
       1024
     ],
     "pattern": {
@@ -378,7 +112,7 @@
         "#0d0f12"
       ],
       "cells": [
-        8,
+        4,
         8
       ],
       "octaves": 3,
@@ -391,12 +125,106 @@
   {
     "key": "cyberpunk/road/mid",
     "alignment": "tile",
-    "append": true,
-    "description": "wet asphalt with standing puddles",
-    "variantId": "puddle",
-    "seed": 4113,
+    "description": "dark asphalt with aggregate and the wear of two wheel tracks",
+    "tiling": {
+      "worldSize": [
+        3.5,
+        7
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0
+    },
+    "variantId": "street",
     "resolution": [
-      1024,
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "lane",
+      "colors": [
+        "#232527",
+        "#303338"
+      ],
+      "cells": [
+        4,
+        8
+      ],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.4,
+      "wear": 0.6,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
+    }
+  },
+  {
+    "key": "cyberpunk/road/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "coarser sun bleached asphalt with lighter wheel tracks",
+    "variantId": "highway",
+    "resolution": [
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "lane",
+      "colors": [
+        "#2b2e31",
+        "#393d42"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.4,
+      "wear": 0.42,
+      "depth": 0.12,
+      "grain": 0.025,
+      "variation": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/road/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt patched in slabs of different age",
+    "variantId": "patched",
+    "resolution": [
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#1f2124",
+        "#363a40"
+      ],
+      "cells": [
+        2,
+        4
+      ],
+      "octaves": 3,
+      "depth": 0.16,
+      "grain": 0.03,
+      "variation": 0.14
+    }
+  },
+  {
+    "key": "cyberpunk/road/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt after rain with damp patches pooled in the low spots",
+    "variantId": "puddle",
+    "resolution": [
+      512,
       1024
     ],
     "pattern": {
@@ -407,7 +235,7 @@
         "#0f1114"
       ],
       "cells": [
-        8,
+        4,
         8
       ],
       "octaves": 3,
@@ -420,12 +248,106 @@
   {
     "key": "cyberpunk/road/rich",
     "alignment": "tile",
-    "append": true,
-    "description": "wet asphalt with standing puddles",
-    "variantId": "puddle",
-    "seed": 4123,
+    "description": "dark asphalt with aggregate and the wear of two wheel tracks",
+    "tiling": {
+      "worldSize": [
+        3.5,
+        7
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.88,
+      "metallicFactor": 0
+    },
+    "variantId": "street",
     "resolution": [
-      1024,
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "lane",
+      "colors": [
+        "#26282b",
+        "#33363b"
+      ],
+      "cells": [
+        4,
+        8
+      ],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.4,
+      "wear": 0.5,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
+    }
+  },
+  {
+    "key": "cyberpunk/road/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "coarser sun bleached asphalt with lighter wheel tracks",
+    "variantId": "highway",
+    "resolution": [
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "lane",
+      "colors": [
+        "#2f3236",
+        "#3d4147"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.4,
+      "wear": 0.35,
+      "depth": 0.12,
+      "grain": 0.025,
+      "variation": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/road/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt patched in slabs of different age",
+    "variantId": "patched",
+    "resolution": [
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#222427",
+        "#3a3e44"
+      ],
+      "cells": [
+        2,
+        4
+      ],
+      "octaves": 3,
+      "depth": 0.16,
+      "grain": 0.03,
+      "variation": 0.14
+    }
+  },
+  {
+    "key": "cyberpunk/road/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt after rain with damp patches pooled in the low spots",
+    "variantId": "puddle",
+    "resolution": [
+      512,
       1024
     ],
     "pattern": {
@@ -436,7 +358,7 @@
         "#101317"
       ],
       "cells": [
-        8,
+        4,
         8
       ],
       "octaves": 3,
@@ -449,12 +371,106 @@
   {
     "key": "cyberpunk/road/high_rich",
     "alignment": "tile",
-    "append": true,
-    "description": "wet asphalt with standing puddles",
-    "variantId": "puddle",
-    "seed": 4133,
+    "description": "dark asphalt with aggregate and the wear of two wheel tracks",
+    "tiling": {
+      "worldSize": [
+        3.5,
+        7
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.85,
+      "metallicFactor": 0
+    },
+    "variantId": "street",
     "resolution": [
-      1024,
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "lane",
+      "colors": [
+        "#292c2f",
+        "#36393e"
+      ],
+      "cells": [
+        4,
+        8
+      ],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.4,
+      "wear": 0.4,
+      "depth": 0.14,
+      "grain": 0.03,
+      "variation": 0.05
+    }
+  },
+  {
+    "key": "cyberpunk/road/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "coarser sun bleached asphalt with lighter wheel tracks",
+    "variantId": "highway",
+    "resolution": [
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "lane",
+      "colors": [
+        "#33363b",
+        "#41454c"
+      ],
+      "cells": [
+        3,
+        6
+      ],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.4,
+      "wear": 0.28,
+      "depth": 0.12,
+      "grain": 0.025,
+      "variation": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/road/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt patched in slabs of different age",
+    "variantId": "patched",
+    "resolution": [
+      512,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#25282b",
+        "#3d4148"
+      ],
+      "cells": [
+        2,
+        4
+      ],
+      "octaves": 3,
+      "depth": 0.16,
+      "grain": 0.03,
+      "variation": 0.14
+    }
+  },
+  {
+    "key": "cyberpunk/road/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "asphalt after rain with damp patches pooled in the low spots",
+    "variantId": "puddle",
+    "resolution": [
+      512,
       1024
     ],
     "pattern": {
@@ -465,7 +481,7 @@
         "#121519"
       ],
       "cells": [
-        8,
+        4,
         8
       ],
       "octaves": 3,

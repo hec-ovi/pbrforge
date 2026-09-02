@@ -1,74 +1,142 @@
 [
   {
     "key": "cyberpunk/door/poor",
-    "alignment": "exact",
-    "description": "photograph of one closed grey steel door filling the frame, straight-on front view, a worn metal handle on the right side, a scuffed kick plate at the bottom, rust streaks and peeling paint, flat even daylight",
-    "aspect": [
-      1,
-      2
-    ],
-    "resolution": [
-      832,
-      1216
-    ],
+    "alignment": "tile",
+    "description": "smooth dark painted steel door leaf and casing, even matte paint",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
     "physical": {
       "roughnessFactor": 0.7,
-      "metallicFactor": 1
+      "metallicFactor": 0
     },
-    "variants": 2
+    "variantId": "paint",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#4a4642",
+        "#524e4a"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.012
+    }
   },
   {
     "key": "cyberpunk/door/mid",
-    "alignment": "exact",
-    "description": "photograph of one closed plain metal apartment door filling the frame, straight-on front view, a simple metal handle on the right side, scuffed flat grey paint, flat even light",
-    "aspect": [
-      1,
-      2
-    ],
-    "resolution": [
-      832,
-      1216
-    ],
-    "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 1
+    "alignment": "tile",
+    "description": "smooth dark painted steel door leaf and casing, even matte paint",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
     },
-    "variants": 2
+    "physical": {
+      "roughnessFactor": 0.65,
+      "metallicFactor": 0
+    },
+    "variantId": "paint",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#33373c",
+        "#3a3e43"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.012
+    }
   },
   {
     "key": "cyberpunk/door/rich",
-    "alignment": "exact",
-    "description": "photograph of one closed brushed steel security door filling the frame, straight-on front view, a sleek vertical bar handle on the right side, recessed panel lines, clean charcoal finish, flat even light",
-    "aspect": [
-      1,
-      2
-    ],
-    "resolution": [
-      832,
-      1216
-    ],
-    "physical": {
-      "roughnessFactor": 0.4,
-      "metallicFactor": 1
+    "alignment": "tile",
+    "description": "smooth dark painted steel door leaf and casing, even matte paint",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
     },
-    "variants": 2
+    "physical": {
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0
+    },
+    "variantId": "paint",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#2a2c30",
+        "#303236"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.012
+    }
   },
   {
     "key": "cyberpunk/door/high_rich",
-    "alignment": "exact",
-    "description": "photograph of one closed sleek matte black door filling the frame, straight-on front view, a minimal recessed handle on the right side, thin seam lines, immaculate, flat even light",
-    "aspect": [
-      1,
-      2
-    ],
-    "resolution": [
-      832,
-      1216
-    ],
-    "physical": {
-      "roughnessFactor": 0.3,
-      "metallicFactor": 0.6
+    "alignment": "tile",
+    "description": "smooth dark painted steel door leaf and casing, even matte paint",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
     },
-    "variants": 2
+    "physical": {
+      "roughnessFactor": 0.55,
+      "metallicFactor": 0
+    },
+    "variantId": "paint",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#1e2024",
+        "#232529"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.012
+    }
   }
 ]

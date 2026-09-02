@@ -50,19 +50,24 @@ describe('refinish contract', () => {
     const { entry, variants } = await new Refinisher(db).refinish({
       key: 'cyberpunk/concrete/mid',
       finish: { roughness: [0.9, 0.95], grain: 0.1 },
+      physical: { roughnessFactor: 0.92, metallicFactor: 1 },
     });
 
     expect(variants).toEqual(['1']);
     expect(entry.finish).toEqual({ roughness: [0.9, 0.95], grain: 0.1, relief: 2 });
-    expect(db.resolve('cyberpunk/concrete/mid').finish?.roughness).toEqual([0.9, 0.95]);
+    const stored = db.resolve('cyberpunk/concrete/mid');
+    expect(stored.finish?.roughness).toEqual([0.9, 0.95]);
+    expect(stored.physical).toEqual({ roughnessFactor: 0.92, metallicFactor: 1 });
     expect(readFileSync(path('basecolor')).equals(before)).toBe(true);
 
     const roughness = await sharp(path('roughness')).raw().toBuffer();
     expect(Math.min(...roughness) / 255).toBeGreaterThanOrEqual(0.89);
     expect(Math.max(...roughness) / 255).toBeLessThanOrEqual(0.96);
+    const metallic = await sharp(join(themesDir, 'cyberpunk', created.variants[0].maps.metallic)).raw().toBuffer();
+    expect(new Set(metallic)).toEqual(new Set([255])); // the fill follows the factor
   });
 
-  it('throws E_SCHEMA on an exact entry, whose maps carry no relief', async () => {
+  it('throws E_SCHEMA on a screen, whose maps carry no relief', async () => {
     await new Generator(db, mockComfy()).create({
       key: 'cyberpunk/ad-screen/mid',
       alignment: 'exact',

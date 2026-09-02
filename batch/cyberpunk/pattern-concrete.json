@@ -3,6 +3,114 @@
     "key": "cyberpunk/concrete/poor",
     "alignment": "tile",
     "append": true,
+    "canonical": true,
+    "description": "plain cast concrete, tonal variation only",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#6e6f6c",
+        "#787976"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 2,
+      "depth": 0.08,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/mid",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain cast concrete, tonal variation only",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#8a8b88",
+        "#939491"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 2,
+      "depth": 0.08,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/rich",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain cast concrete, tonal variation only",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#a3a09a",
+        "#aaa7a1"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 2,
+      "depth": 0.08,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain cast concrete, tonal variation only",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#b6b8b8",
+        "#bdbfbf"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 2,
+      "depth": 0.08,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/poor",
+    "alignment": "tile",
+    "append": true,
     "variantId": "panel",
     "description": "precast concrete panel with chamfered joints on the tile boundary",
     "resolution": [

@@ -6,22 +6,37 @@
       "cyberpunk/aperture-frame/poor"
     ],
     "alignment": "tile",
-    "description": "weathered aluminium surface, dull grey, faint oxidation haze and smudges",
+    "description": "smooth dark painted steel frame member, even matte paint",
     "tiling": {
       "worldSize": [
-        1,
-        1
+        0.5,
+        0.5
       ]
     },
     "physical": {
-      "roughnessFactor": 0.65,
-      "metallicFactor": 1
+      "roughnessFactor": 0.7,
+      "metallicFactor": 0
     },
-    "finish": {
-      "grain": 0.25,
-      "relief": 2
-    },
-    "variants": 2
+    "variantId": "paint",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#3b3a38",
+        "#434240"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.012
+    }
   },
   {
     "key": "cyberpunk/window-frame/mid",
@@ -30,22 +45,37 @@
       "cyberpunk/aperture-frame/mid"
     ],
     "alignment": "tile",
-    "description": "brushed aluminium surface with fine horizontal grain, even medium grey",
+    "description": "smooth dark painted steel frame member, even matte paint",
     "tiling": {
       "worldSize": [
-        1,
-        1
+        0.5,
+        0.5
       ]
     },
     "physical": {
-      "roughnessFactor": 0.45,
-      "metallicFactor": 1
+      "roughnessFactor": 0.65,
+      "metallicFactor": 0
     },
-    "finish": {
-      "grain": 0.2,
-      "relief": 2
-    },
-    "variants": 2
+    "variantId": "paint",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#2f3134",
+        "#36383b"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.012
+    }
   },
   {
     "key": "cyberpunk/window-frame/rich",
@@ -54,22 +84,37 @@
       "cyberpunk/aperture-frame/rich"
     ],
     "alignment": "tile",
-    "description": "brushed dark steel surface with fine horizontal grain, even charcoal grey",
+    "description": "smooth dark painted steel frame member, even matte paint",
     "tiling": {
       "worldSize": [
-        1,
-        1
+        0.5,
+        0.5
       ]
     },
     "physical": {
-      "roughnessFactor": 0.35,
-      "metallicFactor": 1
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0
     },
-    "finish": {
-      "grain": 0.15,
-      "relief": 1.6
-    },
-    "variants": 2
+    "variantId": "paint",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#25272a",
+        "#2b2d30"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.012
+    }
   },
   {
     "key": "cyberpunk/window-frame/high_rich",
@@ -78,21 +123,36 @@
       "cyberpunk/aperture-frame/high_rich"
     ],
     "alignment": "tile",
-    "description": "matte black powder-coated metal surface, flawless satin finish, nearly uniform",
+    "description": "smooth dark painted steel frame member, even matte paint",
     "tiling": {
       "worldSize": [
-        1,
-        1
+        0.5,
+        0.5
       ]
     },
     "physical": {
-      "roughnessFactor": 0.25,
-      "metallicFactor": 1
+      "roughnessFactor": 0.55,
+      "metallicFactor": 0
     },
-    "finish": {
-      "grain": 0.1,
-      "relief": 1.2
-    },
-    "variants": 2
+    "variantId": "paint",
+    "resolution": [
+      512,
+      512
+    ],
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#1b1d20",
+        "#202225"
+      ],
+      "cells": [
+        6,
+        6
+      ],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.012
+    }
   }
 ]
