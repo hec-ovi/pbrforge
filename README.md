@@ -43,7 +43,7 @@ Structured surfaces are drawn, not diffused. A `pattern` in the request states s
 
 A pattern variant resolves under the same key and the same entry shape as a photographed one: consumers read maps and never ask which class a variant is. Diffusion keeps what it is good at, which is grain, wear and grime.
 
-The same lane draws the letter atlas: one lit glyph per cell in an 8 by 6 grid, as a neon tube or a backlit panel, so a sign system spells any name by picking cells. The grid and charset are in `CONTRACT.md`.
+The same lane draws the letter atlas: one lit glyph per cell in an 8 by 6 grid, as a neon tube or a backlit panel, so a sign system spells any name by picking cells. `signage` supplies the dark flat casing and backing plate around those lit cells. The grid and charset are in `CONTRACT.md`.
 
 ## Finish
 

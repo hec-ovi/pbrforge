@@ -242,6 +242,24 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
+  it('ships signage as a dark casing around the separately lit glyphs', async () => {
+    const themeDir = db.themeDir('cyberpunk');
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = db.resolve(`cyberpunk/signage/${tier}`);
+      expect(entry.tiling?.worldSize).toEqual([0.5, 0.5]);
+      expect(entry.physical.metallicFactor).toBe(0);
+      expect(entry.variants.map((variant) => variant.id)).toEqual(['casing', 'backplate']);
+      for (const variant of entry.variants) {
+        expect(variant.class).toBe('flat');
+        expect(variant.maps.emission).toBeUndefined();
+        expect(variant.resolution).toEqual([256, 256]);
+        const normal = await sharp(join(themeDir, variant.maps.normal)).stats();
+        expect(normal.channels[0].min).toBe(normal.channels[0].max);
+        expect(normal.channels[1].min).toBe(normal.channels[1].max);
+      }
+    }
+  });
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');

@@ -39,7 +39,7 @@ A photograph carries its own gloss and grain in every pixel. Read straight out, 
 - `grain` (default 0.2) is how much of the pixel-scale speckle survives into the relief. Everything above the feature scale (joints, bricks, aggregate, trowel strokes) comes through at full gain either way.
 - `relief` (default 2) is the gain on that feature-scale relief.
 
-Dry matte is the default across the library: moisture staining and heavy grime live in the poor tier's basecolor and nowhere else. The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds: metal, window-frame, door, wall-trim, elevator_door, fire-escape, roof-artifact and the zinc roof) and no roughness below 0.45, in its factor, its band and every pixel of its roughness map, so nothing sparkles under a street lamp. Glass (an entry with transmission) and lit entries (screens, signage, light fixtures, the letter atlas) are the exceptions. Bands per kind and tier, all four tiers left to right (poor, mid, rich, high_rich):
+Dry matte is the default across the library: moisture staining and heavy grime live in the poor tier's basecolor and nowhere else. The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds: metal, window-frame, door, wall-trim, elevator_door, fire-escape, roof-artifact and the zinc roof) and no roughness below 0.45, in its factor, its band and every pixel of its roughness map, so nothing sparkles under a street lamp. Glass (an entry with transmission) and lit entries (screens, light fixtures and the letter atlas) are the exceptions. Bands per kind and tier, all four tiers left to right (poor, mid, rich, high_rich):
 
 | kind | poor | mid | rich | high_rich |
 | --- | --- | --- | --- | --- |
@@ -95,6 +95,10 @@ The interior `glass` kind is clear glazing for partitions and carries its own va
 ## Curtains
 
 `curtain` covers a 1.5 x 3 m window bay at 384 x 768 px, equal density on both axes. Every tier carries `blind` (canonical), twelve vertical 0.125 m slats with shallow deterministic pleats, and `shade`, a plain matte blackout cloth. Neither uses a photographed weave, so minified window coverings keep their shape without moire or grain.
+
+## Sign casing
+
+`signage` is the non-emissive casing and backing plate behind the separate `letter-atlas` glyphs. It carries `casing` (canonical) and a muted color `backplate`, both flat dielectric paint on a 0.5 m tile at 256 px, roughness 0.72 down to 0.52 by tier. Illumination comes only from the fitted glyph cells, so the sign keeps a dark housing around its letters.
 
 ## Pattern class
 

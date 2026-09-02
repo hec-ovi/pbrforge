@@ -2,97 +2,89 @@
   {
     "key": "cyberpunk/signage/poor",
     "alignment": "tile",
-    "description": "backlit panel glow, synthesized",
-    "tiling": {
-      "worldSize": [
-        2,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 0,
-      "emissiveStrength": 2.5
-    },
-    "finish": {
-      "grain": 0.25,
-      "relief": 2
-    },
-    "variants": 2,
-    "emission": "luminance",
-    "flatColor": "#e3ccd6",
-    "flatNoise": 0.08
+    "description": "aged charcoal sign casing and backing plate, flat matte paint",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.72, "metallicFactor": 0 },
+    "variantId": "casing",
+    "flatColor": "#2d3032",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/signage/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "muted rust sign backing plate, flat matte paint",
+    "variantId": "backplate",
+    "flatColor": "#5d3d35",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/signage/mid",
     "alignment": "tile",
-    "description": "backlit panel glow, synthesized",
-    "tiling": {
-      "worldSize": [
-        2,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.4,
-      "metallicFactor": 0,
-      "emissiveStrength": 2.5
-    },
-    "finish": {
-      "grain": 0.2,
-      "relief": 2
-    },
-    "variants": 2,
-    "emission": "luminance",
-    "flatColor": "#cdeef2",
-    "flatNoise": 0.04
+    "description": "charcoal sign casing and backing plate, flat matte paint",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.65, "metallicFactor": 0 },
+    "variantId": "casing",
+    "flatColor": "#272b2e",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/signage/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "muted teal sign backing plate, flat matte paint",
+    "variantId": "backplate",
+    "flatColor": "#315055",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/signage/rich",
     "alignment": "tile",
-    "description": "backlit panel glow, synthesized",
-    "tiling": {
-      "worldSize": [
-        2,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.35,
-      "metallicFactor": 0,
-      "emissiveStrength": 2.5
-    },
-    "finish": {
-      "grain": 0.15,
-      "relief": 1.6
-    },
-    "variants": 2,
-    "emission": "luminance",
-    "flatColor": "#f2cceb",
-    "flatNoise": 0.025
+    "description": "clean black sign casing and backing plate, flat satin-matte paint",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
+    "variantId": "casing",
+    "flatColor": "#202429",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/signage/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "deep blue sign backing plate, flat satin-matte paint",
+    "variantId": "backplate",
+    "flatColor": "#273a4a",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/signage/high_rich",
     "alignment": "tile",
-    "description": "backlit panel glow, synthesized",
-    "tiling": {
-      "worldSize": [
-        2,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.3,
-      "metallicFactor": 0,
-      "emissiveStrength": 2.5
-    },
-    "finish": {
-      "grain": 0.1,
-      "relief": 1.2
-    },
-    "variants": 2,
-    "emission": "luminance",
-    "flatColor": "#f2f5f7",
-    "flatNoise": 0.015
+    "description": "clean black sign casing and backing plate, flat satin-matte paint",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.52, "metallicFactor": 0 },
+    "variantId": "casing",
+    "flatColor": "#181d22",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/signage/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "deep graphite sign backing plate, flat satin-matte paint",
+    "variantId": "backplate",
+    "flatColor": "#2a3036",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   }
 ]
