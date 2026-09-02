@@ -15,7 +15,7 @@ Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/
 
 - `resolve(key: string): MaterialEntry` resolves a key (or alias) against the database.
 - `list(filter?: {theme?, kind?, tier?}): string[]` returns matching keys, sorted, deterministic.
-- `create(request: CreateRequest): MaterialEntry` generates a full set, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json). Basecolor comes from ComfyUI, from the pattern class below, from a tint of a variant already in the entry (`recolor`), or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box.
+- `create(request: CreateRequest): MaterialEntry` generates a full set, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json). Basecolor comes from ComfyUI, from the pattern class below, from a tint of a variant already in the entry (`recolor`), or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box. Resolution must fit the physical tile or exact-placement aspect within one pixel. A tile is at most 1,048,576 pixels; an exact sheet is at most 4096 px on either side and 9,437,184 pixels total.
 - `append: true` adds the generated variant to the entry the key already resolves to, which keeps its alignment, tiling, aliases and physical; `variantId` names it (and its asset folder). Appending an id that exists is `E_KEY_EXISTS`, so a batch stays resumable. `canonical: true` on an append puts the variant first, so it is the one a consumer gets when it does not pick.
 - `recolor` writes a tint variant: another variant of the same entry repainted. The paint's hue is taken whole and `strength` is how much pigment is in it, so a blue paint reads blue over a near-grey photograph. It is the same surface in different paint, so it points at that variant's relief maps instead of copying them.
 - `finish` states how a photographed surface is read into relief and gloss (see Finish below). An appended variant inherits the entry's finish, so every photographed variant of one entry shares a band. The pattern, flat, recolor and screen lanes carry their own maps and ignore it.
@@ -74,7 +74,7 @@ The ground kinds carry the tile sizes the engine lays on its 1 mm grid, so a cut
 | --- | --- | --- | --- |
 | `road` | 3.5 x 7 m, one lane wide, V along the lane | 512 x 1024 | `street` (canonical) and `highway` wear two wheel tracks 0.4 m wide at 0.8 m either side of the lane centre, darker and damp (roughness 0.5 in the track, the factor between); `patched` and `puddle` are isotropic |
 | `sidewalk` | 2 x 2 m | 1024 | `slab` (canonical): 1 m squares with the joint on the tile edge; `bond`: 1 x 0.5 m running; `plate`: one 2 m plate |
-| `curb` | 2 x 0.15 m, one entry at all tiers | 2048 x 160 | `stone`: two 1 m kerb stones with a chamfered arris |
+| `curb` | 2 x 0.15 m, one entry at all tiers | 1280 x 96 | `stone`: two 1 m kerb stones with a chamfered arris |
 
 Lay `road` with U across the lane from its left boundary so the tracks sit under the wheels; a consumer that lays planar world UVs over a merged roadway takes `patched` or `puddle`. Lay `sidewalk` with its UV origin on the kerb line so the first joint runs parallel to it. The `curb` tile spans the 0.15 m face with V from the road up, and the same tile lays the 0.15 m top. `puddle` is asphalt after rain: damp patches pooled in the low spots, flat and dark, roughness 0.5 inside them.
 
@@ -184,7 +184,7 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 - A key present in the index always has every referenced map file on disk. Variants may point at the same map file (a tint shares the relief it was made from).
 - Every `tile` entry passed the seam check (50 percent offset in x and y, no visible seam) before it was written. Pattern variants are periodic over one tile by construction and pass the same gate.
 - Generation is deterministic per lane: the same pattern parameters, the same seed and prompt, or the same provided source file, draw the same maps.
-- All maps of one variant share one resolution and are pixel-aligned with each other.
+- All maps of one variant share one resolution and are pixel-aligned with each other. Resolution has the same aspect as the physical tile or exact-placement face within one pixel, so maps are never stretched or rotated. Tile maps are at most 1,048,576 pixels; exact sheets are at most 4096 px on either side and 9,437,184 pixels total. Checked against the files in the shipped database.
 - A rebrand never touches a base variant or its files: a brand variant points at the base's surface maps and carries its own emission, and the same business list writes the same maps every time.
 - Generation is agentic tooling on top; the database read path and the rebrand lane work standalone with no ComfyUI and no other layer present.
 - Matte floor: every non-emissive entry carries metallic 0 or 1 and no roughness below 0.45 in its factor, its finish band and every pixel of every variant's roughness map, and its metallic map is a constant fill of the factor; glass (transmission above 0) and lit entries (an emission map) are exempt. Checked by a test over the shipped database.

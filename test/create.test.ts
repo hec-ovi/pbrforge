@@ -85,6 +85,14 @@ describe('create contract', () => {
     ).rejects.toMatchObject({ code: 'E_SCHEMA' });
   });
 
+  it('rejects a map that stretches its physical tile or exceeds the tile budget', async () => {
+    const generator = new Generator(db, mockComfy(tileablePng));
+    await expect(generator.create({ ...request, resolution: [128, 64] })).rejects.toMatchObject({ code: 'E_SCHEMA' });
+    await expect(
+      generator.create({ ...request, tiling: { worldSize: [2, 1] }, resolution: [2048, 1024] }),
+    ).rejects.toMatchObject({ code: 'E_SCHEMA' });
+  });
+
   it('throws E_SEAM_CHECK_FAILED on a seamy image and writes nothing', async () => {
     await expect(new Generator(db, mockComfy(seamyPng)).create(request)).rejects.toMatchObject({
       code: 'E_SEAM_CHECK_FAILED',
@@ -115,7 +123,7 @@ describe('create contract', () => {
       description: 'district advertisement',
       brandName: 'NOODLE-9',
       businessKind: 'noodle bar',
-      aspect: [16, 9],
+      aspect: [1, 1],
       resolution: [64, 64],
       physical: { roughnessFactor: 0.1, metallicFactor: 0, emissiveStrength: 6 },
       emission: 'image',

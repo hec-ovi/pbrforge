@@ -100,7 +100,7 @@
           },
           "resolution": {
             "type": "array",
-            "items": { "type": "integer", "minimum": 64 },
+            "items": { "type": "integer", "minimum": 64, "maximum": 4096 },
             "minItems": 2,
             "maxItems": 2,
             "description": "[px width, px height], shared by every map of the variant"

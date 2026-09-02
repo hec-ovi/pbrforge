@@ -72,7 +72,7 @@ describe('refinish contract', () => {
       key: 'cyberpunk/ad-screen/mid',
       alignment: 'exact',
       description: 'district advertisement',
-      aspect: [16, 9],
+      aspect: [1, 1],
       resolution: [64, 64],
       physical: { roughnessFactor: 0.1, emissiveStrength: 6 },
       emission: 'image',

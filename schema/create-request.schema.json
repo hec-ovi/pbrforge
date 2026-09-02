@@ -67,7 +67,7 @@
     },
     "finish": {
       "type": "object",
-      "description": "how a photographed surface is read into relief and gloss; ignored by the pattern, recolor and screen lanes, and inherited from the entry when appending",
+      "description": "how a photographed surface is read into relief and gloss; ignored by the pattern, flat, recolor and screen lanes, and inherited from the entry when appending",
       "additionalProperties": false,
       "properties": {
         "roughness": {
@@ -213,10 +213,11 @@
     "seed": { "type": "integer", "minimum": 0, "description": "default: derived from the description" },
     "resolution": {
       "type": "array",
-      "items": { "type": "integer", "minimum": 64 },
+      "items": { "type": "integer", "minimum": 64, "maximum": 4096 },
       "minItems": 2,
       "maxItems": 2,
-      "default": [1024, 1024]
+      "default": [1024, 1024],
+      "description": "[px width, px height]; must fit the physical tile or exact aspect within one pixel, with at most 1,048,576 pixels for a tile or 9,437,184 pixels for an exact sheet"
     },
     "overwrite": { "type": "boolean", "default": false }
   },

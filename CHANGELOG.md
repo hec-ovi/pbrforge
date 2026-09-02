@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.24: map creation rejects resolutions that stretch a physical tile or exact-placement face. Tile variants are limited to 1,048,576 pixels, exact sheets to a 4096 px long side and 9,437,184 pixels. The curb is corrected to 1280 x 96 px, equal density across its 2 x 0.15 m face, and a shipped-library audit holds every variant to these constraints.
 0.9.23: concrete is a four-variant deterministic set at 512 px with restrained relief. The precast panel is 3 x 1.5 m, a 2:1 module matching the facade reference, and the invalid photographed surfaces and derived tints are gone.
 0.9.22: roofs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, restrained half-metre seams and 1 m service panels. The patterned options are for roof zones that hold whole repeats.
 0.9.21: floor and balcony slabs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, 1.5 m square slabs and a 1 x 0.75 m running bond. The two grids are reserved for zones that hold whole repeats. Flat-source entries no longer retain photographed-finish metadata.

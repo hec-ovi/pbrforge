@@ -31,6 +31,9 @@ import { isSeamless, seamScore } from './seam.js';
 import requestSchema from '../../schema/create-request.schema.json' with { type: 'json' };
 
 const KEY = /^([a-z0-9_-]+)\/([a-z0-9_-]+)\/([a-z0-9_-]+)$/;
+const MAX_SIDE = 4096;
+const MAX_TILE_PIXELS = 1024 * 1024;
+const MAX_EXACT_PIXELS = 4096 * 2304;
 
 /** Map order in the index, so an entry reads the same whichever lane built it. */
 const MAP_ORDER: MapName[] = ['basecolor', 'normal', 'roughness', 'metallic', 'height', 'ao', 'emission'];
@@ -79,6 +82,7 @@ export class Generator {
     const target = this.target(request);
 
     const [width, height] = request.resolution ?? [1024, 1024];
+    assertResolution(request, target, width, height);
     const baseSeed = request.seed ?? seedFrom(request.description);
     const count = variantCount(request);
     const start = target.base?.variants.length ?? 0;
@@ -259,6 +263,26 @@ export class Generator {
     writeFileSync(join(absDir, 'artwork.png'), await encodeRgbPng(screen.artwork));
     const { kind, pitch } = screen.spec;
     return { kind, ...(pitch !== undefined ? { pitch } : {}), artwork: join(relDir, 'artwork.png') };
+  }
+}
+
+/** Maps fit their physical tile or placement face and stay inside the runtime texture budget. */
+function assertResolution(request: CreateRequest, target: Target, width: number, height: number): void {
+  const shape = target.alignment === 'tile' ? target.tiling!.worldSize : (target.base?.aspect ?? request.aspect!);
+  const expectedWidth = height * (shape[0] / shape[1]);
+  if (Math.abs(width - expectedWidth) > 1) {
+    throw new MaterialsError(
+      'E_SCHEMA',
+      `${request.key} resolution ${width}x${height} does not fit ${shape[0]}:${shape[1]} ${target.alignment} dimensions`,
+    );
+  }
+  const pixels = width * height;
+  const limit = target.alignment === 'tile' ? MAX_TILE_PIXELS : MAX_EXACT_PIXELS;
+  if (width > MAX_SIDE || height > MAX_SIDE || pixels > limit) {
+    throw new MaterialsError(
+      'E_SCHEMA',
+      `${request.key} resolution ${width}x${height} exceeds the ${target.alignment} map budget`,
+    );
   }
 }
 

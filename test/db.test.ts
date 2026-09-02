@@ -323,6 +323,24 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
+  it('fits every shipped map to its physical face and texture budget', async () => {
+    const themeDir = db.themeDir('cyberpunk');
+    for (const key of db.list({ theme: 'cyberpunk' })) {
+      const entry = db.resolve(key);
+      const shape = entry.alignment === 'tile' ? entry.tiling!.worldSize : entry.aspect!;
+      const pixelLimit = entry.alignment === 'tile' ? 1024 * 1024 : 4096 * 2304;
+      for (const variant of entry.variants) {
+        const [width, height] = variant.resolution;
+        expect(Math.abs(width - height * (shape[0] / shape[1])), `${key}:${variant.id} aspect`).toBeLessThanOrEqual(1);
+        expect(width, `${key}:${variant.id} width`).toBeLessThanOrEqual(4096);
+        expect(height, `${key}:${variant.id} height`).toBeLessThanOrEqual(4096);
+        expect(width * height, `${key}:${variant.id} pixels`).toBeLessThanOrEqual(pixelLimit);
+        const actual = await sharp(join(themeDir, variant.maps.basecolor)).metadata();
+        expect([actual.width, actual.height], `${key}:${variant.id} file`).toEqual(variant.resolution);
+      }
+    }
+  }, 30_000);
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');
