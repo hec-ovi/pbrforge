@@ -1,102 +1,126 @@
 [
   {
     "key": "cyberpunk/floor-slab/poor",
-    "aliases": [
-      "cyberpunk/balcony-slab/poor"
-    ],
+    "aliases": ["cyberpunk/balcony-slab/poor"],
     "alignment": "tile",
-    "description": "stained cast concrete floor slab surface, oil spots, cracks filled with grime, dull grey",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.9,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.25,
-      "relief": 2
-    },
-    "variants": 2
+    "description": "plain charcoal poured floor and balcony slab",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.82, "metallicFactor": 0 },
+    "variantId": "plain",
+    "flatColor": "#555653",
+    "flatNoise": 0,
+    "resolution": [512, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/floor-slab/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "large worn concrete floor slabs on a fitted grid",
+    "variantId": "large-slab",
+    "resolution": [512, 512],
+    "pattern": { "kind": "slab", "colors": ["#5d5e5a"], "cells": [2, 2], "line": 0.018, "bevel": 0.012, "depth": 0.16, "joint": 0.28, "variation": 0.025, "grain": 0 }
+  },
+  {
+    "key": "cyberpunk/floor-slab/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "running-bond service floor slabs on a fitted grid",
+    "variantId": "bond",
+    "resolution": [512, 512],
+    "pattern": { "kind": "slab", "colors": ["#585955"], "cells": [3, 4], "bond": "running", "line": 0.016, "bevel": 0.01, "depth": 0.14, "joint": 0.26, "variation": 0.02, "grain": 0 }
   },
   {
     "key": "cyberpunk/floor-slab/mid",
-    "aliases": [
-      "cyberpunk/balcony-slab/mid"
-    ],
+    "aliases": ["cyberpunk/balcony-slab/mid"],
     "alignment": "tile",
-    "description": "cast concrete floor slab surface, light wear and faint scuffing, even grey",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.8,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.2,
-      "relief": 2
-    },
-    "variants": 2
+    "description": "plain neutral poured floor and balcony slab",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.75, "metallicFactor": 0 },
+    "variantId": "plain",
+    "flatColor": "#777875",
+    "flatNoise": 0,
+    "resolution": [512, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/floor-slab/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "large neutral concrete floor slabs on a fitted grid",
+    "variantId": "large-slab",
+    "resolution": [512, 512],
+    "pattern": { "kind": "slab", "colors": ["#7f807d"], "cells": [2, 2], "line": 0.016, "bevel": 0.011, "depth": 0.14, "joint": 0.25, "variation": 0.02, "grain": 0 }
+  },
+  {
+    "key": "cyberpunk/floor-slab/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "running-bond neutral floor slabs on a fitted grid",
+    "variantId": "bond",
+    "resolution": [512, 512],
+    "pattern": { "kind": "slab", "colors": ["#747572"], "cells": [3, 4], "bond": "running", "line": 0.014, "bevel": 0.009, "depth": 0.12, "joint": 0.23, "variation": 0.018, "grain": 0 }
   },
   {
     "key": "cyberpunk/floor-slab/rich",
-    "aliases": [
-      "cyberpunk/balcony-slab/rich"
-    ],
+    "aliases": ["cyberpunk/balcony-slab/rich"],
     "alignment": "tile",
-    "description": "polished terrazzo floor surface seen straight from above, small marble chips in light grey cement, flat",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.67,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "roughness": [
-        0.62,
-        0.72
-      ],
-      "grain": 0.08,
-      "relief": 1.6
-    },
-    "variants": 2
+    "description": "plain honed grey floor and balcony slab",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.64, "metallicFactor": 0 },
+    "variantId": "plain",
+    "flatColor": "#898b89",
+    "flatNoise": 0,
+    "resolution": [512, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/floor-slab/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "large honed grey floor slabs on a fitted grid",
+    "variantId": "large-slab",
+    "resolution": [512, 512],
+    "pattern": { "kind": "slab", "colors": ["#929492"], "cells": [2, 2], "line": 0.014, "bevel": 0.009, "depth": 0.11, "joint": 0.21, "variation": 0.015, "grain": 0 }
+  },
+  {
+    "key": "cyberpunk/floor-slab/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "running-bond honed floor slabs on a fitted grid",
+    "variantId": "bond",
+    "resolution": [512, 512],
+    "pattern": { "kind": "slab", "colors": ["#858785"], "cells": [3, 4], "bond": "running", "line": 0.012, "bevel": 0.008, "depth": 0.10, "joint": 0.20, "variation": 0.014, "grain": 0 }
   },
   {
     "key": "cyberpunk/floor-slab/high_rich",
-    "aliases": [
-      "cyberpunk/balcony-slab/high_rich"
-    ],
+    "aliases": ["cyberpunk/balcony-slab/high_rich"],
     "alignment": "tile",
-    "description": "polished black granite floor surface seen straight from above, faint mirror sheen, deep graphite",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.63,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "roughness": [
-        0.58,
-        0.68
-      ],
-      "grain": 0.06,
-      "relief": 1.2
-    },
-    "variants": 2
+    "description": "plain dark honed floor and balcony slab",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
+    "variantId": "plain",
+    "flatColor": "#2d3034",
+    "flatNoise": 0,
+    "resolution": [512, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/floor-slab/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "large dark honed floor slabs on a fitted grid",
+    "variantId": "large-slab",
+    "resolution": [512, 512],
+    "pattern": { "kind": "slab", "colors": ["#35393d"], "cells": [2, 2], "line": 0.012, "bevel": 0.008, "depth": 0.09, "joint": 0.18, "variation": 0.012, "grain": 0 }
+  },
+  {
+    "key": "cyberpunk/floor-slab/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "running-bond dark honed floor slabs on a fitted grid",
+    "variantId": "bond",
+    "resolution": [512, 512],
+    "pattern": { "kind": "slab", "colors": ["#303438"], "cells": [3, 4], "bond": "running", "line": 0.01, "bevel": 0.007, "depth": 0.08, "joint": 0.17, "variation": 0.01, "grain": 0 }
   }
 ]

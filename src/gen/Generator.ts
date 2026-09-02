@@ -84,14 +84,13 @@ export class Generator {
     const start = target.base?.variants.length ?? 0;
 
     const variants: Variant[] = [];
-    let photographed = false;
+    const photographed = !request.pattern && !request.flatColor && !request.recolor && request.emission !== 'image';
     for (let v = 0; v < count; v++) {
       const id = request.variantId ?? String(start + v + 1);
       if (target.base?.variants.some((existing) => existing.id === id) && !request.overwrite) {
         throw new MaterialsError('E_KEY_EXISTS', `variant ${id} of ${target.base.key} exists; pass overwrite to replace`);
       }
       const source = await this.render(request, target, v, baseSeed + v, width, height);
-      photographed ||= !source.screen && !source.reuse && source.height === undefined;
       variants.push(await this.buildVariant(target, id, source, request));
     }
 

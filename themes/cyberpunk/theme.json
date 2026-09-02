@@ -1428,6 +1428,9 @@
     },
     "cyberpunk/floor-slab/poor": {
       "key": "cyberpunk/floor-slab/poor",
+      "aliases": [
+        "cyberpunk/balcony-slab/poor"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -1436,16 +1439,16 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.9,
+        "roughnessFactor": 0.82,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "plain",
-          "class": "pattern",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/floor-slab/poor/plain/basecolor.png",
@@ -1457,50 +1460,44 @@
           }
         },
         {
-          "id": "1",
+          "id": "large-slab",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/floor-slab/poor/1/basecolor.png",
-            "normal": "assets/floor-slab/poor/1/normal.png",
-            "roughness": "assets/floor-slab/poor/1/roughness.png",
-            "metallic": "assets/floor-slab/poor/1/metallic.png",
-            "height": "assets/floor-slab/poor/1/height.png",
-            "ao": "assets/floor-slab/poor/1/ao.png"
+            "basecolor": "assets/floor-slab/poor/large-slab/basecolor.png",
+            "normal": "assets/floor-slab/poor/large-slab/normal.png",
+            "roughness": "assets/floor-slab/poor/large-slab/roughness.png",
+            "metallic": "assets/floor-slab/poor/large-slab/metallic.png",
+            "height": "assets/floor-slab/poor/large-slab/height.png",
+            "ao": "assets/floor-slab/poor/large-slab/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "bond",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/floor-slab/poor/2/basecolor.png",
-            "normal": "assets/floor-slab/poor/2/normal.png",
-            "roughness": "assets/floor-slab/poor/2/roughness.png",
-            "metallic": "assets/floor-slab/poor/2/metallic.png",
-            "height": "assets/floor-slab/poor/2/height.png",
-            "ao": "assets/floor-slab/poor/2/ao.png"
+            "basecolor": "assets/floor-slab/poor/bond/basecolor.png",
+            "normal": "assets/floor-slab/poor/bond/normal.png",
+            "roughness": "assets/floor-slab/poor/bond/roughness.png",
+            "metallic": "assets/floor-slab/poor/bond/metallic.png",
+            "height": "assets/floor-slab/poor/bond/height.png",
+            "ao": "assets/floor-slab/poor/bond/ao.png"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/balcony-slab/poor"
-      ],
-      "finish": {
-        "roughness": [
-          0.85,
-          0.95
-        ],
-        "grain": 0.25,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/floor-slab/mid": {
       "key": "cyberpunk/floor-slab/mid",
+      "aliases": [
+        "cyberpunk/balcony-slab/mid"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -1509,16 +1506,16 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.8,
+        "roughnessFactor": 0.75,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "plain",
-          "class": "pattern",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/floor-slab/mid/plain/basecolor.png",
@@ -1530,50 +1527,44 @@
           }
         },
         {
-          "id": "1",
+          "id": "large-slab",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/floor-slab/mid/1/basecolor.png",
-            "normal": "assets/floor-slab/mid/1/normal.png",
-            "roughness": "assets/floor-slab/mid/1/roughness.png",
-            "metallic": "assets/floor-slab/mid/1/metallic.png",
-            "height": "assets/floor-slab/mid/1/height.png",
-            "ao": "assets/floor-slab/mid/1/ao.png"
+            "basecolor": "assets/floor-slab/mid/large-slab/basecolor.png",
+            "normal": "assets/floor-slab/mid/large-slab/normal.png",
+            "roughness": "assets/floor-slab/mid/large-slab/roughness.png",
+            "metallic": "assets/floor-slab/mid/large-slab/metallic.png",
+            "height": "assets/floor-slab/mid/large-slab/height.png",
+            "ao": "assets/floor-slab/mid/large-slab/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "bond",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/floor-slab/mid/2/basecolor.png",
-            "normal": "assets/floor-slab/mid/2/normal.png",
-            "roughness": "assets/floor-slab/mid/2/roughness.png",
-            "metallic": "assets/floor-slab/mid/2/metallic.png",
-            "height": "assets/floor-slab/mid/2/height.png",
-            "ao": "assets/floor-slab/mid/2/ao.png"
+            "basecolor": "assets/floor-slab/mid/bond/basecolor.png",
+            "normal": "assets/floor-slab/mid/bond/normal.png",
+            "roughness": "assets/floor-slab/mid/bond/roughness.png",
+            "metallic": "assets/floor-slab/mid/bond/metallic.png",
+            "height": "assets/floor-slab/mid/bond/height.png",
+            "ao": "assets/floor-slab/mid/bond/ao.png"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/balcony-slab/mid"
-      ],
-      "finish": {
-        "roughness": [
-          0.75,
-          0.85
-        ],
-        "grain": 0.2,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/floor-slab/rich": {
       "key": "cyberpunk/floor-slab/rich",
+      "aliases": [
+        "cyberpunk/balcony-slab/rich"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -1582,16 +1573,16 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.67,
+        "roughnessFactor": 0.64,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "plain",
-          "class": "pattern",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/floor-slab/rich/plain/basecolor.png",
@@ -1603,50 +1594,44 @@
           }
         },
         {
-          "id": "1",
+          "id": "large-slab",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/floor-slab/rich/1/basecolor.png",
-            "normal": "assets/floor-slab/rich/1/normal.png",
-            "roughness": "assets/floor-slab/rich/1/roughness.png",
-            "metallic": "assets/floor-slab/rich/1/metallic.png",
-            "height": "assets/floor-slab/rich/1/height.png",
-            "ao": "assets/floor-slab/rich/1/ao.png"
+            "basecolor": "assets/floor-slab/rich/large-slab/basecolor.png",
+            "normal": "assets/floor-slab/rich/large-slab/normal.png",
+            "roughness": "assets/floor-slab/rich/large-slab/roughness.png",
+            "metallic": "assets/floor-slab/rich/large-slab/metallic.png",
+            "height": "assets/floor-slab/rich/large-slab/height.png",
+            "ao": "assets/floor-slab/rich/large-slab/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "bond",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/floor-slab/rich/2/basecolor.png",
-            "normal": "assets/floor-slab/rich/2/normal.png",
-            "roughness": "assets/floor-slab/rich/2/roughness.png",
-            "metallic": "assets/floor-slab/rich/2/metallic.png",
-            "height": "assets/floor-slab/rich/2/height.png",
-            "ao": "assets/floor-slab/rich/2/ao.png"
+            "basecolor": "assets/floor-slab/rich/bond/basecolor.png",
+            "normal": "assets/floor-slab/rich/bond/normal.png",
+            "roughness": "assets/floor-slab/rich/bond/roughness.png",
+            "metallic": "assets/floor-slab/rich/bond/metallic.png",
+            "height": "assets/floor-slab/rich/bond/height.png",
+            "ao": "assets/floor-slab/rich/bond/ao.png"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/balcony-slab/rich"
-      ],
-      "finish": {
-        "roughness": [
-          0.62,
-          0.72
-        ],
-        "grain": 0.08,
-        "relief": 1.6
-      }
+      ]
     },
     "cyberpunk/floor-slab/high_rich": {
       "key": "cyberpunk/floor-slab/high_rich",
+      "aliases": [
+        "cyberpunk/balcony-slab/high_rich"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
@@ -1655,16 +1640,16 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.63,
+        "roughnessFactor": 0.58,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "plain",
-          "class": "pattern",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/floor-slab/high_rich/plain/basecolor.png",
@@ -1676,47 +1661,38 @@
           }
         },
         {
-          "id": "1",
+          "id": "large-slab",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/floor-slab/high_rich/1/basecolor.png",
-            "normal": "assets/floor-slab/high_rich/1/normal.png",
-            "roughness": "assets/floor-slab/high_rich/1/roughness.png",
-            "metallic": "assets/floor-slab/high_rich/1/metallic.png",
-            "height": "assets/floor-slab/high_rich/1/height.png",
-            "ao": "assets/floor-slab/high_rich/1/ao.png"
+            "basecolor": "assets/floor-slab/high_rich/large-slab/basecolor.png",
+            "normal": "assets/floor-slab/high_rich/large-slab/normal.png",
+            "roughness": "assets/floor-slab/high_rich/large-slab/roughness.png",
+            "metallic": "assets/floor-slab/high_rich/large-slab/metallic.png",
+            "height": "assets/floor-slab/high_rich/large-slab/height.png",
+            "ao": "assets/floor-slab/high_rich/large-slab/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "bond",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/floor-slab/high_rich/2/basecolor.png",
-            "normal": "assets/floor-slab/high_rich/2/normal.png",
-            "roughness": "assets/floor-slab/high_rich/2/roughness.png",
-            "metallic": "assets/floor-slab/high_rich/2/metallic.png",
-            "height": "assets/floor-slab/high_rich/2/height.png",
-            "ao": "assets/floor-slab/high_rich/2/ao.png"
+            "basecolor": "assets/floor-slab/high_rich/bond/basecolor.png",
+            "normal": "assets/floor-slab/high_rich/bond/normal.png",
+            "roughness": "assets/floor-slab/high_rich/bond/roughness.png",
+            "metallic": "assets/floor-slab/high_rich/bond/metallic.png",
+            "height": "assets/floor-slab/high_rich/bond/height.png",
+            "ao": "assets/floor-slab/high_rich/bond/ao.png"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/balcony-slab/high_rich"
-      ],
-      "finish": {
-        "roughness": [
-          0.58,
-          0.68
-        ],
-        "grain": 0.06,
-        "relief": 1.2
-      }
+      ]
     },
     "cyberpunk/roof/poor": {
       "key": "cyberpunk/roof/poor",
