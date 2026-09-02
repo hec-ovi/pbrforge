@@ -1963,14 +1963,6 @@
         "roughnessFactor": 0.76,
         "metallicFactor": 0
       },
-      "finish": {
-        "roughness": [
-          0.71,
-          0.81
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "plain",
@@ -2018,14 +2010,6 @@
       "physical": {
         "roughnessFactor": 0.68,
         "metallicFactor": 0
-      },
-      "finish": {
-        "roughness": [
-          0.63,
-          0.73
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -2075,14 +2059,6 @@
         "roughnessFactor": 0.6,
         "metallicFactor": 0
       },
-      "finish": {
-        "roughness": [
-          0.55,
-          0.65
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "plain",
@@ -2130,14 +2106,6 @@
       "physical": {
         "roughnessFactor": 0.54,
         "metallicFactor": 0
-      },
-      "finish": {
-        "roughness": [
-          0.49,
-          0.59
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -4155,14 +4123,6 @@
         "roughnessFactor": 0.76,
         "metallicFactor": 1
       },
-      "finish": {
-        "roughness": [
-          0.71,
-          0.81
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "paint",
@@ -4210,14 +4170,6 @@
       "physical": {
         "roughnessFactor": 0.68,
         "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.63,
-          0.73
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -4267,14 +4219,6 @@
         "roughnessFactor": 0.6,
         "metallicFactor": 1
       },
-      "finish": {
-        "roughness": [
-          0.55,
-          0.65
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "paint",
@@ -4322,14 +4266,6 @@
       "physical": {
         "roughnessFactor": 0.54,
         "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.49,
-          0.59
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -5423,14 +5359,6 @@
         "roughnessFactor": 0.8,
         "metallicFactor": 1
       },
-      "finish": {
-        "roughness": [
-          0.75,
-          0.85
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "paint",
@@ -5478,14 +5406,6 @@
       "physical": {
         "roughnessFactor": 0.72,
         "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.67,
-          0.77
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -5535,14 +5455,6 @@
         "roughnessFactor": 0.64,
         "metallicFactor": 1
       },
-      "finish": {
-        "roughness": [
-          0.59,
-          0.69
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "paint",
@@ -5590,14 +5502,6 @@
       "physical": {
         "roughnessFactor": 0.56,
         "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.51,
-          0.61
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -5647,14 +5551,6 @@
         "roughnessFactor": 0.78,
         "metallicFactor": 1
       },
-      "finish": {
-        "roughness": [
-          0.73,
-          0.83
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "paint",
@@ -5702,14 +5598,6 @@
       "physical": {
         "roughnessFactor": 0.7,
         "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.65,
-          0.75
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -5759,14 +5647,6 @@
         "roughnessFactor": 0.62,
         "metallicFactor": 1
       },
-      "finish": {
-        "roughness": [
-          0.57,
-          0.67
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "paint",
@@ -5814,14 +5694,6 @@
       "physical": {
         "roughnessFactor": 0.54,
         "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.49,
-          0.59
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -5871,14 +5743,6 @@
         "roughnessFactor": 0.72,
         "metallicFactor": 0
       },
-      "finish": {
-        "roughness": [
-          0.67,
-          0.77
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "casing",
@@ -5926,14 +5790,6 @@
       "physical": {
         "roughnessFactor": 0.65,
         "metallicFactor": 0
-      },
-      "finish": {
-        "roughness": [
-          0.6,
-          0.7
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
@@ -5983,14 +5839,6 @@
         "roughnessFactor": 0.58,
         "metallicFactor": 0
       },
-      "finish": {
-        "roughness": [
-          0.53,
-          0.63
-        ],
-        "grain": 0.2,
-        "relief": 2
-      },
       "variants": [
         {
           "id": "casing",
@@ -6038,14 +5886,6 @@
       "physical": {
         "roughnessFactor": 0.52,
         "metallicFactor": 0
-      },
-      "finish": {
-        "roughness": [
-          0.47,
-          0.57
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {

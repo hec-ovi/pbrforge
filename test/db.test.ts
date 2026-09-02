@@ -341,6 +341,16 @@ describe('shipped cyberpunk coverage', () => {
     }
   }, 30_000);
 
+  it('keeps photographed finish metadata off fully procedural entries', () => {
+    const offences = db
+      .list({ theme: 'cyberpunk' })
+      .map((key) => db.resolve(key))
+      .filter((entry) => entry.variants.every((variant) => variant.class === 'flat' || variant.class === 'pattern'))
+      .filter((entry) => entry.finish !== undefined)
+      .map((entry) => entry.key);
+    expect(offences).toEqual([]);
+  });
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');

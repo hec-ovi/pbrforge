@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.25: flat-only column, metal, fire-escape, roof-artifact and signage entries no longer carry photographed-finish metadata. A shipped-database test holds source class and finish metadata together.
 0.9.24: map creation rejects resolutions that stretch a physical tile or exact-placement face. Tile variants are limited to 1,048,576 pixels, exact sheets to a 4096 px long side and 9,437,184 pixels. The curb is corrected to 1280 x 96 px, equal density across its 2 x 0.15 m face, and a shipped-library audit holds every variant to these constraints.
 0.9.23: concrete is a four-variant deterministic set at 512 px with restrained relief. The precast panel is 3 x 1.5 m, a 2:1 module matching the facade reference, and the invalid photographed surfaces and derived tints are gone.
 0.9.22: roofs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, restrained half-metre seams and 1 m service panels. The patterned options are for roof zones that hold whole repeats.
