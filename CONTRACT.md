@@ -67,7 +67,7 @@ The ground kinds carry the tile sizes the engine lays on its 1 mm grid, so a cut
 
 Lay `road` with U across the lane from its left boundary so the tracks sit under the wheels; a consumer that lays planar world UVs over a merged roadway takes `patched` or `puddle`. Lay `sidewalk` with its UV origin on the kerb line so the first joint runs parallel to it. The `curb` tile spans the 0.15 m face with V from the road up, and the same tile lays the 0.15 m top. `puddle` is asphalt after rain: damp patches pooled in the low spots, flat and dark, roughness 0.5 inside them.
 
-`light-fixture` is one luminaire per tile of 0.16 x 0.28 m at 256 x 448 px, so a fixture face of that size spans exactly one tile: `lamp` (canonical) is a recessed lens with a hot centre inside a 12 mm housing bezel, `strip` a diffuser band along a dark housing, `panel` a flat diffuser inset in a frame; emission comes off the lens.
+`light-fixture` is one luminaire per tile of 0.16 x 0.28 m at 256 x 448 px, so a fixture face of that size spans exactly one tile. `lamp` (canonical) is a recessed lens with a hot centre inside a 26 mm housing, `strip` one uniform diffuser whose housing is the fixture geometry, `panel` an even diffuser vignetting into an 18 mm frame; emission comes off the lens. Emissive strength is 1.2, set so the lens renders its falloff instead of clipping to a solid face: at the size a facade samples one fixture, the housing stays unlit, about half the face carries the gradient and only the hot centre blooms. Held by a test over the shipped database.
 
 ## AC unit
 

@@ -188,6 +188,24 @@ describe('shipped cyberpunk coverage', () => {
     expect(offences).toEqual([]);
   }, 60_000);
 
+  it('renders every light fixture as a lamp at its own emissive strength, not as a solid lit face', async () => {
+    const themeDir = db.themeDir('cyberpunk');
+    const offences: string[] = [];
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = db.resolve(`cyberpunk/light-fixture/${tier}`);
+      const strength = entry.physical.emissiveStrength ?? 1;
+      for (const variant of entry.variants) {
+        const { data } = await sharp(join(themeDir, variant.maps.emission!)).greyscale().raw().toBuffer({ resolveWithObject: true });
+        let clipped = 0;
+        for (const px of data) if ((px / 255) * strength >= 0.99) clipped++;
+        // a fixture that blows out over most of its face reads as a white rectangle, not a lamp
+        const share = clipped / data.length;
+        if (share > 0.25) offences.push(`${entry.key}:${variant.id} clips ${Math.round(share * 100)}% of its face`);
+      }
+    }
+    expect(offences).toEqual([]);
+  }, 30_000);
+
   it('ships the steel kinds off the grain ramp, so a photograph of steel does not come back as speckle', () => {
     const offences: string[] = [];
     for (const kind of ['metal', 'elevator_door', 'fire-escape', 'roof-artifact']) {

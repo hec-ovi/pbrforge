@@ -6494,7 +6494,7 @@
       "physical": {
         "roughnessFactor": 0.5,
         "metallicFactor": 0,
-        "emissiveStrength": 3
+        "emissiveStrength": 1.2
       },
       "variants": [
         {
@@ -6561,7 +6561,7 @@
       "physical": {
         "roughnessFactor": 0.45,
         "metallicFactor": 0,
-        "emissiveStrength": 3
+        "emissiveStrength": 1.2
       },
       "variants": [
         {
@@ -6628,7 +6628,7 @@
       "physical": {
         "roughnessFactor": 0.4,
         "metallicFactor": 0,
-        "emissiveStrength": 3
+        "emissiveStrength": 1.2
       },
       "variants": [
         {
@@ -6695,7 +6695,7 @@
       "physical": {
         "roughnessFactor": 0.35,
         "metallicFactor": 0,
-        "emissiveStrength": 3
+        "emissiveStrength": 1.2
       },
       "variants": [
         {
