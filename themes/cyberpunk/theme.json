@@ -2623,8 +2623,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1.5,
-          1.5
+          1.0,
+          1.0
         ]
       },
       "physical": {
@@ -2725,8 +2725,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1.5,
-          1.5
+          1.0,
+          1.0
         ]
       },
       "physical": {
@@ -2827,8 +2827,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1.5,
-          1.5
+          1.0,
+          1.0
         ]
       },
       "physical": {
@@ -2929,8 +2929,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1.5,
-          1.5
+          1.0,
+          1.0
         ]
       },
       "physical": {
@@ -7644,8 +7644,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          2.4,
-          2.4
+          2,
+          2
         ]
       },
       "physical": {
@@ -7692,8 +7692,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          2.4,
-          2.4
+          2,
+          2
         ]
       },
       "physical": {
@@ -7740,8 +7740,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          2.4,
-          2.4
+          2,
+          2
         ]
       },
       "physical": {
@@ -7788,8 +7788,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          2.4,
-          2.4
+          2,
+          2
         ]
       },
       "physical": {
