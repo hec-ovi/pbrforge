@@ -1441,6 +1441,22 @@
       },
       "variants": [
         {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/floor-slab/poor/plain/basecolor.png",
+            "normal": "assets/floor-slab/poor/plain/normal.png",
+            "roughness": "assets/floor-slab/poor/plain/roughness.png",
+            "metallic": "assets/floor-slab/poor/plain/metallic.png",
+            "height": "assets/floor-slab/poor/plain/height.png",
+            "ao": "assets/floor-slab/poor/plain/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -1497,6 +1513,22 @@
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/floor-slab/mid/plain/basecolor.png",
+            "normal": "assets/floor-slab/mid/plain/normal.png",
+            "roughness": "assets/floor-slab/mid/plain/roughness.png",
+            "metallic": "assets/floor-slab/mid/plain/metallic.png",
+            "height": "assets/floor-slab/mid/plain/height.png",
+            "ao": "assets/floor-slab/mid/plain/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -1555,6 +1587,22 @@
       },
       "variants": [
         {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/floor-slab/rich/plain/basecolor.png",
+            "normal": "assets/floor-slab/rich/plain/normal.png",
+            "roughness": "assets/floor-slab/rich/plain/roughness.png",
+            "metallic": "assets/floor-slab/rich/plain/metallic.png",
+            "height": "assets/floor-slab/rich/plain/height.png",
+            "ao": "assets/floor-slab/rich/plain/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -1611,6 +1659,22 @@
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/floor-slab/high_rich/plain/basecolor.png",
+            "normal": "assets/floor-slab/high_rich/plain/normal.png",
+            "roughness": "assets/floor-slab/high_rich/plain/roughness.png",
+            "metallic": "assets/floor-slab/high_rich/plain/metallic.png",
+            "height": "assets/floor-slab/high_rich/plain/height.png",
+            "ao": "assets/floor-slab/high_rich/plain/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -1669,6 +1733,22 @@
       },
       "variants": [
         {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/roof/poor/plain/basecolor.png",
+            "normal": "assets/roof/poor/plain/normal.png",
+            "roughness": "assets/roof/poor/plain/roughness.png",
+            "metallic": "assets/roof/poor/plain/metallic.png",
+            "height": "assets/roof/poor/plain/height.png",
+            "ao": "assets/roof/poor/plain/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -1722,6 +1802,22 @@
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/roof/mid/plain/basecolor.png",
+            "normal": "assets/roof/mid/plain/normal.png",
+            "roughness": "assets/roof/mid/plain/roughness.png",
+            "metallic": "assets/roof/mid/plain/metallic.png",
+            "height": "assets/roof/mid/plain/height.png",
+            "ao": "assets/roof/mid/plain/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -1777,6 +1873,22 @@
       },
       "variants": [
         {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/roof/rich/plain/basecolor.png",
+            "normal": "assets/roof/rich/plain/normal.png",
+            "roughness": "assets/roof/rich/plain/roughness.png",
+            "metallic": "assets/roof/rich/plain/metallic.png",
+            "height": "assets/roof/rich/plain/height.png",
+            "ao": "assets/roof/rich/plain/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -1830,6 +1942,22 @@
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "plain",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/roof/high_rich/plain/basecolor.png",
+            "normal": "assets/roof/high_rich/plain/normal.png",
+            "roughness": "assets/roof/high_rich/plain/roughness.png",
+            "metallic": "assets/roof/high_rich/plain/metallic.png",
+            "height": "assets/roof/high_rich/plain/height.png",
+            "ao": "assets/roof/high_rich/plain/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [

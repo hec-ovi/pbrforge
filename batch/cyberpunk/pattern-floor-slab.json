@@ -1,0 +1,74 @@
+[
+  {
+    "key": "cyberpunk/floor-slab/poor",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain poured floor slab, grimy, tonal variation only",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#6b6a66", "#75746f"],
+      "cells": [4, 4],
+      "octaves": 2,
+      "depth": 0.08,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/floor-slab/mid",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain poured floor slab, tonal variation only",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#8f8e8a", "#999893"],
+      "cells": [4, 4],
+      "octaves": 2,
+      "depth": 0.06,
+      "variation": 0.025,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/floor-slab/rich",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain ground floor slab, tonal variation only",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#a3a29e", "#acaba6"],
+      "cells": [3, 3],
+      "octaves": 1,
+      "depth": 0.04,
+      "variation": 0.02,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/floor-slab/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain dark ground floor slab, tonal variation only",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#2d2d2f", "#353537"],
+      "cells": [3, 3],
+      "octaves": 1,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.015
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "key": "cyberpunk/roof/poor",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain bitumen roof deck, weathered, tonal variation only",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#5c5b57", "#66655f"],
+      "cells": [4, 4],
+      "octaves": 2,
+      "depth": 0.09,
+      "variation": 0.03,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/roof/mid",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain bitumen roof deck, tonal variation only",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#63625d", "#6c6b66"],
+      "cells": [4, 4],
+      "octaves": 2,
+      "depth": 0.07,
+      "variation": 0.025,
+      "grain": 0.02
+    }
+  },
+  {
+    "key": "cyberpunk/roof/rich",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain zinc roof sheet, tonal variation only",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#55585b", "#5d6063"],
+      "cells": [3, 3],
+      "octaves": 1,
+      "depth": 0.04,
+      "variation": 0.02,
+      "grain": 0.015
+    }
+  },
+  {
+    "key": "cyberpunk/roof/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "canonical": true,
+    "description": "plain dark roof membrane, tonal variation only",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#3d3e3c", "#454643"],
+      "cells": [3, 3],
+      "octaves": 1,
+      "depth": 0.04,
+      "variation": 0.02,
+      "grain": 0.015
+    }
+  }
+]

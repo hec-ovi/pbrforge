@@ -155,6 +155,23 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
+  it('leads the flat-face kinds with a solid variant, so a face that is not a whole number of tiles shows no cut joint', async () => {
+    const themeDir = db.themeDir('cyberpunk');
+    const offences: string[] = [];
+    for (const kind of ['concrete', 'plaster', 'ceiling', 'roof', 'floor-slab']) {
+      for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+        const lead = db.resolve(`cyberpunk/${kind}/${tier}`).variants[0];
+        if (lead.id !== 'plain') offences.push(`${kind}/${tier} leads with ${lead.id}`);
+        // a joint reads as a hard edge across the tile; tonal drift never steps more than a few code values
+        const { data, info } = await sharp(join(themeDir, lead.maps.basecolor)).greyscale().raw().toBuffer({ resolveWithObject: true });
+        let step = 0;
+        for (let y = 0; y < info.height; y++) for (let x = 1; x < info.width; x++) step = Math.max(step, Math.abs(data[y * info.width + x] - data[y * info.width + x - 1]));
+        if (step > 8) offences.push(`${kind}/${tier} basecolor steps ${step}`);
+      }
+    }
+    expect(offences).toEqual([]);
+  }, 60_000);
+
   it('ships the steel kinds off the grain ramp, so a photograph of steel does not come back as speckle', () => {
     const offences: string[] = [];
     for (const kind of ['metal', 'elevator_door', 'fire-escape', 'roof-artifact']) {
