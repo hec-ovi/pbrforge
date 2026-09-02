@@ -10,8 +10,8 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.65,
-      "metallicFactor": 1
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0
     },
     "finish": {
       "roughness": [
@@ -35,7 +35,7 @@
     },
     "physical": {
       "roughnessFactor": 0.6,
-      "metallicFactor": 1
+      "metallicFactor": 0
     },
     "finish": {
       "roughness": [
@@ -58,8 +58,8 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 1
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0
     },
     "finish": {
       "roughness": [
@@ -82,8 +82,8 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0
     },
     "finish": {
       "roughness": [
