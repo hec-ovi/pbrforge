@@ -5903,216 +5903,224 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
         "roughnessFactor": 0.8,
         "metallicFactor": 1
       },
-      "variants": [
-        {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/fire-escape/poor/1/basecolor.png",
-            "normal": "assets/fire-escape/poor/1/normal.png",
-            "roughness": "assets/fire-escape/poor/1/roughness.png",
-            "metallic": "assets/fire-escape/poor/1/metallic.png",
-            "height": "assets/fire-escape/poor/1/height.png",
-            "ao": "assets/fire-escape/poor/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/fire-escape/poor/2/basecolor.png",
-            "normal": "assets/fire-escape/poor/2/normal.png",
-            "roughness": "assets/fire-escape/poor/2/roughness.png",
-            "metallic": "assets/fire-escape/poor/2/metallic.png",
-            "height": "assets/fire-escape/poor/2/height.png",
-            "ao": "assets/fire-escape/poor/2/ao.png"
-          }
-        }
-      ],
       "finish": {
         "roughness": [
           0.75,
           0.85
         ],
-        "grain": 0.05,
-        "relief": 1
-      }
+        "grain": 0.2,
+        "relief": 2
+      },
+      "variants": [
+        {
+          "id": "paint",
+          "class": "flat",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/fire-escape/poor/paint/basecolor.png",
+            "normal": "assets/fire-escape/poor/paint/normal.png",
+            "roughness": "assets/fire-escape/poor/paint/roughness.png",
+            "metallic": "assets/fire-escape/poor/paint/metallic.png",
+            "height": "assets/fire-escape/poor/paint/height.png",
+            "ao": "assets/fire-escape/poor/paint/ao.png"
+          }
+        },
+        {
+          "id": "zinc",
+          "class": "flat",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/fire-escape/poor/zinc/basecolor.png",
+            "normal": "assets/fire-escape/poor/zinc/normal.png",
+            "roughness": "assets/fire-escape/poor/zinc/roughness.png",
+            "metallic": "assets/fire-escape/poor/zinc/metallic.png",
+            "height": "assets/fire-escape/poor/zinc/height.png",
+            "ao": "assets/fire-escape/poor/zinc/ao.png"
+          }
+        }
+      ]
     },
     "cyberpunk/fire-escape/mid": {
       "key": "cyberpunk/fire-escape/mid",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.7,
+        "roughnessFactor": 0.72,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.67,
+          0.77
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/fire-escape/mid/1/basecolor.png",
-            "normal": "assets/fire-escape/mid/1/normal.png",
-            "roughness": "assets/fire-escape/mid/1/roughness.png",
-            "metallic": "assets/fire-escape/mid/1/metallic.png",
-            "height": "assets/fire-escape/mid/1/height.png",
-            "ao": "assets/fire-escape/mid/1/ao.png"
+            "basecolor": "assets/fire-escape/mid/paint/basecolor.png",
+            "normal": "assets/fire-escape/mid/paint/normal.png",
+            "roughness": "assets/fire-escape/mid/paint/roughness.png",
+            "metallic": "assets/fire-escape/mid/paint/metallic.png",
+            "height": "assets/fire-escape/mid/paint/height.png",
+            "ao": "assets/fire-escape/mid/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/fire-escape/mid/2/basecolor.png",
-            "normal": "assets/fire-escape/mid/2/normal.png",
-            "roughness": "assets/fire-escape/mid/2/roughness.png",
-            "metallic": "assets/fire-escape/mid/2/metallic.png",
-            "height": "assets/fire-escape/mid/2/height.png",
-            "ao": "assets/fire-escape/mid/2/ao.png"
+            "basecolor": "assets/fire-escape/mid/zinc/basecolor.png",
+            "normal": "assets/fire-escape/mid/zinc/normal.png",
+            "roughness": "assets/fire-escape/mid/zinc/roughness.png",
+            "metallic": "assets/fire-escape/mid/zinc/metallic.png",
+            "height": "assets/fire-escape/mid/zinc/height.png",
+            "ao": "assets/fire-escape/mid/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.65,
-          0.75
-        ],
-        "grain": 0.05,
-        "relief": 1
-      }
+      ]
     },
     "cyberpunk/fire-escape/rich": {
       "key": "cyberpunk/fire-escape/rich",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.55,
+        "roughnessFactor": 0.64,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.59,
+          0.69
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/fire-escape/rich/1/basecolor.png",
-            "normal": "assets/fire-escape/rich/1/normal.png",
-            "roughness": "assets/fire-escape/rich/1/roughness.png",
-            "metallic": "assets/fire-escape/rich/1/metallic.png",
-            "height": "assets/fire-escape/rich/1/height.png",
-            "ao": "assets/fire-escape/rich/1/ao.png"
+            "basecolor": "assets/fire-escape/rich/paint/basecolor.png",
+            "normal": "assets/fire-escape/rich/paint/normal.png",
+            "roughness": "assets/fire-escape/rich/paint/roughness.png",
+            "metallic": "assets/fire-escape/rich/paint/metallic.png",
+            "height": "assets/fire-escape/rich/paint/height.png",
+            "ao": "assets/fire-escape/rich/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/fire-escape/rich/2/basecolor.png",
-            "normal": "assets/fire-escape/rich/2/normal.png",
-            "roughness": "assets/fire-escape/rich/2/roughness.png",
-            "metallic": "assets/fire-escape/rich/2/metallic.png",
-            "height": "assets/fire-escape/rich/2/height.png",
-            "ao": "assets/fire-escape/rich/2/ao.png"
+            "basecolor": "assets/fire-escape/rich/zinc/basecolor.png",
+            "normal": "assets/fire-escape/rich/zinc/normal.png",
+            "roughness": "assets/fire-escape/rich/zinc/roughness.png",
+            "metallic": "assets/fire-escape/rich/zinc/metallic.png",
+            "height": "assets/fire-escape/rich/zinc/height.png",
+            "ao": "assets/fire-escape/rich/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.5,
-          0.6
-        ],
-        "grain": 0.05,
-        "relief": 0.8
-      }
+      ]
     },
     "cyberpunk/fire-escape/high_rich": {
       "key": "cyberpunk/fire-escape/high_rich",
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1,
-          1
+          0.5,
+          0.5
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.56,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.51,
+          0.61
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/fire-escape/high_rich/1/basecolor.png",
-            "normal": "assets/fire-escape/high_rich/1/normal.png",
-            "roughness": "assets/fire-escape/high_rich/1/roughness.png",
-            "metallic": "assets/fire-escape/high_rich/1/metallic.png",
-            "height": "assets/fire-escape/high_rich/1/height.png",
-            "ao": "assets/fire-escape/high_rich/1/ao.png"
+            "basecolor": "assets/fire-escape/high_rich/paint/basecolor.png",
+            "normal": "assets/fire-escape/high_rich/paint/normal.png",
+            "roughness": "assets/fire-escape/high_rich/paint/roughness.png",
+            "metallic": "assets/fire-escape/high_rich/paint/metallic.png",
+            "height": "assets/fire-escape/high_rich/paint/height.png",
+            "ao": "assets/fire-escape/high_rich/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/fire-escape/high_rich/2/basecolor.png",
-            "normal": "assets/fire-escape/high_rich/2/normal.png",
-            "roughness": "assets/fire-escape/high_rich/2/roughness.png",
-            "metallic": "assets/fire-escape/high_rich/2/metallic.png",
-            "height": "assets/fire-escape/high_rich/2/height.png",
-            "ao": "assets/fire-escape/high_rich/2/ao.png"
+            "basecolor": "assets/fire-escape/high_rich/zinc/basecolor.png",
+            "normal": "assets/fire-escape/high_rich/zinc/normal.png",
+            "roughness": "assets/fire-escape/high_rich/zinc/roughness.png",
+            "metallic": "assets/fire-escape/high_rich/zinc/metallic.png",
+            "height": "assets/fire-escape/high_rich/zinc/height.png",
+            "ao": "assets/fire-escape/high_rich/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.46,
-          0.56
-        ],
-        "grain": 0.05,
-        "relief": 0.8
-      }
+      ]
     },
     "cyberpunk/roof-artifact/poor": {
       "key": "cyberpunk/roof-artifact/poor",

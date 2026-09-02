@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.15: fire escapes use flat dark paint and zinc finishes on 0.5 m tiles. The shaped stair, rail and tread geometry keeps its silhouette without photographic pebbles, folds or plate seams crossing it.
 0.9.14: general metal uses two flat 1 m finishes per tier, dark paint and zinc. Both carry constant matte roughness and flat normals, so condenser housings, brackets and interior metal parts do not inherit photographic seams or grain.
 0.9.13: support columns use two flat honed stone tones per tier, with roughness 0.76 down to 0.54. Their 1.5 x 3 m tile is 256 x 512 px, so its texels are square in world space.
 0.9.12: synthesized flat materials carry `class: flat` in the index, distinct from photographed sources and drawn patterns. Consumers still bind the same map set.

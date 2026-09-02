@@ -2,85 +2,89 @@
   {
     "key": "cyberpunk/fire-escape/poor",
     "alignment": "tile",
-    "description": "weathered riveted steel surface, old black paint worn to bare metal, rust patches",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.8,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "grain": 0.05,
-      "relief": 1
-    },
-    "variants": 2
+    "description": "aged black fire-escape steel, even matte coating",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.80, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#292b2c",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/fire-escape/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "aged galvanized fire-escape steel, even matte finish",
+    "variantId": "zinc",
+    "flatColor": "#686b69",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/fire-escape/mid",
     "alignment": "tile",
-    "description": "painted riveted steel surface, matte black paint, light wear and faint rust",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.7,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "grain": 0.05,
-      "relief": 1
-    },
-    "variants": 2
+    "description": "charcoal fire-escape steel, even matte coating",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.72, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#25282a",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/fire-escape/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "galvanized fire-escape steel, even matte finish",
+    "variantId": "zinc",
+    "flatColor": "#777c7b",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/fire-escape/rich",
     "alignment": "tile",
-    "description": "painted steel surface, clean matte black, subtle wear at rivets",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "grain": 0.05,
-      "relief": 0.8
-    },
-    "variants": 2
+    "description": "clean graphite fire-escape steel, even matte coating",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.64, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#202428",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/fire-escape/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "clean cool fire-escape steel, even matte finish",
+    "variantId": "zinc",
+    "flatColor": "#858b8d",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/fire-escape/high_rich",
     "alignment": "tile",
-    "description": "powder-coated steel surface, flawless matte black",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "roughness": [
-        0.46,
-        0.56
-      ],
-      "grain": 0.05,
-      "relief": 0.8
-    },
-    "variants": 2
+    "description": "black powder-coated fire-escape steel, even satin-matte finish",
+    "tiling": { "worldSize": [0.5, 0.5] },
+    "physical": { "roughnessFactor": 0.56, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#191d21",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/fire-escape/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "clean pale fire-escape steel, even satin-matte finish",
+    "variantId": "zinc",
+    "flatColor": "#969c9d",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   }
 ]
