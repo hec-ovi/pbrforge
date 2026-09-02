@@ -108,7 +108,7 @@ const KINDS = [
   'balcony-slab', 'balcony-rail', 'roof', 'floor-slab', 'parapet', 'signage', 'ad-screen',
   'light-fixture', 'fire-escape', 'aperture-frame', 'roof-artifact',
   'plaster', 'tile', 'ceiling', 'wood', 'carpet', 'rubber', 'concrete', 'metal', 'elevator_door', 'fabric', 'glass',
-  'sidewalk', 'road', 'curb', 'plastic', 'ad-screen-tall', 'letter-atlas',
+  'sidewalk', 'road', 'curb', 'plastic', 'ad-screen-tall', 'letter-atlas', 'ac-unit',
 ];
 
 describe('shipped cyberpunk coverage', () => {

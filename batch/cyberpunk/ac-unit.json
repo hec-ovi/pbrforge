@@ -1,0 +1,138 @@
+[
+  {
+    "key": "cyberpunk/ac-unit/poor",
+    "alignment": "exact",
+    "description": "old condenser face: chalky off-white paint, rust at the flange and grime down the housing",
+    "aspect": [
+      1,
+      1
+    ],
+    "physical": {
+      "roughnessFactor": 0.7,
+      "metallicFactor": 0
+    },
+    "variantId": "grille",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "grille",
+      "colors": [
+        "#b6b2a6",
+        "#141517",
+        "#6a4a33"
+      ],
+      "line": 0.018,
+      "bevel": 0.03,
+      "split": 0.84,
+      "joint": 0.12,
+      "depth": 0.6,
+      "variation": 0.04,
+      "grain": 0.02,
+      "wear": 0.9
+    }
+  },
+  {
+    "key": "cyberpunk/ac-unit/mid",
+    "alignment": "exact",
+    "description": "condenser face: light grey paint, some grime at the edges",
+    "aspect": [
+      1,
+      1
+    ],
+    "physical": {
+      "roughnessFactor": 0.62,
+      "metallicFactor": 0
+    },
+    "variantId": "grille",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "grille",
+      "colors": [
+        "#c5c5c0",
+        "#151619",
+        "#5b5349"
+      ],
+      "line": 0.018,
+      "bevel": 0.03,
+      "split": 0.84,
+      "joint": 0.12,
+      "depth": 0.6,
+      "variation": 0.04,
+      "grain": 0.02,
+      "wear": 0.55
+    }
+  },
+  {
+    "key": "cyberpunk/ac-unit/rich",
+    "alignment": "exact",
+    "description": "condenser face: clean pale grey paint, faint dust at the edges",
+    "aspect": [
+      1,
+      1
+    ],
+    "physical": {
+      "roughnessFactor": 0.55,
+      "metallicFactor": 0
+    },
+    "variantId": "grille",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "grille",
+      "colors": [
+        "#d3d5d4",
+        "#131417",
+        "#6f6c68"
+      ],
+      "line": 0.018,
+      "bevel": 0.03,
+      "split": 0.84,
+      "joint": 0.12,
+      "depth": 0.6,
+      "variation": 0.04,
+      "grain": 0.02,
+      "wear": 0.25
+    }
+  },
+  {
+    "key": "cyberpunk/ac-unit/high_rich",
+    "alignment": "exact",
+    "description": "condenser face: graphite paint, near clean",
+    "aspect": [
+      1,
+      1
+    ],
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0
+    },
+    "variantId": "grille",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "pattern": {
+      "kind": "grille",
+      "colors": [
+        "#565a5f",
+        "#0f1013",
+        "#3b3e42"
+      ],
+      "line": 0.018,
+      "bevel": 0.03,
+      "split": 0.84,
+      "joint": 0.12,
+      "depth": 0.6,
+      "variation": 0.04,
+      "grain": 0.02,
+      "wear": 0.1
+    }
+  }
+]

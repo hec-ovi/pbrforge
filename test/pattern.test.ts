@@ -37,6 +37,7 @@ const kinds: PatternSpec[] = [
   { kind: 'puddle', colors: ['#202225', '#2e3134', '#0d0f12'], cells: [8, 8], octaves: 3, wet: 0.42 },
   { kind: 'lamp', colors: ['#e0d0a6', '#2a2724', '#fff7e6'], line: 0.012, bevel: 0.008, split: 0.9 },
   { kind: 'glyph-atlas', colors: ['#eafcff', '#7fe8ff', '#10161a'], line: 0.045, bevel: 0.05 },
+  { kind: 'grille', colors: ['#b6b2a6', '#141517', '#6a4a33'], line: 0.018, bevel: 0.03, split: 0.84, wear: 0.9 },
 ];
 
 /** The road the puddle variant is drawn on: dry asphalt is the base, the mask floods part of it. */
@@ -238,6 +239,34 @@ describe('pattern class', () => {
     expect(at(32, 56)).toBeGreaterThan(at(8, 56) + 40); // brighter than the lens near its rim
     expect(at(8, 56)).toBeGreaterThan(60); // which is still lit
     expect(at(1, 56)).toBe(0); // the housing bezel is not
+  });
+
+  it('draws a condenser face: a dark grille in a painted housing that wear soils at its edges', async () => {
+    const face = async (key: string, wear: number) => {
+      const entry = await offline(db).create({
+        key,
+        alignment: 'exact',
+        description: 'condenser face',
+        aspect: [1, 1],
+        physical: { roughnessFactor: 0.6, metallicFactor: 0 },
+        resolution: [128, 128],
+        variantId: 'grille',
+        pattern: { kind: 'grille', colors: ['#b6b2a6', '#141517', '#6a4a33'], line: 0.018, bevel: 0.03, split: 0.84, wear },
+      });
+      expect(entry.alignment).toBe('exact');
+      const pixels = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.basecolor)).raw().toBuffer();
+      // mean green over a 16 px block, since at this size a wire is under a pixel wide
+      return (x: number, y: number) => {
+        let sum = 0;
+        for (let j = y; j < y + 16; j++) for (let i = x; i < x + 16; i++) sum += pixels[(j * 128 + i) * 3 + 1];
+        return sum / 256;
+      };
+    };
+    const worn = await face('cyberpunk/ac-unit/poor', 0.9);
+    const clean = await face('cyberpunk/ac-unit/rich', 0);
+    expect(worn(30, 56)).toBeLessThan(90); // the grille over the cavity reads dark
+    expect(clean(0, 0)).toBeGreaterThan(150); // the housing is painted
+    expect(worn(0, 0)).toBeLessThan(clean(0, 0) - 20); // and dirt at its corner darkens it
   });
 
   it('appends a tint variant of a variant already in the entry', async () => {

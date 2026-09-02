@@ -2,6 +2,7 @@ import { MaterialsError } from '../../db/errors.js';
 import type { PatternSpec } from '../../db/types.js';
 import { parseHex } from '../color.js';
 import { GlyphAtlas } from './GlyphAtlas.js';
+import { Grille } from './Grille.js';
 import { HexagonGrid } from './HexagonGrid.js';
 import { Lamp } from './Lamp.js';
 import { LaneField } from './LaneField.js';
@@ -99,5 +100,7 @@ export function buildPattern(
       return new Lamp(params);
     case 'glyph-atlas':
       return new GlyphAtlas(params);
+    case 'grille':
+      return new Grille(params);
   }
 }

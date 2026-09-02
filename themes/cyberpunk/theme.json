@@ -2623,8 +2623,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1.0,
-          1.0
+          1,
+          1
         ]
       },
       "physical": {
@@ -2725,8 +2725,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1.0,
-          1.0
+          1,
+          1
         ]
       },
       "physical": {
@@ -2827,8 +2827,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1.0,
-          1.0
+          1,
+          1
         ]
       },
       "physical": {
@@ -2929,8 +2929,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          1.0,
-          1.0
+          1,
+          1
         ]
       },
       "physical": {
@@ -9402,6 +9402,126 @@
             "metallic": "assets/curb/poor/stone/metallic.png",
             "height": "assets/curb/poor/stone/height.png",
             "ao": "assets/curb/poor/stone/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ac-unit/poor": {
+      "key": "cyberpunk/ac-unit/poor",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "roughnessFactor": 0.7,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "grille",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ac-unit/poor/grille/basecolor.png",
+            "normal": "assets/ac-unit/poor/grille/normal.png",
+            "roughness": "assets/ac-unit/poor/grille/roughness.png",
+            "metallic": "assets/ac-unit/poor/grille/metallic.png",
+            "height": "assets/ac-unit/poor/grille/height.png",
+            "ao": "assets/ac-unit/poor/grille/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ac-unit/mid": {
+      "key": "cyberpunk/ac-unit/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "roughnessFactor": 0.62,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "grille",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ac-unit/mid/grille/basecolor.png",
+            "normal": "assets/ac-unit/mid/grille/normal.png",
+            "roughness": "assets/ac-unit/mid/grille/roughness.png",
+            "metallic": "assets/ac-unit/mid/grille/metallic.png",
+            "height": "assets/ac-unit/mid/grille/height.png",
+            "ao": "assets/ac-unit/mid/grille/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ac-unit/rich": {
+      "key": "cyberpunk/ac-unit/rich",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "roughnessFactor": 0.55,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "grille",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ac-unit/rich/grille/basecolor.png",
+            "normal": "assets/ac-unit/rich/grille/normal.png",
+            "roughness": "assets/ac-unit/rich/grille/roughness.png",
+            "metallic": "assets/ac-unit/rich/grille/metallic.png",
+            "height": "assets/ac-unit/rich/grille/height.png",
+            "ao": "assets/ac-unit/rich/grille/ao.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ac-unit/high_rich": {
+      "key": "cyberpunk/ac-unit/high_rich",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "grille",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ac-unit/high_rich/grille/basecolor.png",
+            "normal": "assets/ac-unit/high_rich/grille/normal.png",
+            "roughness": "assets/ac-unit/high_rich/grille/roughness.png",
+            "metallic": "assets/ac-unit/high_rich/grille/metallic.png",
+            "height": "assets/ac-unit/high_rich/grille/height.png",
+            "ao": "assets/ac-unit/high_rich/grille/ao.png"
           }
         }
       ]

@@ -81,7 +81,8 @@ export type PatternKind =
   | 'lane'
   | 'puddle'
   | 'lamp'
-  | 'glyph-atlas';
+  | 'glyph-atlas'
+  | 'grille';
 
 /** A surface stated as parameters instead of photographed: what the pattern class draws. */
 export interface PatternSpec {

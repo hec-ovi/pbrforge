@@ -111,7 +111,7 @@
       "required": ["kind", "colors"],
       "additionalProperties": false,
       "properties": {
-        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas"] },
+        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille"] },
         "colors": {
           "type": "array",
           "items": { "type": "string", "pattern": "^#[0-9a-f]{6}$" },
@@ -126,8 +126,8 @@
           "maxItems": 2,
           "description": "cells across one tile; for hexagon, columns and staggered row pairs (x about 1.73 times y keeps them regular)"
         },
-        "line": { "type": "number", "minimum": 0, "description": "joint or edge line width, in metres; a lane's wheel track width, a lamp's bezel width" },
-        "bevel": { "type": "number", "minimum": 0, "description": "chamfer width beside a joint, or from a lamp's bezel down to its lens, in metres" },
+        "line": { "type": "number", "minimum": 0, "description": "joint or edge line width, in metres; a lane's wheel track width, a lamp's bezel width, a grille's ring pitch" },
+        "bevel": { "type": "number", "minimum": 0, "description": "chamfer width beside a joint, from a lamp's bezel down to its lens, or a grille's flange width, in metres" },
         "depth": { "type": "number", "minimum": 0, "maximum": 1, "description": "relief between a face and a joint" },
         "joint": { "type": "number", "minimum": 0, "maximum": 1, "description": "how much darker and rougher a joint reads" },
         "variation": { "type": "number", "minimum": 0, "maximum": 1, "description": "tone spread from one cell to the next" },
@@ -144,11 +144,11 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "lane only: how dark and damp the two wheel tracks are; 0 is an unworn road"
+          "description": "lane: how dark and damp the two wheel tracks are; grille: how much dirt sits on the housing; 0 is unworn"
         },
         "bond": { "enum": ["stack", "running"], "description": "running shifts every other row half a cell; needs an even row count" },
         "axis": { "enum": ["x", "y"], "description": "which way stripe bands, the two-tone split and a lane run" },
-        "split": { "type": "number", "minimum": 0, "maximum": 1, "description": "where the band boundary sits, as a fraction of the tile; a lane's track spacing across it; how far a lamp's hot centre reaches over its lens" }
+        "split": { "type": "number", "minimum": 0, "maximum": 1, "description": "where the band boundary sits, as a fraction of the tile; a lane's track spacing across it; how far a lamp's hot centre reaches over its lens; a grille's diameter over the face" }
       }
     },
     "recolor": {
