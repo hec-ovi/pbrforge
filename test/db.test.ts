@@ -290,6 +290,19 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
+  it('ships roofs as deterministic whole-grid options', () => {
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = db.resolve(`cyberpunk/roof/${tier}`);
+      expect(entry.tiling?.worldSize).toEqual([3, 3]);
+      expect(entry.finish).toBeUndefined();
+      expect(entry.variants.map((variant) => [variant.id, variant.class, variant.resolution])).toEqual([
+        ['plain', 'flat', [512, 512]],
+        ['seam', 'pattern', [512, 512]],
+        ['service-panel', 'pattern', [512, 512]],
+      ]);
+    }
+  });
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');

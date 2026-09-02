@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.22: roofs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, restrained half-metre seams and 1 m service panels. The patterned options are for roof zones that hold whole repeats.
 0.9.21: floor and balcony slabs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, 1.5 m square slabs and a 1 x 0.75 m running bond. The two grids are reserved for zones that hold whole repeats. Flat-source entries no longer retain photographed-finish metadata.
 0.9.20: ceilings lead with smooth dark paint at constant matte roughness and flat normals. The optional second variant keeps a restrained 0.5 m inset panel grid for rooms whose geometry provides a fitted border.
 0.9.19: signage is a dark non-emissive casing and backing plate on a 0.5 m flat tile. The separate letter atlas supplies the light, so a modular sign keeps a visible housing instead of turning its whole plate into a glowing sheet.

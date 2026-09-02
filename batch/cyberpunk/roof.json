@@ -2,89 +2,121 @@
   {
     "key": "cyberpunk/roof/poor",
     "alignment": "tile",
-    "description": "weathered asphalt roll roofing surface seen straight from above, faded black, fine mineral granules, small tar patch repairs",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.95,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.25,
-      "relief": 2
-    },
-    "variants": 2
+    "description": "plain charcoal bitumen roof deck",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.84, "metallicFactor": 0 },
+    "variantId": "plain",
+    "flatColor": "#3b3d3d",
+    "flatNoise": 0,
+    "resolution": [512, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/roof/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "bitumen roofing courses with restrained lap seams",
+    "variantId": "seam",
+    "resolution": [512, 512],
+    "pattern": { "kind": "stripe", "colors": ["#414342", "#343636"], "cells": [1, 6], "axis": "y", "split": 0.94, "line": 0.018, "depth": 0.10, "joint": 0.25, "variation": 0.015, "grain": 0 }
+  },
+  {
+    "key": "cyberpunk/roof/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "large service roof panels on a fitted grid",
+    "variantId": "service-panel",
+    "resolution": [512, 512],
+    "pattern": { "kind": "panel-grid", "colors": ["#404241"], "cells": [3, 3], "line": 0.02, "bevel": 0.012, "depth": 0.11, "joint": 0.26, "variation": 0.018, "grain": 0 }
   },
   {
     "key": "cyberpunk/roof/mid",
     "alignment": "tile",
-    "description": "grey asphalt roofing surface seen straight from above, even fine granular texture, light weathering",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.85,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "grain": 0.2,
-      "relief": 2
-    },
-    "variants": 2
+    "description": "plain graphite roof membrane",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.76, "metallicFactor": 0 },
+    "variantId": "plain",
+    "flatColor": "#454849",
+    "flatNoise": 0,
+    "resolution": [512, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/roof/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "graphite membrane courses with restrained lap seams",
+    "variantId": "seam",
+    "resolution": [512, 512],
+    "pattern": { "kind": "stripe", "colors": ["#4c4f50", "#3d4041"], "cells": [1, 6], "axis": "y", "split": 0.95, "line": 0.016, "depth": 0.09, "joint": 0.23, "variation": 0.012, "grain": 0 }
+  },
+  {
+    "key": "cyberpunk/roof/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "large graphite service roof panels on a fitted grid",
+    "variantId": "service-panel",
+    "resolution": [512, 512],
+    "pattern": { "kind": "panel-grid", "colors": ["#484b4c"], "cells": [3, 3], "line": 0.018, "bevel": 0.011, "depth": 0.10, "joint": 0.23, "variation": 0.014, "grain": 0 }
   },
   {
     "key": "cyberpunk/roof/rich",
     "alignment": "tile",
-    "description": "dark zinc metal roofing surface seen straight from above, even matte finish, faint parallel seam lines",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "roughness": [
-        0.5,
-        0.6
-      ],
-      "grain": 0.15,
-      "relief": 1.6
-    },
-    "variants": 2
+    "description": "plain dark zinc roof sheet",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.62, "metallicFactor": 1 },
+    "variantId": "plain",
+    "flatColor": "#3e4448",
+    "flatNoise": 0,
+    "resolution": [512, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/roof/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "dark zinc standing seams at half-metre spacing",
+    "variantId": "seam",
+    "resolution": [512, 512],
+    "pattern": { "kind": "stripe", "colors": ["#464d51", "#343a3e"], "cells": [6, 1], "axis": "x", "split": 0.94, "line": 0.014, "depth": 0.10, "joint": 0.20, "variation": 0.01, "grain": 0 }
+  },
+  {
+    "key": "cyberpunk/roof/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "large dark zinc service roof panels on a fitted grid",
+    "variantId": "service-panel",
+    "resolution": [512, 512],
+    "pattern": { "kind": "panel-grid", "colors": ["#43494d"], "cells": [3, 3], "line": 0.016, "bevel": 0.01, "depth": 0.09, "joint": 0.20, "variation": 0.012, "grain": 0 }
   },
   {
     "key": "cyberpunk/roof/high_rich",
     "alignment": "tile",
-    "description": "clean smooth dark grey rooftop surface seen straight from above, even matte finish, faint hairline seams",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "roughness": [
-        0.5,
-        0.6
-      ],
-      "grain": 0.1,
-      "relief": 1.2
-    },
-    "variants": 2
+    "description": "plain near-black roof membrane",
+    "tiling": { "worldSize": [3, 3] },
+    "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
+    "variantId": "plain",
+    "flatColor": "#272c30",
+    "flatNoise": 0,
+    "resolution": [512, 512],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/roof/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "near-black membrane courses with hairline lap seams",
+    "variantId": "seam",
+    "resolution": [512, 512],
+    "pattern": { "kind": "stripe", "colors": ["#2d3337", "#202529"], "cells": [1, 6], "axis": "y", "split": 0.96, "line": 0.012, "depth": 0.07, "joint": 0.18, "variation": 0.008, "grain": 0 }
+  },
+  {
+    "key": "cyberpunk/roof/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "large near-black service roof panels on a fitted grid",
+    "variantId": "service-panel",
+    "resolution": [512, 512],
+    "pattern": { "kind": "panel-grid", "colors": ["#2b3034"], "cells": [3, 3], "line": 0.014, "bevel": 0.009, "depth": 0.07, "joint": 0.18, "variation": 0.008, "grain": 0 }
   }
 ]
