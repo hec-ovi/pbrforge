@@ -2,97 +2,89 @@
   {
     "key": "cyberpunk/metal/poor",
     "alignment": "tile",
-    "description": "scuffed galvanized steel surface, dull grey, faint oxidation haze",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.7,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "roughness": [
-        0.65,
-        0.75
-      ],
-      "grain": 0.05,
-      "relief": 1
-    },
-    "variants": 2
+    "description": "weathered charcoal painted steel, even matte finish",
+    "tiling": { "worldSize": [1, 1] },
+    "physical": { "roughnessFactor": 0.76, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#35383a",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/metal/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "dull zinc service steel, even matte finish",
+    "variantId": "zinc",
+    "flatColor": "#777a79",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/metal/mid",
     "alignment": "tile",
-    "description": "brushed aluminium surface with fine horizontal grain, even medium grey",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.6,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "roughness": [
-        0.55,
-        0.65
-      ],
-      "grain": 0.05,
-      "relief": 1
-    },
-    "variants": 2
+    "description": "dark graphite painted steel, even matte finish",
+    "tiling": { "worldSize": [1, 1] },
+    "physical": { "roughnessFactor": 0.68, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#303438",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/metal/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "cool galvanized service steel, even matte finish",
+    "variantId": "zinc",
+    "flatColor": "#858b8e",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/metal/rich",
     "alignment": "tile",
-    "description": "brushed stainless steel surface with fine grain, clean charcoal",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.55,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "roughness": [
-        0.5,
-        0.6
-      ],
-      "grain": 0.05,
-      "relief": 0.8
-    },
-    "variants": 2
+    "description": "clean charcoal painted steel, even satin-matte finish",
+    "tiling": { "worldSize": [1, 1] },
+    "physical": { "roughnessFactor": 0.60, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#292d31",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/metal/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "clean neutral service steel, even satin-matte finish",
+    "variantId": "zinc",
+    "flatColor": "#92989b",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   },
   {
     "key": "cyberpunk/metal/high_rich",
     "alignment": "tile",
-    "description": "matte black powder-coated metal surface, flawless satin finish",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
-    },
-    "finish": {
-      "roughness": [
-        0.46,
-        0.56
-      ],
-      "grain": 0.05,
-      "relief": 0.8
-    },
-    "variants": 2
+    "description": "black powder-coated steel, even satin-matte finish",
+    "tiling": { "worldSize": [1, 1] },
+    "physical": { "roughnessFactor": 0.54, "metallicFactor": 1 },
+    "variantId": "paint",
+    "flatColor": "#202429",
+    "flatNoise": 0,
+    "resolution": [256, 256],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/metal/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "clean pale service steel, even satin-matte finish",
+    "variantId": "zinc",
+    "flatColor": "#a2a8aa",
+    "flatNoise": 0,
+    "resolution": [256, 256]
   }
 ]

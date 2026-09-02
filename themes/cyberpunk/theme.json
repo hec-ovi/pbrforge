@@ -4592,49 +4592,51 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.7,
+        "roughnessFactor": 0.76,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.71,
+          0.81
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/metal/poor/1/basecolor.png",
-            "normal": "assets/metal/poor/1/normal.png",
-            "roughness": "assets/metal/poor/1/roughness.png",
-            "metallic": "assets/metal/poor/1/metallic.png",
-            "height": "assets/metal/poor/1/height.png",
-            "ao": "assets/metal/poor/1/ao.png"
+            "basecolor": "assets/metal/poor/paint/basecolor.png",
+            "normal": "assets/metal/poor/paint/normal.png",
+            "roughness": "assets/metal/poor/paint/roughness.png",
+            "metallic": "assets/metal/poor/paint/metallic.png",
+            "height": "assets/metal/poor/paint/height.png",
+            "ao": "assets/metal/poor/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/metal/poor/2/basecolor.png",
-            "normal": "assets/metal/poor/2/normal.png",
-            "roughness": "assets/metal/poor/2/roughness.png",
-            "metallic": "assets/metal/poor/2/metallic.png",
-            "height": "assets/metal/poor/2/height.png",
-            "ao": "assets/metal/poor/2/ao.png"
+            "basecolor": "assets/metal/poor/zinc/basecolor.png",
+            "normal": "assets/metal/poor/zinc/normal.png",
+            "roughness": "assets/metal/poor/zinc/roughness.png",
+            "metallic": "assets/metal/poor/zinc/metallic.png",
+            "height": "assets/metal/poor/zinc/height.png",
+            "ao": "assets/metal/poor/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.65,
-          0.75
-        ],
-        "grain": 0.05,
-        "relief": 1
-      }
+      ]
     },
     "cyberpunk/metal/mid": {
       "key": "cyberpunk/metal/mid",
@@ -4646,49 +4648,51 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
+        "roughnessFactor": 0.68,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.63,
+          0.73
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/metal/mid/1/basecolor.png",
-            "normal": "assets/metal/mid/1/normal.png",
-            "roughness": "assets/metal/mid/1/roughness.png",
-            "metallic": "assets/metal/mid/1/metallic.png",
-            "height": "assets/metal/mid/1/height.png",
-            "ao": "assets/metal/mid/1/ao.png"
+            "basecolor": "assets/metal/mid/paint/basecolor.png",
+            "normal": "assets/metal/mid/paint/normal.png",
+            "roughness": "assets/metal/mid/paint/roughness.png",
+            "metallic": "assets/metal/mid/paint/metallic.png",
+            "height": "assets/metal/mid/paint/height.png",
+            "ao": "assets/metal/mid/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/metal/mid/2/basecolor.png",
-            "normal": "assets/metal/mid/2/normal.png",
-            "roughness": "assets/metal/mid/2/roughness.png",
-            "metallic": "assets/metal/mid/2/metallic.png",
-            "height": "assets/metal/mid/2/height.png",
-            "ao": "assets/metal/mid/2/ao.png"
+            "basecolor": "assets/metal/mid/zinc/basecolor.png",
+            "normal": "assets/metal/mid/zinc/normal.png",
+            "roughness": "assets/metal/mid/zinc/roughness.png",
+            "metallic": "assets/metal/mid/zinc/metallic.png",
+            "height": "assets/metal/mid/zinc/height.png",
+            "ao": "assets/metal/mid/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.55,
-          0.65
-        ],
-        "grain": 0.05,
-        "relief": 1
-      }
+      ]
     },
     "cyberpunk/metal/rich": {
       "key": "cyberpunk/metal/rich",
@@ -4700,49 +4704,51 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.55,
+        "roughnessFactor": 0.6,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.65
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/metal/rich/1/basecolor.png",
-            "normal": "assets/metal/rich/1/normal.png",
-            "roughness": "assets/metal/rich/1/roughness.png",
-            "metallic": "assets/metal/rich/1/metallic.png",
-            "height": "assets/metal/rich/1/height.png",
-            "ao": "assets/metal/rich/1/ao.png"
+            "basecolor": "assets/metal/rich/paint/basecolor.png",
+            "normal": "assets/metal/rich/paint/normal.png",
+            "roughness": "assets/metal/rich/paint/roughness.png",
+            "metallic": "assets/metal/rich/paint/metallic.png",
+            "height": "assets/metal/rich/paint/height.png",
+            "ao": "assets/metal/rich/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/metal/rich/2/basecolor.png",
-            "normal": "assets/metal/rich/2/normal.png",
-            "roughness": "assets/metal/rich/2/roughness.png",
-            "metallic": "assets/metal/rich/2/metallic.png",
-            "height": "assets/metal/rich/2/height.png",
-            "ao": "assets/metal/rich/2/ao.png"
+            "basecolor": "assets/metal/rich/zinc/basecolor.png",
+            "normal": "assets/metal/rich/zinc/normal.png",
+            "roughness": "assets/metal/rich/zinc/roughness.png",
+            "metallic": "assets/metal/rich/zinc/metallic.png",
+            "height": "assets/metal/rich/zinc/height.png",
+            "ao": "assets/metal/rich/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.5,
-          0.6
-        ],
-        "grain": 0.05,
-        "relief": 0.8
-      }
+      ]
     },
     "cyberpunk/metal/high_rich": {
       "key": "cyberpunk/metal/high_rich",
@@ -4754,49 +4760,51 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
+        "roughnessFactor": 0.54,
         "metallicFactor": 1
+      },
+      "finish": {
+        "roughness": [
+          0.49,
+          0.59
+        ],
+        "grain": 0.2,
+        "relief": 2
       },
       "variants": [
         {
-          "id": "1",
+          "id": "paint",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/metal/high_rich/1/basecolor.png",
-            "normal": "assets/metal/high_rich/1/normal.png",
-            "roughness": "assets/metal/high_rich/1/roughness.png",
-            "metallic": "assets/metal/high_rich/1/metallic.png",
-            "height": "assets/metal/high_rich/1/height.png",
-            "ao": "assets/metal/high_rich/1/ao.png"
+            "basecolor": "assets/metal/high_rich/paint/basecolor.png",
+            "normal": "assets/metal/high_rich/paint/normal.png",
+            "roughness": "assets/metal/high_rich/paint/roughness.png",
+            "metallic": "assets/metal/high_rich/paint/metallic.png",
+            "height": "assets/metal/high_rich/paint/height.png",
+            "ao": "assets/metal/high_rich/paint/ao.png"
           }
         },
         {
-          "id": "2",
+          "id": "zinc",
+          "class": "flat",
           "resolution": [
-            1024,
-            1024
+            256,
+            256
           ],
           "maps": {
-            "basecolor": "assets/metal/high_rich/2/basecolor.png",
-            "normal": "assets/metal/high_rich/2/normal.png",
-            "roughness": "assets/metal/high_rich/2/roughness.png",
-            "metallic": "assets/metal/high_rich/2/metallic.png",
-            "height": "assets/metal/high_rich/2/height.png",
-            "ao": "assets/metal/high_rich/2/ao.png"
+            "basecolor": "assets/metal/high_rich/zinc/basecolor.png",
+            "normal": "assets/metal/high_rich/zinc/normal.png",
+            "roughness": "assets/metal/high_rich/zinc/roughness.png",
+            "metallic": "assets/metal/high_rich/zinc/metallic.png",
+            "height": "assets/metal/high_rich/zinc/height.png",
+            "ao": "assets/metal/high_rich/zinc/ao.png"
           }
         }
-      ],
-      "finish": {
-        "roughness": [
-          0.46,
-          0.56
-        ],
-        "grain": 0.05,
-        "relief": 0.8
-      }
+      ]
     },
     "cyberpunk/fabric/poor": {
       "key": "cyberpunk/fabric/poor",

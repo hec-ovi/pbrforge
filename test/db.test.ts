@@ -131,13 +131,14 @@ describe('shipped cyberpunk coverage', () => {
     expect(missing).toEqual([]);
   });
 
-  it('ships frames, doors, trim and columns as one even tone: no drift, flat normal, constant roughness', async () => {
+  it('ships frames, doors, trim, columns and service metal without texture noise', async () => {
     const themeDir = db.themeDir('cyberpunk');
     const steel: Record<string, { id: string; metallic: number }> = {
       'window-frame': { id: 'paint', metallic: 1 },
       door: { id: 'paint', metallic: 1 },
       'wall-trim': { id: 'paint', metallic: 1 },
       column: { id: 'plain', metallic: 0 },
+      metal: { id: 'paint', metallic: 1 },
     };
     for (const [kind, { id, metallic }] of Object.entries(steel)) {
       for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
@@ -157,6 +158,7 @@ describe('shipped cyberpunk coverage', () => {
           expect(entry.variants.map((variant) => variant.id)).toEqual(['plain', 'warm']);
           expect(lead.resolution).toEqual([256, 512]);
         }
+        if (kind === 'metal') expect(entry.variants.map((variant) => variant.id)).toEqual(['paint', 'zinc']);
       }
     }
   });
@@ -212,7 +214,7 @@ describe('shipped cyberpunk coverage', () => {
 
   it('ships the steel kinds off the grain ramp, so a photograph of steel does not come back as speckle', () => {
     const offences: string[] = [];
-    for (const kind of ['metal', 'elevator_door', 'fire-escape', 'roof-artifact']) {
+    for (const kind of ['elevator_door', 'fire-escape', 'roof-artifact']) {
       for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
         const finish = db.resolve(`cyberpunk/${kind}/${tier}`).finish;
         if (finish?.grain !== 0.05) offences.push(`${kind}/${tier} grain ${finish?.grain}`);
