@@ -94,9 +94,9 @@
             "description": "a slug, or a namespaced one: brand:<slug> is a rebranded screen"
           },
           "class": {
-            "enum": ["image", "pattern"],
+            "enum": ["image", "pattern", "flat"],
             "default": "image",
-            "description": "how the maps were made; consumers read them the same way either way"
+            "description": "how the maps were made: image source, drawn pattern, or synthesized flat field; consumers read them the same way"
           },
           "resolution": {
             "type": "array",

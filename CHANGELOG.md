@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.12: synthesized flat materials carry `class: flat` in the index, distinct from photographed sources and drawn patterns. Consumers still bind the same map set.
 0.9.11: light fixtures read as lamps at the size a facade samples them. The wall pack gains a 26 mm housing around a lens whose hot centre falls off inside it, the panel is an even diffuser vignetting into an 18 mm frame, the strip stays one uniform diffuser, and emissive strength drops to 1.2, so a fixture renders its falloff instead of clipping: the face went from 77 to 100 percent blown out to under a fifth, with about half of it carrying the gradient. A test over the shipped database holds every fixture off the clip.
 0.9.10: the shipped library carries only the sample business. A world's brands are written into that world's copy of the theme folder (`--themes <dir>`); local brand maps stay out of the repo, and a test holds every map the index references to what is in the repo, so a fresh clone resolves every key.
 0.9.9: an empty business list is valid input to the rebrand lane. A world with no advertising parcel exports an empty export, the lane brands nothing and returns an empty result, and the CLI says so.

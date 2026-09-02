@@ -38,7 +38,7 @@ export interface ScreenShown extends Display {
 export interface Variant {
   id: string;
   /** How the maps were made. Consumers read the maps the same way either way. */
-  class?: 'image' | 'pattern';
+  class?: 'image' | 'pattern' | 'flat';
   resolution: [number, number];
   maps: Partial<Record<MapName, string>> & { basecolor: string; normal: string; roughness: string; metallic: string };
   /** Present on a screen variant painted by the create lane; a brand variant derives from one of these. */

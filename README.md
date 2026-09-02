@@ -23,7 +23,7 @@ npm test
 
 - `resolve(key)` returns the entry for a key or one of its aliases.
 - `list(filter?)` returns matching keys, sorted and deterministic.
-- `create(request)` generates a full map set, verifies its seams and writes it. The request (`schema/create-request.schema.json`) names the theme, kind, tier, prompt material and options. Basecolor comes from ComfyUI, from a drawn pattern, from a tint of a variant already in the entry, or is synthesized from `flatColor` (glass, plain colors); normal, roughness, metallic, height and AO always derive in-box. `append` adds a variant to an entry that exists instead of writing a new one, and `canonical` puts it first.
+- `create(request)` generates a full map set, verifies its seams and writes it. The request (`schema/create-request.schema.json`) names the theme, kind, tier, prompt material and options. Basecolor comes from ComfyUI, from a drawn pattern, from a tint of a variant already in the entry, or is synthesized from `flatColor` (glass, plain colors); normal, roughness, metallic, height and AO always derive in-box. `append` adds a variant to an entry that exists instead of writing a new one, and `canonical` puts it first. Variants record whether their source was an image, a pattern or a flat field.
 - `refinish(request)` re-reads the relief, gloss and metallic maps of a family already in the database from its stored basecolor, under a stated finish and factors.
 - `rebrand(request)` writes a `brand:<slug>` variant of the landscape and the portrait screen of a business's tier, its name spelled from the letter atlas over artwork already in the database. No render.
 

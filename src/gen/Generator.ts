@@ -248,7 +248,7 @@ export class Generator {
     }
     return {
       id,
-      ...(request.pattern ? { class: 'pattern' as const } : {}),
+      ...(request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
       resolution: [source.basecolor.width, source.basecolor.height],
       maps,
       ...(source.screen ? { screen: await this.keepArtwork(source.screen, absDir, relDir) } : {}),

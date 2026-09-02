@@ -241,6 +241,7 @@ describe('create contract', () => {
       flatColor: '#d8ddd8',
       emission: 'none',
     });
+    expect(entry.variants[0].class).toBe('flat');
     expect(entry.variants[0].maps.basecolor).toBeDefined();
     expect(existsSync(join(themesDir, 'cyberpunk', entry.variants[0].maps.basecolor))).toBe(true);
   });
