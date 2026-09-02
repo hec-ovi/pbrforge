@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.20: ceilings lead with smooth dark paint at constant matte roughness and flat normals. The optional second variant keeps a restrained 0.5 m inset panel grid for rooms whose geometry provides a fitted border.
 0.9.19: signage is a dark non-emissive casing and backing plate on a 0.5 m flat tile. The separate letter atlas supplies the light, so a modular sign keeps a visible housing instead of turning its whole plate into a glowing sheet.
 0.9.18: curtains are deterministic 1.5 x 3 m bay materials at 384 x 768 px: twelve shallow vertical blind slats or a plain blackout shade. Both keep equal texel density and avoid photographed weave noise behind glass.
 0.9.17: elevator doors are exact 1:2 procedural faces at 512 x 1024 px. Each tier carries two matte steel tones with a fitted center seam, replacing photographs whose aspect did not match the placement face.

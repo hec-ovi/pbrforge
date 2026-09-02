@@ -260,6 +260,22 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
+  it('leads ceilings with smooth dark matte paint', async () => {
+    const themeDir = db.themeDir('cyberpunk');
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = db.resolve(`cyberpunk/ceiling/${tier}`);
+      const plain = entry.variants[0];
+      expect(plain.id).toBe('plain');
+      expect(plain.class).toBe('flat');
+      expect(entry.physical.roughnessFactor).toBeGreaterThanOrEqual(0.58);
+      expect(entry.physical.roughnessFactor).toBeLessThanOrEqual(0.70);
+      const base = await sharp(join(themeDir, plain.maps.basecolor)).stats();
+      expect(Math.max(...base.channels.slice(0, 3).map((channel) => channel.max))).toBeLessThan(70);
+      const normal = await sharp(join(themeDir, plain.maps.normal)).raw().toBuffer();
+      expect(new Set(normal).size).toBe(2);
+    }
+  });
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');

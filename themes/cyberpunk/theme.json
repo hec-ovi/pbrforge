@@ -7145,13 +7145,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.9,
+        "roughnessFactor": 0.7,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "plain",
-          "class": "pattern",
+          "class": "flat",
           "resolution": [
             512,
             512
@@ -7193,13 +7193,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.85,
+        "roughnessFactor": 0.66,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "plain",
-          "class": "pattern",
+          "class": "flat",
           "resolution": [
             512,
             512
@@ -7241,13 +7241,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.8,
+        "roughnessFactor": 0.62,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "plain",
-          "class": "pattern",
+          "class": "flat",
           "resolution": [
             512,
             512
@@ -7289,13 +7289,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.75,
+        "roughnessFactor": 0.58,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "plain",
-          "class": "pattern",
+          "class": "flat",
           "resolution": [
             512,
             512

@@ -2,249 +2,89 @@
   {
     "key": "cyberpunk/ceiling/poor",
     "alignment": "tile",
-    "description": "ceiling panels with fine seams",
-    "tiling": {
-      "worldSize": [
-        2.0,
-        2.0
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.9,
-      "metallicFactor": 0
-    },
+    "description": "dark service ceiling panels with restrained inset seams",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.70, "metallicFactor": 0 },
     "variantId": "panel",
-    "resolution": [
-      512,
-      512
-    ],
-    "pattern": {
-      "kind": "panel-grid",
-      "colors": [
-        "#8e8c86"
-      ],
-      "cells": [
-        4,
-        4
-      ],
-      "line": 0.02,
-      "bevel": 0.02,
-      "depth": 0.45,
-      "joint": 0.4,
-      "variation": 0.03,
-      "grain": 0.02
-    }
+    "resolution": [512, 512],
+    "pattern": { "kind": "panel-grid", "colors": ["#34383a"], "cells": [4, 4], "line": 0.02, "bevel": 0.015, "depth": 0.20, "joint": 0.25, "variation": 0.01, "grain": 0 },
+    "overwrite": true
   },
   {
     "key": "cyberpunk/ceiling/poor",
     "alignment": "tile",
     "append": true,
+    "canonical": true,
+    "description": "smooth dark service ceiling paint",
     "variantId": "plain",
-    "description": "plain sheet ceiling with faint tonal drift",
-    "resolution": [
-      512,
-      512
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#8e8c86",
-        "#9c9a93"
-      ],
-      "cells": [
-        8,
-        8
-      ],
-      "octaves": 2,
-      "depth": 0.15,
-      "grain": 0.02
-    },
-    "canonical": true
+    "resolution": [512, 512],
+    "flatColor": "#303437",
+    "flatNoise": 0
   },
   {
     "key": "cyberpunk/ceiling/mid",
     "alignment": "tile",
-    "description": "ceiling panels with fine seams",
-    "tiling": {
-      "worldSize": [
-        2.0,
-        2.0
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.85,
-      "metallicFactor": 0
-    },
+    "description": "charcoal ceiling panels with restrained inset seams",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.66, "metallicFactor": 0 },
     "variantId": "panel",
-    "resolution": [
-      512,
-      512
-    ],
-    "pattern": {
-      "kind": "panel-grid",
-      "colors": [
-        "#b0b3b3"
-      ],
-      "cells": [
-        4,
-        4
-      ],
-      "line": 0.02,
-      "bevel": 0.02,
-      "depth": 0.45,
-      "joint": 0.4,
-      "variation": 0.03,
-      "grain": 0.02
-    }
+    "resolution": [512, 512],
+    "pattern": { "kind": "panel-grid", "colors": ["#3a4145"], "cells": [4, 4], "line": 0.02, "bevel": 0.015, "depth": 0.18, "joint": 0.23, "variation": 0.01, "grain": 0 },
+    "overwrite": true
   },
   {
     "key": "cyberpunk/ceiling/mid",
     "alignment": "tile",
     "append": true,
+    "canonical": true,
+    "description": "smooth charcoal ceiling paint",
     "variantId": "plain",
-    "description": "plain sheet ceiling with faint tonal drift",
-    "resolution": [
-      512,
-      512
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#b0b3b3",
-        "#bcbfbf"
-      ],
-      "cells": [
-        8,
-        8
-      ],
-      "octaves": 2,
-      "depth": 0.15,
-      "grain": 0.02
-    },
-    "canonical": true
+    "resolution": [512, 512],
+    "flatColor": "#343b3f",
+    "flatNoise": 0
   },
   {
     "key": "cyberpunk/ceiling/rich",
     "alignment": "tile",
-    "description": "ceiling panels with fine seams",
-    "tiling": {
-      "worldSize": [
-        2.0,
-        2.0
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.8,
-      "metallicFactor": 0
-    },
+    "description": "dark blue-grey ceiling panels with restrained inset seams",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.62, "metallicFactor": 0 },
     "variantId": "panel",
-    "resolution": [
-      512,
-      512
-    ],
-    "pattern": {
-      "kind": "panel-grid",
-      "colors": [
-        "#c6c9c9"
-      ],
-      "cells": [
-        4,
-        4
-      ],
-      "line": 0.02,
-      "bevel": 0.02,
-      "depth": 0.45,
-      "joint": 0.4,
-      "variation": 0.03,
-      "grain": 0.02
-    }
+    "resolution": [512, 512],
+    "pattern": { "kind": "panel-grid", "colors": ["#303a43"], "cells": [4, 4], "line": 0.018, "bevel": 0.014, "depth": 0.16, "joint": 0.21, "variation": 0.008, "grain": 0 },
+    "overwrite": true
   },
   {
     "key": "cyberpunk/ceiling/rich",
     "alignment": "tile",
     "append": true,
+    "canonical": true,
+    "description": "smooth dark blue-grey ceiling paint",
     "variantId": "plain",
-    "description": "plain sheet ceiling with faint tonal drift",
-    "resolution": [
-      512,
-      512
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#c6c9c9",
-        "#d2d5d5"
-      ],
-      "cells": [
-        8,
-        8
-      ],
-      "octaves": 2,
-      "depth": 0.15,
-      "grain": 0.02
-    },
-    "canonical": true
+    "resolution": [512, 512],
+    "flatColor": "#2b353e",
+    "flatNoise": 0
   },
   {
     "key": "cyberpunk/ceiling/high_rich",
     "alignment": "tile",
-    "description": "ceiling panels with fine seams",
-    "tiling": {
-      "worldSize": [
-        2.0,
-        2.0
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.75,
-      "metallicFactor": 0
-    },
+    "description": "near-black ceiling panels with restrained inset seams",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
     "variantId": "panel",
-    "resolution": [
-      512,
-      512
-    ],
-    "pattern": {
-      "kind": "panel-grid",
-      "colors": [
-        "#d9dcdd"
-      ],
-      "cells": [
-        4,
-        4
-      ],
-      "line": 0.02,
-      "bevel": 0.02,
-      "depth": 0.45,
-      "joint": 0.4,
-      "variation": 0.03,
-      "grain": 0.02
-    }
+    "resolution": [512, 512],
+    "pattern": { "kind": "panel-grid", "colors": ["#252d36"], "cells": [4, 4], "line": 0.016, "bevel": 0.012, "depth": 0.14, "joint": 0.20, "variation": 0.006, "grain": 0 },
+    "overwrite": true
   },
   {
     "key": "cyberpunk/ceiling/high_rich",
     "alignment": "tile",
     "append": true,
+    "canonical": true,
+    "description": "smooth near-black ceiling paint",
     "variantId": "plain",
-    "description": "plain sheet ceiling with faint tonal drift",
-    "resolution": [
-      512,
-      512
-    ],
-    "pattern": {
-      "kind": "noise",
-      "colors": [
-        "#d9dcdd",
-        "#e4e7e8"
-      ],
-      "cells": [
-        8,
-        8
-      ],
-      "octaves": 2,
-      "depth": 0.15,
-      "grain": 0.02
-    },
-    "canonical": true
+    "resolution": [512, 512],
+    "flatColor": "#202832",
+    "flatNoise": 0
   }
 ]
