@@ -22,7 +22,9 @@ const themesDir = option('themes') ?? join(dirname(fileURLToPath(import.meta.url
 const businesses = JSON.parse(readFileSync(file, 'utf8')) as Business[];
 
 try {
-  for (const { key, variantId, from, lines } of await new Rebrander(new Database(themesDir)).rebrand({ theme, businesses })) {
+  const branded = await new Rebrander(new Database(themesDir)).rebrand({ theme, businesses });
+  if (!branded.length) console.log('no businesses to brand');
+  for (const { key, variantId, from, lines } of branded) {
     console.log(`branded ${key}#${variantId} over ${from} (${lines} line${lines > 1 ? 's' : ''})`);
   }
 } catch (e) {

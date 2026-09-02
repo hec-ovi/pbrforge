@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.9: an empty business list is valid input to the rebrand lane. A world with no advertising parcel exports an empty export, the lane brands nothing and returns an empty result, and the CLI says so.
 0.9.8: roof and floor-slab lead with a solid `plain` deck, tonal variation only, so a roof or a floor whose face is not a whole number of tiles shows no cut joint; the photographed courses and slabs stay behind it. A test over the shipped database holds every flat-face kind (concrete, plaster, ceiling, roof, floor-slab) leading with a joint-free basecolor.
 0.9.7: the steel kinds leave the grain ramp. metal, elevator_door, fire-escape and roof-artifact carry grain 0.05 and relief at most 1 at every tier, so a lamp lands on the panel and its seams instead of the film grain between them; wood and floor-slab lose most of their grain on the two finished tiers, floor-slab sitting rougher with it (0.67 and 0.63).
 0.9.6: the contract states the frame steel as shipped: window-frame, door and wall-trim one flat near-black steel (metallic 1, constant roughness 0.5, flat normal, no drift), column honed stone, and a test over the shipped database holds every tier there.

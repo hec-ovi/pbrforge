@@ -126,7 +126,7 @@ A business of the named world gets its own screens. `rebrand({ theme, businesses
 - A brand variant shares the base variant's surface maps (basecolor, relief, gloss) and carries its own emission. The base variants and their files stay untouched, and rerunning the same list replaces the same variants with the same maps.
 - `ad-screen-tall` is one entry across tiers, so a business's tall variant lands on that entry whichever tier it states, spelled in its own tier's look.
 
-Errors, thrown before anything is written: a business kind outside the parcel types, a name with a character outside the atlas charset after uppercasing, or a name with no letter or digit to make a slug of is `E_SCHEMA`; a tier with no `ad-screen`, `ad-screen-tall` or `letter-atlas` entry, or an entry with no screen variant behind it, is `E_KEY_NOT_FOUND`.
+An empty list is valid input: a world with no advertising parcel brands nothing and the lane returns an empty result. Errors, thrown before anything is written: a business kind outside the parcel types, a name with a character outside the atlas charset after uppercasing, or a name with no letter or digit to make a slug of is `E_SCHEMA`; a tier with no `ad-screen`, `ad-screen-tall` or `letter-atlas` entry, or an entry with no screen variant behind it, is `E_KEY_NOT_FOUND`.
 
 `batch/cyberpunk/businesses.json` is the request shape with one business, and its two variants ship in the database.
 

@@ -147,6 +147,14 @@ describe('rebrand contract', () => {
     expect(readFileSync(file(wide, 'brand:the-grand-meridian-hotel', 'emission')).equals(first)).toBe(true);
   });
 
+  it('takes an empty list from a world with no advertising parcel and brands nothing', () => {
+    const before = db.resolve('cyberpunk/ad-screen/rich').variants.map((v) => v.id);
+    const run = rebrand([]);
+    expect(run.status, run.stderr).toBe(0);
+    expect(run.stdout).toContain('no businesses to brand');
+    expect(db.resolve('cyberpunk/ad-screen/rich').variants.map((v) => v.id)).toEqual(before);
+  });
+
   it('rejects a business kind outside the parcel types with E_SCHEMA', () => {
     const run = rebrand([{ brandName: 'Kiro', businessKind: 'bar' as Business['businessKind'], tier: 'rich' }]);
     expect(run.status).toBe(1);
