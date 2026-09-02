@@ -3,7 +3,7 @@
     "key": "cyberpunk/wall/poor",
     "alignment": "tile",
     "append": true,
-    "description": "ochre painted precast panels, half a metre square, chamfered seams, tonal variation only",
+    "description": "ochre painted precast panels, one metre by half, chamfered seams, tonal variation only",
     "variantId": "panel-ochre",
     "resolution": [
       1024,
@@ -15,7 +15,7 @@
         "#7a5533"
       ],
       "cells": [
-        6,
+        3,
         6
       ],
       "line": 0.02,
@@ -30,7 +30,7 @@
     "key": "cyberpunk/wall/mid",
     "alignment": "tile",
     "append": true,
-    "description": "ochre painted precast panels, half a metre square, chamfered seams, tonal variation only",
+    "description": "ochre painted precast panels, one metre by half, chamfered seams, tonal variation only",
     "variantId": "panel-ochre",
     "resolution": [
       1024,
@@ -42,7 +42,7 @@
         "#8c6239"
       ],
       "cells": [
-        6,
+        3,
         6
       ],
       "line": 0.02,
@@ -57,7 +57,7 @@
     "key": "cyberpunk/wall/rich",
     "alignment": "tile",
     "append": true,
-    "description": "ochre painted precast panels, half a metre square, chamfered seams, tonal variation only",
+    "description": "ochre painted precast panels, one metre by half, chamfered seams, tonal variation only",
     "variantId": "panel-ochre",
     "resolution": [
       1024,
@@ -69,7 +69,7 @@
         "#996b3e"
       ],
       "cells": [
-        6,
+        3,
         6
       ],
       "line": 0.02,
@@ -84,7 +84,7 @@
     "key": "cyberpunk/wall/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "ochre painted precast panels, half a metre square, chamfered seams, tonal variation only",
+    "description": "ochre painted precast panels, one metre by half, chamfered seams, tonal variation only",
     "variantId": "panel-ochre",
     "resolution": [
       1024,
@@ -96,7 +96,7 @@
         "#8f6238"
       ],
       "cells": [
-        6,
+        3,
         6
       ],
       "line": 0.02,
