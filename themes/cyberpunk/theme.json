@@ -6132,7 +6132,6 @@
         },
         {
           "id": "strip",
-          "class": "pattern",
           "resolution": [
             256,
             448
@@ -6200,7 +6199,6 @@
         },
         {
           "id": "strip",
-          "class": "pattern",
           "resolution": [
             256,
             448
@@ -6268,7 +6266,6 @@
         },
         {
           "id": "strip",
-          "class": "pattern",
           "resolution": [
             256,
             448
@@ -6336,7 +6333,6 @@
         },
         {
           "id": "strip",
-          "class": "pattern",
           "resolution": [
             256,
             448

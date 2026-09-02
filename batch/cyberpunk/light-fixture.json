@@ -38,31 +38,15 @@
     "key": "cyberpunk/light-fixture/poor",
     "alignment": "tile",
     "append": true,
-    "description": "linear luminaire: a diffuser strip along a dark housing",
+    "description": "linear luminaire: one uniform diffuser, the housing is the fixture geometry",
     "emission": "luminance",
     "variantId": "strip",
     "resolution": [
       256,
       448
     ],
-    "pattern": {
-      "kind": "stripe",
-      "colors": [
-        "#fff7e6",
-        "#2a2724"
-      ],
-      "axis": "x",
-      "cells": [
-        1,
-        1
-      ],
-      "split": 0.5,
-      "line": 0.01,
-      "joint": 0.5,
-      "depth": 0.45,
-      "variation": 0.02,
-      "grain": 0.01
-    }
+    "flatColor": "#fff7e6",
+    "flatNoise": 0.015
   },
   {
     "key": "cyberpunk/light-fixture/poor",
@@ -131,31 +115,15 @@
     "key": "cyberpunk/light-fixture/mid",
     "alignment": "tile",
     "append": true,
-    "description": "linear luminaire: a diffuser strip along a dark housing",
+    "description": "linear luminaire: one uniform diffuser, the housing is the fixture geometry",
     "emission": "luminance",
     "variantId": "strip",
     "resolution": [
       256,
       448
     ],
-    "pattern": {
-      "kind": "stripe",
-      "colors": [
-        "#ffffff",
-        "#23262a"
-      ],
-      "axis": "x",
-      "cells": [
-        1,
-        1
-      ],
-      "split": 0.5,
-      "line": 0.01,
-      "joint": 0.5,
-      "depth": 0.45,
-      "variation": 0.02,
-      "grain": 0.01
-    }
+    "flatColor": "#fff7e6",
+    "flatNoise": 0.015
   },
   {
     "key": "cyberpunk/light-fixture/mid",
@@ -224,31 +192,15 @@
     "key": "cyberpunk/light-fixture/rich",
     "alignment": "tile",
     "append": true,
-    "description": "linear luminaire: a diffuser strip along a dark housing",
+    "description": "linear luminaire: one uniform diffuser, the housing is the fixture geometry",
     "emission": "luminance",
     "variantId": "strip",
     "resolution": [
       256,
       448
     ],
-    "pattern": {
-      "kind": "stripe",
-      "colors": [
-        "#ffffff",
-        "#1d2226"
-      ],
-      "axis": "x",
-      "cells": [
-        1,
-        1
-      ],
-      "split": 0.5,
-      "line": 0.01,
-      "joint": 0.5,
-      "depth": 0.45,
-      "variation": 0.02,
-      "grain": 0.01
-    }
+    "flatColor": "#fff7e6",
+    "flatNoise": 0.015
   },
   {
     "key": "cyberpunk/light-fixture/rich",
@@ -317,31 +269,15 @@
     "key": "cyberpunk/light-fixture/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "linear luminaire: a diffuser strip along a dark housing",
+    "description": "linear luminaire: one uniform diffuser, the housing is the fixture geometry",
     "emission": "luminance",
     "variantId": "strip",
     "resolution": [
       256,
       448
     ],
-    "pattern": {
-      "kind": "stripe",
-      "colors": [
-        "#ffffff",
-        "#181c22"
-      ],
-      "axis": "x",
-      "cells": [
-        1,
-        1
-      ],
-      "split": 0.5,
-      "line": 0.01,
-      "joint": 0.5,
-      "depth": 0.45,
-      "variation": 0.02,
-      "grain": 0.01
-    }
+    "flatColor": "#fff7e6",
+    "flatNoise": 0.015
   },
   {
     "key": "cyberpunk/light-fixture/high_rich",
