@@ -1,5 +1,6 @@
 # Changelog
 
+0.9.23: concrete is a four-variant deterministic set at 512 px with restrained relief. The precast panel is 3 x 1.5 m, a 2:1 module matching the facade reference, and the invalid photographed surfaces and derived tints are gone.
 0.9.22: roofs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, restrained half-metre seams and 1 m service panels. The patterned options are for roof zones that hold whole repeats.
 0.9.21: floor and balcony slabs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, 1.5 m square slabs and a 1 x 0.75 m running bond. The two grids are reserved for zones that hold whole repeats. Flat-source entries no longer retain photographed-finish metadata.
 0.9.20: ceilings lead with smooth dark paint at constant matte roughness and flat normals. The optional second variant keeps a restrained 0.5 m inset panel grid for rooms whose geometry provides a fitted border.

@@ -303,6 +303,26 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
+  it('ships restrained deterministic concrete with two-to-one facade panels', async () => {
+    const themeDir = db.themeDir('cyberpunk');
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = db.resolve(`cyberpunk/concrete/${tier}`);
+      expect(entry.tiling?.worldSize).toEqual([3, 3]);
+      expect(entry.finish).toBeUndefined();
+      expect(entry.variants.map((variant) => [variant.id, variant.class, variant.resolution])).toEqual([
+        ['plain', 'pattern', [512, 512]],
+        ['panel', 'pattern', [512, 512]],
+        ['rib', 'pattern', [512, 512]],
+        ['block', 'pattern', [512, 512]],
+      ]);
+
+      const panel = entry.variants[1];
+      const { data, info } = await sharp(join(themeDir, panel.maps.height!)).greyscale().raw().toBuffer({ resolveWithObject: true });
+      const pixel = (x: number, y: number) => data[(y * info.width + x) * info.channels];
+      expect(pixel(256, 256)).toBeLessThan(pixel(256, 128) - 10);
+    }
+  });
+
   it('ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass', async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir('cyberpunk');
