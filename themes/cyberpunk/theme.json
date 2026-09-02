@@ -17,6 +17,22 @@
       },
       "variants": [
         {
+          "id": "panel-ochre",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/poor/panel-ochre/basecolor.png",
+            "normal": "assets/wall/poor/panel-ochre/normal.png",
+            "roughness": "assets/wall/poor/panel-ochre/roughness.png",
+            "metallic": "assets/wall/poor/panel-ochre/metallic.png",
+            "height": "assets/wall/poor/panel-ochre/height.png",
+            "ao": "assets/wall/poor/panel-ochre/ao.png"
+          }
+        },
+        {
           "id": "1",
           "resolution": [
             1024,
@@ -105,22 +121,6 @@
             "height": "assets/wall/poor/4/height.png",
             "ao": "assets/wall/poor/4/ao.png"
           }
-        },
-        {
-          "id": "panel-ochre",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/panel-ochre/basecolor.png",
-            "normal": "assets/wall/poor/panel-ochre/normal.png",
-            "roughness": "assets/wall/poor/panel-ochre/roughness.png",
-            "metallic": "assets/wall/poor/panel-ochre/metallic.png",
-            "height": "assets/wall/poor/panel-ochre/height.png",
-            "ao": "assets/wall/poor/panel-ochre/ao.png"
-          }
         }
       ],
       "aliases": [
@@ -160,6 +160,22 @@
         "relief": 2
       },
       "variants": [
+        {
+          "id": "panel-ochre",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/mid/panel-ochre/basecolor.png",
+            "normal": "assets/wall/mid/panel-ochre/normal.png",
+            "roughness": "assets/wall/mid/panel-ochre/roughness.png",
+            "metallic": "assets/wall/mid/panel-ochre/metallic.png",
+            "height": "assets/wall/mid/panel-ochre/height.png",
+            "ao": "assets/wall/mid/panel-ochre/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -249,22 +265,6 @@
             "height": "assets/wall/mid/4/height.png",
             "ao": "assets/wall/mid/4/ao.png"
           }
-        },
-        {
-          "id": "panel-ochre",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/panel-ochre/basecolor.png",
-            "normal": "assets/wall/mid/panel-ochre/normal.png",
-            "roughness": "assets/wall/mid/panel-ochre/roughness.png",
-            "metallic": "assets/wall/mid/panel-ochre/metallic.png",
-            "height": "assets/wall/mid/panel-ochre/height.png",
-            "ao": "assets/wall/mid/panel-ochre/ao.png"
-          }
         }
       ]
     },
@@ -282,6 +282,22 @@
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "panel-ochre",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/rich/panel-ochre/basecolor.png",
+            "normal": "assets/wall/rich/panel-ochre/normal.png",
+            "roughness": "assets/wall/rich/panel-ochre/roughness.png",
+            "metallic": "assets/wall/rich/panel-ochre/metallic.png",
+            "height": "assets/wall/rich/panel-ochre/height.png",
+            "ao": "assets/wall/rich/panel-ochre/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -371,22 +387,6 @@
             "height": "assets/wall/rich/4/height.png",
             "ao": "assets/wall/rich/4/ao.png"
           }
-        },
-        {
-          "id": "panel-ochre",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/panel-ochre/basecolor.png",
-            "normal": "assets/wall/rich/panel-ochre/normal.png",
-            "roughness": "assets/wall/rich/panel-ochre/roughness.png",
-            "metallic": "assets/wall/rich/panel-ochre/metallic.png",
-            "height": "assets/wall/rich/panel-ochre/height.png",
-            "ao": "assets/wall/rich/panel-ochre/ao.png"
-          }
         }
       ],
       "aliases": [
@@ -415,6 +415,22 @@
         "metallicFactor": 0
       },
       "variants": [
+        {
+          "id": "panel-ochre",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/high_rich/panel-ochre/basecolor.png",
+            "normal": "assets/wall/high_rich/panel-ochre/normal.png",
+            "roughness": "assets/wall/high_rich/panel-ochre/roughness.png",
+            "metallic": "assets/wall/high_rich/panel-ochre/metallic.png",
+            "height": "assets/wall/high_rich/panel-ochre/height.png",
+            "ao": "assets/wall/high_rich/panel-ochre/ao.png"
+          }
+        },
         {
           "id": "1",
           "resolution": [
@@ -503,22 +519,6 @@
             "metallic": "assets/wall/high_rich/4/metallic.png",
             "height": "assets/wall/high_rich/4/height.png",
             "ao": "assets/wall/high_rich/4/ao.png"
-          }
-        },
-        {
-          "id": "panel-ochre",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/panel-ochre/basecolor.png",
-            "normal": "assets/wall/high_rich/panel-ochre/normal.png",
-            "roughness": "assets/wall/high_rich/panel-ochre/roughness.png",
-            "metallic": "assets/wall/high_rich/panel-ochre/metallic.png",
-            "height": "assets/wall/high_rich/panel-ochre/height.png",
-            "ao": "assets/wall/high_rich/panel-ochre/ao.png"
           }
         }
       ],
