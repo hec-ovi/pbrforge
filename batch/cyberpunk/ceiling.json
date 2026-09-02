@@ -5,8 +5,8 @@
     "description": "ceiling panels with fine seams",
     "tiling": {
       "worldSize": [
-        2.4,
-        2.4
+        2.0,
+        2.0
       ]
     },
     "physical": {
@@ -24,8 +24,8 @@
         "#8e8c86"
       ],
       "cells": [
-        2,
-        2
+        4,
+        4
       ],
       "line": 0.02,
       "bevel": 0.02,
@@ -67,8 +67,8 @@
     "description": "ceiling panels with fine seams",
     "tiling": {
       "worldSize": [
-        2.4,
-        2.4
+        2.0,
+        2.0
       ]
     },
     "physical": {
@@ -86,8 +86,8 @@
         "#b0b3b3"
       ],
       "cells": [
-        2,
-        2
+        4,
+        4
       ],
       "line": 0.02,
       "bevel": 0.02,
@@ -129,8 +129,8 @@
     "description": "ceiling panels with fine seams",
     "tiling": {
       "worldSize": [
-        2.4,
-        2.4
+        2.0,
+        2.0
       ]
     },
     "physical": {
@@ -148,8 +148,8 @@
         "#c6c9c9"
       ],
       "cells": [
-        2,
-        2
+        4,
+        4
       ],
       "line": 0.02,
       "bevel": 0.02,
@@ -191,8 +191,8 @@
     "description": "ceiling panels with fine seams",
     "tiling": {
       "worldSize": [
-        2.4,
-        2.4
+        2.0,
+        2.0
       ]
     },
     "physical": {
@@ -210,8 +210,8 @@
         "#d9dcdd"
       ],
       "cells": [
-        2,
-        2
+        4,
+        4
       ],
       "line": 0.02,
       "bevel": 0.02,
