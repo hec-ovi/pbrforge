@@ -59,9 +59,9 @@ A photograph carries its gloss and grain in every pixel. Read straight out, brig
 
 ## Screens
 
-Ad screens invert the usual path. The basecolor is dark display glass and the picture lives in the emission map at high emissive strength. ComfyUI paints each advertisement brandless and flat; the box turns it into a display: the pixel structure of its kind (`led-dot` lattice, `scanline-billboard` bands, `glyph-panel` with no lattice), colour fringing, blown-out hotspots, and the business name stroked in from a built-in alphabet. Because the name never enters the diffusion prompt, rebranding a screen costs no render.
+Ad screens invert the usual path. The basecolor is dark display glass and the picture lives in the emission map. ComfyUI paints each advertisement brandless and flat; the box turns it into a display: the pixel structure of its kind (`led-dot` lattice, `scanline-billboard` bands, `glyph-panel` with no lattice), colour fringing, controlled hotspots, and the business name stroked in from a built-in alphabet. Because the name never enters the diffusion prompt, rebranding a screen costs no render.
 
-A screen can also be painted from a picture that already exists: `imagePath` on a screen names a file. Large sources are fitted locally; undersized sources use the ComfyUI 4x upscale. Both receive the same display treatment.
+A screen can also be painted from a picture that already exists: `imagePath` on a screen names a file. Large sources are fitted locally; undersized sources use the ComfyUI 4x upscale. Both receive the same display treatment. The shipped future-noir plates and their subject-and-style prompts are in [sources/ads-codex/PROMPTS.md](sources/ads-codex/PROMPTS.md).
 
 Every screen keeps the brandless picture it shows beside its maps. That is what the rebrand lane works from: `npm run rebrand` takes the businesses of a named world, a list of `{ brandName, businessKind, tier }` (`batch/cyberpunk/businesses.json` shows the shape), and writes for each one a `brand:<slug>` variant of `ad-screen` and of `ad-screen-tall` at its tier. The name is spelled over the artwork of one of the tier's screens from the letter atlas cells, neon on the poor and mid tiers and backlit panel on the rich ones, centred over the bottom of the picture on one line or broken over two at the space nearest the middle, then shown through the same LED or scanline structure as the screen it came from. Pure image work, no ComfyUI, and the same list writes the same maps every time, so a district renames its screens as often as the world is renamed. A consumer takes the variant by id: `entry.variants.find((v) => v.id === 'brand:kiro-s-clinic')`.
 
@@ -77,4 +77,4 @@ Generation is agentic tooling on top of a plain database. The read path is a pur
 
 ## Consumers
 
-Geometry tools name their glTF materials with the canonical key and let this resolve it: [buildingforge](../buildingforge) writes `theme/kind/tier` onto every facade material, [interiorforge](../interiorforge) bakes the resolved maps into finished interiors, and [urbe](../urbe), a deterministic city sandbox, textures a whole city from one theme folder.
+Geometry tools name their glTF materials with the canonical key and let this resolve it: [Exterior](../exterior) writes `theme/kind/tier` onto every facade material, [Interior](../interior) bakes the resolved maps into finished interiors, and [Urbe](..) textures a whole city from one theme folder.

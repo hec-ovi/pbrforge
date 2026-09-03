@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.15.0. Schema stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.15.1. Schema stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -27,6 +27,8 @@ Screens (`emission: "image"`) turn that around: the basecolor is flat dark displ
 A screen can be painted from a picture that already exists instead: `imagePath` on a `screens[]` entry names a file relative to the box folder. A source large enough to cover the requested resolution is fitted locally. An undersized source goes through the deterministic ComfyUI 4x upscale first. Nothing downstream changes: the same lattice, fringing, hotspots and wordmark run over it, and the diffusion prompt is never built. A path with no file behind it is `E_SCHEMA`.
 
 Every screen variant keeps the brandless picture it shows beside its maps, with the display it is shown on (`screen` on the variant, see Out). That is what the rebrand lane composites a name over.
+
+The shipped future-noir source plates and their subject-and-style prompts live in [sources/ads-codex/PROMPTS.md](sources/ads-codex/PROMPTS.md). Each source is fitted to its published 16:9 or 9:16 face before display structure is applied. In every shipped `noir-cyan` and `noir-amber` emission map, at least 40 percent of pixels stay below 8/255 and fewer than 18 percent clip after the entry's emissive strength is applied.
 
 - `rebrand(request: RebrandRequest): Branded[]` spells the businesses of a named world over the screens of their tier, one `brand:<slug>` variant per business on `ad-screen` and on `ad-screen-tall`, with no render (see Rebrand below).
 
@@ -217,6 +219,7 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 - Structured exterior variants publish their visible module dimensions, joint width, stable origin and orientation in `layout`. Consumers place the tile from that origin instead of restarting UVs on each polygon.
 - All maps of one variant share one resolution and are pixel-aligned with each other. Resolution has the same aspect as the physical tile or exact-placement face within one pixel, so maps are never stretched or rotated. Tile maps are at most 1,048,576 pixels; exact sheets are at most 4096 px on either side and 9,437,184 pixels total. Checked against the files in the shipped database.
 - Every decal is exact, alpha blended, clamped and surface fitted. Its physical world size has the same ratio as its aspect and maps. Its opacity is zero throughout the declared edge inset, so filtering cannot make a floating rectangular border.
+- Every shipped future-noir screen retains its documented source, exact face ratio and display kind. Its emission stays inside the dark-area and clipped-area bounds stated under Screens.
 - A rebrand never touches a base variant or its files: a brand variant points at the base's surface maps and carries its own emission, and the same business list writes the same maps every time.
 - Generation is agentic tooling on top; the database read path and the rebrand lane work standalone with no ComfyUI and no other layer present.
 - Matte floor: every non-emissive entry carries metallic 0 or 1 and no roughness below 0.45 in its factor, its finish band and every pixel of every variant's roughness map, and its metallic map is a constant fill of the factor; glass (transmission above 0) and lit entries (an emission map) are exempt. Checked by a test over the shipped database.
