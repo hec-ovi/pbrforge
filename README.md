@@ -90,4 +90,4 @@ Generation is agentic tooling on top of a plain database. The read path is a pur
 
 ## Consumers
 
-Geometry tools name their glTF materials with the canonical key and let this resolve it: [Exterior](../exterior) writes `theme/kind/tier` onto every facade material, [Interior](../interior) bakes the resolved maps into finished interiors, and [Urbe](..) textures a whole city from one theme folder.
+Geometry tools name their glTF materials with the canonical key and let this resolve it: [Exterior](https://github.com/hec-ovi/buildingforge) writes `theme/kind/tier` onto every facade material, [Interior](https://github.com/hec-ovi/interiorforge) bakes the resolved maps into finished interiors, and [Urbe](https://github.com/hec-ovi/urbe) textures a whole city from one theme folder.
