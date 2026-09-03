@@ -185,11 +185,13 @@ export interface CreateRequest {
 /** The parcel types that advertise: what a business is, for the rebrand lane. */
 export type BusinessKind = 'hotel' | 'commerce' | 'mall' | 'restaurant' | 'coffee_shop' | 'corpo' | 'clinic';
 
+export type Tier = 'poor' | 'mid' | 'rich' | 'high_rich';
+
 /** One establishment of the named world, to be advertised on its own screens. */
 export interface Business {
   brandName: string;
   businessKind: BusinessKind;
-  tier: string;
+  tier: Tier;
 }
 
 export interface RebrandRequest {

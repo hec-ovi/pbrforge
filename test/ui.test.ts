@@ -17,9 +17,10 @@ const entry: MaterialEntry = {
 };
 
 function fetcherFor(index: unknown): typeof fetch {
-  return (async (url: string) => ({
-    json: async () => (url === '/api/themes' ? ['cyberpunk'] : index),
-  })) as unknown as typeof fetch;
+  return (async (url: string) => new Response(
+    JSON.stringify(url === '/api/themes' ? ['cyberpunk'] : index),
+    { status: 200, headers: { 'content-type': 'application/json' } },
+  )) as unknown as typeof fetch;
 }
 
 describe('preview contract', () => {

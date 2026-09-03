@@ -15,6 +15,11 @@ export interface RefinishRequest {
   physical?: Physical;
 }
 
+export interface RefinishResult {
+  entry: MaterialEntry;
+  variants: string[];
+}
+
 /**
  * Reads the relief and gloss maps out of a surface already in the database
  * again, under a stated finish and the entry's factors. The basecolor is what
@@ -24,7 +29,7 @@ export interface RefinishRequest {
 export class Refinisher {
   constructor(private db: Database) {}
 
-  async refinish(request: RefinishRequest): Promise<{ entry: MaterialEntry; variants: string[] }> {
+  async refinish(request: RefinishRequest): Promise<RefinishResult> {
     const entry = this.db.resolve(request.key);
     const physical = { ...entry.physical, ...request.physical };
     const finish = resolveFinish(request.finish, physical);

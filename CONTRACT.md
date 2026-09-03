@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.15.1. Schema stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.0. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -13,14 +13,18 @@ Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/
 
 ## In
 
-- `resolve(key: string): MaterialEntry` resolves a key (or alias) against the database.
-- `list(filter?: {theme?, kind?, tier?}): string[]` returns matching keys, sorted, deterministic.
-- `create(request: CreateRequest): MaterialEntry` generates a full set, verifies seams, writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json). Basecolor comes from ComfyUI, from the pattern class below, from a tint of a variant already in the entry (`recolor`), or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box. Resolution must fit the physical tile or exact-placement aspect within one pixel. A tile is at most 1,048,576 pixels; an exact sheet is at most 4096 px on either side and 9,437,184 pixels total.
+The package root exports the five operations below, their request and result types, `MaterialsError`, `MaterialsErrorCode`, `ComfyClient` and `ComfyRuntime`.
+
+`MaterialsOptions` is `{ themesDir?: string, comfy?: ComfyRuntime }`. `themesDir` defaults to the bundled `themes/` database. `comfy` supplies `ready()`, `upload(image, name)` and `render(graph)` for generation; omitting it uses `COMFY_URL` or `http://127.0.0.1:8188`.
+
+- `resolve(key: string, options?: MaterialsOptions): MaterialEntry` resolves a key or alias against the database.
+- `list(filter?: { theme?: string, kind?: string, tier?: string }, options?: MaterialsOptions): string[]` returns matching keys, sorted and deterministic.
+- `create(request: CreateRequest, options?: MaterialsOptions): Promise<MaterialEntry>` generates a full set, verifies seams and writes it to the database. Request: [schema/create-request.schema.json](schema/create-request.schema.json). Basecolor comes from ComfyUI, from the pattern class below, from a tint of a variant already in the entry (`recolor`), or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box. Resolution must fit the physical tile or exact-placement aspect within one pixel. A tile is at most 1,048,576 pixels; an exact sheet is at most 4096 px on either side and 9,437,184 pixels total.
 - `decal` on an exact create request publishes the fitted physical face and placement policy. It requires `alphaMode: "BLEND"`, an incident pattern that generates opacity, and matching ratios between `decal.worldSize`, `aspect` and the map resolution. A decal is clamped and fitted to one receiving surface. It is never repeated or projected through neighboring geometry.
 - `append: true` adds the generated variant to the entry the key already resolves to, which keeps its alignment, tiling, aliases and physical; `variantId` names it (and its asset folder). Appending an id that exists is `E_KEY_EXISTS`, so a batch stays resumable. `canonical: true` on an append puts the variant first, so it is the one a consumer gets when it does not pick.
 - `recolor` writes a tint variant: another variant of the same entry repainted. The paint's hue is taken whole and `strength` is how much pigment is in it, so a blue paint reads blue over a near-grey photograph. It is the same surface in different paint, so it points at that variant's relief maps instead of copying them.
 - `finish` states how a photographed surface is read into relief and gloss (see Finish below). An appended variant inherits the entry's finish, so every photographed variant of one entry shares a band. The pattern, flat, recolor and screen lanes carry their own maps and ignore it.
-- `refinish(request: RefinishRequest): { entry, variants }` re-reads the relief, gloss and metallic maps of every photographed variant of an entry from its stored basecolor, under a stated finish and factors, updates the entry, and names the variants it touched. The basecolor is never touched, so a set already approved keeps its look. Request: `{ key, finish?, physical? }`, where `physical` is merged into the entry's before the maps are read. An entry with no photographed variant (a screen, a drawn pattern) is `E_SCHEMA`.
+- `refinish(request: RefinishRequest, options?: MaterialsOptions): Promise<RefinishResult>` re-reads the relief, gloss and metallic maps of every photographed variant of an entry from its stored basecolor, under a stated finish and factors, updates the entry, and returns `{ entry: MaterialEntry, variants: string[] }`. Request: `{ key, finish?, physical? }`, where `physical` is merged into the entry's before the maps are read. An entry with no photographed variant (a screen, a drawn pattern) is `E_SCHEMA`.
 
 Screens (`emission: "image"`) turn that around: the basecolor is flat dark display glass and the picture lives in the emission map. `screens` lists one display per variant and sets the variant count. ComfyUI paints each advertisement as flat brandless artwork; the box makes it a screen: the pixel structure of its `kind` (`led-dot` dot lattice, `scanline-billboard` scan bands, `glyph-panel` abstract with no lattice), colour fringing, blown-out hotspots, and the `brandName` wordmark stroked in from a built-in alphabet. `brandName` never enters the diffusion prompt, so a screen rebrands without a new render; `businessKind` does steer the artwork. Both take a per-screen override.
 
@@ -30,7 +34,7 @@ Every screen variant keeps the brandless picture it shows beside its maps, with 
 
 The shipped future-noir source plates and their subject-and-style prompts live in [sources/ads-codex/PROMPTS.md](sources/ads-codex/PROMPTS.md). Each source is fitted to its published 16:9 or 9:16 face before display structure is applied. In every shipped `noir-cyan` and `noir-amber` emission map, at least 40 percent of pixels stay below 8/255 and fewer than 18 percent clip after the entry's emissive strength is applied.
 
-- `rebrand(request: RebrandRequest): Branded[]` spells the businesses of a named world over the screens of their tier, one `brand:<slug>` variant per business on `ad-screen` and on `ad-screen-tall`, with no render (see Rebrand below).
+- `rebrand(request: RebrandRequest, options?: MaterialsOptions): Promise<Branded[]>` spells the businesses of a named world over the screens of their tier, one `brand:<slug>` variant per business on `ad-screen` and on `ad-screen-tall`, with no render (see Rebrand below). Request: [schema/rebrand-request.schema.json](schema/rebrand-request.schema.json). Each result is `{ key, variantId, from, lines }`.
 
 CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable), `npm run refinish -- <request.json>` (re-reads every key in the file that states a finish), `npm run rebrand -- --theme <theme> --businesses <businesses.json>` (`--themes <dir>` points it at another database folder).
 
@@ -51,7 +55,7 @@ Dry matte is the default across the library: moisture staining and heavy grime l
 | tile | 0.56-0.64 | 0.51-0.59 | 0.46-0.54 | 0.45-0.52 |
 | every other photographed kind | the roughness factor, plus or minus 0.05, floored at 0.46 | | | |
 
-Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2, 0.15, 0.1 and relief 2, 2, 1.6, 1.2. Steel parts do not use photographed surfaces: `metal`, `fire-escape` and `roof-artifact` carry flat dark paint and zinc, while `elevator_door` draws its fitted center seam. Fire-escape and roof-artifact maps are 256 px over 0.5 m, enough for shaped rails, treads and equipment shells without carrying a pattern over them. `concrete`, `floor-slab` and `roof` are also fully deterministic, with no photographed grain. Finished `wood` drops to grain 0.08 and 0.06 on its two upper tiers. A drawn pattern states its own gloss instead: it sits at the entry's roughness factor, plus the joint bump (`joint` times 0.4) on the joint lines and the `sheen` spread from cell to cell. Asphalt is a three-octave noise field, so its finest aggregate sits around five centimetres of road and not on one pixel.
+Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2, 0.15, 0.1 and relief 2, 2, 1.6, 1.2. Steel parts do not use photographed surfaces: `metal`, `fire-escape` and `roof-artifact` carry flat dark paint and zinc, while `elevator_door` draws its fitted center seam. Fire-escape and roof-artifact maps are 256 px over 0.5 m, enough for shaped rails, treads and equipment shells without carrying a pattern over them. `concrete`, `floor-slab` and `roof` are also fully deterministic, with no photographed grain. Finished `wood` uses grain 0.08 and 0.06 on its two upper tiers. A drawn pattern states its own gloss: it sits at the entry's roughness factor, plus the joint bump (`joint` times 0.4) on the joint lines and the `sheen` spread from cell to cell. Asphalt is a three-octave noise field, so its finest aggregate sits around five centimetres of road and not on one pixel.
 
 ## Floors and balconies
 
@@ -63,7 +67,7 @@ Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2
 
 `concrete` covers 2 x 2 m at 512 px with four deterministic variants: subtly mottled `plain` (canonical), neutral cement `panel`, `panel-square` and `panel-graphite`. `panel` and `panel-graphite` are exact 2 x 1 m modules with 20 mm joints; `panel-square` is 2 x 2 m. Every panel uses origin `[0, 0]` in world metres. Relief, tonal drift and fine grain remain subordinate to the structural joint and none comes from a photograph. Exterior uses `panel` on compatible facade regions and `plain` on fitted remainder borders or columns.
 
-`wall` uses the same 2 x 2 m arithmetic. Its canonical `plain` is a continuous black or graphite field; `panel` is neutral cement at 2 x 1 m, `panel-square` is neutral cement at 2 x 2 m, and `panel-graphite` is dark 2 x 1 m cladding. All carry stable origin `[0, 0]`, matte dielectric response and restrained procedural mineral detail. `parapet` aliases to this family. No wall variant is orange, bright white, brown, brick, mosaic or a dense small tile.
+`wall` uses the same 2 x 2 m arithmetic. Its canonical `plain` is a continuous black or graphite field; `panel` is neutral cement at 2 x 1 m, `panel-square` is neutral cement at 2 x 2 m, and `panel-graphite` is dark 2 x 1 m cladding. All carry stable origin `[0, 0]`, matte dielectric response and restrained procedural mineral detail. `parapet` aliases to this family. The palette stays black, graphite and neutral cement, with structural modules at least 2 x 1 m.
 
 `wall-band` covers 4 x 1.4 m at 1000 x 350 px. Its `cement` and `graphite` fields carry `bandHeight: 1.4`, stable origin `[0, 0]` and no baked structural joint. Consumers use it only for facade zones calculated as exact 1.4 m bands.
 
@@ -105,7 +109,7 @@ Every binding resolves directly to the tiled entry and a named variant with the 
 
 ## AC unit
 
-`ac-unit` is the condenser mounted on a facade: one face per unit, `exact` on a 1 x 1 m square at 1024 px, so the box's front carries it 1:1 and its sides take the same face or a painted flat. `grille` (canonical) is a dark neutral painted housing with a folded edge lip and a round flange around a wire grille, rings at 18 mm on four spokes, over the dark fan cavity with the hub and blades behind. All tiers are graphite or neutral grey with restrained neutral wear, excluding off-white paint, orange rust and bright enclosures.
+`ac-unit` is the condenser mounted on a facade: one face per unit, `exact` on a 1 x 1 m square at 1024 px, so the box's front carries it 1:1 and its sides take the same face or a painted flat. `grille` (canonical) is a dark neutral painted housing with a folded edge lip and a round flange around a wire grille, rings at 18 mm on four spokes, over the dark fan cavity with the hub and blades behind. All tiers use graphite or neutral grey with restrained neutral wear.
 
 ## Window glass
 
@@ -169,7 +173,7 @@ The consumer creates one fitted quad on the named receiving surface, maps UV 0..
 
 ## Rebrand
 
-A business of the named world gets its own screens. `rebrand({ theme, businesses })` writes, for every business, one variant of `<theme>/ad-screen/<tier>` and one of `<theme>/ad-screen-tall/<tier>`: the brandless artwork of a screen variant already in that entry with the brand name spelled over it from `<theme>/letter-atlas/<tier>` cells, shown through the same display as the screen it came from. Image work only: no ComfyUI, no render, and the same list writes the same maps every time. `businesses` is [schema/rebrand-request.schema.json](schema/rebrand-request.schema.json), a list of `{ brandName, businessKind, tier }`, `businessKind` one of the parcel types that advertise: `hotel`, `commerce`, `mall`, `restaurant`, `coffee_shop`, `corpo`, `clinic`.
+A business of the named world gets its own screens. `rebrand({ theme, businesses })` writes, for every business, one variant of `<theme>/ad-screen/<tier>` and one of `<theme>/ad-screen-tall/<tier>`: the brandless artwork of a screen variant already in that entry with the brand name spelled over it from `<theme>/letter-atlas/<tier>` cells, shown through the same display as the screen it came from. Image work only: no ComfyUI, no render, and the same list writes the same maps every time. The [request schema](schema/rebrand-request.schema.json) defines `businesses` as a list of `{ brandName, businessKind, tier }`, `businessKind` one of the parcel types that advertise: `hotel`, `commerce`, `mall`, `restaurant`, `coffee_shop`, `corpo`, `clinic`.
 
 - Variant id: `brand:<slug>`, the name lowercased with every run of characters outside `a-z0-9` collapsed to one hyphen, so `Kiro's Clinic` is `brand:kiro-s-clinic`. A consumer resolves the entry and takes `variants.find((v) => v.id === 'brand:' + slug)`, the way it picks any variant by id. The maps live under `assets/<kind>/<tier>/brand/<slug>/`.
 - Which picture: a stable pick among the entry's screen variants (those carrying `screen`), from `businessKind` and the slug together, so a name always lands on the same picture and a street of businesses spreads over the tier's artwork.
@@ -202,12 +206,12 @@ Conventions (fixed, not per entry):
 ## Errors
 
 Thrown as `MaterialsError { code, message, details? }`, closed set:
-- `E_SCHEMA`: request or index fails schema validation; message names the path.
-- `E_KEY_NOT_FOUND`: key and aliases resolve to nothing.
-- `E_KEY_EXISTS`: create would overwrite an existing key without `overwrite: true`.
+- `E_SCHEMA`: request, theme index, source path or lane parameters are invalid; `details` carries validation or parse context when available.
+- `E_KEY_NOT_FOUND`: a material key, alias or required screen or letter variant is unavailable.
+- `E_KEY_EXISTS`: create would overwrite an existing key or variant id without `overwrite: true`.
 - `E_THEME_NOT_FOUND`: theme folder or theme.json missing.
 - `E_COMFY_UNAVAILABLE`: ComfyUI not reachable or not ready.
-- `E_GENERATION_FAILED`: workflow submitted but failed or timed out.
+- `E_GENERATION_FAILED`: a render was rejected, timed out or returned artwork with the wrong dimensions.
 - `E_SEAM_CHECK_FAILED`: generated set failed the seam verification; nothing is written.
 
 ## Invariants
@@ -226,10 +230,10 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 
 ## Preview
 
-`npm run preview`: the classic material sphere viewer (lighting, orbit), loads any key from the database. UI in `src/ui/` with `views/`, `widgets/`, `components/`.
+`npm run preview`: material sphere viewer with lighting and orbit controls. See the [preview contract](src/ui/CONTRACT.md).
 
 `npm run sheet -- <kind> [tier]`: a contact sheet of every variant of a kind, basecolor, roughness and normal side by side, written to `out/`. A family is checked as a family: whether its variants read apart, and whether the gloss map is calm.
 
 ## Depends on
 
-- Atlas hydrology material-key contract, for the binding data only. Database resolution and generation have no runtime dependency on Atlas.
+- [Atlas hydrology material-key contract](../atlas/src/hydro/CONTRACT.md), for binding data only. Database resolution and generation have no runtime dependency on Atlas.

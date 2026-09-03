@@ -1,9 +1,15 @@
 import { MaterialsError } from '../db/errors.js';
 
-type Graph = Record<string, { class_type: string; inputs: Record<string, unknown> }>;
+export type ComfyGraph = Record<string, { class_type: string; inputs: Record<string, unknown> }>;
+
+export interface ComfyRuntime {
+  ready(): Promise<boolean>;
+  upload(image: Buffer, name: string): Promise<string>;
+  render(graph: ComfyGraph): Promise<Buffer>;
+}
 
 /** Talks to a headless ComfyUI: submit an API-format graph, poll history, fetch the image. */
-export class ComfyClient {
+export class ComfyClient implements ComfyRuntime {
   constructor(
     private baseUrl = process.env.COMFY_URL ?? 'http://127.0.0.1:8188',
     private timeoutMs = 600_000,
@@ -34,7 +40,7 @@ export class ComfyClient {
     return stored.subfolder ? `${stored.subfolder}/${stored.name}` : stored.name;
   }
 
-  async render(graph: Graph): Promise<Buffer> {
+  async render(graph: ComfyGraph): Promise<Buffer> {
     if (!(await this.ready())) {
       throw new MaterialsError('E_COMFY_UNAVAILABLE', `ComfyUI not reachable at ${this.baseUrl}`);
     }

@@ -3,6 +3,7 @@ import { fireEvent, getByRole, getByText } from '@testing-library/dom';
 import { describe, expect, it, vi } from 'vitest';
 import { PreviewView } from './views/PreviewView.js';
 import { toast } from './components/Toast.js';
+import { PreviewError } from './errors.js';
 import { LIGHTING_PRESETS, SphereViewer } from './widgets/SphereViewer.js';
 import type { MaterialEntry } from '../db/types.js';
 
@@ -71,15 +72,14 @@ const mockEntry2: MaterialEntry = {
 };
 
 function fetcherFor(themes: string[], themeIndexes: Record<string, unknown>): typeof fetch {
-  return (async (url: string) => ({
-    json: async () => {
-      if (url === '/api/themes') return themes;
-      for (const t of themes) {
-        if (url === `/themes/${t}/theme.json`) return themeIndexes[t];
-      }
-      return {};
-    },
-  })) as unknown as typeof fetch;
+  return (async (url: string) => {
+    const theme = themes.find((candidate) => url === `/themes/${candidate}/theme.json`);
+    const body = url === '/api/themes' ? themes : theme ? themeIndexes[theme] : {};
+    return new Response(JSON.stringify(body), {
+      status: 200,
+      headers: { 'content-type': 'application/json' },
+    });
+  }) as unknown as typeof fetch;
 }
 
 describe('UI Polish Suite', () => {
@@ -133,6 +133,15 @@ describe('UI Polish Suite', () => {
     fireEvent.change(kindSelect, { target: { value: 'all' } });
     fireEvent.change(tierSelect, { target: { value: 'all' } });
     expect(getByText(view.root, 'cyberpunk/wall/poor')).toBeTruthy();
+  });
+
+  it('reports database loading failures through the closed preview error', async () => {
+    const view = new PreviewView();
+    const fetcher = (async () => new Response(null, { status: 503 })) as unknown as typeof fetch;
+
+    await expect(view.list.load(fetcher)).rejects.toEqual(
+      expect.objectContaining<Partial<PreviewError>>({ code: 'E_DATABASE_UNAVAILABLE' }),
+    );
   });
 
   it('updates preview lighting presets and background modes in SphereViewer', () => {

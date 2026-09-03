@@ -15,17 +15,30 @@ npm run refinish -- request.json                 # re-read the maps of a family 
 npm run rebrand -- --theme cyberpunk --businesses businesses.json   # spell business names over the screens of their tier
 npm run sheet -- wall                            # contact sheet of a kind, into out/
 npm test
+npm run typecheck
+npm run build
 ```
 
 `npm run create` also takes an array of requests and skips keys that already exist, so a batch is resumable.
 
-## In
+## Package API
 
-- `resolve(key)` returns the entry for a key or one of its aliases.
-- `list(filter?)` returns matching keys, sorted and deterministic.
-- `create(request)` generates a full map set, verifies its seams and writes it. The request (`schema/create-request.schema.json`) names the theme, kind, tier, prompt material and options. Basecolor comes from ComfyUI, from a drawn pattern, from a tint of a variant already in the entry, or is synthesized from `flatColor` (glass, plain colors); normal, roughness, metallic, height and AO always derive in-box. `append` adds a variant to an entry that exists instead of writing a new one, and `canonical` puts it first. Variants record whether their source was an image, a pattern or a flat field.
-- `refinish(request)` re-reads the relief, gloss and metallic maps of a family already in the database from its stored basecolor, under a stated finish and factors.
-- `rebrand(request)` writes a `brand:<slug>` variant of the landscape and the portrait screen of a business's tier, its name spelled from the letter atlas over artwork already in the database. No render.
+```ts
+import { create, list, rebrand, refinish, resolve } from 'urbe-materials';
+
+const options = { themesDir: './themes' };
+const entry = resolve('cyberpunk/window-glass/rich', options);
+```
+
+`themesDir` defaults to the database bundled with the package. `create` also accepts a `ComfyRuntime` in the options object when generation should use a caller-managed backend.
+
+- `resolve(key, options?)` returns the entry for a key or one of its aliases.
+- `list(filter?, options?)` returns matching keys, sorted and deterministic.
+- `create(request, options?)` returns a generated [MaterialEntry](schema/material-entry.schema.json), after validation, seam verification and database write. Its input is [CreateRequest](schema/create-request.schema.json).
+- `refinish(request, options?)` returns `{ entry, variants }` after deriving new relief, gloss and metallic maps from stored photographic basecolor.
+- `rebrand(request, options?)` returns one result per landscape and portrait screen written for each business. Its `{ theme, businesses }` input follows the [RebrandRequest schema](schema/rebrand-request.schema.json).
+
+All operations use the closed `MaterialsError` codes in [CONTRACT.md](CONTRACT.md).
 
 ## Out
 
@@ -33,7 +46,7 @@ A `MaterialEntry` (`schema/material-entry.schema.json`): alignment mode (`tile` 
 
 Map resolution follows the physical tile or exact-placement aspect within one pixel. Tile variants stay at or below 1,048,576 pixels; exact sheets stay within a 4096 px side and 9,437,184 pixels total. Creation rejects a stretched or oversized request before rendering.
 
-The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers 41 kinds at four tiers, plus two incident-specific keys (130 entries plus 36 alias keys, 321 variants): walls and 1.4 m wall bands, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens landscape and portrait, light fixtures, fire escapes, roof artifacts and AC unit faces for exteriors, plaster, tile, ceilings, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors, sidewalk, road, curb, highway deck and support, water surfaces, plastic for the street, and a lit letter atlas for signs. The incident keys provide a fitted directional blood pool and tyre transfer with opacity maps. Walls, concrete, roof and floor slabs share a 2 x 2 m world tile. Their structural modules are 2 x 1 m or 2 x 2 m with 20 mm joints and stable world origins. Continuous variants cover fitted borders, columns, ramps and remainder faces. Orange, white, brown, brick and dense small-tile facade variants are absent. Frames and doors are smooth dark painted steel. Curtains are procedural vertical blinds or plain shades fitted to a 1.5 x 3 m bay.
+The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers 41 kinds at four tiers, plus two incident-specific keys (130 entries plus 36 alias keys, 321 variants): walls and 1.4 m wall bands, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens landscape and portrait, light fixtures, fire escapes, roof artifacts and AC unit faces for exteriors, plaster, tile, ceilings, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors, sidewalk, road, curb, highway deck and support, water surfaces, plastic for the street, and a lit letter atlas for signs. The incident keys provide a fitted directional blood pool and tyre transfer with opacity maps. Walls, concrete, roof and floor slabs share a 2 x 2 m world tile. Their structural modules are 2 x 1 m or 2 x 2 m with 20 mm joints and stable world origins. Continuous variants cover fitted borders, columns, ramps and remainder faces. Facade fields stay black, graphite or neutral cement. Frames and doors are smooth dark painted steel. Curtains are procedural vertical blinds or plain shades fitted to a 1.5 x 3 m bay.
 
 The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds) and no roughness below 0.45 in its factor, its band or any pixel of its roughness map, glass and lit entries excepted, and a test over the shipped database holds it there. General service metal, fire escapes and rooftop equipment use dark paint and neutral zinc with no texture grain on their shaped parts. AC enclosures are graphite and neutral grey. Elevator doors are exact 1:2 procedural faces with fitted center seams. Road and highway-deck tiles are 3.5 x 7 m, one lane wide. Sidewalk slabs are exact 2 x 1 m modules with 20 mm joints, with 2 x 2 m plates and a joint-free option for ramps. Curbs are 1 m stones on a 2 x 0.15 m tile. Highway supports resolve to the neutral concrete family.
 
@@ -65,7 +78,7 @@ A screen can also be painted from a picture that already exists: `imagePath` on 
 
 Every screen keeps the brandless picture it shows beside its maps. That is what the rebrand lane works from: `npm run rebrand` takes the businesses of a named world, a list of `{ brandName, businessKind, tier }` (`batch/cyberpunk/businesses.json` shows the shape), and writes for each one a `brand:<slug>` variant of `ad-screen` and of `ad-screen-tall` at its tier. The name is spelled over the artwork of one of the tier's screens from the letter atlas cells, neon on the poor and mid tiers and backlit panel on the rich ones, centred over the bottom of the picture on one line or broken over two at the space nearest the middle, then shown through the same LED or scanline structure as the screen it came from. Pure image work, no ComfyUI, and the same list writes the same maps every time, so a district renames its screens as often as the world is renamed. A consumer takes the variant by id: `entry.variants.find((v) => v.id === 'brand:kiro-s-clinic')`.
 
-The library ships one sample business so the shape is visible. A world's own screens are the world's, not the library's: copy the theme folder into the world, point the lane at it with `--themes <dir>` and run it against that world's business list. Both the maps and the index entries land in that copy, and rerunning the same list writes the same maps, so a world regenerates its screens whenever its names change instead of storing them here. An empty list is fine: a world with no advertising parcel brands nothing.
+The library ships one sample business so the shape is visible. World-specific screens live in a copied theme folder. Point the lane at that folder with `--themes <dir>` and run it against the world's business list. Both maps and index entries land in the copy, and the same list writes the same maps. An empty list is valid and brands nothing.
 
 ## How it works
 

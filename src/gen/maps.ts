@@ -5,12 +5,6 @@ import { type Gray, type Rgb, encodeGrayPng, encodeRgbPng, luminance, wrapBlur, 
 type Size = { width: number; height: number };
 
 /**
- * Deterministic derivation of the non-color maps from a seamless basecolor.
- * v1 estimator lane: procedural, wrap-aware, standalone. The neural lane
- * (Marigold/DSINE inside ComfyUI) plugs in behind the same signatures later.
- */
-
-/**
  * The two scales a photographed surface is read at: `feature` is the finest
  * blur that still holds a joint, a brick edge or a piece of aggregate, and
  * `shading` is the one that holds the large-scale lighting of the photograph.

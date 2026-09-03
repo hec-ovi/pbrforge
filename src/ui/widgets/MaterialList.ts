@@ -1,4 +1,5 @@
 import { el } from '../components/el.js';
+import { PreviewError } from '../errors.js';
 import type { MaterialEntry, ThemeIndex } from '../../db/types.js';
 
 export interface Selection {
@@ -88,23 +89,33 @@ export class MaterialList {
   }
 
   async load(fetcher: typeof fetch = fetch): Promise<void> {
-    const themes = (await (await fetcher('/api/themes')).json()) as string[];
-    const rows: MaterialRow[] = [];
-
-    for (const theme of themes) {
-      const index = (await (await fetcher(`/themes/${theme}/theme.json`)).json()) as ThemeIndex;
-      for (const key of Object.keys(index.entries).sort()) {
-        const entry = index.entries[key];
-        const parts = key.split('/');
-        const kind = parts[1] || 'generic';
-        const tier = parts[2] || 'standard';
-        rows.push({ theme, entry, kind, tier });
+    try {
+      const themes = await readJson(fetcher, '/api/themes');
+      if (!Array.isArray(themes) || themes.some((theme) => typeof theme !== 'string')) {
+        throw new TypeError('theme list must be an array of strings');
       }
-    }
+      const rows: MaterialRow[] = [];
 
-    this.allRows = rows;
-    this.populateFilterDropdowns();
-    this.applyFilter();
+      for (const theme of themes) {
+        const index = await readJson(fetcher, `/themes/${theme}/theme.json`) as ThemeIndex;
+        if (!index || typeof index !== 'object' || !index.entries || typeof index.entries !== 'object') {
+          throw new TypeError(`theme index is invalid for ${theme}`);
+        }
+        for (const key of Object.keys(index.entries).sort()) {
+          const entry = index.entries[key];
+          const parts = key.split('/');
+          const kind = parts[1] || 'generic';
+          const tier = parts[2] || 'standard';
+          rows.push({ theme, entry, kind, tier });
+        }
+      }
+
+      this.allRows = rows;
+      this.populateFilterDropdowns();
+      this.applyFilter();
+    } catch (cause) {
+      throw new PreviewError('E_DATABASE_UNAVAILABLE', 'material database could not be loaded', cause);
+    }
   }
 
   private populateFilterDropdowns(): void {
@@ -225,4 +236,10 @@ export class MaterialList {
       this.selectRow(this.allRows[0]);
     }
   }
+}
+
+async function readJson(fetcher: typeof fetch, path: string): Promise<unknown> {
+  const response = await fetcher(path);
+  if (!response.ok) throw new Error(`${path} returned ${response.status}`);
+  return response.json();
 }

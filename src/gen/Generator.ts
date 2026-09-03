@@ -6,7 +6,7 @@ import { Database } from '../db/Database.js';
 import { MaterialsError } from '../db/errors.js';
 import { variantDir } from '../db/paths.js';
 import type { CreateRequest, Finish, MapName, MaterialEntry, Physical, Screen, ScreenShown, Variant } from '../db/types.js';
-import { ComfyClient } from './ComfyClient.js';
+import { ComfyClient, type ComfyRuntime } from './ComfyClient.js';
 import { Template, loadPrompt } from './Template.js';
 import { type Gray, type Rgb, decodeRgb, encodeGrayPng, encodeRgbPng } from './pixels.js';
 import { synthesizeFlat } from './flat.js';
@@ -66,7 +66,7 @@ export class Generator {
 
   constructor(
     private db: Database,
-    private comfy: ComfyClient = new ComfyClient(),
+    private comfy: ComfyRuntime = new ComfyClient(),
     private templates: Record<CreateRequest['alignment'], Template> = {
       tile: new Template('sdxl-tile'),
       exact: new Template('sdxl-exact'),

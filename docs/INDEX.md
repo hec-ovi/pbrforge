@@ -1,3 +1,4 @@
 # Box map
 
-- root box: see CONTRACT.md. Inside: src/db (index, resolve/list/write), src/gen (ComfyUI client, templates, map derivation, finish, refinish, screens, source fitting, colors, text, tinting, seam gate), src/gen/rebrand (named-world screen variants), src/gen/pattern (one deterministic pattern class per surface, including water and incident decals), src/cli (resolve, create, refinish, rebrand, contact sheets), src/ui (preview), bindings/ (consumer binding data), comfy/ (local generator service), templates/ + prompts/ (generation inputs), batch/ (material requests), themes/ (material database).
+- root box: [CONTRACT.md](../CONTRACT.md). `src/index.ts` exports resolve, list, create, refinish and rebrand. `src/db` owns the theme index and files. `src/gen` owns ComfyUI generation, deterministic maps, patterns, screens, refinish and rebrand. `src/cli` exposes the write lanes and contact sheets. `bindings` carries consumer key mappings. `themes` is the shipped database.
+- preview box: [src/ui/CONTRACT.md](../src/ui/CONTRACT.md). Depends on the root material entry and theme index, browser APIs and Three.js.

@@ -2,42 +2,37 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:urbe:rebrand-request",
   "title": "RebrandRequest",
-  "description": "the businesses of a named world, each to be advertised on the screens of its tier; empty when the world has no advertising parcel, which brands nothing and is not an error",
-  "type": "array",
-  "items": {
-    "type": "object",
-    "required": [
-      "brandName",
-      "businessKind",
-      "tier"
-    ],
-    "additionalProperties": false,
-    "properties": {
-      "brandName": {
-        "type": "string",
-        "minLength": 1,
-        "maxLength": 32,
-        "description": "the wordmark as it reads on the screen; uppercased and spelled from the letter atlas, so it stays inside the atlas charset"
-      },
-      "businessKind": {
-        "enum": [
-          "hotel",
-          "commerce",
-          "mall",
-          "restaurant",
-          "coffee_shop",
-          "corpo",
-          "clinic"
-        ],
-        "description": "the parcel type that advertises; with the name, it picks which artwork of the tier the brand lands on"
-      },
-      "tier": {
-        "enum": [
-          "poor",
-          "mid",
-          "rich",
-          "high_rich"
-        ]
+  "description": "a named theme and the businesses to publish on its tiered screens",
+  "type": "object",
+  "required": ["theme", "businesses"],
+  "additionalProperties": false,
+  "properties": {
+    "theme": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "businesses": {
+      "type": "array",
+      "description": "empty when the world has no advertising parcel, which writes nothing and is valid",
+      "items": {
+        "type": "object",
+        "required": ["brandName", "businessKind", "tier"],
+        "additionalProperties": false,
+        "properties": {
+          "brandName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32,
+            "description": "wordmark uppercased and spelled from the letter atlas"
+          },
+          "businessKind": {
+            "enum": ["hotel", "commerce", "mall", "restaurant", "coffee_shop", "corpo", "clinic"],
+            "description": "parcel type used with the name to pick stable screen artwork"
+          },
+          "tier": {
+            "enum": ["poor", "mid", "rich", "high_rich"]
+          }
+        }
       }
     }
   }

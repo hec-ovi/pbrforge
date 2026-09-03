@@ -106,7 +106,7 @@ export class MaterialInspector {
             el('span', { class: 'channel-name' }, [ch.name]),
             el('span', { class: 'channel-desc' }, [ch.label]),
           ]),
-          el('div', { class: 'channel-path', title: path || 'Not authored' }, [path ? `/themes/${theme}/${path}` : '—']),
+          el('div', { class: 'channel-path', title: path || 'Not authored' }, [path ? `/themes/${theme}/${path}` : '-']),
         ]),
       );
     }

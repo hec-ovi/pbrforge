@@ -90,7 +90,12 @@ export class Database {
   private readIndex(theme: string): ThemeIndex {
     const path = this.indexPath(theme);
     if (!existsSync(path)) throw new MaterialsError('E_THEME_NOT_FOUND', `no theme.json for ${theme}`);
-    const index = JSON.parse(readFileSync(path, 'utf8')) as ThemeIndex;
+    let index: ThemeIndex;
+    try {
+      index = JSON.parse(readFileSync(path, 'utf8')) as ThemeIndex;
+    } catch (cause) {
+      throw new MaterialsError('E_SCHEMA', `theme.json invalid for ${theme}`, cause);
+    }
     if (!this.validateIndex(index)) {
       throw new MaterialsError('E_SCHEMA', `theme.json invalid for ${theme}`, this.validateIndex.errors);
     }

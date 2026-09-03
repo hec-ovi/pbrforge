@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { isAbsolute, join } from 'node:path';
 import sharp from 'sharp';
 import { MaterialsError } from '../db/errors.js';
-import type { ComfyClient } from './ComfyClient.js';
+import type { ComfyRuntime } from './ComfyClient.js';
 import { type Graph, loadGraph, root } from './Template.js';
 import { type Rgb, decodeRgb } from './pixels.js';
 
@@ -10,13 +10,12 @@ import { type Rgb, decodeRgb } from './pixels.js';
 const N_IMAGE = '1';
 
 /**
- * A provided artwork instead of a diffused one: read off disk, run through the
- * fitted to the screen it will be shown on. Sources that already cover the target
- * resolution stay local. Smaller sources use the deterministic ComfyUI 4x upscale.
+ * Reads provided artwork from disk and fits it to its screen. Sources that
+ * cover the target stay local; smaller sources use the deterministic 4x upscale.
  */
 export class SourceImage {
   constructor(
-    private comfy: ComfyClient,
+    private comfy: ComfyRuntime,
     private graph: Graph = loadGraph('upscale-4x'),
   ) {}
 

@@ -46,7 +46,7 @@ export class Rebrander {
   }
 
   async rebrand(request: RebrandRequest): Promise<Branded[]> {
-    if (!this.validate(request.businesses)) {
+    if (!this.validate(request)) {
       throw new MaterialsError('E_SCHEMA', 'rebrand request invalid', this.validate.errors);
     }
     // every name is checked before anything is written, so a bad entry in the list costs nothing

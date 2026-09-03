@@ -1,8 +1,16 @@
 {
   "name": "urbe-materials",
-  "version": "0.15.1",
+  "version": "0.16.0",
   "private": true,
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
     "resolve": "tsx src/cli/resolve.ts",
     "create": "tsx src/cli/create.ts",
@@ -11,7 +19,8 @@
     "sheet": "tsx src/cli/sheet.ts",
     "preview": "vite --config src/ui/vite.config.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "ajv": "8.20.0",

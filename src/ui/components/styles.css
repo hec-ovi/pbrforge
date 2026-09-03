@@ -290,13 +290,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Compatibility class for legacy tests if needed */
-.preview {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  height: 100vh;
-}
-
 /* ==========================================================================
    Sidebar & Material List
    ========================================================================== */

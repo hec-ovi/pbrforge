@@ -1,69 +1,81 @@
 # Changelog
 
-0.15.1: advertising and investigation handoffs are verified against the shipped library. Future-noir screen sources retain their subject-and-style prompts, exact landscape or portrait fit, display structure and restrained emission. Investigation blood and tyre decals resolve under the keys Engine consumes with their fitted placement envelopes.
+0.16.0: package-root resolve, list, create, refinish and rebrand operations with typed options, requests, results and errors. The emitted package resolves its bundled theme database. The preview has a presentation contract and one closed database-loading error.
 
-0.15.0: tiled water surfaces. `cyberpunk/water-surface/high_rich` carries deterministic `lagoon`, `river` and `sea-coast` variants on an 8 x 8 m world tile, each with complete basecolor, normal, roughness and metallic maps. `bindings/atlas-hydrology.json` maps the three closed Atlas water keys to those exact variants for Engine with no fallback.
+0.15.1: future-noir screen sources retain subject-and-style prompts, exact landscape or portrait fit, display structure and restrained emission. Investigation blood and tyre materials resolve under the Engine keys with fitted placement envelopes.
 
-0.14.0: exact investigation decals. `cyberpunk/incident-blood/mid` provides a 2.4 x 1.2 m directional pool and `cyberpunk/incident-tyre/poor` provides a 3.6 x 0.9 m directional transfer. Both are deterministic procedural sets with opacity maps, transparent safety insets, flat relief, clamped UVs and a 2 mm fitted surface offset. The material schema now publishes decal placement and the opacity channel.
+0.15.0: `cyberpunk/water-surface/high_rich` carries deterministic `lagoon`, `river` and `sea-coast` variants on an 8 x 8 m tile. Atlas hydrology bindings map the three water keys to those variants.
 
-0.13.0: floor and roof surfaces move to 2 x 2 m world tiles with continuous fields plus exact 2 x 1 m and 2 x 2 m structural modules. Columns now carry continuous graphite or cement with restrained procedural detail. New wall-band keys cover exact 1.4 m facade bands. AC enclosures and zinc service finishes are neutral graphite or mid-grey; bright, off-white, rust, warm, dense seam and small floor-tile variants are removed.
+0.14.0: exact blood and tyre investigation decals with opacity maps, transparent safety insets, flat relief, clamped UVs and 2 mm fitted surface offsets.
 
-0.12.0: ground and elevated-road materials are rebuilt at world scale. Sidewalk defaults to 2 x 1 m neutral slabs with 20 mm joints and carries a 2 x 2 m plate plus a continuous fitted field. Road drops broad patch and puddle variants for restrained street, highway, wet and continuous worn-concrete surfaces. New highway-deck keys provide asphalt and concrete, while highway-support resolves to the stable concrete family. Curbs carry restrained aggregate on exact 1 m stones.
+0.13.0: floor and roof families use 2 x 2 m world tiles with continuous fields and exact structural modules. Columns carry continuous graphite or cement. Wall-band keys cover exact 1.4 m facade bands.
 
-0.11.0: wall and concrete are rebuilt as neutral procedural families on a 2 x 2 m world tile. `panel` is the consumer-stable 2 x 1 m cement module with a 20 mm joint; `plain` is the consumer-stable fitted field. The families also carry 2 x 2 m cement and 2 x 1 m graphite panels. Orange, bright, brown, brick, masonry, tint and dense small-tile facade variants are removed.
+0.12.0: world-scale ground and elevated-road families. Sidewalk carries 2 x 1 m slabs, a 2 x 2 m plate and a continuous field. Road and highway-deck use 3.5 x 7 m lane tiles. Highway-support resolves to concrete. Curbs use exact 1 m stones.
 
-0.10.0: structured surface variants publish their visible module size, joint width, stable world origin and orientation in metres. The surface-source prompt now excludes baked panel geometry, scene lighting, object-shaped stains and generation artifacts, so generated grain stays independent of procedural structural joints.
+0.11.0: neutral procedural wall and concrete families on 2 x 2 m world tiles. Their variants include continuous fields, 2 x 1 m cement or graphite panels and 2 x 2 m cement panels.
 
-0.9.25: flat-only column, metal, fire-escape, roof-artifact and signage entries no longer carry photographed-finish metadata. A shipped-database test holds source class and finish metadata together.
-0.9.24: map creation rejects resolutions that stretch a physical tile or exact-placement face. Tile variants are limited to 1,048,576 pixels, exact sheets to a 4096 px long side and 9,437,184 pixels. The curb is corrected to 1280 x 96 px, equal density across its 2 x 0.15 m face, and a shipped-library audit holds every variant to these constraints.
-0.9.23: concrete is a four-variant deterministic set at 512 px with restrained relief. The precast panel is 3 x 1.5 m, a 2:1 module matching the facade reference, and the invalid photographed surfaces and derived tints are gone.
-0.9.22: roofs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, restrained half-metre seams and 1 m service panels. The patterned options are for roof zones that hold whole repeats.
-0.9.21: floor and balcony slabs are fully deterministic 3 x 3 m sets at 512 px: a joint-free canonical deck, 1.5 m square slabs and a 1 x 0.75 m running bond. The two grids are reserved for zones that hold whole repeats. Flat-source entries no longer retain photographed-finish metadata.
-0.9.20: ceilings lead with smooth dark paint at constant matte roughness and flat normals. The optional second variant keeps a restrained 0.5 m inset panel grid for rooms whose geometry provides a fitted border.
-0.9.19: signage is a dark non-emissive casing and backing plate on a 0.5 m flat tile. The separate letter atlas supplies the light, so a modular sign keeps a visible housing instead of turning its whole plate into a glowing sheet.
-0.9.18: curtains are deterministic 1.5 x 3 m bay materials at 384 x 768 px: twelve shallow vertical blind slats or a plain blackout shade. Both keep equal texel density and avoid photographed weave noise behind glass.
-0.9.17: elevator doors are exact 1:2 procedural faces at 512 x 1024 px. Each tier carries two matte steel tones with a fitted center seam, replacing photographs whose aspect did not match the placement face.
-0.9.16: rooftop equipment uses flat dark paint and zinc finishes on 0.5 m tiles. Utility boxes and machine shells keep their geometry without random photographed plate patterns crossing them.
-0.9.15: fire escapes use flat dark paint and zinc finishes on 0.5 m tiles. The shaped stair, rail and tread geometry keeps its silhouette without photographic pebbles, folds or plate seams crossing it.
-0.9.14: general metal uses two flat 1 m finishes per tier, dark paint and zinc. Both carry constant matte roughness and flat normals, so condenser housings, brackets and interior metal parts do not inherit photographic seams or grain.
-0.9.13: support columns use two flat honed stone tones per tier, with roughness 0.76 down to 0.54. Their 1.5 x 3 m tile is 256 x 512 px, so its texels are square in world space.
-0.9.12: synthesized flat materials carry `class: flat` in the index, distinct from photographed sources and drawn patterns. Consumers still bind the same map set.
-0.9.11: light fixtures read as lamps at the size a facade samples them. The wall pack gains a 26 mm housing around a lens whose hot centre falls off inside it, the panel is an even diffuser vignetting into an 18 mm frame, the strip stays one uniform diffuser, and emissive strength drops to 1.2, so a fixture renders its falloff instead of clipping: the face went from 77 to 100 percent blown out to under a fifth, with about half of it carrying the gradient. A test over the shipped database holds every fixture off the clip.
-0.9.10: the shipped library carries only the sample business. A world's brands are written into that world's copy of the theme folder (`--themes <dir>`); local brand maps stay out of the repo, and a test holds every map the index references to what is in the repo, so a fresh clone resolves every key.
-0.9.9: an empty business list is valid input to the rebrand lane. A world with no advertising parcel exports an empty export, the lane brands nothing and returns an empty result, and the CLI says so.
-0.9.8: roof and floor-slab lead with a solid `plain` deck, tonal variation only, so a roof or a floor whose face is not a whole number of tiles shows no cut joint; the photographed courses and slabs stay behind it. A test over the shipped database holds every flat-face kind (concrete, plaster, ceiling, roof, floor-slab) leading with a joint-free basecolor.
-0.9.7: the steel kinds leave the grain ramp. metal, elevator_door, fire-escape and roof-artifact carry grain 0.05 and relief at most 1 at every tier, so a lamp lands on the panel and its seams instead of the film grain between them; wood and floor-slab lose most of their grain on the two finished tiers, floor-slab sitting rougher with it (0.67 and 0.63).
-0.9.6: the contract states the frame steel as shipped: window-frame, door and wall-trim one flat near-black steel (metallic 1, constant roughness 0.5, flat normal, no drift), column honed stone, and a test over the shipped database holds every tier there.
-0.9.5: new kind `ac-unit` for the facade condensers exterior hangs: one face per 1 x 1 m unit, exact, drawn by the new `grille` pattern kind (rings on four spokes over the fan cavity, in a painted housing with a flange), four tiers from rusted off-white to clean graphite.
-0.9.4: six panel families on the same one-by-half module (ochre, slate, graphite, bone, rust, teal) as pattern variants of every wall tier.
-0.9.3: window frames, aperture frames, balcony rails and doors are one even dark painted steel (metallic, roughness 0.5); columns one honed dark stone: flat parametric sets, no noise pattern, no relief.
-0.9.2: the linear luminaire is one uniform diffuser; its housing is the fixture geometry, so a strip reads as one lit line at any angle its UVs run.
+0.10.0: structured surface variants publish visible module size, joint width, stable world origin and orientation in metres.
 
-0.9.1: the wall entry leads with its panel variant (tonal variation, chamfered seams) so a consumer taking the canonical one gets a flat wall; the linear luminaire's diffuser runs along the fixture, its housing along the sides, so a strip reads as one lit line however long it is.
+0.9.25: source class and photographed-finish metadata are held together by a shipped-database test.
 
-0.9: matte library and real ground. Every non-emissive entry carries metallic 0 (1 on the metal kinds) and no roughness below 0.45 in its factor, its band or any pixel of its roughness map, glass and lit entries excepted, held by a test over the shipped database; `refinish` takes factors beside the finish. window-frame (balcony-rail, aperture-frame) and door are one drawn `paint` variant per tier: smooth dark painted steel, tile 0.5 m at 1 mm per pixel, flat roughness 0.7 to 0.55. plaster, concrete and ceiling lead with a `plain` variant (`canonical` on an append puts a variant first); the ochre wall paint is a drawn panel grid with chamfered seams. Ground kinds carry the tile sizes the engine lays: road 3.5 x 7 m, one lane wide, `street` and `highway` with wheel tracks and `puddle` with damp patches at roughness 0.5; sidewalk 2 x 2 m with 1 m slabs on the tile edge; new `curb` kind, 2 x 0.15 m kerb stones, one entry at all tiers. light-fixture is one luminaire per 0.16 x 0.28 m tile, `lamp` leading with a recessed lens, a hot centre and a housing bezel. New pattern kinds `lane` and `lamp`. 115 entries, 334 variants.
+0.9.24: map creation enforces physical aspect and texture budgets. Tile variants allow 1,048,576 pixels; exact sheets allow a 4096 px side and 9,437,184 pixels. Curb maps are 1280 x 96 px for a 2 x 0.15 m face.
 
-0.8: rebrand lane. `npm run rebrand` takes the businesses of a named world (`brandName`, `businessKind`, `tier`) and writes, per business, a `brand:<slug>` variant of `ad-screen` and of `ad-screen-tall` at its tier: the brandless artwork of one screen already in the entry with the name spelled over it from the tier's letter atlas cells (neon on poor and mid, panel on rich and high_rich), centred over the bottom of the picture on one line or broken over two at the space nearest the middle, shown through the same display structure as the screen it came from. Image work only, no ComfyUI, and the same list writes the same maps. Every screen variant keeps its brandless artwork and display beside its maps (`screen` on the variant), which is what the lane composites over. One sample business ships in the database. 114 entries, 329 variants.
+0.9.20: ceilings lead with smooth dark paint and carry a restrained fitted panel variant.
 
-0.7: screens from provided sources. `imagePath` on a `screens[]` entry names a picture that already exists; it goes through a ComfyUI 4x upscale (4x-UltraSharp, fetched by comfy/setup.sh) and is fitted to the entry's resolution, then through the same lattice, fringing, hotspot and wordmark treatment every other screen gets. The upscale is feed-forward, so the same file always comes back the same picture, and no diffusion prompt is built. Two premium screens ship from the approved sources at 4096 on the long side: `premium-soda` on `cyberpunk/ad-screen/high_rich` (16:9) and the new `cyberpunk/ad-screen-tall` kind, a 9:16 portrait billboard whose four tiers share one entry. 114 entries, 327 variants.
+0.9.19: signage supplies dark non-emissive casing and backing plates. The letter atlas supplies fitted glyph emission.
 
-0.6.4: flat upholstery. Every fabric tier carries a `flat` pattern variant beside its photographed weaves: even cloth, matte, tonal drift at tile scale and a normal map that leans under one code value off flat, so interior parts small enough to minify a weave have nothing left to alias.
+0.9.18: curtains are deterministic 1.5 x 3 m bay materials with vertical blind and plain blackout-shade variants.
 
-0.6.3: plastic kind for street props: a crumpled near-black sheet at 0.25 roughness, the glossy response of a refuse sack, drawn by the pattern class. All four tiers resolve to the one entry. The suite gained the coverage gate behind the contract's guarantee: every kind in the vocabulary resolves at all four tiers of the shipped cyberpunk database.
+0.9.17: elevator doors are exact 1:2 procedural faces at 512 x 1024 px with matte steel and a fitted center seam.
 
-0.6.2: wet streets. New `puddle` pattern kind: the asphalt of a noise field with standing water pooled over it, the pools flat, dark and mirror-smooth in the roughness map so the renderer's environment reflects off the road. The mask runs on the same wrapping lattice as the aggregate, so it tiles with the road and the same parameters draw the same pools; `wet` moves the waterline. Every road tier carries a `puddle` variant beside street, highway and patched.
+0.9.16: rooftop equipment uses flat dark paint and neutral zinc finishes on 0.5 m tiles.
 
-0.6.1: window glass keeps part of the light. window-glass, and the door-glass alias on it, carries a transmission band per tier, 0.60 on worn residential panes down to 0.35 on office curtain wall, with a subtle tint per building class (neutral on the residential tiers, blue-green on the office ones) and low roughness throughout, so the renderer's environment reads on the pane instead of passing straight through it. The bands are in the contract beside the roughness bands.
+0.9.15: fire escapes use flat dark paint and neutral zinc finishes on 0.5 m tiles.
 
-0.6: dry matte across the photographed library. Every photographed entry states a finish: the band its roughness map stays inside, read off a blurred relief so gloss moves over centimetres and never per pixel, and how much of the pixel-scale speckle survives into the relief, with joints, bricks and aggregate coming through at full gain. Bands per kind and tier are in the contract; moisture staining and heavy grime live in the poor tier alone. New `refinish` lane re-reads the maps of a family from its stored basecolor, and `npm run sheet` builds a contact sheet of a kind. Asphalt runs three octaves so its finest aggregate sits at road scale, pavement moves into the charcoal range, and a tint takes the paint's hue whole so a blue paint reads blue. Variants per tier: wall 7 (four surfaces, three tints), concrete 9 (three surfaces, panel, rib and block patterns, three tints), plaster 7, tile 5, sidewalk 3, road 3. 112 entries, 316 variants.
+0.9.14: general metal uses flat dark paint and neutral zinc with constant matte roughness and flat normals.
 
-0.5: procedural pattern class. Variants drawn from parameters (hexagon grid, inset panel grid, large slabs, stripe, two-tone blocking, noise in up to four octaves, glyph atlas), rendered in code, anti-aliased and periodic over one tile by construction, resolving under the same keys and the same entry shape as the photographed ones. Cyberpunk library per tier: plaster hexagon, panel and wainscot walls, large floor slabs on tile, concrete panel joints one panel to a tile, new kinds ceiling, sidewalk, road and letter-atlas (a lit sheet of glyph cells for the modular sign system, grid and charset published in the contract), and light-fixture as a luminaire with a dark housing and a lit diffuser. wall and concrete carry tint variants of their photographed surfaces so adjacent buildings read apart. Create requests gain `append`, `variantId` and `recolor`. 112 entries, 264 variants.
+0.9.12: synthesized materials publish `class: flat`; consumers bind the same map set for every source class.
 
-0.4.1: ad-screen reads as a display. Screen lane (`emission: "image"`): dark glass basecolor with the faint lattice of its own pixels, flat relief, the ad in the emission map at high emissive strength. Three kinds per tier (led-dot, scanline-billboard, glyph-panel), artwork generated brandless and the business name stroked in from a built-in alphabet, driven by `brandName` and `businessKind`. Exact-alignment entries render on a non-tiling template.
+0.9.11: light fixtures carry fitted lamp, panel and strip faces at emissive strength 1.2. A shipped-database test holds their clipped area below the published limit.
 
-0.4: full cyberpunk coverage, all 29 kinds at four tiers (96 entries plus 20 alias keys); emissive kinds via color-mask (ad-screen) and flat glow path (signage, light-fixture); five kinds alias to shared surfaces.
+0.9.10: world-specific brand maps live in the world's theme copy. Every map referenced by the shipped index exists in the repository.
 
-0.3: cyberpunk coverage at 68 keys: 7 exterior priority kinds and all 10 interior kinds at four tiers, 2 variants each. RealVisXL checkpoint, flat synthesis path for glass, seam gate on worst-interior-column ratio, batch create with per-kind request files.
-0.2: generator (SDXL circular-padding via ComfyUI, procedural map derivation, seam gate), database with resolve/list/create CLI, sphere preview; first cyberpunk set generated and verified.
-0.1: research done (docs/RESEARCH.md), contract v0.1 with material entry, theme index and create request schemas.
-0.0: scaffold, contract pending.
+0.9.9: an empty business list is valid and returns no branded variants.
+
+0.9.8: roof and floor-slab lead with continuous `plain` variants for fitted faces.
+
+0.9.7: steel kinds use restrained flat finishes. Upper-tier wood carries low grain.
+
+0.9.6: window-frame, door and wall-trim use smooth near-black steel with metallic 1, roughness 0.5 and flat normals.
+
+0.9.5: `ac-unit` provides an exact 1 x 1 m condenser face with a graphite wire grille and fan cavity.
+
+0.9.3: aperture frames and balcony rails alias the window-frame steel family.
+
+0.9.2: the strip light is one uniform diffuser whose housing belongs to fixture geometry.
+
+0.9.0: matte-floor invariants, refinish factors, canonical appends, world-scale road, sidewalk, curb and light-fixture materials.
+
+0.8.0: deterministic rebrand writes `brand:<slug>` landscape and portrait screen variants from business lists and stored brandless artwork.
+
+0.7.0: screen requests accept provided source images. Sources are fitted locally or passed through the deterministic 4x upscaler, then receive the same display treatment.
+
+0.6.4: fabric includes an even matte `flat` upholstery variant for small parts.
+
+0.6.3: plastic street props resolve to a crumpled near-black `bag` variant at roughness 0.55 across all tiers.
+
+0.6.1: window glass and its door-glass alias publish tiered transmission, tint and roughness values.
+
+0.6.0: photographed entries publish finish bands, grain and relief. Refinish derives maps again from stored basecolor. Asphalt uses world-scale aggregate.
+
+0.5.0: deterministic pattern variants resolve through the same material entry shape as photographed surfaces. Create supports append, variant ids and recolor.
+
+0.4.1: screen entries use dark display glass, flat relief and fitted emission artwork with procedural display structure.
+
+0.4.0: the cyberpunk theme covers exterior and interior kinds through direct entries and aliases.
+
+0.3.0: RealVisXL generation, flat synthesis, seam verification and batch request files.
+
+0.2.0: ComfyUI generator, procedural map derivation, database operations, CLI and sphere preview.
+
+0.1.0: PBR research, material entry, theme index and create request schemas.
