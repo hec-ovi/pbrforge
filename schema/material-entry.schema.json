@@ -39,6 +39,10 @@
       "maxItems": 2,
       "description": "required when alignment is exact: [w, h] aspect ratio of the placement face"
     },
+    "decal": {
+      "$ref": "#/$defs/decalPlacement",
+      "description": "exact fitted placement rules for a transparent surface decal"
+    },
     "physical": {
       "type": "object",
       "additionalProperties": false,
@@ -116,6 +120,7 @@
               "metallic": { "$ref": "#/$defs/mapPath" },
               "height": { "$ref": "#/$defs/mapPath" },
               "ao": { "$ref": "#/$defs/mapPath" },
+              "opacity": { "$ref": "#/$defs/mapPath" },
               "emission": { "$ref": "#/$defs/mapPath" }
             }
           },
@@ -138,6 +143,33 @@
     }
   },
   "$defs": {
+    "decalPlacement": {
+      "type": "object",
+      "required": ["worldSize", "edgeInset", "surfaceOffset", "wrapMode", "projection"],
+      "additionalProperties": false,
+      "properties": {
+        "worldSize": {
+          "type": "array",
+          "items": { "type": "number", "exclusiveMinimum": 0 },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "fitted receiver quad [width, height] in world metres"
+        },
+        "edgeInset": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "fully transparent border inside every sheet edge, in metres"
+        },
+        "surfaceOffset": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 0.01,
+          "description": "normal offset from the receiver face, in metres"
+        },
+        "wrapMode": { "const": "clamp" },
+        "projection": { "const": "surface-fit" }
+      }
+    },
     "surfaceLayout": {
       "type": "object",
       "description": "visible surface divisions in world metres; fine grain remains independent",

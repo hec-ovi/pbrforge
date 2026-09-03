@@ -35,6 +35,8 @@ export interface PatternParams {
   roughness: number;
   /** Metres covered by one tile. */
   world: [number, number];
+  /** Fully transparent inset from an exact decal's sheet edge, in metres. */
+  edgeInset: number;
   seed: number;
 }
 
@@ -43,6 +45,8 @@ export interface Texel {
   color: Color;
   height: number;
   roughness: number;
+  /** Present only for transparent surface patterns. */
+  opacity?: number;
 }
 
 /** A point on the surface, in metres, with the size of one pixel for anti-aliasing. */

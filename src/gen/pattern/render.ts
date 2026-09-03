@@ -6,6 +6,7 @@ export interface PatternMaps {
   basecolor: Rgb;
   height: Gray;
   roughness: Gray;
+  opacity?: Gray;
 }
 
 /** Rasterizes a pattern, one sample per pixel centre, each anti-aliased against its own pixel. */
@@ -13,6 +14,8 @@ export function renderPattern(pattern: Pattern, width: number, height: number): 
   const color = new Uint8Array(width * height * 3);
   const relief = new Float32Array(width * height);
   const gloss = new Float32Array(width * height);
+  const opacity = new Float32Array(width * height);
+  let hasOpacity = false;
   const du = 1 / width;
   const dv = 1 / height;
   for (let y = 0; y < height; y++) {
@@ -24,11 +27,16 @@ export function renderPattern(pattern: Pattern, width: number, height: number): 
       color[i * 3 + 2] = Math.round(texel.color.b * 255);
       relief[i] = texel.height;
       gloss[i] = texel.roughness;
+      if (texel.opacity !== undefined) {
+        opacity[i] = texel.opacity;
+        hasOpacity = true;
+      }
     }
   }
   return {
     basecolor: { data: color, width, height },
     height: { data: relief, width, height },
     roughness: { data: gloss, width, height },
+    ...(hasOpacity ? { opacity: { data: opacity, width, height } } : {}),
   };
 }

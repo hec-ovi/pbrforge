@@ -50,6 +50,7 @@
       "minItems": 2,
       "maxItems": 2
     },
+    "decal": { "$ref": "#/$defs/decalPlacement" },
     "physical": {
       "$comment": "same shape as material-entry physical; authored, not estimated",
       "type": "object",
@@ -111,7 +112,7 @@
       "required": ["kind", "colors"],
       "additionalProperties": false,
       "properties": {
-        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille"] },
+        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "incident-blood", "incident-tyre"] },
         "colors": {
           "type": "array",
           "items": { "type": "string", "pattern": "^#[0-9a-f]{6}$" },
@@ -226,6 +227,23 @@
     "overwrite": { "type": "boolean", "default": false }
   },
   "$defs": {
+    "decalPlacement": {
+      "type": "object",
+      "required": ["worldSize", "edgeInset", "surfaceOffset", "wrapMode", "projection"],
+      "additionalProperties": false,
+      "properties": {
+        "worldSize": {
+          "type": "array",
+          "items": { "type": "number", "exclusiveMinimum": 0 },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "edgeInset": { "type": "number", "exclusiveMinimum": 0 },
+        "surfaceOffset": { "type": "number", "exclusiveMinimum": 0, "maximum": 0.01 },
+        "wrapMode": { "const": "clamp" },
+        "projection": { "const": "surface-fit" }
+      }
+    },
     "surfaceLayout": {
       "type": "object",
       "required": ["family", "origin", "orientation"],

@@ -36,13 +36,14 @@ const MAX_TILE_PIXELS = 1024 * 1024;
 const MAX_EXACT_PIXELS = 4096 * 2304;
 
 /** Map order in the index, so an entry reads the same whichever lane built it. */
-const MAP_ORDER: MapName[] = ['basecolor', 'normal', 'roughness', 'metallic', 'height', 'ao', 'emission'];
+const MAP_ORDER: MapName[] = ['basecolor', 'normal', 'roughness', 'metallic', 'height', 'ao', 'opacity', 'emission'];
 
 /** What one variant is built from: the surface, its own relief and gloss when it has them, and the screen lane. */
 interface Source {
   basecolor: Rgb;
   height?: Gray;
   roughness?: Gray;
+  opacity?: Gray;
   screen?: { spec: Screen; artwork: Rgb };
   /** A tint is the same surface in another paint: it keeps the relief of the variant it came from. */
   reuse?: Variant;
@@ -80,6 +81,8 @@ export class Generator {
       throw new MaterialsError('E_SCHEMA', 'create request invalid', this.validateRequest.errors);
     }
     const target = this.target(request);
+
+    assertDecal(request, target);
 
     const [width, height] = request.resolution ?? [1024, 1024];
     assertResolution(request, target, width, height);
@@ -171,6 +174,7 @@ export class Generator {
       alignment: request.alignment,
       ...(request.tiling ? { tiling: request.tiling } : {}),
       ...(request.aspect ? { aspect: request.aspect } : {}),
+      ...(request.decal ? { decal: request.decal } : {}),
       physical: target.physical,
       // only a photographed surface reads a finish: a pattern and a screen carry their own maps
       ...(photographed ? { finish: target.finish } : {}),
@@ -194,8 +198,14 @@ export class Generator {
   ): Promise<Source> {
     if (request.pattern) {
       // a tiling pattern is drawn in metres of surface; an exact sheet is drawn over itself
-      const world = target.tiling?.worldSize ?? ([1, 1] as [number, number]);
-      const pattern = buildPattern(request.pattern, world, target.physical.roughnessFactor ?? 1, seed);
+      const world = target.tiling?.worldSize ?? request.decal?.worldSize ?? ([1, 1] as [number, number]);
+      const pattern = buildPattern(
+        request.pattern,
+        world,
+        target.physical.roughnessFactor ?? 1,
+        seed,
+        request.decal?.edgeInset,
+      );
       return renderPattern(pattern, width, height);
     }
     if (request.recolor) {
@@ -318,10 +328,29 @@ async function derivedMaps(
   return [
     ...(await reliefMaps(height, roughness)),
     ['metallic', await encodeGrayPng(deriveMetallic(source.basecolor, target.physical))],
+    ...(source.opacity ? ([['opacity', await encodeGrayPng(source.opacity)]] as [MapName, Buffer][]) : []),
     ...(mode === 'luminance' || mode === 'color-mask'
       ? ([['emission', await encodeRgbPng(deriveEmission(source.basecolor, mode))]] as [MapName, Buffer][])
       : []),
   ];
+}
+
+/** A decal is one exact, transparent, fitted surface. Its declared physical face must match its UV sheet. */
+function assertDecal(request: CreateRequest, target: Target): void {
+  if (!request.decal) return;
+  if (target.alignment !== 'exact') throw new MaterialsError('E_SCHEMA', 'a decal needs exact alignment');
+  if (target.physical.alphaMode !== 'BLEND') throw new MaterialsError('E_SCHEMA', 'a decal needs alphaMode BLEND');
+  if (request.pattern?.kind !== 'incident-blood' && request.pattern?.kind !== 'incident-tyre') {
+    throw new MaterialsError('E_SCHEMA', 'a procedural decal needs an incident pattern with an opacity map');
+  }
+  const aspect = target.base?.aspect ?? request.aspect!;
+  const [width, height] = request.decal.worldSize;
+  if (Math.abs(width / height - aspect[0] / aspect[1]) > 1e-9) {
+    throw new MaterialsError('E_SCHEMA', 'decal worldSize must match its exact aspect');
+  }
+  if (request.decal.edgeInset * 2 >= Math.min(width, height)) {
+    throw new MaterialsError('E_SCHEMA', 'decal edgeInset leaves no drawable surface');
+  }
 }
 
 /** A display: no relief anywhere, uniform gloss, and the artwork seen through the pixel structure. */

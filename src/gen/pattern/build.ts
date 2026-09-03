@@ -3,6 +3,8 @@ import type { PatternSpec } from '../../db/types.js';
 import { parseHex } from '../color.js';
 import { GlyphAtlas } from './GlyphAtlas.js';
 import { Grille } from './Grille.js';
+import { IncidentBlood } from './IncidentBlood.js';
+import { IncidentTyre } from './IncidentTyre.js';
 import { HexagonGrid } from './HexagonGrid.js';
 import { Lamp } from './Lamp.js';
 import { LaneField } from './LaneField.js';
@@ -45,6 +47,7 @@ export function buildPattern(
   world: [number, number],
   roughness: number,
   seed: number,
+  edgeInset = 0,
 ): Pattern {
   const cells = spec.cells ?? DEFAULTS.cells;
   if (TWO_COLOR.includes(spec.kind) && spec.colors.length < 2) {
@@ -76,6 +79,7 @@ export function buildPattern(
     split: spec.split ?? DEFAULTS.split,
     roughness,
     world,
+    edgeInset,
     seed,
   };
 
@@ -102,5 +106,9 @@ export function buildPattern(
       return new GlyphAtlas(params);
     case 'grille':
       return new Grille(params);
+    case 'incident-blood':
+      return new IncidentBlood(params);
+    case 'incident-tyre':
+      return new IncidentTyre(params);
   }
 }

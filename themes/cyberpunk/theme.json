@@ -8697,6 +8697,90 @@
           }
         }
       ]
+    },
+    "cyberpunk/incident-blood/mid": {
+      "key": "cyberpunk/incident-blood/mid",
+      "alignment": "exact",
+      "aspect": [
+        2,
+        1
+      ],
+      "decal": {
+        "worldSize": [
+          2.4,
+          1.2
+        ],
+        "edgeInset": 0.08,
+        "surfaceOffset": 0.002,
+        "wrapMode": "clamp",
+        "projection": "surface-fit"
+      },
+      "physical": {
+        "roughnessFactor": 0.62,
+        "metallicFactor": 0,
+        "alphaMode": "BLEND"
+      },
+      "variants": [
+        {
+          "id": "directional-pool",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/incident-blood/mid/directional-pool/basecolor.png",
+            "normal": "assets/incident-blood/mid/directional-pool/normal.png",
+            "roughness": "assets/incident-blood/mid/directional-pool/roughness.png",
+            "metallic": "assets/incident-blood/mid/directional-pool/metallic.png",
+            "height": "assets/incident-blood/mid/directional-pool/height.png",
+            "ao": "assets/incident-blood/mid/directional-pool/ao.png",
+            "opacity": "assets/incident-blood/mid/directional-pool/opacity.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/incident-tyre/poor": {
+      "key": "cyberpunk/incident-tyre/poor",
+      "alignment": "exact",
+      "aspect": [
+        4,
+        1
+      ],
+      "decal": {
+        "worldSize": [
+          3.6,
+          0.9
+        ],
+        "edgeInset": 0.06,
+        "surfaceOffset": 0.002,
+        "wrapMode": "clamp",
+        "projection": "surface-fit"
+      },
+      "physical": {
+        "roughnessFactor": 0.78,
+        "metallicFactor": 0,
+        "alphaMode": "BLEND"
+      },
+      "variants": [
+        {
+          "id": "directional-transfer",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/incident-tyre/poor/directional-transfer/basecolor.png",
+            "normal": "assets/incident-tyre/poor/directional-transfer/normal.png",
+            "roughness": "assets/incident-tyre/poor/directional-transfer/roughness.png",
+            "metallic": "assets/incident-tyre/poor/directional-transfer/metallic.png",
+            "height": "assets/incident-tyre/poor/directional-transfer/height.png",
+            "ao": "assets/incident-tyre/poor/directional-transfer/ao.png",
+            "opacity": "assets/incident-tyre/poor/directional-transfer/opacity.png"
+          }
+        }
+      ]
     }
   }
 }

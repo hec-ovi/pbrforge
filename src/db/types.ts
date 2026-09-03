@@ -1,4 +1,4 @@
-export type MapName = 'basecolor' | 'normal' | 'roughness' | 'metallic' | 'height' | 'ao' | 'emission';
+export type MapName = 'basecolor' | 'normal' | 'roughness' | 'metallic' | 'height' | 'ao' | 'opacity' | 'emission';
 
 export interface Physical {
   breakable?: boolean;
@@ -49,6 +49,20 @@ export interface SurfaceLayout {
   bandHeight?: number;
 }
 
+/** Exact surface placement rules for a transparent incident decal. */
+export interface DecalPlacement {
+  /** Width and height of the fitted receiver quad in world metres. */
+  worldSize: [number, number];
+  /** Fully transparent border kept inside every edge, in metres. */
+  edgeInset: number;
+  /** Separation from the receiving face, in metres, to prevent z-fighting. */
+  surfaceOffset: number;
+  /** Exact decals clamp their UVs and never repeat beyond the receiver. */
+  wrapMode: 'clamp';
+  /** The texture is fitted to one selected surface instead of volume-projected through geometry. */
+  projection: 'surface-fit';
+}
+
 export interface Variant {
   id: string;
   /** How the maps were made. Consumers read the maps the same way either way. */
@@ -67,6 +81,7 @@ export interface MaterialEntry {
   alignment: 'tile' | 'exact';
   tiling?: { worldSize: [number, number] };
   aspect?: [number, number];
+  decal?: DecalPlacement;
   physical: Physical;
   /** Present when the entry has photographed variants: the finish their maps were read under. */
   finish?: Finish;
@@ -98,7 +113,9 @@ export type PatternKind =
   | 'puddle'
   | 'lamp'
   | 'glyph-atlas'
-  | 'grille';
+  | 'grille'
+  | 'incident-blood'
+  | 'incident-tyre';
 
 /** A surface stated as parameters instead of photographed: what the pattern class draws. */
 export interface PatternSpec {
@@ -141,6 +158,7 @@ export interface CreateRequest {
   businessKind?: string;
   tiling?: { worldSize: [number, number] };
   aspect?: [number, number];
+  decal?: DecalPlacement;
   physical?: Physical;
   finish?: FinishSpec;
   flatColor?: string;
