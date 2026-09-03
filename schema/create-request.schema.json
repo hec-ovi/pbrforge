@@ -112,7 +112,7 @@
       "required": ["kind", "colors"],
       "additionalProperties": false,
       "properties": {
-        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "incident-blood", "incident-tyre"] },
+        "kind": { "enum": ["hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "water", "incident-blood", "incident-tyre"] },
         "colors": {
           "type": "array",
           "items": { "type": "string", "pattern": "^#[0-9a-f]{6}$" },
@@ -146,6 +146,12 @@
           "minimum": 0,
           "maximum": 1,
           "description": "lane: how dark and damp the two wheel tracks are; grille: how much dirt sits on the housing; 0 is unworn"
+        },
+        "chop": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "water only: strength of crossing wave directions; 0 is parallel and 1 is choppy"
         },
         "bond": { "enum": ["stack", "running"], "description": "running shifts every other row half a cell; needs an even row count" },
         "axis": { "enum": ["x", "y"], "description": "which way stripe bands, the two-tone split and a lane run" },

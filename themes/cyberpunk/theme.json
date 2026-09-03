@@ -8781,6 +8781,102 @@
           }
         }
       ]
+    },
+    "cyberpunk/water-surface/high_rich": {
+      "key": "cyberpunk/water-surface/high_rich",
+      "aliases": [
+        "cyberpunk/water-surface/poor",
+        "cyberpunk/water-surface/mid",
+        "cyberpunk/water-surface/rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          8,
+          8
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.72,
+        "metallicFactor": 0,
+        "transmission": 0.12,
+        "ior": 1.333,
+        "tint": "#83a9aa"
+      },
+      "variants": [
+        {
+          "id": "lagoon",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/water-surface/high_rich/lagoon/basecolor.png",
+            "normal": "assets/water-surface/high_rich/lagoon/normal.png",
+            "roughness": "assets/water-surface/high_rich/lagoon/roughness.png",
+            "metallic": "assets/water-surface/high_rich/lagoon/metallic.png",
+            "height": "assets/water-surface/high_rich/lagoon/height.png",
+            "ao": "assets/water-surface/high_rich/lagoon/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "river",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/water-surface/high_rich/river/basecolor.png",
+            "normal": "assets/water-surface/high_rich/river/normal.png",
+            "roughness": "assets/water-surface/high_rich/river/roughness.png",
+            "metallic": "assets/water-surface/high_rich/river/metallic.png",
+            "height": "assets/water-surface/high_rich/river/height.png",
+            "ao": "assets/water-surface/high_rich/river/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          }
+        },
+        {
+          "id": "sea-coast",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/water-surface/high_rich/sea-coast/basecolor.png",
+            "normal": "assets/water-surface/high_rich/sea-coast/normal.png",
+            "roughness": "assets/water-surface/high_rich/sea-coast/roughness.png",
+            "metallic": "assets/water-surface/high_rich/sea-coast/metallic.png",
+            "height": "assets/water-surface/high_rich/sea-coast/height.png",
+            "ao": "assets/water-surface/high_rich/sea-coast/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
     }
   }
 }

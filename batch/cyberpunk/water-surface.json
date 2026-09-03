@@ -1,0 +1,80 @@
+[
+  {
+    "key": "cyberpunk/water-surface/high_rich",
+    "aliases": [
+      "cyberpunk/water-surface/poor",
+      "cyberpunk/water-surface/mid",
+      "cyberpunk/water-surface/rich"
+    ],
+    "alignment": "tile",
+    "tiling": { "worldSize": [8, 8] },
+    "description": "calm dark lagoon water with broad crossing ripples",
+    "variantId": "lagoon",
+    "physical": {
+      "roughnessFactor": 0.72,
+      "metallicFactor": 0,
+      "transmission": 0.12,
+      "ior": 1.333,
+      "tint": "#83a9aa"
+    },
+    "resolution": [512, 512],
+    "seed": 18041,
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
+    "pattern": {
+      "kind": "water",
+      "colors": ["#102f36", "#315c61"],
+      "cells": [3, 3],
+      "axis": "y",
+      "depth": 0.16,
+      "chop": 0.18
+    }
+  },
+  {
+    "key": "cyberpunk/water-surface/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "dark river water with an aligned current and crossing ripples",
+    "variantId": "river",
+    "resolution": [512, 512],
+    "seed": 29173,
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    },
+    "pattern": {
+      "kind": "water",
+      "colors": ["#0c2933", "#28535c"],
+      "cells": [2, 6],
+      "axis": "y",
+      "depth": 0.28,
+      "chop": 0.42
+    }
+  },
+  {
+    "key": "cyberpunk/water-surface/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "deep sea-coast water with short multidirectional waves",
+    "variantId": "sea-coast",
+    "resolution": [512, 512],
+    "seed": 37087,
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
+    "pattern": {
+      "kind": "water",
+      "colors": ["#091f2c", "#2b5866"],
+      "cells": [5, 7],
+      "axis": "x",
+      "depth": 0.42,
+      "chop": 0.82
+    }
+  }
+]

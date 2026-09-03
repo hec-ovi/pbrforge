@@ -1,5 +1,7 @@
 # Changelog
 
+0.15.0: tiled water surfaces. `cyberpunk/water-surface/high_rich` carries deterministic `lagoon`, `river` and `sea-coast` variants on an 8 x 8 m world tile, each with complete basecolor, normal, roughness and metallic maps. `bindings/atlas-hydrology.json` maps the three closed Atlas water keys to those exact variants for Engine with no fallback.
+
 0.14.0: exact investigation decals. `cyberpunk/incident-blood/mid` provides a 2.4 x 1.2 m directional pool and `cyberpunk/incident-tyre/poor` provides a 3.6 x 0.9 m directional transfer. Both are deterministic procedural sets with opacity maps, transparent safety insets, flat relief, clamped UVs and a 2 mm fitted surface offset. The material schema now publishes decal placement and the opacity channel.
 
 0.13.0: floor and roof surfaces move to 2 x 2 m world tiles with continuous fields plus exact 2 x 1 m and 2 x 2 m structural modules. Columns now carry continuous graphite or cement with restrained procedural detail. New wall-band keys cover exact 1.4 m facade bands. AC enclosures and zinc service finishes are neutral graphite or mid-grey; bright, off-white, rust, warm, dense seam and small floor-tile variants are removed.

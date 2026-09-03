@@ -123,6 +123,22 @@ describe('create contract', () => {
     await expect(offline.create(request)).rejects.toMatchObject({ code: 'E_COMFY_UNAVAILABLE' });
   });
 
+  it('throws E_GENERATION_FAILED when generated screen artwork does not fit the requested face', async () => {
+    const wrongSize = await tileablePng(32);
+    await expect(
+      new Generator(db, mockComfy(async () => wrongSize)).create({
+        key: 'cyberpunk/ad-screen/mid',
+        alignment: 'exact',
+        aspect: [1, 1],
+        description: 'square district advertisement',
+        resolution: [64, 64],
+        emission: 'image',
+        flatColor: '#08080a',
+        screens: [{ kind: 'led-dot', description: 'a dark portrait advertisement' }],
+      }),
+    ).rejects.toMatchObject({ code: 'E_GENERATION_FAILED' });
+  });
+
   it('shows the ad through the display structure and leaves the screen surface flat', async () => {
     const artwork = await tileablePng(64);
     const graphs: Record<string, { inputs: Record<string, unknown> }>[] = [];

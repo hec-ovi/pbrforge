@@ -160,6 +160,7 @@ const KINDS = [
   "ad-screen-tall",
   "letter-atlas",
   "ac-unit",
+  "water-surface",
 ];
 
 describe("shipped cyberpunk coverage", () => {

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:materials:atlas-hydrology-bindings",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["water.lagoon", "water.river", "water.sea-coast"],
+  "properties": {
+    "water.lagoon": {
+      "allOf": [
+        { "$ref": "#/$defs/binding" },
+        { "properties": { "variantId": { "const": "lagoon" } } }
+      ]
+    },
+    "water.river": {
+      "allOf": [
+        { "$ref": "#/$defs/binding" },
+        { "properties": { "variantId": { "const": "river" } } }
+      ]
+    },
+    "water.sea-coast": {
+      "allOf": [
+        { "$ref": "#/$defs/binding" },
+        { "properties": { "variantId": { "const": "sea-coast" } } }
+      ]
+    }
+  },
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "variantId"],
+      "properties": {
+        "key": {
+          "const": "cyberpunk/water-surface/high_rich"
+        },
+        "variantId": { "type": "string" }
+      }
+    }
+  }
+}

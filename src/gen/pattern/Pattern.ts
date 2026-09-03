@@ -27,6 +27,8 @@ export interface PatternParams {
   wet: number;
   /** How dark and damp the wheel tracks of a lane are: 0 is an unworn road. */
   wear: number;
+  /** Strength of crossing directions in a water surface: 0 is parallel and 1 is choppy. */
+  chop: number;
   bond: 'stack' | 'running';
   axis: 'x' | 'y';
   /** Where the band boundary sits, as a fraction of the tile. */

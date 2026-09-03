@@ -15,6 +15,7 @@ import { PuddleField } from './PuddleField.js';
 import { SlabTiling } from './SlabTiling.js';
 import { Stripe } from './Stripe.js';
 import { TwoTone } from './TwoTone.js';
+import { WaterSurface } from './WaterSurface.js';
 
 /** Sensible middle of the library: a 15 mm joint with a 10 mm chamfer, a shallow relief, faint grain. */
 const DEFAULTS = {
@@ -29,13 +30,14 @@ const DEFAULTS = {
   octaves: 1,
   wet: 0.35,
   wear: 0,
+  chop: 0.5,
   bond: 'stack' as const,
   axis: 'y' as const,
   split: 0.5,
 };
 
 /** Kinds that read as two materials meeting, so they need a second color. */
-const TWO_COLOR: PatternSpec['kind'][] = ['stripe', 'two-tone', 'noise', 'lane', 'puddle', 'glyph-atlas'];
+const TWO_COLOR: PatternSpec['kind'][] = ['stripe', 'two-tone', 'noise', 'lane', 'puddle', 'glyph-atlas', 'water'];
 
 /**
  * The pattern a spec asks for, with defaults filled in and the cross-field
@@ -74,6 +76,7 @@ export function buildPattern(
     octaves: spec.octaves ?? DEFAULTS.octaves,
     wet: spec.wet ?? DEFAULTS.wet,
     wear: spec.wear ?? DEFAULTS.wear,
+    chop: spec.chop ?? DEFAULTS.chop,
     bond: spec.bond ?? DEFAULTS.bond,
     axis: spec.axis ?? DEFAULTS.axis,
     split: spec.split ?? DEFAULTS.split,
@@ -106,6 +109,8 @@ export function buildPattern(
       return new GlyphAtlas(params);
     case 'grille':
       return new Grille(params);
+    case 'water':
+      return new WaterSurface(params);
     case 'incident-blood':
       return new IncidentBlood(params);
     case 'incident-tyre':

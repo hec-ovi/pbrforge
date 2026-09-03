@@ -2,14 +2,14 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.5. Schema stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.15.0. Schema stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
 Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/window-glass/rich`). Consumers (exterior, interior) name GLB materials with exactly this key; the index resolves it to maps, tiling config and alignment mode.
 
 - tier slugs are atlas's, passed verbatim by consumers: `poor`, `mid`, `rich`, `high_rich`.
-- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers: wall, wall-band, wall-trim, column, window-glass, window-frame, curtain, door, door-glass, balcony-slab, balcony-rail, roof, floor-slab, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact (exterior), plaster, tile, ceiling, wood, carpet, rubber, concrete, metal, elevator_door, fabric, glass (interior), sidewalk, road, curb, highway-deck and highway-support (ground and elevated roads), plastic (street props), ad-screen-tall (a 9:16 portrait billboard, where `ad-screen` is 16:9), letter-atlas (signage) and ac-unit (a condenser face for the facade). Highway-support resolves to concrete so supports expose its stable `plain` and `panel` variants. door-glass, balcony-slab, balcony-rail, parapet and aperture-frame also resolve via aliases; the four tiers of plastic, of curb and of ad-screen-tall each resolve to one entry, a refuse sack, a kerb stone and a portrait billboard being the same in every district.
+- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers: wall, wall-band, wall-trim, column, window-glass, window-frame, curtain, door, door-glass, balcony-slab, balcony-rail, roof, floor-slab, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact (exterior), plaster, tile, ceiling, wood, carpet, rubber, concrete, metal, elevator_door, fabric, glass (interior), sidewalk, road, curb, highway-deck, highway-support and water-surface (world surfaces), plastic (street props), ad-screen-tall (a 9:16 portrait billboard, where `ad-screen` is 16:9), letter-atlas (signage) and ac-unit (a condenser face for the facade). Highway-support resolves to concrete so supports expose its stable `plain` and `panel` variants. door-glass, balcony-slab, balcony-rail, parapet and aperture-frame also resolve via aliases; the four tiers of plastic, curb, ad-screen-tall and water-surface each resolve to one entry because those surfaces do not vary by district tier.
 
 ## In
 
@@ -87,6 +87,20 @@ Lay `road` and `highway-deck` with U across the lane from its left boundary. Lay
 
 `light-fixture` is one luminaire per tile of 0.16 x 0.28 m at 256 x 448 px, so a fixture face of that size spans exactly one tile. `lamp` (canonical) is a recessed lens with a hot centre inside a 26 mm housing, `strip` one uniform diffuser whose housing is the fixture geometry, `panel` an even diffuser vignetting into an 18 mm frame; emission comes off the lens. Emissive strength is 1.2, set so the lens renders its falloff instead of clipping to a solid face: at the size a facade samples one fixture, the housing stays unlit, about half the face carries the gradient and only the hot centre blooms. Held by a test over the shipped database.
 
+## Water surfaces
+
+`cyberpunk/water-surface/high_rich` is a tiled 8 x 8 m entry at 512 px. It carries `lagoon` (broad calm ripples), `river` (aligned current) and `sea-coast` (short crossing waves). The procedural wave sums use whole cycles on both tile axes, so every map wraps and the same parameters produce the same pixels. All three variants carry basecolor, normal, roughness and constant dielectric metallic maps. The entry publishes IOR 1.333 and restrained transmission; Engine owns motion and reflection strength.
+
+Atlas bindings are fixed data in [bindings/atlas-hydrology.json](bindings/atlas-hydrology.json), shaped by [schema/atlas-hydrology-bindings.schema.json](schema/atlas-hydrology-bindings.schema.json):
+
+| Atlas key | material key | variant |
+| --- | --- | --- |
+| `water.lagoon` | `cyberpunk/water-surface/high_rich` | `lagoon` |
+| `water.river` | `cyberpunk/water-surface/high_rich` | `river` |
+| `water.sea-coast` | `cyberpunk/water-surface/high_rich` | `sea-coast` |
+
+Every binding resolves directly to the tiled entry and a named variant with the four required PBR maps. Consumers fail closed if a key or variant is absent; there is no fallback binding.
+
 ## AC unit
 
 `ac-unit` is the condenser mounted on a facade: one face per unit, `exact` on a 1 x 1 m square at 1024 px, so the box's front carries it 1:1 and its sides take the same face or a painted flat. `grille` (canonical) is a dark neutral painted housing with a folded edge lip and a round flange around a wire grille, rings at 18 mm on four spokes, over the dark fan cavity with the hub and blades behind. All tiers are graphite or neutral grey with restrained neutral wear, excluding off-white paint, orange rust and bright enclosures.
@@ -135,6 +149,7 @@ Kinds and the parameters each one reads (full ranges in the request schema):
 | `lamp` | one luminaire: a housing bezel around a lens with a hot centre | line (bezel width), bevel (chamfer to the lens), split (hot centre reach), three colors (lens, housing, centre) |
 | `glyph-atlas` | the letter sheet below: one lit glyph per cell | line (core width), bevel (halo reach), three colors |
 | `grille` | one condenser face: a wire grille of rings on four spokes over the fan cavity, in a painted housing with a flange, dirt at the edges | line (ring pitch), bevel (flange width), split (grille diameter over the face), joint (how dark the wire reads), wear (dirt), three colors (paint, cavity, dirt) |
+| `water` | continuous periodic waves, from long parallel ripples to crossing chop | two water colors, cells (whole wave cycles), axis (main direction), depth (normal relief), chop (crossing-direction strength) |
 | `incident-blood` | one directional pool, broad at its source and narrowing along its transfer direction | two blood colors; the decal envelope supplies its physical size and transparent inset |
 | `incident-tyre` | three related tyre ribs on one shallow directional transfer | two rubber colors; the decal envelope supplies its physical size and transparent inset |
 
@@ -142,7 +157,7 @@ Inside a puddle the surface goes flat, dark and damp: one level over the asphalt
 
 Shared over all of them: `colors` (face first), `depth` (relief), `joint` (how much darker and rougher a joint reads), `variation` (tone per cell), `sheen` (gloss per cell), `grain` (fine mottling). `line` and `bevel` are in metres, read against the entry's `tiling.worldSize`; `cells` are whole counts per tile, which is what makes the pattern wrap. On an `exact` entry the sheet stands in for the tile, so those two are fractions of the sheet (of a cell, for `glyph-atlas`).
 
-Cyberpunk pattern library, per tier: plaster (`plain`, canonical, then `hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`plain`, canonical, then 2 x 1 m `panel`, 2 x 2 m `panel-square` and dark `panel-graphite`), ceiling (`plain`, canonical: smooth dark paint, then `panel`: restrained 0.5 m insets), floor-slab (`plain`, canonical and continuous, then 2 x 1 m `panel` and 2 x 2 m `large-slab`), roof (`plain`, canonical and continuous, then 2 x 1 m `panel` and 2 x 2 m `panel-square`), wall (`plain`, `panel`, `panel-square`, `panel-graphite`), wall-band (`cement`, `graphite`, exact 1.4 m height), column (`plain`, `cement`, both continuous), elevator doors (`split`, then `graphite`: two leaves with an exact center seam), curtains (`blind`, then `shade`: shallow vertical slats or plain cloth), fabric (`flat`: even upholstery cloth, matte, whose normal map leans under one code value off flat, so a part small enough to minify a photographed weave has nothing left to alias), sidewalk (`slab`, `plate`, `plain`), road (`street`, `highway`, `wet`, `worn-concrete`), highway-deck (`asphalt`, `concrete`), curb (`stone`), plastic (`bag`: crumpled near-black sheet at 0.55 roughness, the sheen of a refuse sack), light-fixture (`lamp`, `strip`, `panel`), ac-unit (`grille`). Variants of one kind are laid out to read apart at a glance through their large structural divisions and restrained neutral tone, not vivid paint or fine decorative tiling.
+Cyberpunk pattern library, per tier: plaster (`plain`, canonical, then `hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`plain`, canonical, then 2 x 1 m `panel`, 2 x 2 m `panel-square` and dark `panel-graphite`), ceiling (`plain`, canonical: smooth dark paint, then `panel`: restrained 0.5 m insets), floor-slab (`plain`, canonical and continuous, then 2 x 1 m `panel` and 2 x 2 m `large-slab`), roof (`plain`, canonical and continuous, then 2 x 1 m `panel` and 2 x 2 m `panel-square`), wall (`plain`, `panel`, `panel-square`, `panel-graphite`), wall-band (`cement`, `graphite`, exact 1.4 m height), column (`plain`, `cement`, both continuous), elevator doors (`split`, then `graphite`: two leaves with an exact center seam), curtains (`blind`, then `shade`: shallow vertical slats or plain cloth), fabric (`flat`: even upholstery cloth, matte, whose normal map leans under one code value off flat, so a part small enough to minify a photographed weave has nothing left to alias), sidewalk (`slab`, `plate`, `plain`), road (`street`, `highway`, `wet`, `worn-concrete`), highway-deck (`asphalt`, `concrete`), water-surface (`lagoon`, `river`, `sea-coast`), curb (`stone`), plastic (`bag`: crumpled near-black sheet at 0.55 roughness, the sheen of a refuse sack), light-fixture (`lamp`, `strip`, `panel`), ac-unit (`grille`). Variants of one kind are laid out to read apart at a glance through their large structural divisions and restrained neutral tone, not vivid paint or fine decorative tiling.
 
 ## Incident decals
 
@@ -214,4 +229,4 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 
 ## Depends on
 
-None (root of the dependency graph).
+- Atlas hydrology material-key contract, for the binding data only. Database resolution and generation have no runtime dependency on Atlas.

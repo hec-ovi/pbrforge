@@ -1,0 +1,14 @@
+{
+  "water.lagoon": {
+    "key": "cyberpunk/water-surface/high_rich",
+    "variantId": "lagoon"
+  },
+  "water.river": {
+    "key": "cyberpunk/water-surface/high_rich",
+    "variantId": "river"
+  },
+  "water.sea-coast": {
+    "key": "cyberpunk/water-surface/high_rich",
+    "variantId": "sea-coast"
+  }
+}

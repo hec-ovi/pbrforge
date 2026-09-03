@@ -114,6 +114,7 @@ export type PatternKind =
   | 'lamp'
   | 'glyph-atlas'
   | 'grille'
+  | 'water'
   | 'incident-blood'
   | 'incident-tyre';
 
@@ -135,6 +136,8 @@ export interface PatternSpec {
   octaves?: number;
   wet?: number;
   wear?: number;
+  /** Water only: strength of crossing wave directions, 0 for long parallel ripples and 1 for chop. */
+  chop?: number;
   bond?: 'stack' | 'running';
   axis?: 'x' | 'y';
   split?: number;
