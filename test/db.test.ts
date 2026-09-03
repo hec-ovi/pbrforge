@@ -303,23 +303,58 @@ describe('shipped cyberpunk coverage', () => {
     }
   });
 
-  it('ships restrained deterministic concrete with two-to-one facade panels', async () => {
+  it('ships neutral deterministic concrete with exact two by one facade panels', async () => {
     const themeDir = db.themeDir('cyberpunk');
     for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
       const entry = db.resolve(`cyberpunk/concrete/${tier}`);
-      expect(entry.tiling?.worldSize).toEqual([3, 3]);
+      expect(entry.tiling?.worldSize).toEqual([2, 2]);
       expect(entry.finish).toBeUndefined();
       expect(entry.variants.map((variant) => [variant.id, variant.class, variant.resolution])).toEqual([
         ['plain', 'pattern', [512, 512]],
         ['panel', 'pattern', [512, 512]],
-        ['rib', 'pattern', [512, 512]],
-        ['block', 'pattern', [512, 512]],
+        ['panel-square', 'pattern', [512, 512]],
+        ['panel-graphite', 'pattern', [512, 512]],
       ]);
 
       const panel = entry.variants[1];
+      expect(panel.layout).toEqual({
+        family: 'panel',
+        moduleSize: [2, 1],
+        jointWidth: 0.02,
+        origin: [0, 0],
+        orientation: 'horizontal',
+      });
       const { data, info } = await sharp(join(themeDir, panel.maps.height!)).greyscale().raw().toBuffer({ resolveWithObject: true });
       const pixel = (x: number, y: number) => data[(y * info.width + x) * info.channels];
       expect(pixel(256, 256)).toBeLessThan(pixel(256, 128) - 10);
+    }
+  });
+
+  it('ships walls only as neutral continuous fields and large panels', async () => {
+    const themeDir = db.themeDir('cyberpunk');
+    const rejected = new Set([
+      '1', '2', '3', '4', 'panel-ochre', 'panel-bone', 'panel-rust', 'panel-slate', 'panel-teal',
+      'tint-slate', 'tint-teal',
+    ]);
+    for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
+      const entry = db.resolve(`cyberpunk/wall/${tier}`);
+      expect(entry.tiling?.worldSize).toEqual([2, 2]);
+      expect(entry.variants.map((variant) => variant.id)).toEqual(['plain', 'panel', 'panel-square', 'panel-graphite']);
+      for (const variant of entry.variants) {
+        expect(rejected.has(variant.id), `${entry.key}:${variant.id}`).toBe(false);
+        expect(variant.layout?.origin).toEqual([0, 0]);
+        const stats = await sharp(join(themeDir, variant.maps.basecolor)).stats();
+        const means = stats.channels.slice(0, 3).map((channel) => channel.mean);
+        expect(Math.max(...means), `${entry.key}:${variant.id} brightness`).toBeLessThan(125);
+        expect(Math.max(...means) - Math.min(...means), `${entry.key}:${variant.id} chroma`).toBeLessThan(12);
+      }
+      expect(entry.variants[1].layout).toEqual({
+        family: 'panel',
+        moduleSize: [2, 1],
+        jointWidth: 0.02,
+        origin: [0, 0],
+        orientation: 'horizontal',
+      });
     }
   });
 

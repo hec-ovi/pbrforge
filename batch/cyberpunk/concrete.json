@@ -1,154 +1,21 @@
 [
-  {
-    "key": "cyberpunk/concrete/poor",
-    "alignment": "tile",
-    "description": "subtly mottled raw concrete",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.90, "metallicFactor": 0 },
-    "variantId": "plain",
-    "resolution": [512, 512],
-    "pattern": { "kind": "noise", "colors": ["#666864", "#70726e"], "cells": [6, 6], "octaves": 2, "depth": 0.035, "variation": 0.018, "grain": 0.006 },
-    "overwrite": true
-  },
-  {
-    "key": "cyberpunk/concrete/poor",
-    "alignment": "tile",
-    "append": true,
-    "description": "two-to-one precast concrete panels with chamfered joints",
-    "variantId": "panel",
-    "resolution": [512, 512],
-    "pattern": { "kind": "panel-grid", "colors": ["#686a66"], "cells": [1, 2], "line": 0.025, "bevel": 0.025, "depth": 0.18, "joint": 0.30, "variation": 0.018, "grain": 0.006 }
-  },
-  {
-    "key": "cyberpunk/concrete/poor",
-    "alignment": "tile",
-    "append": true,
-    "description": "vertically ribbed raw concrete",
-    "variantId": "rib",
-    "resolution": [512, 512],
-    "pattern": { "kind": "stripe", "colors": ["#686a66", "#595b58"], "cells": [12, 1], "axis": "x", "split": 0.60, "line": 0.014, "depth": 0.18, "joint": 0.26, "variation": 0.012, "grain": 0.004 }
-  },
-  {
-    "key": "cyberpunk/concrete/poor",
-    "alignment": "tile",
-    "append": true,
-    "description": "concrete blockwork in a running bond",
-    "variantId": "block",
-    "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#6b6d68"], "cells": [4, 6], "bond": "running", "line": 0.018, "bevel": 0.01, "depth": 0.18, "joint": 0.30, "variation": 0.025, "grain": 0.005 }
-  },
-  {
-    "key": "cyberpunk/concrete/mid",
-    "alignment": "tile",
-    "description": "subtly mottled neutral concrete",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.82, "metallicFactor": 0 },
-    "variantId": "plain",
-    "resolution": [512, 512],
-    "pattern": { "kind": "noise", "colors": ["#7b7d79", "#858783"], "cells": [6, 6], "octaves": 2, "depth": 0.03, "variation": 0.016, "grain": 0.005 },
-    "overwrite": true
-  },
-  {
-    "key": "cyberpunk/concrete/mid",
-    "alignment": "tile",
-    "append": true,
-    "description": "two-to-one precast concrete panels with chamfered joints",
-    "variantId": "panel",
-    "resolution": [512, 512],
-    "pattern": { "kind": "panel-grid", "colors": ["#7e807c"], "cells": [1, 2], "line": 0.023, "bevel": 0.023, "depth": 0.16, "joint": 0.27, "variation": 0.016, "grain": 0.005 }
-  },
-  {
-    "key": "cyberpunk/concrete/mid",
-    "alignment": "tile",
-    "append": true,
-    "description": "vertically ribbed neutral concrete",
-    "variantId": "rib",
-    "resolution": [512, 512],
-    "pattern": { "kind": "stripe", "colors": ["#7e807c", "#6e706c"], "cells": [12, 1], "axis": "x", "split": 0.60, "line": 0.013, "depth": 0.16, "joint": 0.24, "variation": 0.01, "grain": 0.004 }
-  },
-  {
-    "key": "cyberpunk/concrete/mid",
-    "alignment": "tile",
-    "append": true,
-    "description": "neutral concrete blockwork in a running bond",
-    "variantId": "block",
-    "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#81837e"], "cells": [4, 6], "bond": "running", "line": 0.017, "bevel": 0.009, "depth": 0.16, "joint": 0.27, "variation": 0.022, "grain": 0.004 }
-  },
-  {
-    "key": "cyberpunk/concrete/rich",
-    "alignment": "tile",
-    "description": "subtly mottled honed concrete",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.66, "metallicFactor": 0 },
-    "variantId": "plain",
-    "resolution": [512, 512],
-    "pattern": { "kind": "noise", "colors": ["#93938f", "#9b9b97"], "cells": [6, 6], "octaves": 2, "depth": 0.025, "variation": 0.013, "grain": 0.004 },
-    "overwrite": true
-  },
-  {
-    "key": "cyberpunk/concrete/rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "two-to-one honed precast panels with chamfered joints",
-    "variantId": "panel",
-    "resolution": [512, 512],
-    "pattern": { "kind": "panel-grid", "colors": ["#969692"], "cells": [1, 2], "line": 0.021, "bevel": 0.021, "depth": 0.13, "joint": 0.23, "variation": 0.013, "grain": 0.004 }
-  },
-  {
-    "key": "cyberpunk/concrete/rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "vertically ribbed honed concrete",
-    "variantId": "rib",
-    "resolution": [512, 512],
-    "pattern": { "kind": "stripe", "colors": ["#969692", "#868682"], "cells": [12, 1], "axis": "x", "split": 0.62, "line": 0.012, "depth": 0.13, "joint": 0.21, "variation": 0.008, "grain": 0.003 }
-  },
-  {
-    "key": "cyberpunk/concrete/rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "honed concrete blockwork in a running bond",
-    "variantId": "block",
-    "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#999995"], "cells": [4, 6], "bond": "running", "line": 0.015, "bevel": 0.008, "depth": 0.13, "joint": 0.23, "variation": 0.018, "grain": 0.003 }
-  },
-  {
-    "key": "cyberpunk/concrete/high_rich",
-    "alignment": "tile",
-    "description": "subtly mottled graphite concrete",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
-    "variantId": "plain",
-    "resolution": [512, 512],
-    "pattern": { "kind": "noise", "colors": ["#454b50", "#4c5257"], "cells": [6, 6], "octaves": 2, "depth": 0.02, "variation": 0.01, "grain": 0.003 },
-    "overwrite": true
-  },
-  {
-    "key": "cyberpunk/concrete/high_rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "two-to-one graphite precast panels with chamfered joints",
-    "variantId": "panel",
-    "resolution": [512, 512],
-    "pattern": { "kind": "panel-grid", "colors": ["#484e53"], "cells": [1, 2], "line": 0.018, "bevel": 0.018, "depth": 0.11, "joint": 0.20, "variation": 0.01, "grain": 0.003 }
-  },
-  {
-    "key": "cyberpunk/concrete/high_rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "vertically ribbed graphite concrete",
-    "variantId": "rib",
-    "resolution": [512, 512],
-    "pattern": { "kind": "stripe", "colors": ["#484e53", "#393f44"], "cells": [12, 1], "axis": "x", "split": 0.62, "line": 0.01, "depth": 0.11, "joint": 0.19, "variation": 0.006, "grain": 0.002 }
-  },
-  {
-    "key": "cyberpunk/concrete/high_rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "graphite concrete blockwork in a running bond",
-    "variantId": "block",
-    "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#4b5156"], "cells": [4, 6], "bond": "running", "line": 0.014, "bevel": 0.007, "depth": 0.11, "joint": 0.20, "variation": 0.015, "grain": 0.002 }
-  }
+  {"key":"cyberpunk/concrete/poor","alignment":"tile","description":"continuous worn neutral cement with restrained fine grain","tiling":{"worldSize":[2,2]},"physical":{"roughnessFactor":0.9,"metallicFactor":0},"variantId":"plain","resolution":[512,512],"pattern":{"kind":"noise","colors":["#505451","#5d615d"],"cells":[4,4],"octaves":2,"depth":0.03,"variation":0.02,"grain":0.006},"layout":{"family":"continuous","origin":[0,0],"orientation":"isotropic"},"overwrite":true},
+  {"key":"cyberpunk/concrete/poor","alignment":"tile","append":true,"description":"two metre by one metre worn precast cement panels","variantId":"panel","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#565a56"],"cells":[1,2],"line":0.02,"bevel":0.014,"depth":0.15,"joint":0.26,"variation":0.018,"grain":0.005},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+  {"key":"cyberpunk/concrete/poor","alignment":"tile","append":true,"description":"two metre square worn precast cement panels","variantId":"panel-square","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#535753"],"cells":[1,1],"line":0.02,"bevel":0.014,"depth":0.15,"joint":0.26,"variation":0.016,"grain":0.005},"layout":{"family":"panel","moduleSize":[2,2],"jointWidth":0.02,"origin":[0,0],"orientation":"isotropic"}},
+  {"key":"cyberpunk/concrete/poor","alignment":"tile","append":true,"description":"two metre by one metre charcoal precast concrete panels","variantId":"panel-graphite","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#343936"],"cells":[1,2],"line":0.02,"bevel":0.014,"depth":0.13,"joint":0.23,"variation":0.015,"grain":0.004},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+
+  {"key":"cyberpunk/concrete/mid","alignment":"tile","description":"continuous neutral cement with restrained fine grain","tiling":{"worldSize":[2,2]},"physical":{"roughnessFactor":0.84,"metallicFactor":0},"variantId":"plain","resolution":[512,512],"pattern":{"kind":"noise","colors":["#5a5f5b","#666b67"],"cells":[4,4],"octaves":2,"depth":0.026,"variation":0.018,"grain":0.005},"layout":{"family":"continuous","origin":[0,0],"orientation":"isotropic"},"overwrite":true},
+  {"key":"cyberpunk/concrete/mid","alignment":"tile","append":true,"description":"two metre by one metre neutral precast cement panels","variantId":"panel","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#606560"],"cells":[1,2],"line":0.02,"bevel":0.013,"depth":0.13,"joint":0.23,"variation":0.016,"grain":0.004},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+  {"key":"cyberpunk/concrete/mid","alignment":"tile","append":true,"description":"two metre square neutral precast cement panels","variantId":"panel-square","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#5d625e"],"cells":[1,1],"line":0.02,"bevel":0.013,"depth":0.13,"joint":0.23,"variation":0.014,"grain":0.004},"layout":{"family":"panel","moduleSize":[2,2],"jointWidth":0.02,"origin":[0,0],"orientation":"isotropic"}},
+  {"key":"cyberpunk/concrete/mid","alignment":"tile","append":true,"description":"two metre by one metre graphite precast concrete panels","variantId":"panel-graphite","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#303638"],"cells":[1,2],"line":0.02,"bevel":0.013,"depth":0.12,"joint":0.21,"variation":0.014,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+
+  {"key":"cyberpunk/concrete/rich","alignment":"tile","description":"continuous honed neutral cement with restrained fine grain","tiling":{"worldSize":[2,2]},"physical":{"roughnessFactor":0.76,"metallicFactor":0},"variantId":"plain","resolution":[512,512],"pattern":{"kind":"noise","colors":["#626864","#6d736f"],"cells":[4,4],"octaves":2,"depth":0.022,"variation":0.015,"grain":0.004},"layout":{"family":"continuous","origin":[0,0],"orientation":"isotropic"},"overwrite":true},
+  {"key":"cyberpunk/concrete/rich","alignment":"tile","append":true,"description":"two metre by one metre honed precast cement panels","variantId":"panel","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#686e69"],"cells":[1,2],"line":0.02,"bevel":0.012,"depth":0.11,"joint":0.19,"variation":0.013,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+  {"key":"cyberpunk/concrete/rich","alignment":"tile","append":true,"description":"two metre square honed precast cement panels","variantId":"panel-square","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#656b66"],"cells":[1,1],"line":0.02,"bevel":0.012,"depth":0.11,"joint":0.19,"variation":0.012,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,2],"jointWidth":0.02,"origin":[0,0],"orientation":"isotropic"}},
+  {"key":"cyberpunk/concrete/rich","alignment":"tile","append":true,"description":"two metre by one metre black graphite precast concrete panels","variantId":"panel-graphite","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#293035"],"cells":[1,2],"line":0.02,"bevel":0.012,"depth":0.1,"joint":0.18,"variation":0.012,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+
+  {"key":"cyberpunk/concrete/high_rich","alignment":"tile","description":"continuous dark graphite cement with restrained fine grain","tiling":{"worldSize":[2,2]},"physical":{"roughnessFactor":0.66,"metallicFactor":0},"variantId":"plain","resolution":[512,512],"pattern":{"kind":"noise","colors":["#343a3d","#40474b"],"cells":[4,4],"octaves":2,"depth":0.018,"variation":0.012,"grain":0.003},"layout":{"family":"continuous","origin":[0,0],"orientation":"isotropic"},"overwrite":true},
+  {"key":"cyberpunk/concrete/high_rich","alignment":"tile","append":true,"description":"two metre by one metre dark precast cement panels","variantId":"panel","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#3c4346"],"cells":[1,2],"line":0.02,"bevel":0.01,"depth":0.09,"joint":0.16,"variation":0.01,"grain":0.002},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+  {"key":"cyberpunk/concrete/high_rich","alignment":"tile","append":true,"description":"two metre square dark precast cement panels","variantId":"panel-square","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#394043"],"cells":[1,1],"line":0.02,"bevel":0.01,"depth":0.09,"joint":0.16,"variation":0.009,"grain":0.002},"layout":{"family":"panel","moduleSize":[2,2],"jointWidth":0.02,"origin":[0,0],"orientation":"isotropic"}},
+  {"key":"cyberpunk/concrete/high_rich","alignment":"tile","append":true,"description":"two metre by one metre near-black graphite precast concrete panels","variantId":"panel-graphite","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#1d2429"],"cells":[1,2],"line":0.02,"bevel":0.01,"depth":0.08,"joint":0.15,"variation":0.009,"grain":0.002},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}}
 ]

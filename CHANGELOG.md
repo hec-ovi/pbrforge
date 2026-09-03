@@ -1,5 +1,7 @@
 # Changelog
 
+0.11.0: wall and concrete are rebuilt as neutral procedural families on a 2 x 2 m world tile. `panel` is the consumer-stable 2 x 1 m cement module with a 20 mm joint; `plain` is the consumer-stable fitted field. The families also carry 2 x 2 m cement and 2 x 1 m graphite panels. Orange, bright, brown, brick, masonry, tint and dense small-tile facade variants are removed.
+
 0.10.0: structured surface variants publish their visible module size, joint width, stable world origin and orientation in metres. The surface-source prompt now excludes baked panel geometry, scene lighting, object-shaped stains and generation artifacts, so generated grain stays independent of procedural structural joints.
 
 0.9.25: flat-only column, metal, fire-escape, roof-artifact and signage entries no longer carry photographed-finish metadata. A shipped-database test holds source class and finish metadata together.

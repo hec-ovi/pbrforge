@@ -1,110 +1,21 @@
 [
-  {
-    "key": "cyberpunk/wall/poor",
-    "aliases": [
-      "cyberpunk/parapet/poor"
-    ],
-    "alignment": "tile",
-    "description": "grimy stained concrete wall panels of a cheap residential megablock, soot streaks, patched repairs, faded and dirty, cold sodium-tinged grey",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.92,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "roughness": [
-        0.88,
-        0.96
-      ],
-      "grain": 0.25,
-      "relief": 2
-    },
-    "variants": 2
-  },
-  {
-    "key": "cyberpunk/wall/mid",
-    "aliases": [
-      "cyberpunk/parapet/mid"
-    ],
-    "alignment": "tile",
-    "description": "precast concrete wall panels with hairline seams, light urban weathering, dry chalky surface, neutral grey",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.85,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "roughness": [
-        0.82,
-        0.92
-      ],
-      "grain": 0.2,
-      "relief": 2
-    },
-    "variants": 2
-  },
-  {
-    "key": "cyberpunk/wall/rich",
-    "aliases": [
-      "cyberpunk/parapet/rich"
-    ],
-    "alignment": "tile",
-    "description": "polished architectural concrete wall panels with fine aggregate, clean and precise, warm light grey",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.7,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "roughness": [
-        0.7,
-        0.8
-      ],
-      "grain": 0.15,
-      "relief": 1.6
-    },
-    "variants": 2
-  },
-  {
-    "key": "cyberpunk/wall/high_rich",
-    "aliases": [
-      "cyberpunk/parapet/high_rich"
-    ],
-    "alignment": "tile",
-    "description": "polished dark grey granite wall surface, flat, subtle stone veining, immaculate",
-    "tiling": {
-      "worldSize": [
-        3,
-        3
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.6,
-      "metallicFactor": 0
-    },
-    "finish": {
-      "roughness": [
-        0.56,
-        0.66
-      ],
-      "grain": 0.1,
-      "relief": 1.2
-    },
-    "variants": 2
-  }
+  {"key":"cyberpunk/wall/poor","aliases":["cyberpunk/parapet/poor"],"alignment":"tile","description":"continuous graphite facade field with restrained mineral grain","tiling":{"worldSize":[2,2]},"physical":{"roughnessFactor":0.9,"metallicFactor":0},"variantId":"plain","resolution":[512,512],"pattern":{"kind":"noise","colors":["#292d30","#34393c"],"cells":[4,4],"octaves":2,"depth":0.025,"variation":0.018,"grain":0.005},"layout":{"family":"continuous","origin":[0,0],"orientation":"isotropic"},"overwrite":true},
+  {"key":"cyberpunk/wall/poor","alignment":"tile","append":true,"description":"two metre by one metre cement facade panels","variantId":"panel","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#555956"],"cells":[1,2],"line":0.02,"bevel":0.014,"depth":0.14,"joint":0.24,"variation":0.018,"grain":0.004},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+  {"key":"cyberpunk/wall/poor","alignment":"tile","append":true,"description":"two metre square cement facade panels","variantId":"panel-square","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#525653"],"cells":[1,1],"line":0.02,"bevel":0.014,"depth":0.14,"joint":0.24,"variation":0.015,"grain":0.004},"layout":{"family":"panel","moduleSize":[2,2],"jointWidth":0.02,"origin":[0,0],"orientation":"isotropic"}},
+  {"key":"cyberpunk/wall/poor","alignment":"tile","append":true,"description":"two metre by one metre graphite facade panels","variantId":"panel-graphite","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#2d3235"],"cells":[1,2],"line":0.02,"bevel":0.014,"depth":0.12,"joint":0.22,"variation":0.015,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+
+  {"key":"cyberpunk/wall/mid","aliases":["cyberpunk/parapet/mid"],"alignment":"tile","description":"continuous charcoal facade field with restrained mineral grain","tiling":{"worldSize":[2,2]},"physical":{"roughnessFactor":0.84,"metallicFactor":0},"variantId":"plain","resolution":[512,512],"pattern":{"kind":"noise","colors":["#252a2e","#30363a"],"cells":[4,4],"octaves":2,"depth":0.022,"variation":0.016,"grain":0.004},"layout":{"family":"continuous","origin":[0,0],"orientation":"isotropic"},"overwrite":true},
+  {"key":"cyberpunk/wall/mid","alignment":"tile","append":true,"description":"two metre by one metre neutral cement facade panels","variantId":"panel","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#606562"],"cells":[1,2],"line":0.02,"bevel":0.013,"depth":0.13,"joint":0.22,"variation":0.016,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+  {"key":"cyberpunk/wall/mid","alignment":"tile","append":true,"description":"two metre square neutral cement facade panels","variantId":"panel-square","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#5c615e"],"cells":[1,1],"line":0.02,"bevel":0.013,"depth":0.13,"joint":0.22,"variation":0.014,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,2],"jointWidth":0.02,"origin":[0,0],"orientation":"isotropic"}},
+  {"key":"cyberpunk/wall/mid","alignment":"tile","append":true,"description":"two metre by one metre graphite facade panels","variantId":"panel-graphite","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#282e32"],"cells":[1,2],"line":0.02,"bevel":0.013,"depth":0.11,"joint":0.2,"variation":0.014,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+
+  {"key":"cyberpunk/wall/rich","aliases":["cyberpunk/parapet/rich"],"alignment":"tile","description":"continuous dark graphite facade field with restrained mineral grain","tiling":{"worldSize":[2,2]},"physical":{"roughnessFactor":0.74,"metallicFactor":0},"variantId":"plain","resolution":[512,512],"pattern":{"kind":"noise","colors":["#20262b","#2b3237"],"cells":[4,4],"octaves":2,"depth":0.018,"variation":0.014,"grain":0.003},"layout":{"family":"continuous","origin":[0,0],"orientation":"isotropic"},"overwrite":true},
+  {"key":"cyberpunk/wall/rich","alignment":"tile","append":true,"description":"two metre by one metre honed cement facade panels","variantId":"panel","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#686e6b"],"cells":[1,2],"line":0.02,"bevel":0.012,"depth":0.11,"joint":0.19,"variation":0.013,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+  {"key":"cyberpunk/wall/rich","alignment":"tile","append":true,"description":"two metre square honed cement facade panels","variantId":"panel-square","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#646a67"],"cells":[1,1],"line":0.02,"bevel":0.012,"depth":0.11,"joint":0.19,"variation":0.012,"grain":0.003},"layout":{"family":"panel","moduleSize":[2,2],"jointWidth":0.02,"origin":[0,0],"orientation":"isotropic"}},
+  {"key":"cyberpunk/wall/rich","alignment":"tile","append":true,"description":"two metre by one metre black graphite facade panels","variantId":"panel-graphite","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#232a2f"],"cells":[1,2],"line":0.02,"bevel":0.012,"depth":0.1,"joint":0.18,"variation":0.012,"grain":0.002},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+
+  {"key":"cyberpunk/wall/high_rich","aliases":["cyberpunk/parapet/high_rich"],"alignment":"tile","description":"continuous near-black graphite facade field with restrained mineral grain","tiling":{"worldSize":[2,2]},"physical":{"roughnessFactor":0.62,"metallicFactor":0},"variantId":"plain","resolution":[512,512],"pattern":{"kind":"noise","colors":["#171c21","#22282e"],"cells":[4,4],"octaves":2,"depth":0.015,"variation":0.012,"grain":0.002},"layout":{"family":"continuous","origin":[0,0],"orientation":"isotropic"},"overwrite":true},
+  {"key":"cyberpunk/wall/high_rich","alignment":"tile","append":true,"description":"two metre by one metre dark cement facade panels","variantId":"panel","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#4a5052"],"cells":[1,2],"line":0.02,"bevel":0.01,"depth":0.09,"joint":0.16,"variation":0.01,"grain":0.002},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}},
+  {"key":"cyberpunk/wall/high_rich","alignment":"tile","append":true,"description":"two metre square dark cement facade panels","variantId":"panel-square","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#464c4e"],"cells":[1,1],"line":0.02,"bevel":0.01,"depth":0.09,"joint":0.16,"variation":0.009,"grain":0.002},"layout":{"family":"panel","moduleSize":[2,2],"jointWidth":0.02,"origin":[0,0],"orientation":"isotropic"}},
+  {"key":"cyberpunk/wall/high_rich","alignment":"tile","append":true,"description":"two metre by one metre near-black graphite facade panels","variantId":"panel-graphite","resolution":[512,512],"pattern":{"kind":"panel-grid","colors":["#1b2126"],"cells":[1,2],"line":0.02,"bevel":0.01,"depth":0.08,"joint":0.15,"variation":0.009,"grain":0.002},"layout":{"family":"panel","moduleSize":[2,1],"jointWidth":0.02,"origin":[0,0],"orientation":"horizontal"}}
 ]

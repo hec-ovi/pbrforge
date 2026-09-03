@@ -3,147 +3,109 @@
   "entries": {
     "cyberpunk/wall/poor": {
       "key": "cyberpunk/wall/poor",
+      "aliases": [
+        "cyberpunk/parapet/poor"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
-        "roughnessFactor": 0.92,
-        "metallicFactor": 0,
-        "breakable": false
+        "roughnessFactor": 0.9,
+        "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "panel-ochre",
+          "id": "plain",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/wall/poor/panel-ochre/basecolor.png",
-            "normal": "assets/wall/poor/panel-ochre/normal.png",
-            "roughness": "assets/wall/poor/panel-ochre/roughness.png",
-            "metallic": "assets/wall/poor/panel-ochre/metallic.png",
-            "height": "assets/wall/poor/panel-ochre/height.png",
-            "ao": "assets/wall/poor/panel-ochre/ao.png"
+            "basecolor": "assets/wall/poor/plain/basecolor.png",
+            "normal": "assets/wall/poor/plain/normal.png",
+            "roughness": "assets/wall/poor/plain/roughness.png",
+            "metallic": "assets/wall/poor/plain/metallic.png",
+            "height": "assets/wall/poor/plain/height.png",
+            "ao": "assets/wall/poor/plain/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/1/basecolor.png",
-            "normal": "assets/wall/poor/1/normal.png",
-            "roughness": "assets/wall/poor/1/roughness.png",
-            "metallic": "assets/wall/poor/1/metallic.png",
-            "height": "assets/wall/poor/1/height.png",
-            "ao": "assets/wall/poor/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/2/basecolor.png",
-            "normal": "assets/wall/poor/2/normal.png",
-            "roughness": "assets/wall/poor/2/roughness.png",
-            "metallic": "assets/wall/poor/2/metallic.png",
-            "height": "assets/wall/poor/2/height.png",
-            "ao": "assets/wall/poor/2/ao.png"
-          }
-        },
-        {
-          "id": "tint-slate",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/tint-slate/basecolor.png",
-            "normal": "assets/wall/poor/2/normal.png",
-            "roughness": "assets/wall/poor/2/roughness.png",
-            "metallic": "assets/wall/poor/2/metallic.png",
-            "height": "assets/wall/poor/2/height.png",
-            "ao": "assets/wall/poor/2/ao.png"
-          }
-        },
-        {
-          "id": "3",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/3/basecolor.png",
-            "normal": "assets/wall/poor/3/normal.png",
-            "roughness": "assets/wall/poor/3/roughness.png",
-            "metallic": "assets/wall/poor/3/metallic.png",
-            "height": "assets/wall/poor/3/height.png",
-            "ao": "assets/wall/poor/3/ao.png"
-          }
-        },
-        {
-          "id": "4",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/4/basecolor.png",
-            "normal": "assets/wall/poor/4/normal.png",
-            "roughness": "assets/wall/poor/4/roughness.png",
-            "metallic": "assets/wall/poor/4/metallic.png",
-            "height": "assets/wall/poor/4/height.png",
-            "ao": "assets/wall/poor/4/ao.png"
-          }
-        },
-        {
-          "id": "tint-teal",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/tint-teal/basecolor.png",
-            "normal": "assets/wall/poor/4/normal.png",
-            "roughness": "assets/wall/poor/4/roughness.png",
-            "metallic": "assets/wall/poor/4/metallic.png",
-            "height": "assets/wall/poor/4/height.png",
-            "ao": "assets/wall/poor/4/ao.png"
-          }
-        },
-        {
-          "id": "panel-slate",
+          "id": "panel",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/wall/poor/panel-slate/basecolor.png",
-            "normal": "assets/wall/poor/panel-slate/normal.png",
-            "roughness": "assets/wall/poor/panel-slate/roughness.png",
-            "metallic": "assets/wall/poor/panel-slate/metallic.png",
-            "height": "assets/wall/poor/panel-slate/height.png",
-            "ao": "assets/wall/poor/panel-slate/ao.png"
+            "basecolor": "assets/wall/poor/panel/basecolor.png",
+            "normal": "assets/wall/poor/panel/normal.png",
+            "roughness": "assets/wall/poor/panel/roughness.png",
+            "metallic": "assets/wall/poor/panel/metallic.png",
+            "height": "assets/wall/poor/panel/height.png",
+            "ao": "assets/wall/poor/panel/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        },
+        {
+          "id": "panel-square",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/wall/poor/panel-square/basecolor.png",
+            "normal": "assets/wall/poor/panel-square/normal.png",
+            "roughness": "assets/wall/poor/panel-square/roughness.png",
+            "metallic": "assets/wall/poor/panel-square/metallic.png",
+            "height": "assets/wall/poor/panel-square/height.png",
+            "ao": "assets/wall/poor/panel-square/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
           "id": "panel-graphite",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/wall/poor/panel-graphite/basecolor.png",
@@ -152,68 +114,22 @@
             "metallic": "assets/wall/poor/panel-graphite/metallic.png",
             "height": "assets/wall/poor/panel-graphite/height.png",
             "ao": "assets/wall/poor/panel-graphite/ao.png"
-          }
-        },
-        {
-          "id": "panel-bone",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/panel-bone/basecolor.png",
-            "normal": "assets/wall/poor/panel-bone/normal.png",
-            "roughness": "assets/wall/poor/panel-bone/roughness.png",
-            "metallic": "assets/wall/poor/panel-bone/metallic.png",
-            "height": "assets/wall/poor/panel-bone/height.png",
-            "ao": "assets/wall/poor/panel-bone/ao.png"
-          }
-        },
-        {
-          "id": "panel-rust",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/panel-rust/basecolor.png",
-            "normal": "assets/wall/poor/panel-rust/normal.png",
-            "roughness": "assets/wall/poor/panel-rust/roughness.png",
-            "metallic": "assets/wall/poor/panel-rust/metallic.png",
-            "height": "assets/wall/poor/panel-rust/height.png",
-            "ao": "assets/wall/poor/panel-rust/ao.png"
-          }
-        },
-        {
-          "id": "panel-teal",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/poor/panel-teal/basecolor.png",
-            "normal": "assets/wall/poor/panel-teal/normal.png",
-            "roughness": "assets/wall/poor/panel-teal/roughness.png",
-            "metallic": "assets/wall/poor/panel-teal/metallic.png",
-            "height": "assets/wall/poor/panel-teal/height.png",
-            "ao": "assets/wall/poor/panel-teal/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/parapet/poor"
-      ],
-      "finish": {
-        "roughness": [
-          0.88,
-          0.96
-        ],
-        "grain": 0.25,
-        "relief": 2
-      }
+      ]
     },
     "cyberpunk/wall/mid": {
       "key": "cyberpunk/wall/mid",
@@ -223,151 +139,103 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
-        "roughnessFactor": 0.85,
+        "roughnessFactor": 0.84,
         "metallicFactor": 0
-      },
-      "finish": {
-        "roughness": [
-          0.82,
-          0.92
-        ],
-        "grain": 0.2,
-        "relief": 2
       },
       "variants": [
         {
-          "id": "panel-ochre",
+          "id": "plain",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/wall/mid/panel-ochre/basecolor.png",
-            "normal": "assets/wall/mid/panel-ochre/normal.png",
-            "roughness": "assets/wall/mid/panel-ochre/roughness.png",
-            "metallic": "assets/wall/mid/panel-ochre/metallic.png",
-            "height": "assets/wall/mid/panel-ochre/height.png",
-            "ao": "assets/wall/mid/panel-ochre/ao.png"
+            "basecolor": "assets/wall/mid/plain/basecolor.png",
+            "normal": "assets/wall/mid/plain/normal.png",
+            "roughness": "assets/wall/mid/plain/roughness.png",
+            "metallic": "assets/wall/mid/plain/metallic.png",
+            "height": "assets/wall/mid/plain/height.png",
+            "ao": "assets/wall/mid/plain/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/1/basecolor.png",
-            "normal": "assets/wall/mid/1/normal.png",
-            "roughness": "assets/wall/mid/1/roughness.png",
-            "metallic": "assets/wall/mid/1/metallic.png",
-            "height": "assets/wall/mid/1/height.png",
-            "ao": "assets/wall/mid/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/2/basecolor.png",
-            "normal": "assets/wall/mid/2/normal.png",
-            "roughness": "assets/wall/mid/2/roughness.png",
-            "metallic": "assets/wall/mid/2/metallic.png",
-            "height": "assets/wall/mid/2/height.png",
-            "ao": "assets/wall/mid/2/ao.png"
-          }
-        },
-        {
-          "id": "3",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/3/basecolor.png",
-            "normal": "assets/wall/mid/3/normal.png",
-            "roughness": "assets/wall/mid/3/roughness.png",
-            "metallic": "assets/wall/mid/3/metallic.png",
-            "height": "assets/wall/mid/3/height.png",
-            "ao": "assets/wall/mid/3/ao.png"
-          }
-        },
-        {
-          "id": "4",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/4/basecolor.png",
-            "normal": "assets/wall/mid/4/normal.png",
-            "roughness": "assets/wall/mid/4/roughness.png",
-            "metallic": "assets/wall/mid/4/metallic.png",
-            "height": "assets/wall/mid/4/height.png",
-            "ao": "assets/wall/mid/4/ao.png"
-          }
-        },
-        {
-          "id": "tint-slate",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/tint-slate/basecolor.png",
-            "normal": "assets/wall/mid/2/normal.png",
-            "roughness": "assets/wall/mid/2/roughness.png",
-            "metallic": "assets/wall/mid/2/metallic.png",
-            "height": "assets/wall/mid/2/height.png",
-            "ao": "assets/wall/mid/2/ao.png"
-          }
-        },
-        {
-          "id": "tint-teal",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/tint-teal/basecolor.png",
-            "normal": "assets/wall/mid/4/normal.png",
-            "roughness": "assets/wall/mid/4/roughness.png",
-            "metallic": "assets/wall/mid/4/metallic.png",
-            "height": "assets/wall/mid/4/height.png",
-            "ao": "assets/wall/mid/4/ao.png"
-          }
-        },
-        {
-          "id": "panel-slate",
+          "id": "panel",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/wall/mid/panel-slate/basecolor.png",
-            "normal": "assets/wall/mid/panel-slate/normal.png",
-            "roughness": "assets/wall/mid/panel-slate/roughness.png",
-            "metallic": "assets/wall/mid/panel-slate/metallic.png",
-            "height": "assets/wall/mid/panel-slate/height.png",
-            "ao": "assets/wall/mid/panel-slate/ao.png"
+            "basecolor": "assets/wall/mid/panel/basecolor.png",
+            "normal": "assets/wall/mid/panel/normal.png",
+            "roughness": "assets/wall/mid/panel/roughness.png",
+            "metallic": "assets/wall/mid/panel/metallic.png",
+            "height": "assets/wall/mid/panel/height.png",
+            "ao": "assets/wall/mid/panel/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        },
+        {
+          "id": "panel-square",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/wall/mid/panel-square/basecolor.png",
+            "normal": "assets/wall/mid/panel-square/normal.png",
+            "roughness": "assets/wall/mid/panel-square/roughness.png",
+            "metallic": "assets/wall/mid/panel-square/metallic.png",
+            "height": "assets/wall/mid/panel-square/height.png",
+            "ao": "assets/wall/mid/panel-square/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
           "id": "panel-graphite",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/wall/mid/panel-graphite/basecolor.png",
@@ -376,200 +244,128 @@
             "metallic": "assets/wall/mid/panel-graphite/metallic.png",
             "height": "assets/wall/mid/panel-graphite/height.png",
             "ao": "assets/wall/mid/panel-graphite/ao.png"
-          }
-        },
-        {
-          "id": "panel-bone",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/panel-bone/basecolor.png",
-            "normal": "assets/wall/mid/panel-bone/normal.png",
-            "roughness": "assets/wall/mid/panel-bone/roughness.png",
-            "metallic": "assets/wall/mid/panel-bone/metallic.png",
-            "height": "assets/wall/mid/panel-bone/height.png",
-            "ao": "assets/wall/mid/panel-bone/ao.png"
-          }
-        },
-        {
-          "id": "panel-rust",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/panel-rust/basecolor.png",
-            "normal": "assets/wall/mid/panel-rust/normal.png",
-            "roughness": "assets/wall/mid/panel-rust/roughness.png",
-            "metallic": "assets/wall/mid/panel-rust/metallic.png",
-            "height": "assets/wall/mid/panel-rust/height.png",
-            "ao": "assets/wall/mid/panel-rust/ao.png"
-          }
-        },
-        {
-          "id": "panel-teal",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/mid/panel-teal/basecolor.png",
-            "normal": "assets/wall/mid/panel-teal/normal.png",
-            "roughness": "assets/wall/mid/panel-teal/roughness.png",
-            "metallic": "assets/wall/mid/panel-teal/metallic.png",
-            "height": "assets/wall/mid/panel-teal/height.png",
-            "ao": "assets/wall/mid/panel-teal/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         }
       ]
     },
     "cyberpunk/wall/rich": {
       "key": "cyberpunk/wall/rich",
+      "aliases": [
+        "cyberpunk/parapet/rich"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
-        "roughnessFactor": 0.7,
+        "roughnessFactor": 0.74,
         "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "panel-ochre",
+          "id": "plain",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/wall/rich/panel-ochre/basecolor.png",
-            "normal": "assets/wall/rich/panel-ochre/normal.png",
-            "roughness": "assets/wall/rich/panel-ochre/roughness.png",
-            "metallic": "assets/wall/rich/panel-ochre/metallic.png",
-            "height": "assets/wall/rich/panel-ochre/height.png",
-            "ao": "assets/wall/rich/panel-ochre/ao.png"
+            "basecolor": "assets/wall/rich/plain/basecolor.png",
+            "normal": "assets/wall/rich/plain/normal.png",
+            "roughness": "assets/wall/rich/plain/roughness.png",
+            "metallic": "assets/wall/rich/plain/metallic.png",
+            "height": "assets/wall/rich/plain/height.png",
+            "ao": "assets/wall/rich/plain/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/1/basecolor.png",
-            "normal": "assets/wall/rich/1/normal.png",
-            "roughness": "assets/wall/rich/1/roughness.png",
-            "metallic": "assets/wall/rich/1/metallic.png",
-            "height": "assets/wall/rich/1/height.png",
-            "ao": "assets/wall/rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/2/basecolor.png",
-            "normal": "assets/wall/rich/2/normal.png",
-            "roughness": "assets/wall/rich/2/roughness.png",
-            "metallic": "assets/wall/rich/2/metallic.png",
-            "height": "assets/wall/rich/2/height.png",
-            "ao": "assets/wall/rich/2/ao.png"
-          }
-        },
-        {
-          "id": "tint-slate",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/tint-slate/basecolor.png",
-            "normal": "assets/wall/rich/2/normal.png",
-            "roughness": "assets/wall/rich/2/roughness.png",
-            "metallic": "assets/wall/rich/2/metallic.png",
-            "height": "assets/wall/rich/2/height.png",
-            "ao": "assets/wall/rich/2/ao.png"
-          }
-        },
-        {
-          "id": "3",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/3/basecolor.png",
-            "normal": "assets/wall/rich/3/normal.png",
-            "roughness": "assets/wall/rich/3/roughness.png",
-            "metallic": "assets/wall/rich/3/metallic.png",
-            "height": "assets/wall/rich/3/height.png",
-            "ao": "assets/wall/rich/3/ao.png"
-          }
-        },
-        {
-          "id": "4",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/4/basecolor.png",
-            "normal": "assets/wall/rich/4/normal.png",
-            "roughness": "assets/wall/rich/4/roughness.png",
-            "metallic": "assets/wall/rich/4/metallic.png",
-            "height": "assets/wall/rich/4/height.png",
-            "ao": "assets/wall/rich/4/ao.png"
-          }
-        },
-        {
-          "id": "tint-teal",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/tint-teal/basecolor.png",
-            "normal": "assets/wall/rich/4/normal.png",
-            "roughness": "assets/wall/rich/4/roughness.png",
-            "metallic": "assets/wall/rich/4/metallic.png",
-            "height": "assets/wall/rich/4/height.png",
-            "ao": "assets/wall/rich/4/ao.png"
-          }
-        },
-        {
-          "id": "panel-slate",
+          "id": "panel",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/wall/rich/panel-slate/basecolor.png",
-            "normal": "assets/wall/rich/panel-slate/normal.png",
-            "roughness": "assets/wall/rich/panel-slate/roughness.png",
-            "metallic": "assets/wall/rich/panel-slate/metallic.png",
-            "height": "assets/wall/rich/panel-slate/height.png",
-            "ao": "assets/wall/rich/panel-slate/ao.png"
+            "basecolor": "assets/wall/rich/panel/basecolor.png",
+            "normal": "assets/wall/rich/panel/normal.png",
+            "roughness": "assets/wall/rich/panel/roughness.png",
+            "metallic": "assets/wall/rich/panel/metallic.png",
+            "height": "assets/wall/rich/panel/height.png",
+            "ao": "assets/wall/rich/panel/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        },
+        {
+          "id": "panel-square",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/wall/rich/panel-square/basecolor.png",
+            "normal": "assets/wall/rich/panel-square/normal.png",
+            "roughness": "assets/wall/rich/panel-square/roughness.png",
+            "metallic": "assets/wall/rich/panel-square/metallic.png",
+            "height": "assets/wall/rich/panel-square/height.png",
+            "ao": "assets/wall/rich/panel-square/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
           "id": "panel-graphite",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/wall/rich/panel-graphite/basecolor.png",
@@ -578,211 +374,128 @@
             "metallic": "assets/wall/rich/panel-graphite/metallic.png",
             "height": "assets/wall/rich/panel-graphite/height.png",
             "ao": "assets/wall/rich/panel-graphite/ao.png"
-          }
-        },
-        {
-          "id": "panel-bone",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/panel-bone/basecolor.png",
-            "normal": "assets/wall/rich/panel-bone/normal.png",
-            "roughness": "assets/wall/rich/panel-bone/roughness.png",
-            "metallic": "assets/wall/rich/panel-bone/metallic.png",
-            "height": "assets/wall/rich/panel-bone/height.png",
-            "ao": "assets/wall/rich/panel-bone/ao.png"
-          }
-        },
-        {
-          "id": "panel-rust",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/panel-rust/basecolor.png",
-            "normal": "assets/wall/rich/panel-rust/normal.png",
-            "roughness": "assets/wall/rich/panel-rust/roughness.png",
-            "metallic": "assets/wall/rich/panel-rust/metallic.png",
-            "height": "assets/wall/rich/panel-rust/height.png",
-            "ao": "assets/wall/rich/panel-rust/ao.png"
-          }
-        },
-        {
-          "id": "panel-teal",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/rich/panel-teal/basecolor.png",
-            "normal": "assets/wall/rich/panel-teal/normal.png",
-            "roughness": "assets/wall/rich/panel-teal/roughness.png",
-            "metallic": "assets/wall/rich/panel-teal/metallic.png",
-            "height": "assets/wall/rich/panel-teal/height.png",
-            "ao": "assets/wall/rich/panel-teal/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/parapet/rich"
-      ],
-      "finish": {
-        "roughness": [
-          0.7,
-          0.8
-        ],
-        "grain": 0.15,
-        "relief": 1.6
-      }
+      ]
     },
     "cyberpunk/wall/high_rich": {
       "key": "cyberpunk/wall/high_rich",
+      "aliases": [
+        "cyberpunk/parapet/high_rich"
+      ],
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
-        "roughnessFactor": 0.6,
+        "roughnessFactor": 0.62,
         "metallicFactor": 0
       },
       "variants": [
         {
-          "id": "panel-ochre",
+          "id": "plain",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/wall/high_rich/panel-ochre/basecolor.png",
-            "normal": "assets/wall/high_rich/panel-ochre/normal.png",
-            "roughness": "assets/wall/high_rich/panel-ochre/roughness.png",
-            "metallic": "assets/wall/high_rich/panel-ochre/metallic.png",
-            "height": "assets/wall/high_rich/panel-ochre/height.png",
-            "ao": "assets/wall/high_rich/panel-ochre/ao.png"
+            "basecolor": "assets/wall/high_rich/plain/basecolor.png",
+            "normal": "assets/wall/high_rich/plain/normal.png",
+            "roughness": "assets/wall/high_rich/plain/roughness.png",
+            "metallic": "assets/wall/high_rich/plain/metallic.png",
+            "height": "assets/wall/high_rich/plain/height.png",
+            "ao": "assets/wall/high_rich/plain/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
-          "id": "1",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/1/basecolor.png",
-            "normal": "assets/wall/high_rich/1/normal.png",
-            "roughness": "assets/wall/high_rich/1/roughness.png",
-            "metallic": "assets/wall/high_rich/1/metallic.png",
-            "height": "assets/wall/high_rich/1/height.png",
-            "ao": "assets/wall/high_rich/1/ao.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/2/basecolor.png",
-            "normal": "assets/wall/high_rich/2/normal.png",
-            "roughness": "assets/wall/high_rich/2/roughness.png",
-            "metallic": "assets/wall/high_rich/2/metallic.png",
-            "height": "assets/wall/high_rich/2/height.png",
-            "ao": "assets/wall/high_rich/2/ao.png"
-          }
-        },
-        {
-          "id": "tint-slate",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/tint-slate/basecolor.png",
-            "normal": "assets/wall/high_rich/2/normal.png",
-            "roughness": "assets/wall/high_rich/2/roughness.png",
-            "metallic": "assets/wall/high_rich/2/metallic.png",
-            "height": "assets/wall/high_rich/2/height.png",
-            "ao": "assets/wall/high_rich/2/ao.png"
-          }
-        },
-        {
-          "id": "3",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/3/basecolor.png",
-            "normal": "assets/wall/high_rich/3/normal.png",
-            "roughness": "assets/wall/high_rich/3/roughness.png",
-            "metallic": "assets/wall/high_rich/3/metallic.png",
-            "height": "assets/wall/high_rich/3/height.png",
-            "ao": "assets/wall/high_rich/3/ao.png"
-          }
-        },
-        {
-          "id": "4",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/4/basecolor.png",
-            "normal": "assets/wall/high_rich/4/normal.png",
-            "roughness": "assets/wall/high_rich/4/roughness.png",
-            "metallic": "assets/wall/high_rich/4/metallic.png",
-            "height": "assets/wall/high_rich/4/height.png",
-            "ao": "assets/wall/high_rich/4/ao.png"
-          }
-        },
-        {
-          "id": "tint-teal",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/tint-teal/basecolor.png",
-            "normal": "assets/wall/high_rich/4/normal.png",
-            "roughness": "assets/wall/high_rich/4/roughness.png",
-            "metallic": "assets/wall/high_rich/4/metallic.png",
-            "height": "assets/wall/high_rich/4/height.png",
-            "ao": "assets/wall/high_rich/4/ao.png"
-          }
-        },
-        {
-          "id": "panel-slate",
+          "id": "panel",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
-            "basecolor": "assets/wall/high_rich/panel-slate/basecolor.png",
-            "normal": "assets/wall/high_rich/panel-slate/normal.png",
-            "roughness": "assets/wall/high_rich/panel-slate/roughness.png",
-            "metallic": "assets/wall/high_rich/panel-slate/metallic.png",
-            "height": "assets/wall/high_rich/panel-slate/height.png",
-            "ao": "assets/wall/high_rich/panel-slate/ao.png"
+            "basecolor": "assets/wall/high_rich/panel/basecolor.png",
+            "normal": "assets/wall/high_rich/panel/normal.png",
+            "roughness": "assets/wall/high_rich/panel/roughness.png",
+            "metallic": "assets/wall/high_rich/panel/metallic.png",
+            "height": "assets/wall/high_rich/panel/height.png",
+            "ao": "assets/wall/high_rich/panel/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        },
+        {
+          "id": "panel-square",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/wall/high_rich/panel-square/basecolor.png",
+            "normal": "assets/wall/high_rich/panel-square/normal.png",
+            "roughness": "assets/wall/high_rich/panel-square/roughness.png",
+            "metallic": "assets/wall/high_rich/panel-square/metallic.png",
+            "height": "assets/wall/high_rich/panel-square/height.png",
+            "ao": "assets/wall/high_rich/panel-square/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
           "id": "panel-graphite",
           "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/wall/high_rich/panel-graphite/basecolor.png",
@@ -791,68 +504,22 @@
             "metallic": "assets/wall/high_rich/panel-graphite/metallic.png",
             "height": "assets/wall/high_rich/panel-graphite/height.png",
             "ao": "assets/wall/high_rich/panel-graphite/ao.png"
-          }
-        },
-        {
-          "id": "panel-bone",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/panel-bone/basecolor.png",
-            "normal": "assets/wall/high_rich/panel-bone/normal.png",
-            "roughness": "assets/wall/high_rich/panel-bone/roughness.png",
-            "metallic": "assets/wall/high_rich/panel-bone/metallic.png",
-            "height": "assets/wall/high_rich/panel-bone/height.png",
-            "ao": "assets/wall/high_rich/panel-bone/ao.png"
-          }
-        },
-        {
-          "id": "panel-rust",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/panel-rust/basecolor.png",
-            "normal": "assets/wall/high_rich/panel-rust/normal.png",
-            "roughness": "assets/wall/high_rich/panel-rust/roughness.png",
-            "metallic": "assets/wall/high_rich/panel-rust/metallic.png",
-            "height": "assets/wall/high_rich/panel-rust/height.png",
-            "ao": "assets/wall/high_rich/panel-rust/ao.png"
-          }
-        },
-        {
-          "id": "panel-teal",
-          "class": "pattern",
-          "resolution": [
-            1024,
-            1024
-          ],
-          "maps": {
-            "basecolor": "assets/wall/high_rich/panel-teal/basecolor.png",
-            "normal": "assets/wall/high_rich/panel-teal/normal.png",
-            "roughness": "assets/wall/high_rich/panel-teal/roughness.png",
-            "metallic": "assets/wall/high_rich/panel-teal/metallic.png",
-            "height": "assets/wall/high_rich/panel-teal/height.png",
-            "ao": "assets/wall/high_rich/panel-teal/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         }
-      ],
-      "aliases": [
-        "cyberpunk/parapet/high_rich"
-      ],
-      "finish": {
-        "roughness": [
-          0.56,
-          0.66
-        ],
-        "grain": 0.1,
-        "relief": 1.2
-      }
+      ]
     },
     "cyberpunk/window-glass/poor": {
       "key": "cyberpunk/window-glass/poor",
@@ -3795,8 +3462,8 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
@@ -3818,6 +3485,14 @@
             "metallic": "assets/concrete/poor/plain/metallic.png",
             "height": "assets/concrete/poor/plain/height.png",
             "ao": "assets/concrete/poor/plain/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
@@ -3834,38 +3509,77 @@
             "metallic": "assets/concrete/poor/panel/metallic.png",
             "height": "assets/concrete/poor/panel/height.png",
             "ao": "assets/concrete/poor/panel/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         },
         {
-          "id": "rib",
+          "id": "panel-square",
           "class": "pattern",
           "resolution": [
             512,
             512
           ],
           "maps": {
-            "basecolor": "assets/concrete/poor/rib/basecolor.png",
-            "normal": "assets/concrete/poor/rib/normal.png",
-            "roughness": "assets/concrete/poor/rib/roughness.png",
-            "metallic": "assets/concrete/poor/rib/metallic.png",
-            "height": "assets/concrete/poor/rib/height.png",
-            "ao": "assets/concrete/poor/rib/ao.png"
+            "basecolor": "assets/concrete/poor/panel-square/basecolor.png",
+            "normal": "assets/concrete/poor/panel-square/normal.png",
+            "roughness": "assets/concrete/poor/panel-square/roughness.png",
+            "metallic": "assets/concrete/poor/panel-square/metallic.png",
+            "height": "assets/concrete/poor/panel-square/height.png",
+            "ao": "assets/concrete/poor/panel-square/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
-          "id": "block",
+          "id": "panel-graphite",
           "class": "pattern",
           "resolution": [
             512,
             512
           ],
           "maps": {
-            "basecolor": "assets/concrete/poor/block/basecolor.png",
-            "normal": "assets/concrete/poor/block/normal.png",
-            "roughness": "assets/concrete/poor/block/roughness.png",
-            "metallic": "assets/concrete/poor/block/metallic.png",
-            "height": "assets/concrete/poor/block/height.png",
-            "ao": "assets/concrete/poor/block/ao.png"
+            "basecolor": "assets/concrete/poor/panel-graphite/basecolor.png",
+            "normal": "assets/concrete/poor/panel-graphite/normal.png",
+            "roughness": "assets/concrete/poor/panel-graphite/roughness.png",
+            "metallic": "assets/concrete/poor/panel-graphite/metallic.png",
+            "height": "assets/concrete/poor/panel-graphite/height.png",
+            "ao": "assets/concrete/poor/panel-graphite/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         }
       ]
@@ -3875,12 +3589,12 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
-        "roughnessFactor": 0.82,
+        "roughnessFactor": 0.84,
         "metallicFactor": 0
       },
       "variants": [
@@ -3898,6 +3612,14 @@
             "metallic": "assets/concrete/mid/plain/metallic.png",
             "height": "assets/concrete/mid/plain/height.png",
             "ao": "assets/concrete/mid/plain/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
@@ -3914,38 +3636,77 @@
             "metallic": "assets/concrete/mid/panel/metallic.png",
             "height": "assets/concrete/mid/panel/height.png",
             "ao": "assets/concrete/mid/panel/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         },
         {
-          "id": "rib",
+          "id": "panel-square",
           "class": "pattern",
           "resolution": [
             512,
             512
           ],
           "maps": {
-            "basecolor": "assets/concrete/mid/rib/basecolor.png",
-            "normal": "assets/concrete/mid/rib/normal.png",
-            "roughness": "assets/concrete/mid/rib/roughness.png",
-            "metallic": "assets/concrete/mid/rib/metallic.png",
-            "height": "assets/concrete/mid/rib/height.png",
-            "ao": "assets/concrete/mid/rib/ao.png"
+            "basecolor": "assets/concrete/mid/panel-square/basecolor.png",
+            "normal": "assets/concrete/mid/panel-square/normal.png",
+            "roughness": "assets/concrete/mid/panel-square/roughness.png",
+            "metallic": "assets/concrete/mid/panel-square/metallic.png",
+            "height": "assets/concrete/mid/panel-square/height.png",
+            "ao": "assets/concrete/mid/panel-square/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
-          "id": "block",
+          "id": "panel-graphite",
           "class": "pattern",
           "resolution": [
             512,
             512
           ],
           "maps": {
-            "basecolor": "assets/concrete/mid/block/basecolor.png",
-            "normal": "assets/concrete/mid/block/normal.png",
-            "roughness": "assets/concrete/mid/block/roughness.png",
-            "metallic": "assets/concrete/mid/block/metallic.png",
-            "height": "assets/concrete/mid/block/height.png",
-            "ao": "assets/concrete/mid/block/ao.png"
+            "basecolor": "assets/concrete/mid/panel-graphite/basecolor.png",
+            "normal": "assets/concrete/mid/panel-graphite/normal.png",
+            "roughness": "assets/concrete/mid/panel-graphite/roughness.png",
+            "metallic": "assets/concrete/mid/panel-graphite/metallic.png",
+            "height": "assets/concrete/mid/panel-graphite/height.png",
+            "ao": "assets/concrete/mid/panel-graphite/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         }
       ]
@@ -3955,12 +3716,12 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
-        "roughnessFactor": 0.66,
+        "roughnessFactor": 0.76,
         "metallicFactor": 0
       },
       "variants": [
@@ -3978,6 +3739,14 @@
             "metallic": "assets/concrete/rich/plain/metallic.png",
             "height": "assets/concrete/rich/plain/height.png",
             "ao": "assets/concrete/rich/plain/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
@@ -3994,38 +3763,77 @@
             "metallic": "assets/concrete/rich/panel/metallic.png",
             "height": "assets/concrete/rich/panel/height.png",
             "ao": "assets/concrete/rich/panel/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         },
         {
-          "id": "rib",
+          "id": "panel-square",
           "class": "pattern",
           "resolution": [
             512,
             512
           ],
           "maps": {
-            "basecolor": "assets/concrete/rich/rib/basecolor.png",
-            "normal": "assets/concrete/rich/rib/normal.png",
-            "roughness": "assets/concrete/rich/rib/roughness.png",
-            "metallic": "assets/concrete/rich/rib/metallic.png",
-            "height": "assets/concrete/rich/rib/height.png",
-            "ao": "assets/concrete/rich/rib/ao.png"
+            "basecolor": "assets/concrete/rich/panel-square/basecolor.png",
+            "normal": "assets/concrete/rich/panel-square/normal.png",
+            "roughness": "assets/concrete/rich/panel-square/roughness.png",
+            "metallic": "assets/concrete/rich/panel-square/metallic.png",
+            "height": "assets/concrete/rich/panel-square/height.png",
+            "ao": "assets/concrete/rich/panel-square/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
-          "id": "block",
+          "id": "panel-graphite",
           "class": "pattern",
           "resolution": [
             512,
             512
           ],
           "maps": {
-            "basecolor": "assets/concrete/rich/block/basecolor.png",
-            "normal": "assets/concrete/rich/block/normal.png",
-            "roughness": "assets/concrete/rich/block/roughness.png",
-            "metallic": "assets/concrete/rich/block/metallic.png",
-            "height": "assets/concrete/rich/block/height.png",
-            "ao": "assets/concrete/rich/block/ao.png"
+            "basecolor": "assets/concrete/rich/panel-graphite/basecolor.png",
+            "normal": "assets/concrete/rich/panel-graphite/normal.png",
+            "roughness": "assets/concrete/rich/panel-graphite/roughness.png",
+            "metallic": "assets/concrete/rich/panel-graphite/metallic.png",
+            "height": "assets/concrete/rich/panel-graphite/height.png",
+            "ao": "assets/concrete/rich/panel-graphite/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         }
       ]
@@ -4035,12 +3843,12 @@
       "alignment": "tile",
       "tiling": {
         "worldSize": [
-          3,
-          3
+          2,
+          2
         ]
       },
       "physical": {
-        "roughnessFactor": 0.58,
+        "roughnessFactor": 0.66,
         "metallicFactor": 0
       },
       "variants": [
@@ -4058,6 +3866,14 @@
             "metallic": "assets/concrete/high_rich/plain/metallic.png",
             "height": "assets/concrete/high_rich/plain/height.png",
             "ao": "assets/concrete/high_rich/plain/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
@@ -4074,38 +3890,77 @@
             "metallic": "assets/concrete/high_rich/panel/metallic.png",
             "height": "assets/concrete/high_rich/panel/height.png",
             "ao": "assets/concrete/high_rich/panel/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         },
         {
-          "id": "rib",
+          "id": "panel-square",
           "class": "pattern",
           "resolution": [
             512,
             512
           ],
           "maps": {
-            "basecolor": "assets/concrete/high_rich/rib/basecolor.png",
-            "normal": "assets/concrete/high_rich/rib/normal.png",
-            "roughness": "assets/concrete/high_rich/rib/roughness.png",
-            "metallic": "assets/concrete/high_rich/rib/metallic.png",
-            "height": "assets/concrete/high_rich/rib/height.png",
-            "ao": "assets/concrete/high_rich/rib/ao.png"
+            "basecolor": "assets/concrete/high_rich/panel-square/basecolor.png",
+            "normal": "assets/concrete/high_rich/panel-square/normal.png",
+            "roughness": "assets/concrete/high_rich/panel-square/roughness.png",
+            "metallic": "assets/concrete/high_rich/panel-square/metallic.png",
+            "height": "assets/concrete/high_rich/panel-square/height.png",
+            "ao": "assets/concrete/high_rich/panel-square/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         },
         {
-          "id": "block",
+          "id": "panel-graphite",
           "class": "pattern",
           "resolution": [
             512,
             512
           ],
           "maps": {
-            "basecolor": "assets/concrete/high_rich/block/basecolor.png",
-            "normal": "assets/concrete/high_rich/block/normal.png",
-            "roughness": "assets/concrete/high_rich/block/roughness.png",
-            "metallic": "assets/concrete/high_rich/block/metallic.png",
-            "height": "assets/concrete/high_rich/block/height.png",
-            "ao": "assets/concrete/high_rich/block/ao.png"
+            "basecolor": "assets/concrete/high_rich/panel-graphite/basecolor.png",
+            "normal": "assets/concrete/high_rich/panel-graphite/normal.png",
+            "roughness": "assets/concrete/high_rich/panel-graphite/roughness.png",
+            "metallic": "assets/concrete/high_rich/panel-graphite/metallic.png",
+            "height": "assets/concrete/high_rich/panel-graphite/height.png",
+            "ao": "assets/concrete/high_rich/panel-graphite/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
           }
         }
       ]
