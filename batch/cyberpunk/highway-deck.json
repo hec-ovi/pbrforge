@@ -1,0 +1,202 @@
+[
+  {
+    "key": "cyberpunk/highway-deck/poor",
+    "alignment": "tile",
+    "description": "dark highway deck asphalt with fine aggregate and restrained longitudinal wear",
+    "tiling": { "worldSize": [3.5, 7] },
+    "physical": { "roughnessFactor": 0.95, "metallicFactor": 0 },
+    "variantId": "asphalt",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "lane",
+      "colors": ["#202326", "#2b2e31"],
+      "cells": [7, 14],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.36,
+      "wear": 0.2,
+      "depth": 0.07,
+      "grain": 0.01,
+      "variation": 0.022
+    },
+    "layout": {
+      "family": "lane",
+      "moduleSize": [3.5, 7],
+      "origin": [0, 0],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-deck/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "worn neutral concrete highway deck without baked structural joints",
+    "variantId": "concrete",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#424744", "#515653"],
+      "cells": [7, 14],
+      "octaves": 3,
+      "depth": 0.055,
+      "grain": 0.009,
+      "variation": 0.024
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-deck/mid",
+    "alignment": "tile",
+    "description": "dark highway deck asphalt with fine aggregate and restrained longitudinal wear",
+    "tiling": { "worldSize": [3.5, 7] },
+    "physical": { "roughnessFactor": 0.92, "metallicFactor": 0 },
+    "variantId": "asphalt",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "lane",
+      "colors": ["#232629", "#2e3235"],
+      "cells": [7, 14],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.36,
+      "wear": 0.17,
+      "depth": 0.06,
+      "grain": 0.009,
+      "variation": 0.02
+    },
+    "layout": {
+      "family": "lane",
+      "moduleSize": [3.5, 7],
+      "origin": [0, 0],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-deck/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "worn neutral concrete highway deck without baked structural joints",
+    "variantId": "concrete",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#484d4a", "#575c58"],
+      "cells": [7, 14],
+      "octaves": 3,
+      "depth": 0.05,
+      "grain": 0.008,
+      "variation": 0.02
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-deck/rich",
+    "alignment": "tile",
+    "description": "dark refined highway deck asphalt with fine aggregate and restrained longitudinal wear",
+    "tiling": { "worldSize": [3.5, 7] },
+    "physical": { "roughnessFactor": 0.88, "metallicFactor": 0 },
+    "variantId": "asphalt",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "lane",
+      "colors": ["#26292c", "#313539"],
+      "cells": [7, 14],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.36,
+      "wear": 0.14,
+      "depth": 0.05,
+      "grain": 0.008,
+      "variation": 0.017
+    },
+    "layout": {
+      "family": "lane",
+      "moduleSize": [3.5, 7],
+      "origin": [0, 0],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-deck/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "honed neutral concrete highway deck without baked structural joints",
+    "variantId": "concrete",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#4e5450", "#5c625e"],
+      "cells": [7, 14],
+      "octaves": 3,
+      "depth": 0.042,
+      "grain": 0.007,
+      "variation": 0.018
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-deck/high_rich",
+    "alignment": "tile",
+    "description": "near-black highway deck asphalt with fine aggregate and restrained longitudinal wear",
+    "tiling": { "worldSize": [3.5, 7] },
+    "physical": { "roughnessFactor": 0.82, "metallicFactor": 0 },
+    "variantId": "asphalt",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "lane",
+      "colors": ["#191d20", "#24282b"],
+      "cells": [7, 14],
+      "octaves": 3,
+      "axis": "y",
+      "split": 0.457,
+      "line": 0.36,
+      "wear": 0.11,
+      "depth": 0.045,
+      "grain": 0.007,
+      "variation": 0.014
+    },
+    "layout": {
+      "family": "lane",
+      "moduleSize": [3.5, 7],
+      "origin": [0, 0],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-deck/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "dark honed concrete highway deck without baked structural joints",
+    "variantId": "concrete",
+    "resolution": [512, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#343a38", "#414744"],
+      "cells": [7, 14],
+      "octaves": 3,
+      "depth": 0.035,
+      "grain": 0.006,
+      "variation": 0.015
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
+  }
+]

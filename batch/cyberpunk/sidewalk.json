@@ -2,365 +2,308 @@
   {
     "key": "cyberpunk/sidewalk/poor",
     "alignment": "tile",
-    "description": "large square pavement slabs with clean joints",
-    "tiling": {
-      "worldSize": [
-        2,
-        2
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.95,
-      "metallicFactor": 0
-    },
+    "description": "large neutral pavement slabs with restrained aggregate",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.94, "metallicFactor": 0 },
     "variantId": "slab",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "resolution": [1024, 1024],
     "pattern": {
       "kind": "slab",
-      "colors": [
-        "#3a3b3d"
-      ],
-      "cells": [
-        2,
-        2
-      ],
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
-      "variation": 0.11
+      "colors": ["#3a3e3c"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.012,
+      "depth": 0.18,
+      "joint": 0.24,
+      "grain": 0.007,
+      "variation": 0.025
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/sidewalk/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "two metre square neutral pavement plates",
+    "variantId": "plate",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#383c3a"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.012,
+      "depth": 0.18,
+      "joint": 0.24,
+      "grain": 0.006,
+      "variation": 0.02
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
     }
   },
   {
     "key": "cyberpunk/sidewalk/poor",
     "alignment": "tile",
     "append": true,
-    "description": "pavement slabs laid in a running bond",
-    "variantId": "bond",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "description": "continuous charcoal pavement for fitted borders and ramps",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
     "pattern": {
-      "kind": "slab",
-      "colors": [
-        "#3a3b3d"
-      ],
-      "cells": [
-        2,
-        4
-      ],
-      "bond": "running",
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
-      "variation": 0.13
+      "kind": "noise",
+      "colors": ["#353936", "#414542"],
+      "cells": [5, 5],
+      "octaves": 2,
+      "depth": 0.025,
+      "grain": 0.007,
+      "variation": 0.018
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
     }
   },
+
   {
-    "key": "cyberpunk/sidewalk/poor",
+    "key": "cyberpunk/sidewalk/mid",
     "alignment": "tile",
-    "append": true,
-    "description": "oversized pavement plates with wide chamfered joints",
-    "variantId": "plate",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "description": "large neutral pavement slabs with restrained aggregate",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.9, "metallicFactor": 0 },
+    "variantId": "slab",
+    "resolution": [1024, 1024],
     "pattern": {
       "kind": "slab",
-      "colors": [
-        "#3a3b3d"
-      ],
-      "cells": [
-        1,
-        1
-      ],
-      "line": 0.022,
-      "bevel": 0.014,
-      "depth": 0.55,
-      "joint": 0.55,
-      "grain": 0.025,
-      "variation": 0.09
-    }
+      "colors": ["#444947"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.011,
+      "depth": 0.16,
+      "joint": 0.22,
+      "grain": 0.006,
+      "variation": 0.022
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    },
+    "overwrite": true
   },
   {
     "key": "cyberpunk/sidewalk/mid",
     "alignment": "tile",
-    "description": "large square pavement slabs with clean joints",
-    "tiling": {
-      "worldSize": [
-        2,
-        2
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.9,
-      "metallicFactor": 0
-    },
-    "variantId": "slab",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "append": true,
+    "description": "two metre square neutral pavement plates",
+    "variantId": "plate",
+    "resolution": [1024, 1024],
     "pattern": {
       "kind": "slab",
-      "colors": [
-        "#45474a"
-      ],
-      "cells": [
-        2,
-        2
-      ],
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
-      "variation": 0.11
+      "colors": ["#424744"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.011,
+      "depth": 0.16,
+      "joint": 0.22,
+      "grain": 0.005,
+      "variation": 0.018
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
     }
   },
   {
     "key": "cyberpunk/sidewalk/mid",
     "alignment": "tile",
     "append": true,
-    "description": "pavement slabs laid in a running bond",
-    "variantId": "bond",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "description": "continuous graphite pavement for fitted borders and ramps",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
     "pattern": {
-      "kind": "slab",
-      "colors": [
-        "#45474a"
-      ],
-      "cells": [
-        2,
-        4
-      ],
-      "bond": "running",
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
-      "variation": 0.13
+      "kind": "noise",
+      "colors": ["#3d4240", "#494e4b"],
+      "cells": [5, 5],
+      "octaves": 2,
+      "depth": 0.022,
+      "grain": 0.006,
+      "variation": 0.016
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
     }
   },
-  {
-    "key": "cyberpunk/sidewalk/mid",
-    "alignment": "tile",
-    "append": true,
-    "description": "oversized pavement plates with wide chamfered joints",
-    "variantId": "plate",
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "slab",
-      "colors": [
-        "#45474a"
-      ],
-      "cells": [
-        1,
-        1
-      ],
-      "line": 0.022,
-      "bevel": 0.014,
-      "depth": 0.55,
-      "joint": 0.55,
-      "grain": 0.025,
-      "variation": 0.09
-    }
-  },
+
   {
     "key": "cyberpunk/sidewalk/rich",
     "alignment": "tile",
-    "description": "large square pavement slabs with clean joints",
-    "tiling": {
-      "worldSize": [
-        2,
-        2
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.85,
-      "metallicFactor": 0
-    },
+    "description": "large honed neutral pavement slabs with restrained aggregate",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.84, "metallicFactor": 0 },
     "variantId": "slab",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "resolution": [1024, 1024],
     "pattern": {
       "kind": "slab",
-      "colors": [
-        "#4f5257"
-      ],
-      "cells": [
-        2,
-        2
-      ],
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
-      "variation": 0.11
-    }
+      "colors": ["#4d5350"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.01,
+      "depth": 0.14,
+      "joint": 0.2,
+      "grain": 0.005,
+      "variation": 0.018
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    },
+    "overwrite": true
   },
   {
     "key": "cyberpunk/sidewalk/rich",
     "alignment": "tile",
     "append": true,
-    "description": "pavement slabs laid in a running bond",
-    "variantId": "bond",
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "slab",
-      "colors": [
-        "#4f5257"
-      ],
-      "cells": [
-        2,
-        4
-      ],
-      "bond": "running",
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
-      "variation": 0.13
-    }
-  },
-  {
-    "key": "cyberpunk/sidewalk/rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "oversized pavement plates with wide chamfered joints",
+    "description": "two metre square honed neutral pavement plates",
     "variantId": "plate",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "resolution": [1024, 1024],
     "pattern": {
       "kind": "slab",
-      "colors": [
-        "#4f5257"
-      ],
-      "cells": [
-        1,
-        1
-      ],
-      "line": 0.022,
-      "bevel": 0.014,
-      "depth": 0.55,
-      "joint": 0.55,
-      "grain": 0.025,
-      "variation": 0.09
+      "colors": ["#4a504d"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.01,
+      "depth": 0.14,
+      "joint": 0.2,
+      "grain": 0.004,
+      "variation": 0.016
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
     }
   },
+  {
+    "key": "cyberpunk/sidewalk/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "continuous dark cement pavement for fitted borders and ramps",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#454b48", "#515754"],
+      "cells": [5, 5],
+      "octaves": 2,
+      "depth": 0.019,
+      "grain": 0.005,
+      "variation": 0.014
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
+  },
+
   {
     "key": "cyberpunk/sidewalk/high_rich",
     "alignment": "tile",
-    "description": "large square pavement slabs with clean joints",
-    "tiling": {
-      "worldSize": [
-        2,
-        2
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.8,
-      "metallicFactor": 0
-    },
+    "description": "large charcoal pavement slabs with restrained aggregate",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.78, "metallicFactor": 0 },
     "variantId": "slab",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "resolution": [1024, 1024],
     "pattern": {
       "kind": "slab",
-      "colors": [
-        "#5a5e64"
-      ],
-      "cells": [
-        2,
-        2
-      ],
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
-      "variation": 0.11
-    }
+      "colors": ["#303634"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.18,
+      "grain": 0.004,
+      "variation": 0.015
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    },
+    "overwrite": true
   },
   {
     "key": "cyberpunk/sidewalk/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "pavement slabs laid in a running bond",
-    "variantId": "bond",
-    "resolution": [
-      1024,
-      1024
-    ],
-    "pattern": {
-      "kind": "slab",
-      "colors": [
-        "#5a5e64"
-      ],
-      "cells": [
-        2,
-        4
-      ],
-      "bond": "running",
-      "line": 0.012,
-      "bevel": 0.008,
-      "depth": 0.5,
-      "joint": 0.5,
-      "grain": 0.03,
-      "variation": 0.13
-    }
-  },
-  {
-    "key": "cyberpunk/sidewalk/high_rich",
-    "alignment": "tile",
-    "append": true,
-    "description": "oversized pavement plates with wide chamfered joints",
+    "description": "two metre square charcoal pavement plates",
     "variantId": "plate",
-    "resolution": [
-      1024,
-      1024
-    ],
+    "resolution": [1024, 1024],
     "pattern": {
       "kind": "slab",
-      "colors": [
-        "#5a5e64"
-      ],
-      "cells": [
-        1,
-        1
-      ],
-      "line": 0.022,
-      "bevel": 0.014,
-      "depth": 0.55,
-      "joint": 0.55,
-      "grain": 0.025,
-      "variation": 0.09
+      "colors": ["#2e3432"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.18,
+      "grain": 0.003,
+      "variation": 0.013
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/sidewalk/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "continuous near-black cement pavement for fitted borders and ramps",
+    "variantId": "plain",
+    "resolution": [1024, 1024],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#292f2d", "#353b39"],
+      "cells": [5, 5],
+      "octaves": 2,
+      "depth": 0.016,
+      "grain": 0.004,
+      "variation": 0.012
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
     }
   }
 ]

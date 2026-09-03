@@ -7,37 +7,29 @@
       "cyberpunk/curb/high_rich"
     ],
     "alignment": "tile",
-    "description": "concrete kerb stones, chamfered arris, one joint per metre",
-    "tiling": {
-      "worldSize": [
-        2,
-        0.15
-      ]
-    },
-    "physical": {
-      "roughnessFactor": 0.85,
-      "metallicFactor": 0
-    },
+    "description": "one metre neutral cement kerb stones with restrained aggregate",
+    "tiling": { "worldSize": [2, 0.15] },
+    "physical": { "roughnessFactor": 0.9, "metallicFactor": 0 },
     "variantId": "stone",
-    "resolution": [
-      1280,
-      96
-    ],
+    "resolution": [1280, 96],
     "pattern": {
       "kind": "slab",
-      "colors": [
-        "#7d7f7c"
-      ],
-      "cells": [
-        2,
-        1
-      ],
+      "colors": ["#555a57"],
+      "cells": [2, 1],
       "line": 0.01,
-      "bevel": 0.012,
-      "depth": 0.5,
-      "joint": 0.45,
-      "variation": 0.06,
-      "grain": 0.025
-    }
+      "bevel": 0.008,
+      "depth": 0.16,
+      "joint": 0.2,
+      "variation": 0.018,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [1, 0.15],
+      "jointWidth": 0.01,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    },
+    "overwrite": true
   }
 ]
