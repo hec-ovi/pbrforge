@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.2. Schema stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.3. Schema stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -157,7 +157,7 @@ The grid is 8 columns by 6 rows, row-major, and the charset is `ABCDEFGHIJKLMNOP
 
 ## Out
 
-MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), and one or more variants, each a set of map files. Variant 0 is canonical (the plain or the lead variant of its kind); consumers may pick variants deterministically by seed or by id (`flat`, `plain`, `brand:<slug>`). A variant carries `class` (`image` by default, `pattern` when drawn from parameters, `flat` when synthesized from one color): provenance only, the map set and its use are identical. A screen variant painted by the create lane also carries `screen`: the display it is shown on (`kind`, `pitch`) and `artwork`, the brandless picture behind its emission, which the rebrand lane composites over; consumers never bind it. An entry with photographed variants also carries the `finish` its maps were read under.
+MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), and one or more variants, each a set of map files. Variant 0 is canonical (the plain or the lead variant of its kind); consumers may pick variants deterministically by seed or by id (`flat`, `plain`, `brand:<slug>`). A variant carries `class` (`image` by default, `pattern` when drawn from parameters, `flat` when synthesized from one color): provenance only, the map set and its use are identical. Structured exterior variants also carry `layout`: visible material family, module dimensions, joint width, stable world origin and orientation in metres. Fine grain is independent and does not create layout seams. A screen variant painted by the create lane also carries `screen`: the display it is shown on (`kind`, `pitch`) and `artwork`, the brandless picture behind its emission, which the rebrand lane composites over; consumers never bind it. An entry with photographed variants also carries the `finish` its maps were read under.
 
 Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](schema/theme-index.schema.json)) plus map files under `themes/<theme>/assets/<kind>/<tier>/<variant>/`. The JSON is the index; the folder is the theme. First theme: `cyberpunk`.
 
@@ -184,6 +184,7 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 - A key present in the index always has every referenced map file on disk. Variants may point at the same map file (a tint shares the relief it was made from).
 - Every `tile` entry passed the seam check (50 percent offset in x and y, no visible seam) before it was written. Pattern variants are periodic over one tile by construction and pass the same gate.
 - Generation is deterministic per lane: the same pattern parameters, the same seed and prompt, or the same provided source file, draw the same maps.
+- Structured exterior variants publish their visible module dimensions, joint width, stable origin and orientation in `layout`. Consumers place the tile from that origin instead of restarting UVs on each polygon.
 - All maps of one variant share one resolution and are pixel-aligned with each other. Resolution has the same aspect as the physical tile or exact-placement face within one pixel, so maps are never stretched or rotated. Tile maps are at most 1,048,576 pixels; exact sheets are at most 4096 px on either side and 9,437,184 pixels total. Checked against the files in the shipped database.
 - A rebrand never touches a base variant or its files: a brand variant points at the base's surface maps and carries its own emission, and the same business list writes the same maps every time.
 - Generation is agentic tooling on top; the database read path and the rebrand lane work standalone with no ComfyUI and no other layer present.

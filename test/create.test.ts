@@ -42,6 +42,13 @@ const request: CreateRequest = {
   physical: { roughnessFactor: 0.9, metallicFactor: 0 },
   emission: 'luminance',
   resolution: [64, 64],
+  layout: {
+    family: 'panel',
+    moduleSize: [2, 1],
+    jointWidth: 0.018,
+    origin: [0, 0],
+    orientation: 'horizontal',
+  },
 };
 
 describe('create contract', () => {
@@ -69,7 +76,17 @@ describe('create contract', () => {
       expect(existsSync(join(themesDir, 'cyberpunk', maps[name]!))).toBe(true);
     }
     expect(entry.variants[0].resolution).toEqual([64, 64]);
+    expect(entry.variants[0].layout).toEqual(request.layout);
     expect(db.resolve('cyberpunk/wall/poor').physical.roughnessFactor).toBe(0.9);
+  });
+
+  it('rejects incomplete panel layout metadata', async () => {
+    await expect(
+      new Generator(db, mockComfy(tileablePng)).create({
+        ...request,
+        layout: { family: 'panel', origin: [0, 0], orientation: 'horizontal' },
+      }),
+    ).rejects.toMatchObject({ code: 'E_SCHEMA' });
   });
 
   it('throws E_KEY_EXISTS on a second create without overwrite', async () => {

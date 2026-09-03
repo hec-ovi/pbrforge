@@ -129,12 +129,51 @@
               "pitch": { "type": "integer", "minimum": 2 },
               "artwork": { "$ref": "#/$defs/mapPath" }
             }
+          },
+          "layout": {
+            "$ref": "#/$defs/surfaceLayout"
           }
         }
       }
     }
   },
   "$defs": {
+    "surfaceLayout": {
+      "type": "object",
+      "description": "visible surface divisions in world metres; fine grain remains independent",
+      "required": ["family", "origin", "orientation"],
+      "additionalProperties": false,
+      "properties": {
+        "family": { "enum": ["continuous", "panel", "band", "lane"] },
+        "moduleSize": {
+          "type": "array",
+          "items": { "type": "number", "exclusiveMinimum": 0 },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "visible [width, height] in metres"
+        },
+        "jointWidth": { "type": "number", "minimum": 0, "description": "visible joint width in metres" },
+        "origin": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "stable world-space [x, y] grid origin in metres"
+        },
+        "orientation": { "enum": ["horizontal", "vertical", "isotropic"] },
+        "bandHeight": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "family": { "const": "panel" } } },
+          "then": { "required": ["moduleSize", "jointWidth"] }
+        },
+        {
+          "if": { "properties": { "family": { "const": "band" } } },
+          "then": { "required": ["bandHeight"] }
+        }
+      ]
+    },
     "mapPath": {
       "type": "string",
       "pattern": "^assets/[a-z0-9_/-]+\\.png$",

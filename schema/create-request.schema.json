@@ -151,6 +151,10 @@
         "split": { "type": "number", "minimum": 0, "maximum": 1, "description": "where the band boundary sits, as a fraction of the tile; a lane's track spacing across it; how far a lamp's hot centre reaches over its lens; a grille's diameter over the face" }
       }
     },
+    "layout": {
+      "$ref": "#/$defs/surfaceLayout",
+      "description": "published visible divisions in world metres; independent of fine material grain"
+    },
     "recolor": {
       "type": "object",
       "description": "tint lane: another variant of the entry this one is appended to, repainted",
@@ -220,6 +224,41 @@
       "description": "[px width, px height]; must fit the physical tile or exact aspect within one pixel, with at most 1,048,576 pixels for a tile or 9,437,184 pixels for an exact sheet"
     },
     "overwrite": { "type": "boolean", "default": false }
+  },
+  "$defs": {
+    "surfaceLayout": {
+      "type": "object",
+      "required": ["family", "origin", "orientation"],
+      "additionalProperties": false,
+      "properties": {
+        "family": { "enum": ["continuous", "panel", "band", "lane"] },
+        "moduleSize": {
+          "type": "array",
+          "items": { "type": "number", "exclusiveMinimum": 0 },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "jointWidth": { "type": "number", "minimum": 0 },
+        "origin": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "orientation": { "enum": ["horizontal", "vertical", "isotropic"] },
+        "bandHeight": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "family": { "const": "panel" } } },
+          "then": { "required": ["moduleSize", "jointWidth"] }
+        },
+        {
+          "if": { "properties": { "family": { "const": "band" } } },
+          "then": { "required": ["bandHeight"] }
+        }
+      ]
+    }
   },
   "if": {
     "properties": { "emission": { "const": "image" } },

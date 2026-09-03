@@ -35,6 +35,20 @@ export interface ScreenShown extends Display {
   artwork: string;
 }
 
+/** World-space placement metadata for a visible surface division. */
+export interface SurfaceLayout {
+  family: 'continuous' | 'panel' | 'band' | 'lane';
+  /** Visible module width and height in metres. Omitted for a continuous field. */
+  moduleSize?: [number, number];
+  /** Visible joint width in metres. Zero means no authored joint. */
+  jointWidth?: number;
+  /** Stable world-space grid origin in metres. */
+  origin: [number, number];
+  orientation: 'horizontal' | 'vertical' | 'isotropic';
+  /** Height of a continuous architectural band in metres. */
+  bandHeight?: number;
+}
+
 export interface Variant {
   id: string;
   /** How the maps were made. Consumers read the maps the same way either way. */
@@ -43,6 +57,8 @@ export interface Variant {
   maps: Partial<Record<MapName, string>> & { basecolor: string; normal: string; roughness: string; metallic: string };
   /** Present on a screen variant painted by the create lane; a brand variant derives from one of these. */
   screen?: ScreenShown;
+  /** How visible divisions align in world space. Fine material grain is not a division. */
+  layout?: SurfaceLayout;
 }
 
 export interface MaterialEntry {
@@ -130,6 +146,8 @@ export interface CreateRequest {
   flatColor?: string;
   flatNoise?: number;
   pattern?: PatternSpec;
+  /** Published world-space placement metadata for this variant. */
+  layout?: SurfaceLayout;
   recolor?: Recolor;
   emission?: 'none' | 'luminance' | 'color-mask' | 'image';
   screens?: Screen[];

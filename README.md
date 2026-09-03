@@ -29,7 +29,7 @@ npm test
 
 ## Out
 
-A `MaterialEntry` (`schema/material-entry.schema.json`): alignment mode (`tile` or `exact`), physical properties (metallic and roughness factors, transmission for glass, emissive strength, breakable), tiling config in meters covered by one repeat, and one or more variants, each a set of map files. Variant 0 is canonical; a consumer can pick a variant deterministically by seed.
+A `MaterialEntry` (`schema/material-entry.schema.json`): alignment mode (`tile` or `exact`), physical properties (metallic and roughness factors, transmission for glass, emissive strength, breakable), tiling config in meters covered by one repeat, and one or more variants, each a set of map files. Variant 0 is canonical; a consumer can pick a variant deterministically by seed. Structured exterior variants publish their visible module size, joint width, stable world origin and orientation in `layout`, separate from fine grain.
 
 Map resolution follows the physical tile or exact-placement aspect within one pixel. Tile variants stay at or below 1,048,576 pixels; exact sheets stay within a 4096 px side and 9,437,184 pixels total. Creation rejects a stretched or oversized request before rendering.
 

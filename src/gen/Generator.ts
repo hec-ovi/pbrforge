@@ -255,6 +255,7 @@ export class Generator {
       resolution: [source.basecolor.width, source.basecolor.height],
       maps,
       ...(source.screen ? { screen: await this.keepArtwork(source.screen, absDir, relDir) } : {}),
+      ...(request.layout ? { layout: request.layout } : {}),
     };
   }
 
