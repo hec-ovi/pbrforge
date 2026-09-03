@@ -17,7 +17,7 @@
     "append": true,
     "description": "aged zinc rooftop equipment steel, even matte finish",
     "variantId": "zinc",
-    "flatColor": "#727573",
+    "flatColor": "#606462",
     "flatNoise": 0,
     "resolution": [256, 256]
   },
@@ -39,7 +39,7 @@
     "append": true,
     "description": "galvanized rooftop equipment steel, even matte finish",
     "variantId": "zinc",
-    "flatColor": "#808584",
+    "flatColor": "#666b69",
     "flatNoise": 0,
     "resolution": [256, 256]
   },
@@ -61,7 +61,7 @@
     "append": true,
     "description": "clean cool rooftop equipment steel, even matte finish",
     "variantId": "zinc",
-    "flatColor": "#8d9394",
+    "flatColor": "#6d7374",
     "flatNoise": 0,
     "resolution": [256, 256]
   },
@@ -81,9 +81,9 @@
     "key": "cyberpunk/roof-artifact/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "clean pale rooftop equipment steel, even satin-matte finish",
+    "description": "clean neutral rooftop equipment steel, even satin-matte finish",
     "variantId": "zinc",
-    "flatColor": "#9ba1a3",
+    "flatColor": "#73797b",
     "flatNoise": 0,
     "resolution": [256, 256]
   }

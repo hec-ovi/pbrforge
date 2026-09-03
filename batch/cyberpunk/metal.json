@@ -17,7 +17,7 @@
     "append": true,
     "description": "dull zinc service steel, even matte finish",
     "variantId": "zinc",
-    "flatColor": "#777a79",
+    "flatColor": "#626765",
     "flatNoise": 0,
     "resolution": [256, 256]
   },
@@ -39,7 +39,7 @@
     "append": true,
     "description": "cool galvanized service steel, even matte finish",
     "variantId": "zinc",
-    "flatColor": "#858b8e",
+    "flatColor": "#686e70",
     "flatNoise": 0,
     "resolution": [256, 256]
   },
@@ -61,7 +61,7 @@
     "append": true,
     "description": "clean neutral service steel, even satin-matte finish",
     "variantId": "zinc",
-    "flatColor": "#92989b",
+    "flatColor": "#707678",
     "flatNoise": 0,
     "resolution": [256, 256]
   },
@@ -81,9 +81,9 @@
     "key": "cyberpunk/metal/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "clean pale service steel, even satin-matte finish",
+    "description": "clean neutral service steel, even satin-matte finish",
     "variantId": "zinc",
-    "flatColor": "#a2a8aa",
+    "flatColor": "#747a7c",
     "flatNoise": 0,
     "resolution": [256, 256]
   }

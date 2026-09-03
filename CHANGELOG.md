@@ -1,5 +1,7 @@
 # Changelog
 
+0.13.0: floor and roof surfaces move to 2 x 2 m world tiles with continuous fields plus exact 2 x 1 m and 2 x 2 m structural modules. Columns now carry continuous graphite or cement with restrained procedural detail. New wall-band keys cover exact 1.4 m facade bands. AC enclosures and zinc service finishes are neutral graphite or mid-grey; bright, off-white, rust, warm, dense seam and small floor-tile variants are removed.
+
 0.12.0: ground and elevated-road materials are rebuilt at world scale. Sidewalk defaults to 2 x 1 m neutral slabs with 20 mm joints and carries a 2 x 2 m plate plus a continuous fitted field. Road drops broad patch and puddle variants for restrained street, highway, wet and continuous worn-concrete surfaces. New highway-deck keys provide asphalt and concrete, while highway-support resolves to the stable concrete family. Curbs carry restrained aggregate on exact 1 m stones.
 
 0.11.0: wall and concrete are rebuilt as neutral procedural families on a 2 x 2 m world tile. `panel` is the consumer-stable 2 x 1 m cement module with a 20 mm joint; `plain` is the consumer-stable fitted field. The families also carry 2 x 2 m cement and 2 x 1 m graphite panels. Orange, bright, brown, brick, masonry, tint and dense small-tile facade variants are removed.

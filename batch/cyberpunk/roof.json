@@ -2,121 +2,308 @@
   {
     "key": "cyberpunk/roof/poor",
     "alignment": "tile",
-    "description": "plain charcoal bitumen roof deck",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.84, "metallicFactor": 0 },
+    "description": "continuous charcoal bitumen roof deck with restrained mineral grain",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.88, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#3b3d3d",
-    "flatNoise": 0,
     "resolution": [512, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#303432", "#3c403e"],
+      "cells": [5, 5],
+      "octaves": 2,
+      "depth": 0.028,
+      "variation": 0.018,
+      "grain": 0.006
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/roof/poor",
     "alignment": "tile",
     "append": true,
-    "description": "bitumen roofing courses with restrained lap seams",
-    "variantId": "seam",
+    "description": "two metre by one metre charcoal roof panels",
+    "variantId": "panel",
     "resolution": [512, 512],
-    "pattern": { "kind": "stripe", "colors": ["#414342", "#343636"], "cells": [1, 6], "axis": "y", "split": 0.94, "line": 0.018, "depth": 0.10, "joint": 0.25, "variation": 0.015, "grain": 0 }
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#343836"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.01,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0.015,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
   },
   {
     "key": "cyberpunk/roof/poor",
     "alignment": "tile",
     "append": true,
-    "description": "large service roof panels on a fitted grid",
-    "variantId": "service-panel",
+    "description": "two metre square charcoal roof panels",
+    "variantId": "panel-square",
     "resolution": [512, 512],
-    "pattern": { "kind": "panel-grid", "colors": ["#404241"], "cells": [3, 3], "line": 0.02, "bevel": 0.012, "depth": 0.11, "joint": 0.26, "variation": 0.018, "grain": 0 }
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#323634"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.01,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0.014,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
   },
+
   {
     "key": "cyberpunk/roof/mid",
     "alignment": "tile",
-    "description": "plain graphite roof membrane",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.76, "metallicFactor": 0 },
+    "description": "continuous graphite roof membrane with restrained mineral grain",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.8, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#454849",
-    "flatNoise": 0,
     "resolution": [512, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#33383a", "#404548"],
+      "cells": [5, 5],
+      "octaves": 2,
+      "depth": 0.024,
+      "variation": 0.016,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/roof/mid",
     "alignment": "tile",
     "append": true,
-    "description": "graphite membrane courses with restrained lap seams",
-    "variantId": "seam",
+    "description": "two metre by one metre graphite roof panels",
+    "variantId": "panel",
     "resolution": [512, 512],
-    "pattern": { "kind": "stripe", "colors": ["#4c4f50", "#3d4041"], "cells": [1, 6], "axis": "y", "split": 0.95, "line": 0.016, "depth": 0.09, "joint": 0.23, "variation": 0.012, "grain": 0 }
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#373c3f"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.11,
+      "joint": 0.18,
+      "variation": 0.014,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
   },
   {
     "key": "cyberpunk/roof/mid",
     "alignment": "tile",
     "append": true,
-    "description": "large graphite service roof panels on a fitted grid",
-    "variantId": "service-panel",
+    "description": "two metre square graphite roof panels",
+    "variantId": "panel-square",
     "resolution": [512, 512],
-    "pattern": { "kind": "panel-grid", "colors": ["#484b4c"], "cells": [3, 3], "line": 0.018, "bevel": 0.011, "depth": 0.10, "joint": 0.23, "variation": 0.014, "grain": 0 }
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#353a3d"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.11,
+      "joint": 0.18,
+      "variation": 0.013,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
   },
+
   {
     "key": "cyberpunk/roof/rich",
     "alignment": "tile",
-    "description": "plain dark zinc roof sheet",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.62, "metallicFactor": 1 },
+    "description": "continuous dark zinc roof with restrained surface grain",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.68, "metallicFactor": 1 },
     "variantId": "plain",
-    "flatColor": "#3e4448",
-    "flatNoise": 0,
     "resolution": [512, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#30363a", "#3c4347"],
+      "cells": [5, 5],
+      "octaves": 2,
+      "depth": 0.02,
+      "variation": 0.013,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/roof/rich",
     "alignment": "tile",
     "append": true,
-    "description": "dark zinc standing seams at half-metre spacing",
-    "variantId": "seam",
+    "description": "two metre by one metre dark zinc roof panels",
+    "variantId": "panel",
     "resolution": [512, 512],
-    "pattern": { "kind": "stripe", "colors": ["#464d51", "#343a3e"], "cells": [6, 1], "axis": "x", "split": 0.94, "line": 0.014, "depth": 0.10, "joint": 0.20, "variation": 0.01, "grain": 0 }
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#343b3f"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.008,
+      "depth": 0.09,
+      "joint": 0.16,
+      "variation": 0.011,
+      "grain": 0.002
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
   },
   {
     "key": "cyberpunk/roof/rich",
     "alignment": "tile",
     "append": true,
-    "description": "large dark zinc service roof panels on a fitted grid",
-    "variantId": "service-panel",
+    "description": "two metre square dark zinc roof panels",
+    "variantId": "panel-square",
     "resolution": [512, 512],
-    "pattern": { "kind": "panel-grid", "colors": ["#43494d"], "cells": [3, 3], "line": 0.016, "bevel": 0.01, "depth": 0.09, "joint": 0.20, "variation": 0.012, "grain": 0 }
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#32393d"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.008,
+      "depth": 0.09,
+      "joint": 0.16,
+      "variation": 0.01,
+      "grain": 0.002
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
   },
+
   {
     "key": "cyberpunk/roof/high_rich",
     "alignment": "tile",
-    "description": "plain near-black roof membrane",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
+    "description": "continuous near-black roof membrane with restrained mineral grain",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.62, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#272c30",
-    "flatNoise": 0,
     "resolution": [512, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#20262a", "#2c3236"],
+      "cells": [5, 5],
+      "octaves": 2,
+      "depth": 0.017,
+      "variation": 0.011,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/roof/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "near-black membrane courses with hairline lap seams",
-    "variantId": "seam",
+    "description": "two metre by one metre near-black roof panels",
+    "variantId": "panel",
     "resolution": [512, 512],
-    "pattern": { "kind": "stripe", "colors": ["#2d3337", "#202529"], "cells": [1, 6], "axis": "y", "split": 0.96, "line": 0.012, "depth": 0.07, "joint": 0.18, "variation": 0.008, "grain": 0 }
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#252b2f"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.007,
+      "depth": 0.08,
+      "joint": 0.14,
+      "variation": 0.009,
+      "grain": 0.002
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
   },
   {
     "key": "cyberpunk/roof/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "large near-black service roof panels on a fitted grid",
-    "variantId": "service-panel",
+    "description": "two metre square near-black roof panels",
+    "variantId": "panel-square",
     "resolution": [512, 512],
-    "pattern": { "kind": "panel-grid", "colors": ["#2b3034"], "cells": [3, 3], "line": 0.014, "bevel": 0.009, "depth": 0.07, "joint": 0.18, "variation": 0.008, "grain": 0 }
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": ["#23292d"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.007,
+      "depth": 0.08,
+      "joint": 0.14,
+      "variation": 0.008,
+      "grain": 0.002
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
   }
 ]

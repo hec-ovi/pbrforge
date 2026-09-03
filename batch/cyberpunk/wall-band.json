@@ -1,0 +1,190 @@
+[
+  {
+    "key": "cyberpunk/wall-band/poor",
+    "alignment": "tile",
+    "description": "continuous neutral cement facade band at exact 1.4 metre height",
+    "tiling": { "worldSize": [4, 1.4] },
+    "physical": { "roughnessFactor": 0.9, "metallicFactor": 0 },
+    "variantId": "cement",
+    "resolution": [1000, 350],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#505551", "#5c615d"],
+      "cells": [8, 3],
+      "octaves": 2,
+      "depth": 0.028,
+      "variation": 0.018,
+      "grain": 0.006
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 1.4,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/wall-band/poor",
+    "alignment": "tile",
+    "append": true,
+    "description": "continuous charcoal facade band at exact 1.4 metre height",
+    "variantId": "graphite",
+    "resolution": [1000, 350],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#303634", "#3c423f"],
+      "cells": [8, 3],
+      "octaves": 2,
+      "depth": 0.024,
+      "variation": 0.016,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 1.4,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/wall-band/mid",
+    "alignment": "tile",
+    "description": "continuous neutral cement facade band at exact 1.4 metre height",
+    "tiling": { "worldSize": [4, 1.4] },
+    "physical": { "roughnessFactor": 0.84, "metallicFactor": 0 },
+    "variantId": "cement",
+    "resolution": [1000, 350],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#585d59", "#646965"],
+      "cells": [8, 3],
+      "octaves": 2,
+      "depth": 0.024,
+      "variation": 0.016,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 1.4,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/wall-band/mid",
+    "alignment": "tile",
+    "append": true,
+    "description": "continuous graphite facade band at exact 1.4 metre height",
+    "variantId": "graphite",
+    "resolution": [1000, 350],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#2d3436", "#394043"],
+      "cells": [8, 3],
+      "octaves": 2,
+      "depth": 0.021,
+      "variation": 0.014,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 1.4,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/wall-band/rich",
+    "alignment": "tile",
+    "description": "continuous honed cement facade band at exact 1.4 metre height",
+    "tiling": { "worldSize": [4, 1.4] },
+    "physical": { "roughnessFactor": 0.76, "metallicFactor": 0 },
+    "variantId": "cement",
+    "resolution": [1000, 350],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#606662", "#6c726e"],
+      "cells": [8, 3],
+      "octaves": 2,
+      "depth": 0.02,
+      "variation": 0.013,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 1.4,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/wall-band/rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "continuous dark graphite facade band at exact 1.4 metre height",
+    "variantId": "graphite",
+    "resolution": [1000, 350],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#293034", "#353c40"],
+      "cells": [8, 3],
+      "octaves": 2,
+      "depth": 0.018,
+      "variation": 0.012,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 1.4,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/wall-band/high_rich",
+    "alignment": "tile",
+    "description": "continuous dark cement facade band at exact 1.4 metre height",
+    "tiling": { "worldSize": [4, 1.4] },
+    "physical": { "roughnessFactor": 0.68, "metallicFactor": 0 },
+    "variantId": "cement",
+    "resolution": [1000, 350],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#363d3b", "#424946"],
+      "cells": [8, 3],
+      "octaves": 2,
+      "depth": 0.017,
+      "variation": 0.011,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 1.4,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/wall-band/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "description": "continuous near-black graphite facade band at exact 1.4 metre height",
+    "variantId": "graphite",
+    "resolution": [1000, 350],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#1e2529", "#2a3135"],
+      "cells": [8, 3],
+      "octaves": 2,
+      "depth": 0.015,
+      "variation": 0.01,
+      "grain": 0.002
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 1.4,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
+  }
+]

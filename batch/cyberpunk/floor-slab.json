@@ -3,124 +3,311 @@
     "key": "cyberpunk/floor-slab/poor",
     "aliases": ["cyberpunk/balcony-slab/poor"],
     "alignment": "tile",
-    "description": "plain charcoal poured floor and balcony slab",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.82, "metallicFactor": 0 },
+    "description": "continuous charcoal poured floor and balcony slab with restrained mineral grain",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.88, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#555653",
-    "flatNoise": 0,
     "resolution": [512, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#444945", "#515652"],
+      "cells": [4, 4],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.006
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/floor-slab/poor",
     "alignment": "tile",
     "append": true,
-    "description": "large worn concrete floor slabs on a fitted grid",
-    "variantId": "large-slab",
+    "description": "two metre by one metre worn neutral floor slabs",
+    "variantId": "panel",
     "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#5d5e5a"], "cells": [2, 2], "line": 0.018, "bevel": 0.012, "depth": 0.16, "joint": 0.28, "variation": 0.025, "grain": 0 }
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#4c514d"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.012,
+      "depth": 0.16,
+      "joint": 0.22,
+      "variation": 0.02,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
   },
   {
     "key": "cyberpunk/floor-slab/poor",
     "alignment": "tile",
     "append": true,
-    "description": "running-bond service floor slabs on a fitted grid",
-    "variantId": "bond",
+    "description": "two metre square worn neutral floor slabs",
+    "variantId": "large-slab",
     "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#585955"], "cells": [3, 4], "bond": "running", "line": 0.016, "bevel": 0.01, "depth": 0.14, "joint": 0.26, "variation": 0.02, "grain": 0 }
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#494e4a"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.012,
+      "depth": 0.16,
+      "joint": 0.22,
+      "variation": 0.018,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
   },
+
   {
     "key": "cyberpunk/floor-slab/mid",
     "aliases": ["cyberpunk/balcony-slab/mid"],
     "alignment": "tile",
-    "description": "plain neutral poured floor and balcony slab",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.75, "metallicFactor": 0 },
+    "description": "continuous neutral poured floor and balcony slab with restrained mineral grain",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.8, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#777875",
-    "flatNoise": 0,
     "resolution": [512, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#4c514e", "#595e5a"],
+      "cells": [4, 4],
+      "octaves": 2,
+      "depth": 0.026,
+      "variation": 0.018,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/floor-slab/mid",
     "alignment": "tile",
     "append": true,
-    "description": "large neutral concrete floor slabs on a fitted grid",
-    "variantId": "large-slab",
+    "description": "two metre by one metre neutral floor slabs",
+    "variantId": "panel",
     "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#7f807d"], "cells": [2, 2], "line": 0.016, "bevel": 0.011, "depth": 0.14, "joint": 0.25, "variation": 0.02, "grain": 0 }
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#555a56"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.011,
+      "depth": 0.14,
+      "joint": 0.2,
+      "variation": 0.018,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
   },
   {
     "key": "cyberpunk/floor-slab/mid",
     "alignment": "tile",
     "append": true,
-    "description": "running-bond neutral floor slabs on a fitted grid",
-    "variantId": "bond",
+    "description": "two metre square neutral floor slabs",
+    "variantId": "large-slab",
     "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#747572"], "cells": [3, 4], "bond": "running", "line": 0.014, "bevel": 0.009, "depth": 0.12, "joint": 0.23, "variation": 0.018, "grain": 0 }
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#525753"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.011,
+      "depth": 0.14,
+      "joint": 0.2,
+      "variation": 0.016,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
   },
+
   {
     "key": "cyberpunk/floor-slab/rich",
     "aliases": ["cyberpunk/balcony-slab/rich"],
     "alignment": "tile",
-    "description": "plain honed grey floor and balcony slab",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.64, "metallicFactor": 0 },
+    "description": "continuous honed neutral floor and balcony slab with restrained mineral grain",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.7, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#898b89",
-    "flatNoise": 0,
     "resolution": [512, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#555b57", "#626864"],
+      "cells": [4, 4],
+      "octaves": 2,
+      "depth": 0.022,
+      "variation": 0.015,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/floor-slab/rich",
     "alignment": "tile",
     "append": true,
-    "description": "large honed grey floor slabs on a fitted grid",
-    "variantId": "large-slab",
+    "description": "two metre by one metre honed neutral floor slabs",
+    "variantId": "panel",
     "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#929492"], "cells": [2, 2], "line": 0.014, "bevel": 0.009, "depth": 0.11, "joint": 0.21, "variation": 0.015, "grain": 0 }
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#5d635f"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.01,
+      "depth": 0.12,
+      "joint": 0.18,
+      "variation": 0.015,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
   },
   {
     "key": "cyberpunk/floor-slab/rich",
     "alignment": "tile",
     "append": true,
-    "description": "running-bond honed floor slabs on a fitted grid",
-    "variantId": "bond",
+    "description": "two metre square honed neutral floor slabs",
+    "variantId": "large-slab",
     "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#858785"], "cells": [3, 4], "bond": "running", "line": 0.012, "bevel": 0.008, "depth": 0.10, "joint": 0.20, "variation": 0.014, "grain": 0 }
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#5a605c"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.01,
+      "depth": 0.12,
+      "joint": 0.18,
+      "variation": 0.014,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
   },
+
   {
     "key": "cyberpunk/floor-slab/high_rich",
     "aliases": ["cyberpunk/balcony-slab/high_rich"],
     "alignment": "tile",
-    "description": "plain dark honed floor and balcony slab",
-    "tiling": { "worldSize": [3, 3] },
-    "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
+    "description": "continuous near-black honed floor and balcony slab with restrained mineral grain",
+    "tiling": { "worldSize": [2, 2] },
+    "physical": { "roughnessFactor": 0.62, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#2d3034",
-    "flatNoise": 0,
     "resolution": [512, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#292f32", "#363c3f"],
+      "cells": [4, 4],
+      "octaves": 2,
+      "depth": 0.018,
+      "variation": 0.012,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/floor-slab/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "large dark honed floor slabs on a fitted grid",
-    "variantId": "large-slab",
+    "description": "two metre by one metre near-black honed floor slabs",
+    "variantId": "panel",
     "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#35393d"], "cells": [2, 2], "line": 0.012, "bevel": 0.008, "depth": 0.09, "joint": 0.18, "variation": 0.012, "grain": 0 }
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#30363a"],
+      "cells": [1, 2],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.1,
+      "joint": 0.16,
+      "variation": 0.012,
+      "grain": 0.002
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 1],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "horizontal"
+    }
   },
   {
     "key": "cyberpunk/floor-slab/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "running-bond dark honed floor slabs on a fitted grid",
-    "variantId": "bond",
+    "description": "two metre square near-black honed floor slabs",
+    "variantId": "large-slab",
     "resolution": [512, 512],
-    "pattern": { "kind": "slab", "colors": ["#303438"], "cells": [3, 4], "bond": "running", "line": 0.01, "bevel": 0.007, "depth": 0.08, "joint": 0.17, "variation": 0.01, "grain": 0 }
+    "pattern": {
+      "kind": "slab",
+      "colors": ["#2d3336"],
+      "cells": [1, 1],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.1,
+      "joint": 0.16,
+      "variation": 0.01,
+      "grain": 0.002
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [2, 2],
+      "jointWidth": 0.02,
+      "origin": [0, 0],
+      "orientation": "isotropic"
+    }
   }
 ]

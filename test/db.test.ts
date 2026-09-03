@@ -121,6 +121,7 @@ describe("database contract", () => {
 /** The kind vocabulary the contract guarantees, aliases included. */
 const KINDS = [
   "wall",
+  "wall-band",
   "wall-trim",
   "column",
   "window-glass",
@@ -180,13 +181,12 @@ describe("shipped cyberpunk coverage", () => {
     expect(missing).toEqual([]);
   });
 
-  it("ships frames, doors, trim, columns and service metal without texture noise", async () => {
+  it("ships frames, doors, trim and service metal without texture noise", async () => {
     const themeDir = db.themeDir("cyberpunk");
     const steel: Record<string, { id: string; metallic: number }> = {
       "window-frame": { id: "paint", metallic: 1 },
       door: { id: "paint", metallic: 1 },
       "wall-trim": { id: "paint", metallic: 1 },
-      column: { id: "plain", metallic: 0 },
       metal: { id: "paint", metallic: 1 },
       "fire-escape": { id: "paint", metallic: 1 },
       "roof-artifact": { id: "paint", metallic: 1 },
@@ -221,13 +221,6 @@ describe("shipped cyberpunk coverage", () => {
           (normal.length / 3) /
           2;
         expect(lean, `${kind}/${tier} normal`).toBeLessThan(1);
-        if (kind === "column") {
-          expect(entry.variants.map((variant) => variant.id)).toEqual([
-            "plain",
-            "warm",
-          ]);
-          expect(lead.resolution).toEqual([256, 512]);
-        }
         if (
           kind === "metal" ||
           kind === "fire-escape" ||
@@ -238,6 +231,50 @@ describe("shipped cyberpunk coverage", () => {
             "zinc",
           ]);
         }
+      }
+    }
+  });
+
+  it("gives concrete columns restrained continuous surface detail", async () => {
+    const themeDir = db.themeDir("cyberpunk");
+    for (const tier of ["poor", "mid", "rich", "high_rich"]) {
+      const entry = db.resolve(`cyberpunk/column/${tier}`);
+      expect(entry.tiling?.worldSize).toEqual([1.5, 3]);
+      expect(
+        entry.variants.map((variant) => [
+          variant.id,
+          variant.class,
+          variant.resolution,
+        ]),
+      ).toEqual([
+        ["plain", "pattern", [256, 512]],
+        ["cement", "pattern", [256, 512]],
+      ]);
+      for (const variant of entry.variants) {
+        expect(variant.layout).toEqual({
+          family: "continuous",
+          origin: [0, 0],
+          orientation: "vertical",
+        });
+        const stats = await sharp(
+          join(themeDir, variant.maps.basecolor),
+        ).stats();
+        const means = stats.channels.slice(0, 3).map((channel) => channel.mean);
+        expect(
+          Math.max(...means),
+          `${entry.key}:${variant.id} brightness`,
+        ).toBeLessThan(115);
+        expect(
+          Math.max(...means) - Math.min(...means),
+          `${entry.key}:${variant.id} chroma`,
+        ).toBeLessThan(10);
+        expect(
+          Math.max(
+            ...stats.channels
+              .slice(0, 3)
+              .map((channel) => channel.max - channel.min),
+          ),
+        ).toBeGreaterThan(5);
       }
     }
   });
@@ -398,7 +435,7 @@ describe("shipped cyberpunk coverage", () => {
     for (const tier of ["poor", "mid", "rich", "high_rich"]) {
       const entry = db.resolve(`cyberpunk/floor-slab/${tier}`);
       expect(db.resolve(`cyberpunk/balcony-slab/${tier}`).key).toBe(entry.key);
-      expect(entry.tiling?.worldSize).toEqual([3, 3]);
+      expect(entry.tiling?.worldSize).toEqual([2, 2]);
       expect(entry.finish).toBeUndefined();
       expect(
         entry.variants.map((variant) => [
@@ -407,17 +444,20 @@ describe("shipped cyberpunk coverage", () => {
           variant.resolution,
         ]),
       ).toEqual([
-        ["plain", "flat", [512, 512]],
+        ["plain", "pattern", [512, 512]],
+        ["panel", "pattern", [512, 512]],
         ["large-slab", "pattern", [512, 512]],
-        ["bond", "pattern", [512, 512]],
       ]);
+      expect(entry.variants[0].layout?.family).toBe("continuous");
+      expect(entry.variants[1].layout?.moduleSize).toEqual([2, 1]);
+      expect(entry.variants[2].layout?.moduleSize).toEqual([2, 2]);
     }
   });
 
   it("ships roofs as deterministic whole-grid options", () => {
     for (const tier of ["poor", "mid", "rich", "high_rich"]) {
       const entry = db.resolve(`cyberpunk/roof/${tier}`);
-      expect(entry.tiling?.worldSize).toEqual([3, 3]);
+      expect(entry.tiling?.worldSize).toEqual([2, 2]);
       expect(entry.finish).toBeUndefined();
       expect(
         entry.variants.map((variant) => [
@@ -426,12 +466,90 @@ describe("shipped cyberpunk coverage", () => {
           variant.resolution,
         ]),
       ).toEqual([
-        ["plain", "flat", [512, 512]],
-        ["seam", "pattern", [512, 512]],
-        ["service-panel", "pattern", [512, 512]],
+        ["plain", "pattern", [512, 512]],
+        ["panel", "pattern", [512, 512]],
+        ["panel-square", "pattern", [512, 512]],
       ]);
+      expect(entry.variants[0].layout?.family).toBe("continuous");
+      expect(entry.variants[1].layout?.moduleSize).toEqual([2, 1]);
+      expect(entry.variants[2].layout?.moduleSize).toEqual([2, 2]);
     }
   });
+
+  it("publishes exact 1.4 metre facade bands without baked panel joints", async () => {
+    const themeDir = db.themeDir("cyberpunk");
+    for (const tier of ["poor", "mid", "rich", "high_rich"]) {
+      const entry = db.resolve(`cyberpunk/wall-band/${tier}`);
+      expect(entry.tiling?.worldSize).toEqual([4, 1.4]);
+      expect(
+        entry.variants.map((variant) => [
+          variant.id,
+          variant.class,
+          variant.resolution,
+        ]),
+      ).toEqual([
+        ["cement", "pattern", [1000, 350]],
+        ["graphite", "pattern", [1000, 350]],
+      ]);
+      for (const variant of entry.variants) {
+        expect(variant.layout).toEqual({
+          family: "band",
+          bandHeight: 1.4,
+          origin: [0, 0],
+          orientation: "horizontal",
+        });
+        const { data, info } = await sharp(
+          join(themeDir, variant.maps.basecolor),
+        )
+          .greyscale()
+          .raw()
+          .toBuffer({ resolveWithObject: true });
+        let step = 0;
+        for (let y = 0; y < info.height; y++) {
+          for (let x = 1; x < info.width; x++) {
+            step = Math.max(
+              step,
+              Math.abs(data[y * info.width + x] - data[y * info.width + x - 1]),
+            );
+          }
+        }
+        expect(step, `${entry.key}:${variant.id}`).toBeLessThanOrEqual(8);
+      }
+    }
+  });
+
+  it("keeps exterior service finishes neutral and below bright-white range", async () => {
+    const themeDir = db.themeDir("cyberpunk");
+    for (const kind of [
+      "ac-unit",
+      "metal",
+      "fire-escape",
+      "roof-artifact",
+      "window-frame",
+      "door",
+      "wall-trim",
+    ]) {
+      for (const tier of ["poor", "mid", "rich", "high_rich"]) {
+        const entry = db.resolve(`cyberpunk/${kind}/${tier}`);
+        for (const variant of entry.variants) {
+          const stats = await sharp(
+            join(themeDir, variant.maps.basecolor),
+          ).stats();
+          const means = stats.channels
+            .slice(0, 3)
+            .map((channel) => channel.mean);
+          expect(
+            Math.max(...means),
+            `${entry.key}:${variant.id} brightness`,
+          ).toBeLessThan(125);
+          expect(
+            Math.max(...means) - Math.min(...means),
+            `${entry.key}:${variant.id} chroma`,
+          ).toBeLessThan(12);
+        }
+      }
+    }
+  }, 30_000);
 
   it("ships neutral deterministic concrete with exact two by one facade panels", async () => {
     const themeDir = db.themeDir("cyberpunk");

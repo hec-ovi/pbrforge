@@ -39,7 +39,7 @@
     "append": true,
     "description": "galvanized fire-escape steel, even matte finish",
     "variantId": "zinc",
-    "flatColor": "#777c7b",
+    "flatColor": "#646967",
     "flatNoise": 0,
     "resolution": [256, 256]
   },
@@ -61,7 +61,7 @@
     "append": true,
     "description": "clean cool fire-escape steel, even matte finish",
     "variantId": "zinc",
-    "flatColor": "#858b8d",
+    "flatColor": "#6a7072",
     "flatNoise": 0,
     "resolution": [256, 256]
   },
@@ -81,9 +81,9 @@
     "key": "cyberpunk/fire-escape/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "clean pale fire-escape steel, even satin-matte finish",
+    "description": "clean neutral fire-escape steel, even satin-matte finish",
     "variantId": "zinc",
-    "flatColor": "#969c9d",
+    "flatColor": "#707678",
     "flatNoise": 0,
     "resolution": [256, 256]
   }

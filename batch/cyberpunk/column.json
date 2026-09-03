@@ -2,89 +2,185 @@
   {
     "key": "cyberpunk/column/poor",
     "alignment": "tile",
-    "description": "chalky charcoal concrete support column, flat surface",
+    "description": "continuous charcoal concrete support with restrained mineral grain",
     "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.76, "metallicFactor": 0 },
+    "physical": { "roughnessFactor": 0.82, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#4b4b48",
-    "flatNoise": 0,
     "resolution": [256, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#414642", "#4d524e"],
+      "cells": [3, 6],
+      "octaves": 2,
+      "depth": 0.028,
+      "variation": 0.018,
+      "grain": 0.006
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/column/poor",
     "alignment": "tile",
     "append": true,
-    "description": "warm grey concrete support column, flat surface",
-    "variantId": "warm",
-    "flatColor": "#5a5650",
-    "flatNoise": 0,
-    "resolution": [256, 512]
+    "description": "continuous neutral cement support with restrained mineral grain",
+    "variantId": "cement",
+    "resolution": [256, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#505551", "#5c615d"],
+      "cells": [3, 6],
+      "octaves": 2,
+      "depth": 0.03,
+      "variation": 0.02,
+      "grain": 0.006
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    }
   },
   {
     "key": "cyberpunk/column/mid",
     "alignment": "tile",
-    "description": "dark precast concrete support column, flat surface",
+    "description": "continuous graphite concrete support with restrained mineral grain",
     "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.68, "metallicFactor": 0 },
+    "physical": { "roughnessFactor": 0.74, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#44474a",
-    "flatNoise": 0,
     "resolution": [256, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#383e40", "#454b4d"],
+      "cells": [3, 6],
+      "octaves": 2,
+      "depth": 0.024,
+      "variation": 0.016,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/column/mid",
     "alignment": "tile",
     "append": true,
-    "description": "warm graphite concrete support column, flat surface",
-    "variantId": "warm",
-    "flatColor": "#504d49",
-    "flatNoise": 0,
-    "resolution": [256, 512]
+    "description": "continuous neutral cement support with restrained mineral grain",
+    "variantId": "cement",
+    "resolution": [256, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#555a56", "#616662"],
+      "cells": [3, 6],
+      "octaves": 2,
+      "depth": 0.026,
+      "variation": 0.018,
+      "grain": 0.005
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    }
   },
   {
     "key": "cyberpunk/column/rich",
     "alignment": "tile",
-    "description": "honed graphite stone support column, flat surface",
+    "description": "continuous honed graphite support with restrained mineral grain",
     "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.60, "metallicFactor": 0 },
+    "physical": { "roughnessFactor": 0.66, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#3b3e41",
-    "flatNoise": 0,
     "resolution": [256, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#30363a", "#3c4246"],
+      "cells": [3, 6],
+      "octaves": 2,
+      "depth": 0.02,
+      "variation": 0.013,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/column/rich",
     "alignment": "tile",
     "append": true,
-    "description": "warm honed stone support column, flat surface",
-    "variantId": "warm",
-    "flatColor": "#47443f",
-    "flatNoise": 0,
-    "resolution": [256, 512]
+    "description": "continuous honed neutral cement support with restrained mineral grain",
+    "variantId": "cement",
+    "resolution": [256, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#5c625e", "#686e6a"],
+      "cells": [3, 6],
+      "octaves": 2,
+      "depth": 0.022,
+      "variation": 0.014,
+      "grain": 0.004
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    }
   },
   {
     "key": "cyberpunk/column/high_rich",
     "alignment": "tile",
-    "description": "honed black stone support column, flat surface",
+    "description": "continuous near-black honed support with restrained mineral grain",
     "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.54, "metallicFactor": 0 },
+    "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
     "variantId": "plain",
-    "flatColor": "#303337",
-    "flatNoise": 0,
     "resolution": [256, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#242a2e", "#30363a"],
+      "cells": [3, 6],
+      "octaves": 2,
+      "depth": 0.017,
+      "variation": 0.011,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/column/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "warm black stone support column, flat surface",
-    "variantId": "warm",
-    "flatColor": "#393733",
-    "flatNoise": 0,
-    "resolution": [256, 512]
+    "description": "continuous dark honed cement support with restrained mineral grain",
+    "variantId": "cement",
+    "resolution": [256, 512],
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#3b4240", "#474e4b"],
+      "cells": [3, 6],
+      "octaves": 2,
+      "depth": 0.018,
+      "variation": 0.012,
+      "grain": 0.003
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [0, 0],
+      "orientation": "vertical"
+    }
   }
 ]

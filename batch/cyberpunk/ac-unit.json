@@ -2,7 +2,7 @@
   {
     "key": "cyberpunk/ac-unit/poor",
     "alignment": "exact",
-    "description": "old condenser face: chalky off-white paint, rust at the flange and grime down the housing",
+    "description": "old condenser face in dark neutral paint with restrained graphite wear",
     "aspect": [
       1,
       1
@@ -19,9 +19,9 @@
     "pattern": {
       "kind": "grille",
       "colors": [
-        "#b6b2a6",
+        "#565b58",
         "#141517",
-        "#6a4a33"
+        "#343936"
       ],
       "line": 0.018,
       "bevel": 0.03,
@@ -36,7 +36,7 @@
   {
     "key": "cyberpunk/ac-unit/mid",
     "alignment": "exact",
-    "description": "condenser face: light grey paint, some grime at the edges",
+    "description": "condenser face in neutral graphite paint with restrained edge wear",
     "aspect": [
       1,
       1
@@ -53,9 +53,9 @@
     "pattern": {
       "kind": "grille",
       "colors": [
-        "#c5c5c0",
+        "#505659",
         "#151619",
-        "#5b5349"
+        "#303638"
       ],
       "line": 0.018,
       "bevel": 0.03,
@@ -70,7 +70,7 @@
   {
     "key": "cyberpunk/ac-unit/rich",
     "alignment": "exact",
-    "description": "condenser face: clean pale grey paint, faint dust at the edges",
+    "description": "condenser face in clean dark graphite paint with faint edge wear",
     "aspect": [
       1,
       1
@@ -87,9 +87,9 @@
     "pattern": {
       "kind": "grille",
       "colors": [
-        "#d3d5d4",
+        "#484f53",
         "#131417",
-        "#6f6c68"
+        "#2d3336"
       ],
       "line": 0.018,
       "bevel": 0.03,
@@ -121,7 +121,7 @@
     "pattern": {
       "kind": "grille",
       "colors": [
-        "#565a5f",
+        "#353c41",
         "#0f1013",
         "#3b3e42"
       ],
