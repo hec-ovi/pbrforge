@@ -92,6 +92,7 @@ export class MaterialInspector {
       { name: 'Metallic', key: 'metallic', label: 'CONDUCTIVITY' },
       { name: 'AO', key: 'ao', label: 'AMBIENT OCCLUSION' },
       { name: 'Displacement', key: 'height', label: 'HEIGHT / RELIEF' },
+      { name: 'Opacity', key: 'opacity', label: 'SURFACE COVERAGE' },
       { name: 'Emission', key: 'emission', label: 'SELF-ILLUMINATION' },
     ];
 

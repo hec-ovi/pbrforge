@@ -63,6 +63,7 @@ const mockEntry2: MaterialEntry = {
         roughness: 'assets/door/rich/alpha/roughness.png',
         metallic: 'assets/door/rich/alpha/metallic.png',
         ao: 'assets/door/rich/alpha/ao.png',
+        opacity: 'assets/door/rich/alpha/opacity.png',
         emission: 'assets/door/rich/alpha/emission.png',
       },
     },
@@ -198,6 +199,8 @@ describe('UI Polish Suite', () => {
     expect(getByText(view.root, 'AUTHORED FINISH SPEC')).toBeTruthy();
     expect(getByText(view.root, 'PHYSICAL PBR PROPERTIES')).toBeTruthy();
     expect(getByText(view.root, 'TEXTURE CHANNELS (VARIANT alpha)')).toBeTruthy();
+    expect(getByText(view.root, 'Opacity')).toBeTruthy();
+    expect(getByText(view.root, 'SURFACE COVERAGE')).toBeTruthy();
   });
 
   it('displays toast messages with various severities and dispatches properly', () => {

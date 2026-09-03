@@ -267,7 +267,7 @@ export class SphereViewer {
       if (!file) return null;
       const texture = this.loader.load(`/themes/${theme}/${file}`);
       if (srgb) texture.colorSpace = THREE.SRGBColorSpace;
-      texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+      texture.wrapS = texture.wrapT = tiled ? THREE.RepeatWrapping : THREE.ClampToEdgeWrapping;
       if (tiled) texture.repeat.set(repeat, repeat);
       this.textures.push(texture);
       return texture;
@@ -281,6 +281,7 @@ export class SphereViewer {
     material.metalnessMap = tex(variant.maps.metallic, false);
     material.aoMap = tex(variant.maps.ao, false);
     material.displacementMap = tex(variant.maps.height, false);
+    material.alphaMap = tex(variant.maps.opacity, false);
     material.displacementScale = 0.02;
     material.roughness = physical.roughnessFactor ?? 1;
     material.metalness = physical.metallicFactor ?? 1;
@@ -290,6 +291,7 @@ export class SphereViewer {
     material.transmission = physical.transmission ?? 0;
     material.ior = physical.ior ?? 1.5;
     material.transparent = (physical.alphaMode ?? 'OPAQUE') === 'BLEND';
+    material.alphaTest = (physical.alphaMode ?? 'OPAQUE') === 'MASK' ? 0.5 : 0;
     material.color.set(physical.tint && material.transmission > 0 ? physical.tint : '#ffffff');
     material.wireframe = this.isWireframe;
     material.needsUpdate = true;
