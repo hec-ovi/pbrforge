@@ -2,15 +2,10 @@
   {
     "key": "cyberpunk/ad-screen/poor",
     "alignment": "exact",
-    "description": "run-down district advertisement",
-    "aspect": [
-      16,
-      9
-    ],
-    "resolution": [
-      1280,
-      720
-    ],
+    "description": "dark future-noir district portrait display",
+    "variantId": "noir-cyan",
+    "aspect": [16, 9],
+    "resolution": [1280, 720],
     "physical": {
       "roughnessFactor": 0.12,
       "metallicFactor": 0,
@@ -23,35 +18,18 @@
       {
         "kind": "led-dot",
         "pitch": 16,
-        "brandName": "NOODLE-9",
-        "businessKind": "instant ramen bar",
-        "description": "a man in his thirties leaning close to camera eating noodles from a plain paper cup, bright even light on his face, hot magenta backdrop"
-      },
-      {
-        "kind": "scanline-billboard",
-        "pitch": 8,
-        "brandName": "KIRO SODA",
-        "businessKind": "citrus soda maker",
-        "description": "a woman in her twenties drinking from a chilled plain green bottle, deep red backdrop"
-      },
-      {
-        "kind": "glyph-panel",
-        "description": "district service panel, cyan and orange circuit glyph pattern"
+        "imagePath": "sources/ads-codex/ad-noir-cyan-red-wide.png",
+        "description": "an adult East Asian woman in a restrained cyan and red future-noir portrait against deep navy"
       }
     ]
   },
   {
     "key": "cyberpunk/ad-screen/mid",
     "alignment": "exact",
-    "description": "mid district advertisement",
-    "aspect": [
-      16,
-      9
-    ],
-    "resolution": [
-      1280,
-      720
-    ],
+    "description": "dark future-noir metropolitan portrait display",
+    "variantId": "noir-cyan",
+    "aspect": [16, 9],
+    "resolution": [1280, 720],
     "physical": {
       "roughnessFactor": 0.09,
       "metallicFactor": 0,
@@ -62,37 +40,20 @@
     "flatNoise": 0.04,
     "screens": [
       {
-        "kind": "led-dot",
-        "pitch": 12,
-        "brandName": "ZENKOA",
-        "businessKind": "energy drink maker",
-        "description": "a woman in her twenties raising a plain slim silver can toward camera, electric teal backdrop"
-      },
-      {
         "kind": "scanline-billboard",
-        "pitch": 7,
-        "brandName": "MITSUKAWA",
-        "businessKind": "handset manufacturer",
-        "description": "a man in his thirties holding a slim plain black handset beside his face, violet backdrop"
-      },
-      {
-        "kind": "glyph-panel",
-        "description": "transit information panel, magenta and cyan circuit glyph pattern"
+        "pitch": 12,
+        "imagePath": "sources/ads-codex/ad-noir-cyan-red-wide.png",
+        "description": "an adult East Asian woman in a restrained cyan and red future-noir portrait against deep navy"
       }
     ]
   },
   {
     "key": "cyberpunk/ad-screen/rich",
     "alignment": "exact",
-    "description": "corporate plaza advertisement",
-    "aspect": [
-      16,
-      9
-    ],
-    "resolution": [
-      1280,
-      720
-    ],
+    "description": "dark retro-future corporate portrait display",
+    "variantId": "noir-amber",
+    "aspect": [16, 9],
+    "resolution": [1280, 720],
     "physical": {
       "roughnessFactor": 0.06,
       "metallicFactor": 0,
@@ -105,35 +66,18 @@
       {
         "kind": "led-dot",
         "pitch": 10,
-        "brandName": "NOVA SEIKO",
-        "businessKind": "watchmaker",
-        "description": "a woman in her thirties holding her wrist up beside her face to show a large steel wristwatch, bright even light, deep blue backdrop"
-      },
-      {
-        "kind": "scanline-billboard",
-        "pitch": 6,
-        "brandName": "AKIRO MOTORS",
-        "businessKind": "car maker",
-        "description": "a sleek coupe in profile on a plain studio floor, burnt orange backdrop"
-      },
-      {
-        "kind": "glyph-panel",
-        "description": "corporate plaza panel, cyan and white circuit glyph pattern"
+        "imagePath": "sources/ads-codex/ad-noir-amber-wide.png",
+        "description": "an adult East Asian woman in an austere amber and cobalt retro-future portrait against charcoal"
       }
     ]
   },
   {
     "key": "cyberpunk/ad-screen/high_rich",
     "alignment": "exact",
-    "description": "corporate tower advertisement",
-    "aspect": [
-      16,
-      9
-    ],
-    "resolution": [
-      1280,
-      720
-    ],
+    "description": "dark retro-future tower portrait display",
+    "variantId": "noir-amber",
+    "aspect": [16, 9],
+    "resolution": [1280, 720],
     "physical": {
       "roughnessFactor": 0.04,
       "metallicFactor": 0,
@@ -144,22 +88,47 @@
     "flatNoise": 0.015,
     "screens": [
       {
-        "kind": "led-dot",
+        "kind": "scanline-billboard",
         "pitch": 8,
-        "brandName": "HELIOS KAI",
-        "businessKind": "parfumery",
-        "description": "a woman in her thirties holding a faceted crystal bottle beside her face, ivory and gold backdrop"
-      },
+        "imagePath": "sources/ads-codex/ad-noir-amber-wide.png",
+        "description": "an adult East Asian woman in an austere amber and cobalt retro-future portrait against charcoal"
+      }
+    ]
+  },
+  {
+    "key": "cyberpunk/ad-screen-tall/high_rich",
+    "alignment": "exact",
+    "append": true,
+    "canonical": true,
+    "variantId": "noir-cyan",
+    "description": "monumental cyan and red future-noir tower portrait",
+    "resolution": [720, 1280],
+    "emission": "image",
+    "flatColor": "#050507",
+    "screens": [
+      {
+        "kind": "led-dot",
+        "pitch": 14,
+        "imagePath": "sources/ads-codex/ad-noir-cyan-red-tall.png",
+        "description": "an adult East Asian woman in a monumental cyan and red future-noir tower portrait"
+      }
+    ]
+  },
+  {
+    "key": "cyberpunk/ad-screen-tall/high_rich",
+    "alignment": "exact",
+    "append": true,
+    "variantId": "noir-amber",
+    "description": "monumental amber and cobalt retro-future tower portrait",
+    "resolution": [720, 1280],
+    "emission": "image",
+    "flatColor": "#050507",
+    "screens": [
       {
         "kind": "scanline-billboard",
-        "pitch": 5,
-        "brandName": "ORBITAL SUITES",
-        "businessKind": "orbital hotel",
-        "description": "a man in his forties in a tailored suit raising a glass, deep indigo backdrop"
-      },
-      {
-        "kind": "glyph-panel",
-        "description": "tower crown panel, pale cyan and gold circuit glyph pattern"
+        "pitch": 12,
+        "imagePath": "sources/ads-codex/ad-noir-amber-tall.png",
+        "description": "an adult East Asian woman in a monumental amber and cobalt retro-future tower portrait"
       }
     ]
   }

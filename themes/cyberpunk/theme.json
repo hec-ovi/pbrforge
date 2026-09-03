@@ -6204,65 +6204,25 @@
       },
       "variants": [
         {
-          "id": "1",
+          "id": "noir-cyan",
+          "class": "flat",
           "resolution": [
             1280,
             720
           ],
           "maps": {
-            "basecolor": "assets/ad-screen/poor/1/basecolor.png",
-            "normal": "assets/ad-screen/poor/1/normal.png",
-            "roughness": "assets/ad-screen/poor/1/roughness.png",
-            "metallic": "assets/ad-screen/poor/1/metallic.png",
-            "height": "assets/ad-screen/poor/1/height.png",
-            "ao": "assets/ad-screen/poor/1/ao.png",
-            "emission": "assets/ad-screen/poor/1/emission.png"
+            "basecolor": "assets/ad-screen/poor/noir-cyan/basecolor.png",
+            "normal": "assets/ad-screen/poor/noir-cyan/normal.png",
+            "roughness": "assets/ad-screen/poor/noir-cyan/roughness.png",
+            "metallic": "assets/ad-screen/poor/noir-cyan/metallic.png",
+            "height": "assets/ad-screen/poor/noir-cyan/height.png",
+            "ao": "assets/ad-screen/poor/noir-cyan/ao.png",
+            "emission": "assets/ad-screen/poor/noir-cyan/emission.png"
           },
           "screen": {
             "kind": "led-dot",
             "pitch": 16,
-            "artwork": "assets/ad-screen/poor/1/artwork.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1280,
-            720
-          ],
-          "maps": {
-            "basecolor": "assets/ad-screen/poor/2/basecolor.png",
-            "normal": "assets/ad-screen/poor/2/normal.png",
-            "roughness": "assets/ad-screen/poor/2/roughness.png",
-            "metallic": "assets/ad-screen/poor/2/metallic.png",
-            "height": "assets/ad-screen/poor/2/height.png",
-            "ao": "assets/ad-screen/poor/2/ao.png",
-            "emission": "assets/ad-screen/poor/2/emission.png"
-          },
-          "screen": {
-            "kind": "scanline-billboard",
-            "pitch": 8,
-            "artwork": "assets/ad-screen/poor/2/artwork.png"
-          }
-        },
-        {
-          "id": "3",
-          "resolution": [
-            1280,
-            720
-          ],
-          "maps": {
-            "basecolor": "assets/ad-screen/poor/3/basecolor.png",
-            "normal": "assets/ad-screen/poor/3/normal.png",
-            "roughness": "assets/ad-screen/poor/3/roughness.png",
-            "metallic": "assets/ad-screen/poor/3/metallic.png",
-            "height": "assets/ad-screen/poor/3/height.png",
-            "ao": "assets/ad-screen/poor/3/ao.png",
-            "emission": "assets/ad-screen/poor/3/emission.png"
-          },
-          "screen": {
-            "kind": "glyph-panel",
-            "artwork": "assets/ad-screen/poor/3/artwork.png"
+            "artwork": "assets/ad-screen/poor/noir-cyan/artwork.png"
           }
         }
       ]
@@ -6281,65 +6241,25 @@
       },
       "variants": [
         {
-          "id": "1",
+          "id": "noir-cyan",
+          "class": "flat",
           "resolution": [
             1280,
             720
           ],
           "maps": {
-            "basecolor": "assets/ad-screen/mid/1/basecolor.png",
-            "normal": "assets/ad-screen/mid/1/normal.png",
-            "roughness": "assets/ad-screen/mid/1/roughness.png",
-            "metallic": "assets/ad-screen/mid/1/metallic.png",
-            "height": "assets/ad-screen/mid/1/height.png",
-            "ao": "assets/ad-screen/mid/1/ao.png",
-            "emission": "assets/ad-screen/mid/1/emission.png"
-          },
-          "screen": {
-            "kind": "led-dot",
-            "pitch": 12,
-            "artwork": "assets/ad-screen/mid/1/artwork.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1280,
-            720
-          ],
-          "maps": {
-            "basecolor": "assets/ad-screen/mid/2/basecolor.png",
-            "normal": "assets/ad-screen/mid/2/normal.png",
-            "roughness": "assets/ad-screen/mid/2/roughness.png",
-            "metallic": "assets/ad-screen/mid/2/metallic.png",
-            "height": "assets/ad-screen/mid/2/height.png",
-            "ao": "assets/ad-screen/mid/2/ao.png",
-            "emission": "assets/ad-screen/mid/2/emission.png"
+            "basecolor": "assets/ad-screen/mid/noir-cyan/basecolor.png",
+            "normal": "assets/ad-screen/mid/noir-cyan/normal.png",
+            "roughness": "assets/ad-screen/mid/noir-cyan/roughness.png",
+            "metallic": "assets/ad-screen/mid/noir-cyan/metallic.png",
+            "height": "assets/ad-screen/mid/noir-cyan/height.png",
+            "ao": "assets/ad-screen/mid/noir-cyan/ao.png",
+            "emission": "assets/ad-screen/mid/noir-cyan/emission.png"
           },
           "screen": {
             "kind": "scanline-billboard",
-            "pitch": 7,
-            "artwork": "assets/ad-screen/mid/2/artwork.png"
-          }
-        },
-        {
-          "id": "3",
-          "resolution": [
-            1280,
-            720
-          ],
-          "maps": {
-            "basecolor": "assets/ad-screen/mid/3/basecolor.png",
-            "normal": "assets/ad-screen/mid/3/normal.png",
-            "roughness": "assets/ad-screen/mid/3/roughness.png",
-            "metallic": "assets/ad-screen/mid/3/metallic.png",
-            "height": "assets/ad-screen/mid/3/height.png",
-            "ao": "assets/ad-screen/mid/3/ao.png",
-            "emission": "assets/ad-screen/mid/3/emission.png"
-          },
-          "screen": {
-            "kind": "glyph-panel",
-            "artwork": "assets/ad-screen/mid/3/artwork.png"
+            "pitch": 12,
+            "artwork": "assets/ad-screen/mid/noir-cyan/artwork.png"
           }
         }
       ]
@@ -6358,65 +6278,25 @@
       },
       "variants": [
         {
-          "id": "1",
+          "id": "noir-amber",
+          "class": "flat",
           "resolution": [
             1280,
             720
           ],
           "maps": {
-            "basecolor": "assets/ad-screen/rich/1/basecolor.png",
-            "normal": "assets/ad-screen/rich/1/normal.png",
-            "roughness": "assets/ad-screen/rich/1/roughness.png",
-            "metallic": "assets/ad-screen/rich/1/metallic.png",
-            "height": "assets/ad-screen/rich/1/height.png",
-            "ao": "assets/ad-screen/rich/1/ao.png",
-            "emission": "assets/ad-screen/rich/1/emission.png"
+            "basecolor": "assets/ad-screen/rich/noir-amber/basecolor.png",
+            "normal": "assets/ad-screen/rich/noir-amber/normal.png",
+            "roughness": "assets/ad-screen/rich/noir-amber/roughness.png",
+            "metallic": "assets/ad-screen/rich/noir-amber/metallic.png",
+            "height": "assets/ad-screen/rich/noir-amber/height.png",
+            "ao": "assets/ad-screen/rich/noir-amber/ao.png",
+            "emission": "assets/ad-screen/rich/noir-amber/emission.png"
           },
           "screen": {
             "kind": "led-dot",
             "pitch": 10,
-            "artwork": "assets/ad-screen/rich/1/artwork.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1280,
-            720
-          ],
-          "maps": {
-            "basecolor": "assets/ad-screen/rich/2/basecolor.png",
-            "normal": "assets/ad-screen/rich/2/normal.png",
-            "roughness": "assets/ad-screen/rich/2/roughness.png",
-            "metallic": "assets/ad-screen/rich/2/metallic.png",
-            "height": "assets/ad-screen/rich/2/height.png",
-            "ao": "assets/ad-screen/rich/2/ao.png",
-            "emission": "assets/ad-screen/rich/2/emission.png"
-          },
-          "screen": {
-            "kind": "scanline-billboard",
-            "pitch": 6,
-            "artwork": "assets/ad-screen/rich/2/artwork.png"
-          }
-        },
-        {
-          "id": "3",
-          "resolution": [
-            1280,
-            720
-          ],
-          "maps": {
-            "basecolor": "assets/ad-screen/rich/3/basecolor.png",
-            "normal": "assets/ad-screen/rich/3/normal.png",
-            "roughness": "assets/ad-screen/rich/3/roughness.png",
-            "metallic": "assets/ad-screen/rich/3/metallic.png",
-            "height": "assets/ad-screen/rich/3/height.png",
-            "ao": "assets/ad-screen/rich/3/ao.png",
-            "emission": "assets/ad-screen/rich/3/emission.png"
-          },
-          "screen": {
-            "kind": "glyph-panel",
-            "artwork": "assets/ad-screen/rich/3/artwork.png"
+            "artwork": "assets/ad-screen/rich/noir-amber/artwork.png"
           }
         }
       ]
@@ -6435,65 +6315,25 @@
       },
       "variants": [
         {
-          "id": "1",
+          "id": "noir-amber",
+          "class": "flat",
           "resolution": [
             1280,
             720
           ],
           "maps": {
-            "basecolor": "assets/ad-screen/high_rich/1/basecolor.png",
-            "normal": "assets/ad-screen/high_rich/1/normal.png",
-            "roughness": "assets/ad-screen/high_rich/1/roughness.png",
-            "metallic": "assets/ad-screen/high_rich/1/metallic.png",
-            "height": "assets/ad-screen/high_rich/1/height.png",
-            "ao": "assets/ad-screen/high_rich/1/ao.png",
-            "emission": "assets/ad-screen/high_rich/1/emission.png"
-          },
-          "screen": {
-            "kind": "led-dot",
-            "pitch": 8,
-            "artwork": "assets/ad-screen/high_rich/1/artwork.png"
-          }
-        },
-        {
-          "id": "2",
-          "resolution": [
-            1280,
-            720
-          ],
-          "maps": {
-            "basecolor": "assets/ad-screen/high_rich/2/basecolor.png",
-            "normal": "assets/ad-screen/high_rich/2/normal.png",
-            "roughness": "assets/ad-screen/high_rich/2/roughness.png",
-            "metallic": "assets/ad-screen/high_rich/2/metallic.png",
-            "height": "assets/ad-screen/high_rich/2/height.png",
-            "ao": "assets/ad-screen/high_rich/2/ao.png",
-            "emission": "assets/ad-screen/high_rich/2/emission.png"
+            "basecolor": "assets/ad-screen/high_rich/noir-amber/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/noir-amber/normal.png",
+            "roughness": "assets/ad-screen/high_rich/noir-amber/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/noir-amber/metallic.png",
+            "height": "assets/ad-screen/high_rich/noir-amber/height.png",
+            "ao": "assets/ad-screen/high_rich/noir-amber/ao.png",
+            "emission": "assets/ad-screen/high_rich/noir-amber/emission.png"
           },
           "screen": {
             "kind": "scanline-billboard",
-            "pitch": 5,
-            "artwork": "assets/ad-screen/high_rich/2/artwork.png"
-          }
-        },
-        {
-          "id": "3",
-          "resolution": [
-            1280,
-            720
-          ],
-          "maps": {
-            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
-            "normal": "assets/ad-screen/high_rich/3/normal.png",
-            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
-            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
-            "height": "assets/ad-screen/high_rich/3/height.png",
-            "ao": "assets/ad-screen/high_rich/3/ao.png",
-            "emission": "assets/ad-screen/high_rich/3/emission.png"
-          },
-          "screen": {
-            "kind": "glyph-panel",
-            "artwork": "assets/ad-screen/high_rich/3/artwork.png"
+            "pitch": 8,
+            "artwork": "assets/ad-screen/high_rich/noir-amber/artwork.png"
           }
         },
         {
@@ -6524,12 +6364,12 @@
             720
           ],
           "maps": {
-            "basecolor": "assets/ad-screen/high_rich/3/basecolor.png",
-            "normal": "assets/ad-screen/high_rich/3/normal.png",
-            "roughness": "assets/ad-screen/high_rich/3/roughness.png",
-            "metallic": "assets/ad-screen/high_rich/3/metallic.png",
-            "height": "assets/ad-screen/high_rich/3/height.png",
-            "ao": "assets/ad-screen/high_rich/3/ao.png",
+            "basecolor": "assets/ad-screen/high_rich/noir-amber/basecolor.png",
+            "normal": "assets/ad-screen/high_rich/noir-amber/normal.png",
+            "roughness": "assets/ad-screen/high_rich/noir-amber/roughness.png",
+            "metallic": "assets/ad-screen/high_rich/noir-amber/metallic.png",
+            "height": "assets/ad-screen/high_rich/noir-amber/height.png",
+            "ao": "assets/ad-screen/high_rich/noir-amber/ao.png",
             "emission": "assets/ad-screen/high_rich/brand/the-grand-meridian-hotel/emission.png"
           }
         }
@@ -7555,6 +7395,28 @@
       },
       "variants": [
         {
+          "id": "noir-cyan",
+          "class": "flat",
+          "resolution": [
+            720,
+            1280
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/noir-cyan/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/noir-cyan/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/noir-cyan/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/noir-cyan/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/noir-cyan/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/noir-cyan/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/noir-cyan/emission.png"
+          },
+          "screen": {
+            "kind": "led-dot",
+            "pitch": 14,
+            "artwork": "assets/ad-screen-tall/high_rich/noir-cyan/artwork.png"
+          }
+        },
+        {
           "id": "premium-perfume",
           "resolution": [
             2304,
@@ -7578,17 +7440,39 @@
         {
           "id": "brand:the-grand-meridian-hotel",
           "resolution": [
-            2304,
-            4096
+            720,
+            1280
           ],
           "maps": {
-            "basecolor": "assets/ad-screen-tall/high_rich/premium-perfume/basecolor.png",
-            "normal": "assets/ad-screen-tall/high_rich/premium-perfume/normal.png",
-            "roughness": "assets/ad-screen-tall/high_rich/premium-perfume/roughness.png",
-            "metallic": "assets/ad-screen-tall/high_rich/premium-perfume/metallic.png",
-            "height": "assets/ad-screen-tall/high_rich/premium-perfume/height.png",
-            "ao": "assets/ad-screen-tall/high_rich/premium-perfume/ao.png",
+            "basecolor": "assets/ad-screen-tall/high_rich/noir-cyan/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/noir-cyan/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/noir-cyan/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/noir-cyan/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/noir-cyan/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/noir-cyan/ao.png",
             "emission": "assets/ad-screen-tall/high_rich/brand/the-grand-meridian-hotel/emission.png"
+          }
+        },
+        {
+          "id": "noir-amber",
+          "class": "flat",
+          "resolution": [
+            720,
+            1280
+          ],
+          "maps": {
+            "basecolor": "assets/ad-screen-tall/high_rich/noir-amber/basecolor.png",
+            "normal": "assets/ad-screen-tall/high_rich/noir-amber/normal.png",
+            "roughness": "assets/ad-screen-tall/high_rich/noir-amber/roughness.png",
+            "metallic": "assets/ad-screen-tall/high_rich/noir-amber/metallic.png",
+            "height": "assets/ad-screen-tall/high_rich/noir-amber/height.png",
+            "ao": "assets/ad-screen-tall/high_rich/noir-amber/ao.png",
+            "emission": "assets/ad-screen-tall/high_rich/noir-amber/emission.png"
+          },
+          "screen": {
+            "kind": "scanline-billboard",
+            "pitch": 12,
+            "artwork": "assets/ad-screen-tall/high_rich/noir-amber/artwork.png"
           }
         }
       ]

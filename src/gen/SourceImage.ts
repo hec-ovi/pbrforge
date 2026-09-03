@@ -11,9 +11,8 @@ const N_IMAGE = '1';
 
 /**
  * A provided artwork instead of a diffused one: read off disk, run through the
- * ComfyUI 4x upscale so a billboard-scale screen has real detail behind it, and
- * fitted to the screen it will be shown on. The upscale is a feed-forward model
- * with no sampling, so the same file always comes back the same picture.
+ * fitted to the screen it will be shown on. Sources that already cover the target
+ * resolution stay local. Smaller sources use the deterministic ComfyUI 4x upscale.
  */
 export class SourceImage {
   constructor(
@@ -26,12 +25,16 @@ export class SourceImage {
     if (!existsSync(file)) {
       throw new MaterialsError('E_SCHEMA', `screens[].imagePath does not exist: ${path}`);
     }
-    const name = await this.comfy.upload(readFileSync(file), path.replace(/[^a-zA-Z0-9._-]/g, '-'));
-    const graph = structuredClone(this.graph);
-    graph[N_IMAGE].inputs.image = name;
-    const upscaled = await this.comfy.render(graph);
-    // the source is 4x larger than the screen asks for, so the fit is a downsample: detail, not blur
-    const fitted = await sharp(upscaled)
+    const source = readFileSync(file);
+    const metadata = await sharp(source).metadata();
+    let prepared: Buffer<ArrayBufferLike> = source;
+    if ((metadata.width ?? 0) < width || (metadata.height ?? 0) < height) {
+      const name = await this.comfy.upload(source, path.replace(/[^a-zA-Z0-9._-]/g, '-'));
+      const graph = structuredClone(this.graph);
+      graph[N_IMAGE].inputs.image = name;
+      prepared = await this.comfy.render(graph);
+    }
+    const fitted = await sharp(prepared)
       .resize(width, height, { fit: 'cover', position: 'centre', kernel: 'lanczos3' })
       .png()
       .toBuffer();

@@ -1,4 +1,4 @@
-import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import sharp from 'sharp';
@@ -152,13 +152,59 @@ describe('create contract', () => {
     expect([...new Set(await read(0, 'normal'))].sort()).toEqual([128, 255]); // no relief
   });
 
-  it('paints a screen from a provided source through the upscale, with nothing diffused', async () => {
-    // stands in for the 4x model output: flat and bright, so the display structure over it is visible
+  it('fits a sufficiently large provided source locally, with nothing diffused', async () => {
+    const calls: string[] = [];
+    const comfy = {
+      ready: async () => false,
+      upload: async () => {
+        calls.push('upload');
+        throw new Error('large source must not upload');
+      },
+      render: async () => {
+        calls.push('render');
+        throw new Error('large source must not render');
+      },
+    } as unknown as ComfyClient;
+
+    const entry = await new Generator(db, comfy).create({
+      key: 'cyberpunk/ad-screen/high_rich',
+      alignment: 'exact',
+      description: 'corporate tower advertisement painted from a provided source',
+      aspect: [16, 9],
+      resolution: [128, 72],
+      physical: { roughnessFactor: 0.04, metallicFactor: 0, emissiveStrength: 10 },
+      emission: 'image',
+      flatColor: '#050507',
+      screens: [
+        {
+          kind: 'scanline-billboard',
+          pitch: 4,
+          imagePath: 'sources/ads-grok/ad-retro-soda-wide.png',
+          description: 'a woman drinking amber soda from a chilled glass bottle',
+        },
+      ],
+    });
+
+    expect(calls).toEqual([]);
+    expect(entry.variants[0].resolution).toEqual([128, 72]);
+    const emission = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.emission!)).raw().toBuffer();
+    expect(Math.min(...emission)).toBeLessThan(0.5 * Math.max(...emission));
+  });
+
+  it('upscales an undersized provided source without diffusion', async () => {
     const upscaled = await sharp(new Uint8Array(512 * 288 * 3).fill(200), {
       raw: { width: 512, height: 288, channels: 3 },
     })
       .png()
       .toBuffer();
+    const sourceDir = mkdtempSync(join(tmpdir(), 'materials-source-'));
+    const sourcePath = join(sourceDir, 'small.png');
+    writeFileSync(
+      sourcePath,
+      await sharp(new Uint8Array(32 * 18 * 3).fill(100), { raw: { width: 32, height: 18, channels: 3 } })
+        .png()
+        .toBuffer(),
+    );
     const graphs: Record<string, { class_type: string; inputs: Record<string, unknown> }>[] = [];
     const uploads: string[] = [];
     const comfy = {
@@ -186,14 +232,14 @@ describe('create contract', () => {
         {
           kind: 'scanline-billboard',
           pitch: 4,
-          imagePath: 'sources/ads-grok/ad-retro-soda-wide.png',
+          imagePath: sourcePath,
           description: 'a woman drinking amber soda from a chilled glass bottle',
         },
       ],
     });
 
     expect(uploads).toHaveLength(1);
-    expect(uploads[0]).toContain('ad-retro-soda-wide.png'); // the file on disk, not a prompt
+    expect(uploads[0]).toContain('small.png'); // the file on disk, not a prompt
     expect(graphs).toHaveLength(1);
     expect(graphs[0]['3'].class_type).toBe('ImageUpscaleWithModel');
     expect(graphs[0]['1'].inputs.image).toBe('stored.png');
