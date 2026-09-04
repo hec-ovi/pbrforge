@@ -162,20 +162,6 @@
     }
   },
   {
-    "key": "cyberpunk/curtain/poor",
-    "alignment": "tile",
-    "append": true,
-    "overwrite": true,
-    "description": "matte neutral coating for individual blind slat geometry",
-    "variantId": "slat",
-    "flatColor": "#797c76",
-    "flatNoise": 0,
-    "resolution": [
-      384,
-      768
-    ]
-  },
-  {
     "key": "cyberpunk/concrete/mid",
     "alignment": "tile",
     "append": true,
@@ -336,20 +322,6 @@
       ],
       "orientation": "vertical"
     }
-  },
-  {
-    "key": "cyberpunk/curtain/mid",
-    "alignment": "tile",
-    "append": true,
-    "overwrite": true,
-    "description": "matte neutral coating for individual blind slat geometry",
-    "variantId": "slat",
-    "flatColor": "#858983",
-    "flatNoise": 0,
-    "resolution": [
-      384,
-      768
-    ]
   },
   {
     "key": "cyberpunk/concrete/rich",
@@ -514,20 +486,6 @@
     }
   },
   {
-    "key": "cyberpunk/curtain/rich",
-    "alignment": "tile",
-    "append": true,
-    "overwrite": true,
-    "description": "matte neutral coating for individual blind slat geometry",
-    "variantId": "slat",
-    "flatColor": "#747b78",
-    "flatNoise": 0,
-    "resolution": [
-      384,
-      768
-    ]
-  },
-  {
     "key": "cyberpunk/concrete/high_rich",
     "alignment": "tile",
     "append": true,
@@ -688,20 +646,6 @@
       ],
       "orientation": "vertical"
     }
-  },
-  {
-    "key": "cyberpunk/curtain/high_rich",
-    "alignment": "tile",
-    "append": true,
-    "overwrite": true,
-    "description": "matte neutral coating for individual blind slat geometry",
-    "variantId": "slat",
-    "flatColor": "#636b68",
-    "flatNoise": 0,
-    "resolution": [
-      384,
-      768
-    ]
   },
   {
     "key": "cyberpunk/window-glass-opaque/mid",

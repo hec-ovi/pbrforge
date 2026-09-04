@@ -942,6 +942,38 @@
             "height": "assets/door/poor/paint/height.png",
             "ao": "assets/door/poor/paint/ao.png"
           }
+        },
+        {
+          "id": "satin",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/door/poor/satin/basecolor.png",
+            "normal": "assets/door/poor/satin/normal.png",
+            "roughness": "assets/door/poor/satin/roughness.png",
+            "metallic": "assets/door/poor/satin/metallic.png",
+            "height": "assets/door/poor/satin/height.png",
+            "ao": "assets/door/poor/satin/ao.png"
+          }
+        },
+        {
+          "id": "scuffed",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/door/poor/scuffed/basecolor.png",
+            "normal": "assets/door/poor/scuffed/normal.png",
+            "roughness": "assets/door/poor/scuffed/roughness.png",
+            "metallic": "assets/door/poor/scuffed/metallic.png",
+            "height": "assets/door/poor/scuffed/height.png",
+            "ao": "assets/door/poor/scuffed/ao.png"
+          }
         }
       ]
     },
@@ -973,6 +1005,38 @@
             "metallic": "assets/door/mid/paint/metallic.png",
             "height": "assets/door/mid/paint/height.png",
             "ao": "assets/door/mid/paint/ao.png"
+          }
+        },
+        {
+          "id": "satin",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/door/mid/satin/basecolor.png",
+            "normal": "assets/door/mid/satin/normal.png",
+            "roughness": "assets/door/mid/satin/roughness.png",
+            "metallic": "assets/door/mid/satin/metallic.png",
+            "height": "assets/door/mid/satin/height.png",
+            "ao": "assets/door/mid/satin/ao.png"
+          }
+        },
+        {
+          "id": "scuffed",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/door/mid/scuffed/basecolor.png",
+            "normal": "assets/door/mid/scuffed/normal.png",
+            "roughness": "assets/door/mid/scuffed/roughness.png",
+            "metallic": "assets/door/mid/scuffed/metallic.png",
+            "height": "assets/door/mid/scuffed/height.png",
+            "ao": "assets/door/mid/scuffed/ao.png"
           }
         }
       ]
@@ -1006,6 +1070,38 @@
             "height": "assets/door/rich/paint/height.png",
             "ao": "assets/door/rich/paint/ao.png"
           }
+        },
+        {
+          "id": "satin",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/door/rich/satin/basecolor.png",
+            "normal": "assets/door/rich/satin/normal.png",
+            "roughness": "assets/door/rich/satin/roughness.png",
+            "metallic": "assets/door/rich/satin/metallic.png",
+            "height": "assets/door/rich/satin/height.png",
+            "ao": "assets/door/rich/satin/ao.png"
+          }
+        },
+        {
+          "id": "scuffed",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/door/rich/scuffed/basecolor.png",
+            "normal": "assets/door/rich/scuffed/normal.png",
+            "roughness": "assets/door/rich/scuffed/roughness.png",
+            "metallic": "assets/door/rich/scuffed/metallic.png",
+            "height": "assets/door/rich/scuffed/height.png",
+            "ao": "assets/door/rich/scuffed/ao.png"
+          }
         }
       ]
     },
@@ -1037,6 +1133,38 @@
             "metallic": "assets/door/high_rich/paint/metallic.png",
             "height": "assets/door/high_rich/paint/height.png",
             "ao": "assets/door/high_rich/paint/ao.png"
+          }
+        },
+        {
+          "id": "satin",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/door/high_rich/satin/basecolor.png",
+            "normal": "assets/door/high_rich/satin/normal.png",
+            "roughness": "assets/door/high_rich/satin/roughness.png",
+            "metallic": "assets/door/high_rich/satin/metallic.png",
+            "height": "assets/door/high_rich/satin/height.png",
+            "ao": "assets/door/high_rich/satin/ao.png"
+          }
+        },
+        {
+          "id": "scuffed",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/door/high_rich/scuffed/basecolor.png",
+            "normal": "assets/door/high_rich/scuffed/normal.png",
+            "roughness": "assets/door/high_rich/scuffed/roughness.png",
+            "metallic": "assets/door/high_rich/scuffed/metallic.png",
+            "height": "assets/door/high_rich/scuffed/height.png",
+            "ao": "assets/door/high_rich/scuffed/ao.png"
           }
         }
       ]

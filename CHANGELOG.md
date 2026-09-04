@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.5: dark charcoal window coverings and coordinated satin or scuffed door coatings at world scale.
+
 0.16.4: monolithic and 7 m concrete facade surfaces, satin industrial louvres, fitted translucent window grime, and five-face scenic room bindings with seeded wide office back plates.
 
 0.16.3: nine coherent exterior style bindings, cast and weathered concrete finishes, smooth window glazing, dark opaque and clear office glass, and flat finishes for modeled blind slats.

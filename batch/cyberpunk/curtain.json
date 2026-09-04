@@ -2,85 +2,265 @@
   {
     "key": "cyberpunk/curtain/poor",
     "alignment": "tile",
-    "description": "faded grey-green vertical office blind, matte and evenly pleated",
-    "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.95, "metallicFactor": 0 },
+    "description": "dark charcoal vertical cloth blind with shallow folds",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.95,
+      "metallicFactor": 0
+    },
     "variantId": "blind",
-    "resolution": [384, 768],
-    "pattern": { "kind": "stripe", "colors": ["#676d68", "#5d625e"], "cells": [12, 1], "axis": "x", "split": 0.88, "line": 0.006, "depth": 0.10, "joint": 0.10, "variation": 0.01, "grain": 0 },
+    "resolution": [
+      384,
+      768
+    ],
+    "pattern": {
+      "kind": "stripe",
+      "colors": [
+        "#343a36",
+        "#252b27"
+      ],
+      "cells": [
+        12,
+        1
+      ],
+      "axis": "x",
+      "split": 0.88,
+      "line": 0.006,
+      "depth": 0.1,
+      "joint": 0.1,
+      "variation": 0.01,
+      "grain": 0
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/curtain/poor",
     "alignment": "tile",
     "append": true,
-    "description": "faded grey blackout shade, plain matte cloth",
+    "description": "dark charcoal matte window covering",
     "variantId": "shade",
-    "flatColor": "#62635f",
+    "flatColor": "#2b302c",
     "flatNoise": 0,
-    "resolution": [384, 768]
+    "resolution": [
+      384,
+      768
+    ]
+  },
+  {
+    "key": "cyberpunk/curtain/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark charcoal matte window covering",
+    "variantId": "slat",
+    "flatColor": "#303833",
+    "flatNoise": 0,
+    "resolution": [
+      384,
+      768
+    ]
   },
   {
     "key": "cyberpunk/curtain/mid",
     "alignment": "tile",
-    "description": "muted grey vertical office blind, matte and evenly pleated",
-    "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.93, "metallicFactor": 0 },
+    "description": "dark charcoal vertical cloth blind with shallow folds",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.93,
+      "metallicFactor": 0
+    },
     "variantId": "blind",
-    "resolution": [384, 768],
-    "pattern": { "kind": "stripe", "colors": ["#777b7a", "#6d7170"], "cells": [12, 1], "axis": "x", "split": 0.88, "line": 0.006, "depth": 0.09, "joint": 0.09, "variation": 0.01, "grain": 0 },
+    "resolution": [
+      384,
+      768
+    ],
+    "pattern": {
+      "kind": "stripe",
+      "colors": [
+        "#29312d",
+        "#202723"
+      ],
+      "cells": [
+        12,
+        1
+      ],
+      "axis": "x",
+      "split": 0.88,
+      "line": 0.006,
+      "depth": 0.09,
+      "joint": 0.09,
+      "variation": 0.01,
+      "grain": 0
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/curtain/mid",
     "alignment": "tile",
     "append": true,
-    "description": "muted grey blackout shade, plain matte cloth",
+    "description": "dark charcoal matte window covering",
     "variantId": "shade",
-    "flatColor": "#727574",
+    "flatColor": "#242b26",
     "flatNoise": 0,
-    "resolution": [384, 768]
+    "resolution": [
+      384,
+      768
+    ]
+  },
+  {
+    "key": "cyberpunk/curtain/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark charcoal matte window covering",
+    "variantId": "slat",
+    "flatColor": "#28312c",
+    "flatNoise": 0,
+    "resolution": [
+      384,
+      768
+    ]
   },
   {
     "key": "cyberpunk/curtain/rich",
     "alignment": "tile",
-    "description": "dark blue-grey vertical office blind, matte and evenly pleated",
-    "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.90, "metallicFactor": 0 },
+    "description": "dark charcoal vertical cloth blind with shallow folds",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
     "variantId": "blind",
-    "resolution": [384, 768],
-    "pattern": { "kind": "stripe", "colors": ["#4d5860", "#444e55"], "cells": [12, 1], "axis": "x", "split": 0.88, "line": 0.005, "depth": 0.08, "joint": 0.08, "variation": 0.008, "grain": 0 },
+    "resolution": [
+      384,
+      768
+    ],
+    "pattern": {
+      "kind": "stripe",
+      "colors": [
+        "#242c28",
+        "#1b231f"
+      ],
+      "cells": [
+        12,
+        1
+      ],
+      "axis": "x",
+      "split": 0.88,
+      "line": 0.005,
+      "depth": 0.08,
+      "joint": 0.08,
+      "variation": 0.008,
+      "grain": 0
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/curtain/rich",
     "alignment": "tile",
     "append": true,
-    "description": "deep blue-grey blackout shade, plain matte cloth",
+    "description": "dark charcoal matte window covering",
     "variantId": "shade",
-    "flatColor": "#444e55",
+    "flatColor": "#202721",
     "flatNoise": 0,
-    "resolution": [384, 768]
+    "resolution": [
+      384,
+      768
+    ]
+  },
+  {
+    "key": "cyberpunk/curtain/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark charcoal matte window covering",
+    "variantId": "slat",
+    "flatColor": "#222b26",
+    "flatNoise": 0,
+    "resolution": [
+      384,
+      768
+    ]
   },
   {
     "key": "cyberpunk/curtain/high_rich",
     "alignment": "tile",
-    "description": "deep charcoal vertical office blind, matte and evenly pleated",
-    "tiling": { "worldSize": [1.5, 3] },
-    "physical": { "roughnessFactor": 0.88, "metallicFactor": 0 },
+    "description": "dark charcoal vertical cloth blind with shallow folds",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        3
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.88,
+      "metallicFactor": 0
+    },
     "variantId": "blind",
-    "resolution": [384, 768],
-    "pattern": { "kind": "stripe", "colors": ["#30353a", "#292e32"], "cells": [12, 1], "axis": "x", "split": 0.88, "line": 0.005, "depth": 0.07, "joint": 0.07, "variation": 0.006, "grain": 0 },
+    "resolution": [
+      384,
+      768
+    ],
+    "pattern": {
+      "kind": "stripe",
+      "colors": [
+        "#1e2522",
+        "#171d1a"
+      ],
+      "cells": [
+        12,
+        1
+      ],
+      "axis": "x",
+      "split": 0.88,
+      "line": 0.005,
+      "depth": 0.07,
+      "joint": 0.07,
+      "variation": 0.006,
+      "grain": 0
+    },
     "overwrite": true
   },
   {
     "key": "cyberpunk/curtain/high_rich",
     "alignment": "tile",
     "append": true,
-    "description": "deep charcoal blackout shade, plain matte cloth",
+    "description": "dark charcoal matte window covering",
     "variantId": "shade",
-    "flatColor": "#292e32",
+    "flatColor": "#1a211c",
     "flatNoise": 0,
-    "resolution": [384, 768]
+    "resolution": [
+      384,
+      768
+    ]
+  },
+  {
+    "key": "cyberpunk/curtain/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark charcoal matte window covering",
+    "variantId": "slat",
+    "flatColor": "#1d2521",
+    "flatNoise": 0,
+    "resolution": [
+      384,
+      768
+    ]
   }
 ]

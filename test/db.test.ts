@@ -375,7 +375,7 @@ describe("shipped cyberpunk coverage", () => {
     }
   });
 
-  it("fits deterministic curtains to the 1.5 x 3 m bay without stretching", () => {
+  it("fits charcoal curtains to the 1.5 x 3 m bay without stretching", async () => {
     for (const tier of ["poor", "mid", "rich", "high_rich"]) {
       const entry = db.resolve(`cyberpunk/curtain/${tier}`);
       expect(entry.tiling?.worldSize).toEqual([1.5, 3]);
@@ -391,6 +391,10 @@ describe("shipped cyberpunk coverage", () => {
         ["shade", "flat", [384, 768]],
         ["slat", "flat", [384, 768]],
       ]);
+      for (const variant of entry.variants) {
+        const channels = (await sharp(join(db.themeDir('cyberpunk'), variant.maps.basecolor)).stats()).channels;
+        expect(Math.max(...channels.map(channel => channel.max))).toBeLessThan(64);
+      }
     }
   });
 

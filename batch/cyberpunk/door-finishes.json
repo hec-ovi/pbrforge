@@ -1,0 +1,234 @@
+[
+  {
+    "key": "cyberpunk/door/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark graphite door coating with satin surface finish",
+    "variantId": "satin",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 631,
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#292f32",
+        "#3e4447"
+      ],
+      "cells": [
+        48,
+        2
+      ],
+      "octaves": 2,
+      "depth": 0.006,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/door/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark graphite door coating with scuffed surface finish",
+    "variantId": "scuffed",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 653,
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#252b2d",
+        "#414849"
+      ],
+      "cells": [
+        3,
+        24
+      ],
+      "octaves": 2,
+      "depth": 0.018,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/door/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark graphite door coating with satin surface finish",
+    "variantId": "satin",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 632,
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#292f32",
+        "#3e4447"
+      ],
+      "cells": [
+        48,
+        2
+      ],
+      "octaves": 2,
+      "depth": 0.006,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/door/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark graphite door coating with scuffed surface finish",
+    "variantId": "scuffed",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 654,
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#252b2d",
+        "#414849"
+      ],
+      "cells": [
+        3,
+        24
+      ],
+      "octaves": 2,
+      "depth": 0.018,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/door/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark graphite door coating with satin surface finish",
+    "variantId": "satin",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 633,
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#292f32",
+        "#3e4447"
+      ],
+      "cells": [
+        48,
+        2
+      ],
+      "octaves": 2,
+      "depth": 0.006,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/door/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark graphite door coating with scuffed surface finish",
+    "variantId": "scuffed",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 655,
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#252b2d",
+        "#414849"
+      ],
+      "cells": [
+        3,
+        24
+      ],
+      "octaves": 2,
+      "depth": 0.018,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/door/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark graphite door coating with satin surface finish",
+    "variantId": "satin",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 634,
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#292f32",
+        "#3e4447"
+      ],
+      "cells": [
+        48,
+        2
+      ],
+      "octaves": 2,
+      "depth": 0.006,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/door/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "dark graphite door coating with scuffed surface finish",
+    "variantId": "scuffed",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 656,
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#252b2d",
+        "#414849"
+      ],
+      "cells": [
+        3,
+        24
+      ],
+      "octaves": 2,
+      "depth": 0.018,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.04
+    }
+  }
+]

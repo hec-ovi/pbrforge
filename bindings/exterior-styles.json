@@ -31,7 +31,7 @@
         },
         "door": {
           "kind": "door",
-          "variant": "paint"
+          "variant": "scuffed"
         },
         "service": {
           "kind": "metal",
@@ -100,7 +100,7 @@
         },
         "door": {
           "kind": "door",
-          "variant": "paint"
+          "variant": "scuffed"
         },
         "service": {
           "kind": "metal",
@@ -238,7 +238,7 @@
         },
         "door": {
           "kind": "door",
-          "variant": "paint"
+          "variant": "satin"
         },
         "service": {
           "kind": "metal",
@@ -307,7 +307,7 @@
         },
         "door": {
           "kind": "door",
-          "variant": "paint"
+          "variant": "satin"
         },
         "service": {
           "kind": "metal",
@@ -379,7 +379,7 @@
         },
         "door": {
           "kind": "door",
-          "variant": "paint"
+          "variant": "satin"
         },
         "service": {
           "kind": "metal",
@@ -448,7 +448,7 @@
         },
         "door": {
           "kind": "door",
-          "variant": "paint"
+          "variant": "scuffed"
         },
         "service": {
           "kind": "metal",
@@ -589,7 +589,7 @@
         },
         "door": {
           "kind": "door",
-          "variant": "paint"
+          "variant": "scuffed"
         },
         "service": {
           "kind": "metal",

@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.16.4. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.5. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -84,9 +84,11 @@ Each style has `id`, `group`, `facadePattern` and `surfaces`. `facadePattern` is
 
 ## Frame steel
 
+`door` also provides `satin` (fine directional coating) and `scuffed` (uneven worn coating) at every tier, retaining the same 0.5 m scale and dielectric painted-steel response. [batch/cyberpunk/door-finishes.json](batch/cyberpunk/door-finishes.json) adds these to canonical `paint`. Exterior style bindings select one finish for the whole door assembly. Panel insets, beveled edges and fitted wear remain geometry responsibilities.
+
 `window-frame` (with `balcony-rail` and `aperture-frame` aliased to it) and `wall-trim` carry one smooth dark `paint` variant: metallic 1, roughness 0.5, flat normals and tonal drift under two percent. Frames cover 0.5 x 0.5 m at 256 px; trim covers 1 x 1 m. Frame paint is `#24272b`, trim `#2a2d31`.
 
-`door` keeps the canonical `paint` variant on a 0.5 x 0.5 m tile at 256 px. It is a dark graphite dielectric coating (metallic 0), with deterministic fine relief and restrained color and roughness variation. Roughness factors by tier are 0.64, 0.58, 0.53 and 0.50; wear decreases with tier. The maps contain surface finish only. Insets, seams, handles and edge wear tied to a leaf belong to fitted geometry or decals. Regenerate all four tiers with `npm run create -- batch/cyberpunk/door.json --overwrite`. Consumers use the same world-metre scale for leaf and casing.
+`door` keeps the canonical `paint` variant on a 0.5 x 0.5 m tile at 256 px. It is a dark graphite dielectric coating (metallic 0), with deterministic fine relief and restrained color and roughness variation. Roughness factors by tier are 0.64, 0.58, 0.53 and 0.50; wear decreases with tier. The maps contain surface finish only. Insets, seams, handles and edge wear tied to a leaf belong to fitted geometry or decals. Regenerate with `npm run create -- batch/cyberpunk/door.json --overwrite`, then `npm run create -- batch/cyberpunk/door-finishes.json`. Consumers use the same world-metre scale for leaf and casing.
 
 `column` covers 1.5 x 3 m at 256 x 512 px and carries continuous `plain` graphite and `cement` fields. Both have stable origin `[0, 0]`, vertical orientation and restrained procedural mineral detail.
 
@@ -152,6 +154,8 @@ The tier is the building. poor and mid are residential windows: neutral glass, w
 The interior `glass` kind is clear glazing for partitions and carries its own values.
 
 ## Curtains
+
+All `blind`, `shade` and `slat` variants use dark charcoal with basecolor channels below 64/255, retaining matte dielectric response. [batch/cyberpunk/curtain.json](batch/cyberpunk/curtain.json) regenerates the complete three-variant family at every tier.
 
 `exterior-louvre/mid:metal` aliases every tier: satin grey metal at metallic 1 and roughness 0.52, with fine rolled surface variation on a 0.5 x 0.5 m tile at 256 px. It contains no slat divisions. Exterior owns external slat geometry and placement.
 

@@ -17,7 +17,7 @@ it('publishes reproducible graphite door coatings with restrained relief and tie
     const entry = resolve(recipe.key);
     expect(entry.tiling?.worldSize).toEqual([0.5, 0.5]);
     expect(entry.physical.metallicFactor).toBe(0);
-    expect(entry.variants.map(variant => variant.id)).toEqual(['paint']);
+    expect(entry.variants.map(variant => variant.id)).toEqual(['paint', 'satin', 'scuffed']);
     const variant = entry.variants[0];
     expect(variant.class).toBe('pattern');
     const reproduced = await create(recipe, { themesDir });
@@ -43,3 +43,21 @@ it('publishes reproducible graphite door coatings with restrained relief and tie
     expect(roughness.max).toBeGreaterThan(roughness.min);
   }
 });
+
+it('reproduces directional satin and scuffed finishes on the existing door keys', async () => {
+  const base = JSON.parse(await readFile(join(root, 'batch/cyberpunk/door.json'), 'utf8')) as CreateRequest[];
+  const finishes = JSON.parse(await readFile(join(root, 'batch/cyberpunk/door-finishes.json'), 'utf8')) as CreateRequest[];
+  const themesDir = await mkdtemp(join(tmpdir(), 'door-finishes-'));
+  for (const recipe of base) await create(recipe, { themesDir });
+  for (const recipe of finishes) {
+    const generated = (await create(recipe, { themesDir })).variants.find(variant => variant.id === recipe.variantId)!;
+    const shipped = resolve(recipe.key).variants.find(variant => variant.id === recipe.variantId)!;
+    for (const map of ['basecolor', 'normal', 'roughness'] as const) {
+      expect(await readFile(join(themesDir, 'cyberpunk', generated.maps[map])))
+        .toEqual(await readFile(join(root, 'themes/cyberpunk', shipped.maps[map])));
+    }
+    const color = (await sharp(join(root, 'themes/cyberpunk', shipped.maps.basecolor)).stats()).channels;
+    expect(Math.max(...color.map(channel => channel.max))).toBeLessThan(80);
+    expect(Math.max(...color.map(channel => channel.max - channel.min))).toBeGreaterThan(8);
+  }
+}, 15_000);

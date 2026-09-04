@@ -1,5 +1,7 @@
 # Box map
 
+- Door finishes and coverings: [door finish recipes](../batch/cyberpunk/door-finishes.json) add satin and scuffed coatings; [curtain recipes](../batch/cyberpunk/curtain.json) publish complete dark charcoal covering families.
+
 - Scenic room surfaces: [bindings/window-room-surfaces.json](../bindings/window-room-surfaces.json), five explicit receiving faces and seeded back-image pools; [schema](../schema/window-room-surfaces.schema.json).
 - Exterior surface recipes: [batch/cyberpunk/exterior-surfaces.json](../batch/cyberpunk/exterior-surfaces.json), continuous concrete, 7 m panels, metallic louvres and fitted translucent grime.
 
