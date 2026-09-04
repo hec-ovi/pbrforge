@@ -1,24 +1,12 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
+import type { RefinishRequest, RefinishResult } from '../api-types.js';
 import type { Database } from '../db/Database.js';
 import { MaterialsError } from '../db/errors.js';
-import type { FinishSpec, MaterialEntry, Physical, Variant } from '../db/types.js';
+import type { Variant } from '../db/types.js';
 import { resolveFinish } from './finish.js';
 import { deriveHeight, deriveMetallic, deriveRoughness, reliefMaps } from './maps.js';
 import { decodeRgb, encodeGrayPng } from './pixels.js';
-
-/** What to re-read, under which finish, and the factors the entry is to carry. */
-export interface RefinishRequest {
-  key: string;
-  finish?: FinishSpec;
-  /** Merged into the entry's physical before the maps are read: the roughness the band sits around, the metallic fill. */
-  physical?: Physical;
-}
-
-export interface RefinishResult {
-  entry: MaterialEntry;
-  variants: string[];
-}
 
 /**
  * Reads the relief and gloss maps out of a surface already in the database

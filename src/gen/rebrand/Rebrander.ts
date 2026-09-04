@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { Ajv2020 as Ajv, type ValidateFunction } from 'ajv/dist/2020.js';
+import type { Branded } from '../../api-types.js';
 import type { Database } from '../../db/Database.js';
 import { MaterialsError } from '../../db/errors.js';
 import { variantDir } from '../../db/paths.js';
@@ -17,14 +18,6 @@ const SCREEN_KINDS = ['ad-screen', 'ad-screen-tall'];
 
 /** Which letter atlas look a tier spells its brands in. */
 const LOOK: Record<string, string> = { poor: 'neon', mid: 'neon', rich: 'panel', high_rich: 'panel' };
-
-export interface Branded {
-  key: string;
-  variantId: string;
-  /** The screen variant whose artwork the brand landed on. */
-  from: string;
-  lines: number;
-}
 
 interface Job extends Business {
   text: string;

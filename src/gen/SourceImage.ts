@@ -1,8 +1,8 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { isAbsolute, join } from 'node:path';
 import sharp from 'sharp';
+import type { ComfyRuntime } from '../api-types.js';
 import { MaterialsError } from '../db/errors.js';
-import type { ComfyRuntime } from './ComfyClient.js';
 import { type Graph, loadGraph, root } from './Template.js';
 import { type Rgb, decodeRgb } from './pixels.js';
 

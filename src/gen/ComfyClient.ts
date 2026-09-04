@@ -1,12 +1,5 @@
 import { MaterialsError } from '../db/errors.js';
-
-export type ComfyGraph = Record<string, { class_type: string; inputs: Record<string, unknown> }>;
-
-export interface ComfyRuntime {
-  ready(): Promise<boolean>;
-  upload(image: Buffer, name: string): Promise<string>;
-  render(graph: ComfyGraph): Promise<Buffer>;
-}
+import type { ComfyGraph, ComfyRuntime } from '../api-types.js';
 
 /** Talks to a headless ComfyUI: submit an API-format graph, poll history, fetch the image. */
 export class ComfyClient implements ComfyRuntime {

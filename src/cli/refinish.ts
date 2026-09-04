@@ -1,9 +1,10 @@
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import type { RefinishRequest } from '../api-types.js';
 import { Database } from '../db/Database.js';
 import { MaterialsError } from '../db/errors.js';
-import { Refinisher, type RefinishRequest } from '../gen/Refinish.js';
+import { Refinisher } from '../gen/Refinish.js';
 
 const themesDir = join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'themes');
 const requestPath = process.argv[2];

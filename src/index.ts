@@ -1,24 +1,18 @@
 import { fileURLToPath } from 'node:url';
+import type {
+  Branded,
+  ComfyRuntime,
+  MaterialFilter,
+  MaterialsOptions,
+  RefinishRequest,
+  RefinishResult,
+} from './api-types.js';
 import { Database } from './db/Database.js';
 import { MaterialsError } from './db/errors.js';
 import type { CreateRequest, MaterialEntry, RebrandRequest } from './db/types.js';
 import { Generator } from './gen/Generator.js';
-import type { ComfyRuntime } from './gen/ComfyClient.js';
-import { Refinisher, type RefinishRequest, type RefinishResult } from './gen/Refinish.js';
-import { Rebrander, type Branded } from './gen/rebrand/Rebrander.js';
-
-export interface MaterialFilter {
-  theme?: string;
-  kind?: string;
-  tier?: string;
-}
-
-export interface MaterialsOptions {
-  /** Theme database root. Defaults to the themes folder shipped beside this package. */
-  themesDir?: string;
-  /** Generation backend. Omit to use COMFY_URL or the local ComfyUI default. */
-  comfy?: ComfyRuntime;
-}
+import { Refinisher } from './gen/Refinish.js';
+import { Rebrander } from './gen/rebrand/Rebrander.js';
 
 const bundledThemesDir = fileURLToPath(new URL('../themes', import.meta.url));
 
@@ -47,6 +41,15 @@ export function rebrand(request: RebrandRequest, options: MaterialsOptions = {})
 }
 
 export { MaterialsError };
+export type {
+  Branded,
+  ComfyGraph,
+  ComfyRuntime,
+  MaterialFilter,
+  MaterialsOptions,
+  RefinishRequest,
+  RefinishResult,
+} from './api-types.js';
 export type { MaterialsErrorCode } from './db/errors.js';
 export type {
   Business,
@@ -71,6 +74,3 @@ export type {
   Variant,
 } from './db/types.js';
 export { ComfyClient } from './gen/ComfyClient.js';
-export type { ComfyGraph, ComfyRuntime } from './gen/ComfyClient.js';
-export type { RefinishRequest, RefinishResult } from './gen/Refinish.js';
-export type { Branded } from './gen/rebrand/Rebrander.js';

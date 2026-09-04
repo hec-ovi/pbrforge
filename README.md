@@ -30,13 +30,13 @@ const options = { themesDir: './themes' };
 const entry = resolve('cyberpunk/window-glass/rich', options);
 ```
 
-`themesDir` defaults to the database bundled with the package. `create` also accepts a `ComfyRuntime` in the options object when generation should use a caller-managed backend.
+[`MaterialsOptions`](src/api-types.ts) carries `themesDir` and an optional [`ComfyRuntime`](src/api-types.ts). `themesDir` defaults to the database bundled with the package. The runtime lets generation use a caller-managed backend. All package-only request and result shapes are in the [public API type schema](src/api-types.ts).
 
-- `resolve(key, options?)` returns the entry for a key or one of its aliases.
-- `list(filter?, options?)` returns matching keys, sorted and deterministic.
+- `resolve(key, options?)` returns the [MaterialEntry](schema/material-entry.schema.json) for a key or one of its aliases.
+- `list(filter?, options?)` takes a [`MaterialFilter`](src/api-types.ts) and returns matching keys, sorted and deterministic.
 - `create(request, options?)` returns a generated [MaterialEntry](schema/material-entry.schema.json), after validation, seam verification and database write. Its input is [CreateRequest](schema/create-request.schema.json).
-- `refinish(request, options?)` returns `{ entry, variants }` after deriving new relief, gloss and metallic maps from stored photographic basecolor.
-- `rebrand(request, options?)` returns one result per landscape and portrait screen written for each business. Its `{ theme, businesses }` input follows the [RebrandRequest schema](schema/rebrand-request.schema.json).
+- `refinish(request, options?)` takes a [`RefinishRequest`](src/api-types.ts) and returns a [`RefinishResult`](src/api-types.ts) after deriving new relief, gloss and metallic maps from stored photographic basecolor.
+- `rebrand(request, options?)` returns one [`Branded`](src/api-types.ts) result per landscape and portrait screen written for each business. Its `{ theme, businesses }` input follows the [RebrandRequest schema](schema/rebrand-request.schema.json).
 
 All operations use the closed `MaterialsError` codes in [CONTRACT.md](CONTRACT.md).
 
