@@ -9,7 +9,7 @@ import { variantDir } from '../db/paths.js';
 import type { CreateRequest, Finish, MapName, MaterialEntry, Physical, Screen, ScreenShown, Variant } from '../db/types.js';
 import { ComfyClient } from './ComfyClient.js';
 import { Template, loadPrompt } from './Template.js';
-import { type Gray, type Rgb, decodeRgb, encodeGrayPng, encodeRgbPng } from './pixels.js';
+import { type Gray, type Rgb, decodeRgb, encodeGrayPng, encodeRgbPng, encodeRgbaPng } from './pixels.js';
 import { synthesizeFlat } from './flat.js';
 import {
   constantGray,
@@ -247,7 +247,9 @@ export class Generator {
     }
     const mode = request.emission ?? 'none';
     const files: [MapName, Buffer][] = [
-      ['basecolor', await encodeRgbPng(source.basecolor)],
+      ['basecolor', source.opacity && request.pattern?.kind === 'window-grime'
+        ? await encodeRgbaPng(source.basecolor, source.opacity)
+        : await encodeRgbPng(source.basecolor)],
       ...(request.sourceImage
         ? await ImagePlate.maps(source.basecolor, target.physical)
         : source.screen
@@ -350,8 +352,8 @@ function assertDecal(request: CreateRequest, target: Target): void {
   if (!request.decal) return;
   if (target.alignment !== 'exact') throw new MaterialsError('E_SCHEMA', 'a decal needs exact alignment');
   if (target.physical.alphaMode !== 'BLEND') throw new MaterialsError('E_SCHEMA', 'a decal needs alphaMode BLEND');
-  if (request.pattern?.kind !== 'incident-blood' && request.pattern?.kind !== 'incident-tyre') {
-    throw new MaterialsError('E_SCHEMA', 'a procedural decal needs an incident pattern with an opacity map');
+  if (request.pattern?.kind !== 'incident-blood' && request.pattern?.kind !== 'incident-tyre' && request.pattern?.kind !== 'window-grime') {
+    throw new MaterialsError('E_SCHEMA', 'a procedural decal needs a pattern with an opacity map');
   }
   const aspect = target.base?.aspect ?? request.aspect!;
   const [width, height] = request.decal.worldSize;

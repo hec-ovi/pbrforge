@@ -1,0 +1,60 @@
+[
+  {
+    "key": "cyberpunk/window-room-office-wide/mid",
+    "alignment": "exact",
+    "description": "wide sparse scenic office back wall",
+    "variantId": "office-a",
+    "sourceImage": {
+      "path": "sources/window-rooms/office-wide-a.png"
+    },
+    "resolution": [
+      1024,
+      512
+    ],
+    "aspect": [
+      2,
+      1
+    ],
+    "aliases": [
+      "cyberpunk/window-room-office-wide/poor",
+      "cyberpunk/window-room-office-wide/rich",
+      "cyberpunk/window-room-office-wide/high_rich"
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 1
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-room-office-wide/mid",
+    "alignment": "exact",
+    "description": "wide sparse scenic office back wall",
+    "variantId": "office-b",
+    "sourceImage": {
+      "path": "sources/window-rooms/office-wide-b.png"
+    },
+    "resolution": [
+      1024,
+      512
+    ],
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-room-office-wide/mid",
+    "alignment": "exact",
+    "description": "wide sparse scenic office back wall",
+    "variantId": "office-c",
+    "sourceImage": {
+      "path": "sources/window-rooms/office-wide-c.png"
+    },
+    "resolution": [
+      1024,
+      512
+    ],
+    "append": true,
+    "overwrite": true
+  }
+]

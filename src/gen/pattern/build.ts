@@ -10,6 +10,7 @@ import { Lamp } from './Lamp.js';
 import { LaneField } from './LaneField.js';
 import { NoiseField } from './NoiseField.js';
 import { Concrete } from './Concrete.js';
+import { WindowGrime } from './WindowGrime.js';
 import { PanelGrid } from './PanelGrid.js';
 import { Pattern, type PatternParams } from './Pattern.js';
 import { PuddleField } from './PuddleField.js';
@@ -102,6 +103,8 @@ export function buildPattern(
       return new NoiseField(params);
     case 'concrete':
       return new Concrete(params);
+    case 'window-grime':
+      return new WindowGrime(params);
     case 'lane':
       return new LaneField(params);
     case 'puddle':

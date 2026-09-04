@@ -1,9 +1,9 @@
 # Window room plates
 
-Built-in image generation produced these square rear-wall plates. They contain furniture and baked indoor illumination; runtime rooms supply depth and separate ceiling fixtures.
+Built-in image generation supplies sparse rear-wall scenery and plain receiving surfaces. Runtime rooms supply depth and separate ceiling fixtures.
 
-- [Office prompt](office.md): workstations and fitted storage, source office.png.
-- [Apartment prompt](apartment.md): modest furnished residence, source apartment.png.
-- [Lobby prompt](lobby.md): commercial reception wall, source lobby.png.
+- [Office](office-v2.md), [apartment](apartment-v2.md), [lobby](lobby-v2.md): square back plates, corresponding PNG sources.
+- [Wide office A](office-wide-a.md), [B](office-wide-b.md), [C](office-wide-c.md): sparse 2:1 back plates for seeded scenic bays.
+- [Wall](wall-neutral.md), [floor](floor-neutral.md): plain wall and floor surfaces shared across room families.
 
-The window-room batch imports the sources at 1024 pixels with flat surface maps. Fit each plate once with aspect-preserving UVs.
+The window-room batches import sources at 1024 px maximum with flat surface maps. Preserve aspect when cropping to each bay.

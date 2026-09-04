@@ -12,10 +12,11 @@ export class Concrete extends PanelGrid {
     const field = this.params.line === 0
       ? this.finish(colors[0], 0.5, 0, at, 0.5)
       : super.texel(at);
-    const mineral = fbmNoise(u, v, 5, 5, 3, seed + 71) - 0.5;
-    const cast = valueNoise(u, v, 32, 3, seed + 109) - 0.5;
-    const pores = smoothstep(0.78, 0.97, valueNoise(u, v, 128, 128, seed + 211));
-    const staining = smoothstep(0.55, 0.85, valueNoise(u, v, 7, 2, seed + 313));
+    const sampleField = (x: number, y: number, offset: number) => valueNoise(u, v, Math.max(1, Math.round(world[0] * x)), Math.max(1, Math.round(world[1] * y)), seed + offset);
+    const mineral = fbmNoise(u, v, Math.max(1, Math.round(world[0] * 2.5)), Math.max(1, Math.round(world[1] * 2.5)), 3, seed + 71) - 0.5;
+    const cast = sampleField(16, 1.5, 109) - 0.5;
+    const pores = smoothstep(0.78, 0.97, sampleField(64, 64, 211));
+    const staining = smoothstep(0.55, 0.85, sampleField(3.5, 1, 313));
     // Broad stains affect albedo. Only shallow surface structure affects normals.
     const tone = 1 + mineral * 0.42 + cast * wear * 0.32 - staining * wear * 0.22 - pores * (0.045 + wear * 0.025);
     return {

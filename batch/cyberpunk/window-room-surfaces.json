@@ -1,0 +1,86 @@
+[
+  {
+    "key": "cyberpunk/window-room-wall/mid",
+    "aliases": [
+      "cyberpunk/window-room-wall/poor",
+      "cyberpunk/window-room-wall/rich",
+      "cyberpunk/window-room-wall/high_rich"
+    ],
+    "alignment": "exact",
+    "aspect": [
+      1,
+      1
+    ],
+    "description": "plain scenic room wall",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 1
+    },
+    "sourceImage": {
+      "path": "sources/window-rooms/wall-neutral.png"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-room-floor/mid",
+    "aliases": [
+      "cyberpunk/window-room-floor/poor",
+      "cyberpunk/window-room-floor/rich",
+      "cyberpunk/window-room-floor/high_rich"
+    ],
+    "alignment": "exact",
+    "aspect": [
+      1,
+      1
+    ],
+    "description": "plain scenic room floor",
+    "variantId": "plain",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 1
+    },
+    "sourceImage": {
+      "path": "sources/window-rooms/floor-neutral.png"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-room-ceiling/mid",
+    "aliases": [
+      "cyberpunk/window-room-ceiling/poor",
+      "cyberpunk/window-room-ceiling/rich",
+      "cyberpunk/window-room-ceiling/high_rich"
+    ],
+    "alignment": "exact",
+    "aspect": [
+      1,
+      1
+    ],
+    "description": "plain scenic room ceiling",
+    "variantId": "plain",
+    "resolution": [
+      256,
+      256
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 1
+    },
+    "flatColor": "#9a9d98",
+    "flatNoise": 0,
+    "emission": "luminance",
+    "overwrite": true
+  }
+]

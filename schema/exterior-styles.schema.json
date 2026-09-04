@@ -20,7 +20,8 @@
         "required": [
           "id",
           "group",
-          "surfaces"
+          "surfaces",
+          "facadePattern"
         ],
         "additionalProperties": false,
         "properties": {
@@ -60,7 +61,9 @@
               "slab",
               "rail",
               "doorGlass",
-              "ac"
+              "ac",
+              "ground",
+              "louvre"
             ],
             "properties": {
               "facade": {
@@ -101,8 +104,57 @@
               },
               "ac": {
                 "$ref": "#/$defs/binding"
+              },
+              "ground": {
+                "$ref": "#/$defs/binding"
+              },
+              "louvre": {
+                "$ref": "#/$defs/binding"
               }
             }
+          },
+          "facadePattern": {
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "kind"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "kind": {
+                    "const": "continuous"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "kind",
+                  "width",
+                  "height",
+                  "jointWidth"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "kind": {
+                    "const": "panel"
+                  },
+                  "width": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "height": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "jointWidth": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                }
+              }
+            ]
           }
         }
       }

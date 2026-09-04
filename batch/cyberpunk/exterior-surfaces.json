@@ -1,0 +1,615 @@
+[
+  {
+    "key": "cyberpunk/concrete-monolith/mid",
+    "aliases": [
+      "cyberpunk/concrete-monolith/poor",
+      "cyberpunk/concrete-monolith/rich",
+      "cyberpunk/concrete-monolith/high_rich"
+    ],
+    "tiling": {
+      "worldSize": [
+        4,
+        4
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.88,
+      "metallicFactor": 0
+    },
+    "overwrite": true,
+    "alignment": "tile",
+    "description": "cast architectural concrete surface",
+    "variantId": "cast",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "seed": 773,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#777b79"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.95
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete-monolith/mid",
+    "append": true,
+    "overwrite": true,
+    "alignment": "tile",
+    "description": "weathered architectural concrete surface",
+    "variantId": "weathered",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "seed": 816,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#626864"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete-monolith/mid",
+    "append": true,
+    "overwrite": true,
+    "alignment": "tile",
+    "description": "mineral architectural concrete surface",
+    "variantId": "mineral",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "seed": 780,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#858986"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete-monolith/mid",
+    "append": true,
+    "overwrite": true,
+    "alignment": "tile",
+    "description": "graphite architectural concrete surface",
+    "variantId": "graphite",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "seed": 787,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#33393b"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.05
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete-large-panel/mid",
+    "aliases": [
+      "cyberpunk/concrete-large-panel/poor",
+      "cyberpunk/concrete-large-panel/rich",
+      "cyberpunk/concrete-large-panel/high_rich"
+    ],
+    "tiling": {
+      "worldSize": [
+        7,
+        7
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.84,
+      "metallicFactor": 0
+    },
+    "overwrite": true,
+    "alignment": "tile",
+    "description": "cast architectural concrete surface",
+    "variantId": "cast",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "seed": 773,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#777b79"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.1,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.95
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        7,
+        3.5
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete-large-panel/mid",
+    "append": true,
+    "overwrite": true,
+    "alignment": "tile",
+    "description": "mineral architectural concrete surface",
+    "variantId": "mineral",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "seed": 780,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#858986"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.1,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        7,
+        3.5
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/exterior-louvre/mid",
+    "aliases": [
+      "cyberpunk/exterior-louvre/poor",
+      "cyberpunk/exterior-louvre/rich",
+      "cyberpunk/exterior-louvre/high_rich"
+    ],
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.52
+    },
+    "variantId": "metal",
+    "resolution": [
+      256,
+      256
+    ],
+    "seed": 929,
+    "description": "satin rolled grey metal for individually modeled industrial louvre slats",
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#646d6c",
+        "#89928f"
+      ],
+      "cells": [
+        2,
+        48
+      ],
+      "octaves": 2,
+      "depth": 0.008,
+      "variation": 0,
+      "grain": 0.006,
+      "sheen": 0.025
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-grime-sill/poor",
+    "alignment": "exact",
+    "aspect": [
+      3,
+      0.9
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96,
+      "alphaMode": "BLEND"
+    },
+    "description": "translucent localized mineral runoff on a fitted wall surface",
+    "variantId": "runoff",
+    "resolution": [
+      1000,
+      300
+    ],
+    "seed": 941,
+    "pattern": {
+      "kind": "window-grime",
+      "colors": [
+        "#494a45"
+      ],
+      "wear": 1
+    },
+    "decal": {
+      "worldSize": [
+        3,
+        0.9
+      ],
+      "edgeInset": 0.02,
+      "surfaceOffset": 0.002,
+      "wrapMode": "clamp",
+      "projection": "surface-fit"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-grime-jamb/poor",
+    "alignment": "exact",
+    "aspect": [
+      0.4,
+      2.5
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96,
+      "alphaMode": "BLEND"
+    },
+    "description": "translucent localized mineral runoff on a fitted wall surface",
+    "variantId": "stain",
+    "resolution": [
+      160,
+      1000
+    ],
+    "seed": 941,
+    "pattern": {
+      "kind": "window-grime",
+      "colors": [
+        "#494a45"
+      ],
+      "wear": 1
+    },
+    "decal": {
+      "worldSize": [
+        0.4,
+        2.5
+      ],
+      "edgeInset": 0.02,
+      "surfaceOffset": 0.002,
+      "wrapMode": "clamp",
+      "projection": "surface-fit"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-grime-sill/mid",
+    "alignment": "exact",
+    "aspect": [
+      3,
+      0.9
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96,
+      "alphaMode": "BLEND"
+    },
+    "description": "translucent localized mineral runoff on a fitted wall surface",
+    "variantId": "runoff",
+    "resolution": [
+      1000,
+      300
+    ],
+    "seed": 942,
+    "pattern": {
+      "kind": "window-grime",
+      "colors": [
+        "#494a45"
+      ],
+      "wear": 0.8
+    },
+    "decal": {
+      "worldSize": [
+        3,
+        0.9
+      ],
+      "edgeInset": 0.02,
+      "surfaceOffset": 0.002,
+      "wrapMode": "clamp",
+      "projection": "surface-fit"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-grime-jamb/mid",
+    "alignment": "exact",
+    "aspect": [
+      0.4,
+      2.5
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96,
+      "alphaMode": "BLEND"
+    },
+    "description": "translucent localized mineral runoff on a fitted wall surface",
+    "variantId": "stain",
+    "resolution": [
+      160,
+      1000
+    ],
+    "seed": 942,
+    "pattern": {
+      "kind": "window-grime",
+      "colors": [
+        "#494a45"
+      ],
+      "wear": 0.8
+    },
+    "decal": {
+      "worldSize": [
+        0.4,
+        2.5
+      ],
+      "edgeInset": 0.02,
+      "surfaceOffset": 0.002,
+      "wrapMode": "clamp",
+      "projection": "surface-fit"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-grime-sill/rich",
+    "alignment": "exact",
+    "aspect": [
+      3,
+      0.9
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96,
+      "alphaMode": "BLEND"
+    },
+    "description": "translucent localized mineral runoff on a fitted wall surface",
+    "variantId": "runoff",
+    "resolution": [
+      1000,
+      300
+    ],
+    "seed": 943,
+    "pattern": {
+      "kind": "window-grime",
+      "colors": [
+        "#494a45"
+      ],
+      "wear": 0.55
+    },
+    "decal": {
+      "worldSize": [
+        3,
+        0.9
+      ],
+      "edgeInset": 0.02,
+      "surfaceOffset": 0.002,
+      "wrapMode": "clamp",
+      "projection": "surface-fit"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-grime-jamb/rich",
+    "alignment": "exact",
+    "aspect": [
+      0.4,
+      2.5
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96,
+      "alphaMode": "BLEND"
+    },
+    "description": "translucent localized mineral runoff on a fitted wall surface",
+    "variantId": "stain",
+    "resolution": [
+      160,
+      1000
+    ],
+    "seed": 943,
+    "pattern": {
+      "kind": "window-grime",
+      "colors": [
+        "#494a45"
+      ],
+      "wear": 0.55
+    },
+    "decal": {
+      "worldSize": [
+        0.4,
+        2.5
+      ],
+      "edgeInset": 0.02,
+      "surfaceOffset": 0.002,
+      "wrapMode": "clamp",
+      "projection": "surface-fit"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-grime-sill/high_rich",
+    "alignment": "exact",
+    "aspect": [
+      3,
+      0.9
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96,
+      "alphaMode": "BLEND"
+    },
+    "description": "translucent localized mineral runoff on a fitted wall surface",
+    "variantId": "runoff",
+    "resolution": [
+      1000,
+      300
+    ],
+    "seed": 944,
+    "pattern": {
+      "kind": "window-grime",
+      "colors": [
+        "#494a45"
+      ],
+      "wear": 0.3
+    },
+    "decal": {
+      "worldSize": [
+        3,
+        0.9
+      ],
+      "edgeInset": 0.02,
+      "surfaceOffset": 0.002,
+      "wrapMode": "clamp",
+      "projection": "surface-fit"
+    },
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-grime-jamb/high_rich",
+    "alignment": "exact",
+    "aspect": [
+      0.4,
+      2.5
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.96,
+      "alphaMode": "BLEND"
+    },
+    "description": "translucent localized mineral runoff on a fitted wall surface",
+    "variantId": "stain",
+    "resolution": [
+      160,
+      1000
+    ],
+    "seed": 944,
+    "pattern": {
+      "kind": "window-grime",
+      "colors": [
+        "#494a45"
+      ],
+      "wear": 0.3
+    },
+    "decal": {
+      "worldSize": [
+        0.4,
+        2.5
+      ],
+      "edgeInset": 0.02,
+      "surfaceOffset": 0.002,
+      "wrapMode": "clamp",
+      "projection": "surface-fit"
+    },
+    "overwrite": true
+  }
+]

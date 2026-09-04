@@ -28,6 +28,16 @@ export async function encodeRgbPng(img: Rgb): Promise<Buffer> {
   return sharp(img.data, { raw: { width: img.width, height: img.height, channels: 3 } }).png().toBuffer();
 }
 
+/** Unpremultiplied RGB under transparent texels prevents dark filtered edges. */
+export async function encodeRgbaPng(img: Rgb, opacity: Gray): Promise<Buffer> {
+  const rgba = new Uint8Array(img.width * img.height * 4);
+  for (let i = 0; i < opacity.data.length; i++) {
+    rgba.set(img.data.subarray(i * 3, i * 3 + 3), i * 4);
+    rgba[i * 4 + 3] = Math.round(Math.max(0, Math.min(1, opacity.data[i])) * 255);
+  }
+  return sharp(rgba, { raw: { width: img.width, height: img.height, channels: 4 } }).png().toBuffer();
+}
+
 export function luminance(rgb: Rgb): Gray {
   const out = new Float32Array(rgb.width * rgb.height);
   for (let i = 0; i < out.length; i++) {

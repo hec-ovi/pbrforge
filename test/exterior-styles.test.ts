@@ -35,8 +35,14 @@ it('publishes nine coherent style sets whose complete bindings resolve at every 
     }
     const facade = entryFor(style.surfaces.facade.kind, tier)
       .variants.find(variant => variant.id === style.surfaces.facade.variant)!;
-    expect(facade.layout?.moduleSize).toEqual([2, 1]);
-    expect(facade.layout?.jointWidth).toBe(0.02);
+    if (style.facadePattern.kind === 'panel') {
+      expect(facade.layout?.moduleSize).toEqual([style.facadePattern.width, style.facadePattern.height]);
+      expect(facade.layout?.jointWidth).toBe(style.facadePattern.jointWidth);
+      expect(facade.layout?.moduleSize).toEqual([7, 3.5]);
+    } else {
+      expect(facade.layout?.family).toBe('continuous');
+      expect(facade.layout?.moduleSize).toBeUndefined();
+    }
   }
 });
 

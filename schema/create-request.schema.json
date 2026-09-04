@@ -119,7 +119,7 @@
       "required": ["kind", "colors"],
       "additionalProperties": false,
       "properties": {
-        "kind": { "enum": ["concrete", "hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "water", "incident-blood", "incident-tyre"] },
+        "kind": { "enum": ["window-grime", "concrete", "hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "water", "incident-blood", "incident-tyre"] },
         "colors": {
           "type": "array",
           "items": { "type": "string", "pattern": "^#[0-9a-f]{6}$" },

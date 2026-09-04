@@ -56,7 +56,9 @@ Conventions are fixed, not per entry: metallic-roughness workflow, basecolor and
 
 ## Exterior style sets
 
-Exterior buildings use one of nine complete [style sets](bindings/exterior-styles.json): three residential, three premium and three civic. Each binds named surface variants for facades, borders, glazing, frames and services. Cast, weathered and maintained concrete retain large panel modules. Office glazing is clear, opaque glazing is dark with subdued reflection, and modeled blind slats use flat finishes. Regenerate these finishes with `npm run create -- batch/cyberpunk/exterior-finishes.json`.
+Exterior buildings use one of nine complete [style sets](bindings/exterior-styles.json): three residential, three premium and three civic. Their facades use continuous concrete or exact 7 x 3.5 m panels; ground and borders use matching continuous fields. Industrial louvres carry satin metal, and fitted RGBA grime provides translucent runoff. Regenerate with `npm run create -- batch/cyberpunk/exterior-surfaces.json`. Glass and coating recipes remain in [exterior-finishes.json](batch/cyberpunk/exterior-finishes.json).
+
+[Scenic room bindings](bindings/window-room-surfaces.json) define five receiving faces and seeded back-image pools. Wide office images fit 2:1 bays; square apartment imagery, side walls, floors and plain ceilings retain their declared aspect. Engine supplies room geometry and ceiling strips.
 
 ## Hydrology
 

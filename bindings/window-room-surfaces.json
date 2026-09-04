@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "rooms": {
+    "office": {
+      "back": {
+        "kind": "window-room",
+        "variant": "office"
+      },
+      "left": {
+        "kind": "window-room-wall",
+        "variant": "plain"
+      },
+      "right": {
+        "kind": "window-room-wall",
+        "variant": "plain"
+      },
+      "floor": {
+        "kind": "window-room-floor",
+        "variant": "plain"
+      },
+      "ceiling": {
+        "kind": "window-room-ceiling",
+        "variant": "plain"
+      },
+      "backPool": [
+        {
+          "kind": "window-room-office-wide",
+          "variant": "office-a"
+        },
+        {
+          "kind": "window-room-office-wide",
+          "variant": "office-b"
+        },
+        {
+          "kind": "window-room-office-wide",
+          "variant": "office-c"
+        }
+      ]
+    },
+    "apartment": {
+      "back": {
+        "kind": "window-room",
+        "variant": "apartment"
+      },
+      "left": {
+        "kind": "window-room-wall",
+        "variant": "plain"
+      },
+      "right": {
+        "kind": "window-room-wall",
+        "variant": "plain"
+      },
+      "floor": {
+        "kind": "window-room-floor",
+        "variant": "plain"
+      },
+      "ceiling": {
+        "kind": "window-room-ceiling",
+        "variant": "plain"
+      },
+      "backPool": [
+        {
+          "kind": "window-room",
+          "variant": "apartment"
+        }
+      ]
+    },
+    "lobby": {
+      "back": {
+        "kind": "window-room",
+        "variant": "lobby"
+      },
+      "left": {
+        "kind": "window-room-wall",
+        "variant": "plain"
+      },
+      "right": {
+        "kind": "window-room-wall",
+        "variant": "plain"
+      },
+      "floor": {
+        "kind": "window-room-floor",
+        "variant": "plain"
+      },
+      "ceiling": {
+        "kind": "window-room-ceiling",
+        "variant": "plain"
+      },
+      "backPool": [
+        {
+          "kind": "window-room-office-wide",
+          "variant": "office-a"
+        },
+        {
+          "kind": "window-room-office-wide",
+          "variant": "office-b"
+        },
+        {
+          "kind": "window-room-office-wide",
+          "variant": "office-c"
+        }
+      ]
+    }
+  }
+}

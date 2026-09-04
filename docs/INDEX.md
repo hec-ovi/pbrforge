@@ -1,5 +1,8 @@
 # Box map
 
+- Scenic room surfaces: [bindings/window-room-surfaces.json](../bindings/window-room-surfaces.json), five explicit receiving faces and seeded back-image pools; [schema](../schema/window-room-surfaces.schema.json).
+- Exterior surface recipes: [batch/cyberpunk/exterior-surfaces.json](../batch/cyberpunk/exterior-surfaces.json), continuous concrete, 7 m panels, metallic louvres and fitted translucent grime.
+
 - Exterior styles: [bindings/exterior-styles.json](../bindings/exterior-styles.json), nine complete palettes in three groups; [schema](../schema/exterior-styles.schema.json) and [recipes](../batch/cyberpunk/exterior-finishes.json) define their bindings and generated finishes.
 
 - Window room plates: [batch/cyberpunk/window-room.json](../batch/cyberpunk/window-room.json), exact office, apartment and lobby imagery imported by [src/gen/ImagePlate.ts](../src/gen/ImagePlate.ts); source prompts in [sources/window-rooms/INDEX.md](../sources/window-rooms/INDEX.md).

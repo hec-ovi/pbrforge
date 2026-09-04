@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:materials:window-room-surfaces",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "rooms"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "rooms": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "office",
+        "apartment",
+        "lobby"
+      ],
+      "properties": {
+        "office": {
+          "$ref": "#/$defs/room"
+        },
+        "apartment": {
+          "$ref": "#/$defs/room"
+        },
+        "lobby": {
+          "$ref": "#/$defs/room"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "variant"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "variant": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        }
+      }
+    },
+    "room": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "back",
+        "left",
+        "right",
+        "floor",
+        "ceiling",
+        "backPool"
+      ],
+      "properties": {
+        "back": {
+          "$ref": "#/$defs/binding"
+        },
+        "left": {
+          "$ref": "#/$defs/binding"
+        },
+        "right": {
+          "$ref": "#/$defs/binding"
+        },
+        "floor": {
+          "$ref": "#/$defs/binding"
+        },
+        "ceiling": {
+          "$ref": "#/$defs/binding"
+        },
+        "backPool": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/binding"
+          }
+        }
+      }
+    }
+  }
+}

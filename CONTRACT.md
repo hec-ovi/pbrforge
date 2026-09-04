@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.16.3. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.4. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -20,7 +20,7 @@ The package root exports the five operations below, their request and result typ
 - `resolve(key: string, options?: MaterialsOptions): MaterialEntry` resolves a key or alias against the database. Options: [`MaterialsOptions`](src/api-types.ts). Result: [MaterialEntry](schema/material-entry.schema.json).
 - `list(filter?: MaterialFilter, options?: MaterialsOptions): string[]` returns matching keys, sorted and deterministic. Filter and options: [`MaterialFilter`, `MaterialsOptions`](src/api-types.ts).
 - `create(request: CreateRequest, options?: MaterialsOptions): Promise<MaterialEntry>` generates a full set, verifies seams and writes it to the database. Request: [CreateRequest](schema/create-request.schema.json). Options: [`MaterialsOptions`](src/api-types.ts). Result: [MaterialEntry](schema/material-entry.schema.json). Basecolor comes from ComfyUI, from the pattern class below, from a tint of a variant already in the entry (`recolor`), or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box. Resolution must fit the physical tile or exact-placement aspect within one pixel. A tile is at most 1,048,576 pixels; an exact sheet is at most 4096 px on either side and 9,437,184 pixels total.
-- `decal` on an exact create request publishes the fitted physical face and placement policy. It requires `alphaMode: "BLEND"`, an incident pattern that generates opacity, and matching ratios between `decal.worldSize`, `aspect` and the map resolution. A decal is clamped and fitted to one receiving surface. It is never repeated or projected through neighboring geometry.
+- `decal` on an exact create request publishes the fitted physical face and placement policy. It requires `alphaMode: "BLEND"`, a decal pattern that generates opacity, and matching ratios between `decal.worldSize`, `aspect` and the map resolution. A decal is clamped and fitted to one receiving surface. It is never repeated or projected through neighboring geometry.
 - `append: true` adds the generated variant to the entry the key already resolves to, which keeps its alignment, tiling, aliases and physical; `variantId` names it (and its asset folder). Appending an id that exists is `E_KEY_EXISTS`, so a batch stays resumable. `canonical: true` on an append puts the variant first, so it is the one a consumer gets when it does not pick.
 - `sourceImage: { path }` imports one baked image plate, exact alignment only, at most 1024 px per side. Paths are absolute or relative to this box. The source must cover the requested dimensions after orientation; it is center-cover fitted locally in sRGB with transparent pixels flattened over black. Basecolor and emission share identical pixels; normal, height and AO are flat and roughness/metallic are constant physical factors. No ComfyUI is used. Invalid, unreadable or undersized sources and combinations with other generation lanes, finish, tiling, layout or decals are `E_SCHEMA`. Plates publish `class: plate` and refinish excludes them.
 - `recolor` writes a tint variant: another variant of the same entry repainted. The paint's hue is taken whole and `strength` is how much pigment is in it, so a blue paint reads blue over a near-grey photograph. It is the same surface in different paint, so it points at that variant's relief maps instead of copying them.
@@ -66,6 +66,8 @@ Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2
 
 ## Concrete
 
+`concrete-monolith/mid` aliases all tiers and covers 4 x 4 m at 1024 px. Its `cast`, `weathered`, `mineral` and `graphite` variants are continuous, without panel seams. `concrete-large-panel/mid` aliases all tiers and covers 7 x 7 m at 1024 px; `cast` and `mineral` have exact 7 x 3.5 m modules with 20 mm joints. Layout origins are `[0, 0]`. Pores and casting traces retain physical scale independently of module size. [batch/cyberpunk/exterior-surfaces.json](batch/cyberpunk/exterior-surfaces.json) regenerates these surfaces.
+
 `concrete` additionally provides `panel-cast`, `panel-weathered` and `panel-mineral` at every tier. Each retains the 2 x 1 m panel module, 20 mm joint and origin `[0, 0]`. Cast has uneven mineral clouds and casting traces; weathered is darker with runoff stains; mineral is maintained neutral precast. Surface pores remain shallow and stains affect color independently of relief. `column` provides matching continuous `plain-cast`, `plain-weathered` and `plain-mineral` at its existing 1.5 x 3 m scale. [batch/cyberpunk/exterior-finishes.json](batch/cyberpunk/exterior-finishes.json) regenerates these additions.
 
 `concrete` covers 2 x 2 m at 512 px with canonical and panel variants: subtly mottled `plain` (canonical), neutral cement `panel`, `panel-square` and `panel-graphite`. `panel` and `panel-graphite` are exact 2 x 1 m modules with 20 mm joints; `panel-square` is 2 x 2 m. Every panel uses origin `[0, 0]` in world metres. Relief, tonal drift and fine grain remain subordinate to the structural joint and none comes from a photograph. Exterior selects coordinated panel and border variants through the style bindings.
@@ -78,7 +80,7 @@ Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2
 
 [bindings/exterior-styles.json](bindings/exterior-styles.json), validated by [schema/exterior-styles.schema.json](schema/exterior-styles.schema.json), publishes `{ version: 1, styles }`. Exactly nine styles form three groups: `residential-salvaged`, `residential-weathered`, `residential-modest`; `premium-obsidian`, `premium-office`, `premium-mineral`; `civic-utility`, `civic-institutional`, `civic-industrial`.
 
-Each style has `id`, `group` and `surfaces`. Roles are `facade`, `border`, `frame`, `trim`, `glass`, `curtain`, `door`, `service`, `roof`, `slab`, `rail`, `doorGlass` and `ac`. Each role is `{ kind, variant }`, resolvable as `cyberpunk/<kind>/<tier>` at all four tiers. Consumers choose one complete style per building, retain physical world scale and select named variants. Geometry policy, building-type eligibility, lights and occupancy belong to Exterior and Engine. Opaque glazing publishes transmission zero so consumers can omit window-room scenery behind it.
+Each style has `id`, `group`, `facadePattern` and `surfaces`. `facadePattern` is `{ kind: continuous }` or `{ kind: panel, width, height, jointWidth }`, matching the facade variant's layout in metres. Roles are `facade`, `border`, `ground`, `frame`, `trim`, `glass`, `curtain`, `louvre`, `door`, `service`, `roof`, `slab`, `rail`, `doorGlass` and `ac`. Each role is `{ kind, variant }`, resolvable as `cyberpunk/<kind>/<tier>` at all four tiers. Consumers choose one complete style per building, retain physical world scale and select named variants. Geometry policy, building-type eligibility, lights and occupancy belong to Exterior and Engine. Opaque glazing publishes transmission zero so consumers can omit window-room scenery behind it.
 
 ## Frame steel
 
@@ -126,6 +128,10 @@ Every binding resolves directly to the tiled entry and a named variant with the 
 
 ## Window glass
 
+`window-room-office-wide/mid` aliases all tiers and provides exact 2:1 `office-a`, `office-b` and `office-c` back plates at 1024 x 512 px. Each room binding also has `backPool`, a nonempty array of `{ kind, variant }` for seeded per-bay selection. Office and lobby use the three wide back plates; apartment uses its square plate. Aspect comes from each resolved entry. Consumers retain the complete back-pool selection within one scenic bay and crop to that bay's aspect.
+
+Scenic rooms publish five explicit roles and back pools in [bindings/window-room-surfaces.json](bindings/window-room-surfaces.json), validated by [schema/window-room-surfaces.schema.json](schema/window-room-surfaces.schema.json). For `office`, `apartment` and `lobby`, `back` uses `window-room` with that room-name variant; `left` and `right` use `window-room-wall:plain`; `floor` uses `window-room-floor:plain`; `ceiling` uses `window-room-ceiling:plain`. Resolve as `cyberpunk/<kind>/<tier>`, all tiers alias mid. These are exact 1:1 surfaces; consumers preserve aspect when cropping. Side walls and floor carry baked source imagery; ceiling is a plain matte field. Lighting strips, spatial arrangement and depth belong to Engine.
+
 All window-glass maps have flat normals and uniform roughness. The additional `window-glass-opaque/mid` entry, variant `dark`, has graphite basecolor, metallic 0, roughness 0.55 and explicit transmission 0. `window-glass-office/mid`, variant `clear`, has neutral basecolor, metallic 0, roughness 0.045 and transmission 0.78. Both cover 1.5 x 1.5 m at 256 px and alias every tier. Opaque dark glazing has a broad subdued reflection; office glazing preserves the room view. Reflections come from the renderer environment; textures contain no baked reflections.
 
 `window-room/mid` is an exact 1:1 baked room plate at 1024 px with `office`, `apartment` and `lobby` variants, aliased at every tier. Basecolor and emission contain identical fitted sRGB imagery; emissive strength is 1. Normal, height and AO are flat, roughness is 1 and metallic is 0. Consumers clamp the image once behind glazing, complete on square back walls or with an aspect-preserving centered crop on nonsquare bays. Curtains and window glass remain separate geometry. Source images and prompts live in [sources/window-rooms/INDEX.md](sources/window-rooms/INDEX.md); [batch/cyberpunk/window-room.json](batch/cyberpunk/window-room.json) regenerates the maps.
@@ -146,6 +152,8 @@ The tier is the building. poor and mid are residential windows: neutral glass, w
 The interior `glass` kind is clear glazing for partitions and carries its own values.
 
 ## Curtains
+
+`exterior-louvre/mid:metal` aliases every tier: satin grey metal at metallic 1 and roughness 0.52, with fine rolled surface variation on a 0.5 x 0.5 m tile at 256 px. It contains no slat divisions. Exterior owns external slat geometry and placement.
 
 Every tier also provides `slat`, a uniform neutral dielectric finish with flat normals for individually modeled blind slats. It retains the entry's world scale and matte roughness. Consumers place slat gaps and curvature in geometry; this variant contains no folds or slat divisions.
 
@@ -168,6 +176,7 @@ Kinds and the parameters each one reads (full ranges in the request schema):
 | `slab` | large flush slabs cut by a narrow groove | cells, line, bevel, variation, bond |
 | `stripe` | bands across one axis | cells, axis, split, line |
 | `two-tone` | one split across the tile with a trim line | axis, split, line, three colors |
+| `window-grime` | fitted translucent mineral runoff | decal worldSize, edgeInset, wear |
 | `concrete` | mineral clouds, cast traces and shallow pores beneath optional panel seams | cells, line, bevel, depth, joint, wear |
 | `noise` | mottling in one to four octaves: plain wall to asphalt | cells, octaves, depth |
 | `lane` | asphalt with two wheel tracks worn along it | everything `noise` reads, plus axis (the lane's direction), split (track spacing across the tile), line (track width), wear |
@@ -186,6 +195,8 @@ Shared over all of them: `colors` (face first), `depth` (relief), `joint` (how m
 Cyberpunk pattern library, per tier: plaster (`plain`, canonical, then `hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`plain`, canonical, then 2 x 1 m `panel`, 2 x 2 m `panel-square` and dark `panel-graphite`), ceiling (`plain`, canonical: smooth dark paint, then `panel`: restrained 0.5 m insets), floor-slab (`plain`, canonical and continuous, then 2 x 1 m `panel` and 2 x 2 m `large-slab`), roof (`plain`, canonical and continuous, then 2 x 1 m `panel` and 2 x 2 m `panel-square`), wall (`plain`, `panel`, `panel-square`, `panel-graphite`), wall-band (`cement`, `graphite`, exact 1.4 m height), column (`plain`, `cement`, both continuous), elevator doors (`split`, then `graphite`: two leaves with an exact center seam), curtains (`blind`, then `shade`: shallow vertical slats or plain cloth), fabric (`flat`: even upholstery cloth, matte, whose normal map leans under one code value off flat, so a part small enough to minify a photographed weave has nothing left to alias), sidewalk (`slab`, `plate`, `plain`), road (`street`, `highway`, `wet`, `worn-concrete`), highway-deck (`asphalt`, `concrete`), water-surface (`lagoon`, `river`, `sea-coast`), curb (`stone`), plastic (`bag`: crumpled near-black sheet at 0.55 roughness, the sheen of a refuse sack), light-fixture (`lamp`, `strip`, `panel`), ac-unit (`grille`). Variants of one kind are laid out to read apart at a glance through their large structural divisions and restrained neutral tone, not vivid paint or fine decorative tiling.
 
 ## Incident decals
+
+Window grime uses the same fitted decal placement contract. `window-grime-sill/<tier>:runoff` covers 3 x 0.9 m at 1000 x 300 px; `window-grime-jamb/<tier>:stain` covers 0.4 x 2.5 m at 160 x 1000 px. Both store RGBA basecolor with alpha identical to the separate opacity map. Consumers use that alpha once, disable depth writes and retain depth testing. Both are neutral mineral stains, alpha blended, with flat relief, a fully transparent 20 mm edge inset and 2 mm receiver offset. Opacity stays below 0.3 and decreases by tier. The PNG top edge starts the downward runoff. Consumers fit to a wall receiver below a sill or beside a jamb and clip to that receiving face. No volume projection or stains across glazing, openings or neighboring surfaces.
 
 Two exact scene-specific keys ship for investigation layouts. `cyberpunk/incident-blood/mid`, variant `directional-pool`, fits a 2.4 x 1.2 m floor receiver. `cyberpunk/incident-tyre/poor`, variant `directional-transfer`, fits a 3.6 x 0.9 m street receiver. Both use a 2 mm normal offset, clamped UVs, flat height, dielectric response and an opacity map with a fully transparent inset around every edge. Basecolor continues the incident color beneath transparent texels so filtered mip levels do not introduce dark borders.
 

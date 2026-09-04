@@ -6,12 +6,12 @@
       "group": "residential",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel-cast"
+          "kind": "concrete-monolith",
+          "variant": "cast"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain-cast"
+          "kind": "concrete-monolith",
+          "variant": "cast"
         },
         "frame": {
           "kind": "window-frame",
@@ -56,7 +56,18 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "cast"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "continuous"
       }
     },
     {
@@ -64,12 +75,12 @@
       "group": "residential",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel-weathered"
+          "kind": "concrete-monolith",
+          "variant": "weathered"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain-weathered"
+          "kind": "concrete-monolith",
+          "variant": "weathered"
         },
         "frame": {
           "kind": "window-frame",
@@ -114,7 +125,18 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "weathered"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "continuous"
       }
     },
     {
@@ -122,12 +144,12 @@
       "group": "residential",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel-mineral"
+          "kind": "concrete-monolith",
+          "variant": "mineral"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain-mineral"
+          "kind": "concrete-monolith",
+          "variant": "mineral"
         },
         "frame": {
           "kind": "window-frame",
@@ -172,7 +194,18 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "mineral"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "continuous"
       }
     },
     {
@@ -180,12 +213,12 @@
       "group": "premium",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel-graphite"
+          "kind": "concrete-monolith",
+          "variant": "graphite"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain"
+          "kind": "concrete-monolith",
+          "variant": "graphite"
         },
         "frame": {
           "kind": "window-frame",
@@ -230,7 +263,18 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "graphite"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "continuous"
       }
     },
     {
@@ -238,12 +282,12 @@
       "group": "premium",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel"
+          "kind": "concrete-large-panel",
+          "variant": "mineral"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain-mineral"
+          "kind": "concrete-monolith",
+          "variant": "mineral"
         },
         "frame": {
           "kind": "window-frame",
@@ -288,7 +332,21 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "mineral"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "panel",
+        "width": 7,
+        "height": 3.5,
+        "jointWidth": 0.02
       }
     },
     {
@@ -296,12 +354,12 @@
       "group": "premium",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel-mineral"
+          "kind": "concrete-monolith",
+          "variant": "mineral"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain-mineral"
+          "kind": "concrete-monolith",
+          "variant": "mineral"
         },
         "frame": {
           "kind": "window-frame",
@@ -346,7 +404,18 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "mineral"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "continuous"
       }
     },
     {
@@ -354,12 +423,12 @@
       "group": "civic",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel-weathered"
+          "kind": "concrete-monolith",
+          "variant": "weathered"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain-weathered"
+          "kind": "concrete-monolith",
+          "variant": "weathered"
         },
         "frame": {
           "kind": "window-frame",
@@ -404,7 +473,18 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "weathered"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "continuous"
       }
     },
     {
@@ -412,12 +492,12 @@
       "group": "civic",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel-mineral"
+          "kind": "concrete-large-panel",
+          "variant": "mineral"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain-cast"
+          "kind": "concrete-monolith",
+          "variant": "mineral"
         },
         "frame": {
           "kind": "window-frame",
@@ -462,7 +542,21 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "mineral"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "panel",
+        "width": 7,
+        "height": 3.5,
+        "jointWidth": 0.02
       }
     },
     {
@@ -470,12 +564,12 @@
       "group": "civic",
       "surfaces": {
         "facade": {
-          "kind": "concrete",
-          "variant": "panel-graphite"
+          "kind": "concrete-monolith",
+          "variant": "graphite"
         },
         "border": {
-          "kind": "column",
-          "variant": "plain-cast"
+          "kind": "concrete-monolith",
+          "variant": "graphite"
         },
         "frame": {
           "kind": "window-frame",
@@ -520,7 +614,18 @@
         "ac": {
           "kind": "ac-unit",
           "variant": "grille"
+        },
+        "ground": {
+          "kind": "concrete-monolith",
+          "variant": "graphite"
+        },
+        "louvre": {
+          "kind": "exterior-louvre",
+          "variant": "metal"
         }
+      },
+      "facadePattern": {
+        "kind": "continuous"
       }
     }
   ]
