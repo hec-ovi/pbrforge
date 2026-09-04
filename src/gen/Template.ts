@@ -1,12 +1,13 @@
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import type { ComfyGraph } from '../api-types.js';
 import { MaterialsError } from '../db/errors.js';
 
 /** The box folder: templates, prompts and provided source images are all named relative to it. */
 export const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
-export type Graph = Record<string, { class_type: string; inputs: Record<string, unknown> }>;
+export type Graph = ComfyGraph;
 
 /** A workflow from templates/, in ComfyUI API format, ready to have its params injected. */
 export function loadGraph(name: string): Graph {

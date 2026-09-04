@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { Ajv2020 as Ajv, type ValidateFunction } from 'ajv/dist/2020.js';
+import type { MaterialFilter } from '../api-types.js';
 import { MaterialsError } from './errors.js';
 import type { MaterialEntry, ThemeIndex } from './types.js';
 import entrySchema from '../../schema/material-entry.schema.json' with { type: 'json' };
@@ -29,7 +30,7 @@ export class Database {
     throw new MaterialsError('E_KEY_NOT_FOUND', `no entry or alias for ${key}`);
   }
 
-  list(filter: { theme?: string; kind?: string; tier?: string } = {}): string[] {
+  list(filter: MaterialFilter = {}): string[] {
     const themes = filter.theme ? [filter.theme] : this.themeNames();
     const keys: string[] = [];
     for (const theme of themes) {
