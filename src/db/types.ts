@@ -103,6 +103,7 @@ export interface Screen extends Display {
 }
 
 export type PatternKind =
+  | 'concrete'
   | 'hexagon'
   | 'panel-grid'
   | 'slab'

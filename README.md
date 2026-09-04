@@ -54,6 +54,10 @@ The whole library sits on a matte floor: every non-emissive entry carries metall
 
 Conventions are fixed, not per entry: metallic-roughness workflow, basecolor and emission sRGB with every other map linear, OpenGL-style normals, glass following glTF `KHR_materials_transmission`.
 
+## Exterior style sets
+
+Exterior buildings use one of nine complete [style sets](bindings/exterior-styles.json): three residential, three premium and three civic. Each binds named surface variants for facades, borders, glazing, frames and services. Cast, weathered and maintained concrete retain large panel modules. Office glazing is clear, opaque glazing is dark with subdued reflection, and modeled blind slats use flat finishes. Regenerate these finishes with `npm run create -- batch/cyberpunk/exterior-finishes.json`.
+
 ## Hydrology
 
 The 8 x 8 m `cyberpunk/water-surface/high_rich` entry supplies `lagoon`, `river` and `sea-coast` variants. Each has deterministic seamless basecolor, normal, roughness and metallic maps. [bindings/atlas-hydrology.json](bindings/atlas-hydrology.json) maps Atlas keys `water.lagoon`, `water.river` and `water.sea-coast` to those exact variants. Engine consumes that explicit map and fails closed when a binding cannot resolve.

@@ -1,0 +1,1092 @@
+[
+  {
+    "key": "cyberpunk/concrete/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "panel-cast neutral concrete with mineral variation and restrained pores",
+    "variantId": "panel-cast",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 773,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#777b79"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.95
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "panel-mineral neutral concrete with mineral variation and restrained pores",
+    "variantId": "panel-mineral",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 780,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#858986"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/column/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "plain-cast neutral concrete with mineral variation and restrained pores",
+    "variantId": "plain-cast",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 773,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#777b79"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.95
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/column/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "plain-mineral neutral concrete with mineral variation and restrained pores",
+    "variantId": "plain-mineral",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 780,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#858986"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/curtain/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "matte neutral coating for individual blind slat geometry",
+    "variantId": "slat",
+    "flatColor": "#797c76",
+    "flatNoise": 0,
+    "resolution": [
+      384,
+      768
+    ]
+  },
+  {
+    "key": "cyberpunk/concrete/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "panel-cast neutral concrete with mineral variation and restrained pores",
+    "variantId": "panel-cast",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 790,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#818582"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.75
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "panel-mineral neutral concrete with mineral variation and restrained pores",
+    "variantId": "panel-mineral",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 797,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#909491"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/column/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "plain-cast neutral concrete with mineral variation and restrained pores",
+    "variantId": "plain-cast",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 790,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#818582"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.75
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/column/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "plain-mineral neutral concrete with mineral variation and restrained pores",
+    "variantId": "plain-mineral",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 797,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#909491"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/curtain/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "matte neutral coating for individual blind slat geometry",
+    "variantId": "slat",
+    "flatColor": "#858983",
+    "flatNoise": 0,
+    "resolution": [
+      384,
+      768
+    ]
+  },
+  {
+    "key": "cyberpunk/concrete/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "panel-cast neutral concrete with mineral variation and restrained pores",
+    "variantId": "panel-cast",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 807,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#8a8e8b"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.55
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "panel-mineral neutral concrete with mineral variation and restrained pores",
+    "variantId": "panel-mineral",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 814,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#9ca09d"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/column/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "plain-cast neutral concrete with mineral variation and restrained pores",
+    "variantId": "plain-cast",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 807,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#8a8e8b"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.55
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/column/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "plain-mineral neutral concrete with mineral variation and restrained pores",
+    "variantId": "plain-mineral",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 814,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#9ca09d"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/curtain/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "matte neutral coating for individual blind slat geometry",
+    "variantId": "slat",
+    "flatColor": "#747b78",
+    "flatNoise": 0,
+    "resolution": [
+      384,
+      768
+    ]
+  },
+  {
+    "key": "cyberpunk/concrete/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "panel-cast neutral concrete with mineral variation and restrained pores",
+    "variantId": "panel-cast",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 824,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#939793"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.35
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "panel-mineral neutral concrete with mineral variation and restrained pores",
+    "variantId": "panel-mineral",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 831,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#a4a8a5"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/column/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "plain-cast neutral concrete with mineral variation and restrained pores",
+    "variantId": "plain-cast",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 824,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#939793"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.35
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/column/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "plain-mineral neutral concrete with mineral variation and restrained pores",
+    "variantId": "plain-mineral",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 831,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#a4a8a5"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.08
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/curtain/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "matte neutral coating for individual blind slat geometry",
+    "variantId": "slat",
+    "flatColor": "#636b68",
+    "flatNoise": 0,
+    "resolution": [
+      384,
+      768
+    ]
+  },
+  {
+    "key": "cyberpunk/window-glass-opaque/mid",
+    "aliases": [
+      "cyberpunk/window-glass-opaque/poor",
+      "cyberpunk/window-glass-opaque/rich",
+      "cyberpunk/window-glass-opaque/high_rich"
+    ],
+    "alignment": "tile",
+    "description": "smooth dark facade glazing",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.55,
+      "transmission": 0,
+      "ior": 1.5,
+      "breakable": true
+    },
+    "variantId": "dark",
+    "flatColor": "#20282b",
+    "flatNoise": 0,
+    "resolution": [
+      256,
+      256
+    ],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/window-glass-office/mid",
+    "aliases": [
+      "cyberpunk/window-glass-office/poor",
+      "cyberpunk/window-glass-office/rich",
+      "cyberpunk/window-glass-office/high_rich"
+    ],
+    "alignment": "tile",
+    "description": "smooth clear facade glazing",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.045,
+      "transmission": 0.78,
+      "ior": 1.5,
+      "breakable": true
+    },
+    "variantId": "clear",
+    "flatColor": "#e1e7e5",
+    "flatNoise": 0,
+    "resolution": [
+      256,
+      256
+    ],
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/concrete/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "aged neutral concrete with mineral runoff and localized staining",
+    "variantId": "panel-weathered",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 816,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#626864"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/column/poor",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "continuous aged concrete with mineral runoff and localized staining",
+    "variantId": "plain-weathered",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 816,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#626864"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "aged neutral concrete with mineral runoff and localized staining",
+    "variantId": "panel-weathered",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 833,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#707773"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/column/mid",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "continuous aged concrete with mineral runoff and localized staining",
+    "variantId": "plain-weathered",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 833,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#707773"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "aged neutral concrete with mineral runoff and localized staining",
+    "variantId": "panel-weathered",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 850,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#7c837f"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/column/rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "continuous aged concrete with mineral runoff and localized staining",
+    "variantId": "plain-weathered",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 850,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#7c837f"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/concrete/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "aged neutral concrete with mineral runoff and localized staining",
+    "variantId": "panel-weathered",
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 867,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#858c88"
+      ],
+      "cells": [
+        1,
+        2
+      ],
+      "line": 0.02,
+      "bevel": 0.009,
+      "depth": 0.12,
+      "joint": 0.2,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        2,
+        1
+      ],
+      "jointWidth": 0.02,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/column/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "overwrite": true,
+    "description": "continuous aged concrete with mineral runoff and localized staining",
+    "variantId": "plain-weathered",
+    "resolution": [
+      256,
+      512
+    ],
+    "seed": 867,
+    "pattern": {
+      "kind": "concrete",
+      "colors": [
+        "#7f8682"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0,
+      "bevel": 0.009,
+      "depth": 0,
+      "joint": 0,
+      "variation": 0,
+      "grain": 0,
+      "wear": 0.65
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  }
+]

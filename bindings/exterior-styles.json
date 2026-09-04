@@ -1,0 +1,527 @@
+{
+  "version": 1,
+  "styles": [
+    {
+      "id": "residential-salvaged",
+      "group": "residential",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel-cast"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain-cast"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "blind"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "zinc"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    },
+    {
+      "id": "residential-weathered",
+      "group": "residential",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel-weathered"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain-weathered"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass",
+          "variant": "2"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "shade"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "paint"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    },
+    {
+      "id": "residential-modest",
+      "group": "residential",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel-mineral"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain-mineral"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "slat"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "paint"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    },
+    {
+      "id": "premium-obsidian",
+      "group": "premium",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel-graphite"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass-opaque",
+          "variant": "dark"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "shade"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "paint"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    },
+    {
+      "id": "premium-office",
+      "group": "premium",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain-mineral"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass-office",
+          "variant": "clear"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "slat"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "zinc"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    },
+    {
+      "id": "premium-mineral",
+      "group": "premium",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel-mineral"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain-mineral"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass-office",
+          "variant": "clear"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "slat"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "paint"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    },
+    {
+      "id": "civic-utility",
+      "group": "civic",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel-weathered"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain-weathered"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass",
+          "variant": "2"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "slat"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "zinc"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    },
+    {
+      "id": "civic-institutional",
+      "group": "civic",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel-mineral"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain-cast"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass-office",
+          "variant": "clear"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "slat"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "paint"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    },
+    {
+      "id": "civic-industrial",
+      "group": "civic",
+      "surfaces": {
+        "facade": {
+          "kind": "concrete",
+          "variant": "panel-graphite"
+        },
+        "border": {
+          "kind": "column",
+          "variant": "plain-cast"
+        },
+        "frame": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "trim": {
+          "kind": "wall-trim",
+          "variant": "paint"
+        },
+        "glass": {
+          "kind": "window-glass-opaque",
+          "variant": "dark"
+        },
+        "curtain": {
+          "kind": "curtain",
+          "variant": "slat"
+        },
+        "door": {
+          "kind": "door",
+          "variant": "paint"
+        },
+        "service": {
+          "kind": "metal",
+          "variant": "zinc"
+        },
+        "roof": {
+          "kind": "roof",
+          "variant": "plain"
+        },
+        "slab": {
+          "kind": "floor-slab",
+          "variant": "plain"
+        },
+        "rail": {
+          "kind": "window-frame",
+          "variant": "paint"
+        },
+        "doorGlass": {
+          "kind": "window-glass",
+          "variant": "1"
+        },
+        "ac": {
+          "kind": "ac-unit",
+          "variant": "grille"
+        }
+      }
+    }
+  ]
+}

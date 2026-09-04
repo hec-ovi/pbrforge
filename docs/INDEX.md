@@ -1,5 +1,7 @@
 # Box map
 
+- Exterior styles: [bindings/exterior-styles.json](../bindings/exterior-styles.json), nine complete palettes in three groups; [schema](../schema/exterior-styles.schema.json) and [recipes](../batch/cyberpunk/exterior-finishes.json) define their bindings and generated finishes.
+
 - Window room plates: [batch/cyberpunk/window-room.json](../batch/cyberpunk/window-room.json), exact office, apartment and lobby imagery imported by [src/gen/ImagePlate.ts](../src/gen/ImagePlate.ts); source prompts in [sources/window-rooms/INDEX.md](../sources/window-rooms/INDEX.md).
 
 - Door coating recipe: [batch/cyberpunk/door.json](../batch/cyberpunk/door.json), deterministic graphite paint with tiered wear on the canonical door keys.

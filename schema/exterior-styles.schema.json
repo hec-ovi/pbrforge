@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:materials:exterior-styles",
+  "type": "object",
+  "required": [
+    "version",
+    "styles"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "styles": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "group",
+          "surfaces"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "enum": [
+              "residential-salvaged",
+              "residential-weathered",
+              "residential-modest",
+              "premium-obsidian",
+              "premium-office",
+              "premium-mineral",
+              "civic-utility",
+              "civic-institutional",
+              "civic-industrial"
+            ]
+          },
+          "group": {
+            "enum": [
+              "residential",
+              "premium",
+              "civic"
+            ]
+          },
+          "surfaces": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "facade",
+              "border",
+              "frame",
+              "trim",
+              "glass",
+              "curtain",
+              "door",
+              "service",
+              "roof",
+              "slab",
+              "rail",
+              "doorGlass",
+              "ac"
+            ],
+            "properties": {
+              "facade": {
+                "$ref": "#/$defs/binding"
+              },
+              "border": {
+                "$ref": "#/$defs/binding"
+              },
+              "frame": {
+                "$ref": "#/$defs/binding"
+              },
+              "trim": {
+                "$ref": "#/$defs/binding"
+              },
+              "glass": {
+                "$ref": "#/$defs/binding"
+              },
+              "curtain": {
+                "$ref": "#/$defs/binding"
+              },
+              "door": {
+                "$ref": "#/$defs/binding"
+              },
+              "service": {
+                "$ref": "#/$defs/binding"
+              },
+              "roof": {
+                "$ref": "#/$defs/binding"
+              },
+              "slab": {
+                "$ref": "#/$defs/binding"
+              },
+              "rail": {
+                "$ref": "#/$defs/binding"
+              },
+              "doorGlass": {
+                "$ref": "#/$defs/binding"
+              },
+              "ac": {
+                "$ref": "#/$defs/binding"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "variant"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "variant": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        }
+      }
+    }
+  }
+}

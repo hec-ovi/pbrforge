@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.3: nine coherent exterior style bindings, cast and weathered concrete finishes, smooth window glazing, dark opaque and clear office glass, and flat finishes for modeled blind slats.
+
 0.16.2: exact baked image import and office, apartment and lobby window-room plates with flat physical maps.
 
 0.16.1: canonical door paint is a deterministic graphite dielectric coating with tiered surface wear, fine relief and roughness variation.

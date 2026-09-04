@@ -20,13 +20,9 @@
       "ior": 1.5,
       "tint": "#b4b8b4"
     },
-    "finish": {
-      "grain": 0.25,
-      "relief": 2
-    },
     "variants": 2,
     "flatColor": "#cbd0cb",
-    "flatNoise": 0.08
+    "flatNoise": 0
   },
   {
     "key": "cyberpunk/window-glass/mid",
@@ -49,13 +45,9 @@
       "ior": 1.5,
       "tint": "#bcc4c2"
     },
-    "finish": {
-      "grain": 0.2,
-      "relief": 2
-    },
     "variants": 2,
     "flatColor": "#d4dbd9",
-    "flatNoise": 0.05
+    "flatNoise": 0
   },
   {
     "key": "cyberpunk/window-glass/rich",
@@ -78,13 +70,9 @@
       "ior": 1.5,
       "tint": "#93b4ac"
     },
-    "finish": {
-      "grain": 0.15,
-      "relief": 1.6
-    },
     "variants": 2,
     "flatColor": "#d8e3e0",
-    "flatNoise": 0.03
+    "flatNoise": 0
   },
   {
     "key": "cyberpunk/window-glass/high_rich",
@@ -107,12 +95,8 @@
       "ior": 1.5,
       "tint": "#7fa5a6"
     },
-    "finish": {
-      "grain": 0.1,
-      "relief": 1.2
-    },
     "variants": 2,
     "flatColor": "#dae6e6",
-    "flatNoise": 0.02
+    "flatNoise": 0
   }
 ]

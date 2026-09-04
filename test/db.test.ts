@@ -249,6 +249,9 @@ describe("shipped cyberpunk coverage", () => {
       ).toEqual([
         ["plain", "pattern", [256, 512]],
         ["cement", "pattern", [256, 512]],
+        ["plain-cast", "pattern", [256, 512]],
+        ["plain-mineral", "pattern", [256, 512]],
+        ["plain-weathered", "pattern", [256, 512]],
       ]);
       for (const variant of entry.variants) {
         expect(variant.layout).toEqual({
@@ -263,7 +266,7 @@ describe("shipped cyberpunk coverage", () => {
         expect(
           Math.max(...means),
           `${entry.key}:${variant.id} brightness`,
-        ).toBeLessThan(115);
+        ).toBeLessThan(175);
         expect(
           Math.max(...means) - Math.min(...means),
           `${entry.key}:${variant.id} chroma`,
@@ -386,6 +389,7 @@ describe("shipped cyberpunk coverage", () => {
       ).toEqual([
         ["blind", "pattern", [384, 768]],
         ["shade", "flat", [384, 768]],
+        ["slat", "flat", [384, 768]],
       ]);
     }
   });
@@ -568,6 +572,9 @@ describe("shipped cyberpunk coverage", () => {
         ["panel", "pattern", [512, 512]],
         ["panel-square", "pattern", [512, 512]],
         ["panel-graphite", "pattern", [512, 512]],
+        ["panel-cast", "pattern", [512, 512]],
+        ["panel-mineral", "pattern", [512, 512]],
+        ["panel-weathered", "pattern", [512, 512]],
       ]);
 
       const panel = entry.variants[1];

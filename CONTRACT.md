@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.16.2. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.3. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -66,11 +66,19 @@ Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2
 
 ## Concrete
 
-`concrete` covers 2 x 2 m at 512 px with four deterministic variants: subtly mottled `plain` (canonical), neutral cement `panel`, `panel-square` and `panel-graphite`. `panel` and `panel-graphite` are exact 2 x 1 m modules with 20 mm joints; `panel-square` is 2 x 2 m. Every panel uses origin `[0, 0]` in world metres. Relief, tonal drift and fine grain remain subordinate to the structural joint and none comes from a photograph. Exterior uses `panel` on compatible facade regions and `plain` on fitted remainder borders or columns.
+`concrete` additionally provides `panel-cast`, `panel-weathered` and `panel-mineral` at every tier. Each retains the 2 x 1 m panel module, 20 mm joint and origin `[0, 0]`. Cast has uneven mineral clouds and casting traces; weathered is darker with runoff stains; mineral is maintained neutral precast. Surface pores remain shallow and stains affect color independently of relief. `column` provides matching continuous `plain-cast`, `plain-weathered` and `plain-mineral` at its existing 1.5 x 3 m scale. [batch/cyberpunk/exterior-finishes.json](batch/cyberpunk/exterior-finishes.json) regenerates these additions.
+
+`concrete` covers 2 x 2 m at 512 px with canonical and panel variants: subtly mottled `plain` (canonical), neutral cement `panel`, `panel-square` and `panel-graphite`. `panel` and `panel-graphite` are exact 2 x 1 m modules with 20 mm joints; `panel-square` is 2 x 2 m. Every panel uses origin `[0, 0]` in world metres. Relief, tonal drift and fine grain remain subordinate to the structural joint and none comes from a photograph. Exterior selects coordinated panel and border variants through the style bindings.
 
 `wall` uses the same 2 x 2 m arithmetic. Its canonical `plain` is a continuous black or graphite field; `panel` is neutral cement at 2 x 1 m, `panel-square` is neutral cement at 2 x 2 m, and `panel-graphite` is dark 2 x 1 m cladding. All carry stable origin `[0, 0]`, matte dielectric response and restrained procedural mineral detail. `parapet` aliases to this family. The palette stays black, graphite and neutral cement, with structural modules at least 2 x 1 m.
 
 `wall-band` covers 4 x 1.4 m at 1000 x 350 px. Its `cement` and `graphite` fields carry `bandHeight: 1.4`, stable origin `[0, 0]` and no baked structural joint. Consumers use it only for facade zones calculated as exact 1.4 m bands.
+
+## Exterior style sets
+
+[bindings/exterior-styles.json](bindings/exterior-styles.json), validated by [schema/exterior-styles.schema.json](schema/exterior-styles.schema.json), publishes `{ version: 1, styles }`. Exactly nine styles form three groups: `residential-salvaged`, `residential-weathered`, `residential-modest`; `premium-obsidian`, `premium-office`, `premium-mineral`; `civic-utility`, `civic-institutional`, `civic-industrial`.
+
+Each style has `id`, `group` and `surfaces`. Roles are `facade`, `border`, `frame`, `trim`, `glass`, `curtain`, `door`, `service`, `roof`, `slab`, `rail`, `doorGlass` and `ac`. Each role is `{ kind, variant }`, resolvable as `cyberpunk/<kind>/<tier>` at all four tiers. Consumers choose one complete style per building, retain physical world scale and select named variants. Geometry policy, building-type eligibility, lights and occupancy belong to Exterior and Engine. Opaque glazing publishes transmission zero so consumers can omit window-room scenery behind it.
 
 ## Frame steel
 
@@ -118,11 +126,13 @@ Every binding resolves directly to the tiled entry and a named variant with the 
 
 ## Window glass
 
+All window-glass maps have flat normals and uniform roughness. The additional `window-glass-opaque/mid` entry, variant `dark`, has graphite basecolor, metallic 0, roughness 0.55 and explicit transmission 0. `window-glass-office/mid`, variant `clear`, has neutral basecolor, metallic 0, roughness 0.045 and transmission 0.78. Both cover 1.5 x 1.5 m at 256 px and alias every tier. Opaque dark glazing has a broad subdued reflection; office glazing preserves the room view. Reflections come from the renderer environment; textures contain no baked reflections.
+
 `window-room/mid` is an exact 1:1 baked room plate at 1024 px with `office`, `apartment` and `lobby` variants, aliased at every tier. Basecolor and emission contain identical fitted sRGB imagery; emissive strength is 1. Normal, height and AO are flat, roughness is 1 and metallic is 0. Consumers clamp the image once behind glazing, complete on square back walls or with an aspect-preserving centered crop on nonsquare bays. Curtains and window glass remain separate geometry. Source images and prompts live in [sources/window-rooms/INDEX.md](sources/window-rooms/INDEX.md); [batch/cyberpunk/window-room.json](batch/cyberpunk/window-room.json) regenerates the maps.
 
-A pane at full transmission is an open hole: it passes everything the renderer puts behind it and keeps none of the reflection in front of it, so a facade reads as empty frames. A window keeps part of the light instead, which is what lets the environment read on the glass. Reflection itself comes from the renderer's environment; the entry's job is to leave room for it.
+Glazing transmits light and reflects its surroundings. Transmission controls the transmitted component; Fresnel reflection depends on the viewing angle and IOR. The renderer supplies the reflected environment.
 
-`transmission` is the glTF `KHR_materials_transmission` factor and `tint` is the glass's own colour. Roughness stays low, so the roughness band is the factor plus or minus 0.05, the default of the table above.
+`transmission` is the glTF `KHR_materials_transmission` factor and `tint` is the glass's own colour. Roughness stays low, with uniform maps at the declared factor.
 
 The tier is the building. poor and mid are residential windows: neutral glass, worn at the bottom of the range. rich and high_rich are office curtain wall: blue-green coated, the lowest transmission in the family, so reflection dominates.
 
@@ -136,6 +146,8 @@ The tier is the building. poor and mid are residential windows: neutral glass, w
 The interior `glass` kind is clear glazing for partitions and carries its own values.
 
 ## Curtains
+
+Every tier also provides `slat`, a uniform neutral dielectric finish with flat normals for individually modeled blind slats. It retains the entry's world scale and matte roughness. Consumers place slat gaps and curvature in geometry; this variant contains no folds or slat divisions.
 
 `curtain` covers a 1.5 x 3 m window bay at 384 x 768 px, equal density on both axes. Every tier carries `blind` (canonical), twelve vertical 0.125 m slats with shallow deterministic pleats, and `shade`, a plain matte blackout cloth. Neither uses a photographed weave, so minified window coverings keep their shape without moire or grain.
 
@@ -156,6 +168,7 @@ Kinds and the parameters each one reads (full ranges in the request schema):
 | `slab` | large flush slabs cut by a narrow groove | cells, line, bevel, variation, bond |
 | `stripe` | bands across one axis | cells, axis, split, line |
 | `two-tone` | one split across the tile with a trim line | axis, split, line, three colors |
+| `concrete` | mineral clouds, cast traces and shallow pores beneath optional panel seams | cells, line, bevel, depth, joint, wear |
 | `noise` | mottling in one to four octaves: plain wall to asphalt | cells, octaves, depth |
 | `lane` | asphalt with two wheel tracks worn along it | everything `noise` reads, plus axis (the lane's direction), split (track spacing across the tile), line (track width), wear |
 | `puddle` | a noise field with damp patches pooled over it | everything `noise` reads, plus wet, plus a third color for the patch |
