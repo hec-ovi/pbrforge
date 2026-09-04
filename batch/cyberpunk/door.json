@@ -2,7 +2,7 @@
   {
     "key": "cyberpunk/door/poor",
     "alignment": "tile",
-    "description": "painted steel door leaf and casing: one even dark paint, a little metal in the reflection",
+    "description": "dark graphite coating on a steel door, restrained surface wear",
     "tiling": {
       "worldSize": [
         0.5,
@@ -10,21 +10,30 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
+      "roughnessFactor": 0.64,
+      "metallicFactor": 0
     },
     "variantId": "paint",
     "resolution": [
       256,
       256
     ],
-    "flatColor": "#25282c",
-    "flatNoise": 0.02
+    "seed": 431,
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#292c2f", "#3b3e41"],
+      "cells": [4, 12],
+      "octaves": 3,
+      "depth": 0.045,
+      "variation": 0,
+      "grain": 0.025,
+      "sheen": 0.055
+    }
   },
   {
     "key": "cyberpunk/door/mid",
     "alignment": "tile",
-    "description": "painted steel door leaf and casing: one even dark paint, a little metal in the reflection",
+    "description": "dark graphite coating on a steel door, restrained surface wear",
     "tiling": {
       "worldSize": [
         0.5,
@@ -32,21 +41,30 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
+      "roughnessFactor": 0.58,
+      "metallicFactor": 0
     },
     "variantId": "paint",
     "resolution": [
       256,
       256
     ],
-    "flatColor": "#25282c",
-    "flatNoise": 0.02
+    "seed": 433,
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#292c2f", "#36393c"],
+      "cells": [4, 12],
+      "octaves": 3,
+      "depth": 0.035,
+      "variation": 0,
+      "grain": 0.018,
+      "sheen": 0.04
+    }
   },
   {
     "key": "cyberpunk/door/rich",
     "alignment": "tile",
-    "description": "painted steel door leaf and casing: one even dark paint, a little metal in the reflection",
+    "description": "dark graphite coating on a steel door, restrained surface wear",
     "tiling": {
       "worldSize": [
         0.5,
@@ -54,21 +72,30 @@
       ]
     },
     "physical": {
-      "roughnessFactor": 0.5,
-      "metallicFactor": 1
+      "roughnessFactor": 0.53,
+      "metallicFactor": 0
     },
     "variantId": "paint",
     "resolution": [
       256,
       256
     ],
-    "flatColor": "#25282c",
-    "flatNoise": 0.02
+    "seed": 439,
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#292c2f", "#323538"],
+      "cells": [4, 12],
+      "octaves": 3,
+      "depth": 0.025,
+      "variation": 0,
+      "grain": 0.012,
+      "sheen": 0.03
+    }
   },
   {
     "key": "cyberpunk/door/high_rich",
     "alignment": "tile",
-    "description": "painted steel door leaf and casing: one even dark paint, a little metal in the reflection",
+    "description": "dark graphite coating on a steel door, restrained surface wear",
     "tiling": {
       "worldSize": [
         0.5,
@@ -77,14 +104,23 @@
     },
     "physical": {
       "roughnessFactor": 0.5,
-      "metallicFactor": 1
+      "metallicFactor": 0
     },
     "variantId": "paint",
     "resolution": [
       256,
       256
     ],
-    "flatColor": "#25282c",
-    "flatNoise": 0.02
+    "seed": 443,
+    "pattern": {
+      "kind": "noise",
+      "colors": ["#292c2f", "#303336"],
+      "cells": [4, 12],
+      "octaves": 3,
+      "depth": 0.02,
+      "variation": 0,
+      "grain": 0.008,
+      "sheen": 0.02
+    }
   }
 ]

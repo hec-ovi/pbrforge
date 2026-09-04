@@ -947,20 +947,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
-        "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.45,
-          0.55
-        ],
-        "grain": 0.2,
-        "relief": 2
+        "roughnessFactor": 0.64,
+        "metallicFactor": 0
       },
       "variants": [
         {
           "id": "paint",
+          "class": "pattern",
           "resolution": [
             256,
             256
@@ -986,20 +979,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
-        "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.45,
-          0.55
-        ],
-        "grain": 0.2,
-        "relief": 2
+        "roughnessFactor": 0.58,
+        "metallicFactor": 0
       },
       "variants": [
         {
           "id": "paint",
+          "class": "pattern",
           "resolution": [
             256,
             256
@@ -1025,20 +1011,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.5,
-        "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.45,
-          0.55
-        ],
-        "grain": 0.2,
-        "relief": 2
+        "roughnessFactor": 0.53,
+        "metallicFactor": 0
       },
       "variants": [
         {
           "id": "paint",
+          "class": "pattern",
           "resolution": [
             256,
             256
@@ -1065,19 +1044,12 @@
       },
       "physical": {
         "roughnessFactor": 0.5,
-        "metallicFactor": 1
-      },
-      "finish": {
-        "roughness": [
-          0.45,
-          0.55
-        ],
-        "grain": 0.2,
-        "relief": 2
+        "metallicFactor": 0
       },
       "variants": [
         {
           "id": "paint",
+          "class": "pattern",
           "resolution": [
             256,
             256

@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.1: canonical door paint is a deterministic graphite dielectric coating with tiered surface wear, fine relief and roughness variation.
+
 0.16.0: package-root resolve, list, create, refinish and rebrand operations with typed options, requests, results and errors. The emitted package resolves its bundled theme database. The preview has a presentation contract and one closed database-loading error.
 
 0.15.1: future-noir screen sources retain subject-and-style prompts, exact landscape or portrait fit, display structure and restrained emission. Investigation blood and tyre materials resolve under the Engine keys with fitted placement envelopes.

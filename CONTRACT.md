@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.16.0. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.1. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -46,7 +46,7 @@ A photograph carries its own gloss and grain in every pixel. Read straight out, 
 - `grain` (default 0.2) is how much of the pixel-scale speckle survives into the relief. Everything above the feature scale (joints, bricks, aggregate, trowel strokes) comes through at full gain either way.
 - `relief` (default 2) is the gain on that feature-scale relief.
 
-Dry matte is the default across the library: moisture staining and heavy grime live in the poor tier's basecolor and nowhere else. The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds: metal, window-frame, door, wall-trim, elevator_door, fire-escape, roof-artifact and the zinc roof) and no roughness below 0.45, in its factor, its band and every pixel of its roughness map, so nothing sparkles under a street lamp. Glass (an entry with transmission) and lit entries (screens, light fixtures and the letter atlas) are the exceptions. Bands per kind and tier, all four tiers left to right (poor, mid, rich, high_rich):
+Dry matte is the default across the library: moisture staining and heavy grime live in the poor tier's basecolor and nowhere else. The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds: metal, window-frame, wall-trim, elevator_door, fire-escape, roof-artifact and the zinc roof) and no roughness below 0.45, in its factor, its band and every pixel of its roughness map, so nothing sparkles under a street lamp. Glass (an entry with transmission) and lit entries (screens, light fixtures and the letter atlas) are the exceptions. Bands per kind and tier, all four tiers left to right (poor, mid, rich, high_rich):
 
 | kind | poor | mid | rich | high_rich |
 | --- | --- | --- | --- | --- |
@@ -73,7 +73,11 @@ Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2
 
 ## Frame steel
 
-`window-frame` (with `balcony-rail` and `aperture-frame` aliased to it), `door` (the leaf and its casing) and `wall-trim` are one smooth dark steel at every tier: one flat `paint` variant, synthesized and never photographed, tile 0.5 x 0.5 m at 256 px for the frames and the door (2 mm per pixel) and 1 x 1 m for the trim, metallic 1, roughness a constant 0.5, a flat normal, and nothing in the basecolor beyond a tonal drift under two percent, so a 0.06 m member shows no speckle, no grain and no repeat. The frame and the leaf share the same near-black paint (`#24272b` and `#25282c`), the trim sits a shade lighter (`#2a2d31`), and the door is laid with the same world-metre UVs as the frames. `column` covers 1.5 x 3 m at 256 x 512 px and carries continuous `plain` graphite and `cement` fields. Both have stable origin `[0, 0]`, vertical orientation and restrained procedural mineral detail instead of a flat fill.
+`window-frame` (with `balcony-rail` and `aperture-frame` aliased to it) and `wall-trim` carry one smooth dark `paint` variant: metallic 1, roughness 0.5, flat normals and tonal drift under two percent. Frames cover 0.5 x 0.5 m at 256 px; trim covers 1 x 1 m. Frame paint is `#24272b`, trim `#2a2d31`.
+
+`door` keeps the canonical `paint` variant on a 0.5 x 0.5 m tile at 256 px. It is a dark graphite dielectric coating (metallic 0), with deterministic fine relief and restrained color and roughness variation. Roughness factors by tier are 0.64, 0.58, 0.53 and 0.50; wear decreases with tier. The maps contain surface finish only. Insets, seams, handles and edge wear tied to a leaf belong to fitted geometry or decals. Regenerate all four tiers with `npm run create -- batch/cyberpunk/door.json --overwrite`. Consumers use the same world-metre scale for leaf and casing.
+
+`column` covers 1.5 x 3 m at 256 x 512 px and carries continuous `plain` graphite and `cement` fields. Both have stable origin `[0, 0]`, vertical orientation and restrained procedural mineral detail.
 
 `elevator_door` is exact on a 1:2 face at 512 x 1024 px. Its two variants are drawn two-leaf steel doors with the only relief at the outer edge and center seam, roughness 0.75 down to 0.52 by tier, metallic 1, and no photographic marks. A consumer maps one complete door face to UV 0..1.
 

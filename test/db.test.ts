@@ -182,11 +182,10 @@ describe("shipped cyberpunk coverage", () => {
     expect(missing).toEqual([]);
   });
 
-  it("ships frames, doors, trim and service metal without texture noise", async () => {
+  it("ships frames, trim and service metal without texture noise", async () => {
     const themeDir = db.themeDir("cyberpunk");
     const steel: Record<string, { id: string; metallic: number }> = {
       "window-frame": { id: "paint", metallic: 1 },
-      door: { id: "paint", metallic: 1 },
       "wall-trim": { id: "paint", metallic: 1 },
       metal: { id: "paint", metallic: 1 },
       "fire-escape": { id: "paint", metallic: 1 },
