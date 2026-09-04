@@ -1,5 +1,7 @@
 # Box map
 
+- Window room plates: [batch/cyberpunk/window-room.json](../batch/cyberpunk/window-room.json), exact office, apartment and lobby imagery imported by [src/gen/ImagePlate.ts](../src/gen/ImagePlate.ts); source prompts in [sources/window-rooms/INDEX.md](../sources/window-rooms/INDEX.md).
+
 - Door coating recipe: [batch/cyberpunk/door.json](../batch/cyberpunk/door.json), deterministic graphite paint with tiered wear on the canonical door keys.
 
 - root box: [CONTRACT.md](../CONTRACT.md). `src/index.ts` exports resolve, list, create, refinish and rebrand; `src/api-types.ts` specifies their package-only structures. `src/db` owns the theme index and files. `src/gen` owns ComfyUI generation, deterministic maps, patterns, screens, refinish and rebrand. `src/cli` exposes the write lanes and contact sheets. `bindings` carries consumer key mappings. `themes` is the shipped database. Depends on Atlas hydrology material-key binding data only.

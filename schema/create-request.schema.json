@@ -94,6 +94,13 @@
         }
       }
     },
+    "sourceImage": {
+      "type": "object",
+      "required": ["path"],
+      "additionalProperties": false,
+      "properties": { "path": { "type": "string", "minLength": 1 } },
+      "description": "exact baked image plate; center-cover fitted locally, flat physical maps and identical basecolor and emission; source must cover the output resolution"
+    },
     "flatColor": {
       "type": "string",
       "pattern": "^#[0-9a-f]{6}$",
@@ -284,6 +291,24 @@
       ]
     }
   },
+  "allOf": [{
+    "if": { "required": ["sourceImage"] },
+    "then": {
+      "properties": {
+        "alignment": { "const": "exact" },
+        "variants": { "const": 1 },
+        "emission": { "const": "none" },
+        "resolution": { "type": "array", "items": { "type": "integer", "maximum": 1024 } }
+      },
+      "not": { "anyOf": [
+        { "required": ["pattern"] }, { "required": ["flatColor"] },
+        { "required": ["recolor"] }, { "required": ["screens"] },
+        { "required": ["finish"] }, { "required": ["tiling"] },
+        { "required": ["decal"] }, { "required": ["layout"] },
+        { "required": ["brandName"] }, { "required": ["businessKind"] }
+      ] }
+    }
+  }],
   "if": {
     "properties": { "emission": { "const": "image" } },
     "required": ["emission"]

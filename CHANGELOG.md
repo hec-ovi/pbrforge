@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.2: exact baked image import and office, apartment and lobby window-room plates with flat physical maps.
+
 0.16.1: canonical door paint is a deterministic graphite dielectric coating with tiered surface wear, fine relief and roughness variation.
 
 0.16.0: package-root resolve, list, create, refinish and rebrand operations with typed options, requests, results and errors. The emitted package resolves its bundled theme database. The preview has a presentation contract and one closed database-loading error.

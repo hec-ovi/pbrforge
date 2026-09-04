@@ -66,7 +66,7 @@ export interface DecalPlacement {
 export interface Variant {
   id: string;
   /** How the maps were made. Consumers read the maps the same way either way. */
-  class?: 'image' | 'pattern' | 'flat';
+  class?: 'image' | 'pattern' | 'flat' | 'plate';
   resolution: [number, number];
   maps: Partial<Record<MapName, string>> & { basecolor: string; normal: string; roughness: string; metallic: string };
   /** Present on a screen variant painted by the create lane; a brand variant derives from one of these. */
@@ -165,6 +165,8 @@ export interface CreateRequest {
   physical?: Physical;
   finish?: FinishSpec;
   flatColor?: string;
+  /** Exact baked image with flat physical maps and matching basecolor and emission. */
+  sourceImage?: { path: string };
   flatNoise?: number;
   pattern?: PatternSpec;
   /** Published world-space placement metadata for this variant. */

@@ -1,0 +1,31 @@
+[
+  {
+    "key": "cyberpunk/window-room/mid",
+    "aliases": ["cyberpunk/window-room/poor", "cyberpunk/window-room/rich", "cyberpunk/window-room/high_rich"],
+    "alignment": "exact",
+    "aspect": [1, 1],
+    "description": "office room back wall",
+    "sourceImage": { "path": "sources/window-rooms/office.png" },
+    "variantId": "office",
+    "resolution": [1024, 1024],
+    "physical": { "metallicFactor": 0, "roughnessFactor": 1, "emissiveStrength": 1 }
+  },
+  {
+    "key": "cyberpunk/window-room/mid",
+    "alignment": "exact",
+    "description": "apartment room back wall",
+    "sourceImage": { "path": "sources/window-rooms/apartment.png" },
+    "variantId": "apartment",
+    "resolution": [1024, 1024],
+    "append": true
+  },
+  {
+    "key": "cyberpunk/window-room/mid",
+    "alignment": "exact",
+    "description": "lobby room back wall",
+    "sourceImage": { "path": "sources/window-rooms/lobby.png" },
+    "variantId": "lobby",
+    "resolution": [1024, 1024],
+    "append": true
+  }
+]

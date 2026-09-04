@@ -8849,6 +8849,77 @@
           }
         }
       ]
+    },
+    "cyberpunk/window-room/mid": {
+      "key": "cyberpunk/window-room/mid",
+      "aliases": [
+        "cyberpunk/window-room/poor",
+        "cyberpunk/window-room/rich",
+        "cyberpunk/window-room/high_rich"
+      ],
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 1,
+        "emissiveStrength": 1
+      },
+      "variants": [
+        {
+          "id": "office",
+          "class": "plate",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-room/mid/office/basecolor.png",
+            "normal": "assets/window-room/mid/office/normal.png",
+            "roughness": "assets/window-room/mid/office/roughness.png",
+            "metallic": "assets/window-room/mid/office/metallic.png",
+            "height": "assets/window-room/mid/office/height.png",
+            "ao": "assets/window-room/mid/office/ao.png",
+            "emission": "assets/window-room/mid/office/emission.png"
+          }
+        },
+        {
+          "id": "apartment",
+          "class": "plate",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-room/mid/apartment/basecolor.png",
+            "normal": "assets/window-room/mid/apartment/normal.png",
+            "roughness": "assets/window-room/mid/apartment/roughness.png",
+            "metallic": "assets/window-room/mid/apartment/metallic.png",
+            "height": "assets/window-room/mid/apartment/height.png",
+            "ao": "assets/window-room/mid/apartment/ao.png",
+            "emission": "assets/window-room/mid/apartment/emission.png"
+          }
+        },
+        {
+          "id": "lobby",
+          "class": "plate",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/window-room/mid/lobby/basecolor.png",
+            "normal": "assets/window-room/mid/lobby/normal.png",
+            "roughness": "assets/window-room/mid/lobby/roughness.png",
+            "metallic": "assets/window-room/mid/lobby/metallic.png",
+            "height": "assets/window-room/mid/lobby/height.png",
+            "ao": "assets/window-room/mid/lobby/ao.png",
+            "emission": "assets/window-room/mid/lobby/emission.png"
+          }
+        }
+      ]
     }
   }
 }

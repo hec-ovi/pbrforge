@@ -27,6 +27,7 @@ import { renderPattern } from './pattern/render.js';
 import { recolor } from './recolor.js';
 import { screenEmission, screenGlass } from './screen.js';
 import { SourceImage } from './SourceImage.js';
+import { ImagePlate } from './ImagePlate.js';
 import { stampBrand } from './text.js';
 import { isSeamless, seamScore } from './seam.js';
 import requestSchema from '../../schema/create-request.schema.json' with { type: 'json' };
@@ -92,7 +93,7 @@ export class Generator {
     const start = target.base?.variants.length ?? 0;
 
     const variants: Variant[] = [];
-    const photographed = !request.pattern && !request.flatColor && !request.recolor && request.emission !== 'image';
+    const photographed = !request.pattern && !request.flatColor && !request.recolor && !request.sourceImage && request.emission !== 'image';
     for (let v = 0; v < count; v++) {
       const id = request.variantId ?? String(start + v + 1);
       if (target.base?.variants.some((existing) => existing.id === id) && !request.overwrite) {
@@ -139,6 +140,9 @@ export class Generator {
     }
 
     const alignment = base?.alignment ?? request.alignment;
+    if (request.sourceImage && (alignment !== 'exact' || base?.decal)) {
+      throw new MaterialsError('E_SCHEMA', 'sourceImage needs an exact entry without decal placement');
+    }
     const tiling = base?.tiling ?? request.tiling;
     if (alignment === 'tile' && !tiling) {
       throw new MaterialsError('E_SCHEMA', 'tile alignment needs tiling.worldSize');
@@ -197,6 +201,9 @@ export class Generator {
     width: number,
     height: number,
   ): Promise<Source> {
+    if (request.sourceImage) {
+      return { basecolor: await ImagePlate.load(request.sourceImage.path, width, height) };
+    }
     if (request.pattern) {
       // a tiling pattern is drawn in metres of surface; an exact sheet is drawn over itself
       const world = target.tiling?.worldSize ?? request.decal?.worldSize ?? ([1, 1] as [number, number]);
@@ -241,7 +248,9 @@ export class Generator {
     const mode = request.emission ?? 'none';
     const files: [MapName, Buffer][] = [
       ['basecolor', await encodeRgbPng(source.basecolor)],
-      ...(source.screen
+      ...(request.sourceImage
+        ? await ImagePlate.maps(source.basecolor, target.physical)
+        : source.screen
         ? await screenMaps(source.basecolor, source.screen, target.physical, request)
         : source.reuse
           ? await emissionMap(source.basecolor, mode)
@@ -262,7 +271,7 @@ export class Generator {
     }
     return {
       id,
-      ...(request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
+      ...(request.sourceImage ? { class: 'plate' as const } : request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
       resolution: [source.basecolor.width, source.basecolor.height],
       maps,
       ...(source.screen ? { screen: await this.keepArtwork(source.screen, absDir, relDir) } : {}),
