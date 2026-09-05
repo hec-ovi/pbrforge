@@ -2,7 +2,7 @@
 
 - Packed material response: [pack request](../schema/pack-request.schema.json), additive RGB metallic-roughness maps for glTF, generated from the separate absolute maps through one shared writer.
 
-- Street construction finishes: [recipes](../batch/cyberpunk/street-construction.json) and `constructionSurfaces` in [street bindings](../bindings/street-styles.json), continuous paving bodies and joint mortar for geometry-owned slabs and joints.
+- Street construction finishes: [recipes](../batch/cyberpunk/street-construction.json) and `constructionSurfaces` in [street bindings](../bindings/street-styles.json), continuous role finishes for Atlas-owned slab pitches, joints and residual regions. Role mapping is in the [Ground contract](../CONTRACT.md#ground).
 
 - Street families: [bindings/street-styles.json](../bindings/street-styles.json), maintained, salvaged and industrial road, paving, border and curb finishes; [schema](../schema/street-styles.schema.json) and [recipes](../batch/cyberpunk/street-surfaces.json). Surface grain and wear use physical scale; geometry owns borders and curb joints.
 

@@ -18,9 +18,9 @@
             "type": "object", "required": ["width", "height", "jointWidth"],
             "additionalProperties": false,
             "properties": {
-              "width": { "type": "number", "minimum": 2 },
-              "height": { "type": "number", "minimum": 1 },
-              "jointWidth": { "type": "number", "exclusiveMinimum": 0 }
+              "width": { "type": "number", "minimum": 2, "description": "U cell pitch in metres, including its joint" },
+              "height": { "type": "number", "minimum": 1, "description": "V cell pitch in metres, including its joint" },
+              "jointWidth": { "type": "number", "exclusiveMinimum": 0, "description": "total joint width at each cell boundary" }
             }
           },
           "constructionSurfaces": {
