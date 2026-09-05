@@ -288,3 +288,4 @@ Thrown as `MaterialsError { code, message, details? }`, closed set:
 ## Depends on
 
 - [Atlas hydrology material-key contract](../atlas/src/hydro/CONTRACT.md), for binding data only. Database resolution and generation have no runtime dependency on Atlas.
+- [Atlas street construction contract](../atlas/src/streets/construction/CONTRACT.md), for finish-role mapping and numeric cell ownership only.
