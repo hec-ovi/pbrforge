@@ -37,6 +37,22 @@ it('resolves three complete street families with matching paving modules at ever
   }
 });
 
+it('ships seeded road defaults and validates complete optional road overrides', () => {
+  for (const style of styles.styles) expect(style.constructionSurfaces).not.toHaveProperty('road');
+  const withRoad = (road: unknown) => ({
+    ...styles,
+    styles: styles.styles.map(style => ({
+      ...style, constructionSurfaces: { ...style.constructionSurfaces, road },
+    })),
+  });
+  const validate = new Ajv2020().compile(schema);
+  const binding = { kind: 'street-road-maintained', variant: 'finish' };
+  expect(validate(withRoad(binding))).toBe(true);
+  const entry = resolve(`cyberpunk/${binding.kind}/mid`);
+  expect(entry.variants.some(variant => variant.id === binding.variant)).toBe(true);
+  expect(validate(withRoad({ kind: binding.kind }))).toBe(false);
+});
+
 it('reproduces the shipped aggregate and paving maps through the public create entry', async () => {
   const themesDir = await mkdtemp(join(tmpdir(), 'street-materials-'));
   for (const [kind, id] of [['street-road', 'maintained'], ['street-paving', 'salvaged']]) {

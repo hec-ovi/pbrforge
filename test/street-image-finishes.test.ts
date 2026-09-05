@@ -16,16 +16,16 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const themeDir = join(root, 'themes/cyberpunk');
 const tiers = ['poor', 'mid', 'rich', 'high_rich'];
 
-it('publishes distinct family tones and dry responses at a shared physical grain scale', async () => {
-  for (const role of ['road', 'pavingBody', 'gutter'] as const) {
+it('publishes distinct candidate family tones and dry responses at a shared physical grain scale', async () => {
+  for (const kind of ['street-road', 'street-precast', 'street-graphite']) {
     const means: number[] = [];
     const factors: number[] = [];
     for (const style of styles.styles) {
-      const binding = style.constructionSurfaces[role];
-      const entry = resolve(`cyberpunk/${binding.kind}/mid`);
-      for (const tier of tiers) expect(resolve(`cyberpunk/${binding.kind}/${tier}`)).toEqual(entry);
-      const selected = entry.variants.find(variant => variant.id === binding.variant)!;
-      expect(selected).toBe(entry.variants[0]);
+      const key = `cyberpunk/${kind}-${style.id}`;
+      const entry = resolve(`${key}/mid`);
+      for (const tier of tiers) expect(resolve(`${key}/${tier}`)).toEqual(entry);
+      const selected = entry.variants[0];
+      expect(selected.id).toBe('finish');
       expect(entry.tiling?.worldSize).toEqual([1, 1]);
       expect(selected.resolution).toEqual([1024, 1024]);
       expect(selected.layout).toEqual({ family: 'continuous', origin: [0, 0], orientation: 'isotropic' });
@@ -38,8 +38,8 @@ it('publishes distinct family tones and dry responses at a shared physical grain
       await expectPackedMap(themeDir, selected);
     }
     // Family palette differences are visible tone changes, independent of the unchanged metre scale.
-    expect(Math.max(...means) - Math.min(...means), role).toBeGreaterThan(12);
-    expect(new Set(factors).size, role).toBe(3);
+    expect(Math.max(...means) - Math.min(...means), kind).toBeGreaterThan(12);
+    expect(new Set(factors).size, kind).toBe(3);
   }
 });
 

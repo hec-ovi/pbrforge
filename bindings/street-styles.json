@@ -9,7 +9,6 @@
         "joint": { "kind": "street-joint", "variant": "maintained" },
         "border": { "kind": "street-graphite-maintained", "variant": "finish" },
         "curb": { "kind": "street-precast-maintained", "variant": "finish" },
-        "road": { "kind": "street-road-maintained", "variant": "finish" },
         "gutter": { "kind": "street-graphite-maintained", "variant": "finish" }
       },
       "surfaces": {
@@ -27,7 +26,6 @@
         "joint": { "kind": "street-joint", "variant": "salvaged" },
         "border": { "kind": "street-graphite-salvaged", "variant": "finish" },
         "curb": { "kind": "street-precast-salvaged", "variant": "finish" },
-        "road": { "kind": "street-road-salvaged", "variant": "finish" },
         "gutter": { "kind": "street-graphite-salvaged", "variant": "finish" }
       },
       "surfaces": {
@@ -45,7 +43,6 @@
         "joint": { "kind": "street-joint", "variant": "industrial" },
         "border": { "kind": "street-graphite-industrial", "variant": "finish" },
         "curb": { "kind": "street-precast-industrial", "variant": "finish" },
-        "road": { "kind": "street-road-industrial", "variant": "finish" },
         "gutter": { "kind": "street-graphite-industrial", "variant": "finish" }
       },
       "surfaces": {

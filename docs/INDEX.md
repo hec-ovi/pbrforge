@@ -1,6 +1,6 @@
 # Box map
 
-- Street source finishes: [recipes](../batch/cyberpunk/street-image-finishes.json) and [source index](../sources/streets/INDEX.md), continuous image-derived road/precast/graphite candidates with per-family tone and finish; construction role bindings keep physical scale separate from slab geometry.
+- Street source finishes: [recipes](../batch/cyberpunk/street-image-finishes.json) and [source index](../sources/streets/INDEX.md), continuous image-derived road/precast/graphite candidates with per-family tone and finish; construction bindings select precast and graphite at physical scale.
 - Street markings: [bindings](../bindings/street-markings.json) and [schema](../schema/street-markings.schema.json), continuous white and dark-orange coatings for Engine-owned line, arrow and crossing geometry.
 
 - Local tiled albedo: `sourceAlbedo` in [create request](../schema/create-request.schema.json), imports an opaque continuous source locally through the shared photographed PBR and seam-checked writer.
@@ -11,7 +11,7 @@
 
 - Street construction finishes: [recipes](../batch/cyberpunk/street-construction.json) and `constructionSurfaces` in [street bindings](../bindings/street-styles.json), continuous role finishes for Atlas-owned slab pitches, joints and residual regions. Role mapping is in the [Ground contract](../CONTRACT.md#ground).
 
-- Street families: [bindings/street-styles.json](../bindings/street-styles.json), maintained, salvaged and industrial road, paving, border and curb finishes; [schema](../schema/street-styles.schema.json) and [recipes](../batch/cyberpunk/street-surfaces.json). Surface grain and wear use physical scale; geometry owns borders and curb joints.
+- Street families: [bindings/street-styles.json](../bindings/street-styles.json), seeded maintained, salvaged and industrial road defaults with independent fitted-paving finishes; [schema](../schema/street-styles.schema.json) and [recipes](../batch/cyberpunk/street-surfaces.json). An optional construction road binding overrides that default. Geometry owns borders and curb joints.
 
 - Door finishes and coverings: [door finish recipes](../batch/cyberpunk/door-finishes.json) add satin and scuffed coatings; [curtain recipes](../batch/cyberpunk/curtain.json) publish complete dark charcoal covering families.
 
