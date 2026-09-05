@@ -101,6 +101,13 @@
       "properties": { "path": { "type": "string", "minLength": 1 } },
       "description": "exact baked image plate; center-cover fitted locally, flat physical maps and identical basecolor and emission; source must cover the output resolution"
     },
+    "sourceAlbedo": {
+      "type": "object",
+      "required": ["path"],
+      "additionalProperties": false,
+      "properties": { "path": { "type": "string", "minLength": 1 } },
+      "description": "opaque continuous tiled albedo; local whole-image sRGB import at matching aspect, downsample only, shared photographed PBR maps without emission"
+    },
     "flatColor": {
       "type": "string",
       "pattern": "^#[0-9a-f]{6}$",
@@ -305,6 +312,38 @@
         { "required": ["pattern"] }, { "required": ["flatColor"] },
         { "required": ["recolor"] }, { "required": ["screens"] },
         { "required": ["finish"] }, { "required": ["tiling"] },
+        { "required": ["decal"] }, { "required": ["layout"] },
+        { "required": ["brandName"] }, { "required": ["businessKind"] }
+      ] }
+    }
+  }, {
+    "if": { "required": ["sourceAlbedo"] },
+    "then": {
+      "properties": {
+        "alignment": { "const": "tile" },
+        "variants": { "const": 1 },
+        "emission": { "const": "none" },
+        "physical": {
+          "type": "object",
+          "properties": {
+            "metallicFactor": { "enum": [0, 1] },
+            "roughnessFactor": { "type": "number", "minimum": 0.45 },
+            "transmission": { "const": 0 },
+            "emissiveStrength": { "const": 0 },
+            "alphaMode": { "const": "OPAQUE" }
+          }
+        },
+        "finish": {
+          "type": "object",
+          "properties": {
+            "roughness": { "type": "array", "items": { "type": "number", "minimum": 0.45 } }
+          }
+        }
+      },
+      "not": { "anyOf": [
+        { "required": ["sourceImage"] }, { "required": ["pattern"] },
+        { "required": ["flatColor"] }, { "required": ["recolor"] },
+        { "required": ["screens"] }, { "required": ["aspect"] },
         { "required": ["decal"] }, { "required": ["layout"] },
         { "required": ["brandName"] }, { "required": ["businessKind"] }
       ] }

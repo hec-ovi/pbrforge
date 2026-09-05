@@ -1,36 +1,33 @@
 import { readFileSync } from 'node:fs';
-import { join, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { Database } from '../db/Database.js';
-import { MaterialsError } from '../db/errors.js';
-import { Generator } from '../gen/Generator.js';
-import type { CreateRequest } from '../db/types.js';
+import { create, MaterialsError, type CreateRequest } from '../index.js';
 
-const themesDir = join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'themes');
 const requestPath = process.argv[2];
-if (!requestPath) {
-  console.error('usage: npm run create -- <request.json>  (a single request or an array; array mode skips existing keys)');
+const themesAt = process.argv.indexOf('--themes');
+const themesDir = themesAt >= 0 ? process.argv[themesAt + 1] : undefined;
+if (!requestPath || requestPath.startsWith('--') || (themesAt >= 0 && (!themesDir || themesDir.startsWith('--')))) {
+  console.error('usage: npm run create -- <request.json> [--themes <dir>] [--overwrite]');
   process.exit(2);
 }
 const forceOverwrite = process.argv.includes('--overwrite');
 const parsed = JSON.parse(readFileSync(requestPath, 'utf8')) as CreateRequest | CreateRequest[];
 const batch = Array.isArray(parsed);
 const requests = (batch ? parsed : [parsed]).map((r) => (forceOverwrite ? { ...r, overwrite: true } : r));
-const generator = new Generator(new Database(themesDir));
+const options = { themesDir };
 
 try {
   for (const request of requests) {
     try {
-      const entry = await generator.create(request);
+      const entry = await create(request, options);
       console.log(`created ${entry.key} (${entry.variants.length} variant${entry.variants.length > 1 ? 's' : ''})`);
     } catch (e) {
       if (batch && e instanceof MaterialsError && e.code === 'E_KEY_EXISTS') {
         console.log(`skipped ${request.key} (exists)`);
         continue;
       }
-      if (e instanceof MaterialsError && e.code === 'E_SEAM_CHECK_FAILED' && request.seed === undefined) {
+      if (e instanceof MaterialsError && e.code === 'E_SEAM_CHECK_FAILED' && request.seed === undefined
+        && !request.sourceAlbedo && !request.sourceImage) {
         console.log(`seam check failed for ${request.key}, retrying with shifted seed`);
-        const entry = await generator.create({ ...request, seed: 9973 });
+        const entry = await create({ ...request, seed: 9973 }, options);
         console.log(`created ${entry.key} (retry)`);
         continue;
       }

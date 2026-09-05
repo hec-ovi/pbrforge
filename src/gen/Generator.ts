@@ -29,6 +29,7 @@ import { recolor } from './recolor.js';
 import { screenEmission, screenGlass } from './screen.js';
 import { SourceImage } from './SourceImage.js';
 import { ImagePlate } from './ImagePlate.js';
+import { ImageAlbedo } from './ImageAlbedo.js';
 import { PackedMaps } from './PackedMaps.js';
 import { stampBrand } from './text.js';
 import { isSeamless, seamScore } from './seam.js';
@@ -89,6 +90,7 @@ export class Generator {
 
     assertDecal(request, target);
     assertResponse(request, target);
+    if (request.sourceAlbedo) ImageAlbedo.assertTarget(target.alignment, target.physical, target.finish);
 
     const [width, height] = request.resolution ?? [1024, 1024];
     assertResolution(request, target, width, height);
@@ -175,7 +177,7 @@ export class Generator {
       const ordered = request.canonical
         ? [...variants, ...kept.filter((v) => !variants.includes(v))]
         : [...kept, ...fresh];
-      return { ...target.base, variants: ordered };
+      return { ...target.base, ...(photographed ? { finish: target.finish } : {}), variants: ordered };
     }
     return {
       key: request.key,
@@ -207,6 +209,9 @@ export class Generator {
   ): Promise<Source> {
     if (request.sourceImage) {
       return { basecolor: await ImagePlate.load(request.sourceImage.path, width, height) };
+    }
+    if (request.sourceAlbedo) {
+      return { basecolor: await ImageAlbedo.load(request.sourceAlbedo.path, width, height) };
     }
     if (request.pattern) {
       // a tiling pattern is drawn in metres of surface; an exact sheet is drawn over itself
@@ -281,7 +286,8 @@ export class Generator {
     const response = request.pattern?.response ?? source.reuse?.response;
     const variant: Variant = {
       id,
-      ...(request.sourceImage ? { class: 'plate' as const } : request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
+      ...(request.sourceImage ? { class: 'plate' as const } : request.sourceAlbedo ? { class: 'image' as const }
+        : request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
       resolution: [source.basecolor.width, source.basecolor.height],
       maps,
       ...(source.screen ? { screen: await this.keepArtwork(source.screen, absDir, relDir) } : {}),

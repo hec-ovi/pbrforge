@@ -1,5 +1,7 @@
 # Box map
 
+- Local tiled albedo: `sourceAlbedo` in [create request](../schema/create-request.schema.json), imports an opaque continuous source locally through the shared photographed PBR and seam-checked writer.
+
 - Localized damp finish: [response schema](../schema/surface-response.schema.json), shared smooth coverage coordinates roughness, albedo darkening and relief on continuous mineral maps; dry area remains dominant.
 
 - Packed material response: [pack request](../schema/pack-request.schema.json), additive RGB metallic-roughness maps for glTF, generated from the separate absolute maps through one shared writer.

@@ -189,6 +189,8 @@ export interface CreateRequest {
   flatColor?: string;
   /** Exact baked image with flat physical maps and matching basecolor and emission. */
   sourceImage?: { path: string };
+  /** Whole opaque tiled albedo imported locally, with derived nonemissive PBR maps. */
+  sourceAlbedo?: { path: string };
   flatNoise?: number;
   pattern?: PatternSpec;
   /** Published world-space placement metadata for this variant. */
