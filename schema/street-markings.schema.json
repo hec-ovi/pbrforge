@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:materials:street-markings",
+  "type": "object",
+  "required": ["version", "surfaces"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "surfaces": {
+      "type": "object", "required": ["white", "accent"], "additionalProperties": false,
+      "properties": {
+        "white": { "$ref": "#/$defs/binding" },
+        "accent": { "$ref": "#/$defs/binding" }
+      }
+    }
+  },
+  "$defs": {
+    "binding": {
+      "type": "object", "required": ["kind", "variant"], "additionalProperties": false,
+      "properties": {
+        "kind": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "variant": { "type": "string", "pattern": "^[a-z0-9_-]+$" }
+      }
+    }
+  }
+}

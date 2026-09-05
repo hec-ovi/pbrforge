@@ -14,15 +14,13 @@ const theme = join(dirname(fileURLToPath(import.meta.url)), '../themes/cyberpunk
 it('binds every construction region to a continuous finish at its published scale', () => {
   for (const style of styles.styles) for (const tier of ['poor', 'mid', 'rich', 'high_rich']) {
     const bindings = style.constructionSurfaces;
-    expect(bindings.border).toEqual(style.surfaces.border);
-    expect(bindings.curb).toEqual(style.surfaces.curb);
     for (const [role, binding] of Object.entries(bindings)) {
       const entry = resolve(`cyberpunk/${binding.kind}/${tier}`);
       const variant = entry.variants.find(variant => variant.id === binding.variant)!;
       expect(entry.alignment).toBe('tile');
       expect(variant.layout).toEqual({ family: 'continuous', origin: [0, 0], orientation: 'isotropic' });
       if (role !== 'joint') {
-        expect(entry.tiling?.worldSize).toEqual([2, 2]);
+        expect(entry.tiling?.worldSize).toEqual([1, 1]);
         expect(variant.resolution).toEqual([1024, 1024]);
       } else {
         expect(entry.tiling?.worldSize).toEqual([0.5, 0.5]);

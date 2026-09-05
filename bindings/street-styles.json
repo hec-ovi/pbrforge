@@ -5,10 +5,12 @@
       "id": "maintained",
       "pavingPattern": { "width": 2, "height": 2, "jointWidth": 0.012 },
       "constructionSurfaces": {
-        "pavingBody": { "kind": "street-paving-body", "variant": "maintained" },
+        "pavingBody": { "kind": "street-precast-maintained", "variant": "finish" },
         "joint": { "kind": "street-joint", "variant": "maintained" },
-        "border": { "kind": "street-border", "variant": "maintained" },
-        "curb": { "kind": "street-curb", "variant": "maintained" }
+        "border": { "kind": "street-graphite-maintained", "variant": "finish" },
+        "curb": { "kind": "street-precast-maintained", "variant": "finish" },
+        "road": { "kind": "street-road-maintained", "variant": "finish" },
+        "gutter": { "kind": "street-graphite-maintained", "variant": "finish" }
       },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "maintained" },
@@ -21,10 +23,12 @@
       "id": "salvaged",
       "pavingPattern": { "width": 2, "height": 1, "jointWidth": 0.016 },
       "constructionSurfaces": {
-        "pavingBody": { "kind": "street-paving-body", "variant": "salvaged" },
+        "pavingBody": { "kind": "street-precast-salvaged", "variant": "finish" },
         "joint": { "kind": "street-joint", "variant": "salvaged" },
-        "border": { "kind": "street-border", "variant": "salvaged" },
-        "curb": { "kind": "street-curb", "variant": "salvaged" }
+        "border": { "kind": "street-graphite-salvaged", "variant": "finish" },
+        "curb": { "kind": "street-precast-salvaged", "variant": "finish" },
+        "road": { "kind": "street-road-salvaged", "variant": "finish" },
+        "gutter": { "kind": "street-graphite-salvaged", "variant": "finish" }
       },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "salvaged" },
@@ -37,10 +41,12 @@
       "id": "industrial",
       "pavingPattern": { "width": 4, "height": 2, "jointWidth": 0.02 },
       "constructionSurfaces": {
-        "pavingBody": { "kind": "street-paving-body", "variant": "industrial" },
+        "pavingBody": { "kind": "street-precast-industrial", "variant": "finish" },
         "joint": { "kind": "street-joint", "variant": "industrial" },
-        "border": { "kind": "street-border", "variant": "industrial" },
-        "curb": { "kind": "street-curb", "variant": "industrial" }
+        "border": { "kind": "street-graphite-industrial", "variant": "finish" },
+        "curb": { "kind": "street-precast-industrial", "variant": "finish" },
+        "road": { "kind": "street-road-industrial", "variant": "finish" },
+        "gutter": { "kind": "street-graphite-industrial", "variant": "finish" }
       },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "industrial" },

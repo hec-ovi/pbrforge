@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "surfaces": {
+    "white": { "kind": "street-marking-white", "variant": "paint" },
+    "accent": { "kind": "street-marking-orange", "variant": "paint" }
+  }
+}

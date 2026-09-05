@@ -45,7 +45,8 @@ it('imports complete RGB pixels into derived nonemissive PBR, with inherited app
   const path = join(themesDir, 'source.png');
   const rgb = await source(path);
   const options = { themesDir, comfy };
-  const entry = await create(request(relative(root, path)), options);
+  const layout = { family: 'continuous' as const, origin: [3, -2] as [number, number], orientation: 'isotropic' as const };
+  const entry = await create({ ...request(relative(root, path)), layout }, options);
   const theme = join(themesDir, 'test');
   const variant = entry.variants[0];
   expect(resolve('test/albedo/poor', options)).toEqual(entry);
@@ -53,7 +54,7 @@ it('imports complete RGB pixels into derived nonemissive PBR, with inherited app
   expect(entry.finish).toEqual({ roughness: [0.6, 0.7], grain: 0.2, relief: 1.2 });
   expect(variant.class).toBe('image');
   expect(variant.maps.emission).toBeUndefined();
-  expect(variant.layout).toBeUndefined();
+  expect(variant.layout).toEqual(layout);
   expect(variant.resolution).toEqual([64, 64]);
   expect(readFileSync(join(theme, 'theme.json'), 'utf8')).not.toContain(path);
   const before = bytes(theme, variant);
@@ -131,7 +132,10 @@ it('rejects each incompatible albedo input through the public create schema', as
     { flatColor: '#555555' }, { recolor: { from: 'clean', color: '#444444' } },
     { screens: [{ kind: 'glyph-panel', description: 'screen' }] }, { emission: 'luminance' },
     { brandName: 'Brand' }, { businessKind: 'clinic' },
-    { layout: { family: 'continuous', origin: [0, 0], orientation: 'isotropic' } },
+    { layout: { family: 'panel', origin: [0, 0], orientation: 'isotropic', moduleSize: [1, 1], jointWidth: 0.02 } },
+    { layout: { family: 'continuous', origin: [0, 0], orientation: 'isotropic', moduleSize: [1, 1] } },
+    { layout: { family: 'continuous', origin: [0, 0], orientation: 'isotropic', bandHeight: 1 } },
+    { layout: { family: 'continuous', origin: [0, 0], orientation: 'isotropic', jointWidth: 0.02 } },
     { decal: { worldSize: [1, 1], edgeInset: 0.01, surfaceOffset: 0.002, projection: 'surface-fit', wrapMode: 'clamp' } },
     { physical: { alphaMode: 'BLEND' } }, { physical: { transmission: 0.1 } },
     { physical: { emissiveStrength: 1 } }, { physical: { metallicFactor: 0.3 } },

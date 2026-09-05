@@ -30,7 +30,9 @@
               "pavingBody": { "$ref": "#/$defs/binding" },
               "joint": { "$ref": "#/$defs/binding" },
               "border": { "$ref": "#/$defs/binding" },
-              "curb": { "$ref": "#/$defs/binding" }
+              "curb": { "$ref": "#/$defs/binding" },
+              "road": { "$ref": "#/$defs/binding", "description": "continuous carriageway finish for fitted street worlds" },
+              "gutter": { "$ref": "#/$defs/binding", "description": "continuous road-side drainage finish, selected independently of border" }
             }
           },
           "surfaces": {

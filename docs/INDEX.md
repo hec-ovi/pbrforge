@@ -1,5 +1,8 @@
 # Box map
 
+- Street source finishes: [recipes](../batch/cyberpunk/street-image-finishes.json) and [source index](../sources/streets/INDEX.md), continuous image-derived road/precast/graphite candidates with per-family tone and finish; construction role bindings keep physical scale separate from slab geometry.
+- Street markings: [bindings](../bindings/street-markings.json) and [schema](../schema/street-markings.schema.json), continuous white and dark-orange coatings for Engine-owned line, arrow and crossing geometry.
+
 - Local tiled albedo: `sourceAlbedo` in [create request](../schema/create-request.schema.json), imports an opaque continuous source locally through the shared photographed PBR and seam-checked writer.
 
 - Localized damp finish: [response schema](../schema/surface-response.schema.json), shared smooth coverage coordinates roughness, albedo darkening and relief on continuous mineral maps; dry area remains dominant.
