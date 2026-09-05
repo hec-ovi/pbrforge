@@ -10555,6 +10555,393 @@
           }
         }
       ]
+    },
+    "cyberpunk/street-road/mid": {
+      "key": "cyberpunk/street-road/mid",
+      "aliases": [
+        "cyberpunk/street-road/poor",
+        "cyberpunk/street-road/rich",
+        "cyberpunk/street-road/high_rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          4,
+          4
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.78,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "maintained",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-road/mid/maintained/basecolor.png",
+            "normal": "assets/street-road/mid/maintained/normal.png",
+            "roughness": "assets/street-road/mid/maintained/roughness.png",
+            "metallic": "assets/street-road/mid/maintained/metallic.png",
+            "height": "assets/street-road/mid/maintained/height.png",
+            "ao": "assets/street-road/mid/maintained/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "salvaged",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-road/mid/salvaged/basecolor.png",
+            "normal": "assets/street-road/mid/salvaged/normal.png",
+            "roughness": "assets/street-road/mid/salvaged/roughness.png",
+            "metallic": "assets/street-road/mid/salvaged/metallic.png",
+            "height": "assets/street-road/mid/salvaged/height.png",
+            "ao": "assets/street-road/mid/salvaged/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "industrial",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-road/mid/industrial/basecolor.png",
+            "normal": "assets/street-road/mid/industrial/normal.png",
+            "roughness": "assets/street-road/mid/industrial/roughness.png",
+            "metallic": "assets/street-road/mid/industrial/metallic.png",
+            "height": "assets/street-road/mid/industrial/height.png",
+            "ao": "assets/street-road/mid/industrial/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-paving/mid": {
+      "key": "cyberpunk/street-paving/mid",
+      "aliases": [
+        "cyberpunk/street-paving/poor",
+        "cyberpunk/street-paving/rich",
+        "cyberpunk/street-paving/high_rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          4,
+          4
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.72,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "maintained",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-paving/mid/maintained/basecolor.png",
+            "normal": "assets/street-paving/mid/maintained/normal.png",
+            "roughness": "assets/street-paving/mid/maintained/roughness.png",
+            "metallic": "assets/street-paving/mid/maintained/metallic.png",
+            "height": "assets/street-paving/mid/maintained/height.png",
+            "ao": "assets/street-paving/mid/maintained/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.012,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "salvaged",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-paving/mid/salvaged/basecolor.png",
+            "normal": "assets/street-paving/mid/salvaged/normal.png",
+            "roughness": "assets/street-paving/mid/salvaged/roughness.png",
+            "metallic": "assets/street-paving/mid/salvaged/metallic.png",
+            "height": "assets/street-paving/mid/salvaged/height.png",
+            "ao": "assets/street-paving/mid/salvaged/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              1
+            ],
+            "jointWidth": 0.016,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        },
+        {
+          "id": "industrial",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-paving/mid/industrial/basecolor.png",
+            "normal": "assets/street-paving/mid/industrial/normal.png",
+            "roughness": "assets/street-paving/mid/industrial/roughness.png",
+            "metallic": "assets/street-paving/mid/industrial/metallic.png",
+            "height": "assets/street-paving/mid/industrial/height.png",
+            "ao": "assets/street-paving/mid/industrial/ao.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              4,
+              2
+            ],
+            "jointWidth": 0.02,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-border/mid": {
+      "key": "cyberpunk/street-border/mid",
+      "aliases": [
+        "cyberpunk/street-border/poor",
+        "cyberpunk/street-border/rich",
+        "cyberpunk/street-border/high_rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.66,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "maintained",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/street-border/mid/maintained/basecolor.png",
+            "normal": "assets/street-border/mid/maintained/normal.png",
+            "roughness": "assets/street-border/mid/maintained/roughness.png",
+            "metallic": "assets/street-border/mid/maintained/metallic.png",
+            "height": "assets/street-border/mid/maintained/height.png",
+            "ao": "assets/street-border/mid/maintained/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "salvaged",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/street-border/mid/salvaged/basecolor.png",
+            "normal": "assets/street-border/mid/salvaged/normal.png",
+            "roughness": "assets/street-border/mid/salvaged/roughness.png",
+            "metallic": "assets/street-border/mid/salvaged/metallic.png",
+            "height": "assets/street-border/mid/salvaged/height.png",
+            "ao": "assets/street-border/mid/salvaged/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "industrial",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/street-border/mid/industrial/basecolor.png",
+            "normal": "assets/street-border/mid/industrial/normal.png",
+            "roughness": "assets/street-border/mid/industrial/roughness.png",
+            "metallic": "assets/street-border/mid/industrial/metallic.png",
+            "height": "assets/street-border/mid/industrial/height.png",
+            "ao": "assets/street-border/mid/industrial/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-curb/mid": {
+      "key": "cyberpunk/street-curb/mid",
+      "aliases": [
+        "cyberpunk/street-curb/poor",
+        "cyberpunk/street-curb/rich",
+        "cyberpunk/street-curb/high_rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.8,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "maintained",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/street-curb/mid/maintained/basecolor.png",
+            "normal": "assets/street-curb/mid/maintained/normal.png",
+            "roughness": "assets/street-curb/mid/maintained/roughness.png",
+            "metallic": "assets/street-curb/mid/maintained/metallic.png",
+            "height": "assets/street-curb/mid/maintained/height.png",
+            "ao": "assets/street-curb/mid/maintained/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "salvaged",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/street-curb/mid/salvaged/basecolor.png",
+            "normal": "assets/street-curb/mid/salvaged/normal.png",
+            "roughness": "assets/street-curb/mid/salvaged/roughness.png",
+            "metallic": "assets/street-curb/mid/salvaged/metallic.png",
+            "height": "assets/street-curb/mid/salvaged/height.png",
+            "ao": "assets/street-curb/mid/salvaged/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "industrial",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/street-curb/mid/industrial/basecolor.png",
+            "normal": "assets/street-curb/mid/industrial/normal.png",
+            "roughness": "assets/street-curb/mid/industrial/roughness.png",
+            "metallic": "assets/street-curb/mid/industrial/metallic.png",
+            "height": "assets/street-curb/mid/industrial/height.png",
+            "ao": "assets/street-curb/mid/industrial/ao.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
     }
   }
 }

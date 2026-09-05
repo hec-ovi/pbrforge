@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:materials:street-styles",
+  "type": "object",
+  "required": ["version", "styles"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "styles": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "pavingPattern", "surfaces"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "enum": ["maintained", "salvaged", "industrial"] },
+          "pavingPattern": {
+            "type": "object", "required": ["width", "height", "jointWidth"],
+            "additionalProperties": false,
+            "properties": {
+              "width": { "type": "number", "minimum": 2 },
+              "height": { "type": "number", "minimum": 1 },
+              "jointWidth": { "type": "number", "exclusiveMinimum": 0 }
+            }
+          },
+          "surfaces": {
+            "type": "object", "required": ["road", "paving", "border", "curb"],
+            "additionalProperties": false,
+            "properties": {
+              "road": { "$ref": "#/$defs/binding" },
+              "paving": { "$ref": "#/$defs/binding" },
+              "border": { "$ref": "#/$defs/binding" },
+              "curb": { "$ref": "#/$defs/binding" }
+            }
+          }
+        }
+      },
+      "allOf": [
+        { "contains": { "properties": { "id": { "const": "maintained" } } } },
+        { "contains": { "properties": { "id": { "const": "salvaged" } } } },
+        { "contains": { "properties": { "id": { "const": "industrial" } } } }
+      ]
+    }
+  },
+  "$defs": {
+    "binding": {
+      "type": "object", "required": ["kind", "variant"], "additionalProperties": false,
+      "properties": {
+        "kind": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "variant": { "type": "string", "pattern": "^[a-z0-9_-]+$" }
+      }
+    }
+  }
+}

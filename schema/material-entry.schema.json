@@ -116,8 +116,8 @@
             "properties": {
               "basecolor": { "$ref": "#/$defs/mapPath" },
               "normal": { "$ref": "#/$defs/mapPath" },
-              "roughness": { "$ref": "#/$defs/mapPath" },
-              "metallic": { "$ref": "#/$defs/mapPath" },
+              "roughness": { "$ref": "#/$defs/mapPath", "description": "absolute linear roughness; use multiplier 1 while this map is bound" },
+              "metallic": { "$ref": "#/$defs/mapPath", "description": "absolute linear metallic value; use multiplier 1 while this map is bound" },
               "height": { "$ref": "#/$defs/mapPath" },
               "ao": { "$ref": "#/$defs/mapPath" },
               "opacity": { "$ref": "#/$defs/mapPath" },

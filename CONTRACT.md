@@ -96,7 +96,7 @@ Each style has `id`, `group`, `facadePattern` and `surfaces`. `facadePattern` is
 
 ## Ground
 
-The ground kinds carry the tile sizes the engine lays on its 1 mm grid, so a cut lands on a joint and never inside a slab:
+Ground variants publish physical tile sizes and visible modules. Consumers fit complete modules to their owned surface regions and use continuous finishes on the remaining borders:
 
 | kind | tile | maps | variants |
 | --- | --- | --- | --- |
@@ -107,6 +107,10 @@ The ground kinds carry the tile sizes the engine lays on its 1 mm grid, so a cut
 | `highway-support` | alias of `concrete`, 2 x 2 m | 512 | `plain` on fitted columns and remainder borders; `panel` on compatible fields, exact 2 x 1 m modules with 20 mm joints |
 
 Lay `road` and `highway-deck` with U across the lane from its left boundary. Lay `sidewalk` from the kerb line, using the published origin instead of restarting UVs per polygon. The `curb` tile spans the 0.15 m face with V from the road up, and the same tile lays the 0.15 m top. Every ground material is neutral, matte and procedurally detailed at its physical scale. Structural joints are separate from fine aggregate.
+
+[Street style bindings](bindings/street-styles.json), validated by [schema/street-styles.schema.json](schema/street-styles.schema.json), publish `{ version: 1, styles }` with exactly `maintained`, `salvaged` and `industrial`. Each style provides four `{ kind, variant }` roles: `road`, `paving`, `border`, `curb`. Resolve every role as `cyberpunk/<kind>/<tier>` at any tier and keep one complete family per owned street region.
+
+`street-road/mid` and `street-paving/mid` cover 4 x 4 m at 1024 px. Road finish combines 8 mm aggregate, sparse millimetre-scale surface fractures and broad roughness fields, with damp roughness at least 0.5. Paving modules are 2 x 2 m (maintained), 2 x 1 m (salvaged) and 4 x 2 m (industrial), with 12, 16 and 20 mm joints respectively. `pavingPattern` in each binding matches the variant layout. `street-border/mid` and `street-curb/mid` cover 2 x 2 m at 512 px and contain continuous isotropic mineral finish without segment joints. All four keys alias every tier and expose the three style IDs as variants, with origin `[0, 0]`. Whole-module placement, perimeter width, curb segmentation, elevation and crossings belong to geometry. [Street recipes](batch/cyberpunk/street-surfaces.json) regenerate all twelve PBR sets through the create CLI.
 
 `light-fixture` is one luminaire per tile of 0.16 x 0.28 m at 256 x 448 px, so a fixture face of that size spans exactly one tile. `lamp` (canonical) is a recessed lens with a hot centre inside a 26 mm housing, `strip` one uniform diffuser whose housing is the fixture geometry, `panel` an even diffuser vignetting into an 18 mm frame; emission comes off the lens. Emissive strength is 1.2, set so the lens renders its falloff instead of clipping to a solid face: at the size a facade samples one fixture, the housing stays unlit, about half the face carries the gradient and only the hot centre blooms. Held by a test over the shipped database.
 
@@ -182,6 +186,8 @@ Kinds and the parameters each one reads (full ranges in the request schema):
 | `two-tone` | one split across the tile with a trim line | axis, split, line, three colors |
 | `window-grime` | fitted translucent mineral runoff | decal worldSize, edgeInset, wear |
 | `concrete` | mineral clouds, cast traces and shallow pores beneath optional panel seams | cells, line, bevel, depth, joint, wear |
+| `paving` | isotropic mineral grain, sparse pores and weathering beneath optional panel seams | cells, line, bevel, depth, joint, wear |
+| `aggregate` | 8 mm aggregate, 16 cm binder variation and sparse millimetre surface fractures | two colors, depth, grain, wear, wet, sheen |
 | `noise` | mottling in one to four octaves: plain wall to asphalt | cells, octaves, depth |
 | `lane` | asphalt with two wheel tracks worn along it | everything `noise` reads, plus axis (the lane's direction), split (track spacing across the tile), line (track width), wear |
 | `puddle` | a noise field with damp patches pooled over it | everything `noise` reads, plus wet, plus a third color for the patch |
@@ -234,6 +240,7 @@ Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](sc
 
 Conventions (fixed, not per entry):
 - Metallic-roughness workflow. basecolor and emission are sRGB; normal, roughness, metallic, height, ao are linear. Normals are OpenGL-style, +Y up.
+- Roughness and metallic maps contain absolute final values. A consumer binds each with scalar multiplier 1; `physical.roughnessFactor` and `physical.metallicFactor` are fallbacks when that map is absent or deliberately omitted by a quality profile.
 - Tiled maps are seamless at exact resolution, verified; never stretched, never cut mid-feature.
 - `exact` entries (screens, image ads, the letter atlas) are 1:1 UV placements: no tiling config, aspect ratio instead, and no seam gate. Screen entries carry flat normal, height and ao: a display has no relief.
 - Glass semantics follow glTF `KHR_materials_transmission` (+ `KHR_materials_emissive_strength` for emissives).

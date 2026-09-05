@@ -18,6 +18,8 @@ import { SlabTiling } from './SlabTiling.js';
 import { Stripe } from './Stripe.js';
 import { TwoTone } from './TwoTone.js';
 import { WaterSurface } from './WaterSurface.js';
+import { AggregateField } from './AggregateField.js';
+import { PavingField } from './PavingField.js';
 
 /** Sensible middle of the library: a 15 mm joint with a 10 mm chamfer, a shallow relief, faint grain. */
 const DEFAULTS = {
@@ -39,7 +41,7 @@ const DEFAULTS = {
 };
 
 /** Kinds that read as two materials meeting, so they need a second color. */
-const TWO_COLOR: PatternSpec['kind'][] = ['stripe', 'two-tone', 'noise', 'lane', 'puddle', 'glyph-atlas', 'water'];
+const TWO_COLOR: PatternSpec['kind'][] = ['aggregate', 'stripe', 'two-tone', 'noise', 'lane', 'puddle', 'glyph-atlas', 'water'];
 
 /**
  * The pattern a spec asks for, with defaults filled in and the cross-field
@@ -89,6 +91,10 @@ export function buildPattern(
   };
 
   switch (spec.kind) {
+    case 'aggregate':
+      return new AggregateField(params);
+    case 'paving':
+      return new PavingField(params);
     case 'hexagon':
       return new HexagonGrid(params);
     case 'panel-grid':

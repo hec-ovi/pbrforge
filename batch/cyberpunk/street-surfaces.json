@@ -1,0 +1,94 @@
+[
+  {
+    "key": "cyberpunk/street-road/mid",
+    "aliases": ["cyberpunk/street-road/poor", "cyberpunk/street-road/rich", "cyberpunk/street-road/high_rich"],
+    "alignment": "tile", "description": "maintained graphite asphalt with fine mineral aggregate",
+    "tiling": { "worldSize": [4, 4] }, "physical": { "roughnessFactor": 0.78, "metallicFactor": 0 },
+    "variantId": "maintained", "resolution": [1024, 1024], "seed": 1103,
+    "pattern": { "kind": "aggregate", "colors": ["#272a2b", "#454746"], "depth": 0.055, "grain": 0.06, "wear": 0.12, "wet": 0.18, "sheen": 0.09 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-road/mid", "append": true,
+    "alignment": "tile", "description": "salvaged asphalt with irregular weathering and sparse fine fractures",
+    "variantId": "salvaged", "resolution": [1024, 1024], "seed": 2213,
+    "pattern": { "kind": "aggregate", "colors": ["#303231", "#575954"], "depth": 0.08, "grain": 0.11, "wear": 0.8, "wet": 0.38, "sheen": 0.12 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-road/mid", "append": true,
+    "alignment": "tile", "description": "industrial exposed mineral roadway with restrained weathering",
+    "variantId": "industrial", "resolution": [1024, 1024], "seed": 3301,
+    "pattern": { "kind": "aggregate", "colors": ["#494b48", "#6b6d66"], "depth": 0.065, "grain": 0.08, "wear": 0.52, "wet": 0.14, "sheen": 0.07 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-paving/mid",
+    "aliases": ["cyberpunk/street-paving/poor", "cyberpunk/street-paving/rich", "cyberpunk/street-paving/high_rich"],
+    "alignment": "tile", "description": "maintained neutral mineral paving in whole two metre squares",
+    "tiling": { "worldSize": [4, 4] }, "physical": { "roughnessFactor": 0.72, "metallicFactor": 0 },
+    "variantId": "maintained", "resolution": [1024, 1024], "seed": 4421,
+    "pattern": { "kind": "paving", "colors": ["#7e817c"], "cells": [2, 2], "line": 0.012, "bevel": 0.005, "depth": 0.07, "joint": 0.28, "variation": 0.08, "sheen": 0.09, "grain": 0.009, "wear": 0.1 },
+    "layout": { "family": "panel", "moduleSize": [2, 2], "jointWidth": 0.012, "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-paving/mid", "append": true,
+    "alignment": "tile", "description": "salvaged precast paving with varied neutral slabs and mineral wear",
+    "variantId": "salvaged", "resolution": [1024, 1024], "seed": 5521,
+    "pattern": { "kind": "paving", "colors": ["#666962"], "cells": [2, 4], "line": 0.016, "bevel": 0.009, "depth": 0.095, "joint": 0.34, "variation": 0.17, "sheen": 0.12, "grain": 0.014, "wear": 0.82 },
+    "layout": { "family": "panel", "moduleSize": [2, 1], "jointWidth": 0.016, "origin": [0, 0], "orientation": "horizontal" }
+  },
+  {
+    "key": "cyberpunk/street-paving/mid", "append": true,
+    "alignment": "tile", "description": "industrial broad four metre cast paving panels",
+    "variantId": "industrial", "resolution": [1024, 1024], "seed": 6619,
+    "pattern": { "kind": "paving", "colors": ["#85867f"], "cells": [1, 2], "line": 0.02, "bevel": 0.007, "depth": 0.09, "joint": 0.3, "variation": 0.07, "sheen": 0.06, "grain": 0.013, "wear": 0.48 },
+    "layout": { "family": "panel", "moduleSize": [4, 2], "jointWidth": 0.02, "origin": [0, 0], "orientation": "horizontal" }
+  },
+  {
+    "key": "cyberpunk/street-border/mid",
+    "aliases": ["cyberpunk/street-border/poor", "cyberpunk/street-border/rich", "cyberpunk/street-border/high_rich"],
+    "alignment": "tile", "description": "continuous dark mineral border for fitted paving edges",
+    "tiling": { "worldSize": [2, 2] }, "physical": { "roughnessFactor": 0.66, "metallicFactor": 0 },
+    "variantId": "maintained", "resolution": [512, 512], "seed": 7723,
+    "pattern": { "kind": "paving", "colors": ["#383d3d"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.006, "wear": 0.08 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-border/mid", "append": true,
+    "alignment": "tile", "description": "continuous salvaged dark concrete border with localized mineral stains",
+    "variantId": "salvaged", "resolution": [512, 512], "seed": 8831,
+    "pattern": { "kind": "paving", "colors": ["#454842"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.012, "wear": 0.86 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-border/mid", "append": true,
+    "alignment": "tile", "description": "continuous industrial graphite cement edging",
+    "variantId": "industrial", "resolution": [512, 512], "seed": 9941,
+    "pattern": { "kind": "paving", "colors": ["#4e504a"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.009, "wear": 0.44 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-curb/mid",
+    "aliases": ["cyberpunk/street-curb/poor", "cyberpunk/street-curb/rich", "cyberpunk/street-curb/high_rich"],
+    "alignment": "tile", "description": "continuous maintained precast curb finish without segment joints",
+    "tiling": { "worldSize": [2, 2] }, "physical": { "roughnessFactor": 0.8, "metallicFactor": 0 },
+    "variantId": "maintained", "resolution": [512, 512], "seed": 10133,
+    "pattern": { "kind": "paving", "colors": ["#9a9b90"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.008, "wear": 0.14 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-curb/mid", "append": true,
+    "alignment": "tile", "description": "continuous aged neutral curb finish with fine pores and weathering",
+    "variantId": "salvaged", "resolution": [512, 512], "seed": 11239,
+    "pattern": { "kind": "paving", "colors": ["#7d7e70"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.014, "wear": 0.9 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-curb/mid", "append": true,
+    "alignment": "tile", "description": "continuous industrial pale cast curb finish",
+    "variantId": "industrial", "resolution": [512, 512], "seed": 12343,
+    "pattern": { "kind": "paving", "colors": ["#a0a094"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.011, "wear": 0.5 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  }
+]

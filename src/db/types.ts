@@ -103,6 +103,8 @@ export interface Screen extends Display {
 }
 
 export type PatternKind =
+  | 'aggregate'
+  | 'paving'
   | 'window-grime'
   | 'concrete'
   | 'hexagon'

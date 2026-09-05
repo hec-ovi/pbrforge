@@ -1,5 +1,7 @@
 # Box map
 
+- Street families: [bindings/street-styles.json](../bindings/street-styles.json), maintained, salvaged and industrial road, paving, border and curb finishes; [schema](../schema/street-styles.schema.json) and [recipes](../batch/cyberpunk/street-surfaces.json). Surface grain and wear use physical scale; geometry owns borders and curb joints.
+
 - Door finishes and coverings: [door finish recipes](../batch/cyberpunk/door-finishes.json) add satin and scuffed coatings; [curtain recipes](../batch/cyberpunk/curtain.json) publish complete dark charcoal covering families.
 
 - Scenic room surfaces: [bindings/window-room-surfaces.json](../bindings/window-room-surfaces.json), five explicit receiving faces and seeded back-image pools; [schema](../schema/window-room-surfaces.schema.json).
