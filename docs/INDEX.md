@@ -1,5 +1,7 @@
 # Box map
 
+- Packed material response: [pack request](../schema/pack-request.schema.json), additive RGB metallic-roughness maps for glTF, generated from the separate absolute maps through one shared writer.
+
 - Street construction finishes: [recipes](../batch/cyberpunk/street-construction.json) and `constructionSurfaces` in [street bindings](../bindings/street-styles.json), continuous paving bodies and joint mortar for geometry-owned slabs and joints.
 
 - Street families: [bindings/street-styles.json](../bindings/street-styles.json), maintained, salvaged and industrial road, paving, border and curb finishes; [schema](../schema/street-styles.schema.json) and [recipes](../batch/cyberpunk/street-surfaces.json). Surface grain and wear use physical scale; geometry owns borders and curb joints.
@@ -15,5 +17,5 @@
 
 - Door coating recipe: [batch/cyberpunk/door.json](../batch/cyberpunk/door.json), deterministic graphite paint with tiered wear on the canonical door keys.
 
-- root box: [CONTRACT.md](../CONTRACT.md). `src/index.ts` exports resolve, list, create, refinish and rebrand; `src/api-types.ts` specifies their package-only structures. `src/db` owns the theme index and files. `src/gen` owns ComfyUI generation, deterministic maps, patterns, screens, refinish and rebrand. `src/cli` exposes the write lanes and contact sheets. `bindings` carries consumer key mappings. `themes` is the shipped database. Depends on Atlas hydrology material-key binding data only.
+- root box: [CONTRACT.md](../CONTRACT.md). `src/index.ts` exports resolve, list, create, refinish, rebrand and pack; `src/api-types.ts` specifies their package-only structures. `src/db` owns the theme index and files. `src/gen` owns ComfyUI generation, deterministic maps, patterns, screens, refinish, rebrand and packed material response. `src/cli` exposes the write lanes and contact sheets. `bindings` carries consumer key mappings. `themes` is the shipped database. Depends on Atlas hydrology material-key binding data only.
 - preview box: [src/ui/CONTRACT.md](../src/ui/CONTRACT.md). Depends on the root material entry and theme index, browser APIs and Three.js.

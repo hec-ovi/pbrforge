@@ -13,7 +13,7 @@ Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/
 
 ## In
 
-The package root exports the five operations below, their request and result types, `MaterialsError`, `MaterialsErrorCode`, `ComfyClient` and `ComfyRuntime`. Package-only structures and the callback-bearing generation backend use the declaration-only [public API type schema](src/api-types.ts). Runtime-validated JSON surfaces use the linked JSON schemas.
+The package root exports the six operations below, their request and result types, `MaterialsError`, `MaterialsErrorCode`, `ComfyClient` and `ComfyRuntime`. Package-only structures and the callback-bearing generation backend use the declaration-only [public API type schema](src/api-types.ts). Runtime-validated JSON surfaces use the linked JSON schemas.
 
 [`MaterialsOptions`](src/api-types.ts) is `{ themesDir?: string, comfy?: ComfyRuntime }`. `themesDir` defaults to the bundled `themes/` database. [`ComfyRuntime`](src/api-types.ts) supplies `ready()`, `upload(image, name)` and `render(graph)` for generation; omitting it uses `COMFY_URL` or `http://127.0.0.1:8188`.
 
@@ -26,6 +26,7 @@ The package root exports the five operations below, their request and result typ
 - `recolor` writes a tint variant: another variant of the same entry repainted. The paint's hue is taken whole and `strength` is how much pigment is in it, so a blue paint reads blue over a near-grey photograph. It is the same surface in different paint, so it points at that variant's relief maps instead of copying them.
 - `finish` states how a photographed surface is read into relief and gloss (see Finish below). An appended variant inherits the entry's finish, so every photographed variant of one entry shares a band. The pattern, flat, recolor and screen lanes carry their own maps and ignore it.
 - `refinish(request: RefinishRequest, options?: MaterialsOptions): Promise<RefinishResult>` re-reads the relief, gloss and metallic maps of every photographed variant of an entry from its stored basecolor, under a stated finish and factors, updates the entry, and returns `{ entry: MaterialEntry, variants: string[] }`. Request, options and result: [`RefinishRequest`, `MaterialsOptions`, `RefinishResult`](src/api-types.ts). `physical` is merged into the entry's before the maps are read. An entry with no photographed variant (a screen, a drawn pattern) is `E_SCHEMA`.
+- `pack(request: PackRequest, options?: MaterialsOptions): Promise<PackResult>` adds or refreshes each variant's packed metallic-roughness map from its separate maps. Request: [PackRequest](schema/pack-request.schema.json). Options and result: [`MaterialsOptions`, `PackResult`](src/api-types.ts). Returns `{ entry, variants }`, listing changed variant IDs, empty on an unchanged repeat. Existing maps and physical factors stay byte-for-byte unchanged. Invalid or unreadable source maps and resolution mismatches are `E_SCHEMA`.
 
 Screens (`emission: "image"`) turn that around: the basecolor is flat dark display glass and the picture lives in the emission map. `screens` lists one display per variant and sets the variant count. ComfyUI paints each advertisement as flat brandless artwork; the box makes it a screen: the pixel structure of its `kind` (`led-dot` dot lattice, `scanline-billboard` scan bands, `glyph-panel` abstract with no lattice), colour fringing, blown-out hotspots, and the `brandName` wordmark stroked in from a built-in alphabet. `brandName` never enters the diffusion prompt, so a screen rebrands without a new render; `businessKind` does steer the artwork. Both take a per-screen override.
 
@@ -38,6 +39,8 @@ The shipped future-noir source plates and their subject-and-style prompts live i
 - `rebrand(request: RebrandRequest, options?: MaterialsOptions): Promise<Branded[]>` spells the businesses of a named world over the screens of their tier, one `brand:<slug>` variant per business on `ad-screen` and on `ad-screen-tall`, with no render (see Rebrand below). Request: [RebrandRequest](schema/rebrand-request.schema.json). Options: [`MaterialsOptions`](src/api-types.ts). Each [`Branded`](src/api-types.ts) result is `{ key, variantId, from, lines }`.
 
 CLI: `npm run resolve -- <key>`, `npm run create -- <request.json>` (a single request or an array; array mode skips keys that already exist, so batches are resumable), `npm run refinish -- <request.json>` (re-reads every key in the file that states a finish), `npm run rebrand -- --theme <theme> --businesses <businesses.json>` (`--themes <dir>` points it at another database folder).
+
+`npm run pack -- --theme <theme> [--themes <dir>]` adds packed maps to every entry through the same package operation. It is deterministic and keeps every separate map untouched.
 
 ## Finish
 
@@ -244,6 +247,7 @@ Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](sc
 Conventions (fixed, not per entry):
 - Metallic-roughness workflow. basecolor and emission are sRGB; normal, roughness, metallic, height, ao are linear. Normals are OpenGL-style, +Y up.
 - Roughness and metallic maps contain absolute final values. A consumer binds each with scalar multiplier 1; `physical.roughnessFactor` and `physical.metallicFactor` are fallbacks when that map is absent or deliberately omitted by a quality profile.
+- Optional `maps.metallicRoughness` is a linear RGB PNG with R=255, G identical to the separate roughness map and B identical to the separate metallic map. It shares their resolution and UVs. glTF consumers bind it with both scalar factors 1 and no sRGB decoding; when absent they retain their separate-map or scalar fallback. Create, refinish and rebrand publish it, sharing one packed file for each source-map pair under `assets/metallic-roughness/`. Packed maps do not replace the separate maps.
 - Tiled maps are seamless at exact resolution, verified; never stretched, never cut mid-feature.
 - `exact` entries (screens, image ads, the letter atlas) are 1:1 UV placements: no tiling config, aspect ratio instead, and no seam gate. Screen entries carry flat normal, height and ao: a display has no relief.
 - Glass semantics follow glTF `KHR_materials_transmission` (+ `KHR_materials_emissive_strength` for emissives).

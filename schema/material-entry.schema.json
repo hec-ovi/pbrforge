@@ -118,6 +118,7 @@
               "normal": { "$ref": "#/$defs/mapPath" },
               "roughness": { "$ref": "#/$defs/mapPath", "description": "absolute linear roughness; use multiplier 1 while this map is bound" },
               "metallic": { "$ref": "#/$defs/mapPath", "description": "absolute linear metallic value; use multiplier 1 while this map is bound" },
+              "metallicRoughness": { "$ref": "#/$defs/mapPath", "description": "optional linear RGB PNG: R=255, G=absolute roughness, B=absolute metallic; use both scalar multipliers 1 while bound" },
               "height": { "$ref": "#/$defs/mapPath" },
               "ao": { "$ref": "#/$defs/mapPath" },
               "opacity": { "$ref": "#/$defs/mapPath" },

@@ -3,6 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import sharp from 'sharp';
 import { afterEach, describe, expect, it } from 'vitest';
+import { expectPackedMap } from './helpers/packed-map.js';
 import {
   MaterialsError,
   create,
@@ -52,6 +53,7 @@ describe('public package entry', () => {
     };
 
     const created = await create(request, { themesDir, comfy });
+    await expectPackedMap(join(themesDir, 'test'), created.variants[0]);
     expect(resolve(request.key, { themesDir })).toEqual(created);
     expect(list({ theme: 'test', kind: 'concrete' }, { themesDir })).toEqual([request.key]);
     expect(existsSync(join(themesDir, 'test', created.variants[0].maps.basecolor))).toBe(true);
@@ -63,6 +65,7 @@ describe('public package entry', () => {
     );
     expect(result.variants).toEqual(['1']);
     expect(result.entry.finish?.roughness).toEqual([0.82, 0.9]);
+    await expectPackedMap(join(themesDir, 'test'), result.entry.variants[0]);
     expect(readFileSync(join(themesDir, 'test', created.variants[0].maps.basecolor))).toEqual(before);
   });
 
@@ -112,6 +115,7 @@ describe('public package entry', () => {
     for (const kind of ['ad-screen', 'ad-screen-tall']) {
       const entry = resolve(`test/${kind}/rich`, { themesDir });
       expect(entry.variants.some((variant) => variant.id === 'brand:kiro-clinic')).toBe(true);
+      for (const variant of entry.variants) await expectPackedMap(join(themesDir, 'test'), variant);
     }
   });
 

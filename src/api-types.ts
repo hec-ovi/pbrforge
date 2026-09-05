@@ -35,6 +35,17 @@ export interface RefinishResult {
   variants: string[];
 }
 
+/** Adds or refreshes the packed metallic-roughness map for an existing entry. */
+export interface PackRequest {
+  key: string;
+}
+
+export interface PackResult {
+  entry: MaterialEntry;
+  /** Variants whose packed reference or pixels were written; empty on an unchanged repeat. */
+  variants: string[];
+}
+
 /** One screen variant written by the rebrand lane. */
 export interface Branded {
   key: string;

@@ -1,4 +1,4 @@
-export type MapName = 'basecolor' | 'normal' | 'roughness' | 'metallic' | 'height' | 'ao' | 'opacity' | 'emission';
+export type MapName = 'basecolor' | 'normal' | 'roughness' | 'metallic' | 'metallicRoughness' | 'height' | 'ao' | 'opacity' | 'emission';
 
 export interface Physical {
   breakable?: boolean;

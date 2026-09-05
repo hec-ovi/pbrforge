@@ -7,6 +7,7 @@ import type { Variant } from '../db/types.js';
 import { resolveFinish } from './finish.js';
 import { deriveHeight, deriveMetallic, deriveRoughness, reliefMaps } from './maps.js';
 import { decodeRgb, encodeGrayPng } from './pixels.js';
+import { PackedMaps } from './PackedMaps.js';
 
 /**
  * Reads the relief and gloss maps out of a surface already in the database
@@ -38,7 +39,8 @@ export class Refinisher {
       }
     }
 
-    const updated = { ...entry, physical, finish };
+    const packed = await new PackedMaps(themeDir).apply(entry.variants);
+    const updated = { ...entry, physical, finish, variants: packed.variants };
     this.db.write(updated, true);
     return { entry: updated, variants: wanted.map((v) => v.id) };
   }

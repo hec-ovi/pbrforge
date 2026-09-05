@@ -13,6 +13,7 @@ npm run create -- request.json                   # generate a set (needs ComfyUI
 npm run preview                                  # material sphere viewer with lighting and orbit
 npm run refinish -- request.json                 # re-read the maps of a family under a finish and factors
 npm run rebrand -- --theme cyberpunk --businesses businesses.json   # spell business names over the screens of their tier
+npm run pack -- --theme cyberpunk                # add packed metallic-roughness maps from the existing maps
 npm run sheet -- wall                            # contact sheet of a kind, into out/
 npm test
 npm run typecheck
@@ -24,7 +25,7 @@ npm run build
 ## Package API
 
 ```ts
-import { create, list, rebrand, refinish, resolve } from 'urbe-materials';
+import { create, list, pack, rebrand, refinish, resolve } from 'urbe-materials';
 
 const options = { themesDir: './themes' };
 const entry = resolve('cyberpunk/window-glass/rich', options);
@@ -37,6 +38,7 @@ const entry = resolve('cyberpunk/window-glass/rich', options);
 - `create(request, options?)` returns a generated [MaterialEntry](schema/material-entry.schema.json), after validation, seam verification and database write. Its input is [CreateRequest](schema/create-request.schema.json).
 - `refinish(request, options?)` takes a [`RefinishRequest`](src/api-types.ts) and returns a [`RefinishResult`](src/api-types.ts) after deriving new relief, gloss and metallic maps from stored photographic basecolor.
 - `rebrand(request, options?)` returns one [`Branded`](src/api-types.ts) result per landscape and portrait screen written for each business. Its `{ theme, businesses }` input follows the [RebrandRequest schema](schema/rebrand-request.schema.json).
+- `pack({ key }, options?)` adds or refreshes packed metallic-roughness maps, preserving every separate map. Returns [`PackResult`](src/api-types.ts) with the entry and changed variant IDs. An unchanged repeat returns an empty ID list.
 
 All operations use the closed `MaterialsError` codes in [CONTRACT.md](CONTRACT.md).
 
@@ -53,6 +55,8 @@ The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>
 The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds) and no roughness below 0.45 in its factor, its band or any pixel of its roughness map, glass and lit entries excepted, and a test over the shipped database holds it there. General service metal, fire escapes and rooftop equipment use dark paint and neutral zinc with no texture grain on their shaped parts. AC enclosures are graphite and neutral grey. Elevator doors are exact 1:2 procedural faces with fitted center seams. Road and highway-deck tiles are 3.5 x 7 m, one lane wide. Sidewalk slabs are exact 2 x 1 m modules with 20 mm joints, with 2 x 2 m plates and a joint-free option for ramps. Curbs are 1 m stones on a 2 x 0.15 m tile. Highway supports resolve to the neutral concrete family.
 
 Conventions are fixed, not per entry: metallic-roughness workflow, basecolor and emission sRGB with every other map linear, OpenGL-style normals, glass following glTF `KHR_materials_transmission`.
+
+`maps.metallicRoughness` is optional linear RGB: R=255, G=absolute roughness, B=absolute metallic. Bind it with both scalar factors 1. Create, refinish and rebrand produce it; `pack` adds it to an existing catalog. Separate maps and scalar fallbacks remain available.
 
 ## Exterior style sets
 

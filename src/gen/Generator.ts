@@ -28,6 +28,7 @@ import { recolor } from './recolor.js';
 import { screenEmission, screenGlass } from './screen.js';
 import { SourceImage } from './SourceImage.js';
 import { ImagePlate } from './ImagePlate.js';
+import { PackedMaps } from './PackedMaps.js';
 import { stampBrand } from './text.js';
 import { isSeamless, seamScore } from './seam.js';
 import requestSchema from '../../schema/create-request.schema.json' with { type: 'json' };
@@ -38,7 +39,7 @@ const MAX_TILE_PIXELS = 1024 * 1024;
 const MAX_EXACT_PIXELS = 4096 * 2304;
 
 /** Map order in the index, so an entry reads the same whichever lane built it. */
-const MAP_ORDER: MapName[] = ['basecolor', 'normal', 'roughness', 'metallic', 'height', 'ao', 'opacity', 'emission'];
+const MAP_ORDER: MapName[] = ['basecolor', 'normal', 'roughness', 'metallic', 'height', 'ao', 'opacity', 'emission', 'metallicRoughness'];
 
 /** What one variant is built from: the surface, its own relief and gloss when it has them, and the screen lane. */
 interface Source {
@@ -271,7 +272,7 @@ export class Generator {
       writeFileSync(join(absDir, `${name}.png`), buffer);
       maps[name] = join(relDir, `${name}.png`);
     }
-    return {
+    const variant: Variant = {
       id,
       ...(request.sourceImage ? { class: 'plate' as const } : request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
       resolution: [source.basecolor.width, source.basecolor.height],
@@ -279,6 +280,7 @@ export class Generator {
       ...(source.screen ? { screen: await this.keepArtwork(source.screen, absDir, relDir) } : {}),
       ...(request.layout ? { layout: request.layout } : {}),
     };
+    return (await new PackedMaps(this.db.themeDir(target.theme)).apply([variant])).variants[0];
   }
 
   /** The brandless picture behind a screen, kept beside its maps, so the rebrand lane composites a name over it without a render. */

@@ -9,6 +9,7 @@ import { variantDir } from '../../db/paths.js';
 import type { Business, MaterialEntry, RebrandRequest, Variant } from '../../db/types.js';
 import { decodeRgb, encodeRgbPng } from '../pixels.js';
 import { screenEmission } from '../screen.js';
+import { PackedMaps } from '../PackedMaps.js';
 import { AtlasText } from './AtlasText.js';
 import { brandText, brandVariantId } from './naming.js';
 import schema from '../../../schema/rebrand-request.schema.json' with { type: 'json' };
@@ -73,7 +74,8 @@ export class Rebrander {
       resolution: base.resolution,
       maps: { ...base.maps, emission: join(relDir, 'emission.png') },
     };
-    this.db.write(withVariant(entry, variant), true);
+    const packed = (await new PackedMaps(themeDir).apply([variant])).variants[0];
+    this.db.write(withVariant(entry, packed), true);
     return { key: entry.key, variantId: job.id, from: base.id, lines };
   }
 

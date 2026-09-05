@@ -4,6 +4,8 @@ import type {
   ComfyRuntime,
   MaterialFilter,
   MaterialsOptions,
+  PackRequest,
+  PackResult,
   RefinishRequest,
   RefinishResult,
 } from './api-types.js';
@@ -13,6 +15,7 @@ import type { CreateRequest, MaterialEntry, RebrandRequest } from './db/types.js
 import { Generator } from './gen/Generator.js';
 import { Refinisher } from './gen/Refinish.js';
 import { Rebrander } from './gen/rebrand/Rebrander.js';
+import { MaterialPacker } from './gen/MaterialPacker.js';
 
 const bundledThemesDir = fileURLToPath(new URL('../themes', import.meta.url));
 
@@ -40,6 +43,10 @@ export function rebrand(request: RebrandRequest, options: MaterialsOptions = {})
   return new Rebrander(database(options)).rebrand(request);
 }
 
+export function pack(request: PackRequest, options: MaterialsOptions = {}): Promise<PackResult> {
+  return new MaterialPacker(database(options)).pack(request);
+}
+
 export { MaterialsError };
 export type {
   Branded,
@@ -47,6 +54,8 @@ export type {
   ComfyRuntime,
   MaterialFilter,
   MaterialsOptions,
+  PackRequest,
+  PackResult,
   RefinishRequest,
   RefinishResult,
 } from './api-types.js';

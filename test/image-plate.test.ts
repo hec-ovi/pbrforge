@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import sharp from 'sharp';
 import { expect, it } from 'vitest';
 import { create, refinish, resolve, type CreateRequest } from '../src/index.js';
+import { expectPackedMap } from './helpers/packed-map.js';
 
 it('imports an exact image locally with aligned baked emission, flat maps and reproducible append', async () => {
   const themesDir = mkdtempSync(join(tmpdir(), 'image-plate-'));
@@ -26,6 +27,7 @@ it('imports an exact image locally with aligned baked emission, flat maps and re
   expect(entry.aspect).toEqual([1, 1]);
   expect(entry.finish).toBeUndefined();
   const variant = entry.variants[0];
+  await expectPackedMap(join(themesDir, 'cyberpunk'), variant);
   expect(variant.class).toBe('plate');
   expect(variant.screen).toBeUndefined();
   expect(variant.resolution).toEqual([64, 64]);
