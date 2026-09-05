@@ -20,6 +20,7 @@ import { TwoTone } from './TwoTone.js';
 import { WaterSurface } from './WaterSurface.js';
 import { AggregateField } from './AggregateField.js';
 import { PavingField } from './PavingField.js';
+import { MineralFinish } from './MineralFinish.js';
 
 /** Sensible middle of the library: a 15 mm joint with a 10 mm chamfer, a shallow relief, faint grain. */
 const DEFAULTS = {
@@ -91,6 +92,8 @@ export function buildPattern(
   };
 
   switch (spec.kind) {
+    case 'mineral':
+      return new MineralFinish(params);
     case 'aggregate':
       return new AggregateField(params);
     case 'paving':

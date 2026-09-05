@@ -23,6 +23,16 @@
               "jointWidth": { "type": "number", "exclusiveMinimum": 0 }
             }
           },
+          "constructionSurfaces": {
+            "type": "object", "required": ["pavingBody", "joint", "border", "curb"],
+            "additionalProperties": false,
+            "properties": {
+              "pavingBody": { "$ref": "#/$defs/binding" },
+              "joint": { "$ref": "#/$defs/binding" },
+              "border": { "$ref": "#/$defs/binding" },
+              "curb": { "$ref": "#/$defs/binding" }
+            }
+          },
           "surfaces": {
             "type": "object", "required": ["road", "paving", "border", "curb"],
             "additionalProperties": false,

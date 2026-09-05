@@ -4,6 +4,12 @@
     {
       "id": "maintained",
       "pavingPattern": { "width": 2, "height": 2, "jointWidth": 0.012 },
+      "constructionSurfaces": {
+        "pavingBody": { "kind": "street-paving-body", "variant": "maintained" },
+        "joint": { "kind": "street-joint", "variant": "maintained" },
+        "border": { "kind": "street-border", "variant": "maintained" },
+        "curb": { "kind": "street-curb", "variant": "maintained" }
+      },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "maintained" },
         "paving": { "kind": "street-paving", "variant": "maintained" },
@@ -14,6 +20,12 @@
     {
       "id": "salvaged",
       "pavingPattern": { "width": 2, "height": 1, "jointWidth": 0.016 },
+      "constructionSurfaces": {
+        "pavingBody": { "kind": "street-paving-body", "variant": "salvaged" },
+        "joint": { "kind": "street-joint", "variant": "salvaged" },
+        "border": { "kind": "street-border", "variant": "salvaged" },
+        "curb": { "kind": "street-curb", "variant": "salvaged" }
+      },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "salvaged" },
         "paving": { "kind": "street-paving", "variant": "salvaged" },
@@ -24,6 +36,12 @@
     {
       "id": "industrial",
       "pavingPattern": { "width": 4, "height": 2, "jointWidth": 0.02 },
+      "constructionSurfaces": {
+        "pavingBody": { "kind": "street-paving-body", "variant": "industrial" },
+        "joint": { "kind": "street-joint", "variant": "industrial" },
+        "border": { "kind": "street-border", "variant": "industrial" },
+        "curb": { "kind": "street-curb", "variant": "industrial" }
+      },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "industrial" },
         "paving": { "kind": "street-paving", "variant": "industrial" },

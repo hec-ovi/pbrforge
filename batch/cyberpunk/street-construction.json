@@ -1,0 +1,48 @@
+[
+  {
+    "key": "cyberpunk/street-paving-body/mid",
+    "aliases": ["cyberpunk/street-paving-body/poor", "cyberpunk/street-paving-body/rich", "cyberpunk/street-paving-body/high_rich"],
+    "alignment": "tile", "description": "continuous maintained mineral paving body",
+    "tiling": { "worldSize": [2, 2] }, "physical": { "roughnessFactor": 0.7, "metallicFactor": 0 },
+    "variantId": "maintained", "resolution": [1024, 1024], "seed": 14033,
+    "pattern": { "kind": "mineral", "colors": ["#777a76"], "depth": 0.018, "grain": 0.14, "variation": 0.03, "sheen": 0.08, "wear": 0.05 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-paving-body/mid", "append": true,
+    "alignment": "tile", "description": "continuous salvaged mineral paving with sparse surface wear",
+    "variantId": "salvaged", "resolution": [1024, 1024], "seed": 15131,
+    "pattern": { "kind": "mineral", "colors": ["#656862"], "depth": 0.025, "grain": 0.17, "variation": 0.035, "sheen": 0.09, "wear": 0.7 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-paving-body/mid", "append": true,
+    "alignment": "tile", "description": "continuous industrial mineral paving body",
+    "variantId": "industrial", "resolution": [1024, 1024], "seed": 16249,
+    "pattern": { "kind": "mineral", "colors": ["#848680"], "depth": 0.022, "grain": 0.15, "variation": 0.025, "sheen": 0.07, "wear": 0.2 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-joint/mid",
+    "aliases": ["cyberpunk/street-joint/poor", "cyberpunk/street-joint/rich", "cyberpunk/street-joint/high_rich"],
+    "alignment": "tile", "description": "continuous dark mortar for maintained paving joints",
+    "tiling": { "worldSize": [0.5, 0.5] }, "physical": { "roughnessFactor": 0.87, "metallicFactor": 0 },
+    "variantId": "maintained", "resolution": [512, 512], "seed": 17341,
+    "pattern": { "kind": "noise", "colors": ["#242623", "#30322d"], "cells": [128, 128], "octaves": 1, "depth": 0.01, "variation": 0, "sheen": 0, "grain": 0 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-joint/mid", "append": true,
+    "alignment": "tile", "description": "continuous aged mineral mortar for salvaged paving joints",
+    "variantId": "salvaged", "resolution": [512, 512], "seed": 18451,
+    "pattern": { "kind": "noise", "colors": ["#30322b", "#414339"], "cells": [128, 128], "octaves": 1, "depth": 0.014, "variation": 0, "sheen": 0, "grain": 0 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  },
+  {
+    "key": "cyberpunk/street-joint/mid", "append": true,
+    "alignment": "tile", "description": "continuous graphite mortar for industrial paving joints",
+    "variantId": "industrial", "resolution": [512, 512], "seed": 19543,
+    "pattern": { "kind": "noise", "colors": ["#272925", "#363830"], "cells": [128, 128], "octaves": 1, "depth": 0.012, "variation": 0, "sheen": 0, "grain": 0 },
+    "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  }
+]
