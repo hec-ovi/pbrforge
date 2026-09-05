@@ -102,6 +102,7 @@
             "default": "image",
             "description": "how the maps were made: photographed surface, drawn pattern, synthesized flat field or baked image plate; consumers read them the same way"
           },
+          "response": { "$ref": "urn:urbe:surface-response", "description": "Authored local response already encoded in the maps; scalar fallback remains dry." },
           "resolution": {
             "type": "array",
             "items": { "type": "integer", "minimum": 64, "maximum": 4096 },

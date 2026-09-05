@@ -24,6 +24,21 @@ export interface Finish {
 /** A finish as authored: what a request leaves out comes from the surface's own roughness. */
 export type FinishSpec = Partial<Finish>;
 
+/** Authored local moisture response, already encoded in a variant's maps. */
+export interface SurfaceResponse {
+  kind: 'localized-damp';
+  /** Maximum affected fraction, including smooth transitions. */
+  coverage: number;
+  /** Broad mask lattice spacing in metres. */
+  patchScale: number;
+  /** Absolute roughness in the fully damp core. */
+  roughness: number;
+  /** Fractional basecolor darkening in the fully damp core. */
+  darkening: number;
+  /** Fraction of dry relief retained in the fully damp core. */
+  reliefRetention: number;
+}
+
 /** The pixel structure a screen is shown through. */
 export interface Display {
   kind: 'led-dot' | 'scanline-billboard' | 'glyph-panel';
@@ -67,6 +82,7 @@ export interface Variant {
   id: string;
   /** How the maps were made. Consumers read the maps the same way either way. */
   class?: 'image' | 'pattern' | 'flat' | 'plate';
+  response?: SurfaceResponse;
   resolution: [number, number];
   maps: Partial<Record<MapName, string>> & { basecolor: string; normal: string; roughness: string; metallic: string };
   /** Present on a screen variant painted by the create lane; a brand variant derives from one of these. */
@@ -126,6 +142,7 @@ export type PatternKind =
 /** A surface stated as parameters instead of photographed: what the pattern class draws. */
 export interface PatternSpec {
   kind: PatternKind;
+  response?: SurfaceResponse;
   /** Face color first; a second and third are the band and trim colors of the kinds that take them. */
   colors: string[];
   cells?: [number, number];

@@ -6,6 +6,7 @@ import { MaterialsError } from './errors.js';
 import type { MaterialEntry, ThemeIndex } from './types.js';
 import entrySchema from '../../schema/material-entry.schema.json' with { type: 'json' };
 import indexSchema from '../../schema/theme-index.schema.json' with { type: 'json' };
+import responseSchema from '../../schema/surface-response.schema.json' with { type: 'json' };
 
 const KEY = /^([a-z0-9_-]+)\/([a-z0-9_-]+)\/([a-z0-9_-]+)$/;
 
@@ -14,6 +15,7 @@ export class Database {
 
   constructor(private themesDir: string) {
     const ajv = new Ajv();
+    ajv.addSchema(responseSchema);
     ajv.addSchema(entrySchema);
     this.validateIndex = ajv.compile(indexSchema);
   }

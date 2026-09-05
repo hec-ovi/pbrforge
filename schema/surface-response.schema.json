@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:surface-response",
+  "title": "SurfaceResponse",
+  "description": "Authored localized damp response on a continuous mineral finish, shared by create parameters and variant metadata.",
+  "type": "object",
+  "required": ["kind", "coverage", "patchScale", "roughness", "darkening", "reliefRetention"],
+  "additionalProperties": false,
+  "properties": {
+    "kind": { "const": "localized-damp" },
+    "coverage": { "type": "number", "minimum": 0.02, "maximum": 0.4, "description": "Maximum affected texel fraction, including smooth transitions; rounded down to whole texels. About 40 percent of this support is fully damp." },
+    "patchScale": { "type": "number", "minimum": 0.2, "maximum": 2, "description": "Broad mask lattice spacing in metres, rounded to whole periods per tile; each tile axis must cover at least two spacings." },
+    "roughness": { "type": "number", "minimum": 0.18, "maximum": 0.44, "description": "Absolute roughness in the fully damp core; transitions approach the dry response." },
+    "darkening": { "type": "number", "minimum": 0, "maximum": 0.25, "description": "Fractional basecolor darkening in the fully damp core." },
+    "reliefRetention": { "type": "number", "minimum": 0, "maximum": 1, "description": "Fraction of dry relief retained in the fully damp core." }
+  }
+}

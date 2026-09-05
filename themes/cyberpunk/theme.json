@@ -11161,7 +11161,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.66,
+        "roughnessFactor": 0.58,
         "metallicFactor": 0
       },
       "variants": [
@@ -11169,8 +11169,8 @@
           "id": "maintained",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            1024,
+            1024
           ],
           "maps": {
             "basecolor": "assets/street-border/mid/maintained/basecolor.png",
@@ -11188,14 +11188,22 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.34,
+            "patchScale": 0.9,
+            "roughness": 0.2,
+            "darkening": 0.08,
+            "reliefRetention": 0.2
           }
         },
         {
           "id": "salvaged",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            1024,
+            1024
           ],
           "maps": {
             "basecolor": "assets/street-border/mid/salvaged/basecolor.png",
@@ -11213,14 +11221,22 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.3,
+            "patchScale": 0.8,
+            "roughness": 0.27,
+            "darkening": 0.1,
+            "reliefRetention": 0.3
           }
         },
         {
           "id": "industrial",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            1024,
+            1024
           ],
           "maps": {
             "basecolor": "assets/street-border/mid/industrial/basecolor.png",
@@ -11238,6 +11254,14 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.24,
+            "patchScale": 0.7,
+            "roughness": 0.24,
+            "darkening": 0.08,
+            "reliefRetention": 0.25
           }
         }
       ]
@@ -11265,8 +11289,8 @@
           "id": "maintained",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            1024,
+            1024
           ],
           "maps": {
             "basecolor": "assets/street-curb/mid/maintained/basecolor.png",
@@ -11284,14 +11308,22 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.12,
+            "patchScale": 0.6,
+            "roughness": 0.38,
+            "darkening": 0.05,
+            "reliefRetention": 0.65
           }
         },
         {
           "id": "salvaged",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            1024,
+            1024
           ],
           "maps": {
             "basecolor": "assets/street-curb/mid/salvaged/basecolor.png",
@@ -11309,14 +11341,22 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.2,
+            "patchScale": 0.7,
+            "roughness": 0.4,
+            "darkening": 0.075,
+            "reliefRetention": 0.7
           }
         },
         {
           "id": "industrial",
           "class": "pattern",
           "resolution": [
-            512,
-            512
+            1024,
+            1024
           ],
           "maps": {
             "basecolor": "assets/street-curb/mid/industrial/basecolor.png",
@@ -11334,6 +11374,14 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.1,
+            "patchScale": 0.8,
+            "roughness": 0.4,
+            "darkening": 0.045,
+            "reliefRetention": 0.65
           }
         }
       ]
@@ -11380,6 +11428,14 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.24,
+            "patchScale": 0.8,
+            "roughness": 0.28,
+            "darkening": 0.07,
+            "reliefRetention": 0.38
           }
         },
         {
@@ -11405,6 +11461,14 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.32,
+            "patchScale": 0.7,
+            "roughness": 0.34,
+            "darkening": 0.09,
+            "reliefRetention": 0.5
           }
         },
         {
@@ -11430,6 +11494,14 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "response": {
+            "kind": "localized-damp",
+            "coverage": 0.2,
+            "patchScale": 0.9,
+            "roughness": 0.32,
+            "darkening": 0.065,
+            "reliefRetention": 0.42
           }
         }
       ]

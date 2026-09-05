@@ -1,5 +1,7 @@
 # Box map
 
+- Localized damp finish: [response schema](../schema/surface-response.schema.json), shared smooth coverage coordinates roughness, albedo darkening and relief on continuous mineral maps; dry area remains dominant.
+
 - Packed material response: [pack request](../schema/pack-request.schema.json), additive RGB metallic-roughness maps for glTF, generated from the separate absolute maps through one shared writer.
 
 - Street construction finishes: [recipes](../batch/cyberpunk/street-construction.json) and `constructionSurfaces` in [street bindings](../bindings/street-styles.json), continuous role finishes for Atlas-owned slab pitches, joints and residual regions. Role mapping is in the [Ground contract](../CONTRACT.md#ground).

@@ -24,6 +24,7 @@ import {
 import { resolveFinish } from './finish.js';
 import { buildPattern } from './pattern/build.js';
 import { renderPattern } from './pattern/render.js';
+import { DampResponse } from './pattern/DampResponse.js';
 import { recolor } from './recolor.js';
 import { screenEmission, screenGlass } from './screen.js';
 import { SourceImage } from './SourceImage.js';
@@ -32,6 +33,7 @@ import { PackedMaps } from './PackedMaps.js';
 import { stampBrand } from './text.js';
 import { isSeamless, seamScore } from './seam.js';
 import requestSchema from '../../schema/create-request.schema.json' with { type: 'json' };
+import responseSchema from '../../schema/surface-response.schema.json' with { type: 'json' };
 
 const KEY = /^([a-z0-9_-]+)\/([a-z0-9_-]+)\/([a-z0-9_-]+)$/;
 const MAX_SIDE = 4096;
@@ -76,7 +78,7 @@ export class Generator {
     },
     private sources: SourceImage = new SourceImage(comfy),
   ) {
-    this.validateRequest = new Ajv({ useDefaults: true }).compile(requestSchema);
+    this.validateRequest = new Ajv({ useDefaults: true }).addSchema(responseSchema).compile(requestSchema);
   }
 
   async create(request: CreateRequest): Promise<MaterialEntry> {
@@ -86,6 +88,7 @@ export class Generator {
     const target = this.target(request);
 
     assertDecal(request, target);
+    assertResponse(request, target);
 
     const [width, height] = request.resolution ?? [1024, 1024];
     assertResolution(request, target, width, height);
@@ -215,7 +218,10 @@ export class Generator {
         seed,
         request.decal?.edgeInset,
       );
-      return renderPattern(pattern, width, height);
+      const maps = renderPattern(pattern, width, height);
+      return request.pattern.response
+        ? new DampResponse(request.pattern.response, world, seed).apply(maps)
+        : maps;
     }
     if (request.recolor) {
       const from = target.base?.variants.find((v) => v.id === request.recolor!.from);
@@ -272,6 +278,7 @@ export class Generator {
       writeFileSync(join(absDir, `${name}.png`), buffer);
       maps[name] = join(relDir, `${name}.png`);
     }
+    const response = request.pattern?.response ?? source.reuse?.response;
     const variant: Variant = {
       id,
       ...(request.sourceImage ? { class: 'plate' as const } : request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
@@ -279,6 +286,7 @@ export class Generator {
       maps,
       ...(source.screen ? { screen: await this.keepArtwork(source.screen, absDir, relDir) } : {}),
       ...(request.layout ? { layout: request.layout } : {}),
+      ...(response ? { response } : {}),
     };
     return (await new PackedMaps(this.db.themeDir(target.theme)).apply([variant])).variants[0];
   }
@@ -288,6 +296,21 @@ export class Generator {
     writeFileSync(join(absDir, 'artwork.png'), await encodeRgbPng(screen.artwork));
     const { kind, pitch } = screen.spec;
     return { kind, ...(pitch !== undefined ? { pitch } : {}), artwork: join(relDir, 'artwork.png') };
+  }
+}
+
+/** Local damp response is an authored exception on an otherwise dry opaque mineral finish. */
+function assertResponse(request: CreateRequest, target: Target): void {
+  const response = request.pattern?.response;
+  if (!response) return;
+  const physical = target.physical;
+  if (request.pattern!.kind !== 'mineral' || target.alignment !== 'tile'
+    || (physical.metallicFactor ?? 0) !== 0 || (physical.transmission ?? 0) !== 0
+    || (physical.alphaMode ?? 'OPAQUE') !== 'OPAQUE' || (request.emission ?? 'none') !== 'none'
+    || (physical.emissiveStrength ?? 0) !== 0
+    || (physical.roughnessFactor ?? 1) - (request.pattern!.sheen ?? 0) / 2 < 0.45
+    || target.tiling!.worldSize.some(size => size < response.patchScale * 2)) {
+    throw new MaterialsError('E_SCHEMA', 'localized damp response needs a dry opaque tiled mineral finish covering at least two patch spacings per axis');
   }
 }
 

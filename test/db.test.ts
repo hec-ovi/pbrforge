@@ -777,7 +777,7 @@ describe("shipped cyberpunk coverage", () => {
     expect(offences).toEqual([]);
   });
 
-  it("ships every non-emissive entry matte: metallic 0 or 1, roughness never below 0.45 except glass", async () => {
+  it("ships matte entries with bounded authored damp response and constant metallic maps", async () => {
     const floor = Math.floor(0.45 * 255);
     const themeDir = db.themeDir("cyberpunk");
     const offences: string[] = [];
@@ -797,8 +797,15 @@ describe("shipped cyberpunk coverage", () => {
         const gloss = (
           await sharp(join(themeDir, variant.maps.roughness)).stats()
         ).channels[0];
-        if (gloss.min < floor)
+        const minimum = variant.response ? Math.floor(variant.response.roughness * 255) : floor;
+        if (gloss.min < minimum)
           offences.push(`${key}:${variant.id} roughness map ${gloss.min}`);
+        if (variant.response) {
+          const data = await sharp(join(themeDir, variant.maps.roughness)).extractChannel(0).raw().toBuffer();
+          const damp = data.filter(value => value < floor).length / data.length;
+          if (damp > variant.response.coverage || damp >= 0.5)
+            offences.push(`${key}:${variant.id} damp coverage ${damp}`);
+        }
         const fill = (
           await sharp(join(themeDir, variant.maps.metallic)).stats()
         ).channels[0];

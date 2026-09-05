@@ -49,23 +49,26 @@
     "key": "cyberpunk/street-border/mid",
     "aliases": ["cyberpunk/street-border/poor", "cyberpunk/street-border/rich", "cyberpunk/street-border/high_rich"],
     "alignment": "tile", "description": "continuous dark mineral border for fitted paving edges",
-    "tiling": { "worldSize": [2, 2] }, "physical": { "roughnessFactor": 0.66, "metallicFactor": 0 },
-    "variantId": "maintained", "resolution": [512, 512], "seed": 7723,
-    "pattern": { "kind": "paving", "colors": ["#383d3d"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.006, "wear": 0.08 },
+    "tiling": { "worldSize": [2, 2] }, "physical": { "roughnessFactor": 0.58, "metallicFactor": 0 },
+    "variantId": "maintained", "resolution": [1024, 1024], "seed": 7723,
+    "pattern": { "kind": "mineral", "colors": ["#242a29"], "depth": 0.01, "variation": 0.012, "sheen": 0.06, "grain": 0.09, "wear": 0.04,
+      "response": { "kind": "localized-damp", "coverage": 0.34, "patchScale": 0.9, "roughness": 0.2, "darkening": 0.08, "reliefRetention": 0.2 } },
     "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
   },
   {
     "key": "cyberpunk/street-border/mid", "append": true,
     "alignment": "tile", "description": "continuous salvaged dark concrete border with localized mineral stains",
-    "variantId": "salvaged", "resolution": [512, 512], "seed": 8831,
-    "pattern": { "kind": "paving", "colors": ["#454842"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.012, "wear": 0.86 },
+    "variantId": "salvaged", "resolution": [1024, 1024], "seed": 8831,
+    "pattern": { "kind": "mineral", "colors": ["#3d433d"], "depth": 0.016, "variation": 0.018, "sheen": 0.08, "grain": 0.13, "wear": 0.3,
+      "response": { "kind": "localized-damp", "coverage": 0.3, "patchScale": 0.8, "roughness": 0.27, "darkening": 0.1, "reliefRetention": 0.3 } },
     "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
   },
   {
     "key": "cyberpunk/street-border/mid", "append": true,
     "alignment": "tile", "description": "continuous industrial graphite cement edging",
-    "variantId": "industrial", "resolution": [512, 512], "seed": 9941,
-    "pattern": { "kind": "paving", "colors": ["#4e504a"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.009, "wear": 0.44 },
+    "variantId": "industrial", "resolution": [1024, 1024], "seed": 9941,
+    "pattern": { "kind": "mineral", "colors": ["#3a403d"], "depth": 0.012, "variation": 0.014, "sheen": 0.07, "grain": 0.11, "wear": 0.12,
+      "response": { "kind": "localized-damp", "coverage": 0.24, "patchScale": 0.7, "roughness": 0.24, "darkening": 0.08, "reliefRetention": 0.25 } },
     "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
   },
   {
@@ -73,22 +76,25 @@
     "aliases": ["cyberpunk/street-curb/poor", "cyberpunk/street-curb/rich", "cyberpunk/street-curb/high_rich"],
     "alignment": "tile", "description": "continuous maintained precast curb finish without segment joints",
     "tiling": { "worldSize": [2, 2] }, "physical": { "roughnessFactor": 0.8, "metallicFactor": 0 },
-    "variantId": "maintained", "resolution": [512, 512], "seed": 10133,
-    "pattern": { "kind": "paving", "colors": ["#9a9b90"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.008, "wear": 0.14 },
+    "variantId": "maintained", "resolution": [1024, 1024], "seed": 10133,
+    "pattern": { "kind": "mineral", "colors": ["#9a9b90"], "depth": 0.018, "variation": 0.025, "sheen": 0.05, "grain": 0.12, "wear": 0.08,
+      "response": { "kind": "localized-damp", "coverage": 0.12, "patchScale": 0.6, "roughness": 0.38, "darkening": 0.05, "reliefRetention": 0.65 } },
     "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
   },
   {
     "key": "cyberpunk/street-curb/mid", "append": true,
     "alignment": "tile", "description": "continuous aged neutral curb finish with fine pores and weathering",
-    "variantId": "salvaged", "resolution": [512, 512], "seed": 11239,
-    "pattern": { "kind": "paving", "colors": ["#7d7e70"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.014, "wear": 0.9 },
+    "variantId": "salvaged", "resolution": [1024, 1024], "seed": 11239,
+    "pattern": { "kind": "mineral", "colors": ["#7d7e70"], "depth": 0.022, "variation": 0.03, "sheen": 0.07, "grain": 0.15, "wear": 0.35,
+      "response": { "kind": "localized-damp", "coverage": 0.2, "patchScale": 0.7, "roughness": 0.4, "darkening": 0.075, "reliefRetention": 0.7 } },
     "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
   },
   {
     "key": "cyberpunk/street-curb/mid", "append": true,
     "alignment": "tile", "description": "continuous industrial pale cast curb finish",
-    "variantId": "industrial", "resolution": [512, 512], "seed": 12343,
-    "pattern": { "kind": "paving", "colors": ["#a0a094"], "line": 0, "joint": 0, "variation": 0, "sheen": 0, "grain": 0.011, "wear": 0.5 },
+    "variantId": "industrial", "resolution": [1024, 1024], "seed": 12343,
+    "pattern": { "kind": "mineral", "colors": ["#a0a094"], "depth": 0.02, "variation": 0.025, "sheen": 0.05, "grain": 0.13, "wear": 0.16,
+      "response": { "kind": "localized-damp", "coverage": 0.1, "patchScale": 0.8, "roughness": 0.4, "darkening": 0.045, "reliefRetention": 0.65 } },
     "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
   }
 ]

@@ -78,6 +78,7 @@ export type {
   Screen,
   ScreenShown,
   SurfaceLayout,
+  SurfaceResponse,
   ThemeIndex,
   Tier,
   Variant,
