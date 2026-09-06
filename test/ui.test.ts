@@ -31,7 +31,7 @@ describe('preview contract', () => {
 
     fireEvent.click(getByText(view.root, 'cyberpunk/wall/poor'));
     expect(viewer.load).toHaveBeenCalledWith('cyberpunk', entry, 0, 2);
-    expect(view.root.querySelectorAll('.tree-leaf-item img.tree-leaf-thumb')).toHaveLength(4);
+    expect(view.root.querySelectorAll('.tree-leaf-item img')).toHaveLength(0);
     expect(view.root.querySelectorAll('img.channel-thumb')).toHaveLength(4);
     expect(getByRole(view.root, 'button', { name: 'Export material' })).toBeTruthy();
 

@@ -209,20 +209,6 @@ export class MaterialList {
   }
 
   private leafButton(row: MaterialRow): HTMLButtonElement {
-    const thumbs = el('div', { class: 'tree-leaf-thumbs' });
-    const maps = row.entry.variants[0]?.maps ?? {};
-    for (const rel of Object.values(maps)) {
-      if (!rel) continue;
-      thumbs.append(
-        el('img', {
-          class: 'tree-leaf-thumb',
-          src: `/themes/${row.theme}/${rel}`,
-          alt: '',
-          width: '32',
-          height: '32',
-        }),
-      );
-    }
     return el(
       'button',
       {
@@ -232,12 +218,9 @@ export class MaterialList {
         title: row.entry.key,
       },
       [
-        thumbs,
-        el('div', { class: 'tree-leaf-meta' }, [
-          el('span', { class: 'tree-leaf-name' }, [row.tier]),
-          el('span', { class: 'tree-leaf-fullkey visually-hidden' }, [row.entry.key]),
-          createBadge(row.entry.alignment.toUpperCase(), `badge-${row.entry.alignment}`),
-        ]),
+        el('span', { class: 'tree-leaf-name' }, [row.tier]),
+        el('span', { class: 'tree-leaf-fullkey visually-hidden' }, [row.entry.key]),
+        createBadge(row.entry.alignment.toUpperCase(), `badge-${row.entry.alignment}`),
       ],
     ) as HTMLButtonElement;
   }

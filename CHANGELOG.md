@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.13: map thumbnails stay on the inspector only.
+
 0.16.12: sidebar tree collapse animates open and closed.
 
 0.16.11: preview drops duplicate list/inspector copies, hidden filter selects, HUD overlay, and unused CSS.

@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.16.12. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.13. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
