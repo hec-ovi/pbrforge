@@ -9,6 +9,7 @@ import {
   createVerb,
   listVerb,
   packVerb,
+  patternsVerb,
   previewVerb,
   rebrandVerb,
   refinishVerb,
@@ -22,6 +23,7 @@ export const VERBS = [
   { verb: 'help', summary: 'this list', usage: 'help' },
   { verb: 'resolve', summary: 'look up a key', usage: 'resolve <theme/kind/tier> [--themes <dir>]' },
   { verb: 'list', summary: 'matching keys, sorted', usage: 'list [--theme t] [--kind k] [--tier t] [--themes <dir>]' },
+  { verb: 'patterns', summary: 'procedural pattern kinds for create', usage: 'patterns' },
   { verb: 'create', summary: 'generate from a request JSON (batch skips existing keys)', usage: 'create <request.json> [--themes <dir>] [--overwrite] [--native]' },
   { verb: 'refinish', summary: 're-read photographed maps under a finish', usage: 'refinish <requests.json> [--themes <dir>]' },
   { verb: 'rebrand', summary: 'spell business names onto screens', usage: 'rebrand --theme <theme> --businesses <businesses.json> [--themes <dir>]' },
@@ -57,6 +59,8 @@ export async function run(argv: string[]): Promise<Envelope> {
         return ok('resolve', resolveVerb(rest));
       case 'list':
         return ok('list', listVerb(rest));
+      case 'patterns':
+        return ok('patterns', patternsVerb());
       case 'create':
         return ok('create', await createVerb(rest));
       case 'refinish':

@@ -1,0 +1,23 @@
+{
+  "kinds": [
+    { "kind": "mineral", "draws": "continuous 6-11 mm aggregate, fine pores and sparse local wear", "reads": "face color, grain, variation, depth, sheen, wear" },
+    { "kind": "aggregate", "draws": "8 mm aggregate, 16 cm binder variation and sparse millimetre surface fractures", "reads": "two colors, depth, grain, wear, wet, sheen" },
+    { "kind": "paving", "draws": "isotropic mineral grain, sparse pores and weathering beneath optional panel seams", "reads": "cells, line, bevel, depth, joint, wear" },
+    { "kind": "window-grime", "draws": "fitted translucent mineral runoff", "reads": "decal worldSize, edgeInset, wear" },
+    { "kind": "concrete", "draws": "mineral clouds, cast traces and shallow pores beneath optional panel seams", "reads": "cells, line, bevel, depth, joint, wear" },
+    { "kind": "hexagon", "draws": "a hexagon grid, as edges or as gloss only", "reads": "cells (columns, row pairs), line, sheen, joint" },
+    { "kind": "panel-grid", "draws": "inset panels with chamfered edges and a flat recess", "reads": "cells, line, bevel, depth, joint, bond" },
+    { "kind": "slab", "draws": "large flush slabs cut by a narrow groove", "reads": "cells, line, bevel, variation, bond" },
+    { "kind": "stripe", "draws": "bands across one axis", "reads": "cells, axis, split, line" },
+    { "kind": "two-tone", "draws": "one split across the tile with a trim line", "reads": "axis, split, line, three colors" },
+    { "kind": "noise", "draws": "mottling in one to four octaves: plain wall to asphalt", "reads": "cells, octaves, depth" },
+    { "kind": "lane", "draws": "asphalt with two wheel tracks worn along it", "reads": "everything noise reads, plus axis, split, line, wear" },
+    { "kind": "puddle", "draws": "a noise field with damp patches pooled over it", "reads": "everything noise reads, plus wet, plus a third color for the patch" },
+    { "kind": "lamp", "draws": "one luminaire: a housing bezel around a lens with a hot centre", "reads": "line, bevel, split, three colors (lens, housing, centre)" },
+    { "kind": "glyph-atlas", "draws": "the letter sheet: one lit glyph per cell", "reads": "line (core width), bevel (halo reach), three colors" },
+    { "kind": "grille", "draws": "one condenser face: wire grille of rings on four spokes over the fan cavity, painted housing and flange", "reads": "line, bevel, split, joint, wear, three colors (paint, cavity, dirt)" },
+    { "kind": "water", "draws": "continuous periodic waves, from long parallel ripples to crossing chop", "reads": "two water colors, cells, axis, depth, chop" },
+    { "kind": "incident-blood", "draws": "one directional pool, broad at its source and narrowing along its transfer direction", "reads": "two blood colors; the decal envelope supplies physical size and transparent inset" },
+    { "kind": "incident-tyre", "draws": "three related tyre ribs on one shallow directional transfer", "reads": "two rubber colors; the decal envelope supplies physical size and transparent inset" }
+  ]
+}

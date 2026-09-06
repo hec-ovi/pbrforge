@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.25: pbrforge patterns lists every procedural create kind.
+
 0.16.24: switching texture channels keeps the current pan and zoom.
 
 0.16.23: texture preview keeps a strip of every channel map.

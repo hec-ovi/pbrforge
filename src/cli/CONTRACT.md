@@ -24,13 +24,14 @@ Exit 0 on ok, 2 on `E_USAGE`, 1 on any other error. Closed error codes are the p
 | `help` | `verbs` |
 | `resolve <key>` | `entry` |
 | `list [--theme --kind --tier]` | `keys`, `count` |
+| `patterns` | `kinds` (`kind`, `draws`, `reads`), `count` |
 | `create <request.json> [--overwrite] [--native]` | `created`, `skipped` (batch skips `E_KEY_EXISTS`) |
 | `refinish <requests.json>` | `results` |
 | `rebrand --theme --businesses` | `branded` |
 | `pack --theme` | `packed` |
 | `preview` | `url`, `up`, `start` (does not launch the viewer) |
 
-Create request JSON is [CreateRequest](../../schema/create-request.schema.json) or an array of them. `--native` refuses ComfyUI: each request must already name a PNG (`sourceImage`, `sourceAlbedo`, or every `screens[].imagePath`) from the agent's image tool. Without the flag, create is unchanged. Preview is started with `npm run preview`. Photographed create needs ComfyUI; pattern, plate, native import, recolor, rebrand and pack do not.
+`patterns` reads [pattern-kinds.json](../../schema/pattern-kinds.json). Create request JSON is [CreateRequest](../../schema/create-request.schema.json) or an array of them. `--native` refuses ComfyUI: each request must already name a PNG (`sourceImage`, `sourceAlbedo`, or every `screens[].imagePath`) from the agent's image tool. Without the flag, create is unchanged. Preview is started with `npm run preview`. Photographed create needs ComfyUI; pattern, plate, native import, recolor, rebrand and pack do not.
 
 ## Depends on
 

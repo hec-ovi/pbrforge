@@ -1,4 +1,6 @@
 import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { create, list, pack, rebrand, refinish, resolve, MaterialsError } from '../index.js';
 import type { CreateRequest } from '../db/types.js';
 import type { RefinishRequest } from '../api-types.js';
@@ -16,6 +18,12 @@ function readJson(path: string): unknown {
 
 export function versionData(version: string): Record<string, unknown> {
   return { version };
+}
+
+export function patternsVerb(): Record<string, unknown> {
+  const path = join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'schema', 'pattern-kinds.json');
+  const catalog = JSON.parse(readFileSync(path, 'utf8')) as { kinds: { kind: string; draws: string; reads: string }[] };
+  return { kinds: catalog.kinds, count: catalog.kinds.length };
 }
 
 export function resolveVerb(argv: string[]): Record<string, unknown> {

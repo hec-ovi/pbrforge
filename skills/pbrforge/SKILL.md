@@ -39,6 +39,7 @@ Read `data.ready` and `data.nextActions`. Do not hand-probe Node, ComfyUI, or th
 | is this machine able to work | `doctor` |
 | look up a key | `resolve <theme/kind/tier>` |
 | what keys exist | `list [--theme t] [--kind k] [--tier t]` |
+| what pattern kinds create can draw | `patterns` |
 | make a new set | `create <request.json> [--overwrite]` |
 | re-read gloss/relief from stored albedo | `refinish <requests.json>` |
 | put business names on screens | `rebrand --theme <theme> --businesses <file.json>` |
@@ -91,7 +92,7 @@ The request JSON is the create-request schema. Do not invent a lane mix.
 | `--native` plus a PNG path | your image tool, then import | no |
 | otherwise | photographed albedo | yes |
 
-Prefer `pattern` for walls, concrete, roads, water, curtains, steel, lamps. Use a photograph only when the user asked for grain that a pattern cannot draw. Screens take a source plate when one exists under `sources/`.
+Prefer `pattern` for walls, concrete, roads, water, curtains, steel, lamps. Run `patterns` for the kind list. Use a photograph only when the user asked for grain that a pattern cannot draw. Screens take a source plate when one exists under `sources/`.
 
 After create, `resolve` the key and report the variant ids and map paths. If the user wants to see it, `preview` then tell them the URL.
 

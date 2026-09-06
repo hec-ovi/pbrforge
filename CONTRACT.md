@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.16.24. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.25. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -39,7 +39,7 @@ The shipped future-noir source plates and their subject-and-style prompts live i
 
 - `rebrand(request: RebrandRequest, options?: MaterialsOptions): Promise<Branded[]>` spells the businesses of a named world over the screens of their tier, one `brand:<slug>` variant per business on `ad-screen` and on `ad-screen-tall`, with no render (see Rebrand below). Request: [RebrandRequest](schema/rebrand-request.schema.json). Options: [`MaterialsOptions`](src/api-types.ts). Each [`Branded`](src/api-types.ts) result is `{ key, variantId, from, lines }`.
 
-CLI: `npm run pbrforge -- <verb>` is the agent surface. One JSON envelope on stdout, then exit. Verbs: doctor, version, help, resolve, list, create, refinish, rebrand, pack, preview. See [src/cli/CONTRACT.md](src/cli/CONTRACT.md). Human npm scripts (`npm run resolve -- <key>`, `npm run create -- <request.json> [--themes <dir>] [--overwrite]`, `npm run refinish -- <request.json>`, `npm run rebrand -- --theme <theme> --businesses <businesses.json>`) remain. Create accepts a single request or an array; array mode skips keys that already exist, so batches are resumable. `pbrforge create --native` imports a PNG from the agent's image tool (`sourceImage`, `sourceAlbedo`, or `screens[].imagePath`) and never calls ComfyUI. Create's `--themes` selects an isolated output database; provided-source seam failures are reported without a seed retry.
+CLI: `npm run pbrforge -- <verb>` is the agent surface. One JSON envelope on stdout, then exit. Verbs: doctor, version, help, resolve, list, patterns, create, refinish, rebrand, pack, preview. See [src/cli/CONTRACT.md](src/cli/CONTRACT.md). Human npm scripts (`npm run resolve -- <key>`, `npm run create -- <request.json> [--themes <dir>] [--overwrite]`, `npm run refinish -- <request.json>`, `npm run rebrand -- --theme <theme> --businesses <businesses.json>`) remain. Create accepts a single request or an array; array mode skips keys that already exist, so batches are resumable. `pbrforge create --native` imports a PNG from the agent's image tool (`sourceImage`, `sourceAlbedo`, or `screens[].imagePath`) and never calls ComfyUI. Create's `--themes` selects an isolated output database; provided-source seam failures are reported without a seed retry.
 
 `npm run pack -- --theme <theme> [--themes <dir>]` (and `pbrforge pack --theme`) adds packed maps to every entry through the same package operation. It is deterministic and keeps every separate map untouched.
 
@@ -197,29 +197,7 @@ Optional `pattern.response` follows [SurfaceResponse](schema/surface-response.sc
 
 One mask interpolates roughness toward the authored damp value, darkens basecolor and reduces relief around its neutral plane. It adds no light, reflection image, structural marks, height pooling or emission. Consumers read the absolute maps normally, with scalar factors 1; the entry's fallback factor remains dry. Dry regions dominate and roughness never falls below the authored target, within PNG quantization.
 
-Kinds and the parameters each one reads (full ranges in the request schema):
-
-| kind | draws | reads |
-| --- | --- | --- |
-| `hexagon` | a hexagon grid, as edges or as gloss only | cells (columns, row pairs), line, sheen, joint |
-| `panel-grid` | inset panels with chamfered edges and a flat recess | cells, line, bevel, depth, joint, bond |
-| `slab` | large flush slabs cut by a narrow groove | cells, line, bevel, variation, bond |
-| `stripe` | bands across one axis | cells, axis, split, line |
-| `two-tone` | one split across the tile with a trim line | axis, split, line, three colors |
-| `window-grime` | fitted translucent mineral runoff | decal worldSize, edgeInset, wear |
-| `concrete` | mineral clouds, cast traces and shallow pores beneath optional panel seams | cells, line, bevel, depth, joint, wear |
-| `paving` | isotropic mineral grain, sparse pores and weathering beneath optional panel seams | cells, line, bevel, depth, joint, wear |
-| `mineral` | continuous 6-11 mm aggregate, fine pores and sparse local wear | face color, grain, variation, depth, sheen, wear |
-| `aggregate` | 8 mm aggregate, 16 cm binder variation and sparse millimetre surface fractures | two colors, depth, grain, wear, wet, sheen |
-| `noise` | mottling in one to four octaves: plain wall to asphalt | cells, octaves, depth |
-| `lane` | asphalt with two wheel tracks worn along it | everything `noise` reads, plus axis (the lane's direction), split (track spacing across the tile), line (track width), wear |
-| `puddle` | a noise field with damp patches pooled over it | everything `noise` reads, plus wet, plus a third color for the patch |
-| `lamp` | one luminaire: a housing bezel around a lens with a hot centre | line (bezel width), bevel (chamfer to the lens), split (hot centre reach), three colors (lens, housing, centre) |
-| `glyph-atlas` | the letter sheet below: one lit glyph per cell | line (core width), bevel (halo reach), three colors |
-| `grille` | one condenser face: a wire grille of rings on four spokes over the fan cavity, in a painted housing with a flange, dirt at the edges | line (ring pitch), bevel (flange width), split (grille diameter over the face), joint (how dark the wire reads), wear (dirt), three colors (paint, cavity, dirt) |
-| `water` | continuous periodic waves, from long parallel ripples to crossing chop | two water colors, cells (whole wave cycles), axis (main direction), depth (normal relief), chop (crossing-direction strength) |
-| `incident-blood` | one directional pool, broad at its source and narrowing along its transfer direction | two blood colors; the decal envelope supplies its physical size and transparent inset |
-| `incident-tyre` | three related tyre ribs on one shallow directional transfer | two rubber colors; the decal envelope supplies its physical size and transparent inset |
+Pattern kinds, what each draws and which params it reads: [schema/pattern-kinds.json](schema/pattern-kinds.json). `pbrforge patterns` prints `{ kinds, count }`. The create-request `pattern.kind` enum is the same set.
 
 Inside a puddle the surface goes flat, dark and damp: one level over the asphalt, so the normal map is unbroken there, and roughness 0.5, the same a wheel track wears to, so a lamp lands on it as a soft reflection. `wet` moves the waterline, 0 leaving it dry and 0.5 flooding about half the tile; the mask is two octaves of the same wrapping lattice as the asphalt, so puddles tile with the road they sit in. A lane's tracks darken the asphalt by up to 35 percent and pull its roughness toward the same 0.5 by `wear`, breathing along the run on the lane's own lattice.
 
