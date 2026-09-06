@@ -12403,6 +12403,55 @@
           }
         }
       ]
+    },
+    "cyberpunk/ac-grok/mid": {
+      "key": "cyberpunk/ac-grok/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.65,
+        "metallicFactor": 0
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.75
+        ],
+        "grain": 0.22,
+        "relief": 1.8
+      },
+      "variants": [
+        {
+          "id": "damaged",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ac-grok/mid/damaged/basecolor.png",
+            "normal": "assets/ac-grok/mid/damaged/normal.png",
+            "roughness": "assets/ac-grok/mid/damaged/roughness.png",
+            "metallic": "assets/ac-grok/mid/damaged/metallic.png",
+            "height": "assets/ac-grok/mid/damaged/height.png",
+            "ao": "assets/ac-grok/mid/damaged/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/8940458b7f1e8e4cf7c075d237d637e10807ed1279638816063271d5ec32648e.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
     }
   }
 }
