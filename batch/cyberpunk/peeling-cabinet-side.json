@@ -1,0 +1,11 @@
+{
+  "key": "cyberpunk/peeling-cabinet-side/mid",
+  "path": "sources/peeling-cabinet/side.png",
+  "alignment": "exact",
+  "aspect": [1, 1],
+  "description": "side of the green cabinet, same enamel, no door hardware",
+  "resolution": [1024, 1024],
+  "variantId": "side",
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.65 },
+  "finish": { "roughness": [0.52, 0.78], "grain": 0.2, "relief": 1.7 }
+}

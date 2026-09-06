@@ -1,0 +1,11 @@
+{
+  "key": "cyberpunk/ac-grok-top/mid",
+  "path": "sources/ac-grok/top.png",
+  "alignment": "exact",
+  "aspect": [1, 1],
+  "description": "top housing of the damaged condenser, same paint, no grille",
+  "resolution": [1024, 1024],
+  "variantId": "top",
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.65 },
+  "finish": { "roughness": [0.55, 0.75], "grain": 0.22, "relief": 1.8 }
+}

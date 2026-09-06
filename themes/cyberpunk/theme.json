@@ -12682,6 +12682,201 @@
           }
         }
       ]
+    },
+    "cyberpunk/peeling-cabinet-side/mid": {
+      "key": "cyberpunk/peeling-cabinet-side/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.65
+      },
+      "finish": {
+        "roughness": [
+          0.52,
+          0.78
+        ],
+        "grain": 0.2,
+        "relief": 1.7
+      },
+      "variants": [
+        {
+          "id": "side",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/peeling-cabinet-side/mid/side/basecolor.png",
+            "normal": "assets/peeling-cabinet-side/mid/side/normal.png",
+            "roughness": "assets/peeling-cabinet-side/mid/side/roughness.png",
+            "height": "assets/peeling-cabinet-side/mid/side/height.png",
+            "ao": "assets/peeling-cabinet-side/mid/side/ao.png",
+            "metallic": "assets/peeling-cabinet-side/mid/side/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/b1ddc68433f71946e372d4a68f1dfb9998cc91b5add690ac0f8bab10d46cb8f0.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/peeling-cabinet-top/mid": {
+      "key": "cyberpunk/peeling-cabinet-top/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.65
+      },
+      "finish": {
+        "roughness": [
+          0.52,
+          0.78
+        ],
+        "grain": 0.2,
+        "relief": 1.7
+      },
+      "variants": [
+        {
+          "id": "top",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/peeling-cabinet-top/mid/top/basecolor.png",
+            "normal": "assets/peeling-cabinet-top/mid/top/normal.png",
+            "roughness": "assets/peeling-cabinet-top/mid/top/roughness.png",
+            "height": "assets/peeling-cabinet-top/mid/top/height.png",
+            "ao": "assets/peeling-cabinet-top/mid/top/ao.png",
+            "metallic": "assets/peeling-cabinet-top/mid/top/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/2111ac6eefe70f8b5a2c2657a92a8f48fa1541e56318316097b8d7779031ec21.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ac-grok-side/mid": {
+      "key": "cyberpunk/ac-grok-side/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.65
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.75
+        ],
+        "grain": 0.22,
+        "relief": 1.8
+      },
+      "variants": [
+        {
+          "id": "side",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ac-grok-side/mid/side/basecolor.png",
+            "normal": "assets/ac-grok-side/mid/side/normal.png",
+            "roughness": "assets/ac-grok-side/mid/side/roughness.png",
+            "height": "assets/ac-grok-side/mid/side/height.png",
+            "ao": "assets/ac-grok-side/mid/side/ao.png",
+            "metallic": "assets/ac-grok-side/mid/side/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/bc4d2008de248b3c5526025b0bf409acb14cd1a8ad3a40bd8de22c03b4f1de31.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ac-grok-top/mid": {
+      "key": "cyberpunk/ac-grok-top/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.65
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.75
+        ],
+        "grain": 0.22,
+        "relief": 1.8
+      },
+      "variants": [
+        {
+          "id": "top",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ac-grok-top/mid/top/basecolor.png",
+            "normal": "assets/ac-grok-top/mid/top/normal.png",
+            "roughness": "assets/ac-grok-top/mid/top/roughness.png",
+            "height": "assets/ac-grok-top/mid/top/height.png",
+            "ao": "assets/ac-grok-top/mid/top/ao.png",
+            "metallic": "assets/ac-grok-top/mid/top/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/98d5710c2a000921d997788f5f884099e084cdec93c32319392fd733aa2c72b7.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/rusty-hatch-side/mid": {
+      "key": "cyberpunk/rusty-hatch-side/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.82
+        ],
+        "grain": 0.24,
+        "relief": 1.9
+      },
+      "variants": [
+        {
+          "id": "side",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rusty-hatch-side/mid/side/basecolor.png",
+            "normal": "assets/rusty-hatch-side/mid/side/normal.png",
+            "roughness": "assets/rusty-hatch-side/mid/side/roughness.png",
+            "height": "assets/rusty-hatch-side/mid/side/height.png",
+            "ao": "assets/rusty-hatch-side/mid/side/ao.png",
+            "metallic": "assets/rusty-hatch-side/mid/side/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/8d35ea792bd24acb12cee7cb68e27dfff5d17a2b125f1b4062716bc21a90c640.png"
+          }
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,11 @@
+{
+  "key": "cyberpunk/rusty-hatch-side/mid",
+  "path": "sources/rusty-hatch/side.png",
+  "alignment": "exact",
+  "aspect": [1, 1],
+  "description": "side of the hatch box, same paint and rust, no handle",
+  "resolution": [1024, 1024],
+  "variantId": "side",
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.7 },
+  "finish": { "roughness": [0.55, 0.82], "grain": 0.24, "relief": 1.9 }
+}
