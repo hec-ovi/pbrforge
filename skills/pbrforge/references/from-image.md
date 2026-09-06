@@ -12,6 +12,16 @@ Schema: [src/from-image/request.schema.json](../../../src/from-image/request.sch
 
 Bricks, concrete, stone, damaged AC faces, posters, any **one** photo that should become a material. Asymmetry is allowed. Unique objects use `exact`. Repeating fields use `tile` (the engine will still repeat; this verb does not check wrap).
 
+## Generate the photo
+
+The writer copies pixels. Framing is decided in the photograph.
+
+**Exact** (AC, door, hatch, poster): front-on, orthographic. The object fills the frame edge to edge. No sky, ground, surrounding wall, empty margin, or perspective. Square `1:1` unless the face is not square, then match `aspect`. Dents, rust, torn slats are wanted. Do not crop a 3/4 view to fake a face.
+
+**Tile** (brick, concrete, subway): the pattern continues off every edge. Even lighting, no directional shadow, no vignette, no unique hero brick or stain you could point at twice. Square `1:1`.
+
+After generate, look at the photo. Sky, floor, or empty margin: generate again. Do not import that frame.
+
 ## Do not use this
 
 | Need | Verb |

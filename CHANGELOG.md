@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.30: from-image skill names how to frame the photo (exact fill vs tile wrap).
+
 0.16.29: from-image accepts jpeg or png; skill names exact faces versus repeating fields.
 
 0.16.28: from-image turns one opaque PNG into a dry PBR set with no seam gate.
