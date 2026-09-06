@@ -31,7 +31,7 @@ Reuse that prefix. `command -v pbrforge` wins if the bin is on PATH.
 npm run pbrforge -- doctor
 ```
 
-Read `data.ready` and `data.nextActions`. Do not hand-probe Node, ComfyUI, or the preview. Photographed creates need ComfyUI; pattern, plate, recolor, rebrand, pack, resolve and list do not.
+Read `data.ready` and `data.nextActions`. Do not hand-probe Node, ComfyUI, or the preview. Photographed creates need ComfyUI; pattern, plate, from-image, recolor, rebrand, pack, resolve and list do not.
 
 ## When to use which
 
@@ -41,6 +41,7 @@ Read `data.ready` and `data.nextActions`. Do not hand-probe Node, ComfyUI, or th
 | look up a key | `resolve <theme/kind/tier>` |
 | what keys exist | `list [--theme t] [--kind k] [--tier t]` |
 | what pattern kinds create can draw | `patterns` (then read `data.kinds[].detail` for one kind) |
+| one photo to a dry PBR set (AC, brick, concrete, no wrap required) | `from-image <request.json> [--overwrite]` |
 | make a new set | `create <request.json> [--overwrite]` |
 | re-read gloss/relief from stored albedo | `refinish <requests.json>` |
 | put business names on screens | `rebrand --theme <theme> --businesses <file.json>` |
@@ -51,20 +52,30 @@ Read `data.ready` and `data.nextActions`. Do not hand-probe Node, ComfyUI, or th
 
 A create file is one request object or an array. Array mode skips keys that already exist, so a batch is resumable. `--overwrite` replaces.
 
+## One native photo (`from-image`)
+
+Use this when the user has **one** opaque color PNG and wants the rest of the dry maps derived from it. Bricks, concrete, damaged AC faces, posters. Asymmetry is allowed. There is **no** seam gate and **no** emission.
+
+Do **not** use `from-image` for:
+
+- glowing screens or letter glyphs → `create` with `screens` / `emission: "image"`
+- interior room plates that must emit → `create --native` with `sourceImage`
+- a wrapping tile that already tiles on all four edges → `create --native` with `sourceAlbedo`
+- a JS drawer (grille, mineral, lamp) → `create` with `pattern`
+
+1. Generate **one** PNG (convert JPEG first). It must cover the output size, same aspect, fully opaque.
+2. Write a from-image request: `key`, `path`, `alignment` (`exact` + `aspect` for a single face; `tile` + `tiling.worldSize` for a repeating field), `description`, `resolution`, `physical` (metallic 0 or 1, roughness at least 0.45), optional `finish`.
+3. Run:
+
+```
+npm run pbrforge -- from-image request.json
+```
+
+Request schema: [src/from-image/request.schema.json](../../src/from-image/request.schema.json). Contract: [src/from-image/CONTRACT.md](../../src/from-image/CONTRACT.md).
+
 ## Native image (`create --native`)
 
-If you have an image tool (`image_gen`, Codex `image_gen`, Gemini image skill, or any tool that writes a PNG), use it instead of ComfyUI.
-
-1. Generate **one** color picture. Save it as a PNG.
-2. Exact face (room, ad, fitted plate): put `"sourceImage": { "path": "<file>" }` or `screens[].imagePath`.
-3. Tiled surface: `"sourceAlbedo": { "path": "<file>" }` only if that picture already wraps. This box does not add tiling.
-4. Then:
-
-```
-npm run pbrforge -- create request.json --native
-```
-
-`--native` never calls ComfyUI. Missing PNG path is `E_USAGE`. Without `--native`, create is the old path (pattern, ComfyUI, or an already-named file).
+Keep this for the three **create** lanes that already work: `sourceImage` (exact plate, flat maps, basecolor copied to emission), `sourceAlbedo` (wrapping tile only; seam-checked), `screens[].imagePath` (ad artwork). Do not point bricks, concrete, or AC faces here.
 
 ## What one material is
 

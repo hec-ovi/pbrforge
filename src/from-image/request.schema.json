@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:from-image-request",
+  "title": "FromImageRequest",
+  "type": "object",
+  "required": ["key", "path", "alignment", "description"],
+  "additionalProperties": false,
+  "properties": {
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+/[a-z0-9_-]+/[a-z0-9_-]+$"
+    },
+    "path": { "type": "string", "minLength": 1 },
+    "alignment": { "enum": ["exact", "tile"] },
+    "description": { "type": "string", "minLength": 3 },
+    "aspect": {
+      "type": "array",
+      "items": { "type": "number", "exclusiveMinimum": 0 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "tiling": {
+      "type": "object",
+      "required": ["worldSize"],
+      "additionalProperties": false,
+      "properties": {
+        "worldSize": {
+          "type": "array",
+          "items": { "type": "number", "exclusiveMinimum": 0 },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "resolution": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 1, "maximum": 4096 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "variantId": { "type": "string", "minLength": 1 },
+    "physical": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "metallicFactor": { "enum": [0, 1] },
+        "roughnessFactor": { "type": "number", "minimum": 0.45, "maximum": 1 }
+      }
+    },
+    "finish": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "roughness": {
+          "type": "array",
+          "items": { "type": "number", "minimum": 0.45, "maximum": 1 },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "grain": { "type": "number", "minimum": 0, "maximum": 1 },
+        "relief": { "type": "number", "minimum": 0, "maximum": 4 }
+      }
+    },
+    "overwrite": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "alignment": { "const": "exact" } }, "required": ["alignment"] },
+      "then": { "required": ["aspect"] }
+    },
+    {
+      "if": { "properties": { "alignment": { "const": "tile" } }, "required": ["alignment"] },
+      "then": { "required": ["tiling"] }
+    }
+  ]
+}

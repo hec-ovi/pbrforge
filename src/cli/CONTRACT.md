@@ -25,14 +25,16 @@ Exit 0 on ok, 2 on `E_USAGE`, 1 on any other error. Closed error codes are the p
 | `resolve <key>` | `entry` |
 | `list [--theme --kind --tier]` | `keys`, `count` |
 | `patterns` | `kinds` (`kind`, `draws`, `reads`, `detail`), `count` |
+| `from-image <request.json>` | `key`, `variant`, `maps`, `alignment` |
 | `create <request.json> [--overwrite] [--native]` | `created`, `skipped` (batch skips `E_KEY_EXISTS`) |
 | `refinish <requests.json>` | `results` |
 | `rebrand --theme --businesses` | `branded` |
 | `pack --theme` | `packed` |
 | `preview` | `url`, `up`, `start` (does not launch the viewer) |
 
-`patterns` reads [pattern-kinds.json](../../schema/pattern-kinds.json). Create request JSON is [CreateRequest](../../schema/create-request.schema.json) or an array of them. `--native` refuses ComfyUI: each request must already name a PNG (`sourceImage`, `sourceAlbedo`, or every `screens[].imagePath`) from the agent's image tool. Without the flag, create is unchanged. Preview is started with `npm run preview`. Photographed create needs ComfyUI; pattern, plate, native import, recolor, rebrand and pack do not.
+`patterns` reads [pattern-kinds.json](../../schema/pattern-kinds.json). `from-image` is the [from-image box](../from-image/CONTRACT.md): one opaque PNG, dry PBR maps, no seam gate, no emission. Create request JSON is [CreateRequest](../../schema/create-request.schema.json) or an array of them. `--native` on create is unchanged (`sourceImage`, `sourceAlbedo`, or `screens[].imagePath`). Preview is started with `npm run preview`. Photographed create needs ComfyUI; pattern, plate, from-image, recolor, rebrand and pack do not.
 
 ## Depends on
 
 - [Materials contract](../../CONTRACT.md)
+- [from-image contract](../from-image/CONTRACT.md)

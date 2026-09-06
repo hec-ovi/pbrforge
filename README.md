@@ -10,6 +10,7 @@ Read and write are separate: resolving keys is pure, offline and needs no ComfyU
 npm install
 npm run pbrforge -- doctor                       # JSON envelope: is this machine ready
 npm run pbrforge -- patterns                     # procedural create kinds
+npm run pbrforge -- from-image request.json      # one opaque PNG to dry PBR maps, no wrap required
 npm run pbrforge -- resolve cyberpunk/window-glass/rich
 npm run resolve -- cyberpunk/window-glass/rich   # look up a key (human text)
 npm run create -- request.json                   # generate a set (photographed lanes need ComfyUI)

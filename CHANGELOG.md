@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.28: from-image turns one opaque PNG into a dry PBR set with no seam gate.
+
 0.16.27: cyberpunk/ac-grok/mid is a damaged condenser imported from one native albedo.
 
 0.16.26: pattern kinds have a fat-skill catalog; agents list with pbrforge patterns then read one detail file.

@@ -1,12 +1,12 @@
 {
   "key": "cyberpunk/ac-grok/mid",
-  "alignment": "tile",
-  "description": "damaged condenser face imported from one native albedo; palettes torn, rust and dents",
-  "sourceAlbedo": { "path": "sources/ac-grok/damaged.png" },
-  "tiling": { "worldSize": [1, 1] },
+  "path": "sources/ac-grok/damaged.png",
+  "alignment": "exact",
+  "aspect": [1, 1],
+  "description": "damaged condenser face from one native albedo; palettes torn, rust and dents",
   "resolution": [1024, 1024],
   "variantId": "damaged",
-  "physical": { "roughnessFactor": 0.65, "metallicFactor": 0 },
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.65 },
   "finish": { "roughness": [0.55, 0.75], "grain": 0.22, "relief": 1.8 },
-  "layout": { "family": "continuous", "origin": [0, 0], "orientation": "isotropic" }
+  "overwrite": true
 }

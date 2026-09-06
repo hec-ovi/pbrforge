@@ -29,7 +29,7 @@ describe('pbrforge CLI', () => {
     if (!envelope.ok) return;
     const verbs = envelope.data.verbs as { verb: string }[];
     expect(verbs.map((v) => v.verb)).toEqual([
-      'doctor', 'version', 'help', 'resolve', 'list', 'patterns', 'create', 'refinish', 'rebrand', 'pack', 'preview',
+      'doctor', 'version', 'help', 'resolve', 'list', 'patterns', 'from-image', 'create', 'refinish', 'rebrand', 'pack', 'preview',
     ]);
   });
 

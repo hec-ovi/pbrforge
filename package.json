@@ -1,6 +1,6 @@
 {
   "name": "urbe-materials",
-  "version": "0.16.27",
+  "version": "0.16.28",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",
@@ -17,6 +17,7 @@
   "scripts": {
     "pbrforge": "tsx src/cli/pbrforge.ts",
     "resolve": "tsx src/cli/resolve.ts",
+    "from-image": "tsx src/cli/pbrforge.ts from-image",
     "create": "tsx src/cli/create.ts",
     "refinish": "tsx src/cli/refinish.ts",
     "rebrand": "tsx src/cli/rebrand.ts",

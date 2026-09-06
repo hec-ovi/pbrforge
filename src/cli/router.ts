@@ -5,6 +5,7 @@ import { MaterialsError } from '../db/errors.js';
 import { UsageError } from './args.js';
 import { doctor } from './doctor.js';
 import { fail, ok, type Envelope } from './envelope.js';
+import { fromImageVerb } from '../from-image/run.js';
 import {
   createVerb,
   listVerb,
@@ -24,6 +25,7 @@ export const VERBS = [
   { verb: 'resolve', summary: 'look up a key', usage: 'resolve <theme/kind/tier> [--themes <dir>]' },
   { verb: 'list', summary: 'matching keys, sorted', usage: 'list [--theme t] [--kind k] [--tier t] [--themes <dir>]' },
   { verb: 'patterns', summary: 'procedural pattern kinds for create', usage: 'patterns' },
+  { verb: 'from-image', summary: 'one opaque PNG to a dry PBR set, no seam gate', usage: 'from-image <request.json> [--themes <dir>] [--overwrite]' },
   { verb: 'create', summary: 'generate from a request JSON (batch skips existing keys)', usage: 'create <request.json> [--themes <dir>] [--overwrite] [--native]' },
   { verb: 'refinish', summary: 're-read photographed maps under a finish', usage: 'refinish <requests.json> [--themes <dir>]' },
   { verb: 'rebrand', summary: 'spell business names onto screens', usage: 'rebrand --theme <theme> --businesses <businesses.json> [--themes <dir>]' },
@@ -61,6 +63,8 @@ export async function run(argv: string[]): Promise<Envelope> {
         return ok('list', listVerb(rest));
       case 'patterns':
         return ok('patterns', patternsVerb());
+      case 'from-image':
+        return ok('from-image', await fromImageVerb(rest, join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'themes')));
       case 'create':
         return ok('create', await createVerb(rest));
       case 'refinish':
