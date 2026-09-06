@@ -209,7 +209,8 @@ describe('UI Polish Suite', () => {
     expect(getByText(view.root, 'PHYSICAL PBR PROPERTIES')).toBeTruthy();
     expect(getByText(view.root, 'TEXTURE CHANNELS (VARIANT alpha)')).toBeTruthy();
     expect(getByText(view.root, 'Opacity')).toBeTruthy();
-    expect(getByText(view.root, 'SURFACE COVERAGE')).toBeTruthy();
+    expect(view.root.querySelectorAll('img.channel-thumb').length).toBeGreaterThan(0);
+    expect(getByRole(view.root, 'button', { name: 'Export material' })).toBeTruthy();
   });
 
   it('displays toast messages with various severities and dispatches properly', () => {

@@ -28,6 +28,7 @@ Empty databases and filters with no matches are rendered states.
 - Tile entries use repeat wrapping. Exact entries use clamp wrapping and one fitted UV face.
 - Basecolor and emission use sRGB. Normal, roughness, metallic, AO, opacity and height use linear sampling.
 - A selected variant drives the sphere, inspector, key display and telemetry together.
+- Channel rows show a 32px thumbnail of each authored map. Export downloads the entry JSON and that variant's PNG maps. It does not write the database.
 - Controls use square corners with zero border-radius.
 - View structure and inspector sections load from declarative schema definitions.
 
@@ -36,7 +37,7 @@ Empty databases and filters with no matches are rendered states.
 - `PreviewView`: workspace layout and control wiring loaded from schema.
 - `MaterialList`: database loading, filters and selection events.
 - `SphereViewer`: Three.js sphere, texture channels, camera and lighting.
-- `MaterialInspector`: key, alignment, physical values, finish and channel paths.
+- `MaterialInspector`: key, alignment, physical values, finish, channel thumbnails, and a map export download.
 - `ToastManager`: status and error notifications.
 - `ui/elements`: primitive square units (inputs, buttons, badges, selectors).
 

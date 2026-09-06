@@ -31,6 +31,18 @@ export class MaterialInspector {
     });
     copyJsonBtn.className = 'btn btn-icon btn-sm';
 
+    const exportBtn = createSquareButton({
+      label: 'EXPORT',
+      variant: 'secondary',
+      size: 'sm',
+      title: 'Download this variant\'s maps',
+      ariaLabel: 'Export material',
+      onClick: () => {
+        void this.exportCurrent();
+      },
+    });
+    exportBtn.className = 'btn btn-sm';
+
     const closeBtn = createSquareButton({
       label: '✕',
       variant: 'secondary',
@@ -50,7 +62,7 @@ export class MaterialInspector {
           createBadge(tag, 'inspector-tag'),
           el('h2', { class: 'inspector-title' }, [title]),
         ]),
-        el('div', { class: 'inspector-actions' }, [copyJsonBtn, closeBtn]),
+        el('div', { class: 'inspector-actions' }, [exportBtn, copyJsonBtn, closeBtn]),
       ]),
       this.content,
     ]);
@@ -94,28 +106,33 @@ export class MaterialInspector {
     const finish = entry.finish;
 
     const channelRows: HTMLElement[] = [];
-    const standardChannels: { name: string; key: keyof typeof variant.maps; label: string }[] = [
-      { name: 'BaseColor', key: 'basecolor', label: 'DIFFUSE / ALBEDO' },
-      { name: 'Normal', key: 'normal', label: 'TANGENT NORMAL' },
-      { name: 'Roughness', key: 'roughness', label: 'MICRO-SURFACE' },
-      { name: 'Metallic', key: 'metallic', label: 'CONDUCTIVITY' },
-      { name: 'AO', key: 'ao', label: 'AMBIENT OCCLUSION' },
-      { name: 'Displacement', key: 'height', label: 'HEIGHT / RELIEF' },
-      { name: 'Opacity', key: 'opacity', label: 'SURFACE COVERAGE' },
-      { name: 'Emission', key: 'emission', label: 'SELF-ILLUMINATION' },
+    const channelNames: { name: string; key: keyof typeof variant.maps }[] = [
+      { name: 'BaseColor', key: 'basecolor' },
+      { name: 'Normal', key: 'normal' },
+      { name: 'Roughness', key: 'roughness' },
+      { name: 'Metallic', key: 'metallic' },
+      { name: 'AO', key: 'ao' },
+      { name: 'Height', key: 'height' },
+      { name: 'Opacity', key: 'opacity' },
+      { name: 'Emission', key: 'emission' },
+      { name: 'Packed', key: 'metallicRoughness' },
     ];
 
-    for (const ch of standardChannels) {
+    for (const ch of channelNames) {
       const path = variant.maps[ch.key];
-      const active = Boolean(path);
+      if (!path) continue;
+      const url = `/themes/${theme}/${path}`;
       channelRows.push(
-        el('div', { class: `channel-item ${active ? 'active' : 'inactive'}` }, [
-          el('div', { class: 'channel-header' }, [
-            el('span', { class: `channel-badge ${active ? 'badge-on' : 'badge-off'}` }, [active ? 'ACTIVE' : 'OFF']),
-            el('span', { class: 'channel-name' }, [ch.name]),
-            el('span', { class: 'channel-desc' }, [ch.label]),
-          ]),
-          el('div', { class: 'channel-path', title: path || 'Not authored' }, [path ? `/themes/${theme}/${path}` : '-']),
+        el('div', { class: 'channel-item active' }, [
+          el('img', {
+            class: 'channel-thumb',
+            src: url,
+            alt: ch.name,
+            width: '32',
+            height: '32',
+            title: url,
+          }),
+          el('span', { class: 'channel-name' }, [ch.name]),
         ]),
       );
     }
@@ -249,4 +266,29 @@ export class MaterialInspector {
       ]),
     ]);
   }
+
+  private async exportCurrent(): Promise<void> {
+    if (!this.currentState) return;
+    const { theme, entry, variantIndex } = this.currentState;
+    const variant = entry.variants[Math.min(variantIndex, entry.variants.length - 1)];
+    if (!variant) return;
+    const slug = entry.key.replaceAll('/', '-');
+    downloadBlob(new Blob([JSON.stringify(entry, null, 2)], { type: 'application/json' }), `${slug}.json`);
+    for (const [name, rel] of Object.entries(variant.maps)) {
+      if (!rel) continue;
+      const res = await fetch(`/themes/${theme}/${rel}`);
+      if (!res.ok) continue;
+      downloadBlob(await res.blob(), `${slug}-${name}.png`);
+    }
+    toast.success('Export started', entry.key);
+  }
+}
+
+function downloadBlob(blob: Blob, filename: string): void {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
 }
