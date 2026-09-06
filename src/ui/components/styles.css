@@ -35,6 +35,16 @@
   --status-warning: #f59e0b;
   --status-error: #ef4444;
 
+  --tree-theme: #1e2a38;
+  --tree-theme-hover: #263545;
+  --tree-kind-a: #241c2e;
+  --tree-kind-b: #1a1522;
+  --tree-kind-hover: #2c2438;
+  --tree-kind-text: #c8bdd6;
+  --tree-leaf-a: #101218;
+  --tree-leaf-b: #181a22;
+  --tree-leaf-hover: #222433;
+
   --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Monaco, Consolas, monospace;
   --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --transition-fast: 0.14s cubic-bezier(0.16, 1, 0.3, 1);
@@ -397,10 +407,10 @@ html, body {
 .material-tree-container {
   flex: 1;
   overflow-y: auto;
-  padding: 8px 6px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0;
 }
 
 /* Tree Nodes */
@@ -430,19 +440,33 @@ html, body {
 }
 
 .tree-node-theme {
-  font-size: 14px;
+  background: var(--tree-theme);
+  font-size: 15px;
   font-weight: 700;
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   border-bottom: 1px solid var(--border-subtle);
-  margin-top: 4px;
+}
+
+.tree-node-theme:hover {
+  background: var(--tree-theme-hover);
+  color: var(--text-primary);
 }
 
 .tree-node-kind {
-  padding-left: 18px;
-  font-size: 14px;
-  color: var(--text-secondary);
+  background: var(--tree-kind-a);
+  font-size: 13px;
+  color: var(--tree-kind-text);
+}
+
+.tree-children-inner > .tree-node-kind:nth-of-type(even) {
+  background: var(--tree-kind-b);
+}
+
+.tree-node-kind:hover {
+  background: var(--tree-kind-hover);
+  color: var(--text-primary);
 }
 
 .tree-caret {
@@ -533,7 +557,7 @@ html, body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 0;
 }
 
 .tree-leaf-item {
@@ -542,31 +566,30 @@ html, body {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 10px 0 28px;
-  background: transparent;
-  border: 1px solid transparent;
-  border-left: 2px solid transparent;
+  padding: 0 10px;
+  background: var(--tree-leaf-a);
+  border: none;
   color: var(--text-secondary);
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   cursor: pointer;
   text-align: left;
-  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
   outline: none;
 }
 
+.tree-leaf-item:nth-child(even) {
+  background: var(--tree-leaf-b);
+}
+
 .tree-leaf-item:hover {
-  background: var(--bg-surface);
+  background: var(--tree-leaf-hover);
   color: var(--text-primary);
-  border-color: var(--border-subtle);
-  border-left-color: var(--border-hover);
 }
 
 .tree-leaf-item.active {
   background: var(--accent-muted);
-  border-color: rgba(0, 210, 255, 0.25);
-  border-left: 2px solid var(--accent);
   color: var(--accent);
 }
 

@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.19: sidebar tree colors each nest level and zebra-stripes material rows.
+
 0.16.18: texture channel preview pans and zooms.
 
 0.16.17: opening a sidebar category expands every nested group under it.
