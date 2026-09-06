@@ -374,6 +374,12 @@ html, body {
   text-transform: uppercase;
 }
 
+.list-refresh {
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
 .list-count-badge {
   margin-left: auto;
   font-family: var(--font-mono);

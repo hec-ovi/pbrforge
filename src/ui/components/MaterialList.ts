@@ -26,12 +26,14 @@ export class MaterialList {
   private activeRow?: MaterialRow;
   private currentSearch = '';
   private expandedNodes = new Set<string>();
+  private fetcher: typeof fetch = fetch;
 
   constructor(
     private onSelect: (selection: Selection) => void,
     tag = 'LIB',
     title = 'MATERIALS',
     searchPlaceholder = 'Filter key, kind, tier...',
+    refreshAriaLabel = 'Refresh list',
   ) {
     this.searchInput = createSquareInput({
       type: 'search',
@@ -47,10 +49,23 @@ export class MaterialList {
     this.countLabel = el('span', { class: 'list-count-badge' }, ['0 items']);
     this.listContainer = el('nav', { class: 'material-tree-container', 'aria-label': 'materials' });
 
+    const refreshBtn = createSquareButton({
+      label: '↻',
+      variant: 'secondary',
+      size: 'sm',
+      title: refreshAriaLabel,
+      ariaLabel: refreshAriaLabel,
+      onClick: () => {
+        void this.refresh();
+      },
+    });
+    refreshBtn.className = 'btn btn-icon btn-sm list-refresh';
+
     const header = el('div', { class: 'list-header' }, [
       el('div', { class: 'list-title-row' }, [
         createBadge(tag, 'sidebar-tag'),
         el('h1', { class: 'sidebar-title' }, [title]),
+        refreshBtn,
         this.countLabel,
       ]),
       el('div', { class: 'filter-bar' }, [
@@ -62,6 +77,8 @@ export class MaterialList {
   }
 
   async load(fetcher: typeof fetch = fetch): Promise<void> {
+    this.fetcher = fetcher;
+    const activeKey = this.activeRow?.entry.key;
     try {
       const themes = await readJson(fetcher, '/api/themes');
       if (!Array.isArray(themes) || themes.some((theme) => typeof theme !== 'string')) {
@@ -86,8 +103,26 @@ export class MaterialList {
       this.allRows = rows;
       for (const row of rows) this.expandedNodes.add(row.theme);
       this.applyFilter();
+      if (activeKey) {
+        const row = this.allRows.find((item) => item.entry.key === activeKey);
+        if (row) {
+          this.activeRow = row;
+          row.button?.classList.add('active');
+        } else {
+          this.activeRow = undefined;
+        }
+      }
     } catch (cause) {
       throw new PreviewError('E_DATABASE_UNAVAILABLE', 'material database could not be loaded', cause);
+    }
+  }
+
+  private async refresh(): Promise<void> {
+    try {
+      await this.load(this.fetcher);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      this.fail(message);
     }
   }
 
@@ -244,7 +279,7 @@ export class MaterialList {
 }
 
 async function readJson(fetcher: typeof fetch, path: string): Promise<unknown> {
-  const response = await fetcher(path);
+  const response = await fetcher(path, { cache: 'no-store' });
   if (!response.ok) throw new Error(`${path} returned ${response.status}`);
   return response.json();
 }

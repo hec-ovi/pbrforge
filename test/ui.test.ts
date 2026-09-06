@@ -65,6 +65,17 @@ describe('preview contract', () => {
 
     fireEvent.change(getByRole(view.root, 'combobox', { name: 'variant' }), { target: { value: '1' } });
     expect(viewer.load).toHaveBeenLastCalledWith('cyberpunk', entry, 1, 2);
+
+    let fetches = 0;
+    const counting = ((url: string) => {
+      fetches += 1;
+      return fetcherFor({ theme: 'cyberpunk', entries: { [entry.key]: entry } })(url);
+    }) as typeof fetch;
+    await view.list.load(counting);
+    const before = fetches;
+    fireEvent.click(getByRole(view.root, 'button', { name: 'Refresh list' }));
+    await vi.waitFor(() => expect(fetches).toBeGreaterThan(before));
+    expect(view.root.querySelector('[data-key="cyberpunk/wall/poor"]')).toBeTruthy();
   });
 
   it('shows an empty notice when the database has no entries', async () => {

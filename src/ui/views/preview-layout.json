@@ -2,6 +2,7 @@
   "sidebar": {
     "tag": "LIB",
     "title": "MATERIALS",
+    "refreshAriaLabel": "Refresh list",
     "searchPlaceholder": "Filter key, kind, tier..."
   },
   "stage": {

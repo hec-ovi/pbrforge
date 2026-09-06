@@ -9,12 +9,13 @@
   "properties": {
     "sidebar": {
       "type": "object",
-      "required": ["tag", "title", "searchPlaceholder"],
+      "required": ["tag", "title", "searchPlaceholder", "refreshAriaLabel"],
       "additionalProperties": false,
       "properties": {
         "tag": { "type": "string" },
         "title": { "type": "string" },
-        "searchPlaceholder": { "type": "string" }
+        "searchPlaceholder": { "type": "string" },
+        "refreshAriaLabel": { "type": "string" }
       }
     },
     "stage": {

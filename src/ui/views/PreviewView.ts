@@ -51,6 +51,7 @@ export class PreviewView {
       sidebarCfg.tag,
       sidebarCfg.title,
       sidebarCfg.searchPlaceholder,
+      sidebarCfg.refreshAriaLabel,
     );
 
     // Initialise UI controls from primitive square builders

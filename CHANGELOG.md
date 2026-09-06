@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.21: sidebar MATERIALS title has a refresh control that reloads the list.
+
 0.16.20: sidebar shows kinds under the open theme; materials stay closed until a kind is opened.
 
 0.16.19: sidebar tree colors each nest level and zebra-stripes material rows.
