@@ -28,7 +28,7 @@ Empty databases and filters with no matches are rendered states.
 - Tile entries use repeat wrapping. Exact entries use clamp wrapping and one fitted UV face.
 - Basecolor and emission use sRGB. Normal, roughness, metallic, AO, opacity and height use linear sampling.
 - A selected variant drives the sphere, inspector, key display and telemetry together.
-- Channel rows show a 32px thumbnail of each authored map. Clicking a channel opens that map full size. Export downloads the entry JSON and that variant's PNG maps. It does not write the database.
+- Channel rows show a 32px thumbnail of each authored map. Clicking a channel opens that map full size with pan and zoom (wheel, drag, +/-/FIT, and +/-/0 keys). Escape or close dismisses it. Export downloads the entry JSON and that variant's PNG maps. It does not write the database.
 - Sidebar and inspector widths are user-resizable via the split handles. Square corners, zero border-radius.
 - View structure and inspector sections load from declarative schema definitions.
 
@@ -38,6 +38,7 @@ Empty databases and filters with no matches are rendered states.
 - `MaterialList`: database loading, filters and selection events.
 - `SphereViewer`: Three.js sphere, texture channels, camera and lighting.
 - `MaterialInspector`: key, alignment, physical values, finish, channel thumbnails, and a map export download.
+- `MapViewer`: full-size map dialog with pan and zoom.
 - `ui/elements`: primitive square units (inputs, buttons, badges, selectors).
 
 ## Depends on

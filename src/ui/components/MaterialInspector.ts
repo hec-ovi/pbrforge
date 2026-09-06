@@ -1,4 +1,5 @@
 import { el } from './el.js';
+import { MapViewer } from './MapViewer.js';
 import { createSquareButton, createBadge } from '../ui/elements.js';
 import type { MaterialEntry } from '../../db/types.js';
 
@@ -13,8 +14,7 @@ export class MaterialInspector {
   private content: HTMLElement;
   private isOpen = true;
   private currentState?: InspectorState;
-  private mapViewer?: HTMLElement;
-  private mapKeyHandler?: (event: KeyboardEvent) => void;
+  private readonly mapViewer = new MapViewer();
 
   constructor(private onClose?: () => void, tag = 'SPEC', title = 'TELEMETRY') {
     this.content = el('div', { class: 'inspector-content' });
@@ -288,40 +288,11 @@ export class MaterialInspector {
   }
 
   private openMap(name: string, url: string): void {
-    this.closeMap();
-    const closeBtn = createSquareButton({
-      label: '✕',
-      variant: 'secondary',
-      size: 'sm',
-      ariaLabel: 'Close map',
-      onClick: () => this.closeMap(),
-    });
-    closeBtn.className = 'btn btn-icon btn-sm';
-    const overlay = el('div', { class: 'map-viewer', role: 'dialog', 'aria-label': name }, [
-      el('div', { class: 'map-viewer-bar' }, [
-        el('span', { class: 'map-viewer-title' }, [name]),
-        closeBtn,
-      ]),
-      el('img', { class: 'map-viewer-img', src: url, alt: name }),
-    ]);
-    overlay.addEventListener('click', (event) => {
-      if (event.target === overlay) this.closeMap();
-    });
-    this.mapKeyHandler = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') this.closeMap();
-    };
-    window.addEventListener('keydown', this.mapKeyHandler);
-    document.body.append(overlay);
-    this.mapViewer = overlay;
+    this.mapViewer.open(name, url);
   }
 
   private closeMap(): void {
-    this.mapViewer?.remove();
-    this.mapViewer = undefined;
-    if (this.mapKeyHandler) {
-      window.removeEventListener('keydown', this.mapKeyHandler);
-      this.mapKeyHandler = undefined;
-    }
+    this.mapViewer.close();
   }
 }
 

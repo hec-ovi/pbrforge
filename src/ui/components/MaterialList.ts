@@ -219,7 +219,7 @@ export class MaterialList {
   private expandDescendants(wrap: HTMLElement): void {
     const inner = wrap.querySelector(':scope > .tree-children-inner');
     if (!inner) return;
-    for (const header of inner.querySelectorAll(':scope > .tree-node-header')) {
+    for (const header of Array.from(inner.querySelectorAll(':scope > .tree-node-header'))) {
       const kids = header.nextElementSibling;
       const childKey = header.getAttribute('data-node-key');
       if (!(header instanceof HTMLElement) || !(kids instanceof HTMLElement) || !childKey) continue;

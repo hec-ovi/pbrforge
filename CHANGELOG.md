@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.18: texture channel preview pans and zooms.
+
 0.16.17: opening a sidebar category expands every nested group under it.
 
 0.16.16: clicking a texture channel opens that map full size.

@@ -1004,35 +1004,80 @@ html, body {
   z-index: 80;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 24px;
-  background: rgba(5, 5, 8, 0.88);
+  background: rgba(5, 5, 8, 0.92);
 }
 
 .map-viewer-bar {
-  width: min(92vw, 1024px);
+  width: 100%;
+  height: 46px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-panel);
 }
 
 .map-viewer-title {
+  flex: 1;
+  min-width: 0;
   font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.map-viewer-zoom {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  min-width: 4.5em;
+  text-align: right;
+  line-height: 1;
+}
+
+.map-viewer-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-viewer-stage {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  background-color: #121218;
+  background-image:
+    linear-gradient(45deg, #1c1c24 25%, transparent 25%),
+    linear-gradient(-45deg, #1c1c24 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #1c1c24 75%),
+    linear-gradient(-45deg, transparent 75%, #1c1c24 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+.map-viewer-stage.panning {
+  cursor: grabbing;
 }
 
 .map-viewer-img {
-  max-width: min(92vw, 1024px);
-  max-height: 82vh;
-  object-fit: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: none;
+  max-height: none;
+  transform-origin: 0 0;
   image-rendering: pixelated;
   border: 1px solid var(--border-default);
-  background: var(--bg-input);
+  pointer-events: none;
 }
 
