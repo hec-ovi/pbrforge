@@ -947,10 +947,10 @@ html, body {
    ========================================================================== */
 .toast-container {
   position: fixed;
-  top: 14px;
+  bottom: 34px;
   right: 14px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 6px;
   z-index: 9999;
   pointer-events: none;
@@ -961,19 +961,19 @@ html, body {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  min-width: 260px;
-  max-width: 360px;
-  background: rgba(19, 19, 26, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-default);
-  border-left: 3px solid var(--accent);
-  padding: 8px 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-  animation: toastSlideIn 0.16s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  min-width: 240px;
+  max-width: 340px;
+  background: rgba(13, 13, 18, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 2px solid var(--accent);
+  padding: 6px 9px;
+  animation: toastSlideUp 0.14s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .toast.toast-exit {
-  animation: toastSlideOut 0.16s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: toastSlideDown 0.14s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .toast-info {
@@ -1014,7 +1014,7 @@ html, body {
 
 .toast-title {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.2;
@@ -1022,7 +1022,7 @@ html, body {
 
 .toast-message {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9px;
   color: var(--text-secondary);
   line-height: 1.3;
   word-break: break-all;
@@ -1034,7 +1034,7 @@ html, body {
   color: var(--text-muted);
   cursor: pointer;
   padding: 0;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1;
 }
 
@@ -1042,24 +1042,25 @@ html, body {
   color: var(--text-primary);
 }
 
-@keyframes toastSlideIn {
+@keyframes toastSlideUp {
   from {
-    transform: translateX(30px);
+    transform: translateY(12px);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
-@keyframes toastSlideOut {
+@keyframes toastSlideDown {
   from {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
   to {
-    transform: translateX(30px);
+    transform: translateY(12px);
     opacity: 0;
   }
 }
+
