@@ -2,17 +2,18 @@
 name: pbrforge
 description: >
   Generate and look up themed PBR materials (maps, tiling, physical properties) through the
-  pbrforge CLI. Resolve a theme/kind/tier key, list the catalog, create or refinish a set,
-  rebrand ad screens, pack metallic-roughness maps, or open the sphere preview. Use whenever
-  the user wants a material, texture set, PBR maps, a wall/road/glass/door finish, or to
-  inspect the cyberpunk material library. Never read or edit src/; every action is a verb.
+  pbrforge CLI. Resolve a theme/kind/tier key, list the catalog, list pattern kinds, create
+  or refinish a set, rebrand ad screens, pack metallic-roughness maps, or open the sphere
+  preview. Use whenever the user wants a material, texture set, PBR maps, a wall/road/glass/door
+  finish, a procedural pattern, or to inspect the cyberpunk material library. Never edit
+  theme.json or map PNGs. Every catalog action is a verb.
 ---
 
 # pbrforge
 
 Drive the material database with ONE CLI. Every verb prints one JSON object `{ok, verb, data}` or `{ok, verb, error}` and exits. On `ok:false` follow `error.hint`.
 
-Never write map PNGs by hand, never edit `theme.json`, never read `src/`. The verbs write everything.
+Never write map PNGs by hand, never edit `theme.json`. The verbs write catalog entries. To add a **new pattern kind** (a new drawer), follow [references/patterns/ADD.md](references/patterns/ADD.md).
 
 ## Resolve the CLI (once)
 
@@ -39,7 +40,7 @@ Read `data.ready` and `data.nextActions`. Do not hand-probe Node, ComfyUI, or th
 | is this machine able to work | `doctor` |
 | look up a key | `resolve <theme/kind/tier>` |
 | what keys exist | `list [--theme t] [--kind k] [--tier t]` |
-| what pattern kinds create can draw | `patterns` |
+| what pattern kinds create can draw | `patterns` (then read `data.kinds[].detail` for one kind) |
 | make a new set | `create <request.json> [--overwrite]` |
 | re-read gloss/relief from stored albedo | `refinish <requests.json>` |
 | put business names on screens | `rebrand --theme <theme> --businesses <file.json>` |
@@ -92,7 +93,7 @@ The request JSON is the create-request schema. Do not invent a lane mix.
 | `--native` plus a PNG path | your image tool, then import | no |
 | otherwise | photographed albedo | yes |
 
-Prefer `pattern` for walls, concrete, roads, water, curtains, steel, lamps. Run `patterns` for the kind list. Use a photograph only when the user asked for grain that a pattern cannot draw. Screens take a source plate when one exists under `sources/`.
+Prefer `pattern` for walls, concrete, roads, water, curtains, steel, lamps. Run `patterns` for the kind list. To tune or understand one drawer, read that row's `detail` file (resolver: [references/patterns/INDEX.md](references/patterns/INDEX.md)). To add a drawer no existing kind covers, follow [references/patterns/ADD.md](references/patterns/ADD.md). Use a photograph only when the user asked for grain that a pattern cannot draw. Screens take a source plate when one exists under `sources/`.
 
 After create, `resolve` the key and report the variant ids and map paths. If the user wants to see it, `preview` then tell them the URL.
 
@@ -106,7 +107,8 @@ After create, `resolve` the key and report the variant ids and map paths. If the
 
 ## Never
 
-- Read or edit `src/`, `themes/*/theme.json`, or map PNGs.
+- Edit `themes/*/theme.json` or map PNGs by hand.
+- Read `src/` except the files named in [references/patterns/ADD.md](references/patterns/ADD.md) when adding a pattern kind.
 - Call ComfyUI, curl, or the Vite URL to create materials.
 - Treat one PNG as the whole material.
 - Invent roughness below 0.45 on a dry non-glass surface, or metallic other than 0 or 1.

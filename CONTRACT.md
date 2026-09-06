@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.16.25. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.26. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -197,7 +197,7 @@ Optional `pattern.response` follows [SurfaceResponse](schema/surface-response.sc
 
 One mask interpolates roughness toward the authored damp value, darkens basecolor and reduces relief around its neutral plane. It adds no light, reflection image, structural marks, height pooling or emission. Consumers read the absolute maps normally, with scalar factors 1; the entry's fallback factor remains dry. Dry regions dominate and roughness never falls below the authored target, within PNG quantization.
 
-Pattern kinds, what each draws and which params it reads: [schema/pattern-kinds.json](schema/pattern-kinds.json). `pbrforge patterns` prints `{ kinds, count }`. The create-request `pattern.kind` enum is the same set.
+Pattern kinds, what each draws and which params it reads: [schema/pattern-kinds.json](schema/pattern-kinds.json). `pbrforge patterns` prints `{ kinds, count }`. Each kind's `detail` path is a deeper drawer note. The create-request `pattern.kind` enum is the same set. How to add a kind: [skills/pbrforge/references/patterns/ADD.md](skills/pbrforge/references/patterns/ADD.md).
 
 Inside a puddle the surface goes flat, dark and damp: one level over the asphalt, so the normal map is unbroken there, and roughness 0.5, the same a wheel track wears to, so a lamp lands on it as a soft reflection. `wet` moves the waterline, 0 leaving it dry and 0.5 flooding about half the tile; the mask is two octaves of the same wrapping lattice as the asphalt, so puddles tile with the road they sit in. A lane's tracks darken the asphalt by up to 35 percent and pull its roughness toward the same 0.5 by `wear`, breathing along the run on the lane's own lattice.
 

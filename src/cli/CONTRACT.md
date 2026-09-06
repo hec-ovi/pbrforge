@@ -24,7 +24,7 @@ Exit 0 on ok, 2 on `E_USAGE`, 1 on any other error. Closed error codes are the p
 | `help` | `verbs` |
 | `resolve <key>` | `entry` |
 | `list [--theme --kind --tier]` | `keys`, `count` |
-| `patterns` | `kinds` (`kind`, `draws`, `reads`), `count` |
+| `patterns` | `kinds` (`kind`, `draws`, `reads`, `detail`), `count` |
 | `create <request.json> [--overwrite] [--native]` | `created`, `skipped` (batch skips `E_KEY_EXISTS`) |
 | `refinish <requests.json>` | `results` |
 | `rebrand --theme --businesses` | `branded` |

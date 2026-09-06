@@ -25,6 +25,32 @@ npm run build
 
 `npm run create` also takes an array of requests and skips keys that already exist, so a batch is resumable.
 
+## Patterns
+
+`npm run pbrforge -- patterns` prints every procedural create kind. Agents list with that verb, then read `data.kinds[].detail` for one drawer.
+
+- `mineral` continuous aggregate (street-paving-body)
+- `aggregate` coarser stone in binder
+- `paving` mineral grain under optional panels
+- `concrete` clouds, cast traces, pores, optional panels
+- `noise` mottling, wall to asphalt
+- `lane` asphalt plus wheel tracks
+- `puddle` noise field with damp pools
+- `hexagon` hex grid
+- `panel-grid` inset panels
+- `slab` flush slabs, narrow groove
+- `stripe` bands on one axis
+- `two-tone` one split, trim line
+- `grille` AC condenser (rings, spokes, fan)
+- `lamp` fixture housing and lens
+- `glyph-atlas` letter sheet
+- `water` tiled waves
+- `window-grime` translucent runoff decal
+- `incident-blood` directional pool decal
+- `incident-tyre` tyre-transfer decal
+
+Catalog: [schema/pattern-kinds.json](schema/pattern-kinds.json). How a drawer is sampled: [skills/pbrforge/references/patterns/MODEL.md](skills/pbrforge/references/patterns/MODEL.md). Add a kind: [skills/pbrforge/references/patterns/ADD.md](skills/pbrforge/references/patterns/ADD.md).
+
 ## Agent skill
 
 Local agents install the pack and drive the toolkit with verbs. Transport is a shell call, not a server.

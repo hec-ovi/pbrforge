@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.26: pattern kinds have a fat-skill catalog; agents list with pbrforge patterns then read one detail file.
+
 0.16.25: pbrforge patterns lists every procedural create kind.
 
 0.16.24: switching texture channels keeps the current pan and zoom.

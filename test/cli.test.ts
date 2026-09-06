@@ -37,13 +37,17 @@ describe('pbrforge CLI', () => {
     const envelope = await run(['patterns']);
     expect(envelope.ok).toBe(true);
     if (!envelope.ok) return;
-    const kinds = envelope.data.kinds as { kind: string; draws: string; reads: string }[];
+    const kinds = envelope.data.kinds as { kind: string; draws: string; reads: string; detail: string }[];
     const schema = JSON.parse(readFileSync(join(repoRoot, 'schema/create-request.schema.json'), 'utf8')) as {
       properties: { pattern: { properties: { kind: { enum: string[] } } } };
     };
     expect(kinds.map((item) => item.kind)).toEqual(schema.properties.pattern.properties.kind.enum);
     expect(envelope.data.count).toBe(kinds.length);
     expect(kinds[0]?.draws).toBeTruthy();
+    for (const item of kinds) {
+      expect(item.detail).toMatch(/^skills\/pbrforge\/references\/patterns\/.+\.md$/);
+      expect(readFileSync(join(repoRoot, item.detail), 'utf8').length).toBeGreaterThan(40);
+    }
   });
 
   it('resolves a shipped key and lists by kind', async () => {
