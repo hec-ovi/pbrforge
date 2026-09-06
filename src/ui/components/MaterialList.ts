@@ -84,10 +84,6 @@ export class MaterialList {
       }
 
       this.allRows = rows;
-      for (const row of rows) {
-        this.expandedNodes.add(row.theme);
-        this.expandedNodes.add(`${row.theme}/${row.kind}`);
-      }
       this.applyFilter();
     } catch (cause) {
       throw new PreviewError('E_DATABASE_UNAVAILABLE', 'material database could not be loaded', cause);
@@ -149,14 +145,14 @@ export class MaterialList {
 
     for (const [themeName, kindMap] of tree.entries()) {
       const themeOpen = this.expandedNodes.has(themeName) || Boolean(this.currentSearch);
-      const themeHeader = this.nodeHeader('tree-node-theme', themeName, themeOpen);
+      const themeHeader = this.nodeHeader('tree-node-theme', themeName, themeName, themeOpen);
       const { inner: themeInner, wrap: themeChildren } = this.childrenWrap(themeOpen);
       themeHeader.addEventListener('click', () => this.toggleNode(themeName, themeHeader, themeChildren));
 
       for (const [kindName, rows] of kindMap.entries()) {
         const kindKey = `${themeName}/${kindName}`;
         const kindOpen = this.expandedNodes.has(kindKey) || Boolean(this.currentSearch);
-        const kindHeader = this.nodeHeader('tree-node-kind', kindName, kindOpen, String(rows.length));
+        const kindHeader = this.nodeHeader('tree-node-kind', kindName, kindKey, kindOpen, String(rows.length));
         const { inner: kindInner, wrap: kindChildren } = this.childrenWrap(kindOpen);
         kindHeader.addEventListener('click', () => this.toggleNode(kindKey, kindHeader, kindChildren));
 
@@ -174,7 +170,13 @@ export class MaterialList {
     }
   }
 
-  private nodeHeader(kindClass: string, title: string, expanded: boolean, count?: string): HTMLButtonElement {
+  private nodeHeader(
+    kindClass: string,
+    title: string,
+    key: string,
+    expanded: boolean,
+    count?: string,
+  ): HTMLButtonElement {
     const kids: (HTMLElement | string)[] = [
       el('span', { class: 'tree-caret', 'aria-hidden': 'true' }),
       el('span', { class: 'tree-node-title' }, [title]),
@@ -186,6 +188,7 @@ export class MaterialList {
         type: 'button',
         class: `tree-node-header ${kindClass} ${expanded ? 'expanded' : 'collapsed'}`,
         'aria-expanded': String(expanded),
+        'data-node-key': key,
       },
       kids,
     ) as HTMLButtonElement;
@@ -199,13 +202,30 @@ export class MaterialList {
 
   private toggleNode(key: string, header: HTMLElement, children: HTMLElement): void {
     const next = !this.expandedNodes.has(key);
-    if (next) this.expandedNodes.add(key);
+    this.setNodeOpen(key, header, children, next);
+    if (next) this.expandDescendants(children);
+  }
+
+  private setNodeOpen(key: string, header: HTMLElement, children: HTMLElement, open: boolean): void {
+    if (open) this.expandedNodes.add(key);
     else this.expandedNodes.delete(key);
-    header.classList.toggle('expanded', next);
-    header.classList.toggle('collapsed', !next);
-    header.setAttribute('aria-expanded', String(next));
-    children.classList.toggle('expanded', next);
-    children.classList.toggle('collapsed', !next);
+    header.classList.toggle('expanded', open);
+    header.classList.toggle('collapsed', !open);
+    header.setAttribute('aria-expanded', String(open));
+    children.classList.toggle('expanded', open);
+    children.classList.toggle('collapsed', !open);
+  }
+
+  private expandDescendants(wrap: HTMLElement): void {
+    const inner = wrap.querySelector(':scope > .tree-children-inner');
+    if (!inner) return;
+    for (const header of inner.querySelectorAll(':scope > .tree-node-header')) {
+      const kids = header.nextElementSibling;
+      const childKey = header.getAttribute('data-node-key');
+      if (!(header instanceof HTMLElement) || !(kids instanceof HTMLElement) || !childKey) continue;
+      this.setNodeOpen(childKey, header, kids, true);
+      this.expandDescendants(kids);
+    }
   }
 
   private leafButton(row: MaterialRow): HTMLButtonElement {

@@ -7,7 +7,7 @@ Purpose: presents the material database as a searchable list, a PBR sphere and a
 - `new PreviewView(viewer?: SphereViewer)` builds the workspace from [preview-view-layout schema](../../schema/preview-view-layout.schema.json). `viewer` supplies the WebGL canvas and render controls.
 - `MaterialList.load(fetcher = fetch)` reads `GET /api/themes` as `string[]`, then `GET /themes/<theme>/theme.json` as [ThemeIndex](../../schema/theme-index.schema.json).
 - `SphereViewer.load(theme, entry, variantIndex = 0, repeat = 2)` renders a [MaterialEntry](../../schema/material-entry.schema.json). `variantIndex` selects one variant; `repeat` controls tiled maps.
-- Search text filters the visible material rows. The list is a theme/kind/tier tree; headers collapse and expand with a height animation. Toolbar inputs select variant, repeat, lighting, background, spin and wireframe.
+- Search text filters the visible material rows. The list is a theme/kind/tier tree; headers start collapsed and expand with a height animation. Opening a header also opens every nested header under it. Toolbar inputs select variant, repeat, lighting, background, spin and wireframe.
 
 ## Out and events
 

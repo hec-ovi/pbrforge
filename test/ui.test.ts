@@ -41,11 +41,19 @@ describe('preview contract', () => {
     expect(getByRole(view.root, 'separator', { name: 'Resize sidebar' })).toBeTruthy();
     expect(getByRole(view.root, 'separator', { name: 'Resize inspector' })).toBeTruthy();
 
+    const themeHeader = view.root.querySelector('.tree-node-theme') as HTMLButtonElement;
     const kindHeader = view.root.querySelector('.tree-node-kind') as HTMLButtonElement;
+    expect(themeHeader.getAttribute('aria-expanded')).toBe('false');
+    expect(kindHeader.getAttribute('aria-expanded')).toBe('false');
+    fireEvent.click(themeHeader);
+    expect(themeHeader.getAttribute('aria-expanded')).toBe('true');
     expect(kindHeader.getAttribute('aria-expanded')).toBe('true');
     fireEvent.click(kindHeader);
     expect(kindHeader.getAttribute('aria-expanded')).toBe('false');
     expect(kindHeader.nextElementSibling?.classList.contains('collapsed')).toBe(true);
+    fireEvent.click(themeHeader);
+    fireEvent.click(themeHeader);
+    expect(kindHeader.getAttribute('aria-expanded')).toBe('true');
 
     fireEvent.change(getByRole(view.root, 'combobox', { name: 'variant' }), { target: { value: '1' } });
     expect(viewer.load).toHaveBeenLastCalledWith('cyberpunk', entry, 1, 2);
