@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.12: sidebar tree collapse animates open and closed.
+
 0.16.11: preview drops duplicate list/inspector copies, hidden filter selects, HUD overlay, and unused CSS.
 
 0.16.10: sidebar tree collapse works; each material card shows 32px thumbs of its maps.

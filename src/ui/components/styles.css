@@ -431,7 +431,7 @@ html, body {
   border-width: 4px 0 4px 6px;
   border-color: transparent transparent transparent var(--text-muted);
   flex-shrink: 0;
-  transition: transform var(--transition-med);
+  transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .tree-node-header.expanded .tree-caret {
@@ -462,23 +462,36 @@ html, body {
 }
 
 .tree-children {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows var(--transition-med);
   flex: 0 0 auto;
   width: 100%;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.34s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .tree-children.expanded {
-  grid-template-rows: 1fr;
+  height: calc-size(auto, size);
 }
 
-.tree-children.collapsed {
-  grid-template-rows: 0fr;
+@supports not (height: calc-size(auto, size)) {
+  .tree-children {
+    display: grid;
+    grid-template-rows: 0fr;
+    height: auto;
+    transition: grid-template-rows 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .tree-children.expanded {
+    grid-template-rows: 1fr;
+    height: auto;
+  }
+
+  .tree-children-inner {
+    min-height: 0;
+  }
 }
 
 .tree-children-inner {
-  min-height: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
