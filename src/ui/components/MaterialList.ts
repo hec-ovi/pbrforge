@@ -240,17 +240,28 @@ export class MaterialList {
         ],
       );
 
+      const themeChildrenInner = el('div', { class: 'tree-children-inner' });
       const themeChildren = el('div', {
-        class: `tree-children ${isThemeExpanded ? 'visible' : 'hidden'}`,
-      });
+        class: `tree-children ${isThemeExpanded ? 'expanded' : 'collapsed'}`,
+      }, [themeChildrenInner]);
 
       themeHeader.addEventListener('click', () => {
-        if (this.expandedNodes.has(themeName)) {
+        const expanded = this.expandedNodes.has(themeName);
+        if (expanded) {
           this.expandedNodes.delete(themeName);
+          themeHeader.classList.remove('expanded');
+          themeHeader.classList.add('collapsed');
+          themeHeader.setAttribute('aria-expanded', 'false');
+          themeChildren.classList.remove('expanded');
+          themeChildren.classList.add('collapsed');
         } else {
           this.expandedNodes.add(themeName);
+          themeHeader.classList.add('expanded');
+          themeHeader.classList.remove('collapsed');
+          themeHeader.setAttribute('aria-expanded', 'true');
+          themeChildren.classList.add('expanded');
+          themeChildren.classList.remove('collapsed');
         }
-        this.applyFilter();
       });
 
       for (const [kindName, rows] of kindMap.entries()) {
@@ -265,23 +276,34 @@ export class MaterialList {
             'aria-expanded': String(isKindExpanded),
           },
           [
-            el('span', { class: 'tree-caret' }, [isKindExpanded ? '▼' : '▶']),
+            el('span', { class: 'tree-caret' }, ['▶']),
             el('span', { class: 'tree-node-title' }, [kindName]),
             el('span', { class: 'tree-node-count' }, [String(rows.length)]),
           ],
         );
 
+        const kindChildrenInner = el('div', { class: 'tree-children-inner' });
         const kindChildren = el('div', {
-          class: `tree-children ${isKindExpanded ? 'visible' : 'hidden'}`,
-        });
+          class: `tree-children ${isKindExpanded ? 'expanded' : 'collapsed'}`,
+        }, [kindChildrenInner]);
 
         kindHeader.addEventListener('click', () => {
-          if (this.expandedNodes.has(kindKey)) {
+          const expanded = this.expandedNodes.has(kindKey);
+          if (expanded) {
             this.expandedNodes.delete(kindKey);
+            kindHeader.classList.remove('expanded');
+            kindHeader.classList.add('collapsed');
+            kindHeader.setAttribute('aria-expanded', 'false');
+            kindChildren.classList.remove('expanded');
+            kindChildren.classList.add('collapsed');
           } else {
             this.expandedNodes.add(kindKey);
+            kindHeader.classList.add('expanded');
+            kindHeader.classList.remove('collapsed');
+            kindHeader.setAttribute('aria-expanded', 'true');
+            kindChildren.classList.add('expanded');
+            kindChildren.classList.remove('collapsed');
           }
-          this.applyFilter();
         });
 
         for (const row of rows) {
@@ -307,10 +329,10 @@ export class MaterialList {
             this.selectRow(row);
           });
 
-          kindChildren.append(item);
+          kindChildrenInner.append(item);
         }
 
-        themeChildren.append(kindHeader, kindChildren);
+        themeChildrenInner.append(kindHeader, kindChildren);
       }
 
       this.listContainer.append(themeHeader, themeChildren);

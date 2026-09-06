@@ -1,44 +1,44 @@
 :root {
   --bg-root: #09090c;
-  --bg-sidebar: #101015;
-  --bg-panel: #13131a;
-  --bg-surface: #181822;
-  --bg-surface-hover: #20202c;
-  --bg-surface-active: #272737;
-  --bg-input: #0d0d12;
+  --bg-sidebar: #0f1015;
+  --bg-panel: #13141b;
+  --bg-surface: #181924;
+  --bg-surface-hover: #212232;
+  --bg-surface-active: #292b3e;
+  --bg-input: #0b0c10;
 
-  --border-subtle: #1c1c24;
-  --border-default: #2a2a38;
-  --border-hover: #404054;
+  --border-subtle: #1e202c;
+  --border-default: #2d3042;
+  --border-hover: #454964;
   --border-accent: #00d2ff;
 
-  --text-primary: #f2f2f7;
-  --text-secondary: #9a9ab0;
-  --text-muted: #5e5e72;
+  --text-primary: #f4f5f8;
+  --text-secondary: #a3a6bd;
+  --text-muted: #6b6f8a;
   --text-accent: #00d2ff;
 
   --accent: #00d2ff;
   --accent-muted: rgba(0, 210, 255, 0.12);
   --accent-glow: rgba(0, 210, 255, 0.3);
 
-  --tier-poor: #d97736;
-  --tier-poor-bg: rgba(217, 119, 54, 0.12);
-  --tier-medium: #4a9cd6;
-  --tier-medium-bg: rgba(74, 156, 214, 0.12);
-  --tier-rich: #e5b842;
-  --tier-rich-bg: rgba(229, 184, 66, 0.12);
-  --tier-luxury: #b062f7;
-  --tier-luxury-bg: rgba(176, 98, 247, 0.12);
+  --tier-poor: #e07a38;
+  --tier-poor-bg: rgba(224, 122, 56, 0.14);
+  --tier-medium: #54a5e5;
+  --tier-medium-bg: rgba(84, 165, 229, 0.14);
+  --tier-rich: #f0c24b;
+  --tier-rich-bg: rgba(240, 194, 75, 0.14);
+  --tier-luxury: #bb6dfb;
+  --tier-luxury-bg: rgba(187, 109, 251, 0.14);
 
   --status-info: #00d2ff;
   --status-success: #10b981;
   --status-warning: #f59e0b;
   --status-error: #ef4444;
 
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Monaco, Consolas, monospace;
   --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --transition-fast: 0.12s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-med: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.14s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-med: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -58,8 +58,8 @@ html, body {
   background: var(--bg-root);
   color: var(--text-primary);
   font-family: var(--font-ui);
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -160,9 +160,9 @@ html, body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 10px;
+  padding: 6px 12px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -233,18 +233,18 @@ html, body {
 }
 
 .btn-icon {
-  padding: 4px 7px;
-  min-width: 24px;
+  padding: 5px 8px;
+  min-width: 26px;
 }
 
 .btn-sm {
-  padding: 3px 8px;
-  font-size: 10px;
+  padding: 4px 10px;
+  font-size: 11px;
 }
 
 .btn-xs {
-  padding: 2px 6px;
-  font-size: 9px;
+  padding: 3px 8px;
+  font-size: 10px;
 }
 
 .input-search, .select-filter, .select-control {
@@ -253,15 +253,15 @@ html, body {
   border: 1px solid var(--border-default);
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 11px;
-  padding: 5px 8px;
+  font-size: 12px;
+  padding: 7px 10px;
   outline: none;
   transition: border-color var(--transition-fast), background var(--transition-fast);
 }
 
 .input-search:focus, .select-filter:focus, .select-control:focus {
   border-color: var(--accent);
-  background: #111118;
+  background: #11121a;
 }
 
 .select-filter, .select-control {
@@ -275,7 +275,7 @@ html, body {
 .select-filter option, .select-control option {
   background: var(--bg-sidebar);
   color: var(--text-primary);
-  padding: 4px;
+  padding: 6px;
 }
 
 /* ==========================================================================
@@ -283,7 +283,7 @@ html, body {
    ========================================================================== */
 .preview-workspace {
   display: grid;
-  grid-template-columns: 280px 1fr auto;
+  grid-template-columns: 310px 1fr auto;
   width: 100vw;
   height: 100vh;
   background: var(--bg-root);
@@ -311,18 +311,18 @@ html, body {
 }
 
 .list-header {
-  padding: 12px 10px 8px;
+  padding: 14px 12px 10px;
   border-bottom: 1px solid var(--border-subtle);
   background: var(--bg-sidebar);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .list-title-row {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .sidebar-tag {
@@ -330,14 +330,14 @@ html, body {
   color: var(--accent);
   border: 1px solid var(--accent);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
-  padding: 1px 4px;
+  padding: 2px 5px;
   line-height: 1;
 }
 
 .sidebar-title, .sidebar h1 {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   margin: 0;
@@ -348,8 +348,8 @@ html, body {
 .list-count-badge {
   margin-left: auto;
   font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--text-muted);
+  font-size: 11px;
+  color: var(--text-secondary);
 }
 
 .filter-bar {
@@ -388,13 +388,13 @@ html, body {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: transparent;
   border: none;
   color: var(--text-secondary);
-  padding: 5px 6px;
+  padding: 6px 8px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
@@ -408,30 +408,41 @@ html, body {
 }
 
 .tree-node-theme {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--text-primary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 6px 6px;
+  letter-spacing: 0.06em;
+  padding: 8px 8px;
   border-bottom: 1px solid var(--border-subtle);
   margin-top: 4px;
 }
 
 .tree-node-kind {
-  padding-left: 14px;
-  font-size: 11px;
-  color: #a0aec0;
+  padding-left: 16px;
+  font-size: 12px;
+  color: var(--text-secondary);
 }
 
 .tree-caret {
-  font-size: 8px;
+  font-size: 9px;
   color: var(--text-muted);
-  width: 10px;
+  width: 12px;
+  height: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-med);
+  will-change: transform;
+}
+
+.tree-node-header.expanded .tree-caret {
+  transform: rotate(90deg);
+  color: var(--accent);
+}
+
+.tree-node-header.collapsed .tree-caret {
+  transform: rotate(0deg);
 }
 
 .tree-node-header:hover .tree-caret {
@@ -440,25 +451,35 @@ html, body {
 
 .tree-node-title {
   flex: 1;
+  font-weight: 600;
 }
 
 .tree-node-count {
-  font-size: 9px;
+  font-size: 10px;
   color: var(--text-muted);
   background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  padding: 1px 4px;
+  border: 1px solid var(--border-default);
+  padding: 2px 5px;
   line-height: 1;
 }
 
+/* Highly efficient GPU/composite-friendly animated collapse using CSS grid */
 .tree-children {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows var(--transition-med);
+  overflow: hidden;
+}
+
+.tree-children.collapsed {
+  grid-template-rows: 0fr;
+}
+
+.tree-children-inner {
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 1px;
-}
-
-.tree-children.hidden {
-  display: none;
 }
 
 /* Tree Leaves (Individual Materials) */
@@ -466,36 +487,39 @@ html, body {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 6px 4px 26px;
+  gap: 9px;
+  padding: 6px 8px 6px 30px;
   background: transparent;
   border: 1px solid transparent;
   border-left: 2px solid transparent;
   color: var(--text-secondary);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   cursor: pointer;
   text-align: left;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
   outline: none;
 }
 
 .tree-leaf-item:hover {
   background: var(--bg-surface);
   color: var(--text-primary);
+  border-color: var(--border-subtle);
+  border-left-color: var(--border-hover);
 }
 
 .tree-leaf-item.active {
-  background: rgba(254, 215, 170, 0.12);
-  border-color: rgba(254, 215, 170, 0.25);
+  background: var(--accent-muted);
+  border-color: rgba(0, 210, 255, 0.25);
   border-left: 2px solid var(--accent);
   color: var(--accent);
 }
 
 .tree-bullet {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-muted);
   line-height: 1;
+  transition: color var(--transition-fast);
 }
 
 .tree-leaf-item.active .tree-bullet {
@@ -505,11 +529,12 @@ html, body {
 .tree-leaf-name {
   flex: 1;
   text-transform: capitalize;
+  font-weight: 500;
 }
 
 .tree-leaf-item .badge {
-  font-size: 8px;
-  padding: 1px 3px;
+  font-size: 9px;
+  padding: 2px 5px;
 }
 
 .material-card, .material-list button {
@@ -625,31 +650,31 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
-  height: 42px;
-  background: rgba(16, 16, 21, 0.85);
-  backdrop-filter: blur(8px);
+  height: 46px;
+  background: rgba(15, 16, 21, 0.88);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 0 14px;
   z-index: 20;
-  gap: 8px;
+  gap: 10px;
 }
 
 .stage-toolbar-left {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   min-width: 0;
 }
 
 .stage-breadcrumb {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text-primary);
   white-space: nowrap;
@@ -658,31 +683,31 @@ html, body {
 }
 
 .stage-indicator-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background: var(--accent);
-  box-shadow: 0 0 6px var(--accent);
+  box-shadow: 0 0 8px var(--accent);
 }
 
 .stage-toolbar-right {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   flex-wrap: nowrap;
 }
 
 .control-group {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   background: var(--bg-surface);
   border: 1px solid var(--border-default);
-  padding: 2px 6px;
+  padding: 3px 8px;
 }
 
 .control-label {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: 0.05em;
@@ -692,8 +717,8 @@ html, body {
 .control-group .select-control {
   border: none;
   background: transparent;
-  padding: 2px 14px 2px 2px;
-  font-size: 10px;
+  padding: 3px 16px 3px 3px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--text-primary);
   width: auto;
@@ -702,10 +727,10 @@ html, body {
 /* Stage HUD Corner Reticles */
 .stage-hud-overlay {
   position: absolute;
-  top: 42px;
+  top: 46px;
   left: 0;
   right: 0;
-  bottom: 24px;
+  bottom: 26px;
   pointer-events: none;
   overflow: hidden;
 }
@@ -744,15 +769,15 @@ html, body {
 
 /* Footer Status Bar */
 .stage-footer-bar {
-  height: 24px;
+  height: 26px;
   background: var(--bg-sidebar);
   border-top: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 12px;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-muted);
   z-index: 20;
 }
@@ -766,7 +791,7 @@ html, body {
 }
 
 .stage-credits {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--border-hover);
@@ -788,12 +813,12 @@ html, body {
 }
 
 .inspector-panel.open {
-  width: 320px;
+  width: 340px;
 }
 
 .inspector-header {
-  height: 42px;
-  padding: 0 12px;
+  height: 46px;
+  padding: 0 14px;
   border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
@@ -804,7 +829,7 @@ html, body {
 .inspector-title-group {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .inspector-tag {
@@ -812,13 +837,13 @@ html, body {
   color: var(--accent);
   border: 1px solid var(--accent);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
-  padding: 1px 4px;
+  padding: 2px 5px;
 }
 
 .inspector-title {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   margin: 0;
@@ -829,27 +854,27 @@ html, body {
 .inspector-actions {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .inspector-content {
   flex: 1;
   overflow-y: auto;
-  padding: 12px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .inspector-section {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .inspector-section-label {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -860,15 +885,15 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
+  gap: 8px;
   background: var(--bg-input);
   border: 1px solid var(--border-default);
-  padding: 6px 8px;
+  padding: 8px 10px;
 }
 
 .inspector-key-text {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--accent);
   word-break: break-all;
@@ -877,27 +902,27 @@ html, body {
 .badge-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 6px;
 }
 
 .telemetry-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4px;
+  gap: 6px;
 }
 
 .metric-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  padding: 5px 8px;
+  padding: 6px 10px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .metric-label {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--text-muted);
@@ -905,7 +930,7 @@ html, body {
 
 .metric-val {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -913,20 +938,20 @@ html, body {
 .param-rows {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .param-row {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .param-meta {
   display: flex;
   justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .param-label {
@@ -939,7 +964,7 @@ html, body {
 }
 
 .param-meter-bg {
-  height: 4px;
+  height: 5px;
   background: var(--bg-input);
   border: 1px solid var(--border-subtle);
   overflow: hidden;
@@ -955,17 +980,17 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3px 0;
+  padding: 4px 0;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .param-badge {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--text-primary);
-  padding: 1px 4px;
+  padding: 2px 5px;
   background: var(--bg-surface);
   border: 1px solid var(--border-default);
 }
@@ -977,16 +1002,16 @@ html, body {
 .channel-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .channel-item {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  padding: 6px 8px;
+  padding: 7px 10px;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
   transition: border-color var(--transition-fast);
 }
 
@@ -1001,14 +1026,14 @@ html, body {
 .channel-header {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .channel-badge {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 700;
-  padding: 1px 3px;
+  padding: 2px 4px;
   line-height: 1;
 }
 
@@ -1026,21 +1051,21 @@ html, body {
 
 .channel-name {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .channel-desc {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 9px;
   color: var(--text-muted);
   margin-left: auto;
 }
 
 .channel-path {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   color: var(--text-secondary);
   white-space: nowrap;
   overflow: hidden;
