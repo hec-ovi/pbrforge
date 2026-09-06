@@ -425,20 +425,18 @@ html, body {
 }
 
 .tree-caret {
-  font-size: 9px;
-  color: var(--text-muted);
-  width: 12px;
-  height: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent var(--text-muted);
+  flex-shrink: 0;
   transition: transform var(--transition-med);
-  will-change: transform;
 }
 
 .tree-node-header.expanded .tree-caret {
   transform: rotate(90deg);
-  color: var(--accent);
+  border-left-color: var(--accent);
 }
 
 .tree-node-header.collapsed .tree-caret {
@@ -446,7 +444,7 @@ html, body {
 }
 
 .tree-node-header:hover .tree-caret {
-  color: var(--accent);
+  border-left-color: var(--accent);
 }
 
 .tree-node-title {
@@ -463,12 +461,16 @@ html, body {
   line-height: 1;
 }
 
-/* Highly efficient GPU/composite-friendly animated collapse using CSS grid */
 .tree-children {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: 0fr;
   transition: grid-template-rows var(--transition-med);
-  overflow: hidden;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.tree-children.expanded {
+  grid-template-rows: 1fr;
 }
 
 .tree-children.collapsed {
@@ -477,28 +479,50 @@ html, body {
 
 .tree-children-inner {
   min-height: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 1px;
 }
 
-/* Tree Leaves (Individual Materials) */
 .tree-leaf-item {
   width: 100%;
   display: flex;
-  align-items: center;
-  gap: 9px;
-  padding: 6px 8px 6px 30px;
-  background: transparent;
-  border: 1px solid transparent;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  padding: 8px 8px 8px 28px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   border-left: 2px solid transparent;
   color: var(--text-secondary);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   text-align: left;
   transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
   outline: none;
+}
+
+.tree-leaf-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.tree-leaf-thumb {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  image-rendering: pixelated;
+  border: 1px solid var(--border-default);
+  background: var(--bg-input);
+}
+
+.tree-leaf-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .tree-leaf-item:hover {

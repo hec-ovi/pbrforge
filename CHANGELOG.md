@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.10: sidebar tree collapse works; each material card shows 32px thumbs of its maps.
+
 0.16.9: preview inspector shows map thumbnails and downloads the selected variant; duplicate widget copies removed.
 
 0.16.8: create --native imports a PNG from the agent's image tool and never calls ComfyUI.

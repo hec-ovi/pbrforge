@@ -31,8 +31,15 @@ describe('preview contract', () => {
 
     fireEvent.click(getByText(view.root, 'cyberpunk/wall/poor'));
     expect(viewer.load).toHaveBeenCalledWith('cyberpunk', entry, 0, 2);
+    expect(view.root.querySelectorAll('.tree-leaf-item img.tree-leaf-thumb')).toHaveLength(4);
     expect(view.root.querySelectorAll('img.channel-thumb')).toHaveLength(4);
     expect(getByRole(view.root, 'button', { name: 'Export material' })).toBeTruthy();
+
+    const kindHeader = view.root.querySelector('.tree-node-kind') as HTMLButtonElement;
+    expect(kindHeader.getAttribute('aria-expanded')).toBe('true');
+    fireEvent.click(kindHeader);
+    expect(kindHeader.getAttribute('aria-expanded')).toBe('false');
+    expect(kindHeader.nextElementSibling?.classList.contains('collapsed')).toBe(true);
 
     fireEvent.change(getByRole(view.root, 'combobox', { name: 'variant' }), { target: { value: '1' } });
     expect(viewer.load).toHaveBeenLastCalledWith('cyberpunk', entry, 1, 2);

@@ -225,118 +225,98 @@ export class MaterialList {
     }
 
     for (const [themeName, kindMap] of tree.entries()) {
-      const isThemeExpanded = this.expandedNodes.has(themeName) || Boolean(this.currentSearch);
-
-      const themeHeader = el(
-        'button',
-        {
-          type: 'button',
-          class: `tree-node-header tree-node-theme ${isThemeExpanded ? 'expanded' : 'collapsed'}`,
-          'aria-expanded': String(isThemeExpanded),
-        },
-        [
-          el('span', { class: 'tree-caret' }, [isThemeExpanded ? '▼' : '▶']),
-          el('span', { class: 'tree-node-title' }, [themeName]),
-        ],
-      );
-
-      const themeChildrenInner = el('div', { class: 'tree-children-inner' });
-      const themeChildren = el('div', {
-        class: `tree-children ${isThemeExpanded ? 'expanded' : 'collapsed'}`,
-      }, [themeChildrenInner]);
-
-      themeHeader.addEventListener('click', () => {
-        const expanded = this.expandedNodes.has(themeName);
-        if (expanded) {
-          this.expandedNodes.delete(themeName);
-          themeHeader.classList.remove('expanded');
-          themeHeader.classList.add('collapsed');
-          themeHeader.setAttribute('aria-expanded', 'false');
-          themeChildren.classList.remove('expanded');
-          themeChildren.classList.add('collapsed');
-        } else {
-          this.expandedNodes.add(themeName);
-          themeHeader.classList.add('expanded');
-          themeHeader.classList.remove('collapsed');
-          themeHeader.setAttribute('aria-expanded', 'true');
-          themeChildren.classList.add('expanded');
-          themeChildren.classList.remove('collapsed');
-        }
-      });
+      const themeOpen = this.expandedNodes.has(themeName) || Boolean(this.currentSearch);
+      const themeHeader = this.nodeHeader('tree-node-theme', themeName, themeOpen);
+      const { inner: themeInner, wrap: themeChildren } = this.childrenWrap(themeOpen);
+      themeHeader.addEventListener('click', () => this.toggleNode(themeName, themeHeader, themeChildren));
 
       for (const [kindName, rows] of kindMap.entries()) {
         const kindKey = `${themeName}/${kindName}`;
-        const isKindExpanded = this.expandedNodes.has(kindKey) || Boolean(this.currentSearch);
-
-        const kindHeader = el(
-          'button',
-          {
-            type: 'button',
-            class: `tree-node-header tree-node-kind ${isKindExpanded ? 'expanded' : 'collapsed'}`,
-            'aria-expanded': String(isKindExpanded),
-          },
-          [
-            el('span', { class: 'tree-caret' }, ['▶']),
-            el('span', { class: 'tree-node-title' }, [kindName]),
-            el('span', { class: 'tree-node-count' }, [String(rows.length)]),
-          ],
-        );
-
-        const kindChildrenInner = el('div', { class: 'tree-children-inner' });
-        const kindChildren = el('div', {
-          class: `tree-children ${isKindExpanded ? 'expanded' : 'collapsed'}`,
-        }, [kindChildrenInner]);
-
-        kindHeader.addEventListener('click', () => {
-          const expanded = this.expandedNodes.has(kindKey);
-          if (expanded) {
-            this.expandedNodes.delete(kindKey);
-            kindHeader.classList.remove('expanded');
-            kindHeader.classList.add('collapsed');
-            kindHeader.setAttribute('aria-expanded', 'false');
-            kindChildren.classList.remove('expanded');
-            kindChildren.classList.add('collapsed');
-          } else {
-            this.expandedNodes.add(kindKey);
-            kindHeader.classList.add('expanded');
-            kindHeader.classList.remove('collapsed');
-            kindHeader.setAttribute('aria-expanded', 'true');
-            kindChildren.classList.add('expanded');
-            kindChildren.classList.remove('collapsed');
-          }
-        });
+        const kindOpen = this.expandedNodes.has(kindKey) || Boolean(this.currentSearch);
+        const kindHeader = this.nodeHeader('tree-node-kind', kindName, kindOpen, String(rows.length));
+        const { inner: kindInner, wrap: kindChildren } = this.childrenWrap(kindOpen);
+        kindHeader.addEventListener('click', () => this.toggleNode(kindKey, kindHeader, kindChildren));
 
         for (const row of rows) {
-          const item = el(
-            'button',
-            {
-              type: 'button',
-              class: `tree-leaf-item ${this.activeRow === row ? 'active' : ''}`,
-              'data-key': row.entry.key,
-              title: row.entry.key,
-            },
-            [
-              el('span', { class: 'tree-bullet' }, ['•']),
-              el('span', { class: 'tree-leaf-name' }, [row.tier]),
-              el('span', { class: 'tree-leaf-fullkey visually-hidden' }, [row.entry.key]),
-              createBadge(row.entry.alignment.toUpperCase(), `badge-${row.entry.alignment}`),
-            ],
-          ) as HTMLButtonElement;
-
+          const item = this.leafButton(row);
           row.button = item;
-
-          item.addEventListener('click', () => {
-            this.selectRow(row);
-          });
-
-          kindChildrenInner.append(item);
+          item.addEventListener('click', () => this.selectRow(row));
+          kindInner.append(item);
         }
 
-        themeChildrenInner.append(kindHeader, kindChildren);
+        themeInner.append(kindHeader, kindChildren);
       }
 
       this.listContainer.append(themeHeader, themeChildren);
     }
+  }
+
+  private nodeHeader(kindClass: string, title: string, expanded: boolean, count?: string): HTMLButtonElement {
+    const kids: (HTMLElement | string)[] = [
+      el('span', { class: 'tree-caret', 'aria-hidden': 'true' }),
+      el('span', { class: 'tree-node-title' }, [title]),
+    ];
+    if (count !== undefined) kids.push(el('span', { class: 'tree-node-count' }, [count]));
+    return el(
+      'button',
+      {
+        type: 'button',
+        class: `tree-node-header ${kindClass} ${expanded ? 'expanded' : 'collapsed'}`,
+        'aria-expanded': String(expanded),
+      },
+      kids,
+    ) as HTMLButtonElement;
+  }
+
+  private childrenWrap(expanded: boolean): { inner: HTMLElement; wrap: HTMLElement } {
+    const inner = el('div', { class: 'tree-children-inner' });
+    const wrap = el('div', { class: `tree-children ${expanded ? 'expanded' : 'collapsed'}` }, [inner]);
+    return { inner, wrap };
+  }
+
+  private toggleNode(key: string, header: HTMLElement, children: HTMLElement): void {
+    const next = !this.expandedNodes.has(key);
+    if (next) this.expandedNodes.add(key);
+    else this.expandedNodes.delete(key);
+    header.classList.toggle('expanded', next);
+    header.classList.toggle('collapsed', !next);
+    header.setAttribute('aria-expanded', String(next));
+    children.classList.toggle('expanded', next);
+    children.classList.toggle('collapsed', !next);
+  }
+
+  private leafButton(row: MaterialRow): HTMLButtonElement {
+    const thumbs = el('div', { class: 'tree-leaf-thumbs' });
+    const maps = row.entry.variants[0]?.maps ?? {};
+    for (const rel of Object.values(maps)) {
+      if (!rel) continue;
+      thumbs.append(
+        el('img', {
+          class: 'tree-leaf-thumb',
+          src: `/themes/${row.theme}/${rel}`,
+          alt: '',
+          width: '32',
+          height: '32',
+        }),
+      );
+    }
+    return el(
+      'button',
+      {
+        type: 'button',
+        class: `tree-leaf-item ${this.activeRow === row ? 'active' : ''}`,
+        'data-key': row.entry.key,
+        title: row.entry.key,
+      },
+      [
+        thumbs,
+        el('div', { class: 'tree-leaf-meta' }, [
+          el('span', { class: 'tree-leaf-name' }, [row.tier]),
+          el('span', { class: 'tree-leaf-fullkey visually-hidden' }, [row.entry.key]),
+          createBadge(row.entry.alignment.toUpperCase(), `badge-${row.entry.alignment}`),
+        ]),
+      ],
+    ) as HTMLButtonElement;
   }
 
   selectRow(row: MaterialRow): void {
