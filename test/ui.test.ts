@@ -45,7 +45,9 @@ describe('preview contract', () => {
     fireEvent.pointerMove(stage, { clientX: 40, clientY: 25 });
     fireEvent.pointerUp(stage, { clientX: 40, clientY: 25 });
     expect(Number(mapImg.dataset.x)).toBe(30);
-    fireEvent.click(getByRole(dialog, 'button', { name: 'Reset view' }));
+    fireEvent.click(getByRole(dialog, 'button', { name: 'Actual size' }));
+    expect(Number(mapImg.dataset.scale)).toBe(1);
+    fireEvent.click(getByRole(dialog, 'button', { name: 'Fit view' }));
     fireEvent.wheel(stage, { deltaY: -120, clientX: 0, clientY: 0 });
     expect(Number(mapImg.dataset.scale)).toBeGreaterThan(1);
     fireEvent.keyDown(window, { key: 'Escape' });

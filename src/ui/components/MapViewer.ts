@@ -6,7 +6,7 @@ const ZOOM_MAX = 64;
 const ZOOM_STEP = 1.25;
 const WHEEL_STEP = 1.1;
 
-/** Full-size map preview: wheel zoom, drag pan, fit reset. */
+/** Full-size map preview: wheel zoom, drag pan, FIT and 100%. */
 export class MapViewer {
   private root?: HTMLElement;
   private stage?: HTMLElement;
@@ -45,10 +45,18 @@ export class MapViewer {
       label: 'FIT',
       variant: 'secondary',
       size: 'sm',
-      ariaLabel: 'Reset view',
+      ariaLabel: 'Fit view',
       onClick: () => this.fit(),
     });
     fit.className = 'btn btn-sm';
+    const actual = createSquareButton({
+      label: '100%',
+      variant: 'secondary',
+      size: 'sm',
+      ariaLabel: 'Actual size',
+      onClick: () => this.actual(),
+    });
+    actual.className = 'btn btn-sm';
     const closeBtn = createSquareButton({
       label: '✕',
       variant: 'secondary',
@@ -65,7 +73,7 @@ export class MapViewer {
       el('div', { class: 'map-viewer-bar' }, [
         el('span', { class: 'map-viewer-title' }, [name]),
         this.zoomLabel,
-        el('div', { class: 'map-viewer-actions' }, [zoomOut, zoomIn, fit, closeBtn]),
+        el('div', { class: 'map-viewer-actions' }, [zoomOut, zoomIn, fit, actual, closeBtn]),
       ]),
       this.stage,
     ]);
@@ -75,6 +83,7 @@ export class MapViewer {
       else if (event.key === '+' || event.key === '=') this.zoomCenter(ZOOM_STEP);
       else if (event.key === '-') this.zoomCenter(1 / ZOOM_STEP);
       else if (event.key === '0') this.fit();
+      else if (event.key === '1') this.actual();
     };
     this.onWheel = (event: WheelEvent) => {
       event.preventDefault();
@@ -158,6 +167,18 @@ export class MapViewer {
       this.tx = (sw - iw * this.scale) / 2;
       this.ty = (sh - ih * this.scale) / 2;
     }
+    this.apply();
+  }
+
+  private actual(): void {
+    if (!this.stage || !this.img) return;
+    const sw = this.stage.clientWidth;
+    const sh = this.stage.clientHeight;
+    const iw = this.img.naturalWidth || 1;
+    const ih = this.img.naturalHeight || 1;
+    this.scale = 1;
+    this.tx = (sw - iw) / 2;
+    this.ty = (sh - ih) / 2;
     this.apply();
   }
 
