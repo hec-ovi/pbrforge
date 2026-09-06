@@ -1,6 +1,5 @@
 import { el } from './el.js';
 import { createSquareButton, createBadge } from '../ui/elements.js';
-import { toast } from './Toast.js';
 import type { MaterialEntry } from '../../db/types.js';
 
 export interface InspectorState {
@@ -26,7 +25,6 @@ export class MaterialInspector {
       onClick: () => {
         if (!this.currentState) return;
         void navigator.clipboard.writeText(JSON.stringify(this.currentState.entry, null, 2));
-        toast.success('Material JSON copied', this.currentState.entry.key);
       },
     });
     copyJsonBtn.className = 'btn btn-icon btn-sm';
@@ -148,7 +146,6 @@ export class MaterialInspector {
       title: 'Copy Key',
       onClick: () => {
         void navigator.clipboard.writeText(entry.key);
-        toast.success('Material key copied', entry.key);
       },
     });
 
@@ -280,7 +277,6 @@ export class MaterialInspector {
       if (!res.ok) continue;
       downloadBlob(await res.blob(), `${slug}-${name}.png`);
     }
-    toast.success('Export started', entry.key);
   }
 }
 

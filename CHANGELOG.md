@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.15: preview has no toast layer. Load errors show in the material list.
+
 0.16.14: preview sidebar and inspector are resizable; tree labels sit on the vertical center.
 
 0.16.13: map thumbnails stay on the inspector only.

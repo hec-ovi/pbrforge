@@ -2,7 +2,6 @@
 import { fireEvent, getByRole, getByText } from '@testing-library/dom';
 import { describe, expect, it, vi } from 'vitest';
 import { PreviewView } from './views/PreviewView.js';
-import { toast } from './components/Toast.js';
 import { PreviewError } from './errors.js';
 import { LIGHTING_PRESETS, SphereViewer } from './widgets/SphereViewer.js';
 import type { MaterialEntry } from '../db/types.js';
@@ -200,20 +199,6 @@ describe('UI Polish Suite', () => {
     expect(getByText(view.root, 'Opacity')).toBeTruthy();
     expect(view.root.querySelectorAll('img.channel-thumb').length).toBeGreaterThan(0);
     expect(getByRole(view.root, 'button', { name: 'Export material' })).toBeTruthy();
-  });
-
-  it('displays toast messages with various severities and dispatches properly', () => {
-    const tInfo = toast.info('Info message', 'Detail info');
-    expect(tInfo.classList.contains('toast-info')).toBe(true);
-
-    const tSuccess = toast.success('Success message');
-    expect(tSuccess.classList.contains('toast-success')).toBe(true);
-
-    const tWarn = toast.warning('Warning message');
-    expect(tWarn.classList.contains('toast-warning')).toBe(true);
-
-    const tErr = toast.error('Error message');
-    expect(tErr.classList.contains('toast-error')).toBe(true);
   });
 
   it('verifies lighting presets definition', () => {

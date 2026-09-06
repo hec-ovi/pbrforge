@@ -239,6 +239,11 @@ export class MaterialList {
       this.selectRow(this.allRows[0]);
     }
   }
+
+  fail(message: string): void {
+    this.countLabel.textContent = 'error';
+    this.listContainer.replaceChildren(el('p', { class: 'empty' }, [message]));
+  }
 }
 
 async function readJson(fetcher: typeof fetch, path: string): Promise<unknown> {

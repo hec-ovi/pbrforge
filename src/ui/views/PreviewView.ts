@@ -1,5 +1,4 @@
 import { el } from '../components/el.js';
-import { toast } from '../components/Toast.js';
 import { MaterialInspector } from '../components/MaterialInspector.js';
 import { MaterialList, type Selection } from '../components/MaterialList.js';
 import { createSquareButton, createSquareSelect } from '../ui/elements.js';
@@ -59,9 +58,6 @@ export class PreviewView {
     this.variantSelect.className = 'select-control';
     this.variantSelect.addEventListener('change', () => {
       this.render();
-      if (this.selection) {
-        toast.info(`Variant: ${this.variantSelect.options[this.variantSelect.selectedIndex]?.text || this.variantSelect.value}`);
-      }
     });
 
     this.repeatSelect = createSquareSelect({ ariaLabel: 'repeat' });
@@ -72,7 +68,6 @@ export class PreviewView {
     this.repeatSelect.value = '2';
     this.repeatSelect.addEventListener('change', () => {
       this.render();
-      toast.info(`Tiling Repeat: ${this.repeatSelect.value}×${this.repeatSelect.value}`);
     });
 
     this.lightingSelect = createSquareSelect({ ariaLabel: 'lighting preset' });
@@ -85,7 +80,6 @@ export class PreviewView {
       const presetKey = this.lightingSelect.value as LightingPresetKey;
       this.viewer?.setLightingPreset(presetKey);
       this.updateTelemetry();
-      toast.info(`Lighting: ${LIGHTING_PRESETS[presetKey]?.name || presetKey}`);
     });
 
     this.bgSelect = createSquareSelect({ ariaLabel: 'background mode' });
@@ -133,7 +127,6 @@ export class PreviewView {
       onClick: () => {
         const wire = this.viewer?.toggleWireframe() ?? false;
         this.wireBtn.classList.toggle('active', wire);
-        toast.info(`Wireframe: ${wire ? 'ENABLED' : 'DISABLED'}`);
       },
     });
     this.wireBtn.className = 'btn btn-secondary btn-sm';
@@ -146,7 +139,6 @@ export class PreviewView {
       ariaLabel: 'Reset camera',
       onClick: () => {
         this.viewer?.resetCamera();
-        toast.info('Camera reset to origin');
       },
     });
     this.resetCamBtn.className = 'btn btn-secondary btn-sm';
@@ -173,7 +165,6 @@ export class PreviewView {
       onClick: () => {
         if (!this.selection) return;
         void navigator.clipboard.writeText(this.selection.entry.key);
-        toast.success('Copied material key', this.selection.entry.key);
       },
     });
     this.copyKeyBtn.className = 'btn btn-ghost btn-xs';
@@ -292,7 +283,6 @@ export class PreviewView {
 
     this.breadcrumbText.textContent = selection.entry.key;
     this.render();
-    toast.success('Loaded material', selection.entry.key);
   }
 
   private render(): void {

@@ -14,11 +14,11 @@ Purpose: presents the material database as a searchable list, a PBR sphere and a
 - `PreviewView.root`, `MaterialList.root` and `MaterialInspector.root` are DOM roots for their components. `SphereViewer.canvas` is the rendered canvas.
 - `MaterialList(onSelect)` calls `onSelect({ theme, entry })` when a material row is chosen.
 - A selection loads the sphere and inspector, exposes the material key and texture paths, and updates stage telemetry.
-- Copy actions write the selected key to the browser clipboard. Toasts announce selections and control actions.
+- Copy actions write the selected key to the browser clipboard.
 
 ## Errors
 
-- `E_DATABASE_UNAVAILABLE`: `MaterialList.load` could not fetch, decode or recognize the theme list or a theme index. It rejects with `PreviewError { code, message, details? }`. The application renders a persistent error toast.
+- `E_DATABASE_UNAVAILABLE`: `MaterialList.load` could not fetch, decode or recognize the theme list or a theme index. It rejects with `PreviewError { code, message, details? }`. The list shows the error in place.
 
 Empty databases and filters with no matches are rendered states.
 
@@ -38,7 +38,6 @@ Empty databases and filters with no matches are rendered states.
 - `MaterialList`: database loading, filters and selection events.
 - `SphereViewer`: Three.js sphere, texture channels, camera and lighting.
 - `MaterialInspector`: key, alignment, physical values, finish, channel thumbnails, and a map export download.
-- `ToastManager`: status and error notifications.
 - `ui/elements`: primitive square units (inputs, buttons, badges, selectors).
 
 ## Depends on
