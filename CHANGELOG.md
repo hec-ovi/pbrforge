@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.7: installable pbrforge skill pack and JSON CLI (doctor, resolve, list, create, refinish, rebrand, pack, preview) for local agents.
+
 0.16.6: declarative JSON layout schema, nested collapsible tree navigation, bottom transparent notifications, and isolated square UI primitives for the material preview workspace.
 
 0.16.5: dark charcoal window coverings and coordinated satin or scuffed door coatings at world scale.

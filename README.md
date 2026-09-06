@@ -8,8 +8,10 @@ Read and write are separate: resolving keys is pure, offline and needs no ComfyU
 
 ```
 npm install
-npm run resolve -- cyberpunk/window-glass/rich   # look up a key
-npm run create -- request.json                   # generate a set (needs ComfyUI)
+npm run pbrforge -- doctor                       # JSON envelope: is this machine ready
+npm run pbrforge -- resolve cyberpunk/window-glass/rich
+npm run resolve -- cyberpunk/window-glass/rich   # look up a key (human text)
+npm run create -- request.json                   # generate a set (photographed lanes need ComfyUI)
 npm run preview                                  # material sphere viewer with lighting and orbit
 npm run refinish -- request.json                 # re-read the maps of a family under a finish and factors
 npm run rebrand -- --theme cyberpunk --businesses businesses.json   # spell business names over the screens of their tier
@@ -21,6 +23,17 @@ npm run build
 ```
 
 `npm run create` also takes an array of requests and skips keys that already exist, so a batch is resumable.
+
+## Agent skill
+
+Local agents install the pack and drive the toolkit with verbs. Transport is a shell call, not a server.
+
+```
+npx skills add hec-ovi/pbrforge
+npm run pbrforge -- doctor
+```
+
+The skill is [`skills/pbrforge/`](skills/pbrforge/SKILL.md). Every `pbrforge` verb prints one JSON object `{ok, verb, data}` or `{ok, verb, error}` and exits. Pattern, plate, recolor, rebrand and pack need no ComfyUI. Photographed creates need a local ComfyUI at `http://127.0.0.1:8188`.
 
 ## Package API
 
