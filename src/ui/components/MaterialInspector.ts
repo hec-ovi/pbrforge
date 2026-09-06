@@ -13,6 +13,8 @@ export class MaterialInspector {
   private content: HTMLElement;
   private isOpen = true;
   private currentState?: InspectorState;
+  private mapViewer?: HTMLElement;
+  private mapKeyHandler?: (event: KeyboardEvent) => void;
 
   constructor(private onClose?: () => void, tag = 'SPEC', title = 'TELEMETRY') {
     this.content = el('div', { class: 'inspector-content' });
@@ -48,6 +50,7 @@ export class MaterialInspector {
       title: 'Close Inspector',
       ariaLabel: 'Close',
       onClick: () => {
+        this.closeMap();
         this.toggle(false);
         this.onClose?.();
       },
@@ -83,6 +86,7 @@ export class MaterialInspector {
   }
 
   update(theme: string, entry: MaterialEntry, variantIndex = 0): void {
+    this.closeMap();
     this.currentState = { theme, entry, variantIndex };
     this.render(theme, entry, variantIndex);
   }
@@ -120,19 +124,23 @@ export class MaterialInspector {
       const path = variant.maps[ch.key];
       if (!path) continue;
       const url = `/themes/${theme}/${path}`;
-      channelRows.push(
-        el('div', { class: 'channel-item active' }, [
-          el('img', {
-            class: 'channel-thumb',
-            src: url,
-            alt: ch.name,
-            width: '32',
-            height: '32',
-            title: url,
-          }),
-          el('span', { class: 'channel-name' }, [ch.name]),
-        ]),
-      );
+      const row = el('button', {
+        type: 'button',
+        class: 'channel-item active',
+        title: url,
+        'aria-label': `View ${ch.name} full size`,
+      }, [
+        el('img', {
+          class: 'channel-thumb',
+          src: url,
+          alt: '',
+          width: '32',
+          height: '32',
+        }),
+        el('span', { class: 'channel-name' }, [ch.name]),
+      ]);
+      row.addEventListener('click', () => this.openMap(ch.name, url));
+      channelRows.push(row);
     }
 
     const tilingText = entry.tiling?.worldSize ? `${entry.tiling.worldSize[0]}m × ${entry.tiling.worldSize[1]}m` : 'None';
@@ -276,6 +284,43 @@ export class MaterialInspector {
       const res = await fetch(`/themes/${theme}/${rel}`);
       if (!res.ok) continue;
       downloadBlob(await res.blob(), `${slug}-${name}.png`);
+    }
+  }
+
+  private openMap(name: string, url: string): void {
+    this.closeMap();
+    const closeBtn = createSquareButton({
+      label: '✕',
+      variant: 'secondary',
+      size: 'sm',
+      ariaLabel: 'Close map',
+      onClick: () => this.closeMap(),
+    });
+    closeBtn.className = 'btn btn-icon btn-sm';
+    const overlay = el('div', { class: 'map-viewer', role: 'dialog', 'aria-label': name }, [
+      el('div', { class: 'map-viewer-bar' }, [
+        el('span', { class: 'map-viewer-title' }, [name]),
+        closeBtn,
+      ]),
+      el('img', { class: 'map-viewer-img', src: url, alt: name }),
+    ]);
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) this.closeMap();
+    });
+    this.mapKeyHandler = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') this.closeMap();
+    };
+    window.addEventListener('keydown', this.mapKeyHandler);
+    document.body.append(overlay);
+    this.mapViewer = overlay;
+  }
+
+  private closeMap(): void {
+    this.mapViewer?.remove();
+    this.mapViewer = undefined;
+    if (this.mapKeyHandler) {
+      window.removeEventListener('keydown', this.mapKeyHandler);
+      this.mapKeyHandler = undefined;
     }
   }
 }
