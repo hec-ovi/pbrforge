@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.14: preview sidebar and inspector are resizable; tree labels sit on the vertical center.
+
 0.16.13: map thumbnails stay on the inspector only.
 
 0.16.12: sidebar tree collapse animates open and closed.

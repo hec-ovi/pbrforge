@@ -3,8 +3,14 @@ import { toast } from '../components/Toast.js';
 import { MaterialInspector } from '../components/MaterialInspector.js';
 import { MaterialList, type Selection } from '../components/MaterialList.js';
 import { createSquareButton, createSquareSelect } from '../ui/elements.js';
+import { clamp, dragColumn } from '../ui/split.js';
 import { LIGHTING_PRESETS, type LightingPresetKey, type SphereViewer, type BackgroundMode } from '../widgets/SphereViewer.js';
 import layoutConfig from './preview-layout.json';
+
+const SIDEBAR_MIN = 220;
+const SIDEBAR_MAX = 560;
+const INSPECTOR_MIN = 260;
+const INSPECTOR_MAX = 640;
 
 /** Complete PBR Material preview workspace with filtering, sphere stage, lighting presets, and telemetry. */
 export class PreviewView {
@@ -27,13 +33,17 @@ export class PreviewView {
   private telemetryStatus: HTMLElement;
   private stageElement: HTMLElement;
   private canvasWrapper: HTMLElement;
+  private leftSplit: HTMLElement;
+  private rightSplit: HTMLElement;
+  private sidebarWidth = 280;
+  private inspectorWidth = 360;
   private selection?: Selection;
 
   constructor(private viewer?: SphereViewer) {
-    // Inspector & List initialised with layout configuration schema
     const inspectorCfg = layoutConfig.inspector;
     this.inspector = new MaterialInspector(() => {
       this.inspectorBtn.classList.remove('active');
+      this.syncPanelWidths();
     }, inspectorCfg.tag, inspectorCfg.title);
 
     const sidebarCfg = layoutConfig.sidebar;
@@ -150,6 +160,7 @@ export class PreviewView {
       onClick: () => {
         const open = this.inspector.toggle();
         this.inspectorBtn.classList.toggle('active', open);
+        this.syncPanelWidths();
       },
     });
     this.inspectorBtn.className = 'btn btn-secondary btn-sm active';
@@ -209,14 +220,46 @@ export class PreviewView {
       stageFooter,
     ]);
 
-    // Main workspace layout
+    this.leftSplit = el('div', {
+      class: 'split-handle',
+      role: 'separator',
+      'aria-orientation': 'vertical',
+      'aria-label': 'Resize sidebar',
+    });
+    this.rightSplit = el('div', {
+      class: 'split-handle',
+      role: 'separator',
+      'aria-orientation': 'vertical',
+      'aria-label': 'Resize inspector',
+    });
+
     this.root = el('div', { class: 'preview-workspace' }, [
       el('aside', { class: 'sidebar' }, [this.list.root]),
+      this.leftSplit,
       this.stageElement,
+      this.rightSplit,
       this.inspector.root,
     ]);
 
+    dragColumn(this.leftSplit, (dx) => {
+      this.sidebarWidth = clamp(this.sidebarWidth + dx, SIDEBAR_MIN, SIDEBAR_MAX);
+      this.syncPanelWidths();
+    });
+    dragColumn(this.rightSplit, (dx) => {
+      this.inspectorWidth = clamp(this.inspectorWidth - dx, INSPECTOR_MIN, INSPECTOR_MAX);
+      this.syncPanelWidths();
+    });
+
+    this.syncPanelWidths();
     this.setupResizeObserver();
+  }
+
+  private syncPanelWidths(): void {
+    const inspectorOpen = this.inspector.visible;
+    this.root.style.setProperty('--sidebar-w', `${this.sidebarWidth}px`);
+    this.root.style.setProperty('--inspector-w', inspectorOpen ? `${this.inspectorWidth}px` : '0px');
+    this.root.style.setProperty('--split-right', inspectorOpen ? '6px' : '0px');
+    this.rightSplit.hidden = !inspectorOpen;
   }
 
   private setupResizeObserver(): void {

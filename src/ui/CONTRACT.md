@@ -29,12 +29,12 @@ Empty databases and filters with no matches are rendered states.
 - Basecolor and emission use sRGB. Normal, roughness, metallic, AO, opacity and height use linear sampling.
 - A selected variant drives the sphere, inspector, key display and telemetry together.
 - Channel rows show a 32px thumbnail of each authored map. Export downloads the entry JSON and that variant's PNG maps. It does not write the database.
-- Controls use square corners with zero border-radius.
+- Sidebar and inspector widths are user-resizable via the split handles. Square corners, zero border-radius.
 - View structure and inspector sections load from declarative schema definitions.
 
 ## Components
 
-- `PreviewView`: workspace layout and control wiring loaded from schema.
+- `PreviewView`: workspace layout, split handles, and control wiring loaded from schema.
 - `MaterialList`: database loading, filters and selection events.
 - `SphereViewer`: Three.js sphere, texture channels, camera and lighting.
 - `MaterialInspector`: key, alignment, physical values, finish, channel thumbnails, and a map export download.
