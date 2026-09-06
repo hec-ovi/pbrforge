@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.6: declarative JSON layout schema and isolated square UI primitives for the material preview workspace.
+
 0.16.5: dark charcoal window coverings and coordinated satin or scuffed door coatings at world scale.
 
 0.16.4: monolithic and 7 m concrete facade surfaces, satin industrial louvres, fitted translucent window grime, and five-face scenic room bindings with seeded wide office back plates.

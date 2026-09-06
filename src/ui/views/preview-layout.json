@@ -1,0 +1,31 @@
+{
+  "sidebar": {
+    "tag": "LIB",
+    "title": "MATERIALS",
+    "searchPlaceholder": "Filter key, kind, tier..."
+  },
+  "stage": {
+    "controls": [
+      { "id": "light", "type": "select", "label": "LIGHT", "ariaLabel": "lighting preset" },
+      { "id": "repeat", "type": "select", "label": "REPEAT", "ariaLabel": "repeat" },
+      { "id": "variant", "type": "select", "label": "VARIANT", "ariaLabel": "variant" },
+      { "id": "bg", "type": "select", "label": "BG", "ariaLabel": "background mode" },
+      { "id": "spin", "type": "button", "label": "SPIN: OFF", "ariaLabel": "Toggle spin" },
+      { "id": "wire", "type": "button", "label": "WIRE", "ariaLabel": "Toggle wireframe" },
+      { "id": "resetCam", "type": "button", "label": "RESET CAM", "ariaLabel": "Reset camera" },
+      { "id": "spec", "type": "button", "label": "SPEC", "ariaLabel": "Toggle inspector" }
+    ],
+    "footerTag": "URBE PBR MATERIAL ENGINE"
+  },
+  "inspector": {
+    "tag": "SPEC",
+    "title": "TELEMETRY",
+    "sections": [
+      { "id": "identity", "title": "IDENTIFIER" },
+      { "id": "tiling", "title": "SURFACE TILING" },
+      { "id": "physical", "title": "PHYSICAL PBR PROPERTIES" },
+      { "id": "finish", "title": "AUTHORED FINISH SPEC" },
+      { "id": "channels", "title": "TEXTURE CHANNELS" }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:preview-view-layout",
+  "title": "PreviewViewLayout",
+  "description": "Declarative JSON schema defining the preview workspace layout, panels, controls, and inspector sections.",
+  "type": "object",
+  "required": ["sidebar", "stage", "inspector"],
+  "additionalProperties": false,
+  "properties": {
+    "sidebar": {
+      "type": "object",
+      "required": ["tag", "title", "searchPlaceholder"],
+      "additionalProperties": false,
+      "properties": {
+        "tag": { "type": "string" },
+        "title": { "type": "string" },
+        "searchPlaceholder": { "type": "string" }
+      }
+    },
+    "stage": {
+      "type": "object",
+      "required": ["controls", "footerTag"],
+      "additionalProperties": false,
+      "properties": {
+        "controls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "type", "label"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "type": { "enum": ["select", "button"] },
+              "label": { "type": "string" },
+              "ariaLabel": { "type": "string" }
+            }
+          }
+        },
+        "footerTag": { "type": "string" }
+      }
+    },
+    "inspector": {
+      "type": "object",
+      "required": ["tag", "title", "sections"],
+      "additionalProperties": false,
+      "properties": {
+        "tag": { "type": "string" },
+        "title": { "type": "string" },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "title": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

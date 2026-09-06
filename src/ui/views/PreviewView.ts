@@ -1,8 +1,10 @@
 import { el } from '../components/el.js';
 import { toast } from '../components/Toast.js';
-import { MaterialInspector } from '../widgets/MaterialInspector.js';
-import { MaterialList, type Selection } from '../widgets/MaterialList.js';
+import { MaterialInspector } from '../components/MaterialInspector.js';
+import { MaterialList, type Selection } from '../components/MaterialList.js';
+import { createSquareButton, createSquareSelect } from '../ui/elements.js';
 import { LIGHTING_PRESETS, type LightingPresetKey, type SphereViewer, type BackgroundMode } from '../widgets/SphereViewer.js';
+import layoutConfig from './preview-layout.json';
 
 /** Complete PBR Material preview workspace with filtering, sphere stage, lighting presets, and telemetry. */
 export class PreviewView {
@@ -10,10 +12,10 @@ export class PreviewView {
   readonly list: MaterialList;
   readonly inspector: MaterialInspector;
 
-  private variantSelect = el('select', { class: 'select-control', 'aria-label': 'variant' }) as HTMLSelectElement;
-  private repeatSelect = el('select', { class: 'select-control', 'aria-label': 'repeat' }) as HTMLSelectElement;
-  private lightingSelect = el('select', { class: 'select-control', 'aria-label': 'lighting preset' }) as HTMLSelectElement;
-  private bgSelect = el('select', { class: 'select-control', 'aria-label': 'background mode' }) as HTMLSelectElement;
+  private variantSelect: HTMLSelectElement;
+  private repeatSelect: HTMLSelectElement;
+  private lightingSelect: HTMLSelectElement;
+  private bgSelect: HTMLSelectElement;
 
   private spinBtn: HTMLButtonElement;
   private wireBtn: HTMLButtonElement;
@@ -28,13 +30,23 @@ export class PreviewView {
   private selection?: Selection;
 
   constructor(private viewer?: SphereViewer) {
+    // Inspector & List initialised with layout configuration schema
+    const inspectorCfg = layoutConfig.inspector;
     this.inspector = new MaterialInspector(() => {
       this.inspectorBtn.classList.remove('active');
-    });
+    }, inspectorCfg.tag, inspectorCfg.title);
 
-    this.list = new MaterialList((selection) => this.show(selection));
+    const sidebarCfg = layoutConfig.sidebar;
+    this.list = new MaterialList(
+      (selection) => this.show(selection),
+      sidebarCfg.tag,
+      sidebarCfg.title,
+      sidebarCfg.searchPlaceholder,
+    );
 
-    // Variant options populated on selection
+    // Initialise UI controls from primitive square builders
+    this.variantSelect = createSquareSelect({ ariaLabel: 'variant' });
+    this.variantSelect.className = 'select-control';
     this.variantSelect.addEventListener('change', () => {
       this.render();
       if (this.selection) {
@@ -42,7 +54,8 @@ export class PreviewView {
       }
     });
 
-    // Repeat options 1x1, 2x2, 3x3, 4x4
+    this.repeatSelect = createSquareSelect({ ariaLabel: 'repeat' });
+    this.repeatSelect.className = 'select-control';
     for (const n of [1, 2, 3, 4]) {
       this.repeatSelect.append(el('option', { value: String(n) }, [`${n}x${n}`]));
     }
@@ -52,7 +65,8 @@ export class PreviewView {
       toast.info(`Tiling Repeat: ${this.repeatSelect.value}×${this.repeatSelect.value}`);
     });
 
-    // Lighting Presets
+    this.lightingSelect = createSquareSelect({ ariaLabel: 'lighting preset' });
+    this.lightingSelect.className = 'select-control';
     for (const [key, preset] of Object.entries(LIGHTING_PRESETS)) {
       this.lightingSelect.append(el('option', { value: key }, [preset.name.toUpperCase()]));
     }
@@ -64,7 +78,8 @@ export class PreviewView {
       toast.info(`Lighting: ${LIGHTING_PRESETS[presetKey]?.name || presetKey}`);
     });
 
-    // Background Modes
+    this.bgSelect = createSquareSelect({ ariaLabel: 'background mode' });
+    this.bgSelect.className = 'select-control';
     const bgModes: { id: BackgroundMode; label: string }[] = [
       { id: 'dark', label: 'DARK VOID' },
       { id: 'grid', label: 'CAD GRID' },
@@ -86,53 +101,71 @@ export class PreviewView {
     });
 
     // Buttons
-    this.spinBtn = el('button', { class: 'btn btn-secondary btn-sm', type: 'button', 'aria-label': 'Toggle spin' }, [
-      'SPIN: OFF',
-    ]) as HTMLButtonElement;
-    this.spinBtn.addEventListener('click', () => {
-      const spinning = this.viewer?.toggleAutoRotate() ?? false;
-      this.spinBtn.textContent = `SPIN: ${spinning ? 'ON' : 'OFF'}`;
-      this.spinBtn.classList.toggle('active', spinning);
-      this.updateTelemetry();
+    this.spinBtn = createSquareButton({
+      label: 'SPIN: OFF',
+      variant: 'secondary',
+      size: 'sm',
+      ariaLabel: 'Toggle spin',
+      onClick: () => {
+        const spinning = this.viewer?.toggleAutoRotate() ?? false;
+        this.spinBtn.textContent = `SPIN: ${spinning ? 'ON' : 'OFF'}`;
+        this.spinBtn.classList.toggle('active', spinning);
+        this.updateTelemetry();
+      },
     });
+    this.spinBtn.className = 'btn btn-secondary btn-sm';
 
-    this.wireBtn = el('button', { class: 'btn btn-secondary btn-sm', type: 'button', 'aria-label': 'Toggle wireframe' }, [
-      'WIRE',
-    ]) as HTMLButtonElement;
-    this.wireBtn.addEventListener('click', () => {
-      const wire = this.viewer?.toggleWireframe() ?? false;
-      this.wireBtn.classList.toggle('active', wire);
-      toast.info(`Wireframe: ${wire ? 'ENABLED' : 'DISABLED'}`);
+    this.wireBtn = createSquareButton({
+      label: 'WIRE',
+      variant: 'secondary',
+      size: 'sm',
+      ariaLabel: 'Toggle wireframe',
+      onClick: () => {
+        const wire = this.viewer?.toggleWireframe() ?? false;
+        this.wireBtn.classList.toggle('active', wire);
+        toast.info(`Wireframe: ${wire ? 'ENABLED' : 'DISABLED'}`);
+      },
     });
+    this.wireBtn.className = 'btn btn-secondary btn-sm';
 
-    this.resetCamBtn = el(
-      'button',
-      { class: 'btn btn-secondary btn-sm', type: 'button', 'aria-label': 'Reset camera', title: 'Reset Camera Position' },
-      ['RESET CAM'],
-    ) as HTMLButtonElement;
-    this.resetCamBtn.addEventListener('click', () => {
-      this.viewer?.resetCamera();
-      toast.info('Camera reset to origin');
+    this.resetCamBtn = createSquareButton({
+      label: 'RESET CAM',
+      variant: 'secondary',
+      size: 'sm',
+      title: 'Reset Camera Position',
+      ariaLabel: 'Reset camera',
+      onClick: () => {
+        this.viewer?.resetCamera();
+        toast.info('Camera reset to origin');
+      },
     });
+    this.resetCamBtn.className = 'btn btn-secondary btn-sm';
 
-    this.inspectorBtn = el(
-      'button',
-      { class: 'btn btn-secondary btn-sm active', type: 'button', 'aria-label': 'Toggle inspector' },
-      ['SPEC'],
-    ) as HTMLButtonElement;
-    this.inspectorBtn.addEventListener('click', () => {
-      const open = this.inspector.toggle();
-      this.inspectorBtn.classList.toggle('active', open);
+    this.inspectorBtn = createSquareButton({
+      label: 'SPEC',
+      variant: 'secondary',
+      size: 'sm',
+      ariaLabel: 'Toggle inspector',
+      active: true,
+      onClick: () => {
+        const open = this.inspector.toggle();
+        this.inspectorBtn.classList.toggle('active', open);
+      },
     });
+    this.inspectorBtn.className = 'btn btn-secondary btn-sm active';
 
-    this.copyKeyBtn = el('button', { class: 'btn btn-ghost btn-xs', type: 'button', title: 'Copy Material Key' }, [
-      'COPY KEY',
-    ]) as HTMLButtonElement;
-    this.copyKeyBtn.addEventListener('click', () => {
-      if (!this.selection) return;
-      void navigator.clipboard.writeText(this.selection.entry.key);
-      toast.success('Copied material key', this.selection.entry.key);
+    this.copyKeyBtn = createSquareButton({
+      label: 'COPY KEY',
+      variant: 'ghost',
+      size: 'xs',
+      title: 'Copy Material Key',
+      onClick: () => {
+        if (!this.selection) return;
+        void navigator.clipboard.writeText(this.selection.entry.key);
+        toast.success('Copied material key', this.selection.entry.key);
+      },
     });
+    this.copyKeyBtn.className = 'btn btn-ghost btn-xs';
 
     this.breadcrumbText = el('span', { class: 'stage-breadcrumb-text' }, ['NO MATERIAL SELECTED']);
     this.telemetryStatus = el('div', { class: 'stage-status-text' }, [
@@ -172,7 +205,7 @@ export class PreviewView {
     // Footer Bar
     const stageFooter = el('footer', { class: 'stage-footer-bar' }, [
       this.telemetryStatus,
-      el('div', { class: 'stage-credits' }, ['URBE PBR MATERIAL ENGINE']),
+      el('div', { class: 'stage-credits' }, [layoutConfig.stage.footerTag]),
     ]);
 
     // Canvas container
