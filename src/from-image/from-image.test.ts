@@ -53,6 +53,24 @@ describe('from-image', () => {
     expect(metallic).toEqual([0]);
   });
 
+  it('reads a jpeg source', async () => {
+    const themesDir = mkdtempSync(join(tmpdir(), 'from-image-jpeg-'));
+    const png = join(themesDir, 'face.png');
+    const jpeg = join(themesDir, 'face.jpg');
+    await albedo(png);
+    await sharp(png).jpeg().toFile(jpeg);
+    const entry = await new FromImage(new Database(themesDir)).run({
+      key: 'test/jpeg-face/mid',
+      path: jpeg,
+      alignment: 'exact',
+      aspect: [1, 1],
+      description: 'jpeg condenser face',
+      resolution: [64, 64],
+      physical: { metallicFactor: 0, roughnessFactor: 0.65 },
+    });
+    expect(entry.variants[0].maps.basecolor).toBeTruthy();
+  });
+
   it('accepts an unwrapped tile without a seam check', async () => {
     const themesDir = mkdtempSync(join(tmpdir(), 'from-image-tile-'));
     const png = join(themesDir, 'brick.png');

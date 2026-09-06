@@ -54,24 +54,11 @@ A create file is one request object or an array. Array mode skips keys that alre
 
 ## One native photo (`from-image`)
 
-Use this when the user has **one** opaque color PNG and wants the rest of the dry maps derived from it. Bricks, concrete, damaged AC faces, posters. Asymmetry is allowed. There is **no** seam gate and **no** emission.
-
-Do **not** use `from-image` for:
-
-- glowing screens or letter glyphs → `create` with `screens` / `emission: "image"`
-- interior room plates that must emit → `create --native` with `sourceImage`
-- a wrapping tile that already tiles on all four edges → `create --native` with `sourceAlbedo`
-- a JS drawer (grille, mineral, lamp) → `create` with `pattern`
-
-1. Generate **one** PNG (convert JPEG first). It must cover the output size, same aspect, fully opaque.
-2. Write a from-image request: `key`, `path`, `alignment` (`exact` + `aspect` for a single face; `tile` + `tiling.worldSize` for a repeating field), `description`, `resolution`, `physical` (metallic 0 or 1, roughness at least 0.45), optional `finish`.
-3. Run:
+Read [references/from-image.md](references/from-image.md) before every call. Bricks, concrete, stone, AC faces, posters: one JPEG or PNG, dry maps derived, asymmetry allowed, no emission.
 
 ```
 npm run pbrforge -- from-image request.json
 ```
-
-Request schema: [src/from-image/request.schema.json](../../src/from-image/request.schema.json). Contract: [src/from-image/CONTRACT.md](../../src/from-image/CONTRACT.md).
 
 ## Native image (`create --native`)
 
@@ -104,7 +91,7 @@ The request JSON is the create-request schema. Do not invent a lane mix.
 | `--native` plus a PNG path | your image tool, then import | no |
 | otherwise | photographed albedo | yes |
 
-Prefer `pattern` for walls, concrete, roads, water, curtains, steel, lamps. Run `patterns` for the kind list. To tune or understand one drawer, read that row's `detail` file (resolver: [references/patterns/INDEX.md](references/patterns/INDEX.md)). To add a drawer no existing kind covers, follow [references/patterns/ADD.md](references/patterns/ADD.md). Use a photograph only when the user asked for grain that a pattern cannot draw. Screens take a source plate when one exists under `sources/`.
+Prefer `pattern` when the surface can be drawn. Prefer `from-image` when the user gave or asked for a photograph (brick, concrete, wrecked AC). Run `patterns` for the drawer list. Screens take a source plate when one exists under `sources/`.
 
 After create, `resolve` the key and report the variant ids and map paths. If the user wants to see it, `preview` then tell them the URL.
 

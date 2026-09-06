@@ -1,15 +1,29 @@
-import { readFileSync } from 'node:fs';
-import { isAbsolute, join } from 'node:path';
+import { existsSync, readFileSync } from 'node:fs';
+import { dirname, isAbsolute, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { MaterialsError } from '../db/errors.js';
-import { root } from '../gen/Template.js';
 import { decodeRgb, type Rgb } from '../gen/pixels.js';
 
-/** Opaque sRGB albedo that already covers the output size. Downsample only. */
+const packageRoot = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
+
+function resolveSource(path: string): string {
+  if (isAbsolute(path) && existsSync(path)) return path;
+  if (existsSync(path)) return path;
+  const rooted = join(packageRoot, path);
+  if (existsSync(rooted)) return rooted;
+  throw new MaterialsError('E_SCHEMA', `from-image cannot find: ${path}`);
+}
+
+/** Opaque sRGB albedo. JPEG or PNG. Must already cover the output size. Downsample only. */
 export async function loadPng(path: string, width: number, height: number): Promise<Rgb> {
   try {
-    const file = readFileSync(isAbsolute(path) ? path : join(root, path));
+    const file = readFileSync(resolveSource(path));
     const metadata = await sharp(file).metadata();
+    const format = metadata.format;
+    if (format !== 'jpeg' && format !== 'png') {
+      throw new MaterialsError('E_SCHEMA', `from-image source must be jpeg or png, got ${format ?? 'unknown'}`);
+    }
     const rotated = metadata.orientation !== undefined && metadata.orientation >= 5;
     const sourceWidth = (rotated ? metadata.height : metadata.width) ?? 0;
     const sourceHeight = (rotated ? metadata.width : metadata.height) ?? 0;
