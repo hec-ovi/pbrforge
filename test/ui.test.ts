@@ -34,6 +34,8 @@ describe('preview contract', () => {
     expect(view.root.querySelectorAll('.tree-leaf-item img')).toHaveLength(0);
     expect(view.root.querySelectorAll('img.channel-thumb')).toHaveLength(4);
     expect(getByRole(view.root, 'button', { name: 'Export material' })).toBeTruthy();
+    expect(getByRole(view.root, 'separator', { name: 'Resize sidebar' })).toBeTruthy();
+    expect(getByRole(view.root, 'separator', { name: 'Resize inspector' })).toBeTruthy();
 
     const kindHeader = view.root.querySelector('.tree-node-kind') as HTMLButtonElement;
     expect(kindHeader.getAttribute('aria-expanded')).toBe('true');
