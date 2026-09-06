@@ -12602,6 +12602,86 @@
           }
         }
       ]
+    },
+    "cyberpunk/brick/mid": {
+      "key": "cyberpunk/brick/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7
+      },
+      "finish": {
+        "roughness": [
+          0.6,
+          0.8
+        ],
+        "grain": 0.2,
+        "relief": 1.6
+      },
+      "variants": [
+        {
+          "id": "running-bond",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/brick/mid/running-bond/basecolor.png",
+            "normal": "assets/brick/mid/running-bond/normal.png",
+            "roughness": "assets/brick/mid/running-bond/roughness.png",
+            "height": "assets/brick/mid/running-bond/height.png",
+            "ao": "assets/brick/mid/running-bond/ao.png",
+            "metallic": "assets/brick/mid/running-bond/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/bcf19aa83840255bfe654a4a93d3cdf7992cfddc12be695e83725161f3c720b5.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ac-wreck/mid": {
+      "key": "cyberpunk/ac-wreck/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.65
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.75
+        ],
+        "grain": 0.22,
+        "relief": 1.8
+      },
+      "variants": [
+        {
+          "id": "torn",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ac-wreck/mid/torn/basecolor.png",
+            "normal": "assets/ac-wreck/mid/torn/normal.png",
+            "roughness": "assets/ac-wreck/mid/torn/roughness.png",
+            "height": "assets/ac-wreck/mid/torn/height.png",
+            "ao": "assets/ac-wreck/mid/torn/ao.png",
+            "metallic": "assets/ac-wreck/mid/torn/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/5491ab58fd73084316a28cd46368b65b0c0089ce539cd97c9bf060923ae40bfc.png"
+          }
+        }
+      ]
     }
   }
 }

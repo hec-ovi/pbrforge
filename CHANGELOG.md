@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.31: cyberpunk/brick/mid is a running-bond brick field; cyberpunk/ac-wreck/mid is a torn condenser face; both from one native albedo each.
+
 0.16.30: from-image skill names how to frame the photo (exact fill vs tile wrap).
 
 0.16.29: from-image accepts jpeg or png; skill names exact faces versus repeating fields.

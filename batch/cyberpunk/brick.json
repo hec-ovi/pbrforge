@@ -1,0 +1,11 @@
+{
+  "key": "cyberpunk/brick/mid",
+  "path": "sources/brick/running-bond.png",
+  "alignment": "tile",
+  "tiling": { "worldSize": [2, 2] },
+  "description": "photographed running-bond brick field",
+  "resolution": [1024, 1024],
+  "variantId": "running-bond",
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.7 },
+  "finish": { "roughness": [0.6, 0.8], "grain": 0.2, "relief": 1.6 }
+}
