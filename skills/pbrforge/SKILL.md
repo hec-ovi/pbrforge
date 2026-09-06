@@ -49,6 +49,21 @@ Read `data.ready` and `data.nextActions`. Do not hand-probe Node, ComfyUI, or th
 
 A create file is one request object or an array. Array mode skips keys that already exist, so a batch is resumable. `--overwrite` replaces.
 
+## Native image (`create --native`)
+
+If you have an image tool (`image_gen`, Codex `image_gen`, Gemini image skill, or any tool that writes a PNG), use it instead of ComfyUI.
+
+1. Generate **one** color picture. Save it as a PNG.
+2. Exact face (room, ad, fitted plate): put `"sourceImage": { "path": "<file>" }` or `screens[].imagePath`.
+3. Tiled surface: `"sourceAlbedo": { "path": "<file>" }` only if that picture already wraps. This box does not add tiling.
+4. Then:
+
+```
+npm run pbrforge -- create request.json --native
+```
+
+`--native` never calls ComfyUI. Missing PNG path is `E_USAGE`. Without `--native`, create is the old path (pattern, ComfyUI, or an already-named file).
+
 ## What one material is
 
 A key (`cyberpunk/door/mid`) is one catalog entry. It is not one image.
@@ -73,6 +88,7 @@ The request JSON is the create-request schema. Do not invent a lane mix.
 | `flatColor` | a flat colour | no |
 | `recolor` | tint of an existing variant (`append`) | no |
 | `screens` / `emission: "image"` | ad artwork, then display structure | only if no `imagePath` |
+| `--native` plus a PNG path | your image tool, then import | no |
 | otherwise | photographed albedo | yes |
 
 Prefer `pattern` for walls, concrete, roads, water, curtains, steel, lamps. Use a photograph only when the user asked for grain that a pattern cannot draw. Screens take a source plate when one exists under `sources/`.

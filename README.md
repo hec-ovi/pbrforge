@@ -33,7 +33,7 @@ npx skills add hec-ovi/pbrforge
 npm run pbrforge -- doctor
 ```
 
-The skill is [`skills/pbrforge/`](skills/pbrforge/SKILL.md). Every `pbrforge` verb prints one JSON object `{ok, verb, data}` or `{ok, verb, error}` and exits. Pattern, plate, recolor, rebrand and pack need no ComfyUI. Photographed creates need a local ComfyUI at `http://127.0.0.1:8188`.
+The skill is [`skills/pbrforge/`](skills/pbrforge/SKILL.md). Every `pbrforge` verb prints one JSON object `{ok, verb, data}` or `{ok, verb, error}` and exits. Pattern, plate, recolor, rebrand and pack need no ComfyUI. `pbrforge create --native` imports a PNG from the agent's own image tool. Photographed creates without a file need a local ComfyUI at `http://127.0.0.1:8188`.
 
 ## Package API
 

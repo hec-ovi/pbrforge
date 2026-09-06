@@ -2,6 +2,7 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 import { afterEach, describe, expect, it } from 'vitest';
 import { run } from '../src/cli/router.js';
 import type { CreateRequest } from '../src/db/types.js';
@@ -118,6 +119,37 @@ describe('pbrforge CLI', () => {
     expect(Object.keys(entry.variants[0]!.maps).sort()).toEqual(
       expect.arrayContaining(['ao', 'basecolor', 'height', 'metallic', 'normal', 'roughness']),
     );
+  });
+
+  it('create --native refuses ComfyUI and requires a PNG path', async () => {
+    const themesDir = temp();
+    const photographed: CreateRequest = {
+      key: 'test/room/mid',
+      alignment: 'exact',
+      aspect: [1, 1],
+      description: 'a fitted room plate',
+      resolution: [64, 64],
+    };
+    const missing = join(themesDir, 'no-png.json');
+    writeFileSync(missing, JSON.stringify(photographed));
+    const refused = await run(['create', missing, '--themes', themesDir, '--native']);
+    expect(refused.ok).toBe(false);
+    if (refused.ok) return;
+    expect(refused.error.code).toBe('E_USAGE');
+
+    const png = join(themesDir, 'plate.png');
+    writeFileSync(png, await sharp({ create: { width: 64, height: 64, channels: 3, background: '#334455' } }).png().toBuffer());
+    const native: CreateRequest = {
+      ...photographed,
+      sourceImage: { path: png },
+      physical: { metallicFactor: 0, roughnessFactor: 1, emissiveStrength: 1 },
+    };
+    const file = join(themesDir, 'native.json');
+    writeFileSync(file, JSON.stringify(native));
+    const created = await run(['create', file, '--themes', themesDir, '--native']);
+    expect(created.ok).toBe(true);
+    if (!created.ok) return;
+    expect(created.data.created).toEqual([{ key: 'test/room/mid', variants: 1 }]);
   });
 
   it('keeps the root skill copy identical to the pack', () => {

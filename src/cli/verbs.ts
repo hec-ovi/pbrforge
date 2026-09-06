@@ -38,13 +38,38 @@ export function listVerb(argv: string[]): Record<string, unknown> {
   return { keys, count: keys.length };
 }
 
+function nativeSource(request: CreateRequest): string | undefined {
+  if (request.sourceImage?.path) return request.sourceImage.path;
+  if (request.sourceAlbedo?.path) return request.sourceAlbedo.path;
+  if (request.screens?.length && request.screens.every((screen) => screen.imagePath)) {
+    return request.screens[0]!.imagePath;
+  }
+  return undefined;
+}
+
+function assertNative(request: CreateRequest): void {
+  if (request.pattern || request.flatColor || request.recolor) {
+    throw new UsageError(
+      `--native is for a PNG from your image tool. Use sourceImage (exact), sourceAlbedo (tile), or screens[].imagePath. Not pattern, flatColor or recolor.`,
+    );
+  }
+  if (!nativeSource(request)) {
+    throw new UsageError(
+      `--native needs a PNG path on the request (sourceImage, sourceAlbedo, or every screens[].imagePath). Generate it with your image tool first, then create.`,
+    );
+  }
+}
+
 export async function createVerb(argv: string[]): Promise<Record<string, unknown>> {
-  const { flags, options, rest } = parseArgs(argv, ['overwrite']);
+  const { flags, options, rest } = parseArgs(argv, ['overwrite', 'native']);
   const path = rest[0];
-  if (!path) throw new UsageError('usage: pbrforge create <request.json> [--themes <dir>] [--overwrite]');
+  if (!path) throw new UsageError('usage: pbrforge create <request.json> [--themes <dir>] [--overwrite] [--native]');
   const parsed = readJson(path) as CreateRequest | CreateRequest[];
   const batch = Array.isArray(parsed);
   const requests = (batch ? parsed : [parsed]).map((r) => (flags.overwrite ? { ...r, overwrite: true } : r));
+  if (flags.native) {
+    for (const request of requests) assertNative(request);
+  }
   const opts = themesOption(options);
   const created: { key: string; variants: number; retry?: boolean }[] = [];
   const skipped: { key: string; reason: string }[] = [];

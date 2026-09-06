@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.8: create --native imports a PNG from the agent's image tool and never calls ComfyUI.
+
 0.16.7: installable pbrforge skill pack and JSON CLI (doctor, resolve, list, create, refinish, rebrand, pack, preview) for local agents.
 
 0.16.6: declarative JSON layout schema, nested collapsible tree navigation, bottom transparent notifications, and isolated square UI primitives for the material preview workspace.

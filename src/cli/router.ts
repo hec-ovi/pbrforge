@@ -22,7 +22,7 @@ export const VERBS = [
   { verb: 'help', summary: 'this list', usage: 'help' },
   { verb: 'resolve', summary: 'look up a key', usage: 'resolve <theme/kind/tier> [--themes <dir>]' },
   { verb: 'list', summary: 'matching keys, sorted', usage: 'list [--theme t] [--kind k] [--tier t] [--themes <dir>]' },
-  { verb: 'create', summary: 'generate from a request JSON (batch skips existing keys)', usage: 'create <request.json> [--themes <dir>] [--overwrite]' },
+  { verb: 'create', summary: 'generate from a request JSON (batch skips existing keys)', usage: 'create <request.json> [--themes <dir>] [--overwrite] [--native]' },
   { verb: 'refinish', summary: 're-read photographed maps under a finish', usage: 'refinish <requests.json> [--themes <dir>]' },
   { verb: 'rebrand', summary: 'spell business names onto screens', usage: 'rebrand --theme <theme> --businesses <businesses.json> [--themes <dir>]' },
   { verb: 'pack', summary: 'add packed metallic-roughness maps for a theme', usage: 'pack --theme <theme> [--themes <dir>]' },

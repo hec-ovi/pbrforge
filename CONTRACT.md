@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
 
-Status: v0.16.7. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Status: v0.16.8. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
 
 ## Key
 
@@ -39,7 +39,7 @@ The shipped future-noir source plates and their subject-and-style prompts live i
 
 - `rebrand(request: RebrandRequest, options?: MaterialsOptions): Promise<Branded[]>` spells the businesses of a named world over the screens of their tier, one `brand:<slug>` variant per business on `ad-screen` and on `ad-screen-tall`, with no render (see Rebrand below). Request: [RebrandRequest](schema/rebrand-request.schema.json). Options: [`MaterialsOptions`](src/api-types.ts). Each [`Branded`](src/api-types.ts) result is `{ key, variantId, from, lines }`.
 
-CLI: `npm run pbrforge -- <verb>` is the agent surface. One JSON envelope on stdout, then exit. Verbs: doctor, version, help, resolve, list, create, refinish, rebrand, pack, preview. See [src/cli/CONTRACT.md](src/cli/CONTRACT.md). Human npm scripts (`npm run resolve -- <key>`, `npm run create -- <request.json> [--themes <dir>] [--overwrite]`, `npm run refinish -- <request.json>`, `npm run rebrand -- --theme <theme> --businesses <businesses.json>`) remain. Create accepts a single request or an array; array mode skips keys that already exist, so batches are resumable. Create's `--themes` selects an isolated output database; provided-source seam failures are reported without a seed retry.
+CLI: `npm run pbrforge -- <verb>` is the agent surface. One JSON envelope on stdout, then exit. Verbs: doctor, version, help, resolve, list, create, refinish, rebrand, pack, preview. See [src/cli/CONTRACT.md](src/cli/CONTRACT.md). Human npm scripts (`npm run resolve -- <key>`, `npm run create -- <request.json> [--themes <dir>] [--overwrite]`, `npm run refinish -- <request.json>`, `npm run rebrand -- --theme <theme> --businesses <businesses.json>`) remain. Create accepts a single request or an array; array mode skips keys that already exist, so batches are resumable. `pbrforge create --native` imports a PNG from the agent's image tool (`sourceImage`, `sourceAlbedo`, or `screens[].imagePath`) and never calls ComfyUI. Create's `--themes` selects an isolated output database; provided-source seam failures are reported without a seed retry.
 
 `npm run pack -- --theme <theme> [--themes <dir>]` (and `pbrforge pack --theme`) adds packed maps to every entry through the same package operation. It is deterministic and keeps every separate map untouched.
 
