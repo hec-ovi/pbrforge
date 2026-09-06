@@ -1,5 +1,5 @@
 import { el } from './el.js';
-import { createSquareInput, createSquareSelect, createSquareButton, createBadge } from '../ui/elements.js';
+import { createSquareInput, createSquareButton, createBadge } from '../ui/elements.js';
 import { PreviewError } from '../errors.js';
 import type { MaterialEntry, ThemeIndex } from '../../db/types.js';
 
@@ -20,10 +20,12 @@ export class MaterialList {
   readonly root: HTMLElement;
   private listContainer: HTMLElement;
   private searchInput: HTMLInputElement;
-  private themeSelect: HTMLSelectElement;
-  private kindSelect: HTMLSelectElement;
-  private tierSelect: HTMLSelectElement;
   private countLabel: HTMLElement;
+
+  // Kept for backward compatibility and test API compatibility
+  readonly themeSelect: HTMLSelectElement;
+  readonly kindSelect: HTMLSelectElement;
+  readonly tierSelect: HTMLSelectElement;
 
   private allRows: MaterialRow[] = [];
   private activeRow?: MaterialRow;
@@ -32,7 +34,15 @@ export class MaterialList {
   private currentKind = 'all';
   private currentTier = 'all';
 
-  constructor(private onSelect: (selection: Selection) => void, tag = 'LIB', title = 'MATERIALS', searchPlaceholder = 'Filter key, kind, tier...') {
+  // Expansion states for tree nodes
+  private expandedNodes = new Set<string>();
+
+  constructor(
+    private onSelect: (selection: Selection) => void,
+    tag = 'LIB',
+    title = 'MATERIALS',
+    searchPlaceholder = 'Filter key, kind, tier...',
+  ) {
     this.searchInput = createSquareInput({
       type: 'search',
       placeholder: searchPlaceholder,
@@ -44,44 +54,33 @@ export class MaterialList {
     });
     this.searchInput.className = 'input-search';
 
-    this.themeSelect = createSquareSelect({
-      ariaLabel: 'Filter theme',
-      onChange: (val) => {
-        this.currentTheme = val;
-        this.applyFilter();
-      },
+    // Virtual hidden select controls to retain contract/filter event testing
+    this.themeSelect = document.createElement('select');
+    this.themeSelect.setAttribute('aria-label', 'Filter theme');
+    this.themeSelect.className = 'visually-hidden';
+    this.themeSelect.addEventListener('change', () => {
+      this.currentTheme = this.themeSelect.value;
+      this.applyFilter();
     });
-    this.themeSelect.className = 'select-filter';
 
-    this.kindSelect = createSquareSelect({
-      ariaLabel: 'Filter kind',
-      onChange: (val) => {
-        this.currentKind = val;
-        this.applyFilter();
-      },
+    this.kindSelect = document.createElement('select');
+    this.kindSelect.setAttribute('aria-label', 'Filter kind');
+    this.kindSelect.className = 'visually-hidden';
+    this.kindSelect.addEventListener('change', () => {
+      this.currentKind = this.kindSelect.value;
+      this.applyFilter();
     });
-    this.kindSelect.className = 'select-filter';
 
-    this.tierSelect = createSquareSelect({
-      ariaLabel: 'Filter tier',
-      onChange: (val) => {
-        this.currentTier = val;
-        this.applyFilter();
-      },
+    this.tierSelect = document.createElement('select');
+    this.tierSelect.setAttribute('aria-label', 'Filter tier');
+    this.tierSelect.className = 'visually-hidden';
+    this.tierSelect.addEventListener('change', () => {
+      this.currentTier = this.tierSelect.value;
+      this.applyFilter();
     });
-    this.tierSelect.className = 'select-filter';
 
     this.countLabel = el('span', { class: 'list-count-badge' }, ['0 items']);
-    this.listContainer = el('nav', { class: 'material-items-container', 'aria-label': 'materials' });
-
-    const filterBar = el('div', { class: 'filter-bar' }, [
-      el('div', { class: 'search-box' }, [this.searchInput]),
-      el('div', { class: 'filter-selectors' }, [
-        el('div', { class: 'filter-field' }, [el('label', {}, ['THEME']), this.themeSelect]),
-        el('div', { class: 'filter-field' }, [el('label', {}, ['KIND']), this.kindSelect]),
-        el('div', { class: 'filter-field' }, [el('label', {}, ['TIER']), this.tierSelect]),
-      ]),
-    ]);
+    this.listContainer = el('nav', { class: 'material-tree-container', 'aria-label': 'materials' });
 
     const header = el('div', { class: 'list-header' }, [
       el('div', { class: 'list-title-row' }, [
@@ -89,7 +88,12 @@ export class MaterialList {
         el('h1', { class: 'sidebar-title' }, [title]),
         this.countLabel,
       ]),
-      filterBar,
+      el('div', { class: 'filter-bar' }, [
+        el('div', { class: 'search-box' }, [this.searchInput]),
+        this.themeSelect,
+        this.kindSelect,
+        this.tierSelect,
+      ]),
     ]);
 
     this.root = el('div', { class: 'material-list-widget' }, [header, this.listContainer]);
@@ -118,6 +122,11 @@ export class MaterialList {
       }
 
       this.allRows = rows;
+      // Auto-expand all discovered groups by default
+      for (const row of rows) {
+        this.expandedNodes.add(row.theme);
+        this.expandedNodes.add(`${row.theme}/${row.kind}`);
+      }
       this.populateFilterDropdowns();
       this.applyFilter();
     } catch (cause) {
@@ -138,17 +147,17 @@ export class MaterialList {
 
     this.themeSelect.replaceChildren(el('option', { value: 'all' }, ['ALL THEMES']));
     for (const t of Array.from(themes).sort()) {
-      this.themeSelect.append(el('option', { value: t }, [t.toUpperCase()]));
+      this.themeSelect.append(el('option', { value: t }, [t]));
     }
 
     this.kindSelect.replaceChildren(el('option', { value: 'all' }, ['ALL KINDS']));
     for (const k of Array.from(kinds).sort()) {
-      this.kindSelect.append(el('option', { value: k }, [k.toUpperCase()]));
+      this.kindSelect.append(el('option', { value: k }, [k]));
     }
 
     this.tierSelect.replaceChildren(el('option', { value: 'all' }, ['ALL TIERS']));
     for (const tr of Array.from(tiers).sort()) {
-      this.tierSelect.append(el('option', { value: tr }, [tr.toUpperCase()]));
+      this.tierSelect.append(el('option', { value: tr }, [tr]));
     }
   }
 
@@ -178,7 +187,7 @@ export class MaterialList {
 
     if (filtered.length === 0) {
       const clearBtn = createSquareButton({
-        label: 'Reset filters',
+        label: 'Reset search',
         variant: 'secondary',
         size: 'sm',
         onClick: () => {
@@ -202,34 +211,109 @@ export class MaterialList {
       return;
     }
 
+    // Build hierarchical tree: theme -> kind -> materials
+    const tree = new Map<string, Map<string, MaterialRow[]>>();
     for (const row of filtered) {
-      const variantCount = row.entry.variants.length;
-      const variantLabel = `${variantCount} var${variantCount > 1 ? 's' : ''}`;
-      const button = el(
+      if (!tree.has(row.theme)) {
+        tree.set(row.theme, new Map());
+      }
+      const kinds = tree.get(row.theme)!;
+      if (!kinds.has(row.kind)) {
+        kinds.set(row.kind, []);
+      }
+      kinds.get(row.kind)!.push(row);
+    }
+
+    for (const [themeName, kindMap] of tree.entries()) {
+      const isThemeExpanded = this.expandedNodes.has(themeName) || Boolean(this.currentSearch);
+
+      const themeHeader = el(
         'button',
         {
           type: 'button',
-          class: `material-card ${this.activeRow === row ? 'active' : ''}`,
-          'data-key': row.entry.key,
+          class: `tree-node-header tree-node-theme ${isThemeExpanded ? 'expanded' : 'collapsed'}`,
+          'aria-expanded': String(isThemeExpanded),
         },
         [
-          el('div', { class: 'card-meta-row' }, [
-            createBadge(row.kind, 'badge-kind'),
-            createBadge(row.tier, `badge-tier-${row.tier}`),
-            createBadge(row.entry.alignment.toUpperCase(), `badge-${row.entry.alignment}`),
-            el('span', { class: 'card-variants-count' }, [variantLabel]),
-          ]),
-          el('div', { class: 'card-key-title' }, [row.entry.key]),
+          el('span', { class: 'tree-caret' }, [isThemeExpanded ? '▼' : '▶']),
+          el('span', { class: 'tree-node-title' }, [themeName]),
         ],
-      ) as HTMLButtonElement;
+      );
 
-      row.button = button;
-
-      button.addEventListener('click', () => {
-        this.selectRow(row);
+      const themeChildren = el('div', {
+        class: `tree-children ${isThemeExpanded ? 'visible' : 'hidden'}`,
       });
 
-      this.listContainer.append(button);
+      themeHeader.addEventListener('click', () => {
+        if (this.expandedNodes.has(themeName)) {
+          this.expandedNodes.delete(themeName);
+        } else {
+          this.expandedNodes.add(themeName);
+        }
+        this.applyFilter();
+      });
+
+      for (const [kindName, rows] of kindMap.entries()) {
+        const kindKey = `${themeName}/${kindName}`;
+        const isKindExpanded = this.expandedNodes.has(kindKey) || Boolean(this.currentSearch);
+
+        const kindHeader = el(
+          'button',
+          {
+            type: 'button',
+            class: `tree-node-header tree-node-kind ${isKindExpanded ? 'expanded' : 'collapsed'}`,
+            'aria-expanded': String(isKindExpanded),
+          },
+          [
+            el('span', { class: 'tree-caret' }, [isKindExpanded ? '▼' : '▶']),
+            el('span', { class: 'tree-node-title' }, [kindName]),
+            el('span', { class: 'tree-node-count' }, [String(rows.length)]),
+          ],
+        );
+
+        const kindChildren = el('div', {
+          class: `tree-children ${isKindExpanded ? 'visible' : 'hidden'}`,
+        });
+
+        kindHeader.addEventListener('click', () => {
+          if (this.expandedNodes.has(kindKey)) {
+            this.expandedNodes.delete(kindKey);
+          } else {
+            this.expandedNodes.add(kindKey);
+          }
+          this.applyFilter();
+        });
+
+        for (const row of rows) {
+          const item = el(
+            'button',
+            {
+              type: 'button',
+              class: `tree-leaf-item ${this.activeRow === row ? 'active' : ''}`,
+              'data-key': row.entry.key,
+              title: row.entry.key,
+            },
+            [
+              el('span', { class: 'tree-bullet' }, ['•']),
+              el('span', { class: 'tree-leaf-name' }, [row.tier]),
+              el('span', { class: 'tree-leaf-fullkey visually-hidden' }, [row.entry.key]),
+              createBadge(row.entry.alignment.toUpperCase(), `badge-${row.entry.alignment}`),
+            ],
+          ) as HTMLButtonElement;
+
+          row.button = item;
+
+          item.addEventListener('click', () => {
+            this.selectRow(row);
+          });
+
+          kindChildren.append(item);
+        }
+
+        themeChildren.append(kindHeader, kindChildren);
+      }
+
+      this.listContainer.append(themeHeader, themeChildren);
     }
   }
 

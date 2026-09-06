@@ -1,6 +1,6 @@
 # Changelog
 
-0.16.6: declarative JSON layout schema and isolated square UI primitives for the material preview workspace.
+0.16.6: declarative JSON layout schema, nested collapsible tree navigation, bottom transparent notifications, and isolated square UI primitives for the material preview workspace.
 
 0.16.5: dark charcoal window coverings and coordinated satin or scuffed door coatings at world scale.
 
