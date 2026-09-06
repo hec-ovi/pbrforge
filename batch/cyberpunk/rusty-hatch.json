@@ -1,0 +1,11 @@
+{
+  "key": "cyberpunk/rusty-hatch/mid",
+  "path": "sources/rusty-hatch/face.png",
+  "alignment": "exact",
+  "aspect": [1, 1],
+  "description": "rusted steel hatch, off-center handle, peeling paint",
+  "resolution": [1024, 1024],
+  "variantId": "face",
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.7 },
+  "finish": { "roughness": [0.55, 0.82], "grain": 0.24, "relief": 1.9 }
+}

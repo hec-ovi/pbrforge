@@ -12442,6 +12442,166 @@
           }
         }
       ]
+    },
+    "cyberpunk/subway-tile/mid": {
+      "key": "cyberpunk/subway-tile/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.58
+        ],
+        "grain": 0.12,
+        "relief": 1.1
+      },
+      "variants": [
+        {
+          "id": "running-bond",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/subway-tile/mid/running-bond/basecolor.png",
+            "normal": "assets/subway-tile/mid/running-bond/normal.png",
+            "roughness": "assets/subway-tile/mid/running-bond/roughness.png",
+            "height": "assets/subway-tile/mid/running-bond/height.png",
+            "ao": "assets/subway-tile/mid/running-bond/ao.png",
+            "metallic": "assets/subway-tile/mid/running-bond/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/61c5c2f353b64c999bfdaa61f4baaba04d66a1683de4357e14a0ee7d47837ec5.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/cracked-concrete/mid": {
+      "key": "cyberpunk/cracked-concrete/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.72
+      },
+      "finish": {
+        "roughness": [
+          0.62,
+          0.82
+        ],
+        "grain": 0.22,
+        "relief": 1.4
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/cracked-concrete/mid/field/basecolor.png",
+            "normal": "assets/cracked-concrete/mid/field/normal.png",
+            "roughness": "assets/cracked-concrete/mid/field/roughness.png",
+            "height": "assets/cracked-concrete/mid/field/height.png",
+            "ao": "assets/cracked-concrete/mid/field/ao.png",
+            "metallic": "assets/cracked-concrete/mid/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/92f3e5b7878d4556f9d28f672b4439a9f56864621c080700597e201cbce7b603.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/rusty-hatch/mid": {
+      "key": "cyberpunk/rusty-hatch/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.82
+        ],
+        "grain": 0.24,
+        "relief": 1.9
+      },
+      "variants": [
+        {
+          "id": "face",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/rusty-hatch/mid/face/basecolor.png",
+            "normal": "assets/rusty-hatch/mid/face/normal.png",
+            "roughness": "assets/rusty-hatch/mid/face/roughness.png",
+            "height": "assets/rusty-hatch/mid/face/height.png",
+            "ao": "assets/rusty-hatch/mid/face/ao.png",
+            "metallic": "assets/rusty-hatch/mid/face/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/cb942b88d98bbcc8d23855c1590fc5ce9a4ab7c022c5b2175187e1388c56cc23.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/peeling-cabinet/mid": {
+      "key": "cyberpunk/peeling-cabinet/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.65
+      },
+      "finish": {
+        "roughness": [
+          0.52,
+          0.78
+        ],
+        "grain": 0.2,
+        "relief": 1.7
+      },
+      "variants": [
+        {
+          "id": "face",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/peeling-cabinet/mid/face/basecolor.png",
+            "normal": "assets/peeling-cabinet/mid/face/normal.png",
+            "roughness": "assets/peeling-cabinet/mid/face/roughness.png",
+            "height": "assets/peeling-cabinet/mid/face/height.png",
+            "ao": "assets/peeling-cabinet/mid/face/ao.png",
+            "metallic": "assets/peeling-cabinet/mid/face/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/16b703fbc281f41a6b31a8fb4f0a285ec2785bd842a1d49c445f16f5ce1eaedf.png"
+          }
+        }
+      ]
     }
   }
 }

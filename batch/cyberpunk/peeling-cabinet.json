@@ -1,0 +1,11 @@
+{
+  "key": "cyberpunk/peeling-cabinet/mid",
+  "path": "sources/peeling-cabinet/face.png",
+  "alignment": "exact",
+  "aspect": [1, 1],
+  "description": "green electrical cabinet face, peeling enamel and rust streaks",
+  "resolution": [1024, 1024],
+  "variantId": "face",
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.65 },
+  "finish": { "roughness": [0.52, 0.78], "grain": 0.2, "relief": 1.7 }
+}
