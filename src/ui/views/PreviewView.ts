@@ -193,22 +193,11 @@ export class PreviewView {
       ]),
     ]);
 
-    // Stage HUD Overlays
-    const stageHud = el('div', { class: 'stage-hud-overlay' }, [
-      el('div', { class: 'hud-corner hud-top-left' }),
-      el('div', { class: 'hud-corner hud-top-right' }),
-      el('div', { class: 'hud-corner hud-bottom-left' }),
-      el('div', { class: 'hud-corner hud-bottom-right' }),
-      el('div', { class: 'hud-center-reticle' }),
-    ]);
-
-    // Footer Bar
     const stageFooter = el('footer', { class: 'stage-footer-bar' }, [
       this.telemetryStatus,
       el('div', { class: 'stage-credits' }, [layoutConfig.stage.footerTag]),
     ]);
 
-    // Canvas container
     this.canvasWrapper = el('div', { class: 'stage-canvas-container' });
     if (viewer) {
       this.canvasWrapper.append(viewer.canvas);
@@ -217,7 +206,6 @@ export class PreviewView {
     this.stageElement = el('main', { class: 'stage' }, [
       toolbar,
       this.canvasWrapper,
-      stageHud,
       stageFooter,
     ]);
 

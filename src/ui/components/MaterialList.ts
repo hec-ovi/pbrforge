@@ -22,19 +22,9 @@ export class MaterialList {
   private searchInput: HTMLInputElement;
   private countLabel: HTMLElement;
 
-  // Kept for backward compatibility and test API compatibility
-  readonly themeSelect: HTMLSelectElement;
-  readonly kindSelect: HTMLSelectElement;
-  readonly tierSelect: HTMLSelectElement;
-
   private allRows: MaterialRow[] = [];
   private activeRow?: MaterialRow;
   private currentSearch = '';
-  private currentTheme = 'all';
-  private currentKind = 'all';
-  private currentTier = 'all';
-
-  // Expansion states for tree nodes
   private expandedNodes = new Set<string>();
 
   constructor(
@@ -54,31 +44,6 @@ export class MaterialList {
     });
     this.searchInput.className = 'input-search';
 
-    // Virtual hidden select controls to retain contract/filter event testing
-    this.themeSelect = document.createElement('select');
-    this.themeSelect.setAttribute('aria-label', 'Filter theme');
-    this.themeSelect.className = 'visually-hidden';
-    this.themeSelect.addEventListener('change', () => {
-      this.currentTheme = this.themeSelect.value;
-      this.applyFilter();
-    });
-
-    this.kindSelect = document.createElement('select');
-    this.kindSelect.setAttribute('aria-label', 'Filter kind');
-    this.kindSelect.className = 'visually-hidden';
-    this.kindSelect.addEventListener('change', () => {
-      this.currentKind = this.kindSelect.value;
-      this.applyFilter();
-    });
-
-    this.tierSelect = document.createElement('select');
-    this.tierSelect.setAttribute('aria-label', 'Filter tier');
-    this.tierSelect.className = 'visually-hidden';
-    this.tierSelect.addEventListener('change', () => {
-      this.currentTier = this.tierSelect.value;
-      this.applyFilter();
-    });
-
     this.countLabel = el('span', { class: 'list-count-badge' }, ['0 items']);
     this.listContainer = el('nav', { class: 'material-tree-container', 'aria-label': 'materials' });
 
@@ -90,9 +55,6 @@ export class MaterialList {
       ]),
       el('div', { class: 'filter-bar' }, [
         el('div', { class: 'search-box' }, [this.searchInput]),
-        this.themeSelect,
-        this.kindSelect,
-        this.tierSelect,
       ]),
     ]);
 
@@ -122,42 +84,13 @@ export class MaterialList {
       }
 
       this.allRows = rows;
-      // Auto-expand all discovered groups by default
       for (const row of rows) {
         this.expandedNodes.add(row.theme);
         this.expandedNodes.add(`${row.theme}/${row.kind}`);
       }
-      this.populateFilterDropdowns();
       this.applyFilter();
     } catch (cause) {
       throw new PreviewError('E_DATABASE_UNAVAILABLE', 'material database could not be loaded', cause);
-    }
-  }
-
-  private populateFilterDropdowns(): void {
-    const themes = new Set<string>();
-    const kinds = new Set<string>();
-    const tiers = new Set<string>();
-
-    for (const row of this.allRows) {
-      themes.add(row.theme);
-      kinds.add(row.kind);
-      tiers.add(row.tier);
-    }
-
-    this.themeSelect.replaceChildren(el('option', { value: 'all' }, ['ALL THEMES']));
-    for (const t of Array.from(themes).sort()) {
-      this.themeSelect.append(el('option', { value: t }, [t]));
-    }
-
-    this.kindSelect.replaceChildren(el('option', { value: 'all' }, ['ALL KINDS']));
-    for (const k of Array.from(kinds).sort()) {
-      this.kindSelect.append(el('option', { value: k }, [k]));
-    }
-
-    this.tierSelect.replaceChildren(el('option', { value: 'all' }, ['ALL TIERS']));
-    for (const tr of Array.from(tiers).sort()) {
-      this.tierSelect.append(el('option', { value: tr }, [tr]));
     }
   }
 
@@ -171,16 +104,12 @@ export class MaterialList {
     }
 
     const filtered = this.allRows.filter((row) => {
-      if (this.currentTheme !== 'all' && row.theme !== this.currentTheme) return false;
-      if (this.currentKind !== 'all' && row.kind !== this.currentKind) return false;
-      if (this.currentTier !== 'all' && row.tier !== this.currentTier) return false;
-      if (this.currentSearch) {
-        const matchKey = row.entry.key.toLowerCase().includes(this.currentSearch);
-        const matchKind = row.kind.toLowerCase().includes(this.currentSearch);
-        const matchTier = row.tier.toLowerCase().includes(this.currentSearch);
-        if (!matchKey && !matchKind && !matchTier) return false;
-      }
-      return true;
+      if (!this.currentSearch) return true;
+      return (
+        row.entry.key.toLowerCase().includes(this.currentSearch)
+        || row.kind.toLowerCase().includes(this.currentSearch)
+        || row.tier.toLowerCase().includes(this.currentSearch)
+      );
     });
 
     this.countLabel.textContent = `${filtered.length} / ${this.allRows.length}`;
@@ -193,12 +122,6 @@ export class MaterialList {
         onClick: () => {
           this.searchInput.value = '';
           this.currentSearch = '';
-          this.themeSelect.value = 'all';
-          this.currentTheme = 'all';
-          this.kindSelect.value = 'all';
-          this.currentKind = 'all';
-          this.tierSelect.value = 'all';
-          this.currentTier = 'all';
           this.applyFilter();
         },
       });

@@ -112,26 +112,15 @@ describe('UI Polish Suite', () => {
     expect(getByText(view.root, 'cyberpunk/wall/poor')).toBeTruthy();
     expect(getByText(view.root, 'cyberpunk/door/rich')).toBeTruthy();
 
-    // Filter by kind: 'door'
-    const kindSelect = getByRole(view.root, 'combobox', { name: 'Filter kind' });
-    fireEvent.change(kindSelect, { target: { value: 'door' } });
+    const searchInput = getByRole(view.root, 'searchbox', { name: 'Search materials' });
+    fireEvent.input(searchInput, { target: { value: 'door' } });
     expect(view.root.querySelector('[data-key="cyberpunk/door/rich"]')).toBeTruthy();
     expect(view.root.querySelector('[data-key="cyberpunk/wall/poor"]')).toBeNull();
 
-    // Filter by tier: 'rich'
-    const tierSelect = getByRole(view.root, 'combobox', { name: 'Filter tier' });
-    fireEvent.change(tierSelect, { target: { value: 'rich' } });
-    expect(view.root.querySelector('[data-key="cyberpunk/door/rich"]')).toBeTruthy();
-
-    // Search query
-    const searchInput = getByRole(view.root, 'searchbox', { name: 'Search materials' });
     fireEvent.input(searchInput, { target: { value: 'nonexistent' } });
     expect(getByText(view.root, /No materials match current filters/)).toBeTruthy();
 
-    // Reset search
     fireEvent.input(searchInput, { target: { value: '' } });
-    fireEvent.change(kindSelect, { target: { value: 'all' } });
-    fireEvent.change(tierSelect, { target: { value: 'all' } });
     expect(getByText(view.root, 'cyberpunk/wall/poor')).toBeTruthy();
   });
 
