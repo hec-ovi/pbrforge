@@ -36,6 +36,9 @@ describe('preview contract', () => {
     expect(getByRole(view.root, 'button', { name: 'Export material' })).toBeTruthy();
     fireEvent.click(getByRole(view.root, 'button', { name: 'View BaseColor full size' }));
     const dialog = getByRole(document.body, 'dialog', { name: 'BaseColor' });
+    expect(dialog.querySelectorAll('.map-viewer-strip-item')).toHaveLength(4);
+    fireEvent.click(getByRole(dialog, 'button', { name: 'Show Normal' }));
+    expect(getByRole(document.body, 'dialog', { name: 'Normal' })).toBeTruthy();
     const mapImg = dialog.querySelector('.map-viewer-img') as HTMLImageElement;
     const stage = dialog.querySelector('.map-viewer-stage') as HTMLElement;
     expect(mapImg).toBeTruthy();

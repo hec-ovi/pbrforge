@@ -1110,3 +1110,58 @@ html, body {
   pointer-events: none;
 }
 
+.map-viewer-strip {
+  flex-shrink: 0;
+  display: flex;
+  gap: 6px;
+  padding: 8px 14px;
+  overflow-x: auto;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.map-viewer-strip:empty {
+  display: none;
+}
+
+.map-viewer-strip-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font: inherit;
+  flex-shrink: 0;
+}
+
+.map-viewer-strip-item:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.map-viewer-strip-item.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.map-viewer-strip-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  image-rendering: pixelated;
+  border: 1px solid var(--border-default);
+  background: var(--bg-input);
+}
+
+.map-viewer-strip-name {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+

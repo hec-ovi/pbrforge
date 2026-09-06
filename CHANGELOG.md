@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.23: texture preview keeps a strip of every channel map.
+
 0.16.22: texture preview has FIT and 100% size controls.
 
 0.16.21: sidebar MATERIALS title has a refresh control that reloads the list.

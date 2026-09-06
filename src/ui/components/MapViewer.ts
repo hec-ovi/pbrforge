@@ -6,11 +6,17 @@ const ZOOM_MAX = 64;
 const ZOOM_STEP = 1.25;
 const WHEEL_STEP = 1.1;
 
+export interface MapChannel {
+  name: string;
+  url: string;
+}
+
 /** Full-size map preview: wheel zoom, drag pan, FIT and 100%. */
 export class MapViewer {
   private root?: HTMLElement;
   private stage?: HTMLElement;
   private img?: HTMLImageElement;
+  private titleEl?: HTMLElement;
   private zoomLabel?: HTMLElement;
   private scale = 1;
   private tx = 0;
@@ -22,8 +28,11 @@ export class MapViewer {
   private onPointerMove?: (event: PointerEvent) => void;
   private onPointerUp?: (event: PointerEvent) => void;
 
-  open(name: string, url: string): void {
-    this.close();
+  open(name: string, url: string, channels: MapChannel[] = []): void {
+    if (this.root) {
+      this.show(name, url);
+      return;
+    }
 
     const zoomOut = createSquareButton({
       label: '−',
@@ -67,15 +76,31 @@ export class MapViewer {
     closeBtn.className = 'btn btn-icon btn-sm';
 
     this.zoomLabel = el('span', { class: 'map-viewer-zoom' }, ['100%']);
+    this.titleEl = el('span', { class: 'map-viewer-title' }, [name]);
     this.img = el('img', { class: 'map-viewer-img', alt: name, draggable: 'false' }) as HTMLImageElement;
     this.stage = el('div', { class: 'map-viewer-stage' }, [this.img]);
+    const strip = el('div', { class: 'map-viewer-strip' });
+    for (const ch of channels) {
+      const item = el('button', {
+        type: 'button',
+        class: 'map-viewer-strip-item',
+        'data-name': ch.name,
+        'aria-label': `Show ${ch.name}`,
+      }, [
+        el('img', { src: ch.url, alt: '', width: '48', height: '48' }),
+        el('span', { class: 'map-viewer-strip-name' }, [ch.name]),
+      ]);
+      item.addEventListener('click', () => this.show(ch.name, ch.url));
+      strip.append(item);
+    }
     this.root = el('div', { class: 'map-viewer', role: 'dialog', 'aria-label': name }, [
       el('div', { class: 'map-viewer-bar' }, [
-        el('span', { class: 'map-viewer-title' }, [name]),
+        this.titleEl,
         this.zoomLabel,
         el('div', { class: 'map-viewer-actions' }, [zoomOut, zoomIn, fit, actual, closeBtn]),
       ]),
       this.stage,
+      strip,
     ]);
 
     this.onKey = (event: KeyboardEvent) => {
@@ -120,11 +145,22 @@ export class MapViewer {
     this.stage.addEventListener('pointerup', this.onPointerUp);
     this.stage.addEventListener('pointercancel', this.onPointerUp);
 
+    document.body.append(this.root);
+    this.show(name, url);
+  }
+
+  private show(name: string, url: string): void {
+    if (!this.root || !this.img || !this.titleEl) return;
+    this.root.setAttribute('aria-label', name);
+    this.titleEl.textContent = name;
+    this.img.alt = name;
     this.img.addEventListener('load', () => this.fit(), { once: true });
     this.img.src = url;
-    document.body.append(this.root);
     if (this.img.complete) this.fit();
     else this.apply();
+    for (const item of Array.from(this.root.querySelectorAll('.map-viewer-strip-item'))) {
+      item.classList.toggle('active', item.getAttribute('data-name') === name);
+    }
   }
 
   close(): void {
@@ -140,6 +176,7 @@ export class MapViewer {
     this.root = undefined;
     this.stage = undefined;
     this.img = undefined;
+    this.titleEl = undefined;
     this.zoomLabel = undefined;
     this.onKey = undefined;
     this.onWheel = undefined;

@@ -108,6 +108,7 @@ export class MaterialInspector {
     const finish = entry.finish;
 
     const channelRows: HTMLElement[] = [];
+    const maps: { name: string; url: string }[] = [];
     const channelNames: { name: string; key: keyof typeof variant.maps }[] = [
       { name: 'BaseColor', key: 'basecolor' },
       { name: 'Normal', key: 'normal' },
@@ -124,6 +125,7 @@ export class MaterialInspector {
       const path = variant.maps[ch.key];
       if (!path) continue;
       const url = `/themes/${theme}/${path}`;
+      maps.push({ name: ch.name, url });
       const row = el('button', {
         type: 'button',
         class: 'channel-item active',
@@ -139,7 +141,7 @@ export class MaterialInspector {
         }),
         el('span', { class: 'channel-name' }, [ch.name]),
       ]);
-      row.addEventListener('click', () => this.openMap(ch.name, url));
+      row.addEventListener('click', () => this.openMap(ch.name, url, maps));
       channelRows.push(row);
     }
 
@@ -287,8 +289,8 @@ export class MaterialInspector {
     }
   }
 
-  private openMap(name: string, url: string): void {
-    this.mapViewer.open(name, url);
+  private openMap(name: string, url: string, maps: { name: string; url: string }[]): void {
+    this.mapViewer.open(name, url, maps);
   }
 
   private closeMap(): void {
