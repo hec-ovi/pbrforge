@@ -1,50 +1,77 @@
 # pbrforge
 
-A themed PBR material library with an AI generator behind it. It stores complete material sets (map files, tiling config, physical properties) under one string key, `theme/kind/tier`, and resolves that key to real maps for any glTF consumer. New materials are generated locally with ComfyUI and SDXL, verified seamless, then written into the database.
+A themed PBR material library. One string key (`theme/kind/tier`) resolves to a full map set for any glTF consumer. Agents drive it with one CLI.
 
-Read and write are separate: resolving keys is pure, offline and needs no ComfyUI. Anything already in the database works with nothing else installed.
+![catalog](media/preview-1.gif)
+![cabinet side](media/preview-2.gif)
+![cabinet face](media/preview-3.gif)
 
-## Run
+## CLI
+
+One process per verb. Stdout is one JSON object `{ok, verb, data}` or `{ok, verb, error}`, then exit. `--themes <dir>` on any verb points at another database.
 
 ```
 npm install
-npm run pbrforge -- doctor                       # JSON envelope: is this machine ready
-npm run pbrforge -- patterns                     # procedural create kinds
-npm run pbrforge -- from-image request.json      # one opaque PNG to dry PBR maps, no wrap required
-npm run pbrforge -- resolve cyberpunk/window-glass/rich
-npm run resolve -- cyberpunk/window-glass/rich   # look up a key (human text)
-npm run create -- request.json                   # generate a set (photographed lanes need ComfyUI)
-npm run preview                                  # material sphere viewer with lighting and orbit
-npm run refinish -- request.json                 # re-read the maps of a family under a finish and factors
-npm run rebrand -- --theme cyberpunk --businesses businesses.json   # spell business names over the screens of their tier
-npm run pack -- --theme cyberpunk                # add packed metallic-roughness maps from the existing maps
-npm run sheet -- wall                            # contact sheet of a kind, into out/
+npm run pbrforge -- doctor
+npm run pbrforge -- <verb>
+```
+
+| Verb | What it does |
+| --- | --- |
+| `doctor` | is this machine able to work |
+| `version` | package version |
+| `help` | verb list |
+| `resolve <theme/kind/tier>` | look up a key |
+| `list [--theme t] [--kind k] [--tier t]` | matching keys |
+| `patterns` | procedural create kinds |
+| `from-image <request.json> [--overwrite]` | one photo to a dry PBR set |
+| `create <request.json> [--overwrite] [--native]` | make a new set |
+| `refinish <requests.json>` | re-read gloss and relief from stored albedo |
+| `rebrand --theme t --businesses file.json` | put business names on screens |
+| `pack --theme t` | add packed metallic-roughness maps |
+| `preview` | whether the sphere viewer is up |
+
+Start the viewer with `npm run preview` (http://127.0.0.1:5177). The `preview` verb only reports whether it is up.
+
+Human scripts (`npm run resolve`, `npm run create`, `npm run refinish`, `npm run rebrand`, `npm run pack`, `npm run sheet`) remain. `create` as an array skips keys that already exist, so a batch is resumable.
+
+```
 npm test
 npm run typecheck
 npm run build
 ```
 
-`npm run create` also takes an array of requests and skips keys that already exist, so a batch is resumable.
+## from-image
+
+One opaque JPEG or PNG in, a full dry PBR set out. No ComfyUI. No seam gate. No emission.
+
+```
+npm run pbrforge -- from-image request.json
+```
+
+Exact faces (AC, door, hatch, cabinet) fill the frame. Repeating fields (brick, concrete, tile) are a clean tilable panel first: no hero stain, paper, or graffiti baked in. `append: true` with `variantId` `side` / `top` / `bottom` adds a box face onto the same key. Paper and graffiti stay a separate exact opacity material.
+
+`create --native` stays for the three create lanes that already wrap or emit: `sourceImage` (exact plate), `sourceAlbedo` (wrapping tile, seam-checked), `screens[].imagePath` (ad artwork).
 
 ## Patterns
 
 `npm run pbrforge -- patterns` prints every procedural create kind. Agents list with that verb, then read `data.kinds[].detail` for one drawer.
 
-- `mineral` continuous aggregate (street-paving-body)
+- `mineral` continuous 6-11 mm aggregate, fine pores
 - `aggregate` coarser stone in binder
 - `paving` mineral grain under optional panels
 - `concrete` clouds, cast traces, pores, optional panels
-- `noise` mottling, wall to asphalt
-- `lane` asphalt plus wheel tracks
-- `puddle` noise field with damp pools
-- `hexagon` hex grid
-- `panel-grid` inset panels
+- `hexagon` hex grid, edges or gloss only
+- `panel-grid` inset panels with chamfer
 - `slab` flush slabs, narrow groove
 - `stripe` bands on one axis
 - `two-tone` one split, trim line
-- `grille` AC condenser (rings, spokes, fan)
-- `lamp` fixture housing and lens
-- `glyph-atlas` letter sheet
+- `noise` mottling, wall to asphalt
+- `lane` asphalt plus wheel tracks
+- `puddle` noise field with damp pools
+- `lamp` housing bezel, lens, hot centre
+- `glyph-atlas` letter sheet, one lit glyph per cell
+- `grille` AC condenser: rings, spokes, fan cavity
 - `water` tiled waves
 - `window-grime` translucent runoff decal
 - `incident-blood` directional pool decal
@@ -61,7 +88,7 @@ npx skills add hec-ovi/pbrforge
 npm run pbrforge -- doctor
 ```
 
-The skill is [`skills/pbrforge/`](skills/pbrforge/SKILL.md). Every `pbrforge` verb prints one JSON object `{ok, verb, data}` or `{ok, verb, error}` and exits. Pattern, plate, recolor, rebrand and pack need no ComfyUI. `pbrforge create --native` imports a PNG from the agent's own image tool. Photographed creates without a file need a local ComfyUI at `http://127.0.0.1:8188`.
+The skill is [`skills/pbrforge/`](skills/pbrforge/SKILL.md). Pattern, plate, from-image, recolor, rebrand and pack need no ComfyUI. Photographed creates without a file need a local ComfyUI at `http://127.0.0.1:8188`.
 
 ## Package API
 
