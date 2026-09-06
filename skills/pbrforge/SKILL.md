@@ -54,7 +54,7 @@ A create file is one request object or an array. Array mode skips keys that alre
 
 ## One native photo (`from-image`)
 
-Read [references/from-image.md](references/from-image.md) before every call. Framing of the photo is in that file (fill the frame; exact vs tile). Bricks, concrete, stone, AC faces, posters: one JPEG or PNG, dry maps derived, asymmetry allowed, no emission.
+Read [references/from-image.md](references/from-image.md) before every call. Framing of the photo is in that file (fill the frame; exact vs tile; clean tiles first; box sides from the front; artifacts as opacity decals). Bricks, concrete, stone, AC faces, posters: one JPEG or PNG, dry maps derived, asymmetry allowed, no emission.
 
 ```
 npm run pbrforge -- from-image request.json

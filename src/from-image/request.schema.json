@@ -3,7 +3,7 @@
   "$id": "urn:urbe:from-image-request",
   "title": "FromImageRequest",
   "type": "object",
-  "required": ["key", "path", "alignment", "description"],
+  "required": ["key", "path", "description"],
   "additionalProperties": false,
   "properties": {
     "key": {
@@ -61,16 +61,26 @@
         "relief": { "type": "number", "minimum": 0, "maximum": 4 }
       }
     },
-    "overwrite": { "type": "boolean" }
+    "overwrite": { "type": "boolean" },
+    "append": { "type": "boolean" }
   },
   "allOf": [
     {
-      "if": { "properties": { "alignment": { "const": "exact" } }, "required": ["alignment"] },
-      "then": { "required": ["aspect"] }
-    },
-    {
-      "if": { "properties": { "alignment": { "const": "tile" } }, "required": ["alignment"] },
-      "then": { "required": ["tiling"] }
+      "if": { "properties": { "append": { "const": true } }, "required": ["append"] },
+      "then": { "required": ["variantId"] },
+      "else": {
+        "required": ["alignment"],
+        "allOf": [
+          {
+            "if": { "properties": { "alignment": { "const": "exact" } }, "required": ["alignment"] },
+            "then": { "required": ["aspect"] }
+          },
+          {
+            "if": { "properties": { "alignment": { "const": "tile" } }, "required": ["alignment"] },
+            "then": { "required": ["tiling"] }
+          }
+        ]
+      }
     }
   ]
 }

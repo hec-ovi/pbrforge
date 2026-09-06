@@ -32,7 +32,7 @@ Exit 0 on ok, 2 on `E_USAGE`, 1 on any other error. Closed error codes are the p
 | `pack --theme` | `packed` |
 | `preview` | `url`, `up`, `start` (does not launch the viewer) |
 
-`patterns` reads [pattern-kinds.json](../../schema/pattern-kinds.json). `from-image` is the [from-image box](../from-image/CONTRACT.md): one opaque PNG, dry PBR maps, no seam gate, no emission. Create request JSON is [CreateRequest](../../schema/create-request.schema.json) or an array of them. `--native` on create is unchanged (`sourceImage`, `sourceAlbedo`, or `screens[].imagePath`). Preview is started with `npm run preview`. Photographed create needs ComfyUI; pattern, plate, from-image, recolor, rebrand and pack do not.
+`patterns` reads [pattern-kinds.json](../../schema/pattern-kinds.json). `from-image` is the [from-image box](../from-image/CONTRACT.md): one opaque PNG, dry PBR maps, no seam gate, no emission. `append` on the request adds another face to an existing key. Create request JSON is [CreateRequest](../../schema/create-request.schema.json) or an array of them. `--native` on create is unchanged (`sourceImage`, `sourceAlbedo`, or `screens[].imagePath`). Preview is started with `npm run preview`. Photographed create needs ComfyUI; pattern, plate, from-image, recolor, rebrand and pack do not.
 
 ## Depends on
 

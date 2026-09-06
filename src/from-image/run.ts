@@ -17,6 +17,7 @@ export async function fromImageVerb(argv: string[], bundledThemesDir: string): P
   if (flags.overwrite) request.overwrite = true;
   const db = new Database(themesOption(options).themesDir ?? bundledThemesDir);
   const entry = await new FromImage(db).run(request);
-  const variant = entry.variants[0];
+  const id = request.variantId ?? entry.variants[entry.variants.length - 1]!.id;
+  const variant = entry.variants.find((item) => item.id === id) ?? entry.variants[entry.variants.length - 1]!;
   return { key: entry.key, variant: variant.id, maps: variant.maps, alignment: entry.alignment };
 }

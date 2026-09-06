@@ -20,7 +20,7 @@ const MAX_EXACT_PIXELS = 4096 * 2304;
 export interface FromImageRequest {
   key: string;
   path: string;
-  alignment: 'exact' | 'tile';
+  alignment?: 'exact' | 'tile';
   description: string;
   aspect?: [number, number];
   tiling?: { worldSize: [number, number] };
@@ -29,6 +29,7 @@ export interface FromImageRequest {
   physical?: Physical;
   finish?: { roughness?: [number, number]; grain?: number; relief?: number };
   overwrite?: boolean;
+  append?: boolean;
 }
 
 /** One native albedo to a dry PBR entry. No seam gate. No emission. */
@@ -46,23 +47,32 @@ export class FromImage {
     const match = KEY.exec(request.key);
     if (!match) throw new MaterialsError('E_SCHEMA', `key does not match theme/kind/tier: ${request.key}`);
     const [, theme, kind, tier] = match;
-    const physical = request.physical ?? { metallicFactor: 0, roughnessFactor: 0.65 };
-    const finish: Finish = resolveFinish(request.finish, physical);
+    const base = request.append ? this.db.resolve(request.key) : undefined;
+    const id = request.variantId ?? '1';
+    if (base?.variants.some((variant) => variant.id === id)) {
+      throw new MaterialsError('E_KEY_EXISTS', `${request.key} already has variant ${id}`);
+    }
+
+    const alignment = base?.alignment ?? request.alignment!;
+    const physical = base?.physical ?? request.physical ?? { metallicFactor: 0, roughnessFactor: 0.65 };
+    const finish: Finish = base?.finish ?? resolveFinish(request.finish, physical);
     assertDry(physical, finish);
 
-    const [width, height] = request.resolution ?? [1024, 1024];
-    const shape = request.alignment === 'tile' ? request.tiling!.worldSize : request.aspect!;
+    const [width, height] = request.resolution ?? base?.variants[0]?.resolution ?? [1024, 1024];
+    const shape = alignment === 'tile'
+      ? (base?.tiling?.worldSize ?? request.tiling!.worldSize)
+      : (base?.aspect ?? request.aspect!);
     const expectedWidth = height * (shape[0] / shape[1]);
     if (Math.abs(width - expectedWidth) > 1) {
       throw new MaterialsError(
         'E_SCHEMA',
-        `${request.key} resolution ${width}x${height} does not fit ${shape[0]}:${shape[1]} ${request.alignment} dimensions`,
+        `${request.key} resolution ${width}x${height} does not fit ${shape[0]}:${shape[1]} ${alignment} dimensions`,
       );
     }
     const pixels = width * height;
-    const limit = request.alignment === 'tile' ? MAX_TILE_PIXELS : MAX_EXACT_PIXELS;
+    const limit = alignment === 'tile' ? MAX_TILE_PIXELS : MAX_EXACT_PIXELS;
     if (width > MAX_SIDE || height > MAX_SIDE || pixels > limit) {
-      throw new MaterialsError('E_SCHEMA', `${request.key} resolution ${width}x${height} exceeds the ${request.alignment} map budget`);
+      throw new MaterialsError('E_SCHEMA', `${request.key} resolution ${width}x${height} exceeds the ${alignment} map budget`);
     }
 
     this.db.ensureTheme(theme);
@@ -75,7 +85,6 @@ export class FromImage {
       ['metallic', await encodeGrayPng(deriveMetallic(albedo, physical))],
     ];
 
-    const id = request.variantId ?? '1';
     const relDir = variantDir(kind, tier, id);
     const absDir = join(this.db.themeDir(theme), relDir);
     mkdirSync(absDir, { recursive: true });
@@ -91,10 +100,15 @@ export class FromImage {
       maps,
     }]);
     const variant = packed.variants[0];
+    if (base) {
+      const entry: MaterialEntry = { ...base, variants: [...base.variants, variant] };
+      this.db.write(entry, true);
+      return entry;
+    }
     const entry: MaterialEntry = {
       key: request.key,
-      alignment: request.alignment,
-      ...(request.alignment === 'tile' ? { tiling: request.tiling } : { aspect: request.aspect }),
+      alignment,
+      ...(alignment === 'tile' ? { tiling: request.tiling } : { aspect: request.aspect }),
       physical,
       finish,
       variants: [variant],

@@ -87,4 +87,34 @@ describe('from-image', () => {
     expect(entry.alignment).toBe('tile');
     expect(entry.variants[0].maps.basecolor).toBeTruthy();
   });
+
+  it('appends a second face onto an existing key', async () => {
+    const themesDir = mkdtempSync(join(tmpdir(), 'from-image-append-'));
+    const front = join(themesDir, 'front.png');
+    const side = join(themesDir, 'side.png');
+    await albedo(front);
+    await albedo(side);
+    const box = new FromImage(new Database(themesDir));
+    await box.run({
+      key: 'test/cabinet/mid',
+      path: front,
+      alignment: 'exact',
+      aspect: [1, 1],
+      description: 'cabinet door',
+      resolution: [64, 64],
+      variantId: 'face',
+      physical: { metallicFactor: 0, roughnessFactor: 0.65 },
+    });
+    const entry = await box.run({
+      key: 'test/cabinet/mid',
+      path: side,
+      append: true,
+      variantId: 'side',
+      description: 'cabinet side',
+      resolution: [64, 64],
+    });
+    expect(entry.alignment).toBe('exact');
+    expect(entry.variants.map((variant) => variant.id)).toEqual(['face', 'side']);
+    expect(entry.variants[1].maps.emission).toBeUndefined();
+  });
 });
