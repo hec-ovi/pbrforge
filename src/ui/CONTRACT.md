@@ -28,7 +28,7 @@ Empty databases and filters with no matches are rendered states.
 - Tile entries use repeat wrapping. Exact entries use clamp wrapping and one fitted UV face.
 - Basecolor and emission use sRGB. Normal, roughness, metallic, AO, opacity and height use linear sampling.
 - A selected variant drives the sphere, inspector, key display and telemetry together.
-- Channel rows show a 32px thumbnail of each authored map. Clicking a channel opens that map full size with pan and zoom (wheel, drag, +/-/FIT/100%, and +/-/0/1 keys). The viewer keeps a strip of every authored map; clicking a thumb shows that map. FIT frames the map in the stage. 100% is one image pixel per screen pixel. Escape or close dismisses it. Export downloads the entry JSON and that variant's PNG maps. It does not write the database.
+- Channel rows show a 32px thumbnail of each authored map. Clicking a channel opens that map full size with pan and zoom (wheel, drag, +/-/FIT/100%, and +/-/0/1 keys). The viewer keeps a strip of every authored map; clicking a thumb shows that map at the current pan and zoom. FIT frames the map in the stage. 100% is one image pixel per screen pixel. Escape or close dismisses it. Export downloads the entry JSON and that variant's PNG maps. It does not write the database.
 - Sidebar and inspector widths are user-resizable via the split handles. Square corners, zero border-radius.
 - View structure and inspector sections load from declarative schema definitions.
 

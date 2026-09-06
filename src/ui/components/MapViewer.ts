@@ -18,6 +18,7 @@ export class MapViewer {
   private img?: HTMLImageElement;
   private titleEl?: HTMLElement;
   private zoomLabel?: HTMLElement;
+  private placed = false;
   private scale = 1;
   private tx = 0;
   private ty = 0;
@@ -151,12 +152,18 @@ export class MapViewer {
 
   private show(name: string, url: string): void {
     if (!this.root || !this.img || !this.titleEl) return;
+    const keepView = this.placed;
+    this.placed = true;
     this.root.setAttribute('aria-label', name);
     this.titleEl.textContent = name;
     this.img.alt = name;
-    this.img.addEventListener('load', () => this.fit(), { once: true });
+    const ready = () => {
+      if (keepView) this.apply();
+      else this.fit();
+    };
+    this.img.addEventListener('load', ready, { once: true });
     this.img.src = url;
-    if (this.img.complete) this.fit();
+    if (this.img.complete) ready();
     else this.apply();
     for (const item of Array.from(this.root.querySelectorAll('.map-viewer-strip-item'))) {
       item.classList.toggle('active', item.getAttribute('data-name') === name);
@@ -184,6 +191,7 @@ export class MapViewer {
     this.onPointerMove = undefined;
     this.onPointerUp = undefined;
     this.drag = undefined;
+    this.placed = false;
     this.scale = 1;
     this.tx = 0;
     this.ty = 0;

@@ -37,13 +37,15 @@ describe('preview contract', () => {
     fireEvent.click(getByRole(view.root, 'button', { name: 'View BaseColor full size' }));
     const dialog = getByRole(document.body, 'dialog', { name: 'BaseColor' });
     expect(dialog.querySelectorAll('.map-viewer-strip-item')).toHaveLength(4);
-    fireEvent.click(getByRole(dialog, 'button', { name: 'Show Normal' }));
-    expect(getByRole(document.body, 'dialog', { name: 'Normal' })).toBeTruthy();
     const mapImg = dialog.querySelector('.map-viewer-img') as HTMLImageElement;
     const stage = dialog.querySelector('.map-viewer-stage') as HTMLElement;
     expect(mapImg).toBeTruthy();
     fireEvent.click(getByRole(dialog, 'button', { name: 'Zoom in' }));
     expect(Number(mapImg.dataset.scale)).toBeGreaterThan(1);
+    const held = mapImg.dataset.scale;
+    fireEvent.click(getByRole(dialog, 'button', { name: 'Show Normal' }));
+    expect(getByRole(document.body, 'dialog', { name: 'Normal' })).toBeTruthy();
+    expect(mapImg.dataset.scale).toBe(held);
     fireEvent.pointerDown(stage, { clientX: 10, clientY: 10, button: 0 });
     fireEvent.pointerMove(stage, { clientX: 40, clientY: 25 });
     fireEvent.pointerUp(stage, { clientX: 40, clientY: 25 });
