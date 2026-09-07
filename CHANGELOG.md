@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.32 street props: fitted polymer abrasion and adhesive-residue wear variants.
+
 0.16.32: charcoal molded-polymer grain and fitted scuffed panels supply worn plastic cases.
 
 0.16.32: native cardboard, sawn wood and industrial coating PBR fields support street props at metre scale.
