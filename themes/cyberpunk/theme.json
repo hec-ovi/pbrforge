@@ -13840,6 +13840,86 @@
           }
         }
       ]
+    },
+    "cyberpunk/prop-polymer/poor": {
+      "key": "cyberpunk/prop-polymer/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.6,
+          0.6
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.66
+      },
+      "finish": {
+        "roughness": [
+          0.5,
+          0.82
+        ],
+        "grain": 0.18,
+        "relief": 0.3
+      },
+      "variants": [
+        {
+          "id": "charcoal",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/prop-polymer/poor/charcoal/basecolor.png",
+            "normal": "assets/prop-polymer/poor/charcoal/normal.png",
+            "roughness": "assets/prop-polymer/poor/charcoal/roughness.png",
+            "height": "assets/prop-polymer/poor/charcoal/height.png",
+            "ao": "assets/prop-polymer/poor/charcoal/ao.png",
+            "metallic": "assets/prop-polymer/poor/charcoal/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/64b7396fe44c9261a3a245bf5c5f0c934f05986be328fe0d33065113e4d2f749.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/prop-polymer-face/poor": {
+      "key": "cyberpunk/prop-polymer-face/poor",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7
+      },
+      "finish": {
+        "roughness": [
+          0.52,
+          0.86
+        ],
+        "grain": 0.18,
+        "relief": 0.22
+      },
+      "variants": [
+        {
+          "id": "scored",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/prop-polymer-face/poor/scored/basecolor.png",
+            "normal": "assets/prop-polymer-face/poor/scored/normal.png",
+            "roughness": "assets/prop-polymer-face/poor/scored/roughness.png",
+            "height": "assets/prop-polymer-face/poor/scored/height.png",
+            "ao": "assets/prop-polymer-face/poor/scored/ao.png",
+            "metallic": "assets/prop-polymer-face/poor/scored/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/964fd998b83b0e22ff864eb9bbccb30d9b3a2e2eb5a664474be0d607a2bf9a1e.png"
+          }
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/prop-polymer/poor",
+  "path": "sources/street-props/polymer.png",
+  "description": "dark pebbled industrial polymer",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      0.6,
+      0.6
+    ]
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "charcoal",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.66
+  },
+  "finish": {
+    "roughness": [
+      0.5,
+      0.82
+    ],
+    "grain": 0.18,
+    "relief": 0.3
+  }
+}

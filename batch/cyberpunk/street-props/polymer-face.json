@@ -1,0 +1,27 @@
+{
+  "key": "cyberpunk/prop-polymer-face/poor",
+  "path": "sources/street-props/polymer-face.png",
+  "description": "scored charcoal polymer inset with worn identification stencil",
+  "alignment": "exact",
+  "aspect": [
+    1,
+    1
+  ],
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "scored",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.7
+  },
+  "finish": {
+    "roughness": [
+      0.52,
+      0.86
+    ],
+    "grain": 0.18,
+    "relief": 0.22
+  }
+}
