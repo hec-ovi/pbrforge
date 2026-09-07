@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/interior-damaged-steel/poor",
+  "path": "sources/interiors/damaged-steel.png",
+  "description": "worn blue gray painted steel for doors and service cases",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "field",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.7
+  },
+  "finish": {
+    "roughness": [
+      0.61,
+      0.82
+    ],
+    "grain": 0.1,
+    "relief": 0.15
+  }
+}

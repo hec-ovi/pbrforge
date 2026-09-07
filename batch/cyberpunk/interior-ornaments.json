@@ -1,0 +1,167 @@
+[
+  {
+    "key": "cyberpunk/interior-leaf/rich",
+    "description": "matte green leaves for planted interior assemblies",
+    "flatColor": "#314a2d",
+    "physical": {
+      "roughnessFactor": 0.7,
+      "metallicFactor": 0
+    },
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "variantId": "plain",
+    "flatNoise": 0.005,
+    "seed": 873
+  },
+  {
+    "key": "cyberpunk/interior-leaf-dry/poor",
+    "description": "dry olive leaves for neglected planters",
+    "flatColor": "#595840",
+    "physical": {
+      "roughnessFactor": 0.85,
+      "metallicFactor": 0
+    },
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "variantId": "plain",
+    "flatNoise": 0.005,
+    "seed": 874
+  },
+  {
+    "key": "cyberpunk/interior-led-warm/rich",
+    "description": "warm white inset diffuser",
+    "flatColor": "#fff0d4",
+    "emission": "luminance",
+    "physical": {
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "variantId": "plain",
+    "flatNoise": 0.005,
+    "seed": 875
+  },
+  {
+    "key": "cyberpunk/interior-led-cyan/mid",
+    "description": "cyan hologram and capsule indicator",
+    "flatColor": "#55c6cd",
+    "emission": "luminance",
+    "physical": {
+      "roughnessFactor": 0.6,
+      "metallicFactor": 0,
+      "emissiveStrength": 3
+    },
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "variantId": "plain",
+    "flatNoise": 0.005,
+    "seed": 876
+  },
+  {
+    "key": "cyberpunk/interior-bronze/rich",
+    "description": "dark satin bronze frame trim",
+    "flatColor": "#6e5032",
+    "physical": {
+      "roughnessFactor": 0.48,
+      "metallicFactor": 1
+    },
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "variantId": "plain",
+    "flatNoise": 0.005,
+    "seed": 877
+  },
+  {
+    "key": "cyberpunk/interior-paper/poor",
+    "description": "worn cream paper debris",
+    "flatColor": "#b9af98",
+    "physical": {
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0
+    },
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "variantId": "plain",
+    "flatNoise": 0.005,
+    "seed": 878
+  },
+  {
+    "key": "cyberpunk/interior-fish/rich",
+    "description": "copper orange aquarium fish",
+    "flatColor": "#ba6139",
+    "physical": {
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0
+    },
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "variantId": "plain",
+    "flatNoise": 0.005,
+    "seed": 879
+  }
+]
