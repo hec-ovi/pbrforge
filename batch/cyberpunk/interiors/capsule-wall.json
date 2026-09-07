@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/interior-capsule-wall/mid",
+  "path": "sources/interiors/capsule-wall.png",
+  "description": "Pale cool-grey aged ceramic composite architectural field, subtly scuffed uniform coating, soft fine abrasion over a dense space-habitat composite skin, quiet worn futuristic material, no seams, no hatches, no hardware.",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "field",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.57
+  },
+  "finish": {
+    "roughness": [
+      0.5,
+      0.66
+    ],
+    "grain": 0.09,
+    "relief": 0.18
+  }
+}

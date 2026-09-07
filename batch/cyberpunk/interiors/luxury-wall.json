@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/interior-luxury-wall/rich",
+  "path": "sources/interiors/luxury-wall.png",
+  "description": "Warm pale ivory honed limestone architectural field, very subtle sedimentary mineral clouding and tiny pores, costly quiet stone finish, no large veins, no grout.",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "field",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.62
+  },
+  "finish": {
+    "roughness": [
+      0.55,
+      0.69
+    ],
+    "grain": 0.12,
+    "relief": 0.35
+  }
+}

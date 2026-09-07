@@ -12877,6 +12877,494 @@
           }
         }
       ]
+    },
+    "cyberpunk/interior-capsule-ceiling/mid": {
+      "key": "cyberpunk/interior-capsule-ceiling/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.62
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.7
+        ],
+        "grain": 0.08,
+        "relief": 0.2
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-capsule-ceiling/mid/field/basecolor.png",
+            "normal": "assets/interior-capsule-ceiling/mid/field/normal.png",
+            "roughness": "assets/interior-capsule-ceiling/mid/field/roughness.png",
+            "height": "assets/interior-capsule-ceiling/mid/field/height.png",
+            "ao": "assets/interior-capsule-ceiling/mid/field/ao.png",
+            "metallic": "assets/interior-capsule-ceiling/mid/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/a327516c850b3d753cb1e787ec9d51c5fa4f379cf2c7e55ed5d23e6e54656afb.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-capsule-floor/mid": {
+      "key": "cyberpunk/interior-capsule-floor/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.77
+      },
+      "finish": {
+        "roughness": [
+          0.68,
+          0.85
+        ],
+        "grain": 0.18,
+        "relief": 0.5
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-capsule-floor/mid/field/basecolor.png",
+            "normal": "assets/interior-capsule-floor/mid/field/normal.png",
+            "roughness": "assets/interior-capsule-floor/mid/field/roughness.png",
+            "height": "assets/interior-capsule-floor/mid/field/height.png",
+            "ao": "assets/interior-capsule-floor/mid/field/ao.png",
+            "metallic": "assets/interior-capsule-floor/mid/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/8024340160f9ed1bd5315dbd702b7ca8d2db78d9349094d350a1b1197aac9289.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-capsule-wall/mid": {
+      "key": "cyberpunk/interior-capsule-wall/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.57
+      },
+      "finish": {
+        "roughness": [
+          0.5,
+          0.66
+        ],
+        "grain": 0.09,
+        "relief": 0.18
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-capsule-wall/mid/field/basecolor.png",
+            "normal": "assets/interior-capsule-wall/mid/field/normal.png",
+            "roughness": "assets/interior-capsule-wall/mid/field/roughness.png",
+            "height": "assets/interior-capsule-wall/mid/field/height.png",
+            "ao": "assets/interior-capsule-wall/mid/field/ao.png",
+            "metallic": "assets/interior-capsule-wall/mid/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/2b91794e27ee3d7d996adddba738441c01c07de35df90232f4e52625c3e2d6bc.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-damaged-ceiling/poor": {
+      "key": "cyberpunk/interior-damaged-ceiling/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.87
+      },
+      "finish": {
+        "roughness": [
+          0.81,
+          0.94
+        ],
+        "grain": 0.14,
+        "relief": 0.45
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-damaged-ceiling/poor/field/basecolor.png",
+            "normal": "assets/interior-damaged-ceiling/poor/field/normal.png",
+            "roughness": "assets/interior-damaged-ceiling/poor/field/roughness.png",
+            "height": "assets/interior-damaged-ceiling/poor/field/height.png",
+            "ao": "assets/interior-damaged-ceiling/poor/field/ao.png",
+            "metallic": "assets/interior-damaged-ceiling/poor/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/7386e20dda00df0f10b967c176da366d9ab5ce2a54fa853424accde65bdf4c8a.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-damaged-floor/poor": {
+      "key": "cyberpunk/interior-damaged-floor/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.82
+      },
+      "finish": {
+        "roughness": [
+          0.72,
+          0.92
+        ],
+        "grain": 0.23,
+        "relief": 0.8
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-damaged-floor/poor/field/basecolor.png",
+            "normal": "assets/interior-damaged-floor/poor/field/normal.png",
+            "roughness": "assets/interior-damaged-floor/poor/field/roughness.png",
+            "height": "assets/interior-damaged-floor/poor/field/height.png",
+            "ao": "assets/interior-damaged-floor/poor/field/ao.png",
+            "metallic": "assets/interior-damaged-floor/poor/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/7de4cd511e23f4b6829d2f43049da31c03710d3536e4bf374b94fb27784c9b6d.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-damaged-wall/poor": {
+      "key": "cyberpunk/interior-damaged-wall/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.83
+      },
+      "finish": {
+        "roughness": [
+          0.75,
+          0.91
+        ],
+        "grain": 0.24,
+        "relief": 1
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-damaged-wall/poor/field/basecolor.png",
+            "normal": "assets/interior-damaged-wall/poor/field/normal.png",
+            "roughness": "assets/interior-damaged-wall/poor/field/roughness.png",
+            "height": "assets/interior-damaged-wall/poor/field/height.png",
+            "ao": "assets/interior-damaged-wall/poor/field/ao.png",
+            "metallic": "assets/interior-damaged-wall/poor/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/8ffb652b5c9346280b051b837f2a560dbf4c9adf098d204b2abc06a2e312479a.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-luxury-ceiling/rich": {
+      "key": "cyberpunk/interior-luxury-ceiling/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.52
+      },
+      "finish": {
+        "roughness": [
+          0.48,
+          0.58
+        ],
+        "grain": 0.06,
+        "relief": 0.08
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-luxury-ceiling/rich/field/basecolor.png",
+            "normal": "assets/interior-luxury-ceiling/rich/field/normal.png",
+            "roughness": "assets/interior-luxury-ceiling/rich/field/roughness.png",
+            "height": "assets/interior-luxury-ceiling/rich/field/height.png",
+            "ao": "assets/interior-luxury-ceiling/rich/field/ao.png",
+            "metallic": "assets/interior-luxury-ceiling/rich/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/519f0b2a34632405b82ed8728e0ee10836813ccc11b92282ac775399c565e31f.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-luxury-floor/rich": {
+      "key": "cyberpunk/interior-luxury-floor/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.48
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.53
+        ],
+        "grain": 0.06,
+        "relief": 0.08
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-luxury-floor/rich/field/basecolor.png",
+            "normal": "assets/interior-luxury-floor/rich/field/normal.png",
+            "roughness": "assets/interior-luxury-floor/rich/field/roughness.png",
+            "height": "assets/interior-luxury-floor/rich/field/height.png",
+            "ao": "assets/interior-luxury-floor/rich/field/ao.png",
+            "metallic": "assets/interior-luxury-floor/rich/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/ad5ff48d8d163b13475e7e4c99173ac5f229a5652ee84db5df0988dd50c3e216.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-luxury-wall/rich": {
+      "key": "cyberpunk/interior-luxury-wall/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.62
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.69
+        ],
+        "grain": 0.12,
+        "relief": 0.35
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-luxury-wall/rich/field/basecolor.png",
+            "normal": "assets/interior-luxury-wall/rich/field/normal.png",
+            "roughness": "assets/interior-luxury-wall/rich/field/roughness.png",
+            "height": "assets/interior-luxury-wall/rich/field/height.png",
+            "ao": "assets/interior-luxury-wall/rich/field/ao.png",
+            "metallic": "assets/interior-luxury-wall/rich/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/9247aaaed5ba851e910db960dea8dac7980123a5154edd554a029e0df99899b1.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-capsule-hatch/mid": {
+      "key": "cyberpunk/interior-capsule-hatch/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.75
+      },
+      "finish": {
+        "roughness": [
+          0.64,
+          0.85
+        ],
+        "grain": 0.12,
+        "relief": 0.5
+      },
+      "variants": [
+        {
+          "id": "face",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-capsule-hatch/mid/face/basecolor.png",
+            "normal": "assets/interior-capsule-hatch/mid/face/normal.png",
+            "roughness": "assets/interior-capsule-hatch/mid/face/roughness.png",
+            "height": "assets/interior-capsule-hatch/mid/face/height.png",
+            "ao": "assets/interior-capsule-hatch/mid/face/ao.png",
+            "metallic": "assets/interior-capsule-hatch/mid/face/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/123ea9cae2d189e8c08b1f12d5b4169cce5463aa3cb33adfd95bfeefb3fb4f8f.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-damaged-patch/poor": {
+      "key": "cyberpunk/interior-damaged-patch/poor",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.75
+      },
+      "finish": {
+        "roughness": [
+          0.64,
+          0.85
+        ],
+        "grain": 0.12,
+        "relief": 0.5
+      },
+      "variants": [
+        {
+          "id": "face",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-damaged-patch/poor/face/basecolor.png",
+            "normal": "assets/interior-damaged-patch/poor/face/normal.png",
+            "roughness": "assets/interior-damaged-patch/poor/face/roughness.png",
+            "height": "assets/interior-damaged-patch/poor/face/height.png",
+            "ao": "assets/interior-damaged-patch/poor/face/ao.png",
+            "metallic": "assets/interior-damaged-patch/poor/face/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/3ea22f8aeca111090ba0c8a3fe61180c0be8c86c52d7aeb1d4f35e937927f7e7.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-luxury-timber/rich": {
+      "key": "cyberpunk/interior-luxury-timber/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.57
+        ],
+        "grain": 0.12,
+        "relief": 0.1
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-luxury-timber/rich/field/basecolor.png",
+            "normal": "assets/interior-luxury-timber/rich/field/normal.png",
+            "roughness": "assets/interior-luxury-timber/rich/field/roughness.png",
+            "height": "assets/interior-luxury-timber/rich/field/height.png",
+            "ao": "assets/interior-luxury-timber/rich/field/ao.png",
+            "metallic": "assets/interior-luxury-timber/rich/field/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/12646d7acc6839338882ade4532ffee7501878102347e5630ddb06a6245e27db.png"
+          }
+        }
+      ]
     }
   }
 }

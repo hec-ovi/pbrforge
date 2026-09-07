@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/interior-luxury-ceiling/rich",
+  "path": "sources/interiors/luxury-ceiling.png",
+  "description": "Warm pearl-white powder-coated aluminum architectural field, very fine satin powder-coat grain, restrained almost invisible directional brushing, quiet premium ceiling finish, no grooves or panel divisions.",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "field",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.52
+  },
+  "finish": {
+    "roughness": [
+      0.48,
+      0.58
+    ],
+    "grain": 0.06,
+    "relief": 0.08
+  }
+}

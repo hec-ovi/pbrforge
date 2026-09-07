@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/interior-capsule-ceiling/mid",
+  "path": "sources/interiors/capsule-ceiling.png",
+  "description": "Medium neutral grey satin anodized aluminum architectural field, very fine uniform brushed grain with tiny distributed abrasions, worn space capsule ceiling alloy, no panel seams, no hardware.",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "field",
+  "physical": {
+    "metallicFactor": 1,
+    "roughnessFactor": 0.62
+  },
+  "finish": {
+    "roughness": [
+      0.55,
+      0.7
+    ],
+    "grain": 0.08,
+    "relief": 0.2
+  }
+}

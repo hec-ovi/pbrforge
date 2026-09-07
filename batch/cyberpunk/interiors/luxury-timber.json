@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/interior-luxury-timber/rich",
+  "path": "sources/interiors/luxury-timber.png",
+  "description": "smoked walnut architectural veneer",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "field",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.5
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.57
+    ],
+    "grain": 0.12,
+    "relief": 0.1
+  }
+}

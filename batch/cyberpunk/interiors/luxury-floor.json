@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/interior-luxury-floor/rich",
+  "path": "sources/interiors/luxury-floor.png",
+  "description": "Charcoal grey honed marble architectural field, subtle sparse thin warm-grey mineral veins, dark neutral base, natural stone depth, calm high-end lobby floor finish, no tile seams.",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "field",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.48
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.53
+    ],
+    "grain": 0.06,
+    "relief": 0.08
+  }
+}

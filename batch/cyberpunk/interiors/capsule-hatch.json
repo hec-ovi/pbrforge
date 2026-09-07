@@ -1,0 +1,27 @@
+{
+  "key": "cyberpunk/interior-capsule-hatch/mid",
+  "path": "sources/interiors/capsule-hatch.png",
+  "description": "worn composite service hatch with inset ventilation and fasteners",
+  "alignment": "exact",
+  "aspect": [
+    1,
+    1
+  ],
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "face",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.75
+  },
+  "finish": {
+    "roughness": [
+      0.64,
+      0.85
+    ],
+    "grain": 0.12,
+    "relief": 0.5
+  }
+}

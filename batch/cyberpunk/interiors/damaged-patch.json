@@ -1,0 +1,27 @@
+{
+  "key": "cyberpunk/interior-damaged-patch/poor",
+  "path": "sources/interiors/damaged-patch.png",
+  "description": "sage painted repair panel with torn paper and mineral exposure",
+  "alignment": "exact",
+  "aspect": [
+    1,
+    1
+  ],
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "face",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.75
+  },
+  "finish": {
+    "roughness": [
+      0.64,
+      0.85
+    ],
+    "grain": 0.12,
+    "relief": 0.5
+  }
+}
