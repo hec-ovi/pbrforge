@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.32: exterior palettes select native photographic cast, weathered and graphite concrete fields under geometry-owned panel divisions.
+
 0.16.32 street props: fitted polymer abrasion and adhesive-residue wear variants.
 
 0.16.32: charcoal molded-polymer grain and fitted scuffed panels supply worn plastic cases.

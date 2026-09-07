@@ -10285,6 +10285,57 @@
             ],
             "orientation": "isotropic"
           }
+        },
+        {
+          "id": "native-cast",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/native-cast/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/native-cast/normal.png",
+            "roughness": "assets/concrete-monolith/mid/native-cast/roughness.png",
+            "height": "assets/concrete-monolith/mid/native-cast/height.png",
+            "ao": "assets/concrete-monolith/mid/native-cast/ao.png",
+            "metallic": "assets/concrete-monolith/mid/native-cast/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/8aa08afa46080d72b3dd0187163515fb1f1268e73d12a3eea99a7b802719791a.png"
+          }
+        },
+        {
+          "id": "native-weathered",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/native-weathered/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/native-weathered/normal.png",
+            "roughness": "assets/concrete-monolith/mid/native-weathered/roughness.png",
+            "height": "assets/concrete-monolith/mid/native-weathered/height.png",
+            "ao": "assets/concrete-monolith/mid/native-weathered/ao.png",
+            "metallic": "assets/concrete-monolith/mid/native-weathered/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/4523f3d8552398cbf1e1bf2e3f4826e78058229981aa2776c50e59c1266cd9ff.png"
+          }
+        },
+        {
+          "id": "native-graphite",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/native-graphite/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/native-graphite/normal.png",
+            "roughness": "assets/concrete-monolith/mid/native-graphite/roughness.png",
+            "height": "assets/concrete-monolith/mid/native-graphite/height.png",
+            "ao": "assets/concrete-monolith/mid/native-graphite/ao.png",
+            "metallic": "assets/concrete-monolith/mid/native-graphite/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/d3e252df337e0b21f543222efddba2679e0f525b10436e99b380b0888f5d86f6.png"
+          }
         }
       ]
     },

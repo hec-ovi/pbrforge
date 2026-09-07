@@ -1,5 +1,7 @@
 # Box map
 
+- Exterior native concrete: [sources and prompts](../sources/exterior-native/INDEX.md) and [recipes](../batch/cyberpunk/exterior-native/), photographic cast, weathered and charcoal fields selected by exterior style bindings. Exterior owns structural panel joints.
+
 - Street prop finishes: [source index](../sources/street-props/INDEX.md) and [requests](../batch/cyberpunk/street-props/), native cardboard, sawn wood, industrial coating and dark polymer fields, with fitted polymer wear panels. Engine owns folds, boards, ribs and localized artifacts.
 
 - Street source finishes: [recipes](../batch/cyberpunk/street-image-finishes.json) and [source index](../sources/streets/INDEX.md), continuous image-derived road/precast/graphite candidates with per-family tone and finish; construction bindings select precast and graphite at physical scale.

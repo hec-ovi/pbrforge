@@ -1,0 +1,19 @@
+{
+  "key": "cyberpunk/concrete-monolith/mid",
+  "append": true,
+  "variantId": "native-cast",
+  "path": "sources/exterior-native/cast.png",
+  "description": "Photographic cast concrete with fine pores and distributed mineral detail",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "finish": {
+    "roughness": [
+      0.72,
+      0.92
+    ],
+    "grain": 0.15,
+    "relief": 0.28
+  }
+}

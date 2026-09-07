@@ -60,8 +60,11 @@ it('ships translucent fitted window grime with identical embedded and standalone
 it('provides continuous concrete and fine satin metal without repeated structural marks', async () => {
   const concrete = resolve('cyberpunk/concrete-monolith/mid');
   expect(concrete.tiling?.worldSize).toEqual([4, 4]);
-  expect(concrete.variants.map(variant => variant.id)).toEqual(['cast', 'weathered', 'mineral', 'graphite']);
-  for (const variant of concrete.variants) expect(variant.layout?.family).toBe('continuous');
+  expect(concrete.variants.map(variant => variant.id)).toEqual(['cast', 'weathered', 'mineral', 'graphite', 'native-cast', 'native-weathered', 'native-graphite']);
+  for (const variant of concrete.variants) {
+    if (variant.class === 'image') expect(variant.layout?.moduleSize).toBeUndefined();
+    else expect(variant.layout?.family).toBe('continuous');
+  }
   const louvre = resolve('cyberpunk/exterior-louvre/mid');
   expect(louvre.physical.metallicFactor).toBe(1);
   expect(louvre.physical.roughnessFactor).toBe(0.52);

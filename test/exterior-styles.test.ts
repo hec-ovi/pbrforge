@@ -35,7 +35,15 @@ it('publishes nine coherent style sets whose complete bindings resolve at every 
     }
     const facade = entryFor(style.surfaces.facade.kind, tier)
       .variants.find(variant => variant.id === style.surfaces.facade.variant)!;
-    if (style.facadePattern.kind === 'panel') {
+    if (facade.class === 'image') {
+      expect(facade.maps.normal).toBeTruthy();
+      expect(facade.maps.roughness).toBeTruthy();
+      expect(facade.layout?.moduleSize).toBeUndefined();
+      if (style.facadePattern.kind === 'panel') {
+        expect([style.facadePattern.width, style.facadePattern.height]).toEqual([7, 3.5]);
+        expect(style.facadePattern.jointWidth).toBeGreaterThan(0);
+      }
+    } else if (style.facadePattern.kind === 'panel') {
       expect(facade.layout?.moduleSize).toEqual([style.facadePattern.width, style.facadePattern.height]);
       expect(facade.layout?.jointWidth).toBe(style.facadePattern.jointWidth);
       expect(facade.layout?.moduleSize).toEqual([7, 3.5]);
