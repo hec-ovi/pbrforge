@@ -73,8 +73,8 @@
   {
     "key": "cyberpunk/interior-led-cyan/mid",
     "description": "cyan hologram and capsule indicator",
-    "flatColor": "#55c6cd",
-    "emission": "luminance",
+    "flatColor": "#2cdcff",
+    "emission": "color-mask",
     "physical": {
       "roughnessFactor": 0.6,
       "metallicFactor": 0,
@@ -92,7 +92,7 @@
       128
     ],
     "variantId": "plain",
-    "flatNoise": 0.005,
+    "flatNoise": 0,
     "seed": 876
   },
   {
