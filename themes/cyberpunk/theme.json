@@ -13918,6 +13918,23 @@
             "metallic": "assets/prop-polymer-face/poor/scored/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/964fd998b83b0e22ff864eb9bbccb30d9b3a2e2eb5a664474be0d607a2bf9a1e.png"
           }
+        },
+        {
+          "id": "abraded",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/prop-polymer-face/poor/abraded/basecolor.png",
+            "normal": "assets/prop-polymer-face/poor/abraded/normal.png",
+            "roughness": "assets/prop-polymer-face/poor/abraded/roughness.png",
+            "height": "assets/prop-polymer-face/poor/abraded/height.png",
+            "ao": "assets/prop-polymer-face/poor/abraded/ao.png",
+            "metallic": "assets/prop-polymer-face/poor/abraded/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/5f6fed51e92ac08b9a8c6af6cdb9b111c491134b82c55bcc6628be3e3a8c00da.png"
+          }
         }
       ]
     }

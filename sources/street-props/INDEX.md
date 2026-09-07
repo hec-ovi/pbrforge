@@ -9,5 +9,6 @@ The built-in image tool supplies physical-scale albedo fields and fitted wear pa
 | prop-coating/poor | worn | [PNG](coating.png) | [Prompt](coating.md) | [Set](../../themes/cyberpunk/assets/prop-coating/poor/worn/) |
 | prop-polymer/poor | charcoal | [PNG](polymer.png) | [Prompt](polymer.md) | [Set](../../themes/cyberpunk/assets/prop-polymer/poor/charcoal/) |
 | prop-polymer-face/poor | scored | [PNG](polymer-face.png) | [Prompt](polymer-face.md) | [Set](../../themes/cyberpunk/assets/prop-polymer-face/poor/scored/) |
+| prop-polymer-face/poor | abraded | [PNG](polymer-abraded.png) | [Prompt](polymer-abraded.md) | [Set](../../themes/cyberpunk/assets/prop-polymer-face/poor/abraded/) |
 
 Each set contains basecolor, normal, roughness, metallic, height and AO maps. Catalog variants also reference their packed metallic-roughness map. [Requests](../../batch/cyberpunk/street-props/) retain the import settings.
