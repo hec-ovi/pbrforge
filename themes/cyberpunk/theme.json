@@ -13365,6 +13365,129 @@
           }
         }
       ]
+    },
+    "cyberpunk/prop-cardboard/poor": {
+      "key": "cyberpunk/prop-cardboard/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.86
+      },
+      "finish": {
+        "roughness": [
+          0.78,
+          0.94
+        ],
+        "grain": 0.15,
+        "relief": 0.2
+      },
+      "variants": [
+        {
+          "id": "kraft",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/prop-cardboard/poor/kraft/basecolor.png",
+            "normal": "assets/prop-cardboard/poor/kraft/normal.png",
+            "roughness": "assets/prop-cardboard/poor/kraft/roughness.png",
+            "height": "assets/prop-cardboard/poor/kraft/height.png",
+            "ao": "assets/prop-cardboard/poor/kraft/ao.png",
+            "metallic": "assets/prop-cardboard/poor/kraft/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/49102ade1ccc1d06edeafc307776e3621ed7f73d3ced325127d8b50c294d9d01.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/prop-wood/poor": {
+      "key": "cyberpunk/prop-wood/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8200000000000001
+      },
+      "finish": {
+        "roughness": [
+          0.72,
+          0.92
+        ],
+        "grain": 0.15,
+        "relief": 0.4
+      },
+      "variants": [
+        {
+          "id": "sawn",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/prop-wood/poor/sawn/basecolor.png",
+            "normal": "assets/prop-wood/poor/sawn/normal.png",
+            "roughness": "assets/prop-wood/poor/sawn/roughness.png",
+            "height": "assets/prop-wood/poor/sawn/height.png",
+            "ao": "assets/prop-wood/poor/sawn/ao.png",
+            "metallic": "assets/prop-wood/poor/sawn/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/5c311b044b3c369536b2f7aa434313ce6cd9888b6d821a5e4e7df5ad482e89e5.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/prop-coating/poor": {
+      "key": "cyberpunk/prop-coating/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.655
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.76
+        ],
+        "grain": 0.15,
+        "relief": 0.15
+      },
+      "variants": [
+        {
+          "id": "worn",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/prop-coating/poor/worn/basecolor.png",
+            "normal": "assets/prop-coating/poor/worn/normal.png",
+            "roughness": "assets/prop-coating/poor/worn/roughness.png",
+            "height": "assets/prop-coating/poor/worn/height.png",
+            "ao": "assets/prop-coating/poor/worn/ao.png",
+            "metallic": "assets/prop-coating/poor/worn/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/c8e76f09123d20c100fefa0bbe18fd258614954bfaa3adf31aef8a54dfacc75a.png"
+          }
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/prop-coating/poor",
+  "path": "sources/street-props/coating.png",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "description": "chalked industrial coating",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "worn",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.655
+  },
+  "finish": {
+    "roughness": [
+      0.55,
+      0.76
+    ],
+    "grain": 0.15,
+    "relief": 0.15
+  }
+}

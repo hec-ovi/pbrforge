@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/prop-cardboard/poor",
+  "path": "sources/street-props/cardboard.png",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "description": "kraft cardboard fibers",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "kraft",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.86
+  },
+  "finish": {
+    "roughness": [
+      0.78,
+      0.94
+    ],
+    "grain": 0.15,
+    "relief": 0.2
+  }
+}

@@ -1,5 +1,7 @@
 # Box map
 
+- Street prop finishes: [source index](../sources/street-props/INDEX.md) and [requests](../batch/cyberpunk/street-props/), native cardboard, sawn wood and industrial coating fields. Engine owns folds, boards, ribs and localized artifacts.
+
 - Street source finishes: [recipes](../batch/cyberpunk/street-image-finishes.json) and [source index](../sources/streets/INDEX.md), continuous image-derived road/precast/graphite candidates with per-family tone and finish; construction bindings select precast and graphite at physical scale.
 - Street markings: [bindings](../bindings/street-markings.json) and [schema](../schema/street-markings.schema.json), continuous white and dark-orange coatings for Engine-owned line, arrow and crossing geometry.
 

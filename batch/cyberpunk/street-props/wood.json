@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/prop-wood/poor",
+  "path": "sources/street-props/wood.png",
+  "alignment": "tile",
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "description": "weathered softwood grain",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "variantId": "sawn",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.8200000000000001
+  },
+  "finish": {
+    "roughness": [
+      0.72,
+      0.92
+    ],
+    "grain": 0.15,
+    "relief": 0.4
+  }
+}
