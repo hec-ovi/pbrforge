@@ -13805,6 +13805,41 @@
           }
         }
       ]
+    },
+    "cyberpunk/interior-display-glass/rich": {
+      "key": "cyberpunk/interior-display-glass/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.025,
+        "transmission": 0.99,
+        "ior": 1.45
+      },
+      "variants": [
+        {
+          "id": "clear",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/interior-display-glass/rich/clear/basecolor.png",
+            "normal": "assets/interior-display-glass/rich/clear/normal.png",
+            "roughness": "assets/interior-display-glass/rich/clear/roughness.png",
+            "metallic": "assets/interior-display-glass/rich/clear/metallic.png",
+            "height": "assets/interior-display-glass/rich/clear/height.png",
+            "ao": "assets/interior-display-glass/rich/clear/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/0d17129298076f977cdf349aec56954364873043f92cb9b9afa94a8ee385948d.png"
+          }
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "key": "cyberpunk/interior-display-glass/rich",
+  "description": "clear interior aquarium and display glazing",
+  "flatColor": "#f4fcff",
+  "flatNoise": 0,
+  "alignment": "tile",
+  "tiling": { "worldSize": [1, 1] },
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.025, "transmission": 0.99, "ior": 1.45 },
+  "finish": { "roughness": [0.02, 0.03], "grain": 0, "relief": 0 },
+  "variantId": "clear",
+  "resolution": [128, 128],
+  "seed": 881
+}
