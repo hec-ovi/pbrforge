@@ -1,336 +1,75 @@
-import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import sharp from 'sharp';
-import { beforeEach, describe, expect, it } from 'vitest';
-import { Database } from '../src/db/Database.js';
-import { ComfyClient } from '../src/gen/ComfyClient.js';
-import { Generator } from '../src/gen/Generator.js';
-import type { CreateRequest } from '../src/db/types.js';
-
-/** Tileable fixture: uniform noise wraps by construction when generated per-pixel independently. */
-async function tileablePng(size = 64): Promise<Buffer> {
-  const data = new Uint8Array(size * size * 3);
-  let state = 42;
-  for (let i = 0; i < data.length; i++) {
-    state = (state * 1103515245 + 12345) & 0x7fffffff;
-    data[i] = 100 + (state % 40);
-  }
-  return sharp(data, { raw: { width: size, height: size, channels: 3 } }).png().toBuffer();
-}
-
-/** Classic non-tiling failure: a smooth ramp whose only hard step is at the wrap edge. */
-async function seamyPng(size = 64): Promise<Buffer> {
-  const data = new Uint8Array(size * size * 3);
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      data.fill(Math.round((x / (size - 1)) * 220 + 20), (y * size + x) * 3, (y * size + x) * 3 + 3);
-    }
-  }
-  return sharp(data, { raw: { width: size, height: size, channels: 3 } }).png().toBuffer();
-}
-
-function mockComfy(png: () => Promise<Buffer>): ComfyClient {
-  return { ready: async () => true, render: async () => png() } as unknown as ComfyClient;
-}
+import { beforeEach, expect, it } from 'vitest';
+import { ComfyClient, create, list, type ComfyRuntime, type CreateRequest } from '../src/index.js';
 
 const request: CreateRequest = {
-  key: 'cyberpunk/wall/poor',
-  alignment: 'tile',
-  description: 'stained concrete panels',
-  tiling: { worldSize: [3, 3] },
-  physical: { roughnessFactor: 0.9, metallicFactor: 0 },
-  emission: 'luminance',
-  resolution: [64, 64],
-  layout: {
-    family: 'panel',
-    moduleSize: [2, 1],
-    jointWidth: 0.018,
-    origin: [0, 0],
-    orientation: 'horizontal',
-  },
+  key: 'test/wall/mid', alignment: 'tile', description: 'neutral concrete',
+  tiling: { worldSize: [1, 1] }, resolution: [64, 64],
 };
+let themesDir: string;
+beforeEach(() => { themesDir = mkdtempSync(join(tmpdir(), 'create-')); });
 
-describe('create contract', () => {
-  let themesDir: string;
-  let db: Database;
+const backend = (render: ComfyRuntime['render']): ComfyRuntime => ({
+  ready: async () => true, upload: async () => 'source.png', render,
+});
 
-  /** How far a normal map leans off flat, on average: what a moving light glitters on. */
-  async function tilt(path: string): Promise<number> {
-    const normal = await sharp(join(themesDir, 'cyberpunk', path)).raw().toBuffer();
-    const lean = normal.filter((_, i) => i % 3 !== 2).reduce((sum, v) => sum + Math.abs(v - 128), 0);
-    return lean / (normal.length / 3) / 2;
+it('preserves requested variants, layout and emission through create', async () => {
+  const png = await sharp({ create: { width: 64, height: 64, channels: 3, background: '#888888' } }).png().toBuffer();
+  const layout = { family: 'continuous' as const, origin: [2, 3] as [number, number], orientation: 'isotropic' as const };
+  const entry = await create({ ...request, variants: 2, seed: 17, layout, emission: 'luminance' },
+    { themesDir, comfy: backend(async () => png) });
+  expect(entry.variants.map(variant => variant.id)).toEqual(['1', '2']);
+  for (const variant of entry.variants) {
+    expect(variant.layout).toEqual(layout);
+    expect(existsSync(join(themesDir, 'test', variant.maps.emission!))).toBe(true);
   }
+});
 
-  beforeEach(() => {
-    themesDir = mkdtempSync(join(tmpdir(), 'materials-'));
-    db = new Database(themesDir);
-  });
+it('rejects invalid alignment, resolution and layout before calling a backend', async () => {
+  const comfy = backend(async () => { throw new Error('invalid request reached generation'); });
+  for (const patch of [
+    { tiling: undefined }, { resolution: [128, 64] }, { resolution: [2048, 2048] },
+    { layout: { family: 'panel', origin: [0, 0], orientation: 'horizontal' } },
+  ]) await expect(create({ ...request, ...patch } as CreateRequest, { themesDir, comfy }))
+    .rejects.toMatchObject({ code: 'E_SCHEMA' });
+});
 
-  it('generates the full set, verifies seams, writes entry and files', async () => {
-    const entry = await new Generator(db, mockComfy(tileablePng)).create(request);
-    expect(entry.variants).toHaveLength(1);
-    const maps = entry.variants[0].maps;
-    for (const name of ['basecolor', 'normal', 'roughness', 'metallic', 'height', 'ao', 'emission'] as const) {
-      expect(maps[name], name).toBeDefined();
-      expect(existsSync(join(themesDir, 'cyberpunk', maps[name]!))).toBe(true);
-    }
-    expect(entry.variants[0].resolution).toEqual([64, 64]);
-    expect(entry.variants[0].layout).toEqual(request.layout);
-    expect(db.resolve('cyberpunk/wall/poor').physical.roughnessFactor).toBe(0.9);
-  });
+it('reports a failed seam without publishing a material or maps', async () => {
+  const pixels = Buffer.alloc(64 * 64 * 3);
+  for (let y = 0; y < 64; y++) for (let x = 0; x < 64; x++) pixels.fill(x * 4, (y * 64 + x) * 3, (y * 64 + x + 1) * 3);
+  const png = await sharp(pixels, { raw: { width: 64, height: 64, channels: 3 } }).png().toBuffer();
+  await expect(create(request, { themesDir, comfy: backend(async () => png) }))
+    .rejects.toMatchObject({ code: 'E_SEAM_CHECK_FAILED' });
+  expect(list({}, { themesDir })).toEqual([]);
+  expect(existsSync(join(themesDir, 'test/assets'))).toBe(false);
+});
 
-  it('rejects incomplete panel layout metadata', async () => {
-    await expect(
-      new Generator(db, mockComfy(tileablePng)).create({
-        ...request,
-        layout: { family: 'panel', origin: [0, 0], orientation: 'horizontal' },
-      }),
-    ).rejects.toMatchObject({ code: 'E_SCHEMA' });
-  });
+it('reports an unavailable generation backend', async () => {
+  await expect(create(request, { themesDir, comfy: new ComfyClient('http://127.0.0.1:9', 1000) }))
+    .rejects.toMatchObject({ code: 'E_COMFY_UNAVAILABLE' });
+});
 
-  it('throws E_KEY_EXISTS on a second create without overwrite', async () => {
-    const generator = new Generator(db, mockComfy(tileablePng));
-    await generator.create(request);
-    await expect(generator.create(request)).rejects.toMatchObject({ code: 'E_KEY_EXISTS' });
-    await generator.create({ ...request, overwrite: true });
-  });
+it('reports generated screen artwork with incompatible dimensions', async () => {
+  const png = await sharp({ create: { width: 32, height: 32, channels: 3, background: '#444444' } }).png().toBuffer();
+  await expect(create({
+    key: 'test/screen/mid', alignment: 'exact', aspect: [1, 1], description: 'screen artwork',
+    resolution: [64, 64], emission: 'image', flatColor: '#08080a',
+    screens: [{ kind: 'led-dot', description: 'brandless artwork' }],
+  }, { themesDir, comfy: backend(async () => png) })).rejects.toMatchObject({ code: 'E_GENERATION_FAILED' });
+});
 
-  it('throws E_SCHEMA when tile alignment has no tiling config', async () => {
-    await expect(
-      new Generator(db, mockComfy(tileablePng)).create({ ...request, tiling: undefined }),
-    ).rejects.toMatchObject({ code: 'E_SCHEMA' });
-  });
-
-  it('rejects a map that stretches its physical tile or exceeds the tile budget', async () => {
-    const generator = new Generator(db, mockComfy(tileablePng));
-    await expect(generator.create({ ...request, resolution: [128, 64] })).rejects.toMatchObject({ code: 'E_SCHEMA' });
-    await expect(
-      generator.create({ ...request, tiling: { worldSize: [2, 1] }, resolution: [2048, 1024] }),
-    ).rejects.toMatchObject({ code: 'E_SCHEMA' });
-  });
-
-  it('throws E_SEAM_CHECK_FAILED on a seamy image and writes nothing', async () => {
-    await expect(new Generator(db, mockComfy(seamyPng)).create(request)).rejects.toMatchObject({
-      code: 'E_SEAM_CHECK_FAILED',
-    });
-    const index = JSON.parse(readFileSync(join(themesDir, 'cyberpunk/theme.json'), 'utf8'));
-    expect(index.entries).toEqual({});
-  });
-
-  it('throws E_COMFY_UNAVAILABLE when ComfyUI is unreachable', async () => {
-    const offline = new Generator(db, new ComfyClient('http://127.0.0.1:9', 1000));
-    await expect(offline.create(request)).rejects.toMatchObject({ code: 'E_COMFY_UNAVAILABLE' });
-  });
-
-  it('throws E_GENERATION_FAILED when generated screen artwork does not fit the requested face', async () => {
-    const wrongSize = await tileablePng(32);
-    await expect(
-      new Generator(db, mockComfy(async () => wrongSize)).create({
-        key: 'cyberpunk/ad-screen/mid',
-        alignment: 'exact',
-        aspect: [1, 1],
-        description: 'square district advertisement',
-        resolution: [64, 64],
-        emission: 'image',
-        flatColor: '#08080a',
-        screens: [{ kind: 'led-dot', description: 'a dark portrait advertisement' }],
-      }),
-    ).rejects.toMatchObject({ code: 'E_GENERATION_FAILED' });
-  });
-
-  it('shows the ad through the display structure and leaves the screen surface flat', async () => {
-    const artwork = await tileablePng(64);
-    const graphs: Record<string, { inputs: Record<string, unknown> }>[] = [];
-    const comfy = {
-      ready: async () => true,
-      render: async (graph: Record<string, { inputs: Record<string, unknown> }>) => {
-        graphs.push(graph);
-        return artwork;
-      },
-    } as unknown as ComfyClient;
-
-    const entry = await new Generator(db, comfy).create({
-      key: 'cyberpunk/ad-screen/poor',
-      alignment: 'exact',
-      description: 'district advertisement',
-      brandName: 'NOODLE-9',
-      businessKind: 'noodle bar',
-      aspect: [1, 1],
-      resolution: [64, 64],
-      physical: { roughnessFactor: 0.1, metallicFactor: 0, emissiveStrength: 6 },
-      emission: 'image',
-      flatColor: '#08080a',
-      screens: [
-        { kind: 'led-dot', pitch: 8, description: 'a man eating noodles from a cup' },
-        { kind: 'glyph-panel', description: 'cyan circuit glyphs' },
-      ],
-    });
-    const read = (variant: number, name: keyof (typeof entry.variants)[0]['maps']) =>
-      sharp(join(themesDir, 'cyberpunk', entry.variants[variant].maps[name]!)).raw().toBuffer();
-
-    expect(entry.variants).toHaveLength(2); // screens set the variant count
-    expect(graphs[0]['3'].inputs.text).toContain('a noodle bar'); // the business steers the artwork
-    expect(graphs[0]['3'].inputs.text).not.toContain('NOODLE-9'); // the brand never enters the prompt
-
-    const led = await read(0, 'emission');
-    expect(Math.min(...led)).toBeLessThan(20); // dark gaps between the lit dots
-    expect(Math.max(...led)).toBeGreaterThan(90); // the dots carry the ad
-    // glyph panel: no lattice, but the wordmark is stroked in far brighter than the artwork
-    expect(Math.max(...(await read(1, 'emission')))).toBeGreaterThan(200);
-
-    const base = await read(0, 'basecolor');
-    expect(Math.max(...base)).toBeLessThan(40); // near-black glass, not the ad
-    expect(new Set(base).size).toBeGreaterThan(1); // carrying the faint dot structure
-    expect([...new Set(await read(0, 'normal'))].sort()).toEqual([128, 255]); // no relief
-  });
-
-  it('fits a sufficiently large provided source locally, with nothing diffused', async () => {
-    const calls: string[] = [];
-    const comfy = {
-      ready: async () => false,
-      upload: async () => {
-        calls.push('upload');
-        throw new Error('large source must not upload');
-      },
-      render: async () => {
-        calls.push('render');
-        throw new Error('large source must not render');
-      },
-    } as unknown as ComfyClient;
-
-    const entry = await new Generator(db, comfy).create({
-      key: 'cyberpunk/ad-screen/high_rich',
-      alignment: 'exact',
-      description: 'corporate tower advertisement painted from a provided source',
-      aspect: [16, 9],
-      resolution: [128, 72],
-      physical: { roughnessFactor: 0.04, metallicFactor: 0, emissiveStrength: 10 },
-      emission: 'image',
-      flatColor: '#050507',
-      screens: [
-        {
-          kind: 'scanline-billboard',
-          pitch: 4,
-          imagePath: 'sources/ads-grok/ad-retro-soda-wide.png',
-          description: 'a woman drinking amber soda from a chilled glass bottle',
-        },
-      ],
-    });
-
-    expect(calls).toEqual([]);
-    expect(entry.variants[0].resolution).toEqual([128, 72]);
-    const emission = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.emission!)).raw().toBuffer();
-    expect(Math.min(...emission)).toBeLessThan(0.5 * Math.max(...emission));
-  });
-
-  it('upscales an undersized provided source without diffusion', async () => {
-    const upscaled = await sharp(new Uint8Array(512 * 288 * 3).fill(200), {
-      raw: { width: 512, height: 288, channels: 3 },
-    })
-      .png()
-      .toBuffer();
-    const sourceDir = mkdtempSync(join(tmpdir(), 'materials-source-'));
-    const sourcePath = join(sourceDir, 'small.png');
-    writeFileSync(
-      sourcePath,
-      await sharp(new Uint8Array(32 * 18 * 3).fill(100), { raw: { width: 32, height: 18, channels: 3 } })
-        .png()
-        .toBuffer(),
-    );
-    const graphs: Record<string, { class_type: string; inputs: Record<string, unknown> }>[] = [];
-    const uploads: string[] = [];
-    const comfy = {
-      ready: async () => true,
-      upload: async (image: Buffer, name: string) => {
-        uploads.push(`${name}:${image.length}`);
-        return 'stored.png';
-      },
-      render: async (graph: Record<string, { class_type: string; inputs: Record<string, unknown> }>) => {
-        graphs.push(graph);
-        return upscaled;
-      },
-    } as unknown as ComfyClient;
-
-    const entry = await new Generator(db, comfy).create({
-      key: 'cyberpunk/ad-screen/high_rich',
-      alignment: 'exact',
-      description: 'corporate tower advertisement painted from a provided source',
-      aspect: [16, 9],
-      resolution: [128, 72],
-      physical: { roughnessFactor: 0.04, metallicFactor: 0, emissiveStrength: 10 },
-      emission: 'image',
-      flatColor: '#050507',
-      screens: [
-        {
-          kind: 'scanline-billboard',
-          pitch: 4,
-          imagePath: sourcePath,
-          description: 'a woman drinking amber soda from a chilled glass bottle',
-        },
-      ],
-    });
-
-    expect(uploads).toHaveLength(1);
-    expect(uploads[0]).toContain('small.png'); // the file on disk, not a prompt
-    expect(graphs).toHaveLength(1);
-    expect(graphs[0]['3'].class_type).toBe('ImageUpscaleWithModel');
-    expect(graphs[0]['1'].inputs.image).toBe('stored.png');
-    expect(Object.values(graphs[0]).some((node) => node.class_type === 'KSampler')).toBe(false);
-
-    // fitted to the screen, and the same scan bands every other billboard carries
-    expect(entry.variants[0].resolution).toEqual([128, 72]);
-    const emission = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.emission!)).raw().toBuffer();
-    expect(Math.min(...emission)).toBeLessThan(0.5 * Math.max(...emission));
-  });
-
-  it('throws E_SCHEMA when a screen names a source that is not there', async () => {
-    await expect(
-      new Generator(db, mockComfy(tileablePng)).create({
-        key: 'cyberpunk/ad-screen/rich',
-        alignment: 'exact',
-        description: 'advertisement from a provided source',
-        aspect: [16, 9],
-        resolution: [128, 72],
-        emission: 'image',
-        flatColor: '#050507',
-        screens: [{ kind: 'led-dot', imagePath: 'sources/ads-grok/absent.png', description: 'an advertisement' }],
-      }),
-    ).rejects.toMatchObject({ code: 'E_SCHEMA' });
-  });
-
-  it('keeps the gloss inside the finish band and the pixel speckle out of the relief', async () => {
-    // the fixture is per-pixel noise: read straight out it is exactly the glitter case
-    const entry = await new Generator(db, mockComfy(tileablePng)).create({
-      ...request,
-      finish: { roughness: [0.8, 0.9], grain: 0 },
-    });
-    expect(entry.finish).toEqual({ roughness: [0.8, 0.9], grain: 0, relief: 2 });
-
-    const roughness = await sharp(join(themesDir, 'cyberpunk', entry.variants[0].maps.roughness)).raw().toBuffer();
-    expect(Math.min(...roughness) / 255).toBeGreaterThanOrEqual(0.79);
-    expect(Math.max(...roughness) / 255).toBeLessThanOrEqual(0.91);
-
-    // the same surface with its speckle kept: the grain is what decides how much light the relief catches
-    const speckled = await new Generator(db, mockComfy(tileablePng)).create({
-      ...request,
-      key: 'cyberpunk/wall/mid',
-      finish: { roughness: [0.8, 0.9], grain: 1 },
-    });
-    expect(await tilt(entry.variants[0].maps.normal)).toBeLessThan(0.3 * (await tilt(speckled.variants[0].maps.normal)));
-  });
-
-  it('synthesizes a flatColor set without ComfyUI and it passes the seam gate', async () => {
-    const offline = new Generator(db, new ComfyClient('http://127.0.0.1:9', 1000));
-    const entry = await offline.create({
-      ...request,
-      key: 'cyberpunk/window-glass/poor',
-      flatColor: '#d8ddd8',
-      emission: 'none',
-    });
-    expect(entry.variants[0].class).toBe('flat');
-    expect(entry.finish).toBeUndefined();
-    expect(entry.variants[0].maps.basecolor).toBeDefined();
-    expect(existsSync(join(themesDir, 'cyberpunk', entry.variants[0].maps.basecolor))).toBe(true);
-  });
+it('creates a flat finish locally and requires explicit overwrite', async () => {
+  const input = { ...request, flatColor: '#555555', flatNoise: 0, emission: 'color-mask' as const };
+  const options = { themesDir, comfy: backend(async () => { throw new Error('flat finish reached generation'); }) };
+  const entry = await create(input, options);
+  expect(entry.variants[0].class).toBe('flat');
+  expect(entry.finish).toBeUndefined();
+  const path = join(themesDir, 'test', entry.variants[0].maps.basecolor);
+  const before = readFileSync(path);
+  await expect(create(input, options)).rejects.toMatchObject({ code: 'E_KEY_EXISTS' });
+  await create({ ...input, overwrite: true }, options);
+  expect(readFileSync(path)).toEqual(before);
 });

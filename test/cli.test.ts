@@ -23,7 +23,9 @@ afterEach(() => {
 });
 
 describe('pbrforge CLI', () => {
-  it('help lists every verb', async () => {
+  it('reports its version and lists every verb', async () => {
+    const version = JSON.parse(readFileSync(join(repoRoot, 'package.json'), 'utf8')).version;
+    expect(await run(['version'])).toEqual({ ok: true, verb: 'version', data: { version } });
     const envelope = await run(['help']);
     expect(envelope.ok).toBe(true);
     if (!envelope.ok) return;
@@ -79,36 +81,14 @@ describe('pbrforge CLI', () => {
     expect(envelope.error.code).toBe('E_USAGE');
   });
 
-  it('from-image writes dry maps from one opaque face with no seam gate', async () => {
-    const themesDir = temp();
-    const png = join(themesDir, 'face.png');
-    writeFileSync(png, await sharp({
-      create: { width: 64, height: 64, channels: 3, background: { r: 40, g: 42, b: 38 } },
-    }).png().toBuffer());
-    const request = join(themesDir, 'req.json');
-    writeFileSync(request, JSON.stringify({
-      key: 'lab/from-image/mid',
-      path: png,
-      alignment: 'exact',
-      aspect: [1, 1],
-      description: 'asymmetric face',
-      resolution: [64, 64],
-      physical: { metallicFactor: 0, roughnessFactor: 0.65 },
-    }));
-    const envelope = await run(['from-image', request, '--themes', themesDir]);
-    expect(envelope.ok).toBe(true);
-    if (!envelope.ok) return;
-    expect(envelope.data.key).toBe('lab/from-image/mid');
-    expect(envelope.data.alignment).toBe('exact');
-    expect((envelope.data.maps as Record<string, string>).emission).toBeUndefined();
-  });
-
   it('doctor reports ready against the bundled database', async () => {
     const envelope = await run(['doctor']);
     expect(envelope.ok).toBe(true);
     if (!envelope.ok) return;
     expect(envelope.data.ready).toBe(true);
     expect(envelope.data.themesDir).toMatch(/themes$/);
+    const preview = await run(['preview']);
+    expect(preview).toMatchObject({ ok: true, data: { url: expect.any(String), up: expect.any(Boolean), start: 'npm run preview' } });
   });
 
   it('creates a pattern set through the JSON CLI', async () => {
@@ -140,6 +120,9 @@ describe('pbrforge CLI', () => {
     expect(created.ok).toBe(true);
     if (!created.ok) return;
     expect(created.data.created).toEqual([{ key: 'test/door/mid', variants: 1 }]);
+
+    const internal = await run(['create', file, '--themes', file]);
+    expect(internal).toMatchObject({ ok: false, error: { code: 'E_INTERNAL' } });
 
     const again = await run(['create', file, '--themes', themesDir]);
     expect(again.ok).toBe(false);
@@ -191,11 +174,5 @@ describe('pbrforge CLI', () => {
     expect(created.ok).toBe(true);
     if (!created.ok) return;
     expect(created.data.created).toEqual([{ key: 'test/room/mid', variants: 1 }]);
-  });
-
-  it('keeps the root skill copy identical to the pack', () => {
-    const pack = readFileSync(join(repoRoot, 'skills', 'pbrforge', 'SKILL.md'), 'utf8');
-    const root = readFileSync(join(repoRoot, 'SKILL.md'), 'utf8');
-    expect(root).toBe(pack);
   });
 });

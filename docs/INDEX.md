@@ -1,36 +1,27 @@
-# Box map
+# Materials index
 
-- Exterior native concrete: [sources and prompts](../sources/exterior-native/INDEX.md) and [recipes](../batch/cyberpunk/exterior-native/), photographic cast, weathered and charcoal fields selected by exterior style bindings. Exterior owns structural panel joints.
+Version: 0.16.32.
 
-- Street prop finishes: [source index](../sources/street-props/INDEX.md) and [requests](../batch/cyberpunk/street-props/), native cardboard, sawn wood, industrial coating and dark polymer fields, with fitted polymer wear panels. Engine owns folds, boards, ribs and localized artifacts.
+| Surface | Purpose | Input / output | Dependencies |
+| --- | --- | --- | --- |
+| [Materials](../CONTRACT.md) | Resolve and author PBR sets. | [Create](../schema/create-request.schema.json), [API types](../src/api-types.ts) / [entry](../schema/material-entry.schema.json), [theme](../schema/theme-index.schema.json) | Node.js, Ajv, Sharp; optional ComfyUI. Atlas binding data only. |
+| [CLI](../src/cli/CONTRACT.md) | One JSON process per operation. | Verb arguments / JSON envelope | Materials, from-image. |
+| [From-image](../src/from-image/CONTRACT.md) | Derive dry PBR from one opaque photo. | [Request](../src/from-image/request.schema.json) / material entry | Materials database and map writers. |
+| [Preview](../src/ui/CONTRACT.md) | Browse maps and render a PBR sphere. | [Layout](../schema/preview-view-layout.schema.json), theme index / DOM and canvas | Materials data, browser APIs, Three.js. |
 
-- Street source finishes: [recipes](../batch/cyberpunk/street-image-finishes.json) and [source index](../sources/streets/INDEX.md), continuous image-derived road/precast/graphite candidates with per-family tone and finish; construction bindings select precast and graphite at physical scale.
-- Street markings: [bindings](../bindings/street-markings.json) and [schema](../schema/street-markings.schema.json), continuous white and dark-orange coatings for Engine-owned line, arrow and crossing geometry.
+## Agent and consumer entry points
 
-- Local tiled albedo: `sourceAlbedo` in [create request](../schema/create-request.schema.json), imports an opaque continuous source locally through the shared photographed PBR and seam-checked writer.
+- [Root skill](../SKILL.md): calls, defaults, errors and a copyable example.
+- [Authoring skill](../skills/pbrforge/SKILL.md): CLI workflow; [pattern resolver](../skills/pbrforge/references/patterns/INDEX.md) and [photo framing](../skills/pbrforge/references/from-image.md) supply detail.
+- [Consumer bindings](../CONTRACT.md#consumer-bindings): exterior, streets, markings, scenic rooms and hydrology, with schemas.
+- [Catalog](../themes/cyberpunk/theme.json): authored keys, variants, dimensions and map references.
+- [Issues](ISSUES.md): open decisions and boundary proposals for the orchestrator.
 
-- Localized damp finish: [response schema](../schema/surface-response.schema.json), shared smooth coverage coordinates roughness, albedo darkening and relief on continuous mineral maps; dry area remains dominant.
+## Authored resources
 
-- Packed material response: [pack request](../schema/pack-request.schema.json), additive RGB metallic-roughness maps for glTF, generated from the separate absolute maps through one shared writer.
-
-- Street construction finishes: [recipes](../batch/cyberpunk/street-construction.json) and `constructionSurfaces` in [street bindings](../bindings/street-styles.json), continuous role finishes for Atlas-owned slab pitches, joints and residual regions. Role mapping is in the [Ground contract](../CONTRACT.md#ground).
-
-- Street families: [bindings/street-styles.json](../bindings/street-styles.json), seeded maintained, salvaged and industrial road defaults with independent fitted-paving finishes; [schema](../schema/street-styles.schema.json) and [recipes](../batch/cyberpunk/street-surfaces.json). An optional construction road binding overrides that default. Geometry owns borders and curb joints.
-
-- Door finishes and coverings: [door finish recipes](../batch/cyberpunk/door-finishes.json) add satin and scuffed coatings; [curtain recipes](../batch/cyberpunk/curtain.json) publish complete dark charcoal covering families.
-
-- Scenic room surfaces: [bindings/window-room-surfaces.json](../bindings/window-room-surfaces.json), five explicit receiving faces and seeded back-image pools; [schema](../schema/window-room-surfaces.schema.json).
-- Exterior surface recipes: [batch/cyberpunk/exterior-surfaces.json](../batch/cyberpunk/exterior-surfaces.json), continuous concrete, 7 m panels, metallic louvres and fitted translucent grime.
-
-- Exterior styles: [bindings/exterior-styles.json](../bindings/exterior-styles.json), nine complete palettes in three groups; [schema](../schema/exterior-styles.schema.json) and [recipes](../batch/cyberpunk/exterior-finishes.json) define their bindings and generated finishes.
-
-- Window room plates: [batch/cyberpunk/window-room.json](../batch/cyberpunk/window-room.json), exact office, apartment and lobby imagery imported by [src/gen/ImagePlate.ts](../src/gen/ImagePlate.ts); source prompts in [sources/window-rooms/INDEX.md](../sources/window-rooms/INDEX.md).
-
-- Door coating recipe: [batch/cyberpunk/door.json](../batch/cyberpunk/door.json), deterministic graphite paint with tiered wear on the canonical door keys.
-
-- root box: [CONTRACT.md](../CONTRACT.md). `src/index.ts` exports resolve, list, create, refinish, rebrand and pack; `src/api-types.ts` specifies their package-only structures. `src/db` owns the theme index and files. `src/gen` owns ComfyUI generation, deterministic maps, patterns, screens, refinish, rebrand and packed material response. `bindings` carries consumer key mappings. `themes` is the shipped database. Depends on Atlas hydrology binding and street-construction role contracts, data only.
-- CLI box: [src/cli/CONTRACT.md](../src/cli/CONTRACT.md). `pbrforge` verbs print one JSON envelope and exit. `patterns` lists procedural create kinds from [schema/pattern-kinds.json](../schema/pattern-kinds.json). Skill pack: [skills/pbrforge/SKILL.md](../skills/pbrforge/SKILL.md). Pattern resolver: [skills/pbrforge/references/patterns/INDEX.md](../skills/pbrforge/references/patterns/INDEX.md). Depends on the root package operations and from-image.
-- from-image box: [src/from-image/CONTRACT.md](../src/from-image/CONTRACT.md). One opaque JPEG or PNG to a dry PBR set. No seam gate. No emission. `append` adds a face to an existing key. Agent usage: [skills/pbrforge/references/from-image.md](../skills/pbrforge/references/from-image.md). Depends on Database write and the shared map derive writer.
-- preview box: [src/ui/CONTRACT.md](../src/ui/CONTRACT.md). Interactive materials browser and PBR stage, built from [schema/preview-view-layout.schema.json](../schema/preview-view-layout.schema.json) and [src/ui/views/preview-layout.json](../src/ui/views/preview-layout.json). Depends on the root material entry, theme index, browser APIs and Three.js.
-
-- Interior finishes: [source index](../sources/interiors/INDEX.md), native image wall, floor and ceiling fields for luxury, damaged and capsule assemblies; [recipes](../batch/cyberpunk/interiors/). Interior owns the 0.5 m grid and fitted panel borders.
+- [Street sources](../sources/streets/INDEX.md) and [recipes](../batch/cyberpunk/street-image-finishes.json): continuous photographic finish fields.
+- [Street prop sources](../sources/street-props/INDEX.md) and [recipes](../batch/cyberpunk/street-props/): cardboard, wood, coating and polymer.
+- [Exterior sources](../sources/exterior-native/INDEX.md) and [recipes](../batch/cyberpunk/exterior-native/): cast, weathered and graphite concrete.
+- [Interior sources](../sources/interiors/INDEX.md) and [recipes](../batch/cyberpunk/interiors/): luxury, damaged and capsule finishes.
+- [Room plates](../sources/window-rooms/INDEX.md) and [screen artwork](../sources/ads-codex/PROMPTS.md): retained images and authoring prompts.
+- [ComfyUI workflows](../templates/README.md): photographic and upscale templates.

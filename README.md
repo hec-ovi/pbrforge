@@ -1,175 +1,49 @@
 # pbrforge
 
-A themed PBR material library. One string key (`theme/kind/tier`) resolves to a full map set for any glTF consumer. Agents drive it with one CLI.
+Version: 0.16.32. A TypeScript PBR material toolkit with a JSON CLI and a Three.js preview. A `theme/kind/tier` key resolves to reusable maps, physical properties and real-world scale.
 
 ![catalog](media/preview-1.gif)
 ![cabinet side](media/preview-2.gif)
 ![cabinet face](media/preview-3.gif)
 
-## CLI
+## Use
 
-One process per verb. Stdout is one JSON object `{ok, verb, data}` or `{ok, verb, error}`, then exit. `--themes <dir>` on any verb points at another database.
-
-```
+```sh
 npm install
-npm run pbrforge -- doctor
-npm run pbrforge -- <verb>
+npm run build
+node dist/cli/pbrforge.js doctor
+node dist/cli/pbrforge.js list --theme cyberpunk --kind concrete
+node dist/cli/pbrforge.js resolve cyberpunk/concrete/mid
 ```
 
-| Verb | What it does |
-| --- | --- |
-| `doctor` | is this machine able to work |
-| `version` | package version |
-| `help` | verb list |
-| `resolve <theme/kind/tier>` | look up a key |
-| `list [--theme t] [--kind k] [--tier t]` | matching keys |
-| `patterns` | procedural create kinds |
-| `from-image <request.json> [--overwrite]` | one photo to a dry PBR set |
-| `create <request.json> [--overwrite] [--native]` | make a new set |
-| `refinish <requests.json>` | re-read gloss and relief from stored albedo |
-| `rebrand --theme t --businesses file.json` | put business names on screens |
-| `pack --theme t` | add packed metallic-roughness maps |
-| `preview` | whether the sphere viewer is up |
+`node dist/cli/pbrforge.js help` lists authoring and discovery verbs. `--themes <dir>` selects an independent database. The CLI returns one JSON envelope and a process exit code. [SKILL.md](SKILL.md) gives request defaults, errors and a complete local creation example.
 
-Start the viewer with `npm run preview` (http://127.0.0.1:5177). The `preview` verb only reports whether it is up.
-
-Human scripts (`npm run resolve`, `npm run create`, `npm run refinish`, `npm run rebrand`, `npm run pack`, `npm run sheet`) remain. `create` as an array skips keys that already exist, so a batch is resumable.
-
+```ts
+import { resolve } from 'urbe-materials';
+const entry = resolve('cyberpunk/window-glass/rich');
 ```
+
+The package exports `resolve`, `list`, `create`, `refinish`, `rebrand` and `pack`. See the [contract](CONTRACT.md) for inputs, outputs and consumer rules. Finished theme folders work without a generation service or network.
+
+## Author materials
+
+- `from-image` derives dry maps from one opaque JPEG or PNG, including exact object faces and clean repeating fields. It has no seam gate.
+- `create` supports photographic generation, local prepared images, procedural patterns, flat finishes, recolor, screens and fitted decals. Tiled create checks seams.
+- `refinish` adjusts stored surface response; `rebrand` composites names onto existing screen art; `pack` prepares glTF metallic-roughness maps.
+
+Photographic generation and undersized screen-art upscaling use ComfyUI at `COMFY_URL`, default `http://127.0.0.1:8188`. Local imports and code-generated finishes need no backend. [Backend workflows](templates/README.md) describes the supplied templates. [Agent authoring skill](skills/pbrforge/SKILL.md) routes to photo framing and pattern details.
+
+Keep maps at their authored scale. Geometry supplies UVs, complete panel divisions and fitted artifact placement. Basecolor and emission use sRGB; other maps use linear sampling. Roughness and metallic maps contain absolute values, bound with scalar factors 1.
+
+## Preview and verify
+
+```sh
+npm run preview
 npm test
 npm run typecheck
 npm run build
 ```
 
-## from-image
+The read-only viewer runs at `http://127.0.0.1:5177`: catalog search, PBR sphere, lighting controls, channel pan/zoom, FIT, 100% and export. `pbrforge preview` reports its status. `npm run sheet -- <kind> [tier]` writes contact sheets to `out/`.
 
-One opaque JPEG or PNG in, a full dry PBR set out. No ComfyUI. No seam gate. No emission.
-
-```
-npm run pbrforge -- from-image request.json
-```
-
-Exact faces (AC, door, hatch, cabinet) fill the frame. Repeating fields (brick, concrete, tile) are a clean tilable panel first: no hero stain, paper, or graffiti baked in. `append: true` with `variantId` `side` / `top` / `bottom` adds a box face onto the same key. Paper and graffiti stay a separate exact opacity material.
-
-`create --native` stays for the three create lanes that already wrap or emit: `sourceImage` (exact plate), `sourceAlbedo` (wrapping tile, seam-checked), `screens[].imagePath` (ad artwork).
-
-## Patterns
-
-`npm run pbrforge -- patterns` prints every procedural create kind. Agents list with that verb, then read `data.kinds[].detail` for one drawer.
-
-- `mineral` continuous 6-11 mm aggregate, fine pores
-- `aggregate` coarser stone in binder
-- `paving` mineral grain under optional panels
-- `concrete` clouds, cast traces, pores, optional panels
-- `hexagon` hex grid, edges or gloss only
-- `panel-grid` inset panels with chamfer
-- `slab` flush slabs, narrow groove
-- `stripe` bands on one axis
-- `two-tone` one split, trim line
-- `noise` mottling, wall to asphalt
-- `lane` asphalt plus wheel tracks
-- `puddle` noise field with damp pools
-- `lamp` housing bezel, lens, hot centre
-- `glyph-atlas` letter sheet, one lit glyph per cell
-- `grille` AC condenser: rings, spokes, fan cavity
-- `water` tiled waves
-- `window-grime` translucent runoff decal
-- `incident-blood` directional pool decal
-- `incident-tyre` tyre-transfer decal
-
-Catalog: [schema/pattern-kinds.json](schema/pattern-kinds.json). How a drawer is sampled: [skills/pbrforge/references/patterns/MODEL.md](skills/pbrforge/references/patterns/MODEL.md). Add a kind: [skills/pbrforge/references/patterns/ADD.md](skills/pbrforge/references/patterns/ADD.md).
-
-## Agent skill
-
-Local agents install the pack and drive the toolkit with verbs. Transport is a shell call, not a server.
-
-```
-npx skills add hec-ovi/pbrforge
-npm run pbrforge -- doctor
-```
-
-The skill is [`skills/pbrforge/`](skills/pbrforge/SKILL.md). Pattern, plate, from-image, recolor, rebrand and pack need no ComfyUI. Photographed creates without a file need a local ComfyUI at `http://127.0.0.1:8188`.
-
-## Package API
-
-```ts
-import { create, list, pack, rebrand, refinish, resolve } from 'urbe-materials';
-
-const options = { themesDir: './themes' };
-const entry = resolve('cyberpunk/window-glass/rich', options);
-```
-
-[`MaterialsOptions`](src/api-types.ts) carries `themesDir` and an optional [`ComfyRuntime`](src/api-types.ts). `themesDir` defaults to the database bundled with the package. The runtime lets generation use a caller-managed backend. All package-only request and result shapes are in the [public API type schema](src/api-types.ts).
-
-- `resolve(key, options?)` returns the [MaterialEntry](schema/material-entry.schema.json) for a key or one of its aliases.
-- `list(filter?, options?)` takes a [`MaterialFilter`](src/api-types.ts) and returns matching keys, sorted and deterministic.
-- `create(request, options?)` returns a generated [MaterialEntry](schema/material-entry.schema.json), after validation, seam verification and database write. Its input is [CreateRequest](schema/create-request.schema.json).
-- `refinish(request, options?)` takes a [`RefinishRequest`](src/api-types.ts) and returns a [`RefinishResult`](src/api-types.ts) after deriving new relief, gloss and metallic maps from stored photographic basecolor.
-- `rebrand(request, options?)` returns one [`Branded`](src/api-types.ts) result per landscape and portrait screen written for each business. Its `{ theme, businesses }` input follows the [RebrandRequest schema](schema/rebrand-request.schema.json).
-- `pack({ key }, options?)` adds or refreshes packed metallic-roughness maps, preserving every separate map. Returns [`PackResult`](src/api-types.ts) with the entry and changed variant IDs. An unchanged repeat returns an empty ID list.
-
-All operations use the closed `MaterialsError` codes in [CONTRACT.md](CONTRACT.md).
-
-## Out
-
-A `MaterialEntry` (`schema/material-entry.schema.json`): alignment mode (`tile` or `exact`), physical properties (metallic and roughness factors, transmission for glass, emissive strength, alpha mode, breakable), tiling config in meters covered by one repeat, optional fitted decal placement, and one or more variants, each a set of map files. Variant 0 is canonical; a consumer can pick a variant deterministically by seed. Structured exterior variants publish their visible module size, joint width, stable world origin and orientation in `layout`, separate from fine grain.
-
-Map resolution follows the physical tile or exact-placement aspect within one pixel. Tile variants stay at or below 1,048,576 pixels; exact sheets stay within a 4096 px side and 9,437,184 pixels total. Creation rejects a stretched or oversized request before rendering.
-
-The theme is a folder: `themes/<theme>/theme.json` is the index, `themes/<theme>/assets/<kind>/<tier>/<variant>/` holds the maps. The bundled `cyberpunk` theme covers building, street and incident materials: walls and 1.4 m wall bands, trim, columns, window glass and frames, curtains, doors, balcony slabs and rails, roofs, parapets, signage, ad screens landscape and portrait, light fixtures, fire escapes, roof artifacts and AC unit faces for exteriors, plaster, tile, ceilings, wood, carpet, rubber, concrete, metal, elevator doors, fabric and glass for interiors, sidewalk, road, curb, highway deck and support, water surfaces, plastic for the street, and a lit letter atlas for signs. The incident keys provide a fitted directional blood pool and tyre transfer with opacity maps. Walls, concrete, roof and floor slabs share a 2 x 2 m world tile. Their structural modules are 2 x 1 m or 2 x 2 m with 20 mm joints and stable world origins. Continuous variants cover fitted borders, columns, ramps and remainder faces. Facade fields stay black, graphite or neutral cement. Frames are smooth dark steel; doors carry graphite dielectric coating with restrained tiered wear. Curtains are procedural vertical blinds or plain shades fitted to a 1.5 x 3 m bay.
-
-`cyberpunk/window-room/mid` supplies exact office, apartment and lobby plates at every tier. Each uses fitted imagery for basecolor and emission with flat physical maps. The `sourceImage` create lane imports these locally; [source images and prompts](sources/window-rooms/INDEX.md) and the [batch recipe](batch/cyberpunk/window-room.json) reproduce the set.
-
-The whole library sits on a matte floor: every non-emissive entry carries metallic 0 (1 on the metal kinds) and no roughness below 0.45 in its factor, its band or any pixel of its roughness map, glass and lit entries excepted, and a test over the shipped database holds it there. General service metal, fire escapes and rooftop equipment use dark paint and neutral zinc with no texture grain on their shaped parts. AC enclosures are graphite and neutral grey. Elevator doors are exact 1:2 procedural faces with fitted center seams. Road and highway-deck tiles are 3.5 x 7 m, one lane wide. Sidewalk slabs are exact 2 x 1 m modules with 20 mm joints, with 2 x 2 m plates and a joint-free option for ramps. Curbs are 1 m stones on a 2 x 0.15 m tile. Highway supports resolve to the neutral concrete family.
-
-Conventions are fixed, not per entry: metallic-roughness workflow, basecolor and emission sRGB with every other map linear, OpenGL-style normals, glass following glTF `KHR_materials_transmission`.
-
-`maps.metallicRoughness` is optional linear RGB: R=255, G=absolute roughness, B=absolute metallic. Bind it with both scalar factors 1. Create, refinish and rebrand produce it; `pack` adds it to an existing catalog. Separate maps and scalar fallbacks remain available.
-
-## Exterior style sets
-
-Window coverings use dark charcoal cloth or slat finishes. Door assemblies select painted, satin or scuffed graphite coatings at 0.5 m texture scale; panel shapes and hardware belong to Exterior geometry.
-
-Exterior buildings use one of nine complete [style sets](bindings/exterior-styles.json): three residential, three premium and three civic. Their facades use continuous concrete or exact 7 x 3.5 m panels; ground and borders use matching continuous fields. Industrial louvres carry satin metal, and fitted RGBA grime provides translucent runoff. Regenerate with `npm run create -- batch/cyberpunk/exterior-surfaces.json`. Glass and coating recipes remain in [exterior-finishes.json](batch/cyberpunk/exterior-finishes.json).
-
-[Scenic room bindings](bindings/window-room-surfaces.json) define five receiving faces and seeded back-image pools. Wide office images fit 2:1 bays; square apartment imagery, side walls, floors and plain ceilings retain their declared aspect. Engine supplies room geometry and ceiling strips.
-
-## Hydrology
-
-The 8 x 8 m `cyberpunk/water-surface/high_rich` entry supplies `lagoon`, `river` and `sea-coast` variants. Each has deterministic seamless basecolor, normal, roughness and metallic maps. [bindings/atlas-hydrology.json](bindings/atlas-hydrology.json) maps Atlas keys `water.lagoon`, `water.river` and `water.sea-coast` to those exact variants. Engine consumes that explicit map and fails closed when a binding cannot resolve.
-
-## Patterns
-
-Structured surfaces are drawn, not diffused. A `pattern` in the request states shapes and colors and the box renders the maps in code: hexagon grids, inset panel grids, large floor and pavement slabs, stripes, two-tone blocking, noise in up to four octaves for asphalt, that asphalt with two wheel tracks worn along the lane, the same asphalt after rain with damp patches pooled in its low spots, a luminaire with a lens, a hot centre and a housing bezel, and a condenser face with a wire grille over its fan. Every one is anti-aliased against the pixel it is sampled for and periodic over one tile by construction, so it is crisp at any distance, tiles with nothing to hide, and costs a few tens of kilobytes. Joint and chamfer widths are in metres and read against the entry's tiling, so a joint is the same width on a 3 m wall and a 12 m one.
-
-Incident patterns are exact rather than tiled. Their `decal` envelope states fitted world size, transparent edge inset, 2 mm surface offset, clamped UVs and single-surface placement. The opacity map carries only the incident shape. Consumers fit one quad to its named floor or street receiver and never project it through adjoining geometry.
-
-A pattern variant resolves under the same key and the same entry shape as a photographed one: consumers read maps and never ask which class a variant is. Diffusion keeps what it is good at, which is grain, wear and grime.
-
-The same lane draws the letter atlas: one lit glyph per cell in an 8 by 6 grid, as a neon tube or a backlit panel, so a sign system spells any name by picking cells. `signage` supplies the dark flat casing and backing plate around those lit cells. The grid and charset are in `CONTRACT.md`.
-
-## Finish
-
-A photograph carries its gloss and grain in every pixel. Read straight out, bright specks come back shiny and dark blotches come back damp, which at night is glitter on the walls and wet patches on dry concrete. Every photographed entry states a finish instead: the band its roughness map stays inside, and how much of the pixel-scale speckle survives into the relief. Structure above the feature scale (joints, bricks, aggregate, trowel strokes) comes through at full gain, so a wall keeps its shape and loses its sparkle. The bands per kind and tier are in `CONTRACT.md`.
-
-## Screens
-
-Ad screens invert the usual path. The basecolor is dark display glass and the picture lives in the emission map. ComfyUI paints each advertisement brandless and flat; the box turns it into a display: the pixel structure of its kind (`led-dot` lattice, `scanline-billboard` bands, `glyph-panel` with no lattice), colour fringing, controlled hotspots, and the business name stroked in from a built-in alphabet. Because the name never enters the diffusion prompt, rebranding a screen costs no render.
-
-A screen can also be painted from a picture that already exists: `imagePath` on a screen names a file. Large sources are fitted locally; undersized sources use the ComfyUI 4x upscale. Both receive the same display treatment. The shipped future-noir plates and their subject-and-style prompts are in [sources/ads-codex/PROMPTS.md](sources/ads-codex/PROMPTS.md).
-
-Every screen keeps the brandless picture it shows beside its maps. That is what the rebrand lane works from: `npm run rebrand` takes the businesses of a named world, a list of `{ brandName, businessKind, tier }` (`batch/cyberpunk/businesses.json` shows the shape), and writes for each one a `brand:<slug>` variant of `ad-screen` and of `ad-screen-tall` at its tier. The name is spelled over the artwork of one of the tier's screens from the letter atlas cells, neon on the poor and mid tiers and backlit panel on the rich ones, centred over the bottom of the picture on one line or broken over two at the space nearest the middle, then shown through the same LED or scanline structure as the screen it came from. Pure image work, no ComfyUI, and the same list writes the same maps every time, so a district renames its screens as often as the world is renamed. A consumer takes the variant by id: `entry.variants.find((v) => v.id === 'brand:kiro-s-clinic')`.
-
-The library ships one sample business so the shape is visible. World-specific screens live in a copied theme folder. Point the lane at that folder with `--themes <dir>` and run it against the world's business list. Both maps and index entries land in the copy, and the same list writes the same maps. An empty list is valid and brands nothing.
-
-## How it works
-
-Tiling basecolors come out of SDXL through ComfyUI with circular padding, and every tiled set passes a seam gate before it is written: the wrap-edge difference is compared against the worst interior column or row, so grout lines and grids do not false-positive. A failed gate writes nothing. Exact-placement entries (screens, image ads) are 1:1 UV placements with no tiling config and no seam gate. The prompt files live under `prompts/`, one per job, and the research behind the pipeline is in `docs/RESEARCH.md`.
-
-## Using it from an agent or a pipeline
-
-Generation is agentic tooling on top of a plain database. The read path is a pure function of the folder contents, so a build step or a game runtime can ship the theme folder and resolve keys with no model, no GPU and no network; the write path is a CLI a batch or an agent loop drives one request at a time, resumable across runs. `CONTRACT.md` and `schema/` are the full surface.
-
-## Consumers
-
-Geometry tools name their glTF materials with the canonical key and let this resolve it: [Exterior](https://github.com/hec-ovi/buildingforge) writes `theme/kind/tier` onto every facade material, [Interior](https://github.com/hec-ovi/interiorforge) bakes the resolved maps into finished interiors, and [Urbe](https://github.com/hec-ovi/urbe) textures a whole city from one theme folder.
+[docs/INDEX.md](docs/INDEX.md) links API surfaces, bindings, sources and pending decisions. Consumers include [Exterior](https://github.com/hec-ovi/buildingforge), [Interior](https://github.com/hec-ovi/interiorforge) and [Urbe](https://github.com/hec-ovi/urbe).

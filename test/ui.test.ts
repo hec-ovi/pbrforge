@@ -83,11 +83,42 @@ describe('preview contract', () => {
     fireEvent.click(getByRole(view.root, 'button', { name: 'Refresh list' }));
     await vi.waitFor(() => expect(fetches).toBeGreaterThan(before));
     expect(view.root.querySelector('[data-key="cyberpunk/wall/poor"]')).toBeTruthy();
+    const search = getByRole(view.root, 'searchbox', { name: 'Search materials' });
+    fireEvent.input(search, { target: { value: 'absent' } });
+    expect(getByText(view.root, /No materials match current filters/)).toBeTruthy();
+    fireEvent.input(search, { target: { value: 'wall' } });
+    expect(view.root.querySelector(`[data-key="${entry.key}"]`)).toBeTruthy();
   });
 
   it('shows an empty notice when the database has no entries', async () => {
     const view = new PreviewView();
     await view.list.load(fetcherFor({ theme: 'cyberpunk', entries: {} }));
     expect(getByText(view.root, /database is empty/)).toBeTruthy();
+  });
+
+  it('reports database loading failures and renders the error', async () => {
+    const view = new PreviewView();
+    const fetcher = (async () => new Response(null, { status: 503 })) as typeof fetch;
+    await expect(view.list.load(fetcher)).rejects.toMatchObject({ code: 'E_DATABASE_UNAVAILABLE' });
+    fireEvent.click(getByRole(view.root, 'button', { name: 'Refresh list' }));
+    await vi.waitFor(() => expect(view.root.textContent).toContain('material database could not be loaded'));
+  });
+
+  it('routes the rendered lighting, background and camera controls to the viewer', () => {
+    const viewer = {
+      canvas: document.createElement('canvas'), load: vi.fn(), setLightingPreset: vi.fn(),
+      setBackgroundMode: vi.fn(), toggleAutoRotate: vi.fn(), toggleWireframe: vi.fn(), resetCamera: vi.fn(),
+    } as unknown as SphereViewer;
+    const view = new PreviewView(viewer);
+    fireEvent.change(getByRole(view.root, 'combobox', { name: 'lighting preset' }), { target: { value: 'neon' } });
+    expect(viewer.setLightingPreset).toHaveBeenCalledWith('neon');
+    fireEvent.change(getByRole(view.root, 'combobox', { name: 'background mode' }), { target: { value: 'grid' } });
+    expect(viewer.setBackgroundMode).toHaveBeenCalledWith('grid');
+    fireEvent.click(getByRole(view.root, 'button', { name: 'Toggle spin' }));
+    expect(viewer.toggleAutoRotate).toHaveBeenCalled();
+    fireEvent.click(getByRole(view.root, 'button', { name: 'Toggle wireframe' }));
+    expect(viewer.toggleWireframe).toHaveBeenCalled();
+    fireEvent.click(getByRole(view.root, 'button', { name: 'Reset camera' }));
+    expect(viewer.resetCamera).toHaveBeenCalled();
   });
 });

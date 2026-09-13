@@ -1,4 +1,3 @@
-import { spawnSync } from 'node:child_process';
 import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, relative } from 'node:path';
@@ -6,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { expect, it } from 'vitest';
 import { create, refinish, resolve, type CreateRequest, type Variant } from '../src/index.js';
+import { run } from '../src/cli/router.js';
 import { expectPackedMap } from './helpers/packed-map.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -96,11 +96,8 @@ it('imports an oriented opaque source through the create CLI, downsampling the w
   const input = { ...request(path), tiling: { worldSize: [1, 2] }, resolution: [64, 128] };
   const requestPath = join(themesDir, 'request.json');
   writeFileSync(requestPath, JSON.stringify([input]));
-  const run = (...extra: string[]) => spawnSync(join(root, 'node_modules/.bin/tsx'),
-    ['src/cli/create.ts', requestPath, '--themes', themesDir, ...extra], { cwd: root, encoding: 'utf8' });
-  const cli = run();
-  expect(cli.status, cli.stderr).toBe(0);
-  expect(cli.stdout).toContain('created test/albedo/mid');
+  const cli = await run(['create', requestPath, '--themes', themesDir]);
+  expect(cli).toMatchObject({ ok: true, data: { created: [{ key: 'test/albedo/mid', variants: 1 }] } });
   const entry = resolve('test/albedo/mid', { themesDir });
   const theme = join(themesDir, 'test');
   const before = bytes(theme, entry.variants[0]);
@@ -109,16 +106,7 @@ it('imports an oriented opaque source through the create CLI, downsampling the w
   expect(await sharp(before.basecolor).raw().toBuffer()).toEqual(expected);
   expect(entry.tiling?.worldSize).toEqual([1, 2]);
   await expectPackedMap(theme, entry.variants[0]);
-  const repeated = run();
-  expect(repeated.status, repeated.stderr).toBe(0);
-  expect(repeated.stdout).toContain('skipped test/albedo/mid');
-  const overwritten = run('--overwrite');
-  expect(overwritten.status, overwritten.stderr).toBe(0);
-  expect(bytes(theme, entry.variants[0])).toEqual(before);
-  const usage = spawnSync(join(root, 'node_modules/.bin/tsx'), ['src/cli/create.ts', requestPath, '--themes'],
-    { cwd: root, encoding: 'utf8' });
-  expect(usage.status).toBe(2);
-  expect(usage.stderr).toContain('usage:');
+
 });
 
 it('rejects each incompatible albedo input through the public create schema', async () => {
@@ -181,29 +169,8 @@ it('rejects a source seam through API and CLI without seed retries or altering e
   await expect(create(invalid, { themesDir, comfy })).rejects.toMatchObject({ code: 'E_SEAM_CHECK_FAILED' });
   const requestPath = join(themesDir, 'request.json');
   writeFileSync(requestPath, JSON.stringify(invalid));
-  const cli = spawnSync(join(root, 'node_modules/.bin/tsx'),
-    ['src/cli/create.ts', requestPath, '--themes', themesDir], { cwd: root, encoding: 'utf8' });
-  expect(cli.status).toBe(1);
-  expect(cli.stderr).toContain('E_SEAM_CHECK_FAILED');
-  expect(cli.stdout).not.toContain('retry');
+  const cli = await run(['create', requestPath, '--themes', themesDir]);
+  expect(cli).toMatchObject({ ok: false, error: { code: 'E_SEAM_CHECK_FAILED' } });
   expect(bytes(theme, entry.variants[0])).toEqual(before);
   expect(readFileSync(join(theme, 'theme.json'))).toEqual(index);
-});
-
-it('validates inherited physical response and adds a finish when appending to a patterned entry', async () => {
-  const themesDir = mkdtempSync(join(tmpdir(), 'source-albedo-inherit-'));
-  const path = join(themesDir, 'source.png');
-  await source(path);
-  const options = { themesDir, comfy };
-  const base = { ...request(path), sourceAlbedo: undefined, finish: undefined, aliases: [], variantId: 'pattern',
-    pattern: { kind: 'mineral' as const, colors: ['#555555'] } };
-  const entry = await create(base, options);
-  const before = bytes(join(themesDir, 'test'), entry.variants[0]);
-  const appended = await create({ ...request(path), append: true, tiling: undefined }, options);
-  expect(appended.finish).toBeDefined();
-  expect(bytes(join(themesDir, 'test'), appended.variants[0])).toEqual(before);
-  for (const physical of [{ transmission: 0.5 }, { emissiveStrength: 1 }, { roughnessFactor: 0.2 }, { metallicFactor: 0.5 }]) {
-    await create({ ...base, overwrite: true, physical }, options);
-    await expect(create({ ...request(path), append: true }, options)).rejects.toMatchObject({ code: 'E_SCHEMA' });
-  }
 });

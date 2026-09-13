@@ -1,284 +1,89 @@
 # CONTRACT: materials
 
-Purpose: generates and stores themed PBR material sets (maps, tiling config, physical properties) that the geometry layers resolve programmatically by key.
+Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Status: v0.16.32. Schema and package entry are stable to build against; additive fields may come, breaking changes go through the orchestrator.
+Version: 0.16.32, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
-## Key
+## API
 
-Primary key: the string `theme/kind/tier`, all lowercase slugs (e.g. `cyberpunk/window-glass/rich`). Consumers (exterior, interior) name GLB materials with exactly this key; the index resolves it to maps, tiling config and alignment mode.
+Import the six operations from `urbe-materials`. Shared [MaterialsOptions](src/api-types.ts) accepts `themesDir` (bundled `themes/` by default) and optional [ComfyRuntime](src/api-types.ts), with `ready()`, `upload(image,name)` and `render(graph)`. Without an injected runtime, `ComfyClient` uses `COMFY_URL` or `http://127.0.0.1:8188`; its constructor also accepts a URL and timeout in milliseconds (default 600000).
 
-- tier slugs are atlas's, passed verbatim by consumers: `poor`, `mid`, `rich`, `high_rich`.
-- kind is an open vocabulary; aliasing is allowed (several keys may resolve to one entry). Guaranteed minimum coverage for theme `cyberpunk`, every kind resolvable at all four tiers: wall, wall-band, wall-trim, column, window-glass, window-frame, curtain, door, door-glass, balcony-slab, balcony-rail, roof, floor-slab, parapet, signage, ad-screen, light-fixture, fire-escape, aperture-frame, roof-artifact (exterior), plaster, tile, ceiling, wood, carpet, rubber, concrete, metal, elevator_door, fabric, glass (interior), sidewalk, road, curb, highway-deck, highway-support and water-surface (world surfaces), plastic (street props), ad-screen-tall (a 9:16 portrait billboard, where `ad-screen` is 16:9), letter-atlas (signage) and ac-unit (a condenser face for the facade). Highway-support resolves to concrete so supports expose its stable `plain` and `panel` variants. door-glass, balcony-slab, balcony-rail, parapet and aperture-frame also resolve via aliases; the four tiers of plastic, curb, ad-screen-tall and water-surface each resolve to one entry because those surfaces do not vary by district tier.
-
-## In
-
-The package root exports the six operations below, their request and result types, `MaterialsError`, `MaterialsErrorCode`, `ComfyClient` and `ComfyRuntime`. Package-only structures and the callback-bearing generation backend use the declaration-only [public API type schema](src/api-types.ts). Runtime-validated JSON surfaces use the linked JSON schemas.
-
-[`MaterialsOptions`](src/api-types.ts) is `{ themesDir?: string, comfy?: ComfyRuntime }`. `themesDir` defaults to the bundled `themes/` database. [`ComfyRuntime`](src/api-types.ts) supplies `ready()`, `upload(image, name)` and `render(graph)` for generation; omitting it uses `COMFY_URL` or `http://127.0.0.1:8188`.
-
-- `resolve(key: string, options?: MaterialsOptions): MaterialEntry` resolves a key or alias against the database. Options: [`MaterialsOptions`](src/api-types.ts). Result: [MaterialEntry](schema/material-entry.schema.json).
-- `list(filter?: MaterialFilter, options?: MaterialsOptions): string[]` returns matching keys, sorted and deterministic. Filter and options: [`MaterialFilter`, `MaterialsOptions`](src/api-types.ts).
-- `create(request: CreateRequest, options?: MaterialsOptions): Promise<MaterialEntry>` generates a full set, verifies seams and writes it to the database. Request: [CreateRequest](schema/create-request.schema.json). Options: [`MaterialsOptions`](src/api-types.ts). Result: [MaterialEntry](schema/material-entry.schema.json). Basecolor comes from ComfyUI, from the pattern class below, from a tint of a variant already in the entry (`recolor`), or is synthesized procedurally when `flatColor` is set (glass, plain colors); the other maps always derive in-box. Resolution must fit the physical tile or exact-placement aspect within one pixel. A tile is at most 1,048,576 pixels; an exact sheet is at most 4096 px on either side and 9,437,184 pixels total.
-- `decal` on an exact create request publishes the fitted physical face and placement policy. It requires `alphaMode: "BLEND"`, a decal pattern that generates opacity, and matching ratios between `decal.worldSize`, `aspect` and the map resolution. A decal is clamped and fitted to one receiving surface. It is never repeated or projected through neighboring geometry.
-- `append: true` adds the generated variant to the entry the key already resolves to, which keeps its alignment, tiling, aliases and physical; `variantId` names it (and its asset folder). Appending an id that exists is `E_KEY_EXISTS`, so a batch stays resumable. `canonical: true` on an append puts the variant first, so it is the one a consumer gets when it does not pick.
-- `sourceImage: { path }` imports one baked image plate, exact alignment only, at most 1024 px per side. Paths are absolute or relative to this box. The source must cover the requested dimensions after orientation; it is center-cover fitted locally in sRGB with transparent pixels flattened over black. Basecolor and emission share identical pixels; normal, height and AO are flat and roughness/metallic are constant physical factors. No ComfyUI is used. Invalid, unreadable or undersized sources and combinations with other generation lanes, finish, tiling, layout or decals are `E_SCHEMA`. Plates publish `class: plate` and refinish excludes them.
-- `sourceAlbedo: { path }` imports one opaque continuous tiled image locally, with no backend calls. Paths are absolute or relative to this box. The oriented source must cover the requested resolution and have the same image aspect; the physical tile keeps the one-pixel aspect tolerance. The whole source is normalized to sRGB and downsampled with Lanczos3 when needed, without cropping, upscaling or seam repair. Equal-resolution RGB pixels are preserved after orientation/color normalization. The shared photographed `finish` pipeline derives PBR maps and packed metallic-roughness; output is `class: image` with no emission. Dry roughness factors and finish bands must be at least 0.45, metallic is 0 or 1, transmission/emissive strength are zero and alpha is opaque. Optional `layout` must be continuous with no module, band height or nonzero joint. Append inherits the entry's scale, factors and finish. Invalid sources, aspect mismatch, multiple variants, exact placement, structural layout, decals or mixed generation lanes are `E_SCHEMA`; a failed seam gate is `E_SEAM_CHECK_FAILED`. Source paths are not published in the catalog. Refinish reads imported variants normally; derived maps are authored approximations, not recovered physical measurements.
-- `recolor` writes a tint variant: another variant of the same entry repainted. The paint's hue is taken whole and `strength` is how much pigment is in it, so a blue paint reads blue over a near-grey photograph. It is the same surface in different paint, so it points at that variant's relief maps instead of copying them.
-- `finish` states how a photographed surface is read into relief and gloss (see Finish below). An appended variant inherits the entry's finish, so every photographed variant of one entry shares a band. The pattern, flat, recolor and screen lanes carry their own maps and ignore it.
-- `refinish(request: RefinishRequest, options?: MaterialsOptions): Promise<RefinishResult>` re-reads the relief, gloss and metallic maps of every photographed variant of an entry from its stored basecolor, under a stated finish and factors, updates the entry, and returns `{ entry: MaterialEntry, variants: string[] }`. Request, options and result: [`RefinishRequest`, `MaterialsOptions`, `RefinishResult`](src/api-types.ts). `physical` is merged into the entry's before the maps are read. An entry with no photographed variant (a screen, a drawn pattern) is `E_SCHEMA`.
-- `pack(request: PackRequest, options?: MaterialsOptions): Promise<PackResult>` adds or refreshes each variant's packed metallic-roughness map from its separate maps. Request: [PackRequest](schema/pack-request.schema.json). Options and result: [`MaterialsOptions`, `PackResult`](src/api-types.ts). Returns `{ entry, variants }`, listing changed variant IDs, empty on an unchanged repeat. Existing maps and physical factors stay byte-for-byte unchanged. Invalid or unreadable source maps and resolution mismatches are `E_SCHEMA`.
-
-Screens (`emission: "image"`) turn that around: the basecolor is flat dark display glass and the picture lives in the emission map. `screens` lists one display per variant and sets the variant count. ComfyUI paints each advertisement as flat brandless artwork; the box makes it a screen: the pixel structure of its `kind` (`led-dot` dot lattice, `scanline-billboard` scan bands, `glyph-panel` abstract with no lattice), colour fringing, blown-out hotspots, and the `brandName` wordmark stroked in from a built-in alphabet. `brandName` never enters the diffusion prompt, so a screen rebrands without a new render; `businessKind` does steer the artwork. Both take a per-screen override.
-
-A screen can be painted from a picture that already exists instead: `imagePath` on a `screens[]` entry names a file relative to the box folder. A source large enough to cover the requested resolution is fitted locally. An undersized source goes through the deterministic ComfyUI 4x upscale first. Nothing downstream changes: the same lattice, fringing, hotspots and wordmark run over it, and the diffusion prompt is never built. A path with no file behind it is `E_SCHEMA`.
-
-Every screen variant keeps the brandless picture it shows beside its maps, with the display it is shown on (`screen` on the variant, see Out). That is what the rebrand lane composites a name over.
-
-The shipped future-noir source plates and their subject-and-style prompts live in [sources/ads-codex/PROMPTS.md](sources/ads-codex/PROMPTS.md). Each source is fitted to its published 16:9 or 9:16 face before display structure is applied. In every shipped `noir-cyan` and `noir-amber` emission map, at least 40 percent of pixels stay below 8/255 and fewer than 18 percent clip after the entry's emissive strength is applied.
-
-- `rebrand(request: RebrandRequest, options?: MaterialsOptions): Promise<Branded[]>` spells the businesses of a named world over the screens of their tier, one `brand:<slug>` variant per business on `ad-screen` and on `ad-screen-tall`, with no render (see Rebrand below). Request: [RebrandRequest](schema/rebrand-request.schema.json). Options: [`MaterialsOptions`](src/api-types.ts). Each [`Branded`](src/api-types.ts) result is `{ key, variantId, from, lines }`.
-
-CLI: `npm run pbrforge -- <verb>` is the agent surface. One JSON envelope on stdout, then exit. Verbs: doctor, version, help, resolve, list, patterns, from-image, create, refinish, rebrand, pack, preview. See [src/cli/CONTRACT.md](src/cli/CONTRACT.md). A single opaque photo to dry PBR maps, with no seam gate, is [from-image](src/from-image/CONTRACT.md), not `create`. Human npm scripts (`npm run resolve -- <key>`, `npm run create -- <request.json> [--themes <dir>] [--overwrite]`, `npm run refinish -- <request.json>`, `npm run rebrand -- --theme <theme> --businesses <businesses.json>`) remain. Create accepts a single request or an array; array mode skips keys that already exist, so batches are resumable. `pbrforge create --native` imports a PNG from the agent's image tool (`sourceImage`, `sourceAlbedo`, or `screens[].imagePath`) and never calls ComfyUI. Create's `--themes` selects an isolated output database; provided-source seam failures are reported without a seed retry.
-
-`npm run pack -- --theme <theme> [--themes <dir>]` (and `pbrforge pack --theme`) adds packed maps to every entry through the same package operation. It is deterministic and keeps every separate map untouched.
-
-The installable skill pack is [`skills/pbrforge/`](skills/pbrforge/SKILL.md). Agents run verbs only; they do not read `src/` or edit map files.
-
-## Finish
-
-A photograph carries its own gloss and grain in every pixel. Read straight out, bright specks come back shiny and dark blotches come back damp, which at night is glitter on the walls and wet patches on dry concrete. The finish is what the surface is instead:
-
-- `roughness: [min, max]` is the band the roughness map stays inside. It is read off a blurred relief, so gloss moves over centimetres of surface and never per pixel. Default: the entry's `roughnessFactor` plus or minus 0.05.
-- `grain` (default 0.2) is how much of the pixel-scale speckle survives into the relief. Everything above the feature scale (joints, bricks, aggregate, trowel strokes) comes through at full gain either way.
-- `relief` (default 2) is the gain on that feature-scale relief.
-
-Dry matte is the default across the library. Every non-emissive entry carries metallic 0 (1 on the metal kinds: metal, window-frame, wall-trim, elevator_door, fire-escape, roof-artifact and the zinc roof) and a roughness floor of 0.45. Glass, lit entries and authored localized damp response are the exceptions. Damp response lowers roughness only on its bounded mask; scalar fallback stays dry. Bands per kind and tier, all four tiers left to right (poor, mid, rich, high_rich):
-
-| kind | poor | mid | rich | high_rich |
-| --- | --- | --- | --- | --- |
-| wall | 0.88-0.96 | 0.82-0.92 | 0.70-0.80 | 0.56-0.66 |
-| plaster | 0.88-0.95 | 0.80-0.88 | 0.66-0.74 | 0.55-0.65 |
-| tile | 0.56-0.64 | 0.51-0.59 | 0.46-0.54 | 0.45-0.52 |
-| every other photographed kind | the roughness factor, plus or minus 0.05, floored at 0.46 | | | |
-
-Grain and relief ramp with the tier for every photographed kind: grain 0.25, 0.2, 0.15, 0.1 and relief 2, 2, 1.6, 1.2. Steel parts do not use photographed surfaces: `metal`, `fire-escape` and `roof-artifact` carry flat dark paint and zinc, while `elevator_door` draws its fitted center seam. Fire-escape and roof-artifact maps are 256 px over 0.5 m, enough for shaped rails, treads and equipment shells without carrying a pattern over them. `concrete`, `floor-slab` and `roof` are also fully deterministic, with no photographed grain. Finished `wood` uses grain 0.08 and 0.06 on its two upper tiers. A drawn pattern states its own gloss: it sits at the entry's roughness factor, plus the joint bump (`joint` times 0.4) on the joint lines and the `sheen` spread from cell to cell. Asphalt is a three-octave noise field, so its finest aggregate sits around five centimetres of road and not on one pixel.
-
-## Floors and balconies
-
-`floor-slab` (with `balcony-slab` aliased to it) covers 2 x 2 m at 512 px. `plain` is the canonical continuous cement field for fitted faces. `panel` is an exact 2 x 1 m module with a 20 mm joint and `large-slab` is an exact 2 x 2 m module. All three carry restrained procedural mineral detail, stable origin `[0, 0]` and dry matte dielectric response.
-
-`roof` also covers 2 x 2 m at 512 px. `plain` is the continuous canonical deck. `panel` is an exact 2 x 1 m module and `panel-square` is exact 2 x 2 m, both with 20 mm joints. Every variant has restrained procedural surface detail and stable origin `[0, 0]`. The rich tier is dark zinc at metallic 1; the other tiers are dielectric roof membranes.
-
-## Concrete
-
-`concrete-monolith/mid` aliases all tiers and covers 4 x 4 m at 1024 px. Its `cast`, `weathered`, `mineral` and `graphite` variants are continuous, without panel seams. `concrete-large-panel/mid` aliases all tiers and covers 7 x 7 m at 1024 px; `cast` and `mineral` have exact 7 x 3.5 m modules with 20 mm joints. Layout origins are `[0, 0]`. Pores and casting traces retain physical scale independently of module size. [batch/cyberpunk/exterior-surfaces.json](batch/cyberpunk/exterior-surfaces.json) regenerates these surfaces.
-
-`concrete` additionally provides `panel-cast`, `panel-weathered` and `panel-mineral` at every tier. Each retains the 2 x 1 m panel module, 20 mm joint and origin `[0, 0]`. Cast has uneven mineral clouds and casting traces; weathered is darker with runoff stains; mineral is maintained neutral precast. Surface pores remain shallow and stains affect color independently of relief. `column` provides matching continuous `plain-cast`, `plain-weathered` and `plain-mineral` at its existing 1.5 x 3 m scale. [batch/cyberpunk/exterior-finishes.json](batch/cyberpunk/exterior-finishes.json) regenerates these additions.
-
-`concrete` covers 2 x 2 m at 512 px with canonical and panel variants: subtly mottled `plain` (canonical), neutral cement `panel`, `panel-square` and `panel-graphite`. `panel` and `panel-graphite` are exact 2 x 1 m modules with 20 mm joints; `panel-square` is 2 x 2 m. Every panel uses origin `[0, 0]` in world metres. Relief, tonal drift and fine grain remain subordinate to the structural joint and none comes from a photograph. Exterior selects coordinated panel and border variants through the style bindings.
-
-`wall` uses the same 2 x 2 m arithmetic. Its canonical `plain` is a continuous black or graphite field; `panel` is neutral cement at 2 x 1 m, `panel-square` is neutral cement at 2 x 2 m, and `panel-graphite` is dark 2 x 1 m cladding. All carry stable origin `[0, 0]`, matte dielectric response and restrained procedural mineral detail. `parapet` aliases to this family. The palette stays black, graphite and neutral cement, with structural modules at least 2 x 1 m.
-
-`wall-band` covers 4 x 1.4 m at 1000 x 350 px. Its `cement` and `graphite` fields carry `bandHeight: 1.4`, stable origin `[0, 0]` and no baked structural joint. Consumers use it only for facade zones calculated as exact 1.4 m bands.
-
-## Exterior style sets
-
-[bindings/exterior-styles.json](bindings/exterior-styles.json), validated by [schema/exterior-styles.schema.json](schema/exterior-styles.schema.json), publishes `{ version: 1, styles }`. Exactly nine styles form three groups: `residential-salvaged`, `residential-weathered`, `residential-modest`; `premium-obsidian`, `premium-office`, `premium-mineral`; `civic-utility`, `civic-institutional`, `civic-industrial`.
-
-Each style has `id`, `group`, `facadePattern` and `surfaces`. `facadePattern` is `{ kind: continuous }` or `{ kind: panel, width, height, jointWidth }`, defining Exterior's structural divisions in metres. Image variants provide continuous fine surface detail beneath those divisions; a structured pattern variant publishes matching layout metadata. Roles are `facade`, `border`, `ground`, `frame`, `trim`, `glass`, `curtain`, `louvre`, `door`, `service`, `roof`, `slab`, `rail`, `doorGlass` and `ac`. Each role is `{ kind, variant }`, resolvable as `cyberpunk/<kind>/<tier>` at all four tiers. Consumers choose one complete style per building, retain physical world scale and select named variants. Geometry policy, building-type eligibility, lights and occupancy belong to Exterior and Engine. Opaque glazing publishes transmission zero so consumers can omit window-room scenery behind it.
-
-## Frame steel
-
-`door` also provides `satin` (fine directional coating) and `scuffed` (uneven worn coating) at every tier, retaining the same 0.5 m scale and dielectric painted-steel response. [batch/cyberpunk/door-finishes.json](batch/cyberpunk/door-finishes.json) adds these to canonical `paint`. Exterior style bindings select one finish for the whole door assembly. Panel insets, beveled edges and fitted wear remain geometry responsibilities.
-
-`window-frame` (with `balcony-rail` and `aperture-frame` aliased to it) and `wall-trim` carry one smooth dark `paint` variant: metallic 1, roughness 0.5, flat normals and tonal drift under two percent. Frames cover 0.5 x 0.5 m at 256 px; trim covers 1 x 1 m. Frame paint is `#24272b`, trim `#2a2d31`.
-
-`door` keeps the canonical `paint` variant on a 0.5 x 0.5 m tile at 256 px. It is a dark graphite dielectric coating (metallic 0), with deterministic fine relief and restrained color and roughness variation. Roughness factors by tier are 0.64, 0.58, 0.53 and 0.50; wear decreases with tier. The maps contain surface finish only. Insets, seams, handles and edge wear tied to a leaf belong to fitted geometry or decals. Regenerate with `npm run create -- batch/cyberpunk/door.json --overwrite`, then `npm run create -- batch/cyberpunk/door-finishes.json`. Consumers use the same world-metre scale for leaf and casing.
-
-`column` covers 1.5 x 3 m at 256 x 512 px and carries continuous `plain` graphite and `cement` fields. Both have stable origin `[0, 0]`, vertical orientation and restrained procedural mineral detail.
-
-`elevator_door` is exact on a 1:2 face at 512 x 1024 px. Its two variants are drawn two-leaf steel doors with the only relief at the outer edge and center seam, roughness 0.75 down to 0.52 by tier, metallic 1, and no photographic marks. A consumer maps one complete door face to UV 0..1.
-
-## Ground
-
-Ground variants publish physical tile sizes and visible modules. Consumers fit complete modules to their owned surface regions and use continuous finishes on the remaining borders:
-
-| kind | tile | maps | variants |
-| --- | --- | --- | --- |
-| `road` | 3.5 x 7 m, one lane wide, V along the lane | 512 x 1024 | `street` (canonical) and `highway` carry restrained wheel wear; `wet` has sparse low-area reflectivity; `worn-concrete` is a continuous neutral field |
-| `highway-deck` | 3.5 x 7 m, one lane wide, V along the lane | 512 x 1024 | `asphalt` (canonical) carries restrained longitudinal wear; `concrete` is a continuous neutral field |
-| `sidewalk` | 2 x 2 m | 1024 | `slab` (canonical): exact 2 x 1 m modules with 20 mm joints; `plate`: exact 2 x 2 m modules; `plain`: continuous material for fitted borders and ramps |
-| `curb` | 2 x 0.15 m, one entry at all tiers | 1280 x 96 | `stone`: two 1 m kerb stones with 10 mm joints and a restrained chamfer |
-| `highway-support` | alias of `concrete`, 2 x 2 m | 512 | `plain` on fitted columns and remainder borders; `panel` on compatible fields, exact 2 x 1 m modules with 20 mm joints |
-
-Lay `road` and `highway-deck` with U across the lane from its left boundary. Lay `sidewalk` from the kerb line, using the published origin instead of restarting UVs per polygon. The `curb` tile spans the 0.15 m face with V from the road up, and the same tile lays the 0.15 m top. These ground entries are neutral, matte and procedurally detailed at their physical scale. Structural joints are separate from fine aggregate.
-
-[Street style bindings](bindings/street-styles.json), validated by [schema/street-styles.schema.json](schema/street-styles.schema.json), publish `{ version: 1, styles }` with exactly `maintained`, `salvaged` and `industrial`. Each style provides four `{ kind, variant }` roles: `road`, `paving`, `border`, `curb`. Resolve every role as `cyberpunk/<kind>/<tier>` at any tier and keep one complete family per owned street region.
-
-Each shipped street style also has additive `constructionSurfaces`: `pavingBody`, `joint`, `border`, `curb` and `gutter`, each a `{ kind, variant }` binding. Optional `road` explicitly overrides the consumer's seeded `surfaces.road` selection. Omission retains that road independently of the fitted-paving family; shipped styles omit this override. Gutter is also optional in binding documents. Every construction finish is continuous, isotropic and has no structural marks. Geometry owns slabs, joints, curb faces, drainage lips and all fit; a gutter is a distinct road-side region, even when it shares a finish with a border. Apply the published metre scale independently of cell pitch. [Street image recipes](batch/cyberpunk/street-image-finishes.json) create 1 x 1 m, 1024 px road candidates and the selected precast/graphite finishes with all-tier aliases. Each family has its own dry roughness band and canonical tone variant: maintained neutral, salvaged darker warm-grey paving with lighter asphalt, industrial cool-grey paving with darker asphalt. These are candidate finishes, without fitted-city visual acceptance.
-
-`street-paving-body/mid` remains available at 2 x 2 m, 1024 px with three localized-damp mineral variants. `street-joint/mid` remains 0.5 x 0.5 m, 512 px with dry mortar variants. [Construction recipes](batch/cyberpunk/street-construction.json) reproduce these maps.
-
-[Street marking bindings](bindings/street-markings.json), shaped by [street-markings schema](schema/street-markings.schema.json), are `{ version: 1, surfaces: { white, accent } }` with `{ kind, variant }` values resolvable at every tier. Both are continuous, opaque, nonemissive 1 x 1 m coatings with no symbols. White serves edge/divider lines, arrows and stop bars; muted dark orange serves centerlines and crossing bars. Their colors are shared road semantics, independent of street family. Engine supplies exact stripe/arrow geometry and local lights.
-
-`pavingPattern.width` and `.height` are joint-inclusive pitches; the body dimensions subtract `jointWidth` on each axis. Atlas's published construction layout, frame and modules own actual cell geometry, independently of texture repeats. Construction roles `body`, `crossing-field`, `approach` and `corner-infill` use `pavingBody`; `joint`, `border` and `curb` use their named finishes. Grid bodies in curb or border bands use that band's finish. A crossing field here is raised pedestrian paving; carriageway and zebra owners keep their separate materials.
-
-`street-road/mid` and `street-paving/mid` cover 4 x 4 m at 1024 px. Road finish combines 8 mm aggregate, sparse millimetre-scale surface fractures and broad roughness fields, with damp roughness at least 0.5. Paving modules are 2 x 2 m (maintained), 2 x 1 m (salvaged) and 4 x 2 m (industrial), with 12, 16 and 20 mm joints respectively. `pavingPattern` in each binding matches the variant layout. `street-border/mid` and `street-curb/mid` cover 2 x 2 m at 1024 px with continuous fine mineral finish and authored local damp response. Border is dark smooth stone; curb is pale precast with less damp coverage. All four keys alias every tier and expose the three style IDs as variants, with origin `[0, 0]`. Whole-module placement, perimeter width, curb segmentation, elevation and crossings belong to geometry. [Street recipes](batch/cyberpunk/street-surfaces.json) regenerate all twelve PBR sets through the create CLI.
-
-`light-fixture` is one luminaire per tile of 0.16 x 0.28 m at 256 x 448 px, so a fixture face of that size spans exactly one tile. `lamp` (canonical) is a recessed lens with a hot centre inside a 26 mm housing, `strip` one uniform diffuser whose housing is the fixture geometry, `panel` an even diffuser vignetting into an 18 mm frame; emission comes off the lens. Emissive strength is 1.2, set so the lens renders its falloff instead of clipping to a solid face: at the size a facade samples one fixture, the housing stays unlit, about half the face carries the gradient and only the hot centre blooms. Held by a test over the shipped database.
-
-## Water surfaces
-
-`cyberpunk/water-surface/high_rich` is a tiled 8 x 8 m entry at 512 px. It carries `lagoon` (broad calm ripples), `river` (aligned current) and `sea-coast` (short crossing waves). The procedural wave sums use whole cycles on both tile axes, so every map wraps and the same parameters produce the same pixels. All three variants carry basecolor, normal, roughness and constant dielectric metallic maps. The entry publishes IOR 1.333 and restrained transmission; Engine owns motion and reflection strength.
-
-Atlas bindings are fixed data in [bindings/atlas-hydrology.json](bindings/atlas-hydrology.json), shaped by [schema/atlas-hydrology-bindings.schema.json](schema/atlas-hydrology-bindings.schema.json):
-
-| Atlas key | material key | variant |
+| Call | Input schema | Output schema and effect |
 | --- | --- | --- |
-| `water.lagoon` | `cyberpunk/water-surface/high_rich` | `lagoon` |
-| `water.river` | `cyberpunk/water-surface/high_rich` | `river` |
-| `water.sea-coast` | `cyberpunk/water-surface/high_rich` | `sea-coast` |
+| `resolve(key, options?)` | Lowercase `theme/kind/tier` key or alias, [MaterialEntry identity](schema/material-entry.schema.json) | [MaterialEntry](schema/material-entry.schema.json), read only. |
+| `list(filter?, options?)` | [MaterialFilter](src/api-types.ts): optional theme, kind, tier | Sorted canonical `string[]`, [API](src/index.ts); omitted filters match all. |
+| `create(request, options?)` | [CreateRequest](schema/create-request.schema.json) | Promise of written [MaterialEntry](schema/material-entry.schema.json). |
+| `refinish(request, options?)` | [RefinishRequest](src/api-types.ts): key, optional finish and physical | Promise of [RefinishResult](src/api-types.ts), `{entry, variants}` after deriving response maps from stored basecolor. |
+| `rebrand(request, options?)` | [RebrandRequest](schema/rebrand-request.schema.json): theme and businesses | Promise of [Branded[]](src/api-types.ts), `{key,variantId,from,lines}` for each written screen. |
+| `pack(request, options?)` | [PackRequest](schema/pack-request.schema.json): key | Promise of [PackResult](src/api-types.ts), `{entry,variants}` with changed IDs, empty on an unchanged repeat. Separate maps and physical values remain intact. |
 
-Every binding resolves directly to the tiled entry and a named variant with the four required PBR maps. Consumers fail closed if a key or variant is absent; there is no fallback binding.
+The root also exports request/result types, `MaterialsError`, its code union, `ComfyClient` and `ComfyRuntime`. `resolve` and `list` are synchronous; writing operations return promises. Identical database contents give identical reads. Local generation is deterministic for the same request and inputs; backend generation depends on the supplied runtime.
 
-## AC unit
+[CLI contract](src/cli/CONTRACT.md): `pbrforge <verb>` returns one JSON envelope and exits. [From-image contract](src/from-image/CONTRACT.md): `pbrforge from-image request.json` imports one opaque JPEG or PNG through its separate [request schema](src/from-image/request.schema.json). [Preview contract](src/ui/CONTRACT.md): read-only catalog and PBR viewer.
 
-`ac-unit` is the condenser mounted on a facade: one face per unit, `exact` on a 1 x 1 m square at 1024 px, so the box's front carries it 1:1 and its sides take the same face or a painted flat. `grille` (canonical) is a dark neutral painted housing with a folded edge lip and a round flange around a wire grille, rings at 18 mm on four spokes, over the dark fan cavity with the hub and blades behind. All tiers use graphite or neutral grey with restrained neutral wear.
+## Creation
 
-## Window glass
+Defaults and a worked request are in [SKILL.md](SKILL.md). `key`, `alignment` and `description` are required. Tile needs `tiling.worldSize`; exact needs `aspect`. Resolution must match that ratio within one pixel: tile at most 1048576 pixels; exact at most 4096 per side and 9437184 pixels total. The plate lane caps each side at 1024. Seed defaults to a hash of description.
 
-`window-room-office-wide/mid` aliases all tiers and provides exact 2:1 `office-a`, `office-b` and `office-c` back plates at 1024 x 512 px. Each room binding also has `backPool`, a nonempty array of `{ kind, variant }` for seeded per-bay selection. Office and lobby use the three wide back plates; apartment uses its square plate. Aspect comes from each resolved entry. Consumers retain the complete back-pool selection within one scenic bay and crop to that bay's aspect.
+| Source | Behavior |
+| --- | --- |
+| Photographic description | ComfyUI generates albedo; local code derives response maps. |
+| `pattern` | Code generates maps from a [published pattern kind](schema/pattern-kinds.json). Optional [localized damp response](schema/surface-response.schema.json) applies to opaque dielectric tiled mineral finishes. |
+| `flatColor`, `flatNoise` | Local near-uniform finish. |
+| `recolor` | Append a tint of `recolor.from`, sharing its relief maps. |
+| `sourceAlbedo.path` | Opaque continuous tile, matching aspect, whole-image downsample only, dry response, seam gate, no emission. |
+| `sourceImage.path` | Exact baked plate, center-cover fit, transparent pixels flattened over black, flat response maps and identical basecolor/emission. |
+| `emission: "image"`, `flatColor`, `screens[]` | Artwork in emission over dark display glass. Source artwork covers the output locally or uses ComfyUI 4x upscale when undersized. Brand names are composited separately. |
 
-Scenic rooms publish five explicit roles and back pools in [bindings/window-room-surfaces.json](bindings/window-room-surfaces.json), validated by [schema/window-room-surfaces.schema.json](schema/window-room-surfaces.schema.json). For `office`, `apartment` and `lobby`, `back` uses `window-room` with that room-name variant; `left` and `right` use `window-room-wall:plain`; `floor` uses `window-room-floor:plain`; `ceiling` uses `window-room-ceiling:plain`. Resolve as `cyberpunk/<kind>/<tier>`, all tiers alias mid. These are exact 1:1 surfaces; consumers preserve aspect when cropping. Side walls and floor carry baked source imagery; ceiling is a plain matte field. Lighting strips, spatial arrangement and depth belong to Engine.
+Source paths are absolute or relative to the package folder; they are not catalog map references. For sourceAlbedo and from-image, metallic is 0 or 1, roughness and finish bands are at least 0.45, transmission/emission are zero and alpha is opaque. General create physical settings follow its schema. Finish defaults to roughness factor ±0.05 clamped to 0..1, grain 0.2 and relief 2. Derivation estimates relief from brightness; it does not measure the source's physical surface.
 
-All window-glass maps have flat normals and uniform roughness. The additional `window-glass-opaque/mid` entry, variant `dark`, has graphite basecolor, metallic 0, roughness 0.55 and explicit transmission 0. `window-glass-office/mid`, variant `clear`, has neutral basecolor, metallic 0, roughness 0.045 and transmission 0.78. Both cover 1.5 x 1.5 m at 256 px and alias every tier. Opaque dark glazing has a broad subdued reflection; office glazing preserves the room view. Reflections come from the renderer environment; textures contain no baked reflections.
+Append inherits alignment, scale, aliases, physical and stored finish. `variantId` names one variant; `canonical: true` puts an appended variant first. Existing keys or variant IDs require explicit overwrite where supported. Pattern/recolor requests make one variant; screens set their count. Tiled create checks albedo seams before writing that variant. Exact creation and from-image have no seam gate. Writes are sequential; see [pending guarantees](docs/ISSUES.md) for failure atomicity.
 
-`window-room/mid` is an exact 1:1 baked room plate at 1024 px with `office`, `apartment` and `lobby` variants, aliased at every tier. Basecolor and emission contain identical fitted sRGB imagery; emissive strength is 1. Normal, height and AO are flat, roughness is 1 and metallic is 0. Consumers clamp the image once behind glazing, complete on square back walls or with an aspect-preserving centered crop on nonsquare bays. Curtains and window glass remain separate geometry. Source images and prompts live in [sources/window-rooms/INDEX.md](sources/window-rooms/INDEX.md); [batch/cyberpunk/window-room.json](batch/cyberpunk/window-room.json) regenerates the maps.
+Refinish merges physical changes, resolves the requested finish, and updates variants with their own relief files, excluding patterns, plates, screens and shared-relief recolors. Rebrand accepts hotel, commerce, mall, restaurant, coffee_shop, corpo and clinic businesses; an empty list writes nothing. It creates `brand:<slug>` variants on landscape and portrait screens, sharing the base surface maps. Same business input and source art produce the same branding. Use a world-owned theme copy for world names.
 
-Glazing transmits light and reflects its surroundings. Transmission controls the transmitted component; Fresnel reflection depends on the viewing angle and IOR. The renderer supplies the reflected environment.
+## Output and binding rules
 
-`transmission` is the glTF `KHR_materials_transmission` factor and `tint` is the glass's own colour. Roughness stays low, with uniform maps at the declared factor.
+[ThemeIndex](schema/theme-index.schema.json) is `{theme,entries}` in `<themesDir>/<theme>/theme.json`. [MaterialEntry](schema/material-entry.schema.json) contains key/aliases, alignment, physical values, scale or aspect, optional finish/decal, and named variants with resolution and relative map paths. Variant 0 is canonical; a consumer may select another declared ID. `kind` is open vocabulary; bundled Urbe tiers are poor, mid, rich and high_rich. Catalog dimensions, keys and named variants are published in [themes/cyberpunk/theme.json](themes/cyberpunk/theme.json).
 
-The tier is the building. poor and mid are residential windows: neutral glass, worn at the bottom of the range. rich and high_rich are office curtain wall: blue-green coated, the lowest transmission in the family, so reflection dominates.
+- Every variant requires basecolor, normal, roughness and metallic. Height, AO, emission, opacity and packed metallic-roughness are optional in the schema. Map dimensions and alignment agree within a variant. Shared map references are valid.
+- Basecolor and emission are sRGB; data maps are linear. Normals use OpenGL +Y. Roughness and metallic are absolute values, bound with scalar factors 1; physical factors supply fallbacks when maps are omitted.
+- Packed metallic-roughness is linear RGB: R=255, G=roughness, B=metallic. It uses the same UVs and resolution as the separate maps, with factors 1.
+- `tiling.worldSize` is metres per repeat, one UV unit per tile. `aspect` is an exact-face ratio. Preserve scale and proportion. Geometry owns UVs, whole modules, borders, cuts and placement. `layout` publishes module size, joint width, origin and orientation in metres.
+- Decals clamp UV 0..1 to one fitted receiving face using declared world size, edge inset and normal offset. Clip to that face, keep depth testing and apply opacity once. Glass, reflection environments, animated water, collision and breakability behavior belong to the renderer/runtime.
+- `class` records provenance; `screen.artwork` is retained brandless source art for rebrand, not a rendered texture channel.
 
-| kind | tier | transmission | tint | roughness factor |
-| --- | --- | --- | --- | --- |
-| window-glass (`door-glass` aliases to it) | poor | 0.60 | `#b4b8b4` neutral | 0.15 |
-| | mid | 0.52 | `#bcc4c2` neutral | 0.10 |
-| | rich | 0.42 | `#93b4ac` blue-green | 0.06 |
-| | high_rich | 0.35 | `#7fa5a6` blue-green | 0.04 |
+## Consumer bindings
 
-The interior `glass` kind is clear glazing for partitions and carries its own values.
+| Data | Schema | Meaning |
+| --- | --- | --- |
+| [Exterior styles](bindings/exterior-styles.json) | [Schema](schema/exterior-styles.schema.json) | Version 1, nine palettes in three groups, complete role/variant bindings and facade divisions. |
+| [Street styles](bindings/street-styles.json) | [Schema](schema/street-styles.schema.json) | Maintained, salvaged and industrial families, paving metadata and construction finishes. Optional construction road overrides independent road selection. |
+| [Street markings](bindings/street-markings.json) | [Schema](schema/street-markings.schema.json) | White and dark-orange coatings; geometry owns marking silhouettes. |
+| [Scenic rooms](bindings/window-room-surfaces.json) | [Schema](schema/window-room-surfaces.schema.json) | Five receiving faces and back-image pools for office, apartment and lobby. Preserve aspect when cropping scenic plates. |
+| [Hydrology](bindings/atlas-hydrology.json) | [Schema](schema/atlas-hydrology-bindings.schema.json) | Explicit water.lagoon, water.river and water.sea-coast key/variant pairs. |
 
-## Curtains
-
-All `blind`, `shade` and `slat` variants use dark charcoal with basecolor channels below 64/255, retaining matte dielectric response. [batch/cyberpunk/curtain.json](batch/cyberpunk/curtain.json) regenerates the complete three-variant family at every tier.
-
-`exterior-louvre/mid:metal` aliases every tier: satin grey metal at metallic 1 and roughness 0.52, with fine rolled surface variation on a 0.5 x 0.5 m tile at 256 px. It contains no slat divisions. Exterior owns external slat geometry and placement.
-
-Every tier also provides `slat`, a uniform neutral dielectric finish with flat normals for individually modeled blind slats. It retains the entry's world scale and matte roughness. Consumers place slat gaps and curvature in geometry; this variant contains no folds or slat divisions.
-
-`curtain` covers a 1.5 x 3 m window bay at 384 x 768 px, equal density on both axes. Every tier carries `blind` (canonical), twelve vertical 0.125 m slats with shallow deterministic pleats, and `shade`, a plain matte blackout cloth. Neither uses a photographed weave, so minified window coverings keep their shape without moire or grain.
-
-## Sign casing
-
-`signage` is the non-emissive casing and backing plate behind the separate `letter-atlas` glyphs. It carries `casing` (canonical) and a muted color `backplate`, both flat dielectric paint on a 0.5 m tile at 256 px, roughness 0.72 down to 0.52 by tier. Illumination comes only from the fitted glyph cells, so the sign keeps a dark housing around its letters.
-
-## Pattern class
-
-A variant whose maps are drawn from parameters instead of photographed: `pattern` in the create request states the shapes and colors, and the box renders basecolor, relief and gloss in code, anti-aliased and periodic over one tile by construction. No diffusion, no ComfyUI, small files, and crisp at any distance. It resolves under the same key and the same MaterialEntry shape as everything else, so a consumer never asks which class a variant is: it reads the maps.
-
-### Localized damp response
-
-Optional `pattern.response` follows [SurfaceResponse](schema/surface-response.schema.json) and is published unchanged as `variant.response`. It supports tiled `mineral` patterns with opaque dielectric physical values, no emission and dry roughness at least 0.45 across the map. Other combinations are `E_SCHEMA`. Omission leaves the dry generation path unchanged; recolors retain the source response and relief maps.
-
-`kind: localized-damp` authors `coverage` (0.02-0.40), `patchScale` (0.2-2 m), `roughness` (0.18-0.44), `darkening` (0-0.25) and `reliefRetention` (0-1). These are design ranges. Each tile axis covers at least two patch spacings, rounded to whole periods. A periodic smooth field is ranked at output resolution: at most `floor(coverage * pixelCount)` texels receive a nonzero mask, including transitions; approximately 40 percent of that support is fully damp. The remaining basecolor, height and roughness texels stay exactly dry. Normal filtering may reach the immediate neighboring texels.
-
-One mask interpolates roughness toward the authored damp value, darkens basecolor and reduces relief around its neutral plane. It adds no light, reflection image, structural marks, height pooling or emission. Consumers read the absolute maps normally, with scalar factors 1; the entry's fallback factor remains dry. Dry regions dominate and roughness never falls below the authored target, within PNG quantization.
-
-Pattern kinds, what each draws and which params it reads: [schema/pattern-kinds.json](schema/pattern-kinds.json). `pbrforge patterns` prints `{ kinds, count }`. Each kind's `detail` path is a deeper drawer note. The create-request `pattern.kind` enum is the same set. How to add a kind: [skills/pbrforge/references/patterns/ADD.md](skills/pbrforge/references/patterns/ADD.md).
-
-Inside a puddle the surface goes flat, dark and damp: one level over the asphalt, so the normal map is unbroken there, and roughness 0.5, the same a wheel track wears to, so a lamp lands on it as a soft reflection. `wet` moves the waterline, 0 leaving it dry and 0.5 flooding about half the tile; the mask is two octaves of the same wrapping lattice as the asphalt, so puddles tile with the road they sit in. A lane's tracks darken the asphalt by up to 35 percent and pull its roughness toward the same 0.5 by `wear`, breathing along the run on the lane's own lattice.
-
-Shared over all of them: `colors` (face first), `depth` (relief), `joint` (how much darker and rougher a joint reads), `variation` (tone per cell), `sheen` (gloss per cell), `grain` (fine mottling). `line` and `bevel` are in metres, read against the entry's `tiling.worldSize`; `cells` are whole counts per tile, which is what makes the pattern wrap. On an `exact` entry the sheet stands in for the tile, so those two are fractions of the sheet (of a cell, for `glyph-atlas`).
-
-Cyberpunk pattern library, per tier: plaster (`plain`, canonical, then `hex`, `panel`, `two-tone`), tile (`slab`, `mosaic`, `bond`), concrete (`plain`, canonical, then 2 x 1 m `panel`, 2 x 2 m `panel-square` and dark `panel-graphite`), ceiling (`plain`, canonical: smooth dark paint, then `panel`: restrained 0.5 m insets), floor-slab (`plain`, canonical and continuous, then 2 x 1 m `panel` and 2 x 2 m `large-slab`), roof (`plain`, canonical and continuous, then 2 x 1 m `panel` and 2 x 2 m `panel-square`), wall (`plain`, `panel`, `panel-square`, `panel-graphite`), wall-band (`cement`, `graphite`, exact 1.4 m height), column (`plain`, `cement`, both continuous), elevator doors (`split`, then `graphite`: two leaves with an exact center seam), curtains (`blind`, then `shade`: shallow vertical slats or plain cloth), fabric (`flat`: even upholstery cloth, matte, whose normal map leans under one code value off flat, so a part small enough to minify a photographed weave has nothing left to alias), sidewalk (`slab`, `plate`, `plain`), road (`street`, `highway`, `wet`, `worn-concrete`), highway-deck (`asphalt`, `concrete`), water-surface (`lagoon`, `river`, `sea-coast`), curb (`stone`), plastic (`bag`: crumpled near-black sheet at 0.55 roughness, the sheen of a refuse sack), light-fixture (`lamp`, `strip`, `panel`), ac-unit (`grille`). Variants of one kind are laid out to read apart at a glance through their large structural divisions and restrained neutral tone, not vivid paint or fine decorative tiling.
-
-## Incident decals
-
-Window grime uses the same fitted decal placement contract. `window-grime-sill/<tier>:runoff` covers 3 x 0.9 m at 1000 x 300 px; `window-grime-jamb/<tier>:stain` covers 0.4 x 2.5 m at 160 x 1000 px. Both store RGBA basecolor with alpha identical to the separate opacity map. Consumers use that alpha once, disable depth writes and retain depth testing. Both are neutral mineral stains, alpha blended, with flat relief, a fully transparent 20 mm edge inset and 2 mm receiver offset. Opacity stays below 0.3 and decreases by tier. The PNG top edge starts the downward runoff. Consumers fit to a wall receiver below a sill or beside a jamb and clip to that receiving face. No volume projection or stains across glazing, openings or neighboring surfaces.
-
-Two exact scene-specific keys ship for investigation layouts. `cyberpunk/incident-blood/mid`, variant `directional-pool`, fits a 2.4 x 1.2 m floor receiver. `cyberpunk/incident-tyre/poor`, variant `directional-transfer`, fits a 3.6 x 0.9 m street receiver. Both use a 2 mm normal offset, clamped UVs, flat height, dielectric response and an opacity map with a fully transparent inset around every edge. Basecolor continues the incident color beneath transparent texels so filtered mip levels do not introduce dark borders.
-
-The consumer creates one fitted quad on the named receiving surface, maps UV 0..1 once, applies `surfaceOffset` along that surface normal, and clips the quad to the receiver bounds before placement. It does not use volume projection, cross a doorway or floor gap, or infer a new physical scale from the image. Rotation and scene offset belong to the scene asset envelope, not this material entry.
-
-## Rebrand
-
-A business of the named world gets its own screens. `rebrand({ theme, businesses })` writes, for every business, one variant of `<theme>/ad-screen/<tier>` and one of `<theme>/ad-screen-tall/<tier>`: the brandless artwork of a screen variant already in that entry with the brand name spelled over it from `<theme>/letter-atlas/<tier>` cells, shown through the same display as the screen it came from. Image work only: no ComfyUI, no render, and the same list writes the same maps every time. The [request schema](schema/rebrand-request.schema.json) defines `businesses` as a list of `{ brandName, businessKind, tier }`, `businessKind` one of the parcel types that advertise: `hotel`, `commerce`, `mall`, `restaurant`, `coffee_shop`, `corpo`, `clinic`.
-
-- Variant id: `brand:<slug>`, the name lowercased with every run of characters outside `a-z0-9` collapsed to one hyphen, so `Kiro's Clinic` is `brand:kiro-s-clinic`. A consumer resolves the entry and takes `variants.find((v) => v.id === 'brand:' + slug)`, the way it picks any variant by id. The maps live under `assets/<kind>/<tier>/brand/<slug>/`.
-- Which picture: a stable pick among the entry's screen variants (those carrying `screen`), from `businessKind` and the slug together, so a name always lands on the same picture and a street of businesses spreads over the tier's artwork.
-- The wordmark: the name trimmed, single-spaced and uppercased, every character one cell of the atlas. It sits centred over the bottom of the picture, cap height a tenth of a landscape screen's height or 0.16 of a portrait screen's width. A line wider than 0.86 of the screen breaks at the space nearest its middle; a line still too wide shrinks to fit. poor and mid spell in the `neon` sheet, rich and high_rich in `panel`. The picture under the letters goes behind a soft dark scrim, so the name reads over any artwork.
-- A brand variant shares the base variant's surface maps (basecolor, relief, gloss) and carries its own emission. The base variants and their files stay untouched, and rerunning the same list replaces the same variants with the same maps.
-- `ad-screen-tall` is one entry across tiers, so a business's tall variant lands on that entry whichever tier it states, spelled in its own tier's look.
-
-An empty list is valid input: a world with no advertising parcel brands nothing and the lane returns an empty result. Errors, thrown before anything is written: a business kind outside the parcel types, a name with a character outside the atlas charset after uppercasing, or a name with no letter or digit to make a slug of is `E_SCHEMA`; a tier with no `ad-screen`, `ad-screen-tall` or `letter-atlas` entry, or an entry with no screen variant behind it, is `E_KEY_NOT_FOUND`.
-
-`batch/cyberpunk/businesses.json` is the request shape with one business, and its two variants ship in the database as the sample. A world's own brands belong to that world: point `--themes <dir>` at the world's copy of the theme folder, and the maps and index entries land there. The shipped library carries only the sample, held by a test that every map the index references is in the repo, so a fresh clone resolves every key.
+Resolve named bindings without guessing paths or substituting unrelated entries. Materials owns the published catalog and bindings; consumers own geometry and rendering. The catalog schema has no output-version or revision field; these remain [open decisions](docs/ISSUES.md).
 
 ## Letter atlas
 
-`cyberpunk/letter-atlas/<tier>` is one `exact` sheet of lit glyph cells for the modular sign system: aspect 4:3, 1024 by 768, two variants, `neon` (thin core, wide halo) and `panel` (backlit diffuser). The emission map carries the lit glyph; the basecolor is the unlit tube over a dark plate.
-
-The grid is 8 columns by 6 rows, row-major, and the charset is `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.,'!?:/&+` plus a trailing space, 47 characters in 48 cells. A consumer maps one letter to `index = charset.indexOf(letter.toUpperCase())` and the UV rect `[ (index % 8) / 8, floor(index / 8) / 6, 1/8, 1/6 ]`. An unknown character has no index and gets a blank cell.
-
-## Out
-
-MaterialEntry: [schema/material-entry.schema.json](schema/material-entry.schema.json). Alignment (`tile` or `exact`), physical properties (breakable, factors, transmission for glass, emissive strength and alpha mode), tiling config (meters covered by one tile repeat; consumers lay UVs as 1 UV unit = 1 tile), optional exact decal placement, and one or more variants, each a set of map files. Variant 0 is canonical (the plain or the lead variant of its kind); consumers may pick variants deterministically by seed or by id (`flat`, `plain`, `brand:<slug>`). A variant carries `class` (`image` by default, `pattern` when drawn from parameters, `flat` when synthesized from one color, `plate` for fitted baked imagery): provenance only, the map set and its use are identical. Structured exterior variants also carry `layout`: visible material family, module dimensions, joint width, stable world origin and orientation in metres. Fine grain is independent and does not create layout seams. A screen variant painted by the create lane also carries `screen`: the display it is shown on (`kind`, `pitch`) and `artwork`, the brandless picture behind its emission, which the rebrand lane composites over; consumers never bind it. A decal variant carries an `opacity` map and its entry carries the exact fitted world size, edge inset, surface offset, clamp mode and surface-fit projection rule. An entry with photographed variants also carries the `finish` its maps were read under.
-
-Theme database: `themes/<theme>/theme.json` ([schema/theme-index.schema.json](schema/theme-index.schema.json)) plus map files under `themes/<theme>/assets/<kind>/<tier>/<variant>/`. The JSON is the index; the folder is the theme. First theme: `cyberpunk`.
-
-Conventions (fixed, not per entry):
-- Metallic-roughness workflow. basecolor and emission are sRGB; normal, roughness, metallic, height, ao are linear. Normals are OpenGL-style, +Y up.
-- Roughness and metallic maps contain absolute final values. A consumer binds each with scalar multiplier 1; `physical.roughnessFactor` and `physical.metallicFactor` are fallbacks when that map is absent or deliberately omitted by a quality profile.
-- Optional `maps.metallicRoughness` is a linear RGB PNG with R=255, G identical to the separate roughness map and B identical to the separate metallic map. It shares their resolution and UVs. glTF consumers bind it with both scalar factors 1 and no sRGB decoding; when absent they retain their separate-map or scalar fallback. Create, refinish and rebrand publish it, sharing one packed file for each source-map pair under `assets/metallic-roughness/`. Packed maps do not replace the separate maps.
-- Tiled maps are seamless at exact resolution, verified; never stretched, never cut mid-feature.
-- `exact` entries (screens, image ads, the letter atlas) are 1:1 UV placements: no tiling config, aspect ratio instead, and no seam gate. Screen entries carry flat normal, height and ao: a display has no relief.
-- Glass semantics follow glTF `KHR_materials_transmission` (+ `KHR_materials_emissive_strength` for emissives).
+`cyberpunk/letter-atlas/<tier>` has exact 4:3 sheets, 1024 x 768, `neon` and `panel` variants. The 8-column, 6-row grid is row-major. Charset: `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.,'!?:/&+` plus trailing space. For a supported uppercase character at index `i`, the UV rectangle is `[(i % 8)/8, floor(i/8)/6, 1/8, 1/6]`. Unknown characters use a blank cell in a sign consumer; rebrand rejects unsupported glyphs.
 
 ## Errors
 
-Thrown as `MaterialsError { code, message, details? }`, closed set:
-- `E_SCHEMA`: request, theme index, source path or lane parameters are invalid; `details` carries validation or parse context when available.
-- `E_KEY_NOT_FOUND`: a material key, alias or required screen or letter variant is unavailable.
-- `E_KEY_EXISTS`: create would overwrite an existing key or variant id without `overwrite: true`.
-- `E_THEME_NOT_FOUND`: theme folder or theme.json missing.
-- `E_COMFY_UNAVAILABLE`: ComfyUI not reachable or not ready.
-- `E_GENERATION_FAILED`: a render was rejected, timed out or returned artwork with the wrong dimensions.
-- `E_SEAM_CHECK_FAILED`: generated set failed the seam verification; nothing is written.
+Controlled library failures use `MaterialsError {code,message,details?}` with this closed code set:
 
-## Invariants
+| Code | Meaning |
+| --- | --- |
+| `E_SCHEMA` | Invalid request, source, map, key syntax or theme JSON. |
+| `E_KEY_NOT_FOUND` | Missing key, alias or required screen/letter variant. |
+| `E_KEY_EXISTS` | Duplicate key or variant requiring explicit overwrite. |
+| `E_THEME_NOT_FOUND` | Missing theme.json. |
+| `E_COMFY_UNAVAILABLE` | Backend unreachable or not ready. |
+| `E_GENERATION_FAILED` | Rejected/timed-out render or incompatible screen dimensions. |
+| `E_SEAM_CHECK_FAILED` | Tiled create albedo fails its seam check. |
 
-- Resolution is pure and deterministic: same database state, same key, same entry.
-- A key present in the index always has every referenced map file on disk. Variants may point at the same map file (a tint shares the relief it was made from).
-- Every `tile` entry passed the seam check (50 percent offset in x and y, no visible seam) before it was written. Pattern variants are periodic over one tile by construction and pass the same gate.
-- Generation is deterministic per lane: the same pattern parameters, the same seed and prompt, or the same provided source file, draw the same maps.
-- Structured exterior variants publish their visible module dimensions, joint width, stable origin and orientation in `layout`. Consumers place the tile from that origin instead of restarting UVs on each polygon.
-- All maps of one variant share one resolution and are pixel-aligned with each other. Resolution has the same aspect as the physical tile or exact-placement face within one pixel, so maps are never stretched or rotated. Tile maps are at most 1,048,576 pixels; exact sheets are at most 4096 px on either side and 9,437,184 pixels total. Checked against the files in the shipped database.
-- Every decal is exact, alpha blended, clamped and surface fitted. Its physical world size has the same ratio as its aspect and maps. Its opacity is zero throughout the declared edge inset, so filtering cannot make a floating rectangular border.
-- Every shipped future-noir screen retains its documented source, exact face ratio and display kind. Its emission stays inside the dark-area and clipped-area bounds stated under Screens.
-- A rebrand never touches a base variant or its files: a brand variant points at the base's surface maps and carries its own emission, and the same business list writes the same maps every time.
-- Generation is agentic tooling on top; the database read path and the rebrand lane work standalone with no ComfyUI and no other layer present.
-- Matte floor: non-emissive entries carry metallic 0 or 1, constant metallic maps and roughness at least 0.45 in factors, finish bands and maps. Glass and lit entries are exempt. A variant with authored `response` permits its bounded damp target in the map while more than half the area and its scalar fallback remain dry. Checked over the shipped database.
+Unexpected filesystem, image-decoder or caller-backend exceptions can propagate from the library; CLI wraps these as `E_INTERNAL` and adds `E_USAGE`. Preview loading has `E_DATABASE_UNAVAILABLE`. Boundary normalization and write preflight are recorded in [issues](docs/ISSUES.md).
 
-## Preview
+## Dependencies
 
-`npm run preview`: material sphere viewer with lighting and orbit controls. `pbrforge preview` reports whether it is up. See the [preview contract](src/ui/CONTRACT.md).
-
-`npm run sheet -- <kind> [tier]`: a contact sheet of every variant of a kind, basecolor, roughness and normal side by side, written to `out/`. A family is checked as a family: whether its variants read apart, and whether the gloss map is calm.
-
-## Depends on
-
-- [Atlas hydrology material-key contract](../atlas/src/hydro/CONTRACT.md), for binding data only. Database resolution and generation have no runtime dependency on Atlas.
-- [Atlas street construction contract](../atlas/src/streets/construction/CONTRACT.md), for finish-role mapping and numeric cell ownership only.
+Node.js, Ajv and Sharp; optional ComfyUI for generation. Preview uses Three.js and browser APIs. No runtime dependency on another Urbe box. Binding data coordinates with [Atlas hydrology](../atlas/src/hydro/CONTRACT.md) and [Atlas street construction](../atlas/src/streets/construction/CONTRACT.md).

@@ -55,16 +55,18 @@ describe('public package entry', () => {
     const created = await create(request, { themesDir, comfy });
     await expectPackedMap(join(themesDir, 'test'), created.variants[0]);
     expect(resolve(request.key, { themesDir })).toEqual(created);
-    expect(list({ theme: 'test', kind: 'concrete' }, { themesDir })).toEqual([request.key]);
+    expect(list({ theme: 'test', kind: 'concrete', tier: 'mid' }, { themesDir })).toEqual([request.key]);
+    expect(list({ tier: 'rich' }, { themesDir })).toEqual([]);
     expect(existsSync(join(themesDir, 'test', created.variants[0].maps.basecolor))).toBe(true);
 
     const before = readFileSync(join(themesDir, 'test', created.variants[0].maps.basecolor));
     const result = await refinish(
-      { key: request.key, finish: { roughness: [0.82, 0.9], grain: 0.1 } },
+      { key: request.key, finish: { roughness: [0.82, 0.9], grain: 0.1 }, physical: { metallicFactor: 1 } },
       { themesDir },
     );
     expect(result.variants).toEqual(['1']);
     expect(result.entry.finish?.roughness).toEqual([0.82, 0.9]);
+    expect(result.entry.physical.metallicFactor).toBe(1);
     await expectPackedMap(join(themesDir, 'test'), result.entry.variants[0]);
     expect(readFileSync(join(themesDir, 'test', created.variants[0].maps.basecolor))).toEqual(before);
   });
@@ -106,17 +108,40 @@ describe('public package entry', () => {
       },
     }, { themesDir });
 
-    const branded = await rebrand({
+    const original = resolve('test/ad-screen/rich', { themesDir });
+    const baseEmission = readFileSync(join(themesDir, 'test', original.variants[0].maps.emission!));
+    const request = {
       theme: 'test',
-      businesses: [{ brandName: 'Kiro Clinic', businessKind: 'clinic', tier: 'rich' }],
-    }, { themesDir });
+      businesses: [{ brandName: 'Kiro Clinic', businessKind: 'clinic' as const, tier: 'rich' as const }],
+    };
+    const branded = await rebrand(request, { themesDir });
 
     expect(branded).toHaveLength(2);
     for (const kind of ['ad-screen', 'ad-screen-tall']) {
       const entry = resolve(`test/${kind}/rich`, { themesDir });
-      expect(entry.variants.some((variant) => variant.id === 'brand:kiro-clinic')).toBe(true);
+      const variant = entry.variants.find(variant => variant.id === 'brand:kiro-clinic')!;
+      expect(variant.maps.basecolor).toBe(entry.variants[0].maps.basecolor);
+      const result = branded.find(item => item.key === entry.key)!;
+      expect(result).toMatchObject({ variantId: variant.id, from: '1' });
+      expect([1, 2]).toContain(result.lines);
       for (const variant of entry.variants) await expectPackedMap(join(themesDir, 'test'), variant);
     }
+    expect(readFileSync(join(themesDir, 'test', original.variants[0].maps.emission!))).toEqual(baseEmission);
+    const variant = resolve(original.key, { themesDir }).variants[1];
+    const emissionPath = join(themesDir, 'test', variant.maps.emission!);
+    const brandedBytes = readFileSync(emissionPath);
+    expect(await rebrand(request, { themesDir })).toEqual(branded);
+    expect(readFileSync(emissionPath)).toEqual(brandedBytes);
+    expect(await rebrand({ theme: 'test', businesses: [] }, { themesDir })).toEqual([]);
+    const indexPath = join(themesDir, 'test/theme.json');
+    const index = readFileSync(indexPath);
+    for (const brandName of ['Café Ñu', '!!!']) {
+      await expect(rebrand({ ...request, businesses: [{ ...request.businesses[0], brandName }] }, { themesDir }))
+        .rejects.toMatchObject({ code: 'E_SCHEMA' });
+    }
+    await expect(rebrand({ ...request, businesses: [{ ...request.businesses[0], tier: 'poor' }] }, { themesDir }))
+      .rejects.toMatchObject({ code: 'E_KEY_NOT_FOUND' });
+    expect(readFileSync(indexPath)).toEqual(index);
   });
 
   it('keeps malformed database JSON inside the closed MaterialsError set', () => {

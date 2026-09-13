@@ -1,112 +1,55 @@
 ---
-name: pbrforge
-description: >
-  Generate and look up themed PBR materials (maps, tiling, physical properties) through the
-  pbrforge CLI. Resolve a theme/kind/tier key, list the catalog, list pattern kinds, create
-  or refinish a set, rebrand ad screens, pack metallic-roughness maps, or open the sphere
-  preview. Use whenever the user wants a material, texture set, PBR maps, a wall/road/glass/door
-  finish, a procedural pattern, or to inspect the cyberpunk material library. Never edit
-  theme.json or map PNGs. Every catalog action is a verb.
+name: materials
+description: Resolve, list or author reusable PBR material sets through the urbe-materials package API or pbrforge CLI.
 ---
 
-# pbrforge
+# Materials
 
-Drive the material database with ONE CLI. Every verb prints one JSON object `{ok, verb, data}` or `{ok, verb, error}` and exits. On `ok:false` follow `error.hint`.
+Version: 0.16.32. Materials generates and stores themed PBR maps with physical scale, resolved by `theme/kind/tier`.
 
-Never write map PNGs by hand, never edit `theme.json`. The verbs write catalog entries. To add a **new pattern kind** (a new drawer), follow [references/patterns/ADD.md](references/patterns/ADD.md).
+## Call
 
-## Resolve the CLI (once)
+Library: `import { resolve, list, create, refinish, rebrand, pack } from 'urbe-materials'` after `npm run build`. Calls and response types are in [CONTRACT.md](CONTRACT.md).
 
-From the pbrforge checkout (this repo):
+CLI: `node dist/cli/pbrforge.js <verb>` after building, or `npm run --silent pbrforge -- <verb>` from this checkout. `help` lists verbs; `patterns` lists pattern kinds and their detail paths. The [authoring skill](skills/pbrforge/SKILL.md) explains lane selection.
 
-```
-npm run pbrforge -- <verb>
-```
+`options.themesDir` or CLI `--themes <dir>` selects a database, defaulting to bundled `themes/`. `options.comfy` supplies a generation backend; otherwise `COMFY_URL` defaults to `http://127.0.0.1:8188`. Reads and local derivation need no backend.
 
-Reuse that prefix. `command -v pbrforge` wins if the bin is on PATH.
+## Requests and defaults
 
-## Start here
-
-```
-npm run pbrforge -- doctor
-```
-
-Read `data.ready` and `data.nextActions`. Do not hand-probe Node, ComfyUI, or the preview. Photographed creates need ComfyUI; pattern, plate, from-image, recolor, rebrand, pack, resolve and list do not.
-
-## When to use which
-
-| The user wants | Verb |
+| Operation | Fields |
 | --- | --- |
-| is this machine able to work | `doctor` |
-| look up a key | `resolve <theme/kind/tier>` |
-| what keys exist | `list [--theme t] [--kind k] [--tier t]` |
-| what pattern kinds create can draw | `patterns` (then read `data.kinds[].detail` for one kind) |
-| one photo to a dry PBR set (AC, brick, concrete, no wrap required) | `from-image <request.json> [--overwrite]` |
-| make a new set | `create <request.json> [--overwrite]` |
-| re-read gloss/relief from stored albedo | `refinish <requests.json>` |
-| put business names on screens | `rebrand --theme <theme> --businesses <file.json>` |
-| add packed metallic-roughness maps | `pack --theme <theme>` |
-| is the sphere viewer up | `preview` (start it with `npm run preview` if `up` is false) |
+| `resolve(key, options?)` | Required key or alias. |
+| `list(filter?, options?)` | Optional `theme`, `kind`, `tier`; omitted fields match all canonical keys. |
+| `create(request, options?)` | Required `key`, `alignment`, `description`; tile needs `tiling.worldSize` in metres, exact needs `aspect`. Append inherits the existing scale. |
+| Create settings | `resolution: [1024,1024]`, `variants: 1`, `emission: "none"`, `append: false`, `canonical: false`, `overwrite: false`. Seed defaults to a hash of description; `variantId` defaults to its position starting at `"1"`. |
+| Create appearance | Optional `aliases`, `physical` (default `{}`; map factors default to roughness 1, metallic 0), `finish` (roughness factor ±0.05 clamped to 0..1, grain 0.2, relief 2), `layout`, `decal`. |
+| Create source | Choose photographic description, `pattern`, `flatColor` (`flatNoise: 0.04`), `recolor`, `sourceImage`, `sourceAlbedo`, or screen artwork. Screen emission uses `emission: "image"`, `flatColor`, `screens[]`; optional `brandName` and `businessKind`. [Schema](schema/create-request.schema.json) defines combinations. |
+| `refinish(request, options?)` | Required `key`; optional `finish` uses the same defaults, `physical` merges into stored factors. |
+| `rebrand(request, options?)` | Required `theme`, `businesses: [{brandName,businessKind,tier}]`; an empty list is valid. [Schema](schema/rebrand-request.schema.json). |
+| `pack(request, options?)` | Required `key`. [Schema](schema/pack-request.schema.json). |
+| `from-image request.json` (CLI) | Required `key`, `path`, `description`, plus alignment and scale for a new entry. Resolution defaults to 1024² or the first existing variant on append; physical defaults to metallic 0, roughness 0.65. [Request and defaults](src/from-image/CONTRACT.md). |
 
-`--themes <dir>` on any verb points at another database. Omit it to use the bundled `themes/`.
+## Response and errors
 
-A create file is one request object or an array. Array mode skips keys that already exist, so a batch is resumable. `--overwrite` replaces.
+`resolve` and `create` return [MaterialEntry](schema/material-entry.schema.json); `list` returns sorted canonical keys. `refinish` and `pack` return `{entry, variants}`; `rebrand` returns `{key, variantId, from, lines}[]`.
 
-## One native photo (`from-image`)
+Map paths are relative to the theme folder. Use the declared scale and variant ID. Basecolor/emission are sRGB, data maps linear, normals +Y. Roughness and metallic maps use scalar factors 1. Fit exact maps once; repeat tiles at `tiling.worldSize`.
 
-Read [references/from-image.md](references/from-image.md) before every call. Framing of the photo is in that file (fill the frame; exact vs tile; clean tiles first; box sides from the front; artifacts as opacity decals). Bricks, concrete, stone, AC faces, posters: one JPEG or PNG, dry maps derived, asymmetry allowed, no emission.
+CLI stdout is `{ok:true, verb, data}` or `{ok:false, verb, error:{code,message,details?,hint?}}`. Exit codes: 0 success, 2 usage, 1 other failure. Library `MaterialsError` codes: `E_SCHEMA`, `E_KEY_NOT_FOUND`, `E_KEY_EXISTS`, `E_THEME_NOT_FOUND`, `E_COMFY_UNAVAILABLE`, `E_GENERATION_FAILED`, `E_SEAM_CHECK_FAILED`. CLI adds `E_USAGE`, `E_INTERNAL`; preview uses `E_DATABASE_UNAVAILABLE`. Report the code and message; correct the named input. Unexpected library filesystem/backend exceptions can propagate; see [issues](docs/ISSUES.md).
 
+## Worked example
+
+Run from this checkout; this creates one local procedural set in an isolated database:
+
+```sh
+npm run build
+mkdir -p out
+cat > out/material-request.json <<'JSON'
+{"key":"sample/concrete/mid","alignment":"tile","description":"neutral mineral concrete","tiling":{"worldSize":[1,1]},"resolution":[64,64],"physical":{"roughnessFactor":0.8,"metallicFactor":0},"seed":7,"pattern":{"kind":"mineral","colors":["#707475"]}}
+JSON
+node dist/cli/pbrforge.js create out/material-request.json --themes out/skill-example
+node dist/cli/pbrforge.js resolve sample/concrete/mid --themes out/skill-example
 ```
-npm run pbrforge -- from-image request.json
-```
 
-## Native image (`create --native`)
-
-Keep this for the three **create** lanes that already work: `sourceImage` (exact plate, flat maps, basecolor copied to emission), `sourceAlbedo` (wrapping tile only; seam-checked), `screens[].imagePath` (ad artwork). Do not point bricks, concrete, or AC faces here.
-
-## What one material is
-
-A key (`cyberpunk/door/mid`) is one catalog entry. It is not one image.
-
-Each **variant** of that entry is a set of PNG maps:
-
-- always: `basecolor`, `normal`, `roughness`, `metallic`, `height`, `ao`
-- usually also: packed `metallicRoughness` (G=roughness, B=metallic)
-- extra when needed: `emission` (screens, plates), `opacity` (decals), `artwork` (brandless screen picture)
-
-One create call paints **one surface** (the albedo, or screen artwork), then this box **derives** the other maps. ComfyUI is not asked for a normal or a roughness. A key with four variants is four surfaces, each with that full map set.
-
-## Create lanes (pick one per request)
-
-The request JSON is the create-request schema. Do not invent a lane mix.
-
-| Field | Surface comes from | Needs ComfyUI |
-| --- | --- | --- |
-| `pattern` | drawn in code | no |
-| `sourceImage` | a local baked plate | no |
-| `sourceAlbedo` | a local tiled photo | no |
-| `flatColor` | a flat colour | no |
-| `recolor` | tint of an existing variant (`append`) | no |
-| `screens` / `emission: "image"` | ad artwork, then display structure | only if no `imagePath` |
-| `--native` plus a PNG path | your image tool, then import | no |
-| otherwise | photographed albedo | yes |
-
-Prefer `pattern` when the surface can be drawn. Prefer `from-image` when the user gave or asked for a photograph (brick, concrete, wrecked AC). Run `patterns` for the drawer list. Screens take a source plate when one exists under `sources/`.
-
-After create, `resolve` the key and report the variant ids and map paths. If the user wants to see it, `preview` then tell them the URL.
-
-## Rules
-
-0. **Doctor first** in a session, and whenever anything is strange.
-1. **Read before you write.** `resolve` / `list` before `create`. Do not overwrite a shipped key unless asked.
-2. **One request JSON per create.** Put it in the workspace, pass the path. Do not inline a novel on the command line.
-3. **Relay `error.code` and `error.message`.** Fix the one thing it names. Do not loop create hoping a seam failure changes.
-4. **The preview is read-only.** It never creates. Start it with `npm run preview`; the verb only reports whether it is up.
-
-## Never
-
-- Edit `themes/*/theme.json` or map PNGs by hand.
-- Read `src/` except the files named in [references/patterns/ADD.md](references/patterns/ADD.md) when adding a pattern kind.
-- Call ComfyUI, curl, or the Vite URL to create materials.
-- Treat one PNG as the whole material.
-- Invent roughness below 0.45 on a dry non-glass surface, or metallic other than 0 or 1.
+Create returns `data.created: [{key:"sample/concrete/mid",variants:1}]`; resolve returns `data.entry` with one complete PBR variant. An existing key needs explicit overwrite or a new key.

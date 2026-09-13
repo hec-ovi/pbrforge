@@ -1,33 +1,30 @@
 # CONTRACT: from-image
 
-Purpose: one opaque PNG in, a full dry PBR set out. No seam gate. No emission. No ComfyUI.
+Purpose: derives a dry PBR set from one opaque JPEG or PNG.
 
-## In
+Version: 0.16.32.
 
-`new FromImage(db).run(request)` with [request schema](request.schema.json).
+## Input
 
-- `path`: JPEG or PNG. Must cover `resolution`, same aspect, fully opaque. Downsample only. No upscale.
-- `alignment`: `exact` (asymmetric faces: AC, door, poster) needs `aspect`. `tile` (bricks, concrete, walls) needs `tiling.worldSize`. Tile does not check wrap; the engine still repeats the sheet.
-- `append`: add this photo as another variant of an existing key. Inherits alignment, aspect or tiling, physical, and finish. Needs `variantId`.
-- `physical`: metallic 0 or 1, roughness at least 0.45, no transmission, no emissive, opaque.
-- `finish`: how brightness becomes height and roughness.
+Public CLI: `pbrforge from-image request.json [--themes <dir>] [--overwrite]`, using [FromImageRequest](request.schema.json). Internal entry: `new FromImage(db).run(request)`.
 
-## Out
+- Required `key`, `path`, `description`. Paths are absolute or relative to the package folder. Source must cover resolution, match aspect and be opaque; whole-image downsample only.
+- New entries require `alignment`: `exact` with `aspect`, or `tile` with `tiling.worldSize` in metres. Tile has no wrap-continuity check.
+- `append: true` requires `variantId` and inherits the existing alignment, scale, physical and finish. Resolution defaults to the existing first variant on append, otherwise `[1024,1024]`. A new variant ID defaults to `"1"`.
+- `physical` defaults to metallic 0 and roughness 0.65. Dry response requires metallic 0 or 1, roughness and finish bands at least 0.45, no transmission/emission and opaque alpha.
+- `finish` defaults to the roughness factor ±0.05 clamped to 0..1, grain 0.2 and relief 2. `overwrite` and `append` default to false.
+- Resolution matches physical aspect within one pixel; tile at most 1048576 pixels, exact at most 4096 per side and 9437184 total.
 
-A `MaterialEntry` written to the theme database. Variant `class: image`. Maps: basecolor, normal, roughness, metallic, height, ao, packed metallicRoughness. No emission, no opacity. Append returns the same entry with the new variant last.
+## Output
+
+[MaterialEntry](../../schema/material-entry.schema.json) written to the selected database. Appends return the entry with the new variant last. Variant class is `image`, with basecolor, normal, roughness, metallic, height, AO and packed metallic-roughness. CLI [envelope](../cli/CONTRACT.md) contains `{key,variant,maps,alignment}`.
+
+Height follows brightness; normal and AO follow height; roughness follows the finish band; metallic is constant. No emission, opacity, seam gate or backend calls.
 
 ## Errors
 
-- `E_SCHEMA`: bad request, unreadable or transparent source, size/aspect mismatch, wet or emissive physical.
-- `E_KEY_EXISTS`: key already in the database and `overwrite` is false, or that `variantId` already exists on an append.
-- `E_KEY_NOT_FOUND`: append to a key that is not in the database.
+Controlled errors use [MaterialsError](../db/errors.ts): E_SCHEMA (request/source/size/physical), E_KEY_EXISTS (key or append ID exists), E_KEY_NOT_FOUND (append key absent), E_THEME_NOT_FOUND (append theme absent). Duplicate append IDs fail even with overwrite. Unexpected filesystem errors propagate to the CLI error wrapper. Write preflight is tracked in [issues](../../docs/ISSUES.md).
 
-## Invariants
+## Dependencies
 
-- Does not call `create`, patterns, `sourceAlbedo`, `sourceImage`, or screens.
-- Height comes from albedo luminance (dark sinks, bright rises). Normal and AO from that height. Roughness from the finish band. Metallic is the factor, flat. Baked photo shadows become relief.
-- Screens, plates with emission, wrapping-only imports, and opacity decals stay on `create`.
-
-## Depends on
-
-- Database write, [maps derive](../gen/maps.ts), PackedMaps, MaterialEntry schema.
+Materials database, shared map derivation and packed-map writer, [MaterialEntry schema](../../schema/material-entry.schema.json). No other Urbe box.

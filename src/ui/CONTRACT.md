@@ -2,6 +2,8 @@
 
 Purpose: presents the material database as a searchable list, a PBR sphere and a read-only property inspector.
 
+Version: 0.16.32.
+
 ## In
 
 - `new PreviewView(viewer?: SphereViewer)` builds the workspace from [preview-view-layout schema](../../schema/preview-view-layout.schema.json). `viewer` supplies the WebGL canvas and render controls.
@@ -18,7 +20,7 @@ Purpose: presents the material database as a searchable list, a PBR sphere and a
 
 ## Errors
 
-- `E_DATABASE_UNAVAILABLE`: `MaterialList.load` could not fetch, decode or recognize the theme list or a theme index. It rejects with `PreviewError { code, message, details? }`. The list shows the error in place.
+- `E_DATABASE_UNAVAILABLE`: `MaterialList.load` could not fetch, decode or recognize the theme list or a theme index. It rejects with `PreviewError { code, message, details? }`. The initial application load and refresh handlers show the error in the list.
 
 Empty databases and filters with no matches are rendered states.
 

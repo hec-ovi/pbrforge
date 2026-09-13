@@ -2,6 +2,8 @@
 
 Purpose: one process per verb that reads or writes the material database and prints one JSON envelope.
 
+Version: 0.16.32.
+
 ## In
 
 `run(argv)` takes the words after `pbrforge`. `--themes <dir>` on any verb selects the database; omit it to use the bundled `themes/`.
@@ -32,7 +34,9 @@ Exit 0 on ok, 2 on `E_USAGE`, 1 on any other error. Closed error codes are the p
 | `pack --theme` | `packed` |
 | `preview` | `url`, `up`, `start` (does not launch the viewer) |
 
-`patterns` reads [pattern-kinds.json](../../schema/pattern-kinds.json). `from-image` is the [from-image box](../from-image/CONTRACT.md): one opaque PNG, dry PBR maps, no seam gate, no emission. `append` on the request adds another face to an existing key. Create request JSON is [CreateRequest](../../schema/create-request.schema.json) or an array of them. `--native` on create is unchanged (`sourceImage`, `sourceAlbedo`, or `screens[].imagePath`). Preview is started with `npm run preview`. Photographed create needs ComfyUI; pattern, plate, from-image, recolor, rebrand and pack do not.
+`patterns` reads [pattern-kinds.json](../../schema/pattern-kinds.json). `from-image` is the [from-image box](../from-image/CONTRACT.md): one opaque JPEG or PNG, dry PBR maps, no seam gate, no emission. `append` adds another face to an existing key. Create JSON is [CreateRequest](../../schema/create-request.schema.json) or an array; arrays skip existing keys. `--native` requires `sourceImage`, `sourceAlbedo`, or every `screens[].imagePath`. Undersized screen sources still enter the upscale backend path; see [issues](../../docs/ISSUES.md).
+
+Refinish JSON accepts one [RefinishRequest](../api-types.ts) or an array, retaining requests with `finish` or `physical`; an empty retained list is E_USAGE. Rebrand takes the businesses array from [RebrandRequest](../../schema/rebrand-request.schema.json). Pack applies [PackRequest](../../schema/pack-request.schema.json) to all canonical keys in the selected theme. Preview is started with `npm run preview`. Photographic create needs ComfyUI; pattern, plate, sourceAlbedo, from-image, flat, recolor, rebrand and pack do not.
 
 ## Depends on
 
