@@ -1,0 +1,879 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "box": "exterior",
+    "catalog": "public/native-materials/themes/cyberpunk/theme.json"
+  },
+  "finishes": [
+    {
+      "key": "cyberpunk/exterior-ac-coil/mid",
+      "exactKey": "cyberpunk/exterior-ac-coil-exact/mid",
+      "variantId": "native",
+      "entrySha256": "2545e8b1908a633cb880e8566150a46ce447c3d04af8620e10028cd6cac291af"
+    },
+    {
+      "key": "cyberpunk/exterior-ac-enamel/mid",
+      "exactKey": "cyberpunk/exterior-ac-enamel-exact/mid",
+      "variantId": "native",
+      "entrySha256": "c0e893391ee2ed722f736b407884b124713b092a30a26c97ba80562116b82151"
+    },
+    {
+      "key": "cyberpunk/exterior-aggregate-concrete/mid",
+      "exactKey": "cyberpunk/exterior-aggregate-concrete-exact/mid",
+      "variantId": "native",
+      "entrySha256": "668a0a78dd685f1a65d565c42f3b9a01045660103b88b00bb714aac974ee0fed"
+    },
+    {
+      "key": "cyberpunk/exterior-basalt-concrete/mid",
+      "exactKey": "cyberpunk/exterior-basalt-concrete-exact/mid",
+      "variantId": "native",
+      "entrySha256": "d4c406d3422ae37c376e4a6f96e38d03211ab599ef679642d04770cf083aa56e"
+    },
+    {
+      "key": "cyberpunk/exterior-board-concrete/mid",
+      "exactKey": "cyberpunk/exterior-board-concrete-exact/mid",
+      "variantId": "native",
+      "entrySha256": "850f559aacfffa5391717eace622c4175712d03aa7e402f7a1669a49418deb99"
+    },
+    {
+      "key": "cyberpunk/exterior-brushed-bronze/mid",
+      "exactKey": "cyberpunk/exterior-brushed-bronze-exact/mid",
+      "variantId": "native",
+      "entrySha256": "287902b3632f82a5eaccbadae2b854ccb02287ffde76d060d785f1aa4a326692"
+    },
+    {
+      "key": "cyberpunk/exterior-brushed-steel/mid",
+      "exactKey": "cyberpunk/exterior-brushed-steel-exact/mid",
+      "variantId": "native",
+      "entrySha256": "de2a229c8784050872dbb72eeaff64bfd0a4efe94a41c9117a7744b3749a00ba"
+    },
+    {
+      "key": "cyberpunk/exterior-cast-concrete/mid",
+      "exactKey": "cyberpunk/exterior-cast-concrete-exact/mid",
+      "variantId": "native",
+      "entrySha256": "99508bd913af49b51e02cfe28c22bedd4075084681f4618edce4bab1077ec74d"
+    },
+    {
+      "key": "cyberpunk/exterior-chalk-coating/mid",
+      "exactKey": "cyberpunk/exterior-chalk-coating-exact/mid",
+      "variantId": "native",
+      "entrySha256": "d30fd7e467f7bce219b69441f8fe3d18ec237e0b129dc15a32a051deeebd9326"
+    },
+    {
+      "key": "cyberpunk/exterior-galvanized-steel/mid",
+      "exactKey": "cyberpunk/exterior-galvanized-steel-exact/mid",
+      "variantId": "native",
+      "entrySha256": "a9f07da26a6f2124bfc19eafaf75bcb41cbd14489fa1d3c4158b9f3294f00c36"
+    },
+    {
+      "key": "cyberpunk/exterior-graphite-coating/mid",
+      "exactKey": "cyberpunk/exterior-graphite-coating-exact/mid",
+      "variantId": "native",
+      "entrySha256": "e4226fa77a852083aa5a80d61ca8d8a60793e7d04fe44e1bc48fd85ca6a34365"
+    },
+    {
+      "key": "cyberpunk/exterior-graphite-concrete/mid",
+      "exactKey": "cyberpunk/exterior-graphite-concrete-exact/mid",
+      "variantId": "native",
+      "entrySha256": "97d22152a715f3f44eb01703f8680695eff55866ca924819d59e3930338f958e"
+    },
+    {
+      "key": "cyberpunk/exterior-mineral-concrete/mid",
+      "exactKey": "cyberpunk/exterior-mineral-concrete-exact/mid",
+      "variantId": "native",
+      "entrySha256": "040291f72bf0fe4680f63dca82f17281ca0ddfcb11b6b895b4403db16fb2ed3f"
+    },
+    {
+      "key": "cyberpunk/exterior-weathered-concrete/mid",
+      "exactKey": "cyberpunk/exterior-weathered-concrete-exact/mid",
+      "variantId": "native",
+      "entrySha256": "f8280a1760b6d170afd2dc90c2104340f1f6d22f78c667c284289bca41622047"
+    }
+  ],
+  "maps": {
+    "assets/exterior-ac-coil/mid/native/basecolor.png": {
+      "sha256": "b4437ce4553d4d9c41caac19bcafda9e35145dd7a5b5ca5f66dace3ee06c79ff",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-coil/mid/native/normal.png": {
+      "sha256": "414154c72f13f58c3cdd54b5a5d7e5f33ea0f3035ae655889fd187fb7bb00a65",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-coil/mid/native/roughness.png": {
+      "sha256": "917e43ebbbc8745ad876c5721870d5bdb7af5c7f6bb60d6c1f3a0e334f92e051",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-coil/mid/native/height.png": {
+      "sha256": "624b241ca79b5f20f1913953b338ba040c7a29b2f0fd0a2fa2a63f3ddb17824a",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-coil/mid/native/ao.png": {
+      "sha256": "32a3c490a0b2beac01575aac7297d874d90a8778e62b9cbcc6aeab4c87e16a43",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-coil/mid/native/metallic.png": {
+      "sha256": "b04e44f8f7123ad9b6a95afeb8c4f75b63c29d58cd896e803f5a4ef282ef96e8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/e489f3ff15f71854ab380906c710ad7ed72662ffbfc2acc3b10838785d93604f.png": {
+      "sha256": "21c7fd67565e8b098b38ec5192d7fb63b3bd411b58632f8695db1750a26b6688",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-enamel/mid/native/basecolor.png": {
+      "sha256": "092cd3f64121c30c800df0b02af662acc9a5ee5956840312495141b444e00e88",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-enamel/mid/native/normal.png": {
+      "sha256": "f6d9b91425b6031caf690ef31af2a808d19d666c2adfa545242b1e554c3ae430",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-enamel/mid/native/roughness.png": {
+      "sha256": "dbf33b5f9a78f8b79bf594c3e6b09f3140c91bd31b3b38910ad8b6b9ef000d92",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-enamel/mid/native/height.png": {
+      "sha256": "d92d3f5148b784ec1b7d104cdbe647df132011e65ab24a36f3642853e88e1e9b",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-enamel/mid/native/ao.png": {
+      "sha256": "1d102de293591be3f0ee081ccc832e7486c539a2e272e2093547541a427f5ccc",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-ac-enamel/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/f49c726af7a0df8df818277912b5f18b7fa1b1ae579103b20af51429bca267b4.png": {
+      "sha256": "bee88cae76c7df7ee4f9682d0b1e62276df5c3b7363ff0afc102cb38dac243fe",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-aggregate-concrete/mid/native/basecolor.png": {
+      "sha256": "18eb788a5b5d4ce995001b0185fd6f1e92a9769aae4f4df0283205e5e3f2416f",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-aggregate-concrete/mid/native/normal.png": {
+      "sha256": "a93a98a470bcc64044f4d0e50c7374d00fa7045f8f2a21c1c7fc4f9ee5771d67",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-aggregate-concrete/mid/native/roughness.png": {
+      "sha256": "9e734411f163dfc43366adc8d25d0632c145910e6c7501be6057c1c98b6bd312",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-aggregate-concrete/mid/native/height.png": {
+      "sha256": "8c0b2590208bdff63333b8b95ea1ae6530020c1fad8f1ef06c6f2bd54b9f16b0",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-aggregate-concrete/mid/native/ao.png": {
+      "sha256": "d14b24f15acbc1318f697d9120462a6b54a15657f28dbe74966ed06fd8177a8f",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-aggregate-concrete/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/ddc9ecfa90716bb7ec9b3ad31832c25e425e51706bc4e673bb2dd88f03286a44.png": {
+      "sha256": "3c58333301da5dc6e84783e966b4f66876a8365b436de7fd69b4072819ed05e9",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-basalt-concrete/mid/native/basecolor.png": {
+      "sha256": "4591363eec5ce9a60655620d6a6a258a5b361a2e8ee14fa1da52155d815557e7",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-basalt-concrete/mid/native/normal.png": {
+      "sha256": "5d3c220d365877afb364e0c50528c6b4413233f80f0c1f8b259ea7b5d123e1da",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-basalt-concrete/mid/native/roughness.png": {
+      "sha256": "3fe2ae23823415c160e63d903c94e8ccc9cd0b31d12cf5ae57d25220eda2eb48",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-basalt-concrete/mid/native/height.png": {
+      "sha256": "8b56320056e9dbc5781aa8775a00ebc69754d80f2351f32685aa4f4929cec68a",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-basalt-concrete/mid/native/ao.png": {
+      "sha256": "d291f0441b624a9a1926f18c4382a8498bf155593d12ea82638f32516f525017",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-basalt-concrete/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/999978a537db21d1e452c7e5da6705c0a75c9a439b24bbd2bc9a0b3e51a98f19.png": {
+      "sha256": "8f61f6e0ccb08e34a092abb246273124b4faee6c5ee6d8b3fc986136cee0b007",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-board-concrete/mid/native/basecolor.png": {
+      "sha256": "7d5f6c46684e2818c0f72e24152881c38aeb16cfb8302c627e699ae5fbe04239",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-board-concrete/mid/native/normal.png": {
+      "sha256": "f05c242540f4264643c8028bb95f910da7b9a990e725ff0cb78185945d092b68",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-board-concrete/mid/native/roughness.png": {
+      "sha256": "1d33fb3aac62bfaf465d1705642027022f50fb205c2d9de02229b1de52280c67",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-board-concrete/mid/native/height.png": {
+      "sha256": "07b2a3123b04c3dce0fade1c967507be3916ec40ca5c0b08e234312db84ae6e7",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-board-concrete/mid/native/ao.png": {
+      "sha256": "a52b2a37bb98ae1fe2557ca2adc331900aab3cb5106f4de4c2684576a69f9b75",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-board-concrete/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/da02e622b1ad4fc37e0c9927eac44cc2531582278d65ce1a12ec237f6546db1f.png": {
+      "sha256": "a4ca42eb1af23efafd6bc608ed2bcb7b40be629bb2d306f4848658e62d139d42",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-bronze/mid/native/basecolor.png": {
+      "sha256": "74e84942c93cfeaaace8a299dcc397315d02b7bb7c8443168497c0c50d747af0",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-bronze/mid/native/normal.png": {
+      "sha256": "4d83adfcf5850aa6a6efa5e15481108f102be4e79edb7c65edcdc5937ca43512",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-bronze/mid/native/roughness.png": {
+      "sha256": "cbbb98d1586d80bb1d4baf3a031e566d20a34463de8fc9663c7eea72a1b14d03",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-bronze/mid/native/height.png": {
+      "sha256": "b6e9fb0e848bb39315c4f8f214ea055ccbc7747445cf0c4746169e7b0f959e57",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-bronze/mid/native/ao.png": {
+      "sha256": "f2add45707b1a526162cf46cc44cb2c1cbec2217e9e554e868645449e87d66e0",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-bronze/mid/native/metallic.png": {
+      "sha256": "b04e44f8f7123ad9b6a95afeb8c4f75b63c29d58cd896e803f5a4ef282ef96e8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/afd8d086ccaa431969cfeaae50210941dc7b5e861814c94dacd0ebd6fcf40e24.png": {
+      "sha256": "d151e701b123c1ec18972982be178dc10ef47de531ce2e6e3368f504c72e98e3",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-steel/mid/native/basecolor.png": {
+      "sha256": "4aa235e3b1dd1c838c17de4f517b8d26dbbc07efa34603afdc5e4dd82660c121",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-steel/mid/native/normal.png": {
+      "sha256": "900d66925e2b667e55541f8b2942a1efbd90b9f898abdc92fade1a0bd2154151",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-steel/mid/native/roughness.png": {
+      "sha256": "cbbb98d1586d80bb1d4baf3a031e566d20a34463de8fc9663c7eea72a1b14d03",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-steel/mid/native/height.png": {
+      "sha256": "546b912355dc5f5ce49a2056bdd0ad4efc1c908f30cf42a6c5752f5e621fbc9e",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-steel/mid/native/ao.png": {
+      "sha256": "5fb059d9289c7cad9542a7562890a4e0884d04c892b2b2d227fe066722228682",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-brushed-steel/mid/native/metallic.png": {
+      "sha256": "b04e44f8f7123ad9b6a95afeb8c4f75b63c29d58cd896e803f5a4ef282ef96e8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/13230b5521595b4c08b911eee2978753b81baaec980a4530e766cdd92a35613e.png": {
+      "sha256": "d151e701b123c1ec18972982be178dc10ef47de531ce2e6e3368f504c72e98e3",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-cast-concrete/mid/native/basecolor.png": {
+      "sha256": "74add69d1d29f02db882e96c2e6ae231dfe750326864ef893e2c00b5ced0520a",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-cast-concrete/mid/native/normal.png": {
+      "sha256": "b7b34406ae675ff1d79bc60b4f3c9ccf7e8f177663b75d9c4cc119439ec3056c",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-cast-concrete/mid/native/roughness.png": {
+      "sha256": "bc67199f9c1e14173fffa3ff060a9ae3762a9f467f466b36c6dcec8cd97ab611",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-cast-concrete/mid/native/height.png": {
+      "sha256": "86daa78698362df79d7ac3449c9cc6c0bab5a159ac6aa193cb717eebbe5d7077",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-cast-concrete/mid/native/ao.png": {
+      "sha256": "b702c84a69dbb9e831103e815a277a75f4cb47d651250af44e813bd32192e5fc",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-cast-concrete/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/e2fac22573ed4503a1d362ba47f02be4892ef45c8051aeb389a94c9f0396fae7.png": {
+      "sha256": "f3cea4a3043022a3f863ec8f579c0fcf04cad5f482b42d59631d474469f419a0",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-chalk-coating/mid/native/basecolor.png": {
+      "sha256": "01024aeced3de28a1b949226b65ba07115f0aa886678fd992016bf391b138c3c",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-chalk-coating/mid/native/normal.png": {
+      "sha256": "2c33924fbcc74137048adbf8f91ee2dbe32de961d76b764143c0b1f657087110",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-chalk-coating/mid/native/roughness.png": {
+      "sha256": "bafb171690fa0597823de29a13374d44953e8ba297ac3b3fb59d9975b6189a3e",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-chalk-coating/mid/native/height.png": {
+      "sha256": "e04c344922657d5198c9b85647a5d1da1bfaf3d3d4f07280d10c60b1377d3ad2",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-chalk-coating/mid/native/ao.png": {
+      "sha256": "d8a4d7e6f5a0741addbda4be1095f4d63420331aa4ef088eed341387c2b233e6",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-chalk-coating/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/cc86b5f78745c2ce5e4ba90af305a67d888b586e80b76021e0a3dc15d3cea8e5.png": {
+      "sha256": "81e46d5fa3861682acdb27c6d44aed8f579b390f45a1982aa57cb6c43008954a",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-galvanized-steel/mid/native/basecolor.png": {
+      "sha256": "f6b8feeef1f9a23db4169ddd3b0b63c193dcc3bca1ed40b4c0cafb188abff05c",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-galvanized-steel/mid/native/normal.png": {
+      "sha256": "e333a5ee2c776969d2c0ab90f8ed2402e19afa46ffc46e47ef0715f72929b224",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-galvanized-steel/mid/native/roughness.png": {
+      "sha256": "beccebed3d5af98ed4bfcb00834ee167a93ac8033b2206931456ed60c8b88d7b",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-galvanized-steel/mid/native/height.png": {
+      "sha256": "c50fb88634487900ec1edfc19234c289d8e19d93da682ec92b41091156c8a250",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-galvanized-steel/mid/native/ao.png": {
+      "sha256": "f10eb5a5a9f2bcc900a0ccd7a37d90ad9639181fdb968de27eaa3749558113d8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-galvanized-steel/mid/native/metallic.png": {
+      "sha256": "b04e44f8f7123ad9b6a95afeb8c4f75b63c29d58cd896e803f5a4ef282ef96e8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/0716fd87acafd14fec4f33d3d8562426c2b97d87954d81677916f5d82ea5e2fb.png": {
+      "sha256": "4678052d73d519349f9ed15c7842d0aaf5a2f969e1ea281cf84eaf96a05cc585",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-coating/mid/native/basecolor.png": {
+      "sha256": "8807f8caafa3e8014b6fbd8624a3cf70f8efa699060a4c21072ef52db3785202",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-coating/mid/native/normal.png": {
+      "sha256": "41ea84a1ef36b98a26afff2016c7039b07d2f4cd04e2e51f5ae21d7f285a5c45",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-coating/mid/native/roughness.png": {
+      "sha256": "db73251276b22e12894203fe804b1099704ffbcc34477de867c505225bbc17b7",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-coating/mid/native/height.png": {
+      "sha256": "25f2ea7d6294912882be7761df65ad13b066faa481c523085d7360399a5f9f74",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-coating/mid/native/ao.png": {
+      "sha256": "bdd9d03ac71bd8540acd76ee1c4d496983e5a30f54f7cff4001e1e80373064f9",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-coating/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/3e747a76b7a5ca448ff025316b36790b24040f9ec1de67f04a3cab67b9c062dc.png": {
+      "sha256": "aaa8507a742efbdd9ef7b37afc4e724c8c477d5a1d6129128cf8737cb8f1adda",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-concrete/mid/native/basecolor.png": {
+      "sha256": "9b7d8c749210e944dcfd3b23d68fb8d7398a289589de206229ebf08ec370cff8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-concrete/mid/native/normal.png": {
+      "sha256": "c40d105749598bcd1a04a404f5a84876680846874779d2020f4c832bf70864c9",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-concrete/mid/native/roughness.png": {
+      "sha256": "02308e70faf67f9db9c353d81cd3300c2bc30453b55a5a437c570532e9a9f384",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-concrete/mid/native/height.png": {
+      "sha256": "2fcb80917d9f9fac8948dfb1214c8bd32f10e2a49fe7addae45e2a3cce85625e",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-concrete/mid/native/ao.png": {
+      "sha256": "1c39f41c142edbc8d51a368559effad4e792a631fb44141b03e2ceca82cf8745",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-graphite-concrete/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/d56781324702de0472ec1407b1fa2f37b517acb9df439e55c83a1f690653d44f.png": {
+      "sha256": "4969fb44571616742a413068832d13e39a6039b65062ff7b7423166fd5afe26e",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-mineral-concrete/mid/native/basecolor.png": {
+      "sha256": "afc8012114eb68289fd8c3519c705463090d4735c30fe6e2d1aef743d6a2e6b8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-mineral-concrete/mid/native/normal.png": {
+      "sha256": "c1715d5e1ce2676fcf08563566fef5247739f8d599ca02db60942ac8d4894dbb",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-mineral-concrete/mid/native/roughness.png": {
+      "sha256": "b7beaffb6863e471f23de1ea3e1a75cf9406a167ba384fcdf37f1e612e23ef18",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-mineral-concrete/mid/native/height.png": {
+      "sha256": "4109b23b157d7609af6323422966170a9644155735912ff846ed42ebd3fd9ae1",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-mineral-concrete/mid/native/ao.png": {
+      "sha256": "1f49692b8858d734a4ab4ca1581b9ae825f8da0a5dd69f6bceb0fffe42170ea9",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-mineral-concrete/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/6b66bab496493bd6ea27cf514c0dcfad5a4db049b6ee37b701deb7ea66933f1b.png": {
+      "sha256": "23fdc2493e3497e340989fc0b62eb9815d417754395626a8c9e4b309f52164df",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-weathered-concrete/mid/native/basecolor.png": {
+      "sha256": "01f511c76eb972da0246702e60c01d37904d60f042e1db21a3f45dbed7f038ff",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-weathered-concrete/mid/native/normal.png": {
+      "sha256": "ba3b7cbe72f49a2a36f39e0777cc36a2589e767594201ed3cf43d5265b797cbc",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-weathered-concrete/mid/native/roughness.png": {
+      "sha256": "6d733ecb3e7890c195e4bea55e47945474c1119cdee405f8c44e72a1abeb7904",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-weathered-concrete/mid/native/height.png": {
+      "sha256": "3c8a59d86e2b24c700707e53201bd926a7158379fba900cdc51d0746c141fe21",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-weathered-concrete/mid/native/ao.png": {
+      "sha256": "12f7d401e2b57cf5f4188efd802b699b7a9635ac9bf58940ddc236acfddd1763",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/exterior-weathered-concrete/mid/native/metallic.png": {
+      "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    },
+    "assets/metallic-roughness/7935a970ffec78d3162c63088a421e0f24c2ef0238bf743ecf736ccb00bff588.png": {
+      "sha256": "a18abac06255b616531bed8a9ce501f5ae427c7c4fce7eaa18e7b6df2ef7b9e8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "channels": 3
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Version: 0.16.35, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
+Version: 0.16.36, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
 ## API
 
@@ -66,6 +66,8 @@ Refinish merges physical changes, resolves the requested finish, and updates var
 Resolve named bindings without guessing paths or substituting unrelated entries. Materials owns the published catalog and bindings; consumers own geometry and rendering. The catalog schema has no output-version or revision field; these remain [open decisions](docs/ISSUES.md).
 
 Exterior frame coatings are published as `cyberpunk/exterior-accent-blue/mid` and `cyberpunk/exterior-accent-gold/mid`, each with a `rich` alias and canonical `coat` variant. These opaque coatings use 1 m tiles, roughness 0.55 and subtle grain; [recipes](batch/cyberpunk/exterior-accents.json) retain the authored colors.
+
+Fourteen accepted Exterior finishes retain their source `cyberpunk/exterior-<finish>/mid` keys, `native` variant, physical values and map bytes. Each also has an `exterior-<finish>-exact` counterpart with aspect `[1,1]`, sharing those maps. The [source manifest](sources/exterior-native/accepted.json) lists all 28 keys and 98 map hashes. Original entries retain their tile scale or exact alignment; the AC coil is exact in both entries.
 
 ## Letter atlas
 

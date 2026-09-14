@@ -5,7 +5,7 @@ description: Author and inspect PBR material sets with the pbrforge CLI, includi
 
 # pbrforge
 
-Version: 0.16.35. Use the public CLI to author or inspect a themed material database.
+Version: 0.16.36. Use the public CLI to author or inspect a themed material database.
 
 Run `pbrforge` if installed on PATH. From the checkout use `npm run --silent pbrforge -- <verb>` or, after `npm run build`, `node dist/cli/pbrforge.js <verb>`. Start with `doctor` for readiness and `help` for verb syntax. `--themes <dir>` selects a separate database; omission uses bundled `themes/`.
 
