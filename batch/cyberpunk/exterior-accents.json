@@ -1,0 +1,28 @@
+[
+  {
+    "key": "cyberpunk/exterior-accent-blue/mid",
+    "aliases": ["cyberpunk/exterior-accent-blue/rich"],
+    "alignment": "tile",
+    "tiling": {"worldSize": [1, 1]},
+    "physical": {"metallicFactor": 0, "roughnessFactor": 0.55, "transmission": 0, "emissiveStrength": 0, "alphaMode": "OPAQUE"},
+    "description": "blue painted coating with subtle grain for exterior frame trim",
+    "variantId": "coat",
+    "resolution": [256, 256],
+    "seed": 974,
+    "pattern": {"kind": "noise", "colors": ["#247aa3", "#247aa3"], "cells": [32, 32], "octaves": 1, "depth": 0.002, "variation": 0, "grain": 0.006, "sheen": 0.01},
+    "layout": {"family": "continuous", "origin": [0, 0], "orientation": "isotropic"}
+  },
+  {
+    "key": "cyberpunk/exterior-accent-gold/mid",
+    "aliases": ["cyberpunk/exterior-accent-gold/rich"],
+    "alignment": "tile",
+    "tiling": {"worldSize": [1, 1]},
+    "physical": {"metallicFactor": 0, "roughnessFactor": 0.55, "transmission": 0, "emissiveStrength": 0, "alphaMode": "OPAQUE"},
+    "description": "gold painted coating with subtle grain for exterior frame trim",
+    "variantId": "coat",
+    "resolution": [256, 256],
+    "seed": 975,
+    "pattern": {"kind": "noise", "colors": ["#b78a3d", "#b78a3d"], "cells": [32, 32], "octaves": 1, "depth": 0.002, "variation": 0, "grain": 0.006, "sheen": 0.01},
+    "layout": {"family": "continuous", "origin": [0, 0], "orientation": "isotropic"}
+  }
+]

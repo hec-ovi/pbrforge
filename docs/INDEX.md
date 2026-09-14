@@ -1,6 +1,6 @@
 # Materials index
 
-Version: 0.16.34.
+Version: 0.16.35.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
@@ -23,6 +23,7 @@ Version: 0.16.34.
 - [Street sources](../sources/streets/INDEX.md) and [recipes](../batch/cyberpunk/street-image-finishes.json): continuous photographic finish fields.
 - [Street prop sources](../sources/street-props/INDEX.md) and [recipes](../batch/cyberpunk/street-props/): cardboard, wood, coating and polymer.
 - [Exterior sources](../sources/exterior-native/INDEX.md) and [recipes](../batch/cyberpunk/exterior-native/): cast, weathered and graphite concrete.
+- [Exterior accent recipes](../batch/cyberpunk/exterior-accents.json): blue and gold frame coatings with canonical `coat` variants.
 - [Interior sources](../sources/interiors/INDEX.md) and [recipes](../batch/cyberpunk/interiors/): luxury, damaged and capsule finishes.
 - [Room plates](../sources/window-rooms/INDEX.md) and [screen artwork](../sources/ads-codex/PROMPTS.md): retained images and authoring prompts.
 - [ComfyUI workflows](../templates/README.md): photographic and upscale templates.

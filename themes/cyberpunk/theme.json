@@ -13988,6 +13988,100 @@
           }
         }
       ]
+    },
+    "cyberpunk/exterior-accent-blue/mid": {
+      "key": "cyberpunk/exterior-accent-blue/mid",
+      "aliases": [
+        "cyberpunk/exterior-accent-blue/rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.55,
+        "transmission": 0,
+        "emissiveStrength": 0,
+        "alphaMode": "OPAQUE"
+      },
+      "variants": [
+        {
+          "id": "coat",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/exterior-accent-blue/mid/coat/basecolor.png",
+            "normal": "assets/exterior-accent-blue/mid/coat/normal.png",
+            "roughness": "assets/exterior-accent-blue/mid/coat/roughness.png",
+            "metallic": "assets/exterior-accent-blue/mid/coat/metallic.png",
+            "height": "assets/exterior-accent-blue/mid/coat/height.png",
+            "ao": "assets/exterior-accent-blue/mid/coat/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/00e497ca4a5a18911c6a8513a1122e2a9c828dc7d0eb6af74ba5b8134df29264.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/exterior-accent-gold/mid": {
+      "key": "cyberpunk/exterior-accent-gold/mid",
+      "aliases": [
+        "cyberpunk/exterior-accent-gold/rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.55,
+        "transmission": 0,
+        "emissiveStrength": 0,
+        "alphaMode": "OPAQUE"
+      },
+      "variants": [
+        {
+          "id": "coat",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/exterior-accent-gold/mid/coat/basecolor.png",
+            "normal": "assets/exterior-accent-gold/mid/coat/normal.png",
+            "roughness": "assets/exterior-accent-gold/mid/coat/roughness.png",
+            "metallic": "assets/exterior-accent-gold/mid/coat/metallic.png",
+            "height": "assets/exterior-accent-gold/mid/coat/height.png",
+            "ao": "assets/exterior-accent-gold/mid/coat/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/e014b8e3c1450b15590ae2f9a7dd574b360655ebd3f8074e111c4db5ab6c4dd4.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
     }
   }
 }
