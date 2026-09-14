@@ -9,7 +9,7 @@ const root = new URL('../', import.meta.url);
 const read = (path: string) => readFileSync(new URL(path, root));
 const binding = JSON.parse(read('bindings/street-native.json').toString());
 const schema = JSON.parse(read('schema/street-native.schema.json').toString());
-const validate = new Ajv2020().compile(schema);
+const validate = new Ajv2020({ strict: true }).compile(schema);
 
 it('publishes complete native street effects with intact source scans and portable references', async () => {
   expect(validate(binding), JSON.stringify(validate.errors)).toBe(true);
@@ -48,5 +48,19 @@ it('rejects unsupported effects, missing channels and unsafe asset paths at the 
     const invalid = structuredClone(binding);
     mutate(invalid);
     expect(validate(invalid)).toBe(false);
+  }
+});
+
+it('requires a valid smear map for coated mineral and metal panels', () => {
+  for (const id of ['terracotta', 'oxblood']) {
+    const candidate = structuredClone(binding);
+    const surface = candidate.surfaces[id];
+    delete surface.maps.smear;
+    expect(validate(candidate)).toBe(false);
+    surface.parameters.clearcoat = 0;
+    expect(validate(candidate), JSON.stringify(validate.errors)).toBe(true);
+    surface.parameters.clearcoat = 1;
+    surface.maps.smear = '../panel-smear';
+    expect(validate(candidate)).toBe(false);
   }
 });

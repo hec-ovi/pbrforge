@@ -236,7 +236,7 @@
                 }
               }
             },
-            "allOf": [{"if": {"properties": {"parameters": {"properties": {"clearcoat": {"const": 1}}}}}, "then": {"properties": {"maps": {"required": ["smear"]}}}}]
+            "allOf": [{"if": {"properties": {"parameters": {"type": "object", "properties": {"clearcoat": {"const": 1}}}}}, "then": {"properties": {"maps": {"type": "object", "required": ["smear"], "properties": {"smear": true}}}}}]
           },
           {
             "type": "object",
@@ -276,7 +276,7 @@
                 }
               }
             },
-            "allOf": [{"if": {"properties": {"parameters": {"properties": {"clearcoat": {"const": 1}}}}}, "then": {"properties": {"maps": {"required": ["smear"]}}}}]
+            "allOf": [{"if": {"properties": {"parameters": {"type": "object", "properties": {"clearcoat": {"const": 1}}}}}, "then": {"properties": {"maps": {"type": "object", "required": ["smear"], "properties": {"smear": true}}}}}]
           },
           {
             "type": "object",
