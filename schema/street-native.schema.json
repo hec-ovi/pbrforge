@@ -1,0 +1,490 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:street-native",
+  "title": "Native street material binding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "source", "sampling", "textures", "surfaces"],
+  "properties": {
+    "version": {"const": 1},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project", "revision", "manifest"],
+      "properties": {"project": {"const": "threejsscene"}, "revision": {"type": "string", "pattern": "^[a-f0-9]{40}$"}, "manifest": {"const": "sources/streets/scene-native/manifest.json"}}
+    },
+    "sampling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["asphalt"],
+      "properties": {
+        "asphalt": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["scale", "noise", "regionScale", "regionGain", "regionBias", "offsetFrequency", "offsetGain", "blendRange", "gradients"],
+          "properties": {
+            "scale": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+            "noise": {"const": "materialx-perlin-3d"},
+            "regionScale": {"type": "number"},
+            "regionGain": {"type": "number"},
+            "regionBias": {"type": "number"},
+            "offsetFrequency": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+            "offsetGain": {"type": "number"},
+            "blendRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+            "gradients": {"const": "unshifted"}
+          }
+        }
+      }
+    },
+    "textures": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "resolution", "sha256", "colorSpace", "wrap"],
+        "properties": {
+          "path": {"type": "string", "pattern": "^themes/[a-z0-9_-]+/assets/street-native/[a-z0-9_-]+\\.png$"},
+          "resolution": {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 4096}, "minItems": 2, "maxItems": 2},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "colorSpace": {"enum": ["srgb", "linear"]},
+          "wrap": {"type": "array", "items": {"enum": ["repeat", "clamp"]}, "minItems": 2, "maxItems": 2}
+        }
+      }
+    },
+    "surfaces": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "asphalt"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ao", "basecolor", "cleanBasecolor", "cleanNormal", "normal", "roughness"],
+                "properties": {
+                  "ao": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "cleanBasecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "cleanNormal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "roughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}
+                }
+              },
+              "uv": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["mode", "scale"],
+                    "properties": {"mode": {"enum": ["world-xz"]}, "scale": {"type": "array", "items": {"type": "number", "exclusiveMinimum": 0}, "minItems": 2, "maxItems": 2}}
+                  }
+                ]
+              },
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["colorGain", "normalScale", "roughnessDefault", "roughnessRange", "aoWear"],
+                "properties": {
+                  "colorGain": {"type": "number"},
+                  "normalScale": {"type": "number"},
+                  "roughnessDefault": {"type": "number"},
+                  "roughnessRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "aoWear": {"type": "number"}
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "photographed"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ao", "basecolor", "normal", "roughness"],
+                "properties": {
+                  "ao": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "roughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}
+                }
+              },
+              "uv": {
+                "oneOf": [
+                  {"type": "object", "additionalProperties": false, "required": ["mode"], "properties": {"mode": {"enum": ["panel"]}}},
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["mode", "scale"],
+                    "properties": {"mode": {"enum": ["curb-band"]}, "scale": {"type": "array", "items": {"type": "number", "exclusiveMinimum": 0}, "minItems": 2, "maxItems": 2}}
+                  }
+                ]
+              },
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["tint", "normalScale", "aoIntensity", "metalness", "roughnessGain", "roughnessBias", "roughnessRange"],
+                "properties": {
+                  "tint": {"type": "string", "pattern": "^#[0-9a-f]{6}$"},
+                  "normalScale": {"type": "number"},
+                  "aoIntensity": {"type": "number"},
+                  "metalness": {"type": "number"},
+                  "roughnessGain": {"type": "number"},
+                  "roughnessBias": {"type": "number"},
+                  "roughnessRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "polished"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ao", "basecolor", "normal", "roughness", "smear", "variation"],
+                "properties": {
+                  "ao": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "roughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "smear": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "variation": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}
+                }
+              },
+              "uv": {"oneOf": [{"type": "object", "additionalProperties": false, "required": ["mode"], "properties": {"mode": {"enum": ["panel"]}}}]},
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["tint", "normalScale", "metalness", "aoIntensity", "clearcoat", "smearGain", "variationScale", "variationGain", "roughnessRange", "coatBias", "coatGain", "coatRange"],
+                "properties": {
+                  "tint": {"type": "string", "pattern": "^#[0-9a-f]{6}$"},
+                  "normalScale": {"type": "number"},
+                  "metalness": {"type": "number"},
+                  "aoIntensity": {"type": "number"},
+                  "clearcoat": {"type": "number"},
+                  "smearGain": {"type": "number"},
+                  "variationScale": {"type": "number"},
+                  "variationGain": {"type": "number"},
+                  "roughnessRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "coatBias": {"type": "number"},
+                  "coatGain": {"type": "number"},
+                  "coatRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "mineral"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ao", "basecolor", "normal", "roughness"],
+                "properties": {
+                  "ao": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "roughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "smear": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}
+                }
+              },
+              "uv": {
+                "oneOf": [
+                  {"type": "object", "additionalProperties": false, "required": ["mode"], "properties": {"mode": {"enum": ["panel"]}}},
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["mode", "scale"],
+                    "properties": {"mode": {"enum": ["metres"]}, "scale": {"type": "array", "items": {"type": "number", "exclusiveMinimum": 0}, "minItems": 2, "maxItems": 2}}
+                  }
+                ]
+              },
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["normalScale", "aoIntensity", "clearcoat", "roughnessGain", "roughnessBias", "roughnessRange", "coatGain", "coatRange", "tint", "painted", "paintRange", "paintBias"],
+                "properties": {
+                  "normalScale": {"type": "number"},
+                  "aoIntensity": {"type": "number"},
+                  "clearcoat": {"type": "number"},
+                  "roughnessGain": {"type": "number"},
+                  "roughnessBias": {"type": "number"},
+                  "roughnessRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "coatGain": {"type": "number"},
+                  "coatRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "tint": {"type": "string", "pattern": "^#[0-9a-f]{6}$"},
+                  "painted": {"type": "boolean"},
+                  "paintRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "paintBias": {"type": "number"}
+                }
+              }
+            },
+            "allOf": [{"if": {"properties": {"parameters": {"properties": {"clearcoat": {"const": 1}}}}}, "then": {"properties": {"maps": {"required": ["smear"]}}}}]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "metal-panel"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ao", "basecolor", "normal", "roughness"],
+                "properties": {
+                  "ao": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "roughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "smear": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}
+                }
+              },
+              "uv": {"oneOf": [{"type": "object", "additionalProperties": false, "required": ["mode"], "properties": {"mode": {"enum": ["panel"]}}}]},
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["normalScale", "aoIntensity", "clearcoat", "roughnessGain", "roughnessRange", "metalness", "painted", "paintMetalness", "paintRange", "coatGain", "coatRange"],
+                "properties": {
+                  "normalScale": {"type": "number"},
+                  "aoIntensity": {"type": "number"},
+                  "clearcoat": {"type": "number"},
+                  "roughnessGain": {"type": "number"},
+                  "roughnessRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "metalness": {"type": "number"},
+                  "painted": {"type": "boolean"},
+                  "paintMetalness": {"type": "number"},
+                  "paintRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "coatGain": {"type": "number"},
+                  "coatRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}
+                }
+              }
+            },
+            "allOf": [{"if": {"properties": {"parameters": {"properties": {"clearcoat": {"const": 1}}}}}, "then": {"properties": {"maps": {"required": ["smear"]}}}}]
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "hardware"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ao", "basecolor", "normal", "roughness"],
+                "properties": {
+                  "ao": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "roughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}
+                }
+              },
+              "uv": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["mode", "scale"],
+                    "properties": {"mode": {"enum": ["metres"]}, "scale": {"type": "array", "items": {"type": "number", "exclusiveMinimum": 0}, "minItems": 2, "maxItems": 2}}
+                  }
+                ]
+              },
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["normalScale", "colorGain", "painted", "tint", "paintRange", "paintGain", "paintBias"],
+                "properties": {
+                  "normalScale": {"type": "number"},
+                  "colorGain": {"type": "number"},
+                  "painted": {"type": "boolean"},
+                  "tint": {"type": "string", "pattern": "^#[0-9a-f]{6}$"},
+                  "paintRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "paintGain": {"type": "number"},
+                  "paintBias": {"type": "number"}
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "cast-concrete"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ao", "basecolor", "normal", "roughness"],
+                "properties": {
+                  "ao": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "roughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}
+                }
+              },
+              "uv": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["mode", "scale"],
+                    "properties": {"mode": {"enum": ["metres"]}, "scale": {"type": "array", "items": {"type": "number", "exclusiveMinimum": 0}, "minItems": 2, "maxItems": 2}}
+                  }
+                ]
+              },
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["normalScale", "aoIntensity", "greyMix", "colorGain", "breakupScale", "grimeRange", "grimeBias", "grimeHeight", "grimeTint", "grimeStrength", "roughnessGain", "roughnessBias"],
+                "properties": {
+                  "normalScale": {"type": "number"},
+                  "aoIntensity": {"type": "number"},
+                  "greyMix": {"type": "number"},
+                  "colorGain": {"type": "number"},
+                  "breakupScale": {"type": "number"},
+                  "grimeRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "grimeBias": {"type": "number"},
+                  "grimeHeight": {"type": "number"},
+                  "grimeTint": {"type": "string", "pattern": "^#[0-9a-f]{6}$"},
+                  "grimeStrength": {"type": "number"},
+                  "roughnessGain": {"type": "number"},
+                  "roughnessBias": {"type": "number"}
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "parking"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ao", "basecolor", "cleanBasecolor", "cleanNormal", "normal", "parkingAo", "parkingBasecolor", "parkingNormal", "parkingRoughness", "roughness"],
+                "properties": {
+                  "ao": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "cleanBasecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "cleanNormal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "parkingAo": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "parkingBasecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "parkingNormal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "parkingRoughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+                  "roughness": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}
+                }
+              },
+              "uv": {"oneOf": [{"type": "object", "additionalProperties": false, "required": ["mode"], "properties": {"mode": {"enum": ["panel"]}}}]},
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["asphaltColorGain", "panelColorGain", "entranceRange", "entranceBias", "entranceNoise", "normalScale"],
+                "properties": {
+                  "asphaltColorGain": {"type": "number"},
+                  "panelColorGain": {"type": "number"},
+                  "entranceRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "entranceBias": {"type": "number"},
+                  "entranceNoise": {"type": "number"},
+                  "normalScale": {"type": "number"}
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "road-paint"},
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["grain", "mask", "normal"],
+                "properties": {"grain": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}, "mask": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}, "normal": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}}
+              },
+              "uv": {"oneOf": [{"type": "object", "additionalProperties": false, "required": ["mode"], "properties": {"mode": {"enum": ["paint"]}}}]},
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["tint", "roughness", "normalScale", "maskUScale", "noiseScale", "noiseGain", "erosionRange", "grainGain", "grainBias", "opacity", "wearStrength", "depthWrite"],
+                "properties": {
+                  "tint": {"type": "string", "pattern": "^#[0-9a-f]{6}$"},
+                  "roughness": {"type": "number"},
+                  "normalScale": {"type": "number"},
+                  "maskUScale": {"type": "number"},
+                  "noiseScale": {"type": "number"},
+                  "noiseGain": {"type": "number"},
+                  "erosionRange": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+                  "grainGain": {"type": "number"},
+                  "grainBias": {"type": "number"},
+                  "opacity": {"type": "number"},
+                  "wearStrength": {"type": "number"},
+                  "depthWrite": {"type": "boolean"}
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "decal"},
+              "maps": {"type": "object", "additionalProperties": false, "required": ["basecolor"], "properties": {"basecolor": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"}}},
+              "uv": {"oneOf": [{"type": "object", "additionalProperties": false, "required": ["mode"], "properties": {"mode": {"enum": ["panel"]}}}]},
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["opacity", "roughness", "depthWrite", "polygonOffset"],
+                "properties": {"opacity": {"type": "number"}, "roughness": {"type": "number"}, "depthWrite": {"type": "boolean"}, "polygonOffset": {"type": "number"}}
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["effect", "maps", "uv", "parameters"],
+            "properties": {
+              "effect": {"const": "solid"},
+              "maps": {"type": "object", "additionalProperties": false, "required": [], "properties": {}},
+              "uv": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["mode", "scale"],
+                    "properties": {"mode": {"enum": ["metres"]}, "scale": {"type": "array", "items": {"type": "number", "exclusiveMinimum": 0}, "minItems": 2, "maxItems": 2}}
+                  }
+                ]
+              },
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["tint", "roughness", "metalness"],
+                "properties": {"tint": {"type": "string", "pattern": "^#[0-9a-f]{6}$"}, "roughness": {"type": "number"}, "metalness": {"type": "number"}}
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

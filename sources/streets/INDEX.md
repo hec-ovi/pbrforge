@@ -8,3 +8,5 @@ Continuous color sources generated with OpenAI image generation, each representi
 - [Orange](orange-v3.png): fine dark copper-orange coating.
 
 These sources support candidate finishes. Fitted-city visual acceptance is separate from import validation.
+
+[Native district surfaces](scene-native/CONTRACT.md): byte-preserved threejsscene scans and their separate effect binding.

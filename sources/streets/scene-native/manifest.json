@@ -1,0 +1,451 @@
+{
+  "project": "threejsscene",
+  "revision": "ac7c2fc02095b47d0a8fd7fda535e4ea7ce6452e",
+  "files": [
+    {"path": "scene/materials/index.ts", "sha256": "b4f9de5213dcdae9ff4ff11b8da662b47bcfdf2a282edd0402a7d6a3c928f909"},
+    {"path": "scene/materials/textures.ts", "sha256": "034728a7148e06fd63364e86f430b98510bf9e00bae2b8386aeb90bc5e3d878a"},
+    {"path": "scene/materials/district.ts", "sha256": "3f1bb4fb68a8486abe3d9f8eeaf08c59c44fe4f0d1de99a5545adaa42a92415f"},
+    {"path": "scene/materials/asphaltSampling.ts", "sha256": "f3fe429617621a082bbd1528d8ba8b6abf51c339e7c58d6a3c91e32d225d9b27"},
+    {"path": "scene/materials/parking.ts", "sha256": "8c3d15ca549c268aee052ae92e1b73b3ea6651b0536e6f0ebe382367baf80981"},
+    {"path": "scene/materials/polished.ts", "sha256": "12cae9269a1571b32b1df1507a714bd5383aa4b12c88a46a636896e55ea8a84d"},
+    {"path": "scene/materials/mineral.ts", "sha256": "c66ea7b141744c1cce10e65e96e210c8c6eb63a4403068ac3bc9eded56f1fbc1"},
+    {"path": "scene/materials/metalPaving.ts", "sha256": "766b85371383ffa8df31db88d0cc06a18f72259100a4f236cfdb0f82688fd8b2"},
+    {"path": "scene/materials/hardware.ts", "sha256": "b82ee9188ecd16dbd0edd4babd69c95bb4943c40f10dce559f3b64f8216e2f59"},
+    {"path": "scene/materials/castConcrete.ts", "sha256": "7def3f820bdb3f2886a2b7004f65d7cd46b38fce8e4ea1b14a67bef76474a869"},
+    {"path": "scene/street/profile.json", "sha256": "99c6f8c82f9130ff8d3a2e75bce25274d420878047094658dd13bece2553cbdd"},
+    {
+      "path": "scene/materials/assets/asphalt-ao.png",
+      "sha256": "e2401f8c4c196ac474e537602d18db935c647dd67b568026f8781afb1075d2ec",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/asphalt-basecolor.png",
+      "sha256": "f29a075b89427839e82edf4be5dfc27616d14753046844c54515546d89fbf578",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/asphalt-clean-basecolor.png",
+      "sha256": "f37daadd92befaa060b1c72c405496045ee339cd82ce52a1cf8364cf99ea8d2a",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-clean-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/asphalt-clean-normal.png",
+      "sha256": "1be64ee0280ea59b307ead596b8d69466e5f5cb164727dc2ee1bd6f0ee74d59a",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-clean-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/asphalt-damage.png",
+      "sha256": "915b36825830b9c4148e32964876b55f4c8134ace529a2ef392e6a3c24e8e235",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-damage.png"
+    },
+    {
+      "path": "scene/materials/assets/asphalt-fracture.png",
+      "sha256": "75de63d2a2c9cce88b79ff4567b00eaa9f2f44465ae44f700462562415acc635",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-fracture.png"
+    },
+    {
+      "path": "scene/materials/assets/asphalt-normal.png",
+      "sha256": "51f75dda1fac30748246011ad8292a8833d6cc1f1babe7db643c9488a55e0f6e",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/asphalt-repair.png",
+      "sha256": "47d3a6f078b52a566e5e953c4a65e203995de87d58f2407d3c42843e91509a73",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-repair.png"
+    },
+    {
+      "path": "scene/materials/assets/asphalt-roughness.png",
+      "sha256": "6d3c6d5ad7fd56084bc7d58b5d5b45749b103347a15665593a989288a60035b8",
+      "target": "themes/cyberpunk/assets/street-native/asphalt-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/barrier-concrete-ao.png",
+      "sha256": "0a84c3af9cf08cc52c5b73a466e65920104514a84e12f3fff09c1baf7b0e7dcd",
+      "target": "themes/cyberpunk/assets/street-native/barrier-concrete-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/barrier-concrete-basecolor.png",
+      "sha256": "80615d5076552e07200f339985055cd0682372cf6c45adcd40d03412e9a32f5f",
+      "target": "themes/cyberpunk/assets/street-native/barrier-concrete-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/barrier-concrete-normal.png",
+      "sha256": "479c16c4167c985888292000019df0574e6ca6d2e977fd299bfc96aef2b104ca",
+      "target": "themes/cyberpunk/assets/street-native/barrier-concrete-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/barrier-concrete-roughness.png",
+      "sha256": "2ade69eb05fe2b7417a9ac2d814234fcaedc2122e1b2013c745da6f0f3b80269",
+      "target": "themes/cyberpunk/assets/street-native/barrier-concrete-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/crosswalk-wait.png",
+      "sha256": "1715063765330e7a06386a10d913ba80ed6b9a72c3905330254a1302411a4fc4",
+      "target": "themes/cyberpunk/assets/street-native/crosswalk-wait.png"
+    },
+    {
+      "path": "scene/materials/assets/crosswalk-walk.png",
+      "sha256": "998cc13dd17601fbf460d28622e6e088dd4324557fe7407f37b0f72e599f4cc4",
+      "target": "themes/cyberpunk/assets/street-native/crosswalk-walk.png"
+    },
+    {
+      "path": "scene/materials/assets/curb-ao.png",
+      "sha256": "735895e34ab2c0fc9f85b66370ebf7cb31d7a91a531f9ec8dc5c3624452ff763",
+      "target": "themes/cyberpunk/assets/street-native/curb-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/curb-basecolor.png",
+      "sha256": "9f1416093d30b4d8be6664ab1bb01211ddf6094fb168342a91c145fcac9a4189",
+      "target": "themes/cyberpunk/assets/street-native/curb-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/curb-normal.png",
+      "sha256": "588ff620a21e6850574b73efc918bc597a82dbfb5c40ccfe32ca74eaa7d36173",
+      "target": "themes/cyberpunk/assets/street-native/curb-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/curb-roughness.png",
+      "sha256": "8def29c9adbc9f8e636816e3611f6f6cd195bd140ed8d58c237a87b22e2fe6be",
+      "target": "themes/cyberpunk/assets/street-native/curb-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/damaged-panel-ao.png",
+      "sha256": "6a5ce5bc25ee02865078ca409a8cd300905f20963fd1ab7b2308e108c8412511",
+      "target": "themes/cyberpunk/assets/street-native/damaged-panel-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/damaged-panel-basecolor.png",
+      "sha256": "e093d8cc12ddfba1478ce7c03d123983ff573ca7e8ca2e8ef79d4056ccbe0213",
+      "target": "themes/cyberpunk/assets/street-native/damaged-panel-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/damaged-panel-normal.png",
+      "sha256": "e8fbb23b3cca94f604927800c51a47fafa25c758a830eabd88a8806e034c5b8c",
+      "target": "themes/cyberpunk/assets/street-native/damaged-panel-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/damaged-panel-roughness.png",
+      "sha256": "37dfa657b3e1a35d68ccca325370b261135244ae5763bd740883beeacc2779ac",
+      "target": "themes/cyberpunk/assets/street-native/damaged-panel-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/oil-patch.png",
+      "sha256": "fa29b6abfca63ebb954def68b5a5e81898b245756c5263bf31f1f3a293e099ad",
+      "target": "themes/cyberpunk/assets/street-native/oil-patch.png"
+    },
+    {
+      "path": "scene/materials/assets/ordinary-panel-ao.png",
+      "sha256": "a45f26b2dbebec6d5dfee47c5fd0149ec177bf08cbd77976f329ff2fdc8b189e",
+      "target": "themes/cyberpunk/assets/street-native/ordinary-panel-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/ordinary-panel-basecolor.png",
+      "sha256": "f6d1cc9a34211d5bc1d8b62ae28fcabd5d1c8f64ec3fcab5a9c26585f996e111",
+      "target": "themes/cyberpunk/assets/street-native/ordinary-panel-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/ordinary-panel-normal.png",
+      "sha256": "a2e2ffaaa93f0e65d26301bb5ff70f454fc3a0ff68b2b2f9c5b8f908eb85fe78",
+      "target": "themes/cyberpunk/assets/street-native/ordinary-panel-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/ordinary-panel-roughness.png",
+      "sha256": "f94871b94b5dcc7c63f777dfcea6d0630c43dab9b1fd5fe9fac5d8dbca6ec5bc",
+      "target": "themes/cyberpunk/assets/street-native/ordinary-panel-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/oxblood-panel-ao.png",
+      "sha256": "915f63cdedea4b0c3ffd476f70eb0cfa4f6865e0e44112d5e3c4f61bef6cc9d8",
+      "target": "themes/cyberpunk/assets/street-native/oxblood-panel-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/oxblood-panel-basecolor.png",
+      "sha256": "9d3876e68b6909b553b58109a5cfc33edcf0e6882da7c6d4ef50a2dc4c9415bd",
+      "target": "themes/cyberpunk/assets/street-native/oxblood-panel-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/oxblood-panel-normal.png",
+      "sha256": "3fa5b7a1ccfcfe1a6f08bba2792e3d57d9f57eb2045dfb51a779b991c006b727",
+      "target": "themes/cyberpunk/assets/street-native/oxblood-panel-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/oxblood-panel-roughness.png",
+      "sha256": "74a9698218be1440857b7a25a3b17703a9a63d7f7068fb6a9807ee7f741ea4a3",
+      "target": "themes/cyberpunk/assets/street-native/oxblood-panel-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/oxide-panel-ao.png",
+      "sha256": "865694904e6630a8d420bbeb947512b56a1ff28b8010f45cea8a1da1a239c9ff",
+      "target": "themes/cyberpunk/assets/street-native/oxide-panel-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/oxide-panel-basecolor.png",
+      "sha256": "56a60f01c732b969a513100743f6bd7f879c62df8bda42c409013454f86b8b43",
+      "target": "themes/cyberpunk/assets/street-native/oxide-panel-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/oxide-panel-normal.png",
+      "sha256": "269c7de358dfc5185b9758cd68f7e0b5794eb824ab84c146927f3e3153c9ac58",
+      "target": "themes/cyberpunk/assets/street-native/oxide-panel-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/oxide-panel-roughness.png",
+      "sha256": "171c499a57d1876611532cafea8e2153d347b989165b38fd0d9e5456dd727585",
+      "target": "themes/cyberpunk/assets/street-native/oxide-panel-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/paint-mask.png",
+      "sha256": "2504a9da900e809bd8db0da2b7ae0f0f20b22afd1f4b652635cd6ef5e952b9a0",
+      "target": "themes/cyberpunk/assets/street-native/paint-mask.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-a-ao.png",
+      "sha256": "9748bf706ba72739bae3a688ec64674cbd225c240f53084321c537a541fc8f0c",
+      "target": "themes/cyberpunk/assets/street-native/panel-a-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-a-basecolor.png",
+      "sha256": "da323f0deb32dcdfeb8703ffa15339e1dc4943a6384141bbcfb11fa9bc9cea2a",
+      "target": "themes/cyberpunk/assets/street-native/panel-a-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-a-normal.png",
+      "sha256": "135bcb44329f09fc371e6f30ed6015d1d2c2fd3f61ab4030ecda7076c7ea7691",
+      "target": "themes/cyberpunk/assets/street-native/panel-a-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-a-roughness.png",
+      "sha256": "90e6be4aee766311c9a5235e42d0685222ddb3f33123a7a44056527ff6999a1b",
+      "target": "themes/cyberpunk/assets/street-native/panel-a-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-b-ao.png",
+      "sha256": "8ac80b720a1ecff7e0ce72dbe0a4eda619c31e311c6c1dfb93da2cf7705398d6",
+      "target": "themes/cyberpunk/assets/street-native/panel-b-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-b-basecolor.png",
+      "sha256": "99743b2c99dfa31e231367d906c316c44b00ca3912d72c2bd1a87d78b13e31d0",
+      "target": "themes/cyberpunk/assets/street-native/panel-b-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-b-normal.png",
+      "sha256": "dcdb12e88dfebdd0dfee0bc8c2ab939ea3085852626f0b29b6b2cf551e467473",
+      "target": "themes/cyberpunk/assets/street-native/panel-b-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-b-roughness.png",
+      "sha256": "1c37af4f961a9ce3282ee3dd0e80ddf800664cc6e5292e90a67e735ba7d22b3a",
+      "target": "themes/cyberpunk/assets/street-native/panel-b-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-basalt-ao.png",
+      "sha256": "d74a3942bf88cace28beabbc80d56f41f9587e88bcf41f95cf02541b3d9f1f3a",
+      "target": "themes/cyberpunk/assets/street-native/panel-basalt-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-basalt-basecolor.png",
+      "sha256": "dac4dda17f8414ce518f4528c3ee42206ce3d14741fb4fdff2a557f6e8dafd4d",
+      "target": "themes/cyberpunk/assets/street-native/panel-basalt-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-basalt-normal.png",
+      "sha256": "7afacae531dbb3a432a9c2b457d383d77e2cc0a244ae30d1b91422ff25d386bb",
+      "target": "themes/cyberpunk/assets/street-native/panel-basalt-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-basalt-roughness.png",
+      "sha256": "4496e4b27fec2b8e5591495521f28209b419fd7dbeb86cea09a00d43e91af468",
+      "target": "themes/cyberpunk/assets/street-native/panel-basalt-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-c-ao.png",
+      "sha256": "905dbacc2f3c38bf8730db38f5c6a3124d84bd8139d0d4183984b8e8a6052bb8",
+      "target": "themes/cyberpunk/assets/street-native/panel-c-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-c-basecolor.png",
+      "sha256": "14830e0cc8ecc6dde64cb7af7bf453ad4c985a07f6eae0c40bdcc2ebd010a801",
+      "target": "themes/cyberpunk/assets/street-native/panel-c-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-c-normal.png",
+      "sha256": "3c796df3d1667934da295e8c4173faecef174a6abae29e997bd12ac5fd6c5008",
+      "target": "themes/cyberpunk/assets/street-native/panel-c-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-c-roughness.png",
+      "sha256": "b5b46fbc39183166431f2236c018423e2ae7191de4a729ac0415fd6ba44d60e5",
+      "target": "themes/cyberpunk/assets/street-native/panel-c-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-smear.png",
+      "sha256": "1ec0feaaafd23a71e83b52b82b8414f4a2d43d2e9ffb4dae17b299f9d1d200c5",
+      "target": "themes/cyberpunk/assets/street-native/panel-smear.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-terracotta-ao.png",
+      "sha256": "031b9adf0f4858b5bc424ae3c8f972c5e194ffc2e0e4cfae8cc5d5594c246e8f",
+      "target": "themes/cyberpunk/assets/street-native/panel-terracotta-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-terracotta-basecolor.png",
+      "sha256": "ed3e80e3f6b9da790b2965247634538fe8641daa2575a1c0b260f13c52e50b5e",
+      "target": "themes/cyberpunk/assets/street-native/panel-terracotta-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-terracotta-normal.png",
+      "sha256": "aabf9b3421e625926f36721354b0666218f729362d08b69e6afa2cddac5c3395",
+      "target": "themes/cyberpunk/assets/street-native/panel-terracotta-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/panel-terracotta-roughness.png",
+      "sha256": "9ff9fd9782b9d9d1eb868d66f6112f56758ecaee2ac77dd4859ac99c97a8cac7",
+      "target": "themes/cyberpunk/assets/street-native/panel-terracotta-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/paper-panel-ao.png",
+      "sha256": "9baffac0d5b4cf9d3ffe1c5565c1569ffa57566fa495b606a98075fd072ec568",
+      "target": "themes/cyberpunk/assets/street-native/paper-panel-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/paper-panel-basecolor.png",
+      "sha256": "41646c46ae130494f5f9402e3c831b9abdc84d605b1f5b7b1d7398d841b744a5",
+      "target": "themes/cyberpunk/assets/street-native/paper-panel-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/paper-panel-normal.png",
+      "sha256": "1cafc6baeaa50fadef271a2fad98b6b9ad383e78fd98b9cf5ba7b9afe760fe22",
+      "target": "themes/cyberpunk/assets/street-native/paper-panel-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/paper-panel-roughness.png",
+      "sha256": "730c0ded2ae096b2530cc89a626a114bc144c01a0b3a3ae0f70fcec42fbb2978",
+      "target": "themes/cyberpunk/assets/street-native/paper-panel-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/parking-concrete-ao.png",
+      "sha256": "88fc08cc9b47f8c12325b8e73017302fd49d51ec12835e0951334d50635f79c7",
+      "target": "themes/cyberpunk/assets/street-native/parking-concrete-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/parking-concrete-basecolor.png",
+      "sha256": "590eee57d168530c945d2c0b0c5aa2f7e5d1992ad1fb8a6f90fe6573d12f4f46",
+      "target": "themes/cyberpunk/assets/street-native/parking-concrete-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/parking-concrete-normal.png",
+      "sha256": "9c9ee258874d1cd76fa781f5c8f5893b6c84e007bbc92d97f5eea521efa7ce64",
+      "target": "themes/cyberpunk/assets/street-native/parking-concrete-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/parking-concrete-roughness.png",
+      "sha256": "30aa405a639d8fd1a911a6218c7ac886612baf1e8e63b55ed060ef1dcf0e82b6",
+      "target": "themes/cyberpunk/assets/street-native/parking-concrete-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/ramp-mesh-ao.png",
+      "sha256": "d66cfb4f250a6a26761e2280bd9c8f47e057d33fda96b91ae0e065b274e52c1d",
+      "target": "themes/cyberpunk/assets/street-native/ramp-mesh-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/ramp-mesh-basecolor.png",
+      "sha256": "95183e2c1a605abdab445e56a6aaa6a7c3119e10010d3093e3b5bbf5b6baf944",
+      "target": "themes/cyberpunk/assets/street-native/ramp-mesh-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/ramp-mesh-normal.png",
+      "sha256": "1eafa2ebbfe7bc2cc5d7b8d4f7219964ac3ebdfd54d53cdb81f5bbca9444c794",
+      "target": "themes/cyberpunk/assets/street-native/ramp-mesh-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/ramp-mesh-roughness.png",
+      "sha256": "cd96fe6a87ff6af842df6dd575c6fa8eaa0e4f930635e1f9373d245971de5b3c",
+      "target": "themes/cyberpunk/assets/street-native/ramp-mesh-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/service-panel-ao.png",
+      "sha256": "4d37c42089adebdeb9b57b691f97dfeaf1f12dacaad19000637da9668a916ef3",
+      "target": "themes/cyberpunk/assets/street-native/service-panel-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/service-panel-basecolor.png",
+      "sha256": "77c6328f48b6ccd9e590629493fb399b31fae172425e8c69c120889ddc3d67bb",
+      "target": "themes/cyberpunk/assets/street-native/service-panel-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/service-panel-normal.png",
+      "sha256": "0c4315cd312b591e211b369c8888ca87aec4477dbef56cd2974a1f95302cbf20",
+      "target": "themes/cyberpunk/assets/street-native/service-panel-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/service-panel-roughness.png",
+      "sha256": "7fb3011fa2798936d183621684bc6307261f3636cd961d9fc33125f1ec56d51e",
+      "target": "themes/cyberpunk/assets/street-native/service-panel-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/tread-ochre-ao.png",
+      "sha256": "c9fdacd473b7166bee99a3dfb49199d86b869152becb942f62624529e8047091",
+      "target": "themes/cyberpunk/assets/street-native/tread-ochre-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/tread-ochre-basecolor.png",
+      "sha256": "b20a34a6dceacc90cecd1075e0683d6929c0a214ba95c9b8cf646e41fddbd39e",
+      "target": "themes/cyberpunk/assets/street-native/tread-ochre-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/tread-ochre-normal.png",
+      "sha256": "4a6b48baf4373de052e8cc831fcb32fadae97b2a9724c41269c49b14eaa70712",
+      "target": "themes/cyberpunk/assets/street-native/tread-ochre-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/tread-ochre-roughness.png",
+      "sha256": "16019fbf439b8e36ede865259f9e2179453d09a4b6cc6a93f67c9d1023e8565f",
+      "target": "themes/cyberpunk/assets/street-native/tread-ochre-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/tread-steel-ao.png",
+      "sha256": "f685bf0fceddd4502dcc3406c315c8a2c0d98a0d0c3e23fc111f435d254aaff3",
+      "target": "themes/cyberpunk/assets/street-native/tread-steel-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/tread-steel-basecolor.png",
+      "sha256": "573816376349ab09ad1ac51c17e11574c356a54866e52ff270425c436a66efde",
+      "target": "themes/cyberpunk/assets/street-native/tread-steel-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/tread-steel-normal.png",
+      "sha256": "e6f16cc1c194e2129b115e819a5b0cfedaee68b148830ce9116f3ddcd07a8585",
+      "target": "themes/cyberpunk/assets/street-native/tread-steel-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/tread-steel-roughness.png",
+      "sha256": "c4802b3195384bcae58c69c21af20b48683ed664982cf06c3136501cd5e37481",
+      "target": "themes/cyberpunk/assets/street-native/tread-steel-roughness.png"
+    },
+    {
+      "path": "scene/materials/assets/weathered-steel-ao.png",
+      "sha256": "6a897371a48479a879b694e10e7136c71539aa4490f7762e6c6c40342ba96557",
+      "target": "themes/cyberpunk/assets/street-native/weathered-steel-ao.png"
+    },
+    {
+      "path": "scene/materials/assets/weathered-steel-basecolor.png",
+      "sha256": "8591096152f263d49cc16de049d4ecb03d672b8393343d85d57bb95300751515",
+      "target": "themes/cyberpunk/assets/street-native/weathered-steel-basecolor.png"
+    },
+    {
+      "path": "scene/materials/assets/weathered-steel-normal.png",
+      "sha256": "ae8db9e9e0eb016ea5cae566c6fc8b840ab02a2b6ebac05b57110c16e1b14990",
+      "target": "themes/cyberpunk/assets/street-native/weathered-steel-normal.png"
+    },
+    {
+      "path": "scene/materials/assets/weathered-steel-roughness.png",
+      "sha256": "8f98c07db3d84e707d33e32e752186311fdd8de3ff5952ab9fa62565312ad3bf",
+      "target": "themes/cyberpunk/assets/street-native/weathered-steel-roughness.png"
+    },
+    {"path": "scene/street/district/RoadPaint.ts", "sha256": "63e1e3b16da748329604c3af1c9326fcc34076c3f0989fba8eaafca582c8a053"},
+    {"path": "scene/street/district/SurfaceBatch.ts", "sha256": "5998a33b1c662f753cf7ac19259429a1f31ab888e2a28daf6471bf59d7931720"},
+    {"path": "scene/street/district/EdgeRing.ts", "sha256": "38b280fa0d3ddfa495f2ac51727ad3f87b2ae95028bbb3468f7fc40af71e440a"},
+    {"path": "scene/street/district/BlockSurface.ts", "sha256": "f29ec2a3b31f44302e20cc597acccf84d7d55896a9536c783e80785dc426197d"}
+  ]
+}

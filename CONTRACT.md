@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Version: 0.16.32, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
+Version: 0.16.33, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
 ## API
 
@@ -58,6 +58,7 @@ Refinish merges physical changes, resolves the requested finish, and updates var
 | --- | --- | --- |
 | [Exterior styles](bindings/exterior-styles.json) | [Schema](schema/exterior-styles.schema.json) | Version 1, nine palettes in three groups, complete role/variant bindings and facade divisions. |
 | [Street styles](bindings/street-styles.json) | [Schema](schema/street-styles.schema.json) | Maintained, salvaged and industrial families, paving metadata and construction finishes. Optional construction road overrides independent road selection. |
+| [Native street surfaces](bindings/street-native.json) | [Schema](schema/street-native.schema.json) | Version 1 source scan catalog and effect parameters, [sampling contract](sources/streets/scene-native/CONTRACT.md). Paths are relative to this package root; raw shader inputs are separate from MaterialEntry. |
 | [Street markings](bindings/street-markings.json) | [Schema](schema/street-markings.schema.json) | White and dark-orange coatings; geometry owns marking silhouettes. |
 | [Scenic rooms](bindings/window-room-surfaces.json) | [Schema](schema/window-room-surfaces.schema.json) | Five receiving faces and back-image pools for office, apartment and lobby. Preserve aspect when cropping scenic plates. |
 | [Hydrology](bindings/atlas-hydrology.json) | [Schema](schema/atlas-hydrology-bindings.schema.json) | Explicit water.lagoon, water.river and water.sea-coast key/variant pairs. |

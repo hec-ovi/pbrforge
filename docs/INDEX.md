@@ -1,6 +1,6 @@
 # Materials index
 
-Version: 0.16.32.
+Version: 0.16.33.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
@@ -19,6 +19,7 @@ Version: 0.16.32.
 
 ## Authored resources
 
+- [Native street surfaces](../sources/streets/scene-native/CONTRACT.md): original scans, UV rules, shader equations and source hashes for ordinary streets and hardware.
 - [Street sources](../sources/streets/INDEX.md) and [recipes](../batch/cyberpunk/street-image-finishes.json): continuous photographic finish fields.
 - [Street prop sources](../sources/street-props/INDEX.md) and [recipes](../batch/cyberpunk/street-props/): cardboard, wood, coating and polymer.
 - [Exterior sources](../sources/exterior-native/INDEX.md) and [recipes](../batch/cyberpunk/exterior-native/): cast, weathered and graphite concrete.
