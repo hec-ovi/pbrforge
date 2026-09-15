@@ -1,0 +1,27 @@
+{
+  "key": "cyberpunk/facade-chrome/mid",
+  "path": "themes/cyberpunk/assets/exterior-brushed-steel/mid/native/basecolor.png",
+  "alignment": "exact",
+  "description": "Polished silver architectural steel with fine horizontal brushing",
+  "variantId": "native",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "physical": {
+    "metallicFactor": 1,
+    "roughnessFactor": 0.45
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.5
+    ],
+    "grain": 0.03,
+    "relief": 0.025
+  },
+  "aspect": [
+    1,
+    1
+  ]
+}

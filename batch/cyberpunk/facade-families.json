@@ -1,0 +1,128 @@
+[
+  {
+    "key": "cyberpunk/corporate-panel/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "Fine charcoal mineral composite for precision architectural panels",
+    "variantId": "native",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.5
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.55
+      ],
+      "grain": 0.08,
+      "relief": 0.12
+    },
+    "sourceAlbedo": {
+      "path": "sources/facade-families/corporate-panel.png"
+    }
+  },
+  {
+    "key": "cyberpunk/ivory-panel/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "Smooth warm ivory mineral coating for architectural facade panels",
+    "variantId": "native",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.53
+    },
+    "finish": {
+      "roughness": [
+        0.48,
+        0.58
+      ],
+      "grain": 0.08,
+      "relief": 0.08
+    },
+    "sourceAlbedo": {
+      "path": "sources/facade-families/ivory-panel.png"
+    }
+  },
+  {
+    "key": "cyberpunk/ivory-panel/mid",
+    "alignment": "tile",
+    "description": "Cool pale grey mineral coating for faceted bay panels",
+    "append": true,
+    "variantId": "cool-grey",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "recolor": {
+      "from": "native",
+      "color": "#bec5c7",
+      "strength": 0.8,
+      "value": 0.95
+    }
+  },
+  {
+    "key": "cyberpunk/paired-cladding-metal/mid",
+    "alignment": "tile",
+    "description": "Obsidian graphite architectural metal coating",
+    "append": true,
+    "variantId": "obsidian",
+    "resolution": [
+      512,
+      512
+    ],
+    "recolor": {
+      "from": "surface",
+      "color": "#202525",
+      "strength": 0.75,
+      "value": 0.4
+    }
+  },
+  {
+    "key": "cyberpunk/corporate-screen/mid",
+    "alignment": "exact",
+    "aspect": [
+      1,
+      2
+    ],
+    "description": "Portrait corporate optical sphere billboard",
+    "variantId": "native",
+    "resolution": [
+      768,
+      1536
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.06,
+      "emissiveStrength": 8
+    },
+    "flatColor": "#030908",
+    "flatNoise": 0,
+    "emission": "image",
+    "screens": [
+      {
+        "kind": "led-dot",
+        "description": "Ivory sculptural optical sphere against deep cyan data lights",
+        "imagePath": "sources/facade-families/corporate-screen.png",
+        "pitch": 4
+      }
+    ]
+  }
+]

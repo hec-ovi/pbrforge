@@ -1,0 +1,27 @@
+{
+  "key": "cyberpunk/portal-limestone/mid",
+  "path": "sources/facade-families/portal-limestone.png",
+  "alignment": "exact",
+  "aspect": [
+    1,
+    1
+  ],
+  "description": "Pale limestone portal surround with fine restrained grey veins",
+  "variantId": "native",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.48
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.51
+    ],
+    "grain": 0.04,
+    "relief": 0.06
+  }
+}

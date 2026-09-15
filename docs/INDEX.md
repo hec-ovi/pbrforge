@@ -19,6 +19,8 @@ Version: 0.16.36.
 
 ## Authored resources
 
+- [Facade family surfaces](../sources/facade-families/INDEX.md): precision charcoal panels, ivory and grey coatings, portrait screen art, portal stone and polished steel.
+
 - [Garden tower recipes](../batch/cyberpunk/garden-tower.json): pale podium concrete, foliage and reflective black glazing.
 
 - [Native street surfaces](../sources/streets/scene-native/CONTRACT.md): original scans, UV rules, shader equations and source hashes for ordinary streets and hardware.

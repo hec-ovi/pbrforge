@@ -1,0 +1,16 @@
+[
+  {
+    "key": "cyberpunk/facade-chrome/mid",
+    "physical": {
+      "roughnessFactor": 0.16
+    },
+    "finish": {
+      "roughness": [
+        0.12,
+        0.22
+      ],
+      "grain": 0.03,
+      "relief": 0.025
+    }
+  }
+]

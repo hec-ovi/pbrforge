@@ -15841,6 +15841,22 @@
             "ao": "assets/paired-cladding-metal/mid/surface/ao.png",
             "metallicRoughness": "assets/metallic-roughness/214a6c9afb8ccd7a85f16c6a7e288a2fda520a51463e5a5143e1c358f35e61ff.png"
           }
+        },
+        {
+          "id": "obsidian",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/paired-cladding-metal/mid/obsidian/basecolor.png",
+            "normal": "assets/paired-cladding-metal/mid/surface/normal.png",
+            "roughness": "assets/paired-cladding-metal/mid/surface/roughness.png",
+            "metallic": "assets/paired-cladding-metal/mid/surface/metallic.png",
+            "height": "assets/paired-cladding-metal/mid/surface/height.png",
+            "ao": "assets/paired-cladding-metal/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/214a6c9afb8ccd7a85f16c6a7e288a2fda520a51463e5a5143e1c358f35e61ff.png"
+          }
         }
       ]
     },
@@ -16150,6 +16166,220 @@
             "height": "assets/garden-soil/mid/surface/height.png",
             "ao": "assets/garden-soil/mid/surface/ao.png",
             "metallicRoughness": "assets/metallic-roughness/92e8f54eac3dc9456e89266d09c195eb81cb4e69f8a5ec24cfbf5496316284ba.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corporate-panel/mid": {
+      "key": "cyberpunk/corporate-panel/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.08,
+        "relief": 0.12
+      },
+      "variants": [
+        {
+          "id": "native",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/corporate-panel/mid/native/basecolor.png",
+            "normal": "assets/corporate-panel/mid/native/normal.png",
+            "roughness": "assets/corporate-panel/mid/native/roughness.png",
+            "metallic": "assets/corporate-panel/mid/native/metallic.png",
+            "height": "assets/corporate-panel/mid/native/height.png",
+            "ao": "assets/corporate-panel/mid/native/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ed7aae4ba6c53c16bc53330373907d5dd77618482b19819fccf358bc1cd074d7.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ivory-panel/mid": {
+      "key": "cyberpunk/ivory-panel/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.53
+      },
+      "finish": {
+        "roughness": [
+          0.48,
+          0.58
+        ],
+        "grain": 0.08,
+        "relief": 0.08
+      },
+      "variants": [
+        {
+          "id": "native",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ivory-panel/mid/native/basecolor.png",
+            "normal": "assets/ivory-panel/mid/native/normal.png",
+            "roughness": "assets/ivory-panel/mid/native/roughness.png",
+            "metallic": "assets/ivory-panel/mid/native/metallic.png",
+            "height": "assets/ivory-panel/mid/native/height.png",
+            "ao": "assets/ivory-panel/mid/native/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/31ac2096236909f2c8074e2849ba97efa7d852787775ff345bc410133074f711.png"
+          }
+        },
+        {
+          "id": "cool-grey",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ivory-panel/mid/cool-grey/basecolor.png",
+            "normal": "assets/ivory-panel/mid/native/normal.png",
+            "roughness": "assets/ivory-panel/mid/native/roughness.png",
+            "metallic": "assets/ivory-panel/mid/native/metallic.png",
+            "height": "assets/ivory-panel/mid/native/height.png",
+            "ao": "assets/ivory-panel/mid/native/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/31ac2096236909f2c8074e2849ba97efa7d852787775ff345bc410133074f711.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corporate-screen/mid": {
+      "key": "cyberpunk/corporate-screen/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        2
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.06,
+        "emissiveStrength": 8
+      },
+      "variants": [
+        {
+          "id": "native",
+          "class": "flat",
+          "resolution": [
+            768,
+            1536
+          ],
+          "maps": {
+            "basecolor": "assets/corporate-screen/mid/native/basecolor.png",
+            "normal": "assets/corporate-screen/mid/native/normal.png",
+            "roughness": "assets/corporate-screen/mid/native/roughness.png",
+            "metallic": "assets/corporate-screen/mid/native/metallic.png",
+            "height": "assets/corporate-screen/mid/native/height.png",
+            "ao": "assets/corporate-screen/mid/native/ao.png",
+            "emission": "assets/corporate-screen/mid/native/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/af42fa2cba87aa20f163d209cd313b1838e93733d7eab0ad5d1d82bdf29dfad1.png"
+          },
+          "screen": {
+            "kind": "led-dot",
+            "pitch": 4,
+            "artwork": "assets/corporate-screen/mid/native/artwork.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/portal-limestone/mid": {
+      "key": "cyberpunk/portal-limestone/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.48
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.51
+        ],
+        "grain": 0.04,
+        "relief": 0.06
+      },
+      "variants": [
+        {
+          "id": "native",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/portal-limestone/mid/native/basecolor.png",
+            "normal": "assets/portal-limestone/mid/native/normal.png",
+            "roughness": "assets/portal-limestone/mid/native/roughness.png",
+            "height": "assets/portal-limestone/mid/native/height.png",
+            "ao": "assets/portal-limestone/mid/native/ao.png",
+            "metallic": "assets/portal-limestone/mid/native/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/a9ea04b8a8f757e11653e16cabbe106dfdd33c40a83942fac01dcd26d4f1a8f0.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/facade-chrome/mid": {
+      "key": "cyberpunk/facade-chrome/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.16
+      },
+      "finish": {
+        "roughness": [
+          0.12,
+          0.22
+        ],
+        "grain": 0.03,
+        "relief": 0.025
+      },
+      "variants": [
+        {
+          "id": "native",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/facade-chrome/mid/native/basecolor.png",
+            "normal": "assets/facade-chrome/mid/native/normal.png",
+            "roughness": "assets/facade-chrome/mid/native/roughness.png",
+            "height": "assets/facade-chrome/mid/native/height.png",
+            "ao": "assets/facade-chrome/mid/native/ao.png",
+            "metallic": "assets/facade-chrome/mid/native/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/b119c87eec2508b8f05cc2f5d437dc3f60fdae191d57634373eba6faa3f4540b.png"
           }
         }
       ]

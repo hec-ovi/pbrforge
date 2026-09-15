@@ -75,6 +75,8 @@ Paired facade materials use the `cyberpunk/paired-*` keys in [recipes](batch/cyb
 
 Garden tower [recipes](batch/cyberpunk/garden-tower.json) publish pale concrete, two leaf finishes, stems, soil and opaque reflective black glazing. Panel joints, plant forms and balcony bodies belong to geometry.
 
+[Facade family surfaces](sources/facade-families/INDEX.md) publish 1 m charcoal and ivory panel tiles, a cool-grey ivory variant, obsidian metal, exact 1:2 portrait artwork, and exact 1:1 portal limestone and polished steel. Fit exact finishes once per receiving face; geometry owns panel divisions.
+
 ## Letter atlas
 
 `cyberpunk/letter-atlas/<tier>` has exact 4:3 sheets, 1024 x 768, `neon` and `panel` variants. The 8-column, 6-row grid is row-major. Charset: `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.,'!?:/&+` plus trailing space. For a supported uppercase character at index `i`, the UV rectangle is `[(i % 8)/8, floor(i/8)/6, 1/8, 1/6]`. Unknown characters use a blank cell in a sign consumer; rebrand rejects unsupported glyphs.
