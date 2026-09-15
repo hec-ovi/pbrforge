@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.36: paired tower facade finishes, lounge backplate states and ceiling fixture surfaces.
+
 0.16.36: fourteen accepted Exterior native finishes and exact counterparts share byte-identical source maps and canonical native variants.
 
 0.16.35: blue and gold exterior frame coatings with rich aliases, subtle grain and packed response maps.

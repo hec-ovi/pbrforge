@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Asset type: production game material, a single orthographic room back wall plate, 2:1 aspect ratio.
+Primary request: reproduce the quiet futuristic lounge visible through the curved tower glazing in the supplied reference. The image will be fitted to the back wall of a modeled room, with actual modeled ceiling, floors, lights, window frames and curtains in front.
+Input image 1: reference for the lounge furnishings and back wall only.
+Composition: strictly straight-on orthographic elevation of an 8 m wide, 4 m tall wall, filling the image edge to edge. A low pale gray upholstered modular sofa near the lower center, restrained dark green indoor plants at either side, broad light gray mineral wall panels, a central inset of warm gray vertical ribs and thin rectangular brushed metal conduits, a plain tall service doorway at the right. Repeat the reference's proportions and materials closely. Sofa seating surface approximately 0.45 m above floor. Level camera, vertical lines vertical, no perspective convergence.
+Lighting: diffuse neutral baked room light with modest directional shading for furniture depth. Materials remain neutral, suitable for later cyan or warm room illumination.
+Constraints: only the back wall elevation and the furnishings against it. No visible ceiling, side walls, window, glazing, mullions, blinds, curtains, lamps, glowing lines, text, signs, logos, watermarks or exterior scenery. The bottom edge is the wall-floor junction. No surrounding border or collage.

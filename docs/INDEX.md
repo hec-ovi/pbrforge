@@ -27,4 +27,5 @@ Version: 0.16.36.
 - [Exterior accent recipes](../batch/cyberpunk/exterior-accents.json): blue and gold frame coatings with canonical `coat` variants.
 - [Interior sources](../sources/interiors/INDEX.md) and [recipes](../batch/cyberpunk/interiors/): luxury, damaged and capsule finishes.
 - [Room plates](../sources/window-rooms/INDEX.md) and [screen artwork](../sources/ads-codex/PROMPTS.md): retained images and authoring prompts.
+- [Paired facade recipes](../batch/cyberpunk/paired-facade.json): lounge backplate, frame and cladding finishes, room surfaces and ceiling lights.
 - [ComfyUI workflows](../templates/README.md): photographic and upscale templates.

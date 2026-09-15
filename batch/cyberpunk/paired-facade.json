@@ -1,0 +1,280 @@
+[
+  {
+    "key": "cyberpunk/paired-room-lit/mid",
+    "alignment": "exact",
+    "aspect": [
+      2,
+      1
+    ],
+    "description": "Fitted lounge back wall with lit room lighting",
+    "variantId": "lounge",
+    "resolution": [
+      1024,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.65
+    },
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-lounge.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-dim/mid",
+    "alignment": "exact",
+    "aspect": [
+      2,
+      1
+    ],
+    "description": "Fitted lounge back wall with dim room lighting",
+    "variantId": "lounge",
+    "resolution": [
+      1024,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.11
+    },
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-lounge.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-dark/mid",
+    "alignment": "exact",
+    "aspect": [
+      2,
+      1
+    ],
+    "description": "Fitted lounge back wall with dark room lighting",
+    "variantId": "lounge",
+    "resolution": [
+      1024,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.005
+    },
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-lounge.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-frame/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired frame",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#343c39",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0.8,
+      "roughnessFactor": 0.32,
+      "emissiveStrength": 0
+    }
+  },
+  {
+    "key": "cyberpunk/paired-cladding/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired cladding",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#454943",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0.18,
+      "roughnessFactor": 0.54,
+      "emissiveStrength": 0
+    }
+  },
+  {
+    "key": "cyberpunk/paired-rib/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired rib",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#91958b",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0.85,
+      "roughnessFactor": 0.34,
+      "emissiveStrength": 0
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-wall/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired room wall",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#667c76",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.16
+    },
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/paired-room-floor/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired room floor",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#3c4d48",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.12
+    },
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/paired-room-ceiling/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired room ceiling",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#5c726e",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.18
+    },
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/paired-light-cool/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired light cool",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#cefff7",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.4,
+      "emissiveStrength": 5
+    },
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/paired-light-warm/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired light warm",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#faffc9",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.4,
+      "emissiveStrength": 4
+    },
+    "emission": "luminance"
+  },
+  {
+    "key": "cyberpunk/paired-light-off/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired light off",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#324744",
+    "flatNoise": 0.005,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6,
+      "emissiveStrength": 0
+    }
+  }
+]

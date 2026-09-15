@@ -69,6 +69,10 @@ Exterior frame coatings are published as `cyberpunk/exterior-accent-blue/mid` an
 
 Fourteen accepted Exterior finishes retain their source `cyberpunk/exterior-<finish>/mid` keys, `native` variant, physical values and map bytes. Each also has an `exterior-<finish>-exact` counterpart with aspect `[1,1]`, sharing those maps. The [source manifest](sources/exterior-native/accepted.json) lists all 28 keys and 98 map hashes. Original entries retain their tile scale or exact alignment; the AC coil is exact in both entries.
 
+## Paired facade
+
+Paired facade materials use the `cyberpunk/paired-*` keys in [recipes](batch/cyberpunk/paired-facade.json). The lounge backplate is exact 2:1, with separate lit, dim and dark keys. Frame, cladding, ribs, room surfaces and light faces use 1 m tiles. Geometry owns all window frames, ceiling fixture positions and coverings.
+
 ## Letter atlas
 
 `cyberpunk/letter-atlas/<tier>` has exact 4:3 sheets, 1024 x 768, `neon` and `panel` variants. The 8-column, 6-row grid is row-major. Charset: `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.,'!?:/&+` plus trailing space. For a supported uppercase character at index `i`, the UV rectangle is `[(i % 8)/8, floor(i/8)/6, 1/8, 1/6]`. Unknown characters use a blank cell in a sign consumer; rebrand rejects unsupported glyphs.
