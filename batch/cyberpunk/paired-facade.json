@@ -15,7 +15,7 @@
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 1,
-      "emissiveStrength": 0.65
+      "emissiveStrength": 6
     },
     "sourceImage": {
       "path": "sources/window-rooms/paired-lounge.png"
@@ -37,7 +37,7 @@
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 1,
-      "emissiveStrength": 0.11
+      "emissiveStrength": 0.45
     },
     "sourceImage": {
       "path": "sources/window-rooms/paired-lounge.png"
@@ -59,7 +59,7 @@
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 1,
-      "emissiveStrength": 0.005
+      "emissiveStrength": 0.003
     },
     "sourceImage": {
       "path": "sources/window-rooms/paired-lounge.png"
@@ -136,75 +136,69 @@
   },
   {
     "key": "cyberpunk/paired-room-wall/mid",
-    "alignment": "tile",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
+    "alignment": "exact",
     "description": "paired room wall",
     "variantId": "surface",
     "resolution": [
       128,
       128
     ],
-    "flatColor": "#667c76",
-    "flatNoise": 0.005,
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 1,
-      "emissiveStrength": 0.16
+      "emissiveStrength": 2.5
     },
-    "emission": "luminance"
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-wall.png"
+    }
   },
   {
     "key": "cyberpunk/paired-room-floor/mid",
-    "alignment": "tile",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
+    "alignment": "exact",
     "description": "paired room floor",
     "variantId": "surface",
     "resolution": [
       128,
       128
     ],
-    "flatColor": "#3c4d48",
-    "flatNoise": 0.005,
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 1,
-      "emissiveStrength": 0.12
+      "emissiveStrength": 1.5
     },
-    "emission": "luminance"
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-floor.png"
+    }
   },
   {
     "key": "cyberpunk/paired-room-ceiling/mid",
-    "alignment": "tile",
-    "tiling": {
-      "worldSize": [
-        1,
-        1
-      ]
-    },
+    "alignment": "exact",
     "description": "paired room ceiling",
     "variantId": "surface",
     "resolution": [
       128,
       128
     ],
-    "flatColor": "#5c726e",
-    "flatNoise": 0.005,
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 1,
-      "emissiveStrength": 0.18
+      "emissiveStrength": 1.5
     },
-    "emission": "luminance"
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-ceiling.png"
+    }
   },
   {
     "key": "cyberpunk/paired-light-cool/mid",
@@ -226,7 +220,7 @@
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 0.4,
-      "emissiveStrength": 5
+      "emissiveStrength": 140
     },
     "emission": "luminance"
   },
@@ -250,7 +244,7 @@
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 0.4,
-      "emissiveStrength": 4
+      "emissiveStrength": 120
     },
     "emission": "luminance"
   },
@@ -275,6 +269,258 @@
       "metallicFactor": 0,
       "roughnessFactor": 0.6,
       "emissiveStrength": 0
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-wall-dim/mid",
+    "alignment": "exact",
+    "description": "paired room wall dim",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.25
+    },
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-wall.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-floor-dim/mid",
+    "alignment": "exact",
+    "description": "paired room floor dim",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.15000000000000002
+    },
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-floor.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-ceiling-dim/mid",
+    "alignment": "exact",
+    "description": "paired room ceiling dim",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.15000000000000002
+    },
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-ceiling.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-wall-dark/mid",
+    "alignment": "exact",
+    "description": "paired room wall dark",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.0025
+    },
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-wall.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-floor-dark/mid",
+    "alignment": "exact",
+    "description": "paired room floor dark",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.0015
+    },
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-floor.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-room-ceiling-dark/mid",
+    "alignment": "exact",
+    "description": "paired room ceiling dark",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 1,
+      "emissiveStrength": 0.0015
+    },
+    "aspect": [
+      1,
+      1
+    ],
+    "sourceImage": {
+      "path": "sources/window-rooms/paired-room-ceiling.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-cladding-metal/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "paired cladding metal",
+    "variantId": "surface",
+    "resolution": [
+      512,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.45
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.55
+      ],
+      "grain": 0.15,
+      "relief": 0.25
+    },
+    "sourceAlbedo": {
+      "path": "sources/window-rooms/paired-graphite-coating.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-frame-metal/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "description": "paired frame metal",
+    "variantId": "surface",
+    "resolution": [
+      512,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.45
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.55
+      ],
+      "grain": 0.15,
+      "relief": 0.25
+    },
+    "sourceAlbedo": {
+      "path": "sources/window-rooms/paired-graphite-coating.png"
+    }
+  },
+  {
+    "key": "cyberpunk/paired-blind/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "description": "fine horizontal aluminum brushing on formed window louvers",
+    "variantId": "surface",
+    "resolution": [
+      512,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.45
+    },
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#9da9a6",
+        "#b3bfbc"
+      ],
+      "cells": [
+        2,
+        128
+      ],
+      "octaves": 2,
+      "depth": 8e-05
+    }
+  },
+  {
+    "key": "cyberpunk/paired-window-glass/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "clear lightly cyan architectural glass",
+    "variantId": "clear",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#f4ffff",
+    "flatNoise": 0,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.035,
+      "transmission": 0.96,
+      "ior": 1.46,
+      "tint": "#d4f4ef"
     }
   }
 ]

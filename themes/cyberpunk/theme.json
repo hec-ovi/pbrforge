@@ -15211,7 +15211,7 @@
       "physical": {
         "metallicFactor": 0,
         "roughnessFactor": 1,
-        "emissiveStrength": 0.65
+        "emissiveStrength": 6
       },
       "variants": [
         {
@@ -15244,7 +15244,7 @@
       "physical": {
         "metallicFactor": 0,
         "roughnessFactor": 1,
-        "emissiveStrength": 0.11
+        "emissiveStrength": 0.45
       },
       "variants": [
         {
@@ -15277,7 +15277,7 @@
       "physical": {
         "metallicFactor": 0,
         "roughnessFactor": 1,
-        "emissiveStrength": 0.005
+        "emissiveStrength": 0.003
       },
       "variants": [
         {
@@ -15404,22 +15404,20 @@
     },
     "cyberpunk/paired-room-wall/mid": {
       "key": "cyberpunk/paired-room-wall/mid",
-      "alignment": "tile",
-      "tiling": {
-        "worldSize": [
-          1,
-          1
-        ]
-      },
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
       "physical": {
         "metallicFactor": 0,
         "roughnessFactor": 1,
-        "emissiveStrength": 0.16
+        "emissiveStrength": 2.5
       },
       "variants": [
         {
           "id": "surface",
-          "class": "flat",
+          "class": "plate",
           "resolution": [
             128,
             128
@@ -15439,22 +15437,20 @@
     },
     "cyberpunk/paired-room-floor/mid": {
       "key": "cyberpunk/paired-room-floor/mid",
-      "alignment": "tile",
-      "tiling": {
-        "worldSize": [
-          1,
-          1
-        ]
-      },
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
       "physical": {
         "metallicFactor": 0,
         "roughnessFactor": 1,
-        "emissiveStrength": 0.12
+        "emissiveStrength": 1.5
       },
       "variants": [
         {
           "id": "surface",
-          "class": "flat",
+          "class": "plate",
           "resolution": [
             128,
             128
@@ -15474,22 +15470,20 @@
     },
     "cyberpunk/paired-room-ceiling/mid": {
       "key": "cyberpunk/paired-room-ceiling/mid",
-      "alignment": "tile",
-      "tiling": {
-        "worldSize": [
-          1,
-          1
-        ]
-      },
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
       "physical": {
         "metallicFactor": 0,
         "roughnessFactor": 1,
-        "emissiveStrength": 0.18
+        "emissiveStrength": 1.5
       },
       "variants": [
         {
           "id": "surface",
-          "class": "flat",
+          "class": "plate",
           "resolution": [
             128,
             128
@@ -15519,7 +15513,7 @@
       "physical": {
         "metallicFactor": 0,
         "roughnessFactor": 0.4,
-        "emissiveStrength": 5
+        "emissiveStrength": 140
       },
       "variants": [
         {
@@ -15554,7 +15548,7 @@
       "physical": {
         "metallicFactor": 0,
         "roughnessFactor": 0.4,
-        "emissiveStrength": 4
+        "emissiveStrength": 120
       },
       "variants": [
         {
@@ -15607,6 +15601,355 @@
             "height": "assets/paired-light-off/mid/surface/height.png",
             "ao": "assets/paired-light-off/mid/surface/ao.png",
             "metallicRoughness": "assets/metallic-roughness/4d90099c4d58e11a0e75a6d0a7f16a6ea61be71a44ff2411feaebe4dfd21b65f.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-room-wall-dim/mid": {
+      "key": "cyberpunk/paired-room-wall-dim/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 1,
+        "emissiveStrength": 0.25
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "plate",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/paired-room-wall-dim/mid/surface/basecolor.png",
+            "normal": "assets/paired-room-wall-dim/mid/surface/normal.png",
+            "roughness": "assets/paired-room-wall-dim/mid/surface/roughness.png",
+            "metallic": "assets/paired-room-wall-dim/mid/surface/metallic.png",
+            "height": "assets/paired-room-wall-dim/mid/surface/height.png",
+            "ao": "assets/paired-room-wall-dim/mid/surface/ao.png",
+            "emission": "assets/paired-room-wall-dim/mid/surface/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/f5fbf352a6fa675099f8dcac110a63053fd4d27a623989960482dfd08a17964c.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-room-floor-dim/mid": {
+      "key": "cyberpunk/paired-room-floor-dim/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 1,
+        "emissiveStrength": 0.15000000000000002
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "plate",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/paired-room-floor-dim/mid/surface/basecolor.png",
+            "normal": "assets/paired-room-floor-dim/mid/surface/normal.png",
+            "roughness": "assets/paired-room-floor-dim/mid/surface/roughness.png",
+            "metallic": "assets/paired-room-floor-dim/mid/surface/metallic.png",
+            "height": "assets/paired-room-floor-dim/mid/surface/height.png",
+            "ao": "assets/paired-room-floor-dim/mid/surface/ao.png",
+            "emission": "assets/paired-room-floor-dim/mid/surface/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/5e4fc3d4a371ba9aee79ffd1d6686002b5e2288899c2b5c68961ffb11d46ef87.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-room-ceiling-dim/mid": {
+      "key": "cyberpunk/paired-room-ceiling-dim/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 1,
+        "emissiveStrength": 0.15000000000000002
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "plate",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/paired-room-ceiling-dim/mid/surface/basecolor.png",
+            "normal": "assets/paired-room-ceiling-dim/mid/surface/normal.png",
+            "roughness": "assets/paired-room-ceiling-dim/mid/surface/roughness.png",
+            "metallic": "assets/paired-room-ceiling-dim/mid/surface/metallic.png",
+            "height": "assets/paired-room-ceiling-dim/mid/surface/height.png",
+            "ao": "assets/paired-room-ceiling-dim/mid/surface/ao.png",
+            "emission": "assets/paired-room-ceiling-dim/mid/surface/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/6914e126f90b72b25d5e7ff1ce63cc756e03624845f7e524b9bdbaa8cd766ce0.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-room-wall-dark/mid": {
+      "key": "cyberpunk/paired-room-wall-dark/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 1,
+        "emissiveStrength": 0.0025
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "plate",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/paired-room-wall-dark/mid/surface/basecolor.png",
+            "normal": "assets/paired-room-wall-dark/mid/surface/normal.png",
+            "roughness": "assets/paired-room-wall-dark/mid/surface/roughness.png",
+            "metallic": "assets/paired-room-wall-dark/mid/surface/metallic.png",
+            "height": "assets/paired-room-wall-dark/mid/surface/height.png",
+            "ao": "assets/paired-room-wall-dark/mid/surface/ao.png",
+            "emission": "assets/paired-room-wall-dark/mid/surface/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/ede8596dc08c2a2e79cd3a462b8af9ee1a197e9c4806451079ad1dbab7579ddc.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-room-floor-dark/mid": {
+      "key": "cyberpunk/paired-room-floor-dark/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 1,
+        "emissiveStrength": 0.0015
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "plate",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/paired-room-floor-dark/mid/surface/basecolor.png",
+            "normal": "assets/paired-room-floor-dark/mid/surface/normal.png",
+            "roughness": "assets/paired-room-floor-dark/mid/surface/roughness.png",
+            "metallic": "assets/paired-room-floor-dark/mid/surface/metallic.png",
+            "height": "assets/paired-room-floor-dark/mid/surface/height.png",
+            "ao": "assets/paired-room-floor-dark/mid/surface/ao.png",
+            "emission": "assets/paired-room-floor-dark/mid/surface/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/f7701453a2b11a3935526645409bf1a629afda9222bf42d77b7a92b9ad5267c9.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-room-ceiling-dark/mid": {
+      "key": "cyberpunk/paired-room-ceiling-dark/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 1,
+        "emissiveStrength": 0.0015
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "plate",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/paired-room-ceiling-dark/mid/surface/basecolor.png",
+            "normal": "assets/paired-room-ceiling-dark/mid/surface/normal.png",
+            "roughness": "assets/paired-room-ceiling-dark/mid/surface/roughness.png",
+            "metallic": "assets/paired-room-ceiling-dark/mid/surface/metallic.png",
+            "height": "assets/paired-room-ceiling-dark/mid/surface/height.png",
+            "ao": "assets/paired-room-ceiling-dark/mid/surface/ao.png",
+            "emission": "assets/paired-room-ceiling-dark/mid/surface/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/298bcdee9157c81cae8edca775bb8269db3d28018946def4e8745f91da6e503c.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-cladding-metal/mid": {
+      "key": "cyberpunk/paired-cladding-metal/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.45
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.15,
+        "relief": 0.25
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/paired-cladding-metal/mid/surface/basecolor.png",
+            "normal": "assets/paired-cladding-metal/mid/surface/normal.png",
+            "roughness": "assets/paired-cladding-metal/mid/surface/roughness.png",
+            "metallic": "assets/paired-cladding-metal/mid/surface/metallic.png",
+            "height": "assets/paired-cladding-metal/mid/surface/height.png",
+            "ao": "assets/paired-cladding-metal/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/214a6c9afb8ccd7a85f16c6a7e288a2fda520a51463e5a5143e1c358f35e61ff.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-frame-metal/mid": {
+      "key": "cyberpunk/paired-frame-metal/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.45
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.55
+        ],
+        "grain": 0.15,
+        "relief": 0.25
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/paired-frame-metal/mid/surface/basecolor.png",
+            "normal": "assets/paired-frame-metal/mid/surface/normal.png",
+            "roughness": "assets/paired-frame-metal/mid/surface/roughness.png",
+            "metallic": "assets/paired-frame-metal/mid/surface/metallic.png",
+            "height": "assets/paired-frame-metal/mid/surface/height.png",
+            "ao": "assets/paired-frame-metal/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/aea611715d574d7d9c6751d26dbb57fed8f2f22970e98f55509d48994d01ec0f.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-blind/mid": {
+      "key": "cyberpunk/paired-blind/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.45
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/paired-blind/mid/surface/basecolor.png",
+            "normal": "assets/paired-blind/mid/surface/normal.png",
+            "roughness": "assets/paired-blind/mid/surface/roughness.png",
+            "metallic": "assets/paired-blind/mid/surface/metallic.png",
+            "height": "assets/paired-blind/mid/surface/height.png",
+            "ao": "assets/paired-blind/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/7c085240d77880fcd2bdc1ba475793d67df26763c86b79906d2629ee7598f6fd.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/paired-window-glass/mid": {
+      "key": "cyberpunk/paired-window-glass/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.035,
+        "transmission": 0.96,
+        "ior": 1.46,
+        "tint": "#d4f4ef"
+      },
+      "variants": [
+        {
+          "id": "clear",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/paired-window-glass/mid/clear/basecolor.png",
+            "normal": "assets/paired-window-glass/mid/clear/normal.png",
+            "roughness": "assets/paired-window-glass/mid/clear/roughness.png",
+            "metallic": "assets/paired-window-glass/mid/clear/metallic.png",
+            "height": "assets/paired-window-glass/mid/clear/height.png",
+            "ao": "assets/paired-window-glass/mid/clear/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/60104a5d2cdce9be5cdb45680825ee808f1f27bfa53aebc39e187634a93905e2.png"
           }
         }
       ]
