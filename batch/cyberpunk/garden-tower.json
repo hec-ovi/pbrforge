@@ -1,0 +1,147 @@
+[
+  {
+    "key": "cyberpunk/paired-window-black/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "description": "dark reflective architectural glass with rooms unlit",
+    "variantId": "black",
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#111b1d",
+    "flatNoise": 0,
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.06,
+      "transmission": 0,
+      "ior": 1.5
+    }
+  },
+  {
+    "key": "cyberpunk/garden-concrete/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "description": "garden concrete",
+    "variantId": "surface",
+    "resolution": [
+      512,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.7
+    },
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#c9c7bd",
+        "#d1cfc5"
+      ],
+      "cells": [
+        7,
+        7
+      ],
+      "octaves": 3,
+      "depth": 0.0003
+    }
+  },
+  {
+    "key": "cyberpunk/garden-leaf/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "description": "garden leaf",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6
+    },
+    "flatColor": "#29432a",
+    "flatNoise": 0.035
+  },
+  {
+    "key": "cyberpunk/garden-leaf-light/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "description": "garden leaf light",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.55
+    },
+    "flatColor": "#69784c",
+    "flatNoise": 0.035
+  },
+  {
+    "key": "cyberpunk/garden-stem/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "description": "garden stem",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.8
+    },
+    "flatColor": "#4e4934",
+    "flatNoise": 0.035
+  },
+  {
+    "key": "cyberpunk/garden-soil/mid",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "description": "garden soil",
+    "variantId": "surface",
+    "resolution": [
+      128,
+      128
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.94
+    },
+    "flatColor": "#201d17",
+    "flatNoise": 0.035
+  }
+]

@@ -19,6 +19,8 @@ Version: 0.16.36.
 
 ## Authored resources
 
+- [Garden tower recipes](../batch/cyberpunk/garden-tower.json): pale podium concrete, foliage and reflective black glazing.
+
 - [Native street surfaces](../sources/streets/scene-native/CONTRACT.md): original scans, UV rules, shader equations and source hashes for ordinary streets and hardware.
 - [Street sources](../sources/streets/INDEX.md) and [recipes](../batch/cyberpunk/street-image-finishes.json): continuous photographic finish fields.
 - [Street prop sources](../sources/street-props/INDEX.md) and [recipes](../batch/cyberpunk/street-props/): cardboard, wood, coating and polymer.

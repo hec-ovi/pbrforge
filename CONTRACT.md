@@ -73,6 +73,8 @@ Fourteen accepted Exterior finishes retain their source `cyberpunk/exterior-<fin
 
 Paired facade materials use the `cyberpunk/paired-*` keys in [recipes](batch/cyberpunk/paired-facade.json). The lounge backplate is exact 2:1, with separate lit, dim and dark keys. Frame, cladding, ribs, room surfaces and light faces declare their metre scale in the recipes. Paired metal finishes use photographed graphite coating; formed blinds use periodic aluminum brushing. Lit, dim and dark room surfaces have separate emission levels. Paired upper glazing transmits 96 percent. Geometry owns all window frames, ceiling fixture positions and coverings.
 
+Garden tower [recipes](batch/cyberpunk/garden-tower.json) publish pale concrete, two leaf finishes, stems, soil and opaque reflective black glazing. Panel joints, plant forms and balcony bodies belong to geometry.
+
 ## Letter atlas
 
 `cyberpunk/letter-atlas/<tier>` has exact 4:3 sheets, 1024 x 768, `neon` and `panel` variants. The 8-column, 6-row grid is row-major. Charset: `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.,'!?:/&+` plus trailing space. For a supported uppercase character at index `i`, the UV rectangle is `[(i % 8)/8, floor(i/8)/6, 1/8, 1/6]`. Unknown characters use a blank cell in a sign consumer; rebrand rejects unsupported glyphs.

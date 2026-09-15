@@ -15953,6 +15953,206 @@
           }
         }
       ]
+    },
+    "cyberpunk/paired-window-black/mid": {
+      "key": "cyberpunk/paired-window-black/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.06,
+        "transmission": 0,
+        "ior": 1.5
+      },
+      "variants": [
+        {
+          "id": "black",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/paired-window-black/mid/black/basecolor.png",
+            "normal": "assets/paired-window-black/mid/black/normal.png",
+            "roughness": "assets/paired-window-black/mid/black/roughness.png",
+            "metallic": "assets/paired-window-black/mid/black/metallic.png",
+            "height": "assets/paired-window-black/mid/black/height.png",
+            "ao": "assets/paired-window-black/mid/black/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/7754ccb129c0f781ca2bbfb14c29f9408a21ad1bd6af1021630f7d93140c6ab5.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/garden-concrete/mid": {
+      "key": "cyberpunk/garden-concrete/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/garden-concrete/mid/surface/basecolor.png",
+            "normal": "assets/garden-concrete/mid/surface/normal.png",
+            "roughness": "assets/garden-concrete/mid/surface/roughness.png",
+            "metallic": "assets/garden-concrete/mid/surface/metallic.png",
+            "height": "assets/garden-concrete/mid/surface/height.png",
+            "ao": "assets/garden-concrete/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/fc7368167175ea32869991f28ed865cbd44aeda499da4a1b0e6b0f4459e45b3d.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/garden-leaf/mid": {
+      "key": "cyberpunk/garden-leaf/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/garden-leaf/mid/surface/basecolor.png",
+            "normal": "assets/garden-leaf/mid/surface/normal.png",
+            "roughness": "assets/garden-leaf/mid/surface/roughness.png",
+            "metallic": "assets/garden-leaf/mid/surface/metallic.png",
+            "height": "assets/garden-leaf/mid/surface/height.png",
+            "ao": "assets/garden-leaf/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/7d87ed3253b9867cb41870ea21266eff86898a557eef571f52974a642aec2232.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/garden-leaf-light/mid": {
+      "key": "cyberpunk/garden-leaf-light/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.55
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/garden-leaf-light/mid/surface/basecolor.png",
+            "normal": "assets/garden-leaf-light/mid/surface/normal.png",
+            "roughness": "assets/garden-leaf-light/mid/surface/roughness.png",
+            "metallic": "assets/garden-leaf-light/mid/surface/metallic.png",
+            "height": "assets/garden-leaf-light/mid/surface/height.png",
+            "ao": "assets/garden-leaf-light/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/286ea61dae01fdb7b8a8fd55814bfb22414504215a4a8b22de11eb71ce883f94.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/garden-stem/mid": {
+      "key": "cyberpunk/garden-stem/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/garden-stem/mid/surface/basecolor.png",
+            "normal": "assets/garden-stem/mid/surface/normal.png",
+            "roughness": "assets/garden-stem/mid/surface/roughness.png",
+            "metallic": "assets/garden-stem/mid/surface/metallic.png",
+            "height": "assets/garden-stem/mid/surface/height.png",
+            "ao": "assets/garden-stem/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/126a83468cb35f545be6719aef9a515b1a1b32b02af11602dd999d3a51567968.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/garden-soil/mid": {
+      "key": "cyberpunk/garden-soil/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.94
+      },
+      "variants": [
+        {
+          "id": "surface",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/garden-soil/mid/surface/basecolor.png",
+            "normal": "assets/garden-soil/mid/surface/normal.png",
+            "roughness": "assets/garden-soil/mid/surface/roughness.png",
+            "metallic": "assets/garden-soil/mid/surface/metallic.png",
+            "height": "assets/garden-soil/mid/surface/height.png",
+            "ao": "assets/garden-soil/mid/surface/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/92e8f54eac3dc9456e89266d09c195eb81cb4e69f8a5ec24cfbf5496316284ba.png"
+          }
+        }
+      ]
     }
   }
 }

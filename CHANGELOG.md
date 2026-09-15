@@ -1,5 +1,7 @@
 # Changelog
 
+0.16.36: garden tower concrete, vegetation finishes and reflective black glazing.
+
 0.16.36: paired graphite metal and brushed aluminum, clear upper glazing and cyan room surface states.
 
 0.16.36: paired tower facade finishes, lounge backplate states and ceiling fixture surfaces.
