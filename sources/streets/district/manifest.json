@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "recipes": "batch/cyberpunk/district-streets.json",
+  "files": [
+    {
+      "target": "themes/cyberpunk/assets/district-hex/rich/subtle/basecolor.png",
+      "sha256": "509628ed54c9ddf19f3aed972745de2f4163678bce65a20059b9658cf1a1f856"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-hex/rich/subtle/normal.png",
+      "sha256": "d3d821e8f579625fa6276c7243425210c6eeb8424f7d30f04b1f2047752ffd31"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-hex/rich/subtle/roughness.png",
+      "sha256": "6dd32aac617c2ded47ff55d26c7b5a5964832d8859644dfb74f16da2e8fc6194"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-hex/rich/subtle/ao.png",
+      "sha256": "4659c281fc36e8213ecf075ea4d54bdcf61cf9c03d3db2e70874ad0417584fc1"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-blue/rich/clean/basecolor.png",
+      "sha256": "e8d636549ca8bbc830fe89a88582ac2ab994ce7a0e73f189e9cf39dc010ee4f2"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-blue/rich/clean/normal.png",
+      "sha256": "3c5472b590ec3382e168b96f755516cd08e19579d9ddd8a8085d72f09fa0840d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-blue/rich/clean/roughness.png",
+      "sha256": "ffe8ab99be25ff7747ed6e8e17a52382f89aa3d60f842a7e9149e3edc7ac7084"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-blue/rich/clean/ao.png",
+      "sha256": "7e028966597d4dd0c20c93b79c672002f189c7a58e2cda413612f853b7c41284"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-red/rich/clean/basecolor.png",
+      "sha256": "f78cf6d53e4236eb9ec9bc867555abebd49ff2bdb4c9c2f76149c2f6d2a672ee"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-red/rich/clean/normal.png",
+      "sha256": "3c5472b590ec3382e168b96f755516cd08e19579d9ddd8a8085d72f09fa0840d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-red/rich/clean/roughness.png",
+      "sha256": "ffe8ab99be25ff7747ed6e8e17a52382f89aa3d60f842a7e9149e3edc7ac7084"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-red/rich/clean/ao.png",
+      "sha256": "7e028966597d4dd0c20c93b79c672002f189c7a58e2cda413612f853b7c41284"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-dark/rich/clean/basecolor.png",
+      "sha256": "94d1d456551a2a9dd525542030937bb79234c0d5724f279c75dd7f170b7db2af"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-dark/rich/clean/normal.png",
+      "sha256": "3c5472b590ec3382e168b96f755516cd08e19579d9ddd8a8085d72f09fa0840d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-dark/rich/clean/roughness.png",
+      "sha256": "b036af6ab4c24c858152401ddce8414633c83f25474fb6955389e0141353d190"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-panel-dark/rich/clean/ao.png",
+      "sha256": "7e028966597d4dd0c20c93b79c672002f189c7a58e2cda413612f853b7c41284"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-blue/rich/clean/basecolor.png",
+      "sha256": "0f577f284cec2948456574e5425c71c4a1e51fe25dcfbbf4b994777cc8f1eadc"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-blue/rich/clean/normal.png",
+      "sha256": "3c5472b590ec3382e168b96f755516cd08e19579d9ddd8a8085d72f09fa0840d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-blue/rich/clean/roughness.png",
+      "sha256": "502a05f5054e1a92e3e17d22baff6859615b68fef58329a1acd51688799b0562"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-blue/rich/clean/ao.png",
+      "sha256": "7e028966597d4dd0c20c93b79c672002f189c7a58e2cda413612f853b7c41284"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-red/rich/clean/basecolor.png",
+      "sha256": "04dbb49b204e509fae443ad9d65e50cf31a9a7fa9fc4e9fa3896b2f480841576"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-red/rich/clean/normal.png",
+      "sha256": "3c5472b590ec3382e168b96f755516cd08e19579d9ddd8a8085d72f09fa0840d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-red/rich/clean/roughness.png",
+      "sha256": "502a05f5054e1a92e3e17d22baff6859615b68fef58329a1acd51688799b0562"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-red/rich/clean/ao.png",
+      "sha256": "7e028966597d4dd0c20c93b79c672002f189c7a58e2cda413612f853b7c41284"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-yellow/rich/clean/basecolor.png",
+      "sha256": "1b06ceeb6000ac4e73b61e351ffea795a83e74e80d8115b6f63616a5c24d5788"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-yellow/rich/clean/normal.png",
+      "sha256": "3c5472b590ec3382e168b96f755516cd08e19579d9ddd8a8085d72f09fa0840d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-yellow/rich/clean/roughness.png",
+      "sha256": "1e359e7c66b4c907cd26eb41d411bf75de11492eb2e3a82b8d173772a4f8d3ca"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-curb-yellow/rich/clean/ao.png",
+      "sha256": "7e028966597d4dd0c20c93b79c672002f189c7a58e2cda413612f853b7c41284"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-junction-blue/rich/clean/basecolor.png",
+      "sha256": "8c72208e4f4c488f3a1e51e92f58f77a668e134bb8f6ec5711783fc0454b1a29"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-junction-blue/rich/clean/normal.png",
+      "sha256": "3c5472b590ec3382e168b96f755516cd08e19579d9ddd8a8085d72f09fa0840d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-junction-blue/rich/clean/roughness.png",
+      "sha256": "2d98feaec4ca09b3d034e71ee09e038ab7fdc120056e2051c73940ca2a627320"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-junction-blue/rich/clean/ao.png",
+      "sha256": "7e028966597d4dd0c20c93b79c672002f189c7a58e2cda413612f853b7c41284"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-junction-yellow/rich/clean/basecolor.png",
+      "sha256": "bce67a2ac7755080e914f345eef6a2b0dacc4472a266ee506c9d8406bdaa8836"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-junction-yellow/rich/clean/normal.png",
+      "sha256": "3c5472b590ec3382e168b96f755516cd08e19579d9ddd8a8085d72f09fa0840d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-junction-yellow/rich/clean/roughness.png",
+      "sha256": "d8b5ee06dac2c5393920dca3a353a05da7f447c7cc9543c90bd289d1be233e92"
+    },
+    {
+      "target": "themes/cyberpunk/assets/district-junction-yellow/rich/clean/ao.png",
+      "sha256": "7e028966597d4dd0c20c93b79c672002f189c7a58e2cda413612f853b7c41284"
+    },
+    {
+      "target": "themes/cyberpunk/assets/letter-atlas/rich/neon/emission.png",
+      "sha256": "9ab0f995cb9edc776a9380012fa4fd57503f5b77568dbec35c766d63c0b8dd4f"
+    }
+  ],
+  "surfaces": [
+    "district-hex",
+    "district-panel-blue",
+    "district-panel-red",
+    "district-panel-dark",
+    "district-curb-blue",
+    "district-curb-red",
+    "district-curb-yellow",
+    "district-junction-blue",
+    "district-junction-yellow",
+    "district-gutter-blue",
+    "district-gutter-red",
+    "district-gutter-yellow",
+    "district-marquee",
+    "district-parking-light"
+  ]
+}

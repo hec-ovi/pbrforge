@@ -2,7 +2,7 @@
 
 Purpose: derives a dry PBR set from one opaque JPEG or PNG.
 
-Version: 0.16.36.
+Version: 0.16.37.
 
 ## Input
 

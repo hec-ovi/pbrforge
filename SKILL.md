@@ -5,7 +5,7 @@ description: Resolve, list or author reusable PBR material sets through the urbe
 
 # Materials
 
-Version: 0.16.36. Materials generates and stores themed PBR maps with physical scale, resolved by `theme/kind/tier`.
+Version: 0.16.37. Materials generates and stores themed PBR maps with physical scale, resolved by `theme/kind/tier`.
 
 ## Call
 

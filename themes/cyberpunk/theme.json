@@ -16383,6 +16383,303 @@
           }
         }
       ]
+    },
+    "cyberpunk/district-hex/rich": {
+      "key": "cyberpunk/district-hex/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.2,
+          2.078460969
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.42,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "subtle",
+          "class": "pattern",
+          "resolution": [
+            512,
+            887
+          ],
+          "maps": {
+            "basecolor": "assets/district-hex/rich/subtle/basecolor.png",
+            "normal": "assets/district-hex/rich/subtle/normal.png",
+            "roughness": "assets/district-hex/rich/subtle/roughness.png",
+            "metallic": "assets/district-hex/rich/subtle/metallic.png",
+            "height": "assets/district-hex/rich/subtle/height.png",
+            "ao": "assets/district-hex/rich/subtle/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/c7a4d1ca37329a776ef03cc6c1e39809b6dea6adc9af64e58e19574c38ab88d6.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/district-panel-blue/rich": {
+      "key": "cyberpunk/district-panel-blue/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.23,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "flat",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/district-panel-blue/rich/clean/basecolor.png",
+            "normal": "assets/district-panel-blue/rich/clean/normal.png",
+            "roughness": "assets/district-panel-blue/rich/clean/roughness.png",
+            "metallic": "assets/district-panel-blue/rich/clean/metallic.png",
+            "height": "assets/district-panel-blue/rich/clean/height.png",
+            "ao": "assets/district-panel-blue/rich/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/13a2c5c1c1ec729089d20a457c9878e707476b8b02de22e22338262094417ecf.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/district-panel-red/rich": {
+      "key": "cyberpunk/district-panel-red/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.23,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "flat",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/district-panel-red/rich/clean/basecolor.png",
+            "normal": "assets/district-panel-red/rich/clean/normal.png",
+            "roughness": "assets/district-panel-red/rich/clean/roughness.png",
+            "metallic": "assets/district-panel-red/rich/clean/metallic.png",
+            "height": "assets/district-panel-red/rich/clean/height.png",
+            "ao": "assets/district-panel-red/rich/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ab9a21494cc7a29dc82c5fa1b1a95bf080b7e66f255c564900e284d0dff4ff09.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/district-panel-dark/rich": {
+      "key": "cyberpunk/district-panel-dark/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.32,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "flat",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/district-panel-dark/rich/clean/basecolor.png",
+            "normal": "assets/district-panel-dark/rich/clean/normal.png",
+            "roughness": "assets/district-panel-dark/rich/clean/roughness.png",
+            "metallic": "assets/district-panel-dark/rich/clean/metallic.png",
+            "height": "assets/district-panel-dark/rich/clean/height.png",
+            "ao": "assets/district-panel-dark/rich/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/78676389efcfcf65866c0944b5c1222bddf1d80604f9406b699545b92c76e1ec.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/district-curb-blue/rich": {
+      "key": "cyberpunk/district-curb-blue/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.3,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "flat",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/district-curb-blue/rich/clean/basecolor.png",
+            "normal": "assets/district-curb-blue/rich/clean/normal.png",
+            "roughness": "assets/district-curb-blue/rich/clean/roughness.png",
+            "metallic": "assets/district-curb-blue/rich/clean/metallic.png",
+            "height": "assets/district-curb-blue/rich/clean/height.png",
+            "ao": "assets/district-curb-blue/rich/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/642acb604ab4af3ff926d7d0819f8c7f38a396ddf8e1707c73936ad542fc2abb.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/district-curb-red/rich": {
+      "key": "cyberpunk/district-curb-red/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.3,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "flat",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/district-curb-red/rich/clean/basecolor.png",
+            "normal": "assets/district-curb-red/rich/clean/normal.png",
+            "roughness": "assets/district-curb-red/rich/clean/roughness.png",
+            "metallic": "assets/district-curb-red/rich/clean/metallic.png",
+            "height": "assets/district-curb-red/rich/clean/height.png",
+            "ao": "assets/district-curb-red/rich/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/9e0c564ae05a003d0632a7fdfe1b4fb47f496b9d0934c7ca033d28169060d4c9.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/district-curb-yellow/rich": {
+      "key": "cyberpunk/district-curb-yellow/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.4,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "flat",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/district-curb-yellow/rich/clean/basecolor.png",
+            "normal": "assets/district-curb-yellow/rich/clean/normal.png",
+            "roughness": "assets/district-curb-yellow/rich/clean/roughness.png",
+            "metallic": "assets/district-curb-yellow/rich/clean/metallic.png",
+            "height": "assets/district-curb-yellow/rich/clean/height.png",
+            "ao": "assets/district-curb-yellow/rich/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ae414aacfadcb90329cf88626700384dbe367bd00a8640f68d285e51d0082608.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/district-junction-blue/rich": {
+      "key": "cyberpunk/district-junction-blue/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.46,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "flat",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/district-junction-blue/rich/clean/basecolor.png",
+            "normal": "assets/district-junction-blue/rich/clean/normal.png",
+            "roughness": "assets/district-junction-blue/rich/clean/roughness.png",
+            "metallic": "assets/district-junction-blue/rich/clean/metallic.png",
+            "height": "assets/district-junction-blue/rich/clean/height.png",
+            "ao": "assets/district-junction-blue/rich/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/c8c2e0765a99a3df1f366691573c61a5c530bf527d081f4a15d37b2de82dce0d.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/district-junction-yellow/rich": {
+      "key": "cyberpunk/district-junction-yellow/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.52,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "flat",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/district-junction-yellow/rich/clean/basecolor.png",
+            "normal": "assets/district-junction-yellow/rich/clean/normal.png",
+            "roughness": "assets/district-junction-yellow/rich/clean/roughness.png",
+            "metallic": "assets/district-junction-yellow/rich/clean/metallic.png",
+            "height": "assets/district-junction-yellow/rich/clean/height.png",
+            "ao": "assets/district-junction-yellow/rich/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/2f92d12df943c921e2d302d510f411c4fb897a69da0522145dd5af37e302d436.png"
+          }
+        }
+      ]
     }
   }
 }

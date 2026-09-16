@@ -1,0 +1,224 @@
+[
+  {
+    "key": "cyberpunk/district-hex/rich",
+    "alignment": "tile",
+    "description": "Fine slate hexagons with restrained joints and shallow edge relief for luxury road and parking surfaces",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        2.078460969
+      ]
+    },
+    "resolution": [
+      512,
+      887
+    ],
+    "seed": 163032,
+    "variantId": "subtle",
+    "physical": {
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0
+    },
+    "pattern": {
+      "kind": "hexagon",
+      "colors": [
+        "#384447"
+      ],
+      "cells": [
+        8,
+        8
+      ],
+      "line": 0.0015,
+      "depth": 0.018,
+      "joint": 0.09,
+      "variation": 0.018,
+      "sheen": 0.025,
+      "grain": 0.002,
+      "wear": 0
+    }
+  },
+  {
+    "key": "cyberpunk/district-panel-blue/rich",
+    "alignment": "tile",
+    "description": "Clean panel blue coating with fine grain and broad reflected highlights",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 161318,
+    "variantId": "clean",
+    "flatColor": "#344b55",
+    "flatNoise": 0.005,
+    "physical": {
+      "roughnessFactor": 0.23,
+      "metallicFactor": 0
+    }
+  },
+  {
+    "key": "cyberpunk/district-panel-red/rich",
+    "alignment": "tile",
+    "description": "Clean panel red coating with fine grain and broad reflected highlights",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 161318,
+    "variantId": "clean",
+    "flatColor": "#634247",
+    "flatNoise": 0.005,
+    "physical": {
+      "roughnessFactor": 0.23,
+      "metallicFactor": 0
+    }
+  },
+  {
+    "key": "cyberpunk/district-panel-dark/rich",
+    "alignment": "tile",
+    "description": "Clean panel dark coating with fine grain and broad reflected highlights",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 161318,
+    "variantId": "clean",
+    "flatColor": "#343d40",
+    "flatNoise": 0.005,
+    "physical": {
+      "roughnessFactor": 0.32,
+      "metallicFactor": 0
+    }
+  },
+  {
+    "key": "cyberpunk/district-curb-blue/rich",
+    "alignment": "tile",
+    "description": "Clean curb blue coating with fine grain and broad reflected highlights",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 161318,
+    "variantId": "clean",
+    "flatColor": "#127d9f",
+    "flatNoise": 0.005,
+    "physical": {
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0
+    }
+  },
+  {
+    "key": "cyberpunk/district-curb-red/rich",
+    "alignment": "tile",
+    "description": "Clean curb red coating with fine grain and broad reflected highlights",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 161318,
+    "variantId": "clean",
+    "flatColor": "#993e34",
+    "flatNoise": 0.005,
+    "physical": {
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0
+    }
+  },
+  {
+    "key": "cyberpunk/district-curb-yellow/rich",
+    "alignment": "tile",
+    "description": "Clean curb yellow coating with fine grain and broad reflected highlights",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 161318,
+    "variantId": "clean",
+    "flatColor": "#bc8c26",
+    "flatNoise": 0.005,
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 0
+    }
+  },
+  {
+    "key": "cyberpunk/district-junction-blue/rich",
+    "alignment": "tile",
+    "description": "Clean junction blue coating with fine grain and broad reflected highlights",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 161318,
+    "variantId": "clean",
+    "flatColor": "#24444f",
+    "flatNoise": 0.005,
+    "physical": {
+      "roughnessFactor": 0.46,
+      "metallicFactor": 0
+    }
+  },
+  {
+    "key": "cyberpunk/district-junction-yellow/rich",
+    "alignment": "tile",
+    "description": "Clean junction yellow coating with fine grain and broad reflected highlights",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "seed": 161318,
+    "variantId": "clean",
+    "flatColor": "#866231",
+    "flatNoise": 0.005,
+    "physical": {
+      "roughnessFactor": 0.52,
+      "metallicFactor": 0
+    }
+  }
+]

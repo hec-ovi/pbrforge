@@ -1,6 +1,6 @@
 # Materials index
 
-Version: 0.16.36.
+Version: 0.16.37.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
@@ -33,3 +33,5 @@ Version: 0.16.36.
 - [Room plates](../sources/window-rooms/INDEX.md) and [screen artwork](../sources/ads-codex/PROMPTS.md): retained images and authoring prompts.
 - [Paired facade recipes](../batch/cyberpunk/paired-facade.json): lounge backplate, photographed graphite metal, periodic aluminum brushing, clear glazing and room/light surface states.
 - [ComfyUI workflows](../templates/README.md): photographic and upscale templates.
+
+- [District street recipes](../batch/cyberpunk/district-streets.json): subtle hexagonal paving and clean blue/red luxury panels, curbs and junction coatings. Native bindings expose the same authored maps to Streets.

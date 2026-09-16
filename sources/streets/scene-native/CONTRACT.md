@@ -2,6 +2,8 @@
 
 Supplies the original district scans and renderer-neutral shading parameters from threejsscene. Input: surface identity and authored geometry attributes. Output: texture references and effect parameters in [binding](../../../bindings/street-native.json), validated by [schema](../../../schema/street-native.schema.json). Depends on no renderer. [Manifest](manifest.json) records source file SHA-256 hashes and revision.
 
+The binding's optional `authored` manifest records district surfaces from [recipes](../../../batch/cyberpunk/district-streets.json). Their canonical PBR maps and the published letter atlas retain separate provenance in [district manifest](../district/manifest.json). Texture paths stay inside the theme asset tree.
+
 Paths are relative to the Materials package root, including `themes/`. A caller hosting or copying assets supplies that root URL. A host exposing the existing themes tree validates and removes the `themes/` prefix before joining its public Materials URL; it does not serve the package root or provenance directory. Texture IDs resolve only through this binding. Files retain original bytes, dimensions and alpha. These raw shader inputs have their own catalog; standard MaterialEntry roughness/metalness rules do not apply. Missing IDs, unknown versions/effects and malformed parameters must fail before rendering. All coordinates are metres, Y up. Consumers own geometry, wear selection, collision, texture lifetime and effect implementation.
 
 ## Sampling and attributes
@@ -49,5 +51,8 @@ Parameter names below come directly from each surface's `parameters`. `T(slot)` 
 | `road-paint` | `o=N(P*noiseScale)*noiseGain`; `p=sample(mask,vec2(UV.x*maskUScale+o,UV.y)).r`; `g=S(grain).r`; `C=tint*(g*grainGain+grainBias)`; alpha=`p*mix(opacity,smoothstep(erosionRange,g),W*wearStrength)`; `R=roughness`; normals use `S(normal)`. Blend with depth testing and `depthWrite=false`. |
 | `decal` | `C=T(basecolor).rgb`; alpha=`T(basecolor).a*opacity`; `R=roughness`. Blend once, depth test, no depth write. Enable polygon offset with the declared factor and default units 0. Geometry owns fitted placement and surface offset. |
 | `solid` | `C=tint`; `R=roughness`; `M=metalness`. |
+| `display` | `C=T(basecolor).rgb*tint`; emission=`C*brightness`; `R=roughness`; `M=0`. |
+
+Solid surfaces optionally emit `tint*emissionIntensity`, default zero. Authored photographed surfaces may use `world-xz` or metre UVs at their published repeat scale. District hexagons have 0.15 m lattice spacing, restrained joints and shallow relief; clean panel maps contain no authored scratches. Geometry defines slab seams and fitted marquee glyph UVs.
 
 `clearcoat`, where declared, is the physical coat weight. Uncoated clearcoat is zero. Coated defaults follow a dielectric IOR of 1.5. Photographed curb and gutter share maps but retain separate normal strength and gutter tint. The binding contains no LED screens or graffiti. Material selection and row composition belong to the street builder.

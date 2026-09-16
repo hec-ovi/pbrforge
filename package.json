@@ -1,6 +1,6 @@
 {
   "name": "urbe-materials",
-  "version": "0.16.36",
+  "version": "0.16.37",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",

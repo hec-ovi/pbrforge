@@ -15,7 +15,8 @@ it('publishes complete native street effects with intact source scans and portab
   expect(validate(binding), JSON.stringify(validate.errors)).toBe(true);
   const provenance = JSON.parse(read(binding.source.manifest).toString());
   expect(provenance.revision).toBe(binding.source.revision);
-  const sources = new Map(provenance.files.filter((f: { target?: string }) => f.target)
+  const authored = binding.authored ? JSON.parse(read(binding.authored.manifest).toString()).files : [];
+  const sources = new Map([...provenance.files, ...authored].filter((f: { target?: string }) => f.target)
     .map((f: { target: string; sha256: string }) => [f.target, f.sha256]));
   const referenced = new Set<string>();
   for (const surface of Object.values(binding.surfaces) as { maps: Record<string, string> }[]) {

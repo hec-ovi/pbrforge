@@ -1,14 +1,16 @@
 # Changelog
 
-0.16.36: modular facade panel finishes, obsidian metal, optical screen art, portal limestone and polished steel.
+0.16.37: authored district street finishes, subtle hexagons, clean glossy panels and emissive marquee/parking bindings.
 
-0.16.36: garden tower concrete, vegetation finishes and reflective black glazing.
+0.16.37: modular facade panel finishes, obsidian metal, optical screen art, portal limestone and polished steel.
 
-0.16.36: paired graphite metal and brushed aluminum, clear upper glazing and cyan room surface states.
+0.16.37: garden tower concrete, vegetation finishes and reflective black glazing.
 
-0.16.36: paired tower facade finishes, lounge backplate states and ceiling fixture surfaces.
+0.16.37: paired graphite metal and brushed aluminum, clear upper glazing and cyan room surface states.
 
-0.16.36: fourteen accepted Exterior native finishes and exact counterparts share byte-identical source maps and canonical native variants.
+0.16.37: paired tower facade finishes, lounge backplate states and ceiling fixture surfaces.
+
+0.16.37: fourteen accepted Exterior native finishes and exact counterparts share byte-identical source maps and canonical native variants.
 
 0.16.35: blue and gold exterior frame coatings with rich aliases, subtle grain and packed response maps.
 
