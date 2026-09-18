@@ -2,7 +2,7 @@
 
 Purpose: presents the material database as a searchable list, a PBR sphere and a read-only property inspector.
 
-Version: 0.16.37.
+Version: 0.17.1.
 
 ## In
 
@@ -27,6 +27,7 @@ Empty databases and filters with no matches are rendered states.
 ## Invariants
 
 - The preview is read-only. It never creates, refinishes, rebrands or writes a material.
+- The authoring preview reads the PNG masters in `variant.maps` for inspection and export.
 - Tile entries use repeat wrapping. Exact entries use clamp wrapping and one fitted UV face.
 - Basecolor and emission use sRGB. Normal, roughness, metallic, AO, opacity and height use linear sampling.
 - A selected variant drives the sphere, inspector, key display and telemetry together.

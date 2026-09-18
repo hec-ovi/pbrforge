@@ -1,6 +1,6 @@
 # pbrforge
 
-Version: 0.16.37. A TypeScript PBR material toolkit with a JSON CLI and a Three.js preview. A `theme/kind/tier` key resolves to reusable maps, physical properties and real-world scale.
+Version: 0.17.1. A TypeScript PBR material toolkit with a JSON CLI and a Three.js preview. A `theme/kind/tier` key resolves to reusable maps, physical properties and real-world scale.
 
 ![catalog](media/preview-1.gif)
 ![cabinet side](media/preview-2.gif)
@@ -34,6 +34,23 @@ The package exports `resolve`, `list`, `create`, `refinish`, `rebrand` and `pack
 Photographic generation and undersized screen-art upscaling use ComfyUI at `COMFY_URL`, default `http://127.0.0.1:8188`. Local imports and code-generated finishes need no backend. [Backend workflows](templates/README.md) describes the supplied templates. [Agent authoring skill](skills/pbrforge/SKILL.md) routes to photo framing and pattern details.
 
 Keep maps at their authored scale. Geometry supplies UVs, complete panel divisions and fitted artifact placement. Basecolor and emission use sRGB; other maps use linear sampling. Roughness and metallic maps contain absolute values, bound with scalar factors 1.
+
+## Compress maps
+
+KTX Software 4.4.2 is installed in `tools/ktx/` from the official [Linux x86_64 release archive](https://github.com/KhronosGroup/KTX-Software/releases/download/v4.4.2/KTX-Software-4.4.2-Linux-x86_64.tar.bz2). The archive checksum matches the release SHA1. Extract the archive contents into that folder on a fresh checkout; `tools/ktx/bin/ktx --version` verifies the installation.
+
+```sh
+npm run compress
+npm run compress -- --workers 2 --max-temp 90 --force
+```
+
+Every unique variant map gets an adjacent KTX2. The command publishes compressed paths by map name in `variant.ktx2`; `variant.maps` retains PNG path strings. Consumers prefer KTX2 and fall back to PNG. Shared maps encode once. Run compression after authoring. Tools and KTX2 outputs stay outside git.
+
+Workers default to one quarter of available CPUs, rounded down with a minimum of one. Each encoder uses one thread. The default ceiling is 90 C; a hot reading narrows admission to one worker until temperature reaches 86 C or lower. Existing parallel jobs finish first. Unreadable sensors report unavailable. Newer KTX2 files are skipped unless `--force` is supplied. [Encoding rules](CONTRACT.md#compression) cover color space, codecs and mipmaps.
+
+Compression contract tests use the installed KTX tool. The authoring preview inspects PNG masters.
+
+The default run on 18 September 2026 covers 3,606 unique catalog maps: 702,482,997 PNG bytes and 199,918,745 KTX2 bytes, with 503 UASTC files and 3,103 ETC1S files. It writes 634 files and skips 2,972 in 347.80 seconds; the hottest reading is 98.000 C, with 5 thermal holds.
 
 ## Preview and verify
 

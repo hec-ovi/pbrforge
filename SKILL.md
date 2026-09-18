@@ -5,7 +5,7 @@ description: Resolve, list or author reusable PBR material sets through the urbe
 
 # Materials
 
-Version: 0.16.37. Materials generates and stores themed PBR maps with physical scale, resolved by `theme/kind/tier`.
+Version: 0.17.1. Materials generates and stores themed PBR maps with physical scale, resolved by `theme/kind/tier`.
 
 ## Call
 
@@ -34,7 +34,7 @@ CLI: `node dist/cli/pbrforge.js <verb>` after building, or `npm run --silent pbr
 
 `resolve` and `create` return [MaterialEntry](schema/material-entry.schema.json); `list` returns sorted canonical keys. `refinish` and `pack` return `{entry, variants}`; `rebrand` returns `{key, variantId, from, lines}[]`.
 
-Map paths are relative to the theme folder. Use the declared scale and variant ID. Basecolor/emission are sRGB, data maps linear, normals +Y. Roughness and metallic maps use scalar factors 1. Fit exact maps once; repeat tiles at `tiling.worldSize`.
+`variant.maps` contains PNG path strings; optional `variant.ktx2` contains compressed paths by map name. All paths are relative to the theme folder. Prefer `ktx2` when available, falling back to the PNG master. Run `npm run compress` after authoring. Use the declared scale and variant ID. Basecolor/emission are sRGB, data maps linear, normals +Y. Roughness and metallic maps use scalar factors 1. Fit exact maps once; repeat tiles at `tiling.worldSize`.
 
 CLI stdout is `{ok:true, verb, data}` or `{ok:false, verb, error:{code,message,details?,hint?}}`. Exit codes: 0 success, 2 usage, 1 other failure. Library `MaterialsError` codes: `E_SCHEMA`, `E_KEY_NOT_FOUND`, `E_KEY_EXISTS`, `E_THEME_NOT_FOUND`, `E_COMFY_UNAVAILABLE`, `E_GENERATION_FAILED`, `E_SEAM_CHECK_FAILED`. CLI adds `E_USAGE`, `E_INTERNAL`; preview uses `E_DATABASE_UNAVAILABLE`. Report the code and message; correct the named input. Unexpected library filesystem/backend exceptions can propagate; see [issues](docs/ISSUES.md).
 

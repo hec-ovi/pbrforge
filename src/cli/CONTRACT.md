@@ -2,7 +2,7 @@
 
 Purpose: one process per verb that reads or writes the material database and prints one JSON envelope.
 
-Version: 0.16.37.
+Version: 0.17.1.
 
 ## In
 

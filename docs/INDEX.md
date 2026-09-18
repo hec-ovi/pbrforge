@@ -1,10 +1,11 @@
 # Materials index
 
-Version: 0.16.37.
+Version: 0.17.1.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
 | [Materials](../CONTRACT.md) | Resolve and author PBR sets. | [Create](../schema/create-request.schema.json), [API types](../src/api-types.ts) / [entry](../schema/material-entry.schema.json), [theme](../schema/theme-index.schema.json) | Node.js, Ajv, Sharp; optional ComfyUI. Atlas binding data only. |
+| [Compression](../src/compress/CONTRACT.md) | Encode PNG masters beside their catalog paths. | [Options and summary](../src/compress/types.ts), theme / KTX2 files and map references | Materials schema, local KTX CLI, CPU temperature sensors. |
 | [CLI](../src/cli/CONTRACT.md) | One JSON process per operation. | Verb arguments / JSON envelope | Materials, from-image. |
 | [From-image](../src/from-image/CONTRACT.md) | Derive dry PBR from one opaque photo. | [Request](../src/from-image/request.schema.json) / material entry | Materials database and map writers. |
 | [Preview](../src/ui/CONTRACT.md) | Browse maps and render a PBR sphere. | [Layout](../schema/preview-view-layout.schema.json), theme index / DOM and canvas | Materials data, browser APIs, Three.js. |

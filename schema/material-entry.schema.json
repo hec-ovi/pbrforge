@@ -126,6 +126,22 @@
               "emission": { "$ref": "#/$defs/mapPath" }
             }
           },
+          "ktx2": {
+            "type": "object",
+            "description": "Compressed build outputs by channel, relative to the theme folder",
+            "additionalProperties": false,
+            "properties": {
+              "basecolor": { "$ref": "#/$defs/ktx2Path" },
+              "normal": { "$ref": "#/$defs/ktx2Path" },
+              "roughness": { "$ref": "#/$defs/ktx2Path" },
+              "metallic": { "$ref": "#/$defs/ktx2Path" },
+              "metallicRoughness": { "$ref": "#/$defs/ktx2Path" },
+              "height": { "$ref": "#/$defs/ktx2Path" },
+              "ao": { "$ref": "#/$defs/ktx2Path" },
+              "opacity": { "$ref": "#/$defs/ktx2Path" },
+              "emission": { "$ref": "#/$defs/ktx2Path" }
+            }
+          },
           "screen": {
             "type": "object",
             "description": "on a screen variant painted by the create lane: the display it is shown on and the brandless picture behind its emission, which a rebrand re-composites text over",
@@ -207,6 +223,10 @@
           "then": { "required": ["bandHeight"] }
         }
       ]
+    },
+    "ktx2Path": {
+      "type": "string",
+      "pattern": "^assets/[a-z0-9_/-]+\\.ktx2$"
     },
     "mapPath": {
       "type": "string",

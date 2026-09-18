@@ -1,5 +1,7 @@
 # Changelog
 
+0.17.1: variants publish sibling KTX2 paths beside PNG maps through CPU compression with a 90 C thermal ceiling.
+
 0.16.37: authored district street finishes, subtle hexagons, clean glossy panels and emissive marquee/parking bindings.
 
 0.16.37: modular facade panel finishes, obsidian metal, optical screen art, portal limestone and polished steel.

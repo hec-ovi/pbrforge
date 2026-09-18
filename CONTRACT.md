@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Version: 0.16.37, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
+Version: 0.17.1, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
 ## API
 
@@ -45,12 +45,24 @@ Refinish merges physical changes, resolves the requested finish, and updates var
 
 [ThemeIndex](schema/theme-index.schema.json) is `{theme,entries}` in `<themesDir>/<theme>/theme.json`. [MaterialEntry](schema/material-entry.schema.json) contains key/aliases, alignment, physical values, scale or aspect, optional finish/decal, and named variants with resolution and relative map paths. Variant 0 is canonical; a consumer may select another declared ID. `kind` is open vocabulary; bundled Urbe tiers are poor, mid, rich and high_rich. Catalog dimensions, keys and named variants are published in [themes/cyberpunk/theme.json](themes/cyberpunk/theme.json).
 
+Each variant keeps `maps` as map names to PNG path strings and publishes compressed paths in the sibling `ktx2` object, only for files present on disk. Paths are relative to the theme. PNG is the master. Consumers prefer `ktx2` when present and fall back to PNG when the compressed output is absent or unsupported. Run compression after authoring to refresh build outputs.
+
 - Every variant requires basecolor, normal, roughness and metallic. Height, AO, emission, opacity and packed metallic-roughness are optional in the schema. Map dimensions and alignment agree within a variant. Shared map references are valid.
 - Basecolor and emission are sRGB; data maps are linear. Normals use OpenGL +Y. Roughness and metallic are absolute values, bound with scalar factors 1; physical factors supply fallbacks when maps are omitted.
 - Packed metallic-roughness is linear RGB: R=255, G=roughness, B=metallic. It uses the same UVs and resolution as the separate maps, with factors 1.
 - `tiling.worldSize` is metres per repeat, one UV unit per tile. `aspect` is an exact-face ratio. Preserve scale and proportion. Geometry owns UVs, whole modules, borders, cuts and placement. `layout` publishes module size, joint width, origin and orientation in metres.
 - Decals clamp UV 0..1 to one fitted receiving face using declared world size, edge inset and normal offset. Clip to that face, keep depth testing and apply opacity once. Glass, reflection environments, animated water, collision and breakability behavior belong to the renderer/runtime.
 - `class` records provenance; `screen.artwork` is retained brandless source art for rebrand, not a rendered texture channel.
+
+## Compression
+
+`npm run compress -- [--workers N] [--max-temp C] [--force]` uses the [compression contract](src/compress/CONTRACT.md). `.ktx2` files and `tools/` are ignored by git as build outputs. Workers default to `floor(availableParallelism() / 4)`, at least one, with a 90 C thermal ceiling.
+
+1. Basecolor and emission use sRGB; every other channel is linear.
+2. Normals retain RGB and OpenGL +Y, using UASTC quality 2 with RDO lambda 0.25.
+3. Other channels use ETC1S compression level 2: basecolor and emission at quality 255 with endpoint and selector RDO disabled; data maps at quality 128.
+4. Every texture has a full mipmap chain with box filtering, wrapping tiles and clamping exact faces.
+5. UASTC uses Zstandard level 18; each encoder uses one CPU thread.
 
 ## Consumer bindings
 

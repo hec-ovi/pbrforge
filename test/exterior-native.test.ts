@@ -15,7 +15,8 @@ it('resolves all accepted native finishes and exact counterparts with their orig
     const original = resolve(finish.key), exact = resolve(finish.exactKey);
     expect(keys).toContain(finish.key);
     expect(keys).toContain(finish.exactKey);
-    expect(sha256(JSON.stringify(original)), finish.key).toBe(finish.entrySha256);
+    const authored = { ...original, variants: original.variants.map(({ ktx2, ...variant }) => variant) };
+    expect(sha256(JSON.stringify(authored)), finish.key).toBe(finish.entrySha256);
     expect(original.variants.map(variant => variant.id)).toEqual([finish.variantId]);
     expect(exact.alignment).toBe('exact');
     expect(exact.aspect).toEqual([1, 1]);

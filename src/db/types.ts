@@ -85,6 +85,8 @@ export interface Variant {
   response?: SurfaceResponse;
   resolution: [number, number];
   maps: Partial<Record<MapName, string>> & { basecolor: string; normal: string; roughness: string; metallic: string };
+  /** Compressed build outputs by channel, relative to the theme folder. */
+  ktx2?: Partial<Record<MapName, string>>;
   /** Present on a screen variant painted by the create lane; a brand variant derives from one of these. */
   screen?: ScreenShown;
   /** How visible divisions align in world space. Fine material grain is not a division. */
