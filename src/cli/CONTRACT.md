@@ -21,7 +21,7 @@ Exit 0 on ok, 2 on `E_USAGE`, 1 on any other error. Closed error codes are the p
 
 | Verb | data |
 | --- | --- |
-| `doctor` | `ready`, checks (node, themes, skill, optional comfy, optional preview), `nextActions` |
+| `doctor` | `ready`, `version`, `themesDir`, `preview` (`url`, `up`), `comfy` (`url`, `ready`), `checks`, `nextActions`. Checks: node, themes, themes-writable when a theme exists, skill, comfy, preview. `ready` is true when node, themes and skill pass. |
 | `version` | `version` |
 | `help` | `verbs` |
 | `resolve <key>` | `entry` |
@@ -30,8 +30,8 @@ Exit 0 on ok, 2 on `E_USAGE`, 1 on any other error. Closed error codes are the p
 | `from-image <request.json>` | `key`, `variant`, `maps`, `alignment` |
 | `create <request.json> [--overwrite] [--native]` | `created`, `skipped` (batch skips `E_KEY_EXISTS`) |
 | `refinish <requests.json>` | `results` |
-| `rebrand --theme --businesses` | `branded` |
-| `pack --theme` | `packed` |
+| `rebrand --theme --businesses` | `branded`, `count` |
+| `pack --theme` | `packed` (`key`, `variants` per canonical key) |
 | `preview` | `url`, `up`, `start` (does not launch the viewer) |
 
 `patterns` reads [pattern-kinds.json](../../schema/pattern-kinds.json). `from-image` is the [from-image box](../from-image/CONTRACT.md): one opaque JPEG or PNG, dry PBR maps, no seam gate, no emission. `append` adds another face to an existing key. Create JSON is [CreateRequest](../../schema/create-request.schema.json) or an array; arrays skip existing keys. `--native` requires `sourceImage`, `sourceAlbedo`, or every `screens[].imagePath`. Undersized screen sources still enter the upscale backend path; see [issues](../../docs/ISSUES.md).

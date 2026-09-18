@@ -2,6 +2,8 @@
 
 Purpose: writes a KTX2 build output beside each unique catalog PNG master.
 
+Version: 0.17.1.
+
 Input: `npm run compress -- [--workers N] [--max-temp C] [--force]`, [options and injected runtime](types.ts), [theme schema](../../schema/theme-index.schema.json). Workers default to floor(availableParallelism / 4), at least one; ceiling defaults to 90 C. Each encoder uses one thread. The local tool is `tools/ktx/bin/ktx`.
 
 Output: [summary](types.ts) and one stdout line with written, skipped, seconds, hottest Celsius, narrowing count. Counts refer to unique map files. Failure exits 1. Missing sensors report unavailable. Shared references encode once; retained screen artwork is authoring input.

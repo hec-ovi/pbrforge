@@ -1,5 +1,7 @@
 # Native street surfaces
 
+Version: 0.17.1.
+
 Supplies the original district scans and renderer-neutral shading parameters from threejsscene. Input: surface identity and authored geometry attributes. Output: texture references and effect parameters in [binding](../../../bindings/street-native.json), validated by [schema](../../../schema/street-native.schema.json). Depends on no renderer. [Manifest](manifest.json) records source file SHA-256 hashes and revision.
 
 The binding's optional `authored` manifest records district surfaces from [recipes](../../../batch/cyberpunk/district-streets.json). Their canonical PBR maps and the published letter atlas retain separate provenance in [district manifest](../district/manifest.json). Texture paths stay inside the theme asset tree.

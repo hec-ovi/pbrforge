@@ -7,7 +7,7 @@ Version: 0.17.1.
 ## In
 
 - `new PreviewView(viewer?: SphereViewer)` builds the workspace from [preview-view-layout schema](../../schema/preview-view-layout.schema.json). `viewer` supplies the WebGL canvas and render controls.
-- `MaterialList.load(fetcher = fetch)` reads `GET /api/themes` as `string[]`, then `GET /themes/<theme>/theme.json` as [ThemeIndex](../../schema/theme-index.schema.json). The sidebar refresh control calls `load` again with `cache: 'no-store'`.
+- `MaterialList.load(fetcher = fetch)` reads `GET /api/themes` as `string[]`, then `GET /themes/<theme>/theme.json` as [ThemeIndex](../../schema/theme-index.schema.json). Every fetch uses `cache: 'no-store'`. The sidebar refresh control calls `load` again.
 - `SphereViewer.load(theme, entry, variantIndex = 0, repeat = 2)` renders a [MaterialEntry](../../schema/material-entry.schema.json). `variantIndex` selects one variant; `repeat` controls tiled maps.
 - Search text filters the visible material rows. The list is a theme/kind/tier tree. The theme starts open with kinds collapsed; opening a header shows only the next level. Headers expand with a height animation. Each nest level has its own color; material rows zebra-stripe. Rows are flush left. Toolbar inputs select variant, repeat, lighting, background, spin and wireframe.
 
@@ -16,7 +16,7 @@ Version: 0.17.1.
 - `PreviewView.root`, `MaterialList.root` and `MaterialInspector.root` are DOM roots for their components. `SphereViewer.canvas` is the rendered canvas.
 - `MaterialList(onSelect)` calls `onSelect({ theme, entry })` when a material row is chosen.
 - A selection loads the sphere and inspector, exposes the material key and texture paths, and updates stage telemetry.
-- Copy actions write the selected key to the browser clipboard.
+- Toolbar copy writes the selected key to the clipboard. Inspector copy writes the selected key or the entry JSON.
 
 ## Errors
 

@@ -37,7 +37,7 @@ Keep maps at their authored scale. Geometry supplies UVs, complete panel divisio
 
 ## Compress maps
 
-KTX Software 4.4.2 is installed in `tools/ktx/` from the official [Linux x86_64 release archive](https://github.com/KhronosGroup/KTX-Software/releases/download/v4.4.2/KTX-Software-4.4.2-Linux-x86_64.tar.bz2). The archive checksum matches the release SHA1. Extract the archive contents into that folder on a fresh checkout; `tools/ktx/bin/ktx --version` verifies the installation.
+KTX Software 4.4.2 is installed in `tools/ktx/` from the official [Linux x86_64 release archive](https://github.com/KhronosGroup/KTX-Software/releases/download/v4.4.2/KTX-Software-4.4.2-Linux-x86_64.tar.bz2). Extract that archive into the folder on a fresh checkout; `tools/ktx/bin/ktx --version` reports `v4.4.2`.
 
 ```sh
 npm run compress
@@ -49,8 +49,6 @@ Every unique variant map gets an adjacent KTX2. The command publishes compressed
 Workers default to one quarter of available CPUs, rounded down with a minimum of one. Each encoder uses one thread. The default ceiling is 90 C; a hot reading narrows admission to one worker until temperature reaches 86 C or lower. Existing parallel jobs finish first. Unreadable sensors report unavailable. Newer KTX2 files are skipped unless `--force` is supplied. [Encoding rules](CONTRACT.md#compression) cover color space, codecs and mipmaps.
 
 Compression contract tests use the installed KTX tool. The authoring preview inspects PNG masters.
-
-The default run on 18 September 2026 covers 3,606 unique catalog maps: 702,482,997 PNG bytes and 199,918,745 KTX2 bytes, with 503 UASTC files and 3,103 ETC1S files. It writes 634 files and skips 2,972 in 347.80 seconds; the hottest reading is 98.000 C, with 5 thermal holds.
 
 ## Preview and verify
 

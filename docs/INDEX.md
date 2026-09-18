@@ -9,6 +9,7 @@ Version: 0.17.1.
 | [CLI](../src/cli/CONTRACT.md) | One JSON process per operation. | Verb arguments / JSON envelope | Materials, from-image. |
 | [From-image](../src/from-image/CONTRACT.md) | Derive dry PBR from one opaque photo. | [Request](../src/from-image/request.schema.json) / material entry | Materials database and map writers. |
 | [Preview](../src/ui/CONTRACT.md) | Browse maps and render a PBR sphere. | [Layout](../schema/preview-view-layout.schema.json), theme index / DOM and canvas | Materials data, browser APIs, Three.js. |
+| [Native street surfaces](../sources/streets/scene-native/CONTRACT.md) | Original scans and renderer-neutral shading parameters. | Surface identity, geometry attributes / [binding](../bindings/street-native.json) | Binding schema; no renderer. |
 
 ## Agent and consumer entry points
 
@@ -24,7 +25,7 @@ Version: 0.17.1.
 
 - [Garden tower recipes](../batch/cyberpunk/garden-tower.json): pale podium concrete, foliage and reflective black glazing.
 
-- [Native street surfaces](../sources/streets/scene-native/CONTRACT.md): original scans, UV rules, shader equations and source hashes for ordinary streets and hardware.
+- [Native street surfaces](../sources/streets/scene-native/CONTRACT.md): UV rules, shader equations and source hashes for ordinary streets and hardware.
 - [Street sources](../sources/streets/INDEX.md) and [recipes](../batch/cyberpunk/street-image-finishes.json): continuous photographic finish fields.
 - [Street prop sources](../sources/street-props/INDEX.md) and [recipes](../batch/cyberpunk/street-props/): cardboard, wood, coating and polymer.
 - [Exterior sources](../sources/exterior-native/INDEX.md) and [recipes](../batch/cyberpunk/exterior-native/): cast, weathered and graphite concrete.
