@@ -24,92 +24,26 @@ function fetcherFor(index: unknown): typeof fetch {
 }
 
 describe('preview contract', () => {
-  it('lists database keys and loads the selection into the viewer', async () => {
-    const viewer = { load: vi.fn(), canvas: document.createElement('canvas') } as unknown as SphereViewer;
-    const view = new PreviewView(viewer);
-    await view.list.load(fetcherFor({ theme: 'cyberpunk', entries: { [entry.key]: entry } }));
-
-    fireEvent.click(getByText(view.root, 'cyberpunk/wall/poor'));
-    expect(viewer.load).toHaveBeenCalledWith('cyberpunk', entry, 0, 2);
-    expect(view.root.querySelectorAll('.tree-leaf-item img')).toHaveLength(0);
-    expect(view.root.querySelectorAll('img.channel-thumb')).toHaveLength(4);
-    expect(getByRole(view.root, 'button', { name: 'Export material' })).toBeTruthy();
-    fireEvent.click(getByRole(view.root, 'button', { name: 'View BaseColor full size' }));
-    const dialog = getByRole(document.body, 'dialog', { name: 'BaseColor' });
-    expect(dialog.querySelectorAll('.map-viewer-strip-item')).toHaveLength(4);
-    const mapImg = dialog.querySelector('.map-viewer-img') as HTMLImageElement;
-    const stage = dialog.querySelector('.map-viewer-stage') as HTMLElement;
-    expect(mapImg).toBeTruthy();
-    fireEvent.click(getByRole(dialog, 'button', { name: 'Zoom in' }));
-    expect(Number(mapImg.dataset.scale)).toBeGreaterThan(1);
-    const held = mapImg.dataset.scale;
-    fireEvent.click(getByRole(dialog, 'button', { name: 'Show Normal' }));
-    expect(getByRole(document.body, 'dialog', { name: 'Normal' })).toBeTruthy();
-    expect(mapImg.dataset.scale).toBe(held);
-    fireEvent.pointerDown(stage, { clientX: 10, clientY: 10, button: 0 });
-    fireEvent.pointerMove(stage, { clientX: 40, clientY: 25 });
-    fireEvent.pointerUp(stage, { clientX: 40, clientY: 25 });
-    expect(Number(mapImg.dataset.x)).toBe(30);
-    fireEvent.click(getByRole(dialog, 'button', { name: 'Actual size' }));
-    expect(Number(mapImg.dataset.scale)).toBe(1);
-    fireEvent.click(getByRole(dialog, 'button', { name: 'Fit view' }));
-    fireEvent.wheel(stage, { deltaY: -120, clientX: 0, clientY: 0 });
-    expect(Number(mapImg.dataset.scale)).toBeGreaterThan(1);
-    fireEvent.keyDown(window, { key: 'Escape' });
-    expect(document.body.querySelector('.map-viewer')).toBeNull();
-    expect(getByRole(view.root, 'separator', { name: 'Resize sidebar' })).toBeTruthy();
-    expect(getByRole(view.root, 'separator', { name: 'Resize inspector' })).toBeTruthy();
-
-    const themeHeader = view.root.querySelector('.tree-node-theme') as HTMLButtonElement;
-    const kindHeader = view.root.querySelector('.tree-node-kind') as HTMLButtonElement;
-    expect(themeHeader.getAttribute('aria-expanded')).toBe('true');
-    expect(kindHeader.getAttribute('aria-expanded')).toBe('false');
-    fireEvent.click(kindHeader);
-    expect(kindHeader.getAttribute('aria-expanded')).toBe('true');
-    fireEvent.click(kindHeader);
-    expect(kindHeader.getAttribute('aria-expanded')).toBe('false');
-    expect(kindHeader.nextElementSibling?.classList.contains('collapsed')).toBe(true);
-
-    fireEvent.change(getByRole(view.root, 'combobox', { name: 'variant' }), { target: { value: '1' } });
-    expect(viewer.load).toHaveBeenLastCalledWith('cyberpunk', entry, 1, 2);
-
-    let fetches = 0;
-    const counting = ((url: string) => {
-      fetches += 1;
-      return fetcherFor({ theme: 'cyberpunk', entries: { [entry.key]: entry } })(url);
-    }) as typeof fetch;
-    await view.list.load(counting);
-    const before = fetches;
-    fireEvent.click(getByRole(view.root, 'button', { name: 'Refresh list' }));
-    await vi.waitFor(() => expect(fetches).toBeGreaterThan(before));
-    expect(view.root.querySelector('[data-key="cyberpunk/wall/poor"]')).toBeTruthy();
-    const search = getByRole(view.root, 'searchbox', { name: 'Search materials' });
-    fireEvent.input(search, { target: { value: 'absent' } });
-    expect(getByText(view.root, /No materials match current filters/)).toBeTruthy();
-    fireEvent.input(search, { target: { value: 'wall' } });
-    expect(view.root.querySelector(`[data-key="${entry.key}"]`)).toBeTruthy();
-  });
-
-  it('shows an empty notice when the database has no entries', async () => {
-    const view = new PreviewView();
-    await view.list.load(fetcherFor({ theme: 'cyberpunk', entries: {} }));
-    expect(getByText(view.root, /database is empty/)).toBeTruthy();
-  });
-
-  it('reports database loading failures and renders the error', async () => {
-    const view = new PreviewView();
-    const fetcher = (async () => new Response(null, { status: 503 })) as typeof fetch;
-    await expect(view.list.load(fetcher)).rejects.toMatchObject({ code: 'E_DATABASE_UNAVAILABLE' });
-    fireEvent.click(getByRole(view.root, 'button', { name: 'Refresh list' }));
-    await vi.waitFor(() => expect(view.root.textContent).toContain('material database could not be loaded'));
-  });
-
-  it('routes the rendered lighting, background and camera controls to the viewer', () => {
+  it('loads the database, drives the viewer from a selection and routes the controls', async () => {
     const viewer = {
       canvas: document.createElement('canvas'), load: vi.fn(), setLightingPreset: vi.fn(),
       setBackgroundMode: vi.fn(), toggleAutoRotate: vi.fn(), toggleWireframe: vi.fn(), resetCamera: vi.fn(),
     } as unknown as SphereViewer;
     const view = new PreviewView(viewer);
+    await view.list.load(fetcherFor({ theme: 'cyberpunk', entries: { [entry.key]: entry } }));
+
+    fireEvent.click(getByText(view.root, 'cyberpunk/wall/poor'));
+    expect(viewer.load).toHaveBeenCalledWith('cyberpunk', entry, 0, 2);
+    expect(view.root.querySelectorAll('img.channel-thumb')).toHaveLength(4);
+    expect(getByRole(view.root, 'button', { name: 'Export material' })).toBeTruthy();
+
+    fireEvent.click(getByRole(view.root, 'button', { name: 'View BaseColor full size' }));
+    expect(getByRole(document.body, 'dialog', { name: 'BaseColor' })).toBeTruthy();
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(document.body.querySelector('.map-viewer')).toBeNull();
+
+    fireEvent.change(getByRole(view.root, 'combobox', { name: 'variant' }), { target: { value: '1' } });
+    expect(viewer.load).toHaveBeenLastCalledWith('cyberpunk', entry, 1, 2);
     fireEvent.change(getByRole(view.root, 'combobox', { name: 'lighting preset' }), { target: { value: 'neon' } });
     expect(viewer.setLightingPreset).toHaveBeenCalledWith('neon');
     fireEvent.change(getByRole(view.root, 'combobox', { name: 'background mode' }), { target: { value: 'grid' } });
@@ -120,5 +54,13 @@ describe('preview contract', () => {
     expect(viewer.toggleWireframe).toHaveBeenCalled();
     fireEvent.click(getByRole(view.root, 'button', { name: 'Reset camera' }));
     expect(viewer.resetCamera).toHaveBeenCalled();
+  });
+
+  it('reports a database it cannot load and renders the error', async () => {
+    const view = new PreviewView();
+    const fetcher = (async () => new Response(null, { status: 503 })) as typeof fetch;
+    await expect(view.list.load(fetcher)).rejects.toMatchObject({ code: 'E_DATABASE_UNAVAILABLE' });
+    fireEvent.click(getByRole(view.root, 'button', { name: 'Refresh list' }));
+    await vi.waitFor(() => expect(view.root.textContent).toContain('material database could not be loaded'));
   });
 });

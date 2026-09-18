@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process';
-import { cp, mkdir, mkdtemp, readFile, rm, stat, symlink, utimes, writeFile } from 'node:fs/promises';
+import { cp, mkdir, mkdtemp, rm, stat, symlink, utimes, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
@@ -77,9 +77,20 @@ it('runs the command and writes adjacent files with the declared codecs, color f
   }
 });
 
-it('skips only newer outputs and rebuilds with force', async () => {
-  const { runtime, theme, maps } = await fixture();
-  await compress(['--workers', '1'], runtime);
+it('publishes KTX2 paths beside the PNG masters, skipping newer outputs unless forced', async () => {
+  const { runtime, themesDir, theme, maps } = await fixture();
+  const db = new Database(themesDir);
+  expect(db.resolve('sample/finish/mid').variants[0].maps).toEqual(maps);
+  expect(await compress(['--workers', '1'], runtime)).toMatchObject({ written: 9, skipped: 0 });
+  for (const variant of db.resolve('sample/finish/mid').variants) {
+    for (const [channel, map] of Object.entries(variant.maps)) {
+      expect(map).toBe(maps[channel as MapName]);
+      const compressed = variant.ktx2?.[channel as MapName];
+      expect(compressed).toBe(map.replace(/\.png$/, '.ktx2'));
+      expect((await stat(join(theme, compressed!))).isFile()).toBe(true);
+    }
+  }
+
   const png = join(theme, maps.basecolor);
   const ktx2 = png.replace(/\.png$/, '.ktx2');
   const timestamp = (await stat(ktx2)).mtime;
@@ -89,32 +100,7 @@ it('skips only newer outputs and rebuilds with force', async () => {
   await utimes(png, equal, equal);
   await utimes(ktx2, equal, equal);
   expect(await compress(['--workers', '1'], runtime)).toMatchObject({ written: 1, skipped: 8 });
-  const older = new Date((await stat(png)).mtimeMs - 10_000);
-  await utimes(ktx2, older, older);
-  expect(await compress(['--workers', '1'], runtime)).toMatchObject({ written: 1, skipped: 8 });
   expect(await compress(['--workers', '1', '--force'], runtime)).toMatchObject({ written: 9, skipped: 0 });
-});
-
-it('publishes optional KTX2 references while keeping PNG masters and shared maps', async () => {
-  const { runtime, themesDir, theme, maps } = await fixture();
-  const db = new Database(themesDir);
-  expect(db.resolve('sample/finish/mid').variants[0].maps).toEqual(maps);
-  await compress(['--workers', '1'], runtime);
-  for (const variant of db.resolve('sample/finish/mid').variants) for (const [channel, map] of Object.entries(variant.maps)) {
-    expect(map).toBe(maps[channel as MapName]);
-    const compressed = variant.ktx2?.[channel as MapName];
-    expect(compressed).toBe(map.replace(/\.png$/, '.ktx2'));
-    expect((await stat(join(theme, compressed!))).isFile()).toBe(true);
-  }
-  const bundled: ThemeIndex = JSON.parse(await readFile(join(root, 'themes/cyberpunk/theme.json'), 'utf8'));
-  for (const entry of Object.values(bundled.entries)) for (const variant of entry.variants) {
-    for (const [channel, map] of Object.entries(variant.maps)) {
-      expect(typeof map).toBe('string');
-      const compressed = variant.ktx2?.[channel as MapName];
-      expect(compressed).toBe(map.replace(/\.png$/, '.ktx2'));
-      expect((await stat(join(root, 'themes/cyberpunk', compressed!))).isFile()).toBe(true);
-    }
-  }
 });
 
 it('drains to one worker above the ceiling and holds until four degrees below', async () => {

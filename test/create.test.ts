@@ -16,25 +16,23 @@ const backend = (render: ComfyRuntime['render']): ComfyRuntime => ({
   ready: async () => true, upload: async () => 'source.png', render,
 });
 
-it('preserves requested variants, layout and emission through create', async () => {
-  const png = await sharp({ create: { width: 64, height: 64, channels: 3, background: '#888888' } }).png().toBuffer();
-  const layout = { family: 'continuous' as const, origin: [2, 3] as [number, number], orientation: 'isotropic' as const };
-  const entry = await create({ ...request, variants: 2, seed: 17, layout, emission: 'luminance' },
-    { themesDir, comfy: backend(async () => png) });
-  expect(entry.variants.map(variant => variant.id)).toEqual(['1', '2']);
-  for (const variant of entry.variants) {
-    expect(variant.layout).toEqual(layout);
-    expect(existsSync(join(themesDir, 'test', variant.maps.emission!))).toBe(true);
-  }
-});
-
-it('rejects invalid alignment, resolution and layout before calling a backend', async () => {
+it('rejects invalid requests before a backend and reports backend failures', async () => {
   const comfy = backend(async () => { throw new Error('invalid request reached generation'); });
   for (const patch of [
     { tiling: undefined }, { resolution: [128, 64] }, { resolution: [2048, 2048] },
     { layout: { family: 'panel', origin: [0, 0], orientation: 'horizontal' } },
   ]) await expect(create({ ...request, ...patch } as CreateRequest, { themesDir, comfy }))
     .rejects.toMatchObject({ code: 'E_SCHEMA' });
+
+  await expect(create(request, { themesDir, comfy: new ComfyClient('http://127.0.0.1:9', 1000) }))
+    .rejects.toMatchObject({ code: 'E_COMFY_UNAVAILABLE' });
+
+  const undersized = await sharp({ create: { width: 32, height: 32, channels: 3, background: '#444444' } }).png().toBuffer();
+  await expect(create({
+    key: 'test/screen/mid', alignment: 'exact', aspect: [1, 1], description: 'screen artwork',
+    resolution: [64, 64], emission: 'image', flatColor: '#08080a',
+    screens: [{ kind: 'led-dot', description: 'brandless artwork' }],
+  }, { themesDir, comfy: backend(async () => undersized) })).rejects.toMatchObject({ code: 'E_GENERATION_FAILED' });
 });
 
 it('reports a failed seam without publishing a material or maps', async () => {
@@ -45,20 +43,6 @@ it('reports a failed seam without publishing a material or maps', async () => {
     .rejects.toMatchObject({ code: 'E_SEAM_CHECK_FAILED' });
   expect(list({}, { themesDir })).toEqual([]);
   expect(existsSync(join(themesDir, 'test/assets'))).toBe(false);
-});
-
-it('reports an unavailable generation backend', async () => {
-  await expect(create(request, { themesDir, comfy: new ComfyClient('http://127.0.0.1:9', 1000) }))
-    .rejects.toMatchObject({ code: 'E_COMFY_UNAVAILABLE' });
-});
-
-it('reports generated screen artwork with incompatible dimensions', async () => {
-  const png = await sharp({ create: { width: 32, height: 32, channels: 3, background: '#444444' } }).png().toBuffer();
-  await expect(create({
-    key: 'test/screen/mid', alignment: 'exact', aspect: [1, 1], description: 'screen artwork',
-    resolution: [64, 64], emission: 'image', flatColor: '#08080a',
-    screens: [{ kind: 'led-dot', description: 'brandless artwork' }],
-  }, { themesDir, comfy: backend(async () => png) })).rejects.toMatchObject({ code: 'E_GENERATION_FAILED' });
 });
 
 it('creates a flat finish locally and requires explicit overwrite', async () => {

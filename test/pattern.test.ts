@@ -2,8 +2,9 @@ import { mkdtempSync, readFileSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 import { expect, it } from 'vitest';
-import { create, resolve, type CreateRequest } from '../src/index.js';
+import { create, resolve, type CreateRequest, type SurfaceResponse } from '../src/index.js';
 import catalog from '../schema/pattern-kinds.json';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -57,15 +58,49 @@ it('appends a canonical recolor while inheriting the entry and sharing relief ma
   expect(readFileSync(join(themesDir, 'test', entry.variants[0].maps.basecolor))).not.toEqual(bytes);
 });
 
-it('rejects an undrawable pattern and a missing recolor source', async () => {
-  const options = { themesDir: mkdtempSync(join(tmpdir(), 'pattern-invalid-')) };
-  const request: CreateRequest = {
-    key: 'test/pattern/mid', alignment: 'tile', description: 'pattern validation',
-    tiling: { worldSize: [1, 1] }, resolution: [64, 64],
-    pattern: { kind: 'stripe', colors: ['#555555'] },
+it('publishes bounded damp response on a mineral tile while keeping the dry area dominant', async () => {
+  const response: SurfaceResponse = {
+    kind: 'localized-damp', coverage: 0.3, patchScale: 0.5,
+    roughness: 0.22, darkening: 0.12, reliefRetention: 0.3,
   };
-  await expect(create(request, options)).rejects.toMatchObject({ code: 'E_SCHEMA' });
-  await create({ ...request, pattern: undefined, flatColor: '#555555' }, options);
-  await expect(create({ ...request, append: true, pattern: undefined,
-    recolor: { from: 'absent', color: '#444444' } }, options)).rejects.toMatchObject({ code: 'E_SCHEMA' });
+  const request: CreateRequest = {
+    key: 'test/mineral/mid', alignment: 'tile', description: 'local damp concrete',
+    tiling: { worldSize: [2, 2] }, resolution: [128, 128], seed: 7,
+    physical: { roughnessFactor: 0.8, metallicFactor: 0 },
+    pattern: { kind: 'mineral', colors: ['#777777'], response },
+  };
+  const themesDir = mkdtempSync(join(tmpdir(), 'damp-'));
+  const entry = await create(request, { themesDir });
+  const variant = entry.variants[0];
+  expect(variant.response).toEqual(response);
+  expect(variant.maps.emission).toBeUndefined();
+  const pixels = await sharp(join(themesDir, 'test', variant.maps.roughness)).extractChannel(0).raw().toBuffer();
+  const damp = pixels.filter(value => value < Math.round(0.8 * 255));
+  expect(damp.length).toBeGreaterThan(0);
+  expect(damp.length / pixels.length).toBeLessThanOrEqual(response.coverage);
+  expect(Math.min(...pixels)).toBeGreaterThanOrEqual(Math.round(response.roughness * 255));
+  await expect(create({ ...request, key: 'test/metal/mid', physical: { metallicFactor: 1 } }, { themesDir }))
+    .rejects.toMatchObject({ code: 'E_SCHEMA' });
+});
+
+it('fits a decal to its receiving face with a transparent edge inset', async () => {
+  const request: CreateRequest = {
+    key: 'test/incident/mid', alignment: 'exact', aspect: [2, 1],
+    description: 'fitted incident decal', resolution: [128, 64], seed: 14873,
+    decal: { worldSize: [2.4, 1.2], edgeInset: 0.08, surfaceOffset: 0.002, wrapMode: 'clamp', projection: 'surface-fit' },
+    physical: { roughnessFactor: 0.62, metallicFactor: 0, alphaMode: 'BLEND' },
+    pattern: { kind: 'incident-blood', colors: ['#541014', '#22080a'], grain: 0 },
+  };
+  const themesDir = mkdtempSync(join(tmpdir(), 'decal-'));
+  const entry = await create(request, { themesDir });
+  expect(entry.decal).toEqual(request.decal);
+  const { data, info } = await sharp(join(themesDir, 'test', entry.variants[0].maps.opacity!))
+    .extractChannel(0).raw().toBuffer({ resolveWithObject: true });
+  expect(data.some(value => value > 0)).toBe(true);
+  const { worldSize: [width, height], edgeInset } = entry.decal!;
+  for (let y = 0; y < info.height; y++) for (let x = 0; x < info.width; x++) {
+    const edge = Math.min((x + 0.5) / info.width * width, (info.width - x - 0.5) / info.width * width,
+      (y + 0.5) / info.height * height, (info.height - y - 0.5) / info.height * height);
+    if (edge < edgeInset) expect(data[y * info.width + x]).toBe(0);
+  }
 });

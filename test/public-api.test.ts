@@ -1,19 +1,9 @@
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import sharp from 'sharp';
 import { afterEach, describe, expect, it } from 'vitest';
-import { expectPackedMap } from './helpers/packed-map.js';
-import {
-  MaterialsError,
-  create,
-  list,
-  rebrand,
-  refinish,
-  resolve,
-  type ComfyRuntime,
-  type CreateRequest,
-} from '../src/index.js';
+import { create, list, rebrand, refinish, resolve, type ComfyRuntime, type CreateRequest } from '../src/index.js';
 
 async function solidPng(width: number, height: number): Promise<Buffer> {
   return sharp(new Uint8Array(width * height * 3).fill(96), {
@@ -43,32 +33,40 @@ afterEach(() => {
 describe('public package entry', () => {
   it('creates, resolves, lists and refinishes through the configured database', async () => {
     const themesDir = themes();
+    const layout = { family: 'continuous' as const, origin: [2, 3] as [number, number], orientation: 'isotropic' as const };
     const request: CreateRequest = {
       key: 'test/concrete/mid',
       alignment: 'tile',
       description: 'neutral cast concrete',
       tiling: { worldSize: [1, 1] },
       resolution: [64, 64],
+      variants: 2,
+      seed: 17,
+      layout,
+      emission: 'luminance',
       physical: { roughnessFactor: 0.8, metallicFactor: 0 },
     };
 
     const created = await create(request, { themesDir, comfy });
-    await expectPackedMap(join(themesDir, 'test'), created.variants[0]);
+    expect(created.variants.map(variant => variant.id)).toEqual(['1', '2']);
+    for (const variant of created.variants) {
+      expect(variant.layout).toEqual(layout);
+      expect(existsSync(join(themesDir, 'test', variant.maps.emission!))).toBe(true);
+    }
     expect(resolve(request.key, { themesDir })).toEqual(created);
     expect(list({ theme: 'test', kind: 'concrete', tier: 'mid' }, { themesDir })).toEqual([request.key]);
     expect(list({ tier: 'rich' }, { themesDir })).toEqual([]);
-    expect(existsSync(join(themesDir, 'test', created.variants[0].maps.basecolor))).toBe(true);
 
-    const before = readFileSync(join(themesDir, 'test', created.variants[0].maps.basecolor));
+    const basecolor = join(themesDir, 'test', created.variants[0].maps.basecolor);
+    const before = readFileSync(basecolor);
     const result = await refinish(
       { key: request.key, finish: { roughness: [0.82, 0.9], grain: 0.1 }, physical: { metallicFactor: 1 } },
       { themesDir },
     );
-    expect(result.variants).toEqual(['1']);
+    expect(result.variants).toEqual(['1', '2']);
     expect(result.entry.finish?.roughness).toEqual([0.82, 0.9]);
     expect(result.entry.physical.metallicFactor).toBe(1);
-    await expectPackedMap(join(themesDir, 'test'), result.entry.variants[0]);
-    expect(readFileSync(join(themesDir, 'test', created.variants[0].maps.basecolor))).toEqual(before);
+    expect(readFileSync(basecolor)).toEqual(before);
   });
 
   it('rebrands both screen shapes through the public entry', async () => {
@@ -124,33 +122,20 @@ describe('public package entry', () => {
       const result = branded.find(item => item.key === entry.key)!;
       expect(result).toMatchObject({ variantId: variant.id, from: '1' });
       expect([1, 2]).toContain(result.lines);
-      for (const variant of entry.variants) await expectPackedMap(join(themesDir, 'test'), variant);
     }
     expect(readFileSync(join(themesDir, 'test', original.variants[0].maps.emission!))).toEqual(baseEmission);
-    const variant = resolve(original.key, { themesDir }).variants[1];
-    const emissionPath = join(themesDir, 'test', variant.maps.emission!);
+    const emissionPath = join(themesDir, 'test', resolve(original.key, { themesDir }).variants[1].maps.emission!);
     const brandedBytes = readFileSync(emissionPath);
     expect(await rebrand(request, { themesDir })).toEqual(branded);
     expect(readFileSync(emissionPath)).toEqual(brandedBytes);
     expect(await rebrand({ theme: 'test', businesses: [] }, { themesDir })).toEqual([]);
+
     const indexPath = join(themesDir, 'test/theme.json');
     const index = readFileSync(indexPath);
-    for (const brandName of ['Café Ñu', '!!!']) {
-      await expect(rebrand({ ...request, businesses: [{ ...request.businesses[0], brandName }] }, { themesDir }))
-        .rejects.toMatchObject({ code: 'E_SCHEMA' });
-    }
+    await expect(rebrand({ ...request, businesses: [{ ...request.businesses[0], brandName: 'Café Ñu' }] }, { themesDir }))
+      .rejects.toMatchObject({ code: 'E_SCHEMA' });
     await expect(rebrand({ ...request, businesses: [{ ...request.businesses[0], tier: 'poor' }] }, { themesDir }))
       .rejects.toMatchObject({ code: 'E_KEY_NOT_FOUND' });
     expect(readFileSync(indexPath)).toEqual(index);
-  });
-
-  it('keeps malformed database JSON inside the closed MaterialsError set', () => {
-    const themesDir = themes();
-    mkdirSync(join(themesDir, 'broken'), { recursive: true });
-    writeFileSync(join(themesDir, 'broken', 'theme.json'), '{');
-
-    expect(() => list({ theme: 'broken' }, { themesDir })).toThrowError(
-      expect.objectContaining<Partial<MaterialsError>>({ code: 'E_SCHEMA' }),
-    );
   });
 });

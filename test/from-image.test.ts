@@ -52,10 +52,11 @@ it('imports PNG and JPEG faces, appending with inherited scale, finish and physi
   expect(await convert(themesDir, input, ['--overwrite'])).toMatchObject({ ok: true });
 });
 
-it('accepts a tile without a seam gate and supplies default finish and physical values', async () => {
+it('supplies default finish and physical values for a tile and reports its declared errors', async () => {
   const themesDir = mkdtempSync(join(tmpdir(), 'from-image-tile-'));
+  const path = await source(themesDir, 'png');
   const input = {
-    key: 'test/tile/mid', path: await source(themesDir, 'png'), description: 'unwrapped source',
+    key: 'test/tile/mid', path, description: 'unwrapped source',
     alignment: 'tile', tiling: { worldSize: [1, 1] }, resolution: [64, 64],
   };
   expect(await convert(themesDir, input)).toMatchObject({ ok: true, data: { variant: '1', alignment: 'tile' } });
@@ -63,20 +64,12 @@ it('accepts a tile without a seam gate and supplies default finish and physical 
     physical: { metallicFactor: 0, roughnessFactor: 0.65 },
     finish: { roughness: [0.6, 0.7], grain: 0.2, relief: 2 },
   });
+  expect(await convert(themesDir, { ...input, path: join(themesDir, 'absent.png') }))
+    .toMatchObject({ ok: false, error: { code: 'E_SCHEMA' } });
+  expect(await convert(themesDir, { ...input, key: 'test/wet/mid', physical: { roughnessFactor: 0.2 } }))
+    .toMatchObject({ ok: false, error: { code: 'E_SCHEMA' } });
   expect(await convert(themesDir, { ...input, key: 'test/absent/mid', append: true, variantId: 'side' }))
     .toMatchObject({ ok: false, error: { code: 'E_KEY_NOT_FOUND' } });
-});
-
-it('reports invalid images, physical settings and missing append themes', async () => {
-  const themesDir = mkdtempSync(join(tmpdir(), 'from-image-invalid-'));
-  const input = {
-    key: 'test/face/mid', path: join(themesDir, 'absent.png'), description: 'invalid face',
-    alignment: 'exact', aspect: [1, 1], resolution: [64, 64],
-  };
-  expect(await convert(themesDir, input)).toMatchObject({ ok: false, error: { code: 'E_SCHEMA' } });
-  const path = await source(themesDir, 'png');
-  expect(await convert(themesDir, { ...input, path, physical: { roughnessFactor: 0.2 } }))
-    .toMatchObject({ ok: false, error: { code: 'E_SCHEMA' } });
-  expect(await convert(themesDir, { ...input, path, key: 'absent/face/mid', append: true, variantId: 'side' }))
+  expect(await convert(themesDir, { ...input, key: 'absent/tile/mid', append: true, variantId: 'side' }))
     .toMatchObject({ ok: false, error: { code: 'E_THEME_NOT_FOUND' } });
 });
