@@ -2,7 +2,7 @@
   {
     "key": "cyberpunk/district-hex/rich",
     "alignment": "tile",
-    "description": "Fine slate hexagons with restrained joints and shallow edge relief for luxury road and parking surfaces",
+    "description": "Slate blue hexagons with thin dark joints and shallow relief for luxury road and parking surfaces",
     "tiling": {
       "worldSize": [
         1.2,
@@ -16,31 +16,31 @@
     "seed": 163032,
     "variantId": "subtle",
     "physical": {
-      "roughnessFactor": 0.42,
+      "roughnessFactor": 0.38,
       "metallicFactor": 0
     },
     "pattern": {
       "kind": "hexagon",
       "colors": [
-        "#384447"
+        "#3e4b50"
       ],
       "cells": [
         8,
         8
       ],
-      "line": 0.0015,
-      "depth": 0.018,
-      "joint": 0.09,
-      "variation": 0.018,
-      "sheen": 0.025,
-      "grain": 0.002,
+      "line": 0.0026,
+      "depth": 0.008,
+      "joint": 0.24,
+      "variation": 0.035,
+      "sheen": 0.012,
+      "grain": 0.008,
       "wear": 0
     }
   },
   {
     "key": "cyberpunk/district-panel-blue/rich",
     "alignment": "tile",
-    "description": "Clean panel blue coating with fine grain and broad reflected highlights",
+    "description": "Blue slate panel coating with soft tonal mottling and varied gloss",
     "tiling": {
       "worldSize": [
         1,
@@ -53,11 +53,28 @@
     ],
     "seed": 161318,
     "variantId": "clean",
-    "flatColor": "#344b55",
-    "flatNoise": 0.005,
     "physical": {
-      "roughnessFactor": 0.23,
+      "roughnessFactor": 0.24,
       "metallicFactor": 0
+    },
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#30424a",
+        "#3a4d54"
+      ],
+      "cells": [
+        3,
+        3
+      ],
+      "octaves": 3,
+      "line": 0,
+      "depth": 0.008,
+      "joint": 0,
+      "variation": 0.012,
+      "sheen": 0.12,
+      "grain": 0.005,
+      "wear": 0
     }
   },
   {
@@ -86,7 +103,7 @@
   {
     "key": "cyberpunk/district-panel-dark/rich",
     "alignment": "tile",
-    "description": "Clean panel dark coating with fine grain and broad reflected highlights",
+    "description": "Dark slate panel coating with shallow relief and broad varied gloss",
     "tiling": {
       "worldSize": [
         1,
@@ -99,17 +116,34 @@
     ],
     "seed": 161318,
     "variantId": "clean",
-    "flatColor": "#343d40",
-    "flatNoise": 0.005,
     "physical": {
-      "roughnessFactor": 0.32,
+      "roughnessFactor": 0.21,
       "metallicFactor": 0
+    },
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#29393e",
+        "#3a484b"
+      ],
+      "cells": [
+        4,
+        4
+      ],
+      "octaves": 3,
+      "line": 0,
+      "depth": 0.006,
+      "joint": 0,
+      "variation": 0.015,
+      "sheen": 0.16,
+      "grain": 0.007,
+      "wear": 0
     }
   },
   {
     "key": "cyberpunk/district-curb-blue/rich",
     "alignment": "tile",
-    "description": "Clean curb blue coating with fine grain and broad reflected highlights",
+    "description": "Blue curb coating with subtle paint mottling and smooth gloss",
     "tiling": {
       "worldSize": [
         1,
@@ -122,11 +156,28 @@
     ],
     "seed": 161318,
     "variantId": "clean",
-    "flatColor": "#127d9f",
-    "flatNoise": 0.005,
     "physical": {
-      "roughnessFactor": 0.3,
+      "roughnessFactor": 0.26,
       "metallicFactor": 0
+    },
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#176b95",
+        "#227fa3"
+      ],
+      "cells": [
+        4,
+        3
+      ],
+      "octaves": 2,
+      "line": 0,
+      "depth": 0.012,
+      "joint": 0,
+      "variation": 0.012,
+      "sheen": 0.08,
+      "grain": 0.01,
+      "wear": 0
     }
   },
   {

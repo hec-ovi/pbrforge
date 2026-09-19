@@ -1,6 +1,6 @@
 # Materials index
 
-Version: 0.17.2.
+Version: 0.17.3.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ Version: 0.17.2.
 - [Authoring skill](../skills/pbrforge/SKILL.md): CLI workflow; [pattern resolver](../skills/pbrforge/references/patterns/INDEX.md) and [photo framing](../skills/pbrforge/references/from-image.md) supply detail.
 - [Consumer bindings](../CONTRACT.md#consumer-bindings): exterior, streets, markings, scenic rooms and hydrology, with schemas.
 - [Catalog](../themes/cyberpunk/theme.json): authored keys, variants, dimensions and map references.
-- [Issues](ISSUES.md): open decisions and boundary proposals for the orchestrator.
+- [Issues](ISSUES.md): open decisions, boundary proposals and the [2026-09-18 look pass](ISSUES.md#look-pass-2026-09-18).
 
 ## Authored resources
 
@@ -36,4 +36,4 @@ Version: 0.17.2.
 - [Paired facade recipes](../batch/cyberpunk/paired-facade.json): lounge backplate, photographed graphite metal, periodic aluminum brushing, clear glazing and room/light surface states.
 - [ComfyUI workflows](../templates/README.md): photographic and upscale templates.
 
-- [District street recipes](../batch/cyberpunk/district-streets.json): subtle hexagonal paving and clean blue/red luxury panels, curbs and junction coatings. Native bindings expose the same authored maps to Streets.
+- [District street recipes](../batch/cyberpunk/district-streets.json): fine hexagonal paving and glossy district panels, curbs and junction coatings. Native bindings expose the same authored maps to Streets.

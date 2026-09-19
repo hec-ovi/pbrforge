@@ -1,5 +1,7 @@
 # Changelog
 
+0.17.3: district paving carries fine dark hex joints, panels and blue curbs carry varied gloss, and ivory facades carry shallow mineral relief.
+
 0.17.2: the test suite keeps one case per contract promise through the public entry points.
 
 0.17.1: variants publish sibling KTX2 paths beside PNG maps through CPU compression with a 90 C thermal ceiling.

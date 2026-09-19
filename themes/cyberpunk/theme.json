@@ -21003,15 +21003,15 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.53
+        "roughnessFactor": 0.48
       },
       "finish": {
         "roughness": [
-          0.48,
-          0.58
+          0.45,
+          0.51
         ],
-        "grain": 0.08,
-        "relief": 0.08
+        "grain": 0.1,
+        "relief": 0.28
       },
       "variants": [
         {
@@ -21221,7 +21221,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.42,
+        "roughnessFactor": 0.38,
         "metallicFactor": 0
       },
       "variants": [
@@ -21263,13 +21263,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.23,
+        "roughnessFactor": 0.24,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "clean",
-          "class": "flat",
+          "class": "pattern",
           "resolution": [
             512,
             512
@@ -21347,13 +21347,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.32,
+        "roughnessFactor": 0.21,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "clean",
-          "class": "flat",
+          "class": "pattern",
           "resolution": [
             512,
             512
@@ -21389,13 +21389,13 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.3,
+        "roughnessFactor": 0.26,
         "metallicFactor": 0
       },
       "variants": [
         {
           "id": "clean",
-          "class": "flat",
+          "class": "pattern",
           "resolution": [
             512,
             512

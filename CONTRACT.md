@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Version: 0.17.2, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
+Version: 0.17.3, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
 ## API
 
@@ -77,7 +77,7 @@ Each variant keeps `maps` as map names to PNG path strings and publishes compres
 
 Resolve named bindings without guessing paths or substituting unrelated entries. Materials owns the published catalog and bindings; consumers own geometry and rendering. The catalog schema has no output-version or revision field; these remain [open decisions](docs/ISSUES.md).
 
-District street recipes publish subtle hexagonal road/parking texture, clean glossy blue/red panels, coordinated curb/gutter colors and blue/yellow junction finishes. Native street bindings include their authored manifest, emissive parking edges and letter-atlas marquee faces. Hexagons use a 0.15 m lattice; geometry owns full-size panel boundaries.
+District street recipes publish fine dark hexagonal road/parking joints, glossy blue/red panels, coordinated curb/gutter colors and blue/yellow junction finishes. Blue and dark panels and blue curbs carry restrained tonal and gloss variation. Native street bindings include their authored manifest, emissive parking edges and letter-atlas marquee faces. Hexagons use a 0.15 m lattice; geometry owns full-size panel boundaries.
 
 Exterior frame coatings are published as `cyberpunk/exterior-accent-blue/mid` and `cyberpunk/exterior-accent-gold/mid`, each with a `rich` alias and canonical `coat` variant. These opaque coatings use 1 m tiles, roughness 0.55 and subtle grain; [recipes](batch/cyberpunk/exterior-accents.json) retain the authored colors.
 
