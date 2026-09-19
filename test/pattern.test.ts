@@ -23,7 +23,7 @@ it('creates every published pattern kind through its request schema without a ba
     const base = resolve(recipe!.key);
     const input: CreateRequest = {
       ...recipe!, key: `test/${kind}/mid`, aliases: [], append: false, canonical: false,
-      tiling: base.tiling, aspect: base.aspect, physical: base.physical,
+      tiling: recipe!.tiling ?? base.tiling, aspect: base.aspect, physical: base.physical,
     };
     const entry = await create(input, { themesDir, comfy: { ready: offline, upload: offline, render: offline } });
     expect(entry.variants[0].class, kind).toBe('pattern');

@@ -7,6 +7,8 @@
     { "kind": "concrete", "draws": "mineral clouds, cast traces and shallow pores beneath optional panel seams", "reads": "cells, line, bevel, depth, joint, wear", "detail": "skills/pbrforge/references/patterns/concrete.md" },
     { "kind": "hexagon", "draws": "a hexagon grid, as edges or as gloss only", "reads": "cells (columns, row pairs), line, sheen, joint", "detail": "skills/pbrforge/references/patterns/hexagon.md" },
     { "kind": "panel-grid", "draws": "inset panels with chamfered edges and a flat recess", "reads": "cells, line, bevel, depth, joint, bond", "detail": "skills/pbrforge/references/patterns/panel-grid.md" },
+    { "kind": "louvre", "draws": "tilted metal blades with folded lips and optional punched openings", "reads": "cells, axis, line, bevel, depth, opening, two colors, grain, sheen", "detail": "skills/pbrforge/references/patterns/louvre.md" },
+    { "kind": "fixings", "draws": "four recessed fixing heads at panel corners", "reads": "cells, line (diameter), bevel (inset), depth, two colors, grain", "detail": "skills/pbrforge/references/patterns/fixings.md" },
     { "kind": "slab", "draws": "large flush slabs cut by a narrow groove", "reads": "cells, line, bevel, variation, bond", "detail": "skills/pbrforge/references/patterns/slab.md" },
     { "kind": "stripe", "draws": "bands across one axis", "reads": "cells, axis, split, line", "detail": "skills/pbrforge/references/patterns/stripe.md" },
     { "kind": "two-tone", "draws": "one split across the tile with a trim line", "reads": "axis, split, line, three colors", "detail": "skills/pbrforge/references/patterns/two-tone.md" },

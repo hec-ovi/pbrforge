@@ -5,7 +5,7 @@ description: Author and inspect PBR material sets with the pbrforge CLI, includi
 
 # pbrforge
 
-Version: 0.17.3. Use the public CLI to author or inspect a themed material database.
+Version: 0.17.4. Use the public CLI to author or inspect a themed material database.
 
 Run `pbrforge` if installed on PATH. From the checkout use `npm run --silent pbrforge -- <verb>` or, after `npm run build`, `node dist/cli/pbrforge.js <verb>`. Start with `doctor` for readiness and `help` for verb syntax. `--themes <dir>` selects a separate database; omission uses bundled `themes/`.
 
@@ -30,6 +30,7 @@ Photographic generation needs ComfyUI. Local derivation, patterns, flat colors, 
 ## Authoring rules
 
 - Resolve before creating so existing keys and variants can be reused. Write through verbs; they produce the catalog and map files.
+- On tiled append, explicit `tiling.worldSize` sets the new variant scale. Consumers use `variant.tiling ?? entry.tiling`; existing variants keep their entry scale.
 - A material is a coordinated map set, not one PNG. Resolve after writing and report the key, variant IDs and map paths.
 - Match image proportions and physical size. Repeating sources start clean, with even lighting; place unique marks as separate fitted artifacts. Scene Studio surfaces use native photographic sources.
 - `from-image` accepts asymmetry but does not check wrap continuity. `sourceAlbedo` requires an opaque wrapping tile, whole-image downsampling and a passing seam gate.

@@ -145,7 +145,8 @@ export class MaterialInspector {
       channelRows.push(row);
     }
 
-    const tilingText = entry.tiling?.worldSize ? `${entry.tiling.worldSize[0]}m × ${entry.tiling.worldSize[1]}m` : 'None';
+    const worldSize = (variant.tiling ?? entry.tiling)?.worldSize;
+    const tilingText = worldSize ? `${worldSize[0]}m × ${worldSize[1]}m` : 'None';
     const aspectText = entry.aspect ? `${entry.aspect[0]}:${entry.aspect[1]}` : '1:1';
     const resText = variant.resolution ? `${variant.resolution[0]} × ${variant.resolution[1]} px` : 'Unspecified';
 

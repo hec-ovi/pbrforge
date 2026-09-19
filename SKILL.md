@@ -5,7 +5,7 @@ description: Resolve, list or author reusable PBR material sets through the urbe
 
 # Materials
 
-Version: 0.17.3. Materials generates and stores themed PBR maps with physical scale, resolved by `theme/kind/tier`.
+Version: 0.17.4. Materials generates and stores themed PBR maps with physical scale, resolved by `theme/kind/tier`.
 
 ## Call
 
@@ -21,7 +21,7 @@ CLI: `node dist/cli/pbrforge.js <verb>` after building, or `npm run --silent pbr
 | --- | --- |
 | `resolve(key, options?)` | Required key or alias. |
 | `list(filter?, options?)` | Optional `theme`, `kind`, `tier`; omitted fields match all canonical keys. |
-| `create(request, options?)` | Required `key`, `alignment`, `description`; tile needs `tiling.worldSize` in metres, exact needs `aspect`. Append inherits the existing scale. |
+| `create(request, options?)` | Required `key`, `alignment`, `description`; tile needs `tiling.worldSize` in metres, exact needs `aspect`. Append inherits the entry scale; explicit tiling overrides only the new variant. |
 | Create settings | `resolution: [1024,1024]`, `variants: 1`, `emission: "none"`, `append: false`, `canonical: false`, `overwrite: false`. Seed defaults to a hash of description; `variantId` defaults to its position starting at `"1"`. |
 | Create appearance | Optional `aliases`, `physical` (default `{}`; map factors default to roughness 1, metallic 0), `finish` (roughness factor ±0.05 clamped to 0..1, grain 0.2, relief 2), `layout`, `decal`. |
 | Create source | Choose photographic description, `pattern`, `flatColor` (`flatNoise: 0.04`), `recolor`, `sourceImage`, `sourceAlbedo`, or screen artwork. Screen emission uses `emission: "image"`, `flatColor`, `screens[]`; optional `brandName` and `businessKind`. [Schema](schema/create-request.schema.json) defines combinations. |
@@ -34,7 +34,7 @@ CLI: `node dist/cli/pbrforge.js <verb>` after building, or `npm run --silent pbr
 
 `resolve` and `create` return [MaterialEntry](schema/material-entry.schema.json); `list` returns sorted canonical keys. `refinish` and `pack` return `{entry, variants}`; `rebrand` returns `{key, variantId, from, lines}[]`.
 
-`variant.maps` contains PNG path strings; optional `variant.ktx2` contains compressed paths by map name. All paths are relative to the theme folder. Prefer `ktx2` when available, falling back to the PNG master. Run `npm run compress` after authoring. Use the declared scale and variant ID. Basecolor/emission are sRGB, data maps linear, normals +Y. Roughness and metallic maps use scalar factors 1. Fit exact maps once; repeat tiles at `tiling.worldSize`.
+`variant.maps` contains PNG path strings; optional `variant.ktx2` contains compressed paths by map name. All paths are relative to the theme folder. Prefer `ktx2` when available, falling back to the PNG master. Run `npm run compress` after authoring. Use the declared scale and variant ID. Basecolor/emission are sRGB, data maps linear, normals +Y. Roughness and metallic maps use scalar factors 1. Fit exact maps once; repeat tiles at `(variant.tiling ?? entry.tiling).worldSize`.
 
 CLI stdout is `{ok:true, verb, data}` or `{ok:false, verb, error:{code,message,details?,hint?}}`. Exit codes: 0 success, 2 usage, 1 other failure. Library `MaterialsError` codes: `E_SCHEMA`, `E_KEY_NOT_FOUND`, `E_KEY_EXISTS`, `E_THEME_NOT_FOUND`, `E_COMFY_UNAVAILABLE`, `E_GENERATION_FAILED`, `E_SEAM_CHECK_FAILED`. CLI adds `E_USAGE`, `E_INTERNAL`; preview uses `E_DATABASE_UNAVAILABLE`. Report the code and message; correct the named input. Unexpected library filesystem/backend exceptions can propagate; see [issues](docs/ISSUES.md).
 

@@ -12,7 +12,7 @@ const entry: MaterialEntry = {
   physical: {},
   variants: [
     { id: '1', resolution: [64, 64], maps: { basecolor: 'a.png', normal: 'b.png', roughness: 'c.png', metallic: 'd.png' } },
-    { id: '2', resolution: [64, 64], maps: { basecolor: 'e.png', normal: 'f.png', roughness: 'g.png', metallic: 'h.png' } },
+    { id: '2', tiling: { worldSize: [0.64, 0.64] }, resolution: [64, 64], maps: { basecolor: 'e.png', normal: 'f.png', roughness: 'g.png', metallic: 'h.png' } },
   ],
 };
 
@@ -44,6 +44,7 @@ describe('preview contract', () => {
 
     fireEvent.change(getByRole(view.root, 'combobox', { name: 'variant' }), { target: { value: '1' } });
     expect(viewer.load).toHaveBeenLastCalledWith('cyberpunk', entry, 1, 2);
+    expect(getByText(view.root, '0.64m × 0.64m')).toBeTruthy();
     fireEvent.change(getByRole(view.root, 'combobox', { name: 'lighting preset' }), { target: { value: 'neon' } });
     expect(viewer.setLightingPreset).toHaveBeenCalledWith('neon');
     fireEvent.change(getByRole(view.root, 'combobox', { name: 'background mode' }), { target: { value: 'grid' } });

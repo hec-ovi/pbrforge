@@ -1,6 +1,6 @@
 # pbrforge
 
-Version: 0.17.3. A TypeScript PBR material toolkit with a JSON CLI and a Three.js preview. A `theme/kind/tier` key resolves to reusable maps, physical properties and real-world scale.
+Version: 0.17.4. A TypeScript PBR material toolkit with a JSON CLI and a Three.js preview. A `theme/kind/tier` key resolves to reusable maps, physical properties and real-world scale.
 
 ![catalog](media/preview-1.gif)
 ![cabinet side](media/preview-2.gif)

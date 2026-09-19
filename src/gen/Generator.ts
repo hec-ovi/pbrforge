@@ -47,6 +47,7 @@ const MAP_ORDER: MapName[] = ['basecolor', 'normal', 'roughness', 'metallic', 'h
 /** What one variant is built from: the surface, its own relief and gloss when it has them, and the screen lane. */
 interface Source {
   basecolor: Rgb;
+  normal?: Rgb;
   height?: Gray;
   roughness?: Gray;
   opacity?: Gray;
@@ -149,7 +150,10 @@ export class Generator {
     if (request.sourceImage && (alignment !== 'exact' || base?.decal)) {
       throw new MaterialsError('E_SCHEMA', 'sourceImage needs an exact entry without decal placement');
     }
-    const tiling = base?.tiling ?? request.tiling;
+    const recolorSource = request.recolor && base?.variants.find(v => v.id === request.recolor!.from);
+    const tiling = alignment === 'tile'
+      ? request.tiling ?? (recolorSource ? recolorSource.tiling : undefined) ?? base?.tiling
+      : undefined;
     if (alignment === 'tile' && !tiling) {
       throw new MaterialsError('E_SCHEMA', 'tile alignment needs tiling.worldSize');
     }
@@ -286,6 +290,7 @@ export class Generator {
     const response = request.pattern?.response ?? source.reuse?.response;
     const variant: Variant = {
       id,
+      ...(target.base && target.tiling && (request.tiling || source.reuse?.tiling) ? { tiling: target.tiling } : {}),
       ...(request.sourceImage ? { class: 'plate' as const } : request.sourceAlbedo ? { class: 'image' as const }
         : request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
       resolution: [source.basecolor.width, source.basecolor.height],
@@ -369,7 +374,7 @@ async function derivedMaps(
   const height = source.height ?? deriveHeight(source.basecolor, target.finish);
   const roughness = source.roughness ?? deriveRoughness(height, target.finish);
   return [
-    ...(await reliefMaps(height, roughness)),
+    ...(await reliefMaps(height, roughness, source.normal)),
     ['metallic', await encodeGrayPng(deriveMetallic(source.basecolor, target.physical))],
     ...(source.opacity ? ([['opacity', await encodeGrayPng(source.opacity)]] as [MapName, Buffer][]) : []),
     ...(mode === 'luminance' || mode === 'color-mask'

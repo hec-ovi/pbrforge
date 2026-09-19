@@ -1031,6 +1031,51 @@
             "ao": "assets/window-frame/poor/paint/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/283fafbac91080a76e69ab2f2a62e6a4910010a8d1b148f9d89fe39d35063720.ktx2"
           }
+        },
+        {
+          "id": "comb",
+          "tiling": {
+            "worldSize": [
+              0.64,
+              0.64
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/window-frame/poor/comb/basecolor.png",
+            "normal": "assets/window-frame/poor/comb/normal.png",
+            "roughness": "assets/window-frame/poor/comb/roughness.png",
+            "metallic": "assets/window-frame/poor/comb/metallic.png",
+            "height": "assets/window-frame/poor/comb/height.png",
+            "ao": "assets/window-frame/poor/comb/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/2763ac6b928bae3b5ff238f09c08e7b8a32256265a1606a7e7c234a4b4b5d0b2.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              0.16,
+              0.64
+            ],
+            "jointWidth": 0.118,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/window-frame/poor/comb/basecolor.ktx2",
+            "normal": "assets/window-frame/poor/comb/normal.ktx2",
+            "roughness": "assets/window-frame/poor/comb/roughness.ktx2",
+            "metallic": "assets/window-frame/poor/comb/metallic.ktx2",
+            "height": "assets/window-frame/poor/comb/height.ktx2",
+            "ao": "assets/window-frame/poor/comb/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/2763ac6b928bae3b5ff238f09c08e7b8a32256265a1606a7e7c234a4b4b5d0b2.ktx2"
+          }
         }
       ]
     },
@@ -1083,6 +1128,51 @@
             "height": "assets/window-frame/mid/paint/height.ktx2",
             "ao": "assets/window-frame/mid/paint/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/b52c9c480c0dfe5288ec242d5a489502800530b167540d96da24635b9e6ac2e5.ktx2"
+          }
+        },
+        {
+          "id": "comb",
+          "tiling": {
+            "worldSize": [
+              0.64,
+              0.64
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/window-frame/mid/comb/basecolor.png",
+            "normal": "assets/window-frame/mid/comb/normal.png",
+            "roughness": "assets/window-frame/mid/comb/roughness.png",
+            "metallic": "assets/window-frame/mid/comb/metallic.png",
+            "height": "assets/window-frame/mid/comb/height.png",
+            "ao": "assets/window-frame/mid/comb/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/1d6dbf05a1004bbb57f789bbc1944b96172a05a808877772eb1e01fd493a6ec7.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              0.16,
+              0.64
+            ],
+            "jointWidth": 0.118,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/window-frame/mid/comb/basecolor.ktx2",
+            "normal": "assets/window-frame/mid/comb/normal.ktx2",
+            "roughness": "assets/window-frame/mid/comb/roughness.ktx2",
+            "metallic": "assets/window-frame/mid/comb/metallic.ktx2",
+            "height": "assets/window-frame/mid/comb/height.ktx2",
+            "ao": "assets/window-frame/mid/comb/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/1d6dbf05a1004bbb57f789bbc1944b96172a05a808877772eb1e01fd493a6ec7.ktx2"
           }
         }
       ]
@@ -1137,6 +1227,51 @@
             "ao": "assets/window-frame/rich/paint/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/b208543f30ff864460c98f92f5dcc17993159fbb14e87037f022ada1f30c7fe1.ktx2"
           }
+        },
+        {
+          "id": "comb",
+          "tiling": {
+            "worldSize": [
+              0.64,
+              0.64
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/window-frame/rich/comb/basecolor.png",
+            "normal": "assets/window-frame/rich/comb/normal.png",
+            "roughness": "assets/window-frame/rich/comb/roughness.png",
+            "metallic": "assets/window-frame/rich/comb/metallic.png",
+            "height": "assets/window-frame/rich/comb/height.png",
+            "ao": "assets/window-frame/rich/comb/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/87d238b0b029aa223b7d51e61d2faad0b684a25c6c1d966729f90ae387b17729.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              0.16,
+              0.64
+            ],
+            "jointWidth": 0.118,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/window-frame/rich/comb/basecolor.ktx2",
+            "normal": "assets/window-frame/rich/comb/normal.ktx2",
+            "roughness": "assets/window-frame/rich/comb/roughness.ktx2",
+            "metallic": "assets/window-frame/rich/comb/metallic.ktx2",
+            "height": "assets/window-frame/rich/comb/height.ktx2",
+            "ao": "assets/window-frame/rich/comb/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/87d238b0b029aa223b7d51e61d2faad0b684a25c6c1d966729f90ae387b17729.ktx2"
+          }
         }
       ]
     },
@@ -1189,6 +1324,51 @@
             "height": "assets/window-frame/high_rich/paint/height.ktx2",
             "ao": "assets/window-frame/high_rich/paint/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/a6144fd548657bfe408cc0a98a048a2a96b45541a8c4f98c649fd69beceb426b.ktx2"
+          }
+        },
+        {
+          "id": "comb",
+          "tiling": {
+            "worldSize": [
+              0.64,
+              0.64
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/window-frame/high_rich/comb/basecolor.png",
+            "normal": "assets/window-frame/high_rich/comb/normal.png",
+            "roughness": "assets/window-frame/high_rich/comb/roughness.png",
+            "metallic": "assets/window-frame/high_rich/comb/metallic.png",
+            "height": "assets/window-frame/high_rich/comb/height.png",
+            "ao": "assets/window-frame/high_rich/comb/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ff28a30221b8b9ec3f08c656eeaa03c4315be8daa234e49fb8506457926cd4f6.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              0.16,
+              0.64
+            ],
+            "jointWidth": 0.118,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/window-frame/high_rich/comb/basecolor.ktx2",
+            "normal": "assets/window-frame/high_rich/comb/normal.ktx2",
+            "roughness": "assets/window-frame/high_rich/comb/roughness.ktx2",
+            "metallic": "assets/window-frame/high_rich/comb/metallic.ktx2",
+            "height": "assets/window-frame/high_rich/comb/height.ktx2",
+            "ao": "assets/window-frame/high_rich/comb/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/ff28a30221b8b9ec3f08c656eeaa03c4315be8daa234e49fb8506457926cd4f6.ktx2"
           }
         }
       ]
@@ -13838,6 +14018,47 @@
             "ao": "assets/exterior-louvre/mid/metal/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/c7ae4af9e9561e9a181419a96d841ceb96f9601a3e095da2f836b0c41ead6c65.ktx2"
           }
+        },
+        {
+          "id": "blades",
+          "tiling": {
+            "worldSize": [
+              0.52,
+              0.52
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/exterior-louvre/mid/blades/basecolor.png",
+            "normal": "assets/exterior-louvre/mid/blades/normal.png",
+            "roughness": "assets/exterior-louvre/mid/blades/roughness.png",
+            "metallic": "assets/exterior-louvre/mid/blades/metallic.png",
+            "height": "assets/exterior-louvre/mid/blades/height.png",
+            "ao": "assets/exterior-louvre/mid/blades/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/e71c39a20912af1515a52c571bdf5b15e611477deee00b61e2b17e273e651064.png"
+          },
+          "layout": {
+            "family": "band",
+            "bandHeight": 0.13,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/exterior-louvre/mid/blades/basecolor.ktx2",
+            "normal": "assets/exterior-louvre/mid/blades/normal.ktx2",
+            "roughness": "assets/exterior-louvre/mid/blades/roughness.ktx2",
+            "metallic": "assets/exterior-louvre/mid/blades/metallic.ktx2",
+            "height": "assets/exterior-louvre/mid/blades/height.ktx2",
+            "ao": "assets/exterior-louvre/mid/blades/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e71c39a20912af1515a52c571bdf5b15e611477deee00b61e2b17e273e651064.ktx2"
+          }
         }
       ]
     },
@@ -20640,6 +20861,47 @@
             "ao": "assets/paired-blind/mid/surface/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/7c085240d77880fcd2bdc1ba475793d67df26763c86b79906d2629ee7598f6fd.ktx2"
           }
+        },
+        {
+          "id": "blades",
+          "tiling": {
+            "worldSize": [
+              0.56,
+              0.56
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/paired-blind/mid/blades/basecolor.png",
+            "normal": "assets/paired-blind/mid/blades/normal.png",
+            "roughness": "assets/paired-blind/mid/blades/roughness.png",
+            "metallic": "assets/paired-blind/mid/blades/metallic.png",
+            "height": "assets/paired-blind/mid/blades/height.png",
+            "ao": "assets/paired-blind/mid/blades/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a611272304ae6ee6d0bf42a1d686e1004110b515eaadeb3458e7a005efcd23f1.png"
+          },
+          "layout": {
+            "family": "band",
+            "bandHeight": 0.14,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/paired-blind/mid/blades/basecolor.ktx2",
+            "normal": "assets/paired-blind/mid/blades/normal.ktx2",
+            "roughness": "assets/paired-blind/mid/blades/roughness.ktx2",
+            "metallic": "assets/paired-blind/mid/blades/metallic.ktx2",
+            "height": "assets/paired-blind/mid/blades/height.ktx2",
+            "ao": "assets/paired-blind/mid/blades/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/a611272304ae6ee6d0bf42a1d686e1004110b515eaadeb3458e7a005efcd23f1.ktx2"
+          }
         }
       ]
     },
@@ -20989,6 +21251,51 @@
             "ao": "assets/corporate-panel/mid/native/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/ed7aae4ba6c53c16bc53330373907d5dd77618482b19819fccf358bc1cd074d7.ktx2"
           }
+        },
+        {
+          "id": "joints",
+          "tiling": {
+            "worldSize": [
+              3,
+              3
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/corporate-panel/mid/joints/basecolor.png",
+            "normal": "assets/corporate-panel/mid/joints/normal.png",
+            "roughness": "assets/corporate-panel/mid/joints/roughness.png",
+            "metallic": "assets/corporate-panel/mid/joints/metallic.png",
+            "height": "assets/corporate-panel/mid/joints/height.png",
+            "ao": "assets/corporate-panel/mid/joints/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/e3fab0a6ae49c54c5304daa8b65d3ce12f7f83f2290036180d6e5f6950dcbeee.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              1,
+              1.5
+            ],
+            "jointWidth": 0.032,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/corporate-panel/mid/joints/basecolor.ktx2",
+            "normal": "assets/corporate-panel/mid/joints/normal.ktx2",
+            "roughness": "assets/corporate-panel/mid/joints/roughness.ktx2",
+            "metallic": "assets/corporate-panel/mid/joints/metallic.ktx2",
+            "height": "assets/corporate-panel/mid/joints/height.ktx2",
+            "ao": "assets/corporate-panel/mid/joints/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e3fab0a6ae49c54c5304daa8b65d3ce12f7f83f2290036180d6e5f6950dcbeee.ktx2"
+          }
         }
       ]
     },
@@ -21063,6 +21370,51 @@
             "height": "assets/ivory-panel/mid/native/height.ktx2",
             "ao": "assets/ivory-panel/mid/native/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/31ac2096236909f2c8074e2849ba97efa7d852787775ff345bc410133074f711.ktx2"
+          }
+        },
+        {
+          "id": "fixings",
+          "tiling": {
+            "worldSize": [
+              1.5,
+              1.5
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ivory-panel/mid/fixings/basecolor.png",
+            "normal": "assets/ivory-panel/mid/fixings/normal.png",
+            "roughness": "assets/ivory-panel/mid/fixings/roughness.png",
+            "metallic": "assets/ivory-panel/mid/fixings/metallic.png",
+            "height": "assets/ivory-panel/mid/fixings/height.png",
+            "ao": "assets/ivory-panel/mid/fixings/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a19f2f487a493ef133312744a8f249f8d882291c76192647a915ea4ec8bfaee2.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              1.5,
+              1.5
+            ],
+            "jointWidth": 0,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/ivory-panel/mid/fixings/basecolor.ktx2",
+            "normal": "assets/ivory-panel/mid/fixings/normal.ktx2",
+            "roughness": "assets/ivory-panel/mid/fixings/roughness.ktx2",
+            "metallic": "assets/ivory-panel/mid/fixings/metallic.ktx2",
+            "height": "assets/ivory-panel/mid/fixings/height.ktx2",
+            "ao": "assets/ivory-panel/mid/fixings/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/a19f2f487a493ef133312744a8f249f8d882291c76192647a915ea4ec8bfaee2.ktx2"
           }
         }
       ]

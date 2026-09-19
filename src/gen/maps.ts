@@ -72,9 +72,9 @@ export function deriveRoughness(height: Gray, finish: Finish): Gray {
  * them at generation and one re-reads them later, and they are the same maps
  * either way.
  */
-export async function reliefMaps(height: Gray, roughness: Gray): Promise<[MapName, Buffer][]> {
+export async function reliefMaps(height: Gray, roughness: Gray, normal?: Rgb): Promise<[MapName, Buffer][]> {
   return [
-    ['normal', await encodeRgbPng(deriveNormal(height))],
+    ['normal', await encodeRgbPng(normal ?? deriveNormal(height))],
     ['roughness', await encodeGrayPng(roughness)],
     ['height', await encodeGrayPng(height)],
     ['ao', await encodeGrayPng(deriveAo(height))],

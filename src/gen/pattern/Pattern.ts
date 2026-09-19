@@ -5,6 +5,7 @@ import { valueNoise } from './noise.js';
 /** A pattern with every parameter resolved: what the classes actually read. */
 export interface PatternParams {
   kind: PatternKind;
+  opening?: [number, number];
   colors: Color[];
   cells: [number, number];
   /** Joint or edge line width, in metres. */
@@ -45,6 +46,8 @@ export interface PatternParams {
 /** One texel of a pattern: surface color, height and roughness. */
 export interface Texel {
   color: Color;
+  /** Tangent direction from a metric profile, normalized by the rasterizer. */
+  normal?: [number, number, number];
   height: number;
   roughness: number;
   /** Present only for transparent surface patterns. */

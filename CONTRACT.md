@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Version: 0.17.3, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
+Version: 0.17.4, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
 ## API
 
@@ -37,7 +37,7 @@ Defaults and a worked request are in [SKILL.md](SKILL.md). `key`, `alignment` an
 
 Source paths are absolute or relative to the package folder; they are not catalog map references. For sourceAlbedo and from-image, metallic is 0 or 1, roughness and finish bands are at least 0.45, transmission/emission are zero and alpha is opaque. General create physical settings follow its schema. Finish defaults to roughness factor ±0.05 clamped to 0..1, grain 0.2 and relief 2. Derivation estimates relief from brightness; it does not measure the source's physical surface.
 
-Append inherits alignment, scale, aliases, physical and stored finish. `variantId` names one variant; `canonical: true` puts an appended variant first. Existing keys or variant IDs require explicit overwrite where supported. Pattern/recolor requests make one variant; screens set their count. Tiled create checks albedo seams before writing that variant. Exact creation and from-image have no seam gate. Writes are sequential; see [pending guarantees](docs/ISSUES.md) for failure atomicity.
+Append inherits alignment, aliases, physical and stored finish. Its scale defaults to the entry; explicit `tiling` applies only to the appended variant. Recolors inherit their source variant scale unless explicitly set. `variantId` names one variant; `canonical: true` puts an appended variant first. Existing keys or variant IDs require explicit overwrite where supported. Pattern/recolor requests make one variant; screens set their count. Tiled create checks albedo seams before writing that variant. Exact creation and from-image have no seam gate. Writes are sequential; see [pending guarantees](docs/ISSUES.md) for failure atomicity.
 
 Refinish merges physical changes, resolves the requested finish, and updates variants with their own relief files, excluding patterns, plates, screens and shared-relief recolors. Rebrand accepts hotel, commerce, mall, restaurant, coffee_shop, corpo and clinic businesses; an empty list writes nothing. It creates `brand:<slug>` variants on landscape and portrait screens, sharing the base surface maps. Same business input and source art produce the same branding. Use a world-owned theme copy for world names.
 
@@ -50,7 +50,7 @@ Each variant keeps `maps` as map names to PNG path strings and publishes compres
 - Every variant requires basecolor, normal, roughness and metallic. Height, AO, emission, opacity and packed metallic-roughness are optional in the schema. Map dimensions and alignment agree within a variant. Shared map references are valid.
 - Basecolor and emission are sRGB; data maps are linear. Normals use OpenGL +Y. Roughness and metallic are absolute values, bound with scalar factors 1; physical factors supply fallbacks when maps are omitted.
 - Packed metallic-roughness is linear RGB: R=255, G=roughness, B=metallic. It uses the same UVs and resolution as the separate maps, with factors 1.
-- `tiling.worldSize` is metres per repeat, one UV unit per tile. `aspect` is an exact-face ratio. Preserve scale and proportion. Geometry owns UVs, whole modules, borders, cuts and placement. `layout` publishes module size, joint width, origin and orientation in metres.
+- `tiling.worldSize` is metres per repeat, one UV unit per tile. Bind the selected variant with `variant.tiling ?? entry.tiling`; existing variants without an override retain the entry scale. `aspect` is an exact-face ratio. Preserve scale and proportion. Geometry owns UVs, whole modules, borders, cuts and placement. `layout` publishes module size, joint width, origin and orientation in metres.
 - Decals clamp UV 0..1 to one fitted receiving face using declared world size, edge inset and normal offset. Clip to that face, keep depth testing and apply opacity once. Glass, reflection environments, animated water, collision and breakability behavior belong to the renderer/runtime.
 - `class` records provenance; `screen.artwork` is retained brandless source art for rebrand, not a rendered texture channel.
 
@@ -85,11 +85,25 @@ Fourteen accepted Exterior finishes retain their source `cyberpunk/exterior-<fin
 
 ## Paired facade
 
-Paired facade materials use the `cyberpunk/paired-*` keys in [recipes](batch/cyberpunk/paired-facade.json). The lounge backplate is exact 2:1, with separate lit, dim and dark keys. Frame, cladding, ribs, room surfaces and light faces declare their metre scale in the recipes. Paired metal finishes use photographed graphite coating; formed blinds use periodic aluminum brushing. Lit, dim and dark room surfaces have separate emission levels. Paired upper glazing transmits 96 percent. Geometry owns all window frames, ceiling fixture positions and coverings.
+Paired facade materials use the `cyberpunk/paired-*` keys in [recipes](batch/cyberpunk/paired-facade.json). The lounge backplate is exact 2:1, with separate lit, dim and dark keys. Frame, cladding, ribs, room surfaces and light faces declare their metre scale in the recipes. Paired metal finishes use photographed graphite coating; formed blinds use periodic aluminum brushing. Lit, dim and dark room surfaces have separate emission levels. Paired upper glazing transmits 96 percent. Geometry owns window frames, ceiling fixture positions and covering placement. Fitted covering quads carry their blade pattern in the maps.
 
 Garden tower [recipes](batch/cyberpunk/garden-tower.json) publish pale concrete, two leaf finishes, stems, soil and opaque reflective black glazing. Panel joints, plant forms and balcony bodies belong to geometry.
 
-[Facade family surfaces](sources/facade-families/INDEX.md) publish 1 m charcoal and ivory panel tiles, a cool-grey ivory variant, obsidian metal, exact 1:2 portrait artwork, and exact 1:1 portal limestone and polished steel. Fit exact finishes once per receiving face; geometry owns panel divisions.
+[Facade family surfaces](sources/facade-families/INDEX.md) publish 1 m charcoal and ivory panel tiles, a cool-grey ivory variant, obsidian metal, exact 1:2 portrait artwork, and exact 1:1 portal limestone and polished steel. Fit exact finishes once per receiving face. The patterned panel variants publish their surface divisions in the maps.
+
+## Facade patterns
+
+[Recipes](batch/cyberpunk/facade-patterns.json) append these opaque variants. All existing variants, entry scales, aliases and canonical choices remain intact. Select the named variant and use its `tiling.worldSize` for world metre UVs.
+
+| Key | Variant | `tiling.worldSize` in metres | Pattern | Resolution |
+| --- | --- | --- | --- | --- |
+| `cyberpunk/paired-blind/mid` | `blades` | `[0.56, 0.56]` | Four horizontal blades at 0.14 m pitch; two 0.076 x 0.026 m recessed punches per blade. | 512 x 512 |
+| `cyberpunk/exterior-louvre/mid` and poor, rich, high_rich aliases | `blades` | `[0.52, 0.52]` | Four fixed horizontal blades at 0.13 m pitch. | 256 x 256 |
+| `cyberpunk/window-frame/<tier>`, all four tiers | `comb` | `[0.64, 0.64]` | Four vertical head baffles at 0.16 m pitch for the recessed band above chamfered ribbon glazing. | 256 x 256 |
+| `cyberpunk/ivory-panel/mid` | `fixings` | `[1.5, 1.5]` | Four 22 mm painted heads, centres 45 mm from each corner of a 1.5 m panel. | 1024 x 1024 |
+| `cyberpunk/corporate-panel/mid` | `joints` | `[3, 3]` | Three columns and two rows of 1 x 1.5 m panels with 32 mm joints. | 1024 x 1024 |
+
+Every variant carries basecolor, OpenGL normal, roughness, metallic, height, AO and packed metallic roughness, with KTX2 siblings. Blade and comb normals follow their metric folded profiles; the punched recesses have opaque backing. `layout` records module pitch and orientation. Geometry supplies one fitted quad per covering, band or field.
 
 ## Letter atlas
 

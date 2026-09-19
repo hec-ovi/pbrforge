@@ -1,6 +1,6 @@
 # Materials index
 
-Version: 0.17.3.
+Version: 0.17.4.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
@@ -20,6 +20,8 @@ Version: 0.17.3.
 - [Issues](ISSUES.md): open decisions, boundary proposals and the [2026-09-18 look pass](ISSUES.md#look-pass-2026-09-18).
 
 ## Authored resources
+
+- [Facade patterns](../batch/cyberpunk/facade-patterns.json): metre scaled blades, head combs, corner fixings and panel joints, authored through the Materials create schema and published as named catalog variants.
 
 - [Facade family surfaces](../sources/facade-families/INDEX.md): precision charcoal panels, ivory and grey coatings, portrait screen art, portal stone and polished steel.
 

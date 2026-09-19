@@ -15,6 +15,8 @@ Load a kind file only when creating or changing that drawer.
 | concrete | [concrete.md](concrete.md) |
 | hexagon | [hexagon.md](hexagon.md) |
 | panel-grid | [panel-grid.md](panel-grid.md) |
+| louvre | [louvre.md](louvre.md) |
+| fixings | [fixings.md](fixings.md) |
 | slab | [slab.md](slab.md) |
 | stripe | [stripe.md](stripe.md) |
 | two-tone | [two-tone.md](two-tone.md) |

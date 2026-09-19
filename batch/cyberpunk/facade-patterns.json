@@ -1,0 +1,381 @@
+[
+  {
+    "key": "cyberpunk/paired-blind/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "blades",
+    "tiling": {
+      "worldSize": [
+        0.56,
+        0.56
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "description": "Formed satin aluminium blind blades with a punched opening line",
+    "seed": 1704,
+    "pattern": {
+      "kind": "louvre",
+      "colors": [
+        "#a7b3af",
+        "#263632"
+      ],
+      "cells": [
+        2,
+        4
+      ],
+      "axis": "y",
+      "line": 0.012,
+      "bevel": 0.004,
+      "depth": 0.22,
+      "opening": [
+        0.076,
+        0.026
+      ],
+      "grain": 0.012,
+      "sheen": 0.025
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 0.14,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/exterior-louvre/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "blades",
+    "tiling": {
+      "worldSize": [
+        0.52,
+        0.52
+      ]
+    },
+    "resolution": [
+      256,
+      256
+    ],
+    "description": "Fixed satin grey exterior louvre blades",
+    "seed": 1704,
+    "pattern": {
+      "kind": "louvre",
+      "colors": [
+        "#76817d",
+        "#17221f"
+      ],
+      "cells": [
+        1,
+        4
+      ],
+      "axis": "y",
+      "line": 0.024,
+      "bevel": 0.005,
+      "depth": 0.32,
+      "grain": 0.008,
+      "sheen": 0.025
+    },
+    "layout": {
+      "family": "band",
+      "bandHeight": 0.13,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/window-frame/poor",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "comb",
+    "tiling": {
+      "worldSize": [
+        0.64,
+        0.64
+      ]
+    },
+    "resolution": [
+      256,
+      256
+    ],
+    "description": "Graphite head baffle comb above recessed ribbon glazing",
+    "seed": 1704,
+    "pattern": {
+      "kind": "louvre",
+      "colors": [
+        "#343c3c",
+        "#101718"
+      ],
+      "cells": [
+        4,
+        1
+      ],
+      "axis": "x",
+      "line": 0.118,
+      "bevel": 0.006,
+      "depth": 0.25,
+      "grain": 0.005,
+      "sheen": 0.02
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        0.16,
+        0.64
+      ],
+      "jointWidth": 0.118,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/window-frame/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "comb",
+    "tiling": {
+      "worldSize": [
+        0.64,
+        0.64
+      ]
+    },
+    "resolution": [
+      256,
+      256
+    ],
+    "description": "Graphite head baffle comb above recessed ribbon glazing",
+    "seed": 1704,
+    "pattern": {
+      "kind": "louvre",
+      "colors": [
+        "#343c3c",
+        "#101718"
+      ],
+      "cells": [
+        4,
+        1
+      ],
+      "axis": "x",
+      "line": 0.118,
+      "bevel": 0.006,
+      "depth": 0.25,
+      "grain": 0.005,
+      "sheen": 0.02
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        0.16,
+        0.64
+      ],
+      "jointWidth": 0.118,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/window-frame/rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "comb",
+    "tiling": {
+      "worldSize": [
+        0.64,
+        0.64
+      ]
+    },
+    "resolution": [
+      256,
+      256
+    ],
+    "description": "Graphite head baffle comb above recessed ribbon glazing",
+    "seed": 1704,
+    "pattern": {
+      "kind": "louvre",
+      "colors": [
+        "#343c3c",
+        "#101718"
+      ],
+      "cells": [
+        4,
+        1
+      ],
+      "axis": "x",
+      "line": 0.118,
+      "bevel": 0.006,
+      "depth": 0.25,
+      "grain": 0.005,
+      "sheen": 0.02
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        0.16,
+        0.64
+      ],
+      "jointWidth": 0.118,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/window-frame/high_rich",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "comb",
+    "tiling": {
+      "worldSize": [
+        0.64,
+        0.64
+      ]
+    },
+    "resolution": [
+      256,
+      256
+    ],
+    "description": "Graphite head baffle comb above recessed ribbon glazing",
+    "seed": 1704,
+    "pattern": {
+      "kind": "louvre",
+      "colors": [
+        "#343c3c",
+        "#101718"
+      ],
+      "cells": [
+        4,
+        1
+      ],
+      "axis": "x",
+      "line": 0.118,
+      "bevel": 0.006,
+      "depth": 0.25,
+      "grain": 0.005,
+      "sheen": 0.02
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        0.16,
+        0.64
+      ],
+      "jointWidth": 0.118,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/ivory-panel/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "fixings",
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "Pale mineral panel with 22 mm fixing heads inset 45 mm from each corner",
+    "seed": 1704,
+    "pattern": {
+      "kind": "fixings",
+      "colors": [
+        "#bbc4c6",
+        "#979e9b"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.022,
+      "bevel": 0.045,
+      "depth": 0.24,
+      "grain": 0.006,
+      "variation": 0
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        1.5,
+        1.5
+      ],
+      "jointWidth": 0,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/corporate-panel/mid",
+    "alignment": "tile",
+    "append": true,
+    "variantId": "joints",
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "Charcoal composite panel field with 1 by 1.5 metre modules and 32 mm joints",
+    "seed": 1704,
+    "pattern": {
+      "kind": "panel-grid",
+      "colors": [
+        "#434644"
+      ],
+      "cells": [
+        3,
+        2
+      ],
+      "line": 0.032,
+      "bevel": 0.006,
+      "depth": 0.16,
+      "joint": 0.58,
+      "variation": 0.015,
+      "grain": 0.006,
+      "sheen": 0.025
+    },
+    "layout": {
+      "family": "panel",
+      "moduleSize": [
+        1,
+        1.5
+      ],
+      "jointWidth": 0.032,
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  }
+]

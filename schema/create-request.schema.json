@@ -32,6 +32,7 @@
       "description": "what that business sells, in plain words (noodle bar, pawn shop, parfumery); this one does steer the artwork"
     },
     "tiling": {
+      "description": "Metres per repeat; on append, overrides only the added variant scale.",
       "type": "object",
       "required": ["worldSize"],
       "additionalProperties": false,
@@ -126,7 +127,7 @@
       "required": ["kind", "colors"],
       "additionalProperties": false,
       "properties": {
-        "kind": { "enum": ["mineral", "aggregate", "paving", "window-grime", "concrete", "hexagon", "panel-grid", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "water", "incident-blood", "incident-tyre"] },
+        "kind": { "enum": ["mineral", "aggregate", "paving", "window-grime", "concrete", "hexagon", "panel-grid", "louvre", "fixings", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "water", "incident-blood", "incident-tyre"] },
         "response": { "$ref": "urn:urbe:surface-response", "description": "Optional tiled mineral response; omission preserves the dry maps." },
         "colors": {
           "type": "array",
@@ -135,6 +136,7 @@
           "maxItems": 3,
           "description": "face color first, then the band color and the trim color for the kinds that take them"
         },
+        "opening": { "type": "array", "items": { "type": "number", "exclusiveMinimum": 0 }, "minItems": 2, "maxItems": 2, "description": "louvre punched opening [width, height] in metres" },
         "cells": {
           "type": "array",
           "items": { "type": "integer", "minimum": 1 },
@@ -229,7 +231,7 @@
     "append": {
       "type": "boolean",
       "default": false,
-      "description": "add the variant to the existing entry, which keeps its alignment, tiling and physical, instead of writing a new entry"
+      "description": "add a variant while preserving the entry; explicit tiling overrides only that variant"
     },
     "canonical": {
       "type": "boolean",

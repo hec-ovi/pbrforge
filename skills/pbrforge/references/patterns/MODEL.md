@@ -8,10 +8,11 @@ Each texel returns:
 
 - `color` sRGB 0..1
 - `height` 0..1, midplane 0.5
+- optional `normal` tangent direction from a metric profile, on every texel when supplied
 - `roughness` 0..1
 - `opacity` only on decals
 
-`create` rasters that, then writes **normal** and **AO** from height, **metallic** from `physical.metallicFactor`, **packed** from roughness + metallic.
+`create` rasters that, then writes **normal** from the metric profile when supplied, otherwise from height, and **AO** from height, **metallic** from `physical.metallicFactor`, **packed** from roughness + metallic.
 
 `finish(face, cell, joint, at, relief)` is the shared cell/joint helper: tone spread, grain, joint darkening, height from `depth`, roughness from the entry factor plus sheen and joint.
 

@@ -4,6 +4,7 @@ import type { Pattern } from './Pattern.js';
 /** What a pattern draws: the surface itself, its relief, and its gloss. */
 export interface PatternMaps {
   basecolor: Rgb;
+  normal?: Rgb;
   height: Gray;
   roughness: Gray;
   opacity?: Gray;
@@ -12,6 +13,7 @@ export interface PatternMaps {
 /** Rasterizes a pattern, one sample per pixel centre, each anti-aliased against its own pixel. */
 export function renderPattern(pattern: Pattern, width: number, height: number): PatternMaps {
   const color = new Uint8Array(width * height * 3);
+  let normal: Uint8Array | undefined;
   const relief = new Float32Array(width * height);
   const gloss = new Float32Array(width * height);
   const opacity = new Float32Array(width * height);
@@ -25,6 +27,11 @@ export function renderPattern(pattern: Pattern, width: number, height: number): 
       color[i * 3] = Math.round(texel.color.r * 255);
       color[i * 3 + 1] = Math.round(texel.color.g * 255);
       color[i * 3 + 2] = Math.round(texel.color.b * 255);
+      if (texel.normal) {
+        normal ??= new Uint8Array(width * height * 3);
+        const length = Math.hypot(...texel.normal);
+        for (let c = 0; c < 3; c++) normal[i * 3 + c] = Math.round((texel.normal[c] / length * 0.5 + 0.5) * 255);
+      }
       relief[i] = texel.height;
       gloss[i] = texel.roughness;
       if (texel.opacity !== undefined) {
@@ -35,6 +42,7 @@ export function renderPattern(pattern: Pattern, width: number, height: number): 
   }
   return {
     basecolor: { data: color, width, height },
+    ...(normal ? { normal: { data: normal, width, height } } : {}),
     height: { data: relief, width, height },
     roughness: { data: gloss, width, height },
     ...(hasOpacity ? { opacity: { data: opacity, width, height } } : {}),

@@ -12,6 +12,8 @@ import { NoiseField } from './NoiseField.js';
 import { Concrete } from './Concrete.js';
 import { WindowGrime } from './WindowGrime.js';
 import { PanelGrid } from './PanelGrid.js';
+import { Louvre } from './Louvre.js';
+import { Fixings } from './Fixings.js';
 import { Pattern, type PatternParams } from './Pattern.js';
 import { PuddleField } from './PuddleField.js';
 import { SlabTiling } from './SlabTiling.js';
@@ -69,6 +71,7 @@ export function buildPattern(
 
   const params: PatternParams = {
     kind: spec.kind,
+    opening: spec.opening,
     colors: spec.colors.map(parseHex),
     cells,
     line: spec.line ?? DEFAULTS.line,
@@ -102,6 +105,10 @@ export function buildPattern(
       return new HexagonGrid(params);
     case 'panel-grid':
       return new PanelGrid(params);
+    case 'louvre':
+      return new Louvre(params);
+    case 'fixings':
+      return new Fixings(params);
     case 'slab':
       return new SlabTiling(params);
     case 'stripe':

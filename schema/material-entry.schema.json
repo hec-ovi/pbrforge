@@ -92,6 +92,7 @@
         "required": ["id", "resolution", "maps"],
         "additionalProperties": false,
         "properties": {
+          "tiling": { "$ref": "#/properties/tiling", "description": "Variant metres per repeat; takes precedence over the entry tiling." },
           "id": {
             "type": "string",
             "pattern": "^[a-z0-9_-]+(:[a-z0-9_-]+)?$",

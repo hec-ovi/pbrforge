@@ -80,6 +80,8 @@ export interface DecalPlacement {
 
 export interface Variant {
   id: string;
+  /** Metres per repeat for this variant; falls back to the entry scale. */
+  tiling?: { worldSize: [number, number] };
   /** How the maps were made. Consumers read the maps the same way either way. */
   class?: 'image' | 'pattern' | 'flat' | 'plate';
   response?: SurfaceResponse;
@@ -128,6 +130,8 @@ export type PatternKind =
   | 'concrete'
   | 'hexagon'
   | 'panel-grid'
+  | 'louvre'
+  | 'fixings'
   | 'slab'
   | 'stripe'
   | 'two-tone'
@@ -144,6 +148,8 @@ export type PatternKind =
 /** A surface stated as parameters instead of photographed: what the pattern class draws. */
 export interface PatternSpec {
   kind: PatternKind;
+  /** Punched opening width and height in metres, one per louvre cell. */
+  opening?: [number, number];
   response?: SurfaceResponse;
   /** Face color first; a second and third are the band and trim colors of the kinds that take them. */
   colors: string[];
