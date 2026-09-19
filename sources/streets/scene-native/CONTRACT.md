@@ -1,12 +1,12 @@
 # Native street surfaces
 
-Version: 0.17.4.
+Version: 0.17.5.
 
 Supplies the original district scans and renderer-neutral shading parameters from threejsscene. Input: surface identity and authored geometry attributes. Output: texture references and effect parameters in [binding](../../../bindings/street-native.json), validated by [schema](../../../schema/street-native.schema.json). Depends on no renderer. [Manifest](manifest.json) records source file SHA-256 hashes and revision.
 
 The binding's optional `authored` manifest records district surfaces from [recipes](../../../batch/cyberpunk/district-streets.json). Their canonical PBR maps and the published letter atlas retain separate provenance in [district manifest](../district/manifest.json). Texture paths stay inside the theme asset tree.
 
-Paths are relative to the Materials package root, including `themes/`. A caller hosting or copying assets supplies that root URL. A host exposing the existing themes tree validates and removes the `themes/` prefix before joining its public Materials URL; it does not serve the package root or provenance directory. Texture IDs resolve only through this binding. Files retain original bytes, dimensions and alpha. These raw shader inputs have their own catalog; standard MaterialEntry roughness/metalness rules do not apply. Missing IDs, unknown versions/effects and malformed parameters must fail before rendering. All coordinates are metres, Y up. Consumers own geometry, wear selection, collision, texture lifetime and effect implementation.
+Paths are relative to the Materials package root, including `themes/`. A caller hosting or copying assets supplies that root URL. A host exposing the existing themes tree validates and removes the `themes/` prefix before joining its public Materials URL; it does not serve the package root or provenance directory. Texture IDs resolve only through this binding. Files keep published dimensions and alpha; manifest hashes match the theme copies. These raw shader inputs have their own catalog; standard MaterialEntry roughness/metalness rules do not apply. Missing IDs, unknown versions/effects and malformed parameters must fail before rendering. All coordinates are metres, Y up. Consumers own geometry, wear selection, collision, texture lifetime and effect implementation.
 
 ## Sampling and attributes
 

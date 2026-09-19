@@ -21663,7 +21663,7 @@
       "variants": [
         {
           "id": "clean",
-          "class": "flat",
+          "class": "pattern",
           "resolution": [
             512,
             512
@@ -21789,7 +21789,7 @@
       "variants": [
         {
           "id": "clean",
-          "class": "flat",
+          "class": "pattern",
           "resolution": [
             512,
             512
@@ -21831,7 +21831,7 @@
       "variants": [
         {
           "id": "clean",
-          "class": "flat",
+          "class": "pattern",
           "resolution": [
             512,
             512

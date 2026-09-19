@@ -2,7 +2,7 @@
 
 Purpose: presents the material database as a searchable list, a PBR sphere and a read-only property inspector.
 
-Version: 0.17.4.
+Version: 0.17.5.
 
 ## In
 

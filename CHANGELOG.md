@@ -1,5 +1,7 @@
 # Changelog
 
+0.17.5: luxury sidewalk panels, hex road, curbs and ordinary slabs carry visible joints, gloss and grit at the published scales.
+
 0.17.4: facade variants carry metre scaled blades, head combs, corner fixings and panel joints with matching PBR maps.
 
 0.17.3: district paving carries fine dark hex joints, panels and blue curbs carry varied gloss, and ivory facades carry shallow mineral relief.

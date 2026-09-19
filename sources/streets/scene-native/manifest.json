@@ -2,17 +2,50 @@
   "project": "threejsscene",
   "revision": "ac7c2fc02095b47d0a8fd7fda535e4ea7ce6452e",
   "files": [
-    {"path": "scene/materials/index.ts", "sha256": "b4f9de5213dcdae9ff4ff11b8da662b47bcfdf2a282edd0402a7d6a3c928f909"},
-    {"path": "scene/materials/textures.ts", "sha256": "034728a7148e06fd63364e86f430b98510bf9e00bae2b8386aeb90bc5e3d878a"},
-    {"path": "scene/materials/district.ts", "sha256": "3f1bb4fb68a8486abe3d9f8eeaf08c59c44fe4f0d1de99a5545adaa42a92415f"},
-    {"path": "scene/materials/asphaltSampling.ts", "sha256": "f3fe429617621a082bbd1528d8ba8b6abf51c339e7c58d6a3c91e32d225d9b27"},
-    {"path": "scene/materials/parking.ts", "sha256": "8c3d15ca549c268aee052ae92e1b73b3ea6651b0536e6f0ebe382367baf80981"},
-    {"path": "scene/materials/polished.ts", "sha256": "12cae9269a1571b32b1df1507a714bd5383aa4b12c88a46a636896e55ea8a84d"},
-    {"path": "scene/materials/mineral.ts", "sha256": "c66ea7b141744c1cce10e65e96e210c8c6eb63a4403068ac3bc9eded56f1fbc1"},
-    {"path": "scene/materials/metalPaving.ts", "sha256": "766b85371383ffa8df31db88d0cc06a18f72259100a4f236cfdb0f82688fd8b2"},
-    {"path": "scene/materials/hardware.ts", "sha256": "b82ee9188ecd16dbd0edd4babd69c95bb4943c40f10dce559f3b64f8216e2f59"},
-    {"path": "scene/materials/castConcrete.ts", "sha256": "7def3f820bdb3f2886a2b7004f65d7cd46b38fce8e4ea1b14a67bef76474a869"},
-    {"path": "scene/street/profile.json", "sha256": "99c6f8c82f9130ff8d3a2e75bce25274d420878047094658dd13bece2553cbdd"},
+    {
+      "path": "scene/materials/index.ts",
+      "sha256": "b4f9de5213dcdae9ff4ff11b8da662b47bcfdf2a282edd0402a7d6a3c928f909"
+    },
+    {
+      "path": "scene/materials/textures.ts",
+      "sha256": "034728a7148e06fd63364e86f430b98510bf9e00bae2b8386aeb90bc5e3d878a"
+    },
+    {
+      "path": "scene/materials/district.ts",
+      "sha256": "3f1bb4fb68a8486abe3d9f8eeaf08c59c44fe4f0d1de99a5545adaa42a92415f"
+    },
+    {
+      "path": "scene/materials/asphaltSampling.ts",
+      "sha256": "f3fe429617621a082bbd1528d8ba8b6abf51c339e7c58d6a3c91e32d225d9b27"
+    },
+    {
+      "path": "scene/materials/parking.ts",
+      "sha256": "8c3d15ca549c268aee052ae92e1b73b3ea6651b0536e6f0ebe382367baf80981"
+    },
+    {
+      "path": "scene/materials/polished.ts",
+      "sha256": "12cae9269a1571b32b1df1507a714bd5383aa4b12c88a46a636896e55ea8a84d"
+    },
+    {
+      "path": "scene/materials/mineral.ts",
+      "sha256": "c66ea7b141744c1cce10e65e96e210c8c6eb63a4403068ac3bc9eded56f1fbc1"
+    },
+    {
+      "path": "scene/materials/metalPaving.ts",
+      "sha256": "766b85371383ffa8df31db88d0cc06a18f72259100a4f236cfdb0f82688fd8b2"
+    },
+    {
+      "path": "scene/materials/hardware.ts",
+      "sha256": "b82ee9188ecd16dbd0edd4babd69c95bb4943c40f10dce559f3b64f8216e2f59"
+    },
+    {
+      "path": "scene/materials/castConcrete.ts",
+      "sha256": "7def3f820bdb3f2886a2b7004f65d7cd46b38fce8e4ea1b14a67bef76474a869"
+    },
+    {
+      "path": "scene/street/profile.json",
+      "sha256": "99c6f8c82f9130ff8d3a2e75bce25274d420878047094658dd13bece2553cbdd"
+    },
     {
       "path": "scene/materials/assets/asphalt-ao.png",
       "sha256": "e2401f8c4c196ac474e537602d18db935c647dd67b568026f8781afb1075d2ec",
@@ -90,22 +123,22 @@
     },
     {
       "path": "scene/materials/assets/curb-ao.png",
-      "sha256": "735895e34ab2c0fc9f85b66370ebf7cb31d7a91a531f9ec8dc5c3624452ff763",
+      "sha256": "0f99c34ba24b11fdac1a24186d058cfde00f1710cf2a9c485f0c036485ed1c74",
       "target": "themes/cyberpunk/assets/street-native/curb-ao.png"
     },
     {
       "path": "scene/materials/assets/curb-basecolor.png",
-      "sha256": "9f1416093d30b4d8be6664ab1bb01211ddf6094fb168342a91c145fcac9a4189",
+      "sha256": "108edbc9a0e50ccae9dfcdc0740b4b7725167c02623f9329d792c8795c429860",
       "target": "themes/cyberpunk/assets/street-native/curb-basecolor.png"
     },
     {
       "path": "scene/materials/assets/curb-normal.png",
-      "sha256": "588ff620a21e6850574b73efc918bc597a82dbfb5c40ccfe32ca74eaa7d36173",
+      "sha256": "c4161326f5241b6ee19d41804f0862d1dd881849d7fa8add35b44e7971a5aab9",
       "target": "themes/cyberpunk/assets/street-native/curb-normal.png"
     },
     {
       "path": "scene/materials/assets/curb-roughness.png",
-      "sha256": "8def29c9adbc9f8e636816e3611f6f6cd195bd140ed8d58c237a87b22e2fe6be",
+      "sha256": "697f6eed3b001324e6eb0f57295966310823c38cb130b0d7c2b2921f4f9d99db",
       "target": "themes/cyberpunk/assets/street-native/curb-roughness.png"
     },
     {
@@ -135,22 +168,22 @@
     },
     {
       "path": "scene/materials/assets/ordinary-panel-ao.png",
-      "sha256": "a45f26b2dbebec6d5dfee47c5fd0149ec177bf08cbd77976f329ff2fdc8b189e",
+      "sha256": "ab1f74b0a24bd6d936c57086c1c4b3568b83e4a8ad2dc082205f76a09008a2f2",
       "target": "themes/cyberpunk/assets/street-native/ordinary-panel-ao.png"
     },
     {
       "path": "scene/materials/assets/ordinary-panel-basecolor.png",
-      "sha256": "f6d1cc9a34211d5bc1d8b62ae28fcabd5d1c8f64ec3fcab5a9c26585f996e111",
+      "sha256": "fe71f7a0316eeb8b3c0d2c2491ac128c4f26ff9595457a526656655bc430ae8a",
       "target": "themes/cyberpunk/assets/street-native/ordinary-panel-basecolor.png"
     },
     {
       "path": "scene/materials/assets/ordinary-panel-normal.png",
-      "sha256": "a2e2ffaaa93f0e65d26301bb5ff70f454fc3a0ff68b2b2f9c5b8f908eb85fe78",
+      "sha256": "fae58d73d23dc8eaf0b8b2007a36f76cd42b4bd6d2642c508fe11dba8eb0be02",
       "target": "themes/cyberpunk/assets/street-native/ordinary-panel-normal.png"
     },
     {
       "path": "scene/materials/assets/ordinary-panel-roughness.png",
-      "sha256": "f94871b94b5dcc7c63f777dfcea6d0630c43dab9b1fd5fe9fac5d8dbca6ec5bc",
+      "sha256": "aac0aed4334c60cbaad9fd8206b611f81e5d559b62147e167908fb9145d18072",
       "target": "themes/cyberpunk/assets/street-native/ordinary-panel-roughness.png"
     },
     {
@@ -443,9 +476,21 @@
       "sha256": "8f98c07db3d84e707d33e32e752186311fdd8de3ff5952ab9fa62565312ad3bf",
       "target": "themes/cyberpunk/assets/street-native/weathered-steel-roughness.png"
     },
-    {"path": "scene/street/district/RoadPaint.ts", "sha256": "63e1e3b16da748329604c3af1c9326fcc34076c3f0989fba8eaafca582c8a053"},
-    {"path": "scene/street/district/SurfaceBatch.ts", "sha256": "5998a33b1c662f753cf7ac19259429a1f31ab888e2a28daf6471bf59d7931720"},
-    {"path": "scene/street/district/EdgeRing.ts", "sha256": "38b280fa0d3ddfa495f2ac51727ad3f87b2ae95028bbb3468f7fc40af71e440a"},
-    {"path": "scene/street/district/BlockSurface.ts", "sha256": "f29ec2a3b31f44302e20cc597acccf84d7d55896a9536c783e80785dc426197d"}
+    {
+      "path": "scene/street/district/RoadPaint.ts",
+      "sha256": "63e1e3b16da748329604c3af1c9326fcc34076c3f0989fba8eaafca582c8a053"
+    },
+    {
+      "path": "scene/street/district/SurfaceBatch.ts",
+      "sha256": "5998a33b1c662f753cf7ac19259429a1f31ab888e2a28daf6471bf59d7931720"
+    },
+    {
+      "path": "scene/street/district/EdgeRing.ts",
+      "sha256": "38b280fa0d3ddfa495f2ac51727ad3f87b2ae95028bbb3468f7fc40af71e440a"
+    },
+    {
+      "path": "scene/street/district/BlockSurface.ts",
+      "sha256": "f29ec2a3b31f44302e20cc597acccf84d7d55896a9536c783e80785dc426197d"
+    }
   ]
 }

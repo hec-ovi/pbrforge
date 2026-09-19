@@ -2,7 +2,7 @@
   {
     "key": "cyberpunk/district-hex/rich",
     "alignment": "tile",
-    "description": "Slate blue hexagons with thin dark joints and shallow relief for luxury road and parking surfaces",
+    "description": "Slate grey hexagonal paving with dark joints, shallow bevels and cell-to-cell grit for luxury road and parking",
     "tiling": {
       "worldSize": [
         1.2,
@@ -22,25 +22,25 @@
     "pattern": {
       "kind": "hexagon",
       "colors": [
-        "#3e4b50"
+        "#505a60"
       ],
       "cells": [
         8,
         8
       ],
-      "line": 0.0026,
-      "depth": 0.008,
-      "joint": 0.24,
-      "variation": 0.035,
-      "sheen": 0.012,
-      "grain": 0.008,
+      "line": 0.006,
+      "depth": 0.32,
+      "joint": 0.7,
+      "variation": 0.1,
+      "sheen": 0.1,
+      "grain": 0.018,
       "wear": 0
     }
   },
   {
     "key": "cyberpunk/district-panel-blue/rich",
     "alignment": "tile",
-    "description": "Blue slate panel coating with soft tonal mottling and varied gloss",
+    "description": "Cool grey-blue glossy sidewalk panel with mineral grit, edge joints and dirt stains",
     "tiling": {
       "worldSize": [
         1,
@@ -58,29 +58,28 @@
       "metallicFactor": 0
     },
     "pattern": {
-      "kind": "noise",
+      "kind": "paving",
       "colors": [
-        "#30424a",
-        "#3a4d54"
+        "#6a747a"
       ],
       "cells": [
-        3,
-        3
+        1,
+        1
       ],
-      "octaves": 3,
-      "line": 0,
-      "depth": 0.008,
-      "joint": 0,
-      "variation": 0.012,
+      "line": 0.008,
+      "bevel": 0.014,
+      "depth": 0.06,
+      "joint": 0.38,
+      "variation": 0.06,
       "sheen": 0.12,
-      "grain": 0.005,
-      "wear": 0
+      "grain": 0.04,
+      "wear": 0.36
     }
   },
   {
     "key": "cyberpunk/district-panel-red/rich",
     "alignment": "tile",
-    "description": "Clean panel red coating with fine grain and broad reflected highlights",
+    "description": "Burgundy glossy sidewalk panel with mineral grit, edge joints and dirt stains",
     "tiling": {
       "worldSize": [
         1,
@@ -93,17 +92,33 @@
     ],
     "seed": 161318,
     "variantId": "clean",
-    "flatColor": "#634247",
-    "flatNoise": 0.005,
     "physical": {
       "roughnessFactor": 0.23,
       "metallicFactor": 0
+    },
+    "pattern": {
+      "kind": "paving",
+      "colors": [
+        "#5c3c40"
+      ],
+      "cells": [
+        1,
+        1
+      ],
+      "line": 0.008,
+      "bevel": 0.014,
+      "depth": 0.06,
+      "joint": 0.36,
+      "variation": 0.06,
+      "sheen": 0.13,
+      "grain": 0.038,
+      "wear": 0.34
     }
   },
   {
     "key": "cyberpunk/district-panel-dark/rich",
     "alignment": "tile",
-    "description": "Dark slate panel coating with shallow relief and broad varied gloss",
+    "description": "Dark charcoal glossy sidewalk panel with mineral grit, edge joints and dirt stains",
     "tiling": {
       "worldSize": [
         1,
@@ -121,29 +136,28 @@
       "metallicFactor": 0
     },
     "pattern": {
-      "kind": "noise",
+      "kind": "paving",
       "colors": [
-        "#29393e",
-        "#3a484b"
+        "#2c353a"
       ],
       "cells": [
-        4,
-        4
+        1,
+        1
       ],
-      "octaves": 3,
-      "line": 0,
-      "depth": 0.006,
-      "joint": 0,
-      "variation": 0.015,
-      "sheen": 0.16,
-      "grain": 0.007,
-      "wear": 0
+      "line": 0.008,
+      "bevel": 0.014,
+      "depth": 0.055,
+      "joint": 0.45,
+      "variation": 0.07,
+      "sheen": 0.15,
+      "grain": 0.036,
+      "wear": 0.28
     }
   },
   {
     "key": "cyberpunk/district-curb-blue/rich",
     "alignment": "tile",
-    "description": "Blue curb coating with subtle paint mottling and smooth gloss",
+    "description": "Saturated cyan-blue curb paint with mottling, scuffs and varied gloss",
     "tiling": {
       "worldSize": [
         1,
@@ -163,27 +177,27 @@
     "pattern": {
       "kind": "noise",
       "colors": [
-        "#176b95",
-        "#227fa3"
+        "#1578a8",
+        "#2d9ac8"
       ],
       "cells": [
-        4,
-        3
+        5,
+        4
       ],
-      "octaves": 2,
+      "octaves": 3,
       "line": 0,
-      "depth": 0.012,
+      "depth": 0.02,
       "joint": 0,
-      "variation": 0.012,
-      "sheen": 0.08,
-      "grain": 0.01,
+      "variation": 0.05,
+      "sheen": 0.14,
+      "grain": 0.02,
       "wear": 0
     }
   },
   {
     "key": "cyberpunk/district-curb-red/rich",
     "alignment": "tile",
-    "description": "Clean curb red coating with fine grain and broad reflected highlights",
+    "description": "Vivid red curb paint with mottling, scuffs and varied gloss",
     "tiling": {
       "worldSize": [
         1,
@@ -196,17 +210,34 @@
     ],
     "seed": 161318,
     "variantId": "clean",
-    "flatColor": "#993e34",
-    "flatNoise": 0.005,
     "physical": {
       "roughnessFactor": 0.3,
       "metallicFactor": 0
+    },
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#b83a32",
+        "#d04c40"
+      ],
+      "cells": [
+        5,
+        4
+      ],
+      "octaves": 3,
+      "line": 0,
+      "depth": 0.02,
+      "joint": 0,
+      "variation": 0.05,
+      "sheen": 0.12,
+      "grain": 0.018,
+      "wear": 0
     }
   },
   {
     "key": "cyberpunk/district-curb-yellow/rich",
     "alignment": "tile",
-    "description": "Clean curb yellow coating with fine grain and broad reflected highlights",
+    "description": "Golden yellow curb paint with mottling, scuffs and varied gloss",
     "tiling": {
       "worldSize": [
         1,
@@ -219,11 +250,28 @@
     ],
     "seed": 161318,
     "variantId": "clean",
-    "flatColor": "#bc8c26",
-    "flatNoise": 0.005,
     "physical": {
       "roughnessFactor": 0.4,
       "metallicFactor": 0
+    },
+    "pattern": {
+      "kind": "noise",
+      "colors": [
+        "#c49222",
+        "#dcb030"
+      ],
+      "cells": [
+        5,
+        4
+      ],
+      "octaves": 3,
+      "line": 0,
+      "depth": 0.02,
+      "joint": 0,
+      "variation": 0.05,
+      "sheen": 0.1,
+      "grain": 0.018,
+      "wear": 0
     }
   },
   {
