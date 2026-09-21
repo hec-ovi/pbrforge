@@ -21983,6 +21983,48 @@
           }
         }
       ]
+    },
+    "cyberpunk/interior-mirror/mid": {
+      "key": "cyberpunk/interior-mirror/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.04
+      },
+      "variants": [
+        {
+          "id": "silver",
+          "class": "flat",
+          "resolution": [
+            64,
+            64
+          ],
+          "maps": {
+            "basecolor": "assets/interior-mirror/mid/silver/basecolor.png",
+            "normal": "assets/interior-mirror/mid/silver/normal.png",
+            "roughness": "assets/interior-mirror/mid/silver/roughness.png",
+            "metallic": "assets/interior-mirror/mid/silver/metallic.png",
+            "height": "assets/interior-mirror/mid/silver/height.png",
+            "ao": "assets/interior-mirror/mid/silver/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/e1c45b94bbd3eb22ccc56d56ea8808fc7cb03c5ef8bca8173f978f6be796f1cf.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-mirror/mid/silver/basecolor.ktx2",
+            "normal": "assets/interior-mirror/mid/silver/normal.ktx2",
+            "roughness": "assets/interior-mirror/mid/silver/roughness.ktx2",
+            "metallic": "assets/interior-mirror/mid/silver/metallic.ktx2",
+            "height": "assets/interior-mirror/mid/silver/height.ktx2",
+            "ao": "assets/interior-mirror/mid/silver/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e1c45b94bbd3eb22ccc56d56ea8808fc7cb03c5ef8bca8173f978f6be796f1cf.ktx2"
+          }
+        }
+      ]
     }
   }
 }

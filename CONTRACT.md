@@ -91,6 +91,8 @@ Garden tower [recipes](batch/cyberpunk/garden-tower.json) publish pale concrete,
 
 Sanitary fixtures use `cyberpunk/interior-ceramic/mid`, canonical variant `glaze`, from the [ceramic recipe](batch/cyberpunk/interior-ceramic.json). Its near-white opaque dielectric finish has uniform roughness 0.2 and flat normals, with no surface seams or printed divisions. The 64 px maps repeat at 1 m; fixture contours, bowls, rims and drains belong to geometry.
 
+Interior mirror faces use `cyberpunk/interior-mirror/mid`, canonical variant `silver`, from the [mirror recipe](batch/cyberpunk/interior-mirror.json). Its near-neutral silver finish has metallic 1, uniform roughness 0.04 and flat normals, with no brushed grain or scratches. The 64 px maps repeat at 1 m; reflected scene content and reflection capture belong to the renderer.
+
 [Facade family surfaces](sources/facade-families/INDEX.md) publish 1 m charcoal and ivory panel tiles, a cool-grey ivory variant, obsidian metal, exact 1:2 portrait artwork, and exact 1:1 portal limestone and polished steel. Fit exact finishes once per receiving face. The patterned panel variants publish their surface divisions in the maps.
 
 ## Facade patterns

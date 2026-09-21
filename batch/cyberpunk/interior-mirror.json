@@ -1,0 +1,13 @@
+{
+  "key": "cyberpunk/interior-mirror/mid",
+  "description": "smooth near-neutral silver reflector for interior mirror faces, without brushed grain or scratches",
+  "flatColor": "#f2f3f4",
+  "flatNoise": 0,
+  "alignment": "tile",
+  "tiling": { "worldSize": [1, 1] },
+  "physical": { "metallicFactor": 1, "roughnessFactor": 0.04 },
+  "finish": { "roughness": [0.04, 0.04], "grain": 0, "relief": 0 },
+  "variantId": "silver",
+  "resolution": [64, 64],
+  "seed": 922
+}
