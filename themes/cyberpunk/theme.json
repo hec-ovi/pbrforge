@@ -21940,6 +21940,49 @@
           }
         }
       ]
+    },
+    "cyberpunk/interior-ceramic/mid": {
+      "key": "cyberpunk/interior-ceramic/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.2,
+        "ior": 1.5
+      },
+      "variants": [
+        {
+          "id": "glaze",
+          "class": "flat",
+          "resolution": [
+            64,
+            64
+          ],
+          "maps": {
+            "basecolor": "assets/interior-ceramic/mid/glaze/basecolor.png",
+            "normal": "assets/interior-ceramic/mid/glaze/normal.png",
+            "roughness": "assets/interior-ceramic/mid/glaze/roughness.png",
+            "metallic": "assets/interior-ceramic/mid/glaze/metallic.png",
+            "height": "assets/interior-ceramic/mid/glaze/height.png",
+            "ao": "assets/interior-ceramic/mid/glaze/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/0b058edba77d4f0ddc7505481608f48bfdb59ec5088674dbbd63deb8601c1e51.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-ceramic/mid/glaze/basecolor.ktx2",
+            "normal": "assets/interior-ceramic/mid/glaze/normal.ktx2",
+            "roughness": "assets/interior-ceramic/mid/glaze/roughness.ktx2",
+            "metallic": "assets/interior-ceramic/mid/glaze/metallic.ktx2",
+            "height": "assets/interior-ceramic/mid/glaze/height.ktx2",
+            "ao": "assets/interior-ceramic/mid/glaze/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/0b058edba77d4f0ddc7505481608f48bfdb59ec5088674dbbd63deb8601c1e51.ktx2"
+          }
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "key": "cyberpunk/interior-ceramic/mid",
+  "description": "warm near-white vitreous sanitary ceramic with a smooth continuous glaze for toilets and lavatory basins",
+  "flatColor": "#f1f0eb",
+  "flatNoise": 0,
+  "alignment": "tile",
+  "tiling": { "worldSize": [1, 1] },
+  "physical": { "metallicFactor": 0, "roughnessFactor": 0.2, "ior": 1.5 },
+  "finish": { "roughness": [0.2, 0.2], "grain": 0, "relief": 0 },
+  "variantId": "glaze",
+  "resolution": [64, 64],
+  "seed": 921
+}
