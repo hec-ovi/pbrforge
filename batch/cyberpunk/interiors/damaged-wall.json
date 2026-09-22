@@ -15,7 +15,7 @@
   "variantId": "field",
   "physical": {
     "metallicFactor": 0,
-    "roughnessFactor": 0.74
+    "roughnessFactor": 0.68
   },
   "pattern": {
     "kind": "composite",
@@ -24,11 +24,11 @@
       "#373c38"
     ],
     "axis": "y",
-    "depth": 0.45,
-    "grain": 0.07,
-    "variation": 0.09,
-    "sheen": 0.12,
-    "wear": 0.96
+    "depth": 0.22,
+    "grain": 0.035,
+    "variation": 0.035,
+    "sheen": 0.08,
+    "wear": 0.38
   },
   "layout": {
     "family": "continuous",

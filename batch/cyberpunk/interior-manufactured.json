@@ -250,7 +250,7 @@
       "grain": 0.06,
       "variation": 0.08,
       "sheen": 0.12,
-      "wear": 0.94
+      "wear": 0.4
     },
     "layout": {
       "family": "continuous",

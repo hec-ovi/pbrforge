@@ -44,8 +44,14 @@ export class IndustrialFinish extends Pattern {
     const gloss = noise(0.048, 0.06, 419) - 0.5;
     const scuff = smoothstep(0.72, 0.92, oriented(0.009, 0.075, 521))
       * smoothstep(0.56, 0.8, noise(0.19, 0.17, 631));
-    const damage = smoothstep(0.53, 0.86, noise(0.13, 0.21, 743))
-      * smoothstep(0.35, 0.78, noise(0.013, 0.025, 857));
+    // Polymer housings retain broad intact faces. Dense all-over flaking reads as
+    // plaster; reserve the coating damage for sparse local abrasions. Exposed
+    // alloy keeps its separate, more extensive oxidation response.
+    const damage = alloy
+      ? smoothstep(0.53, 0.86, noise(0.13, 0.21, 743))
+        * smoothstep(0.35, 0.78, noise(0.013, 0.025, 857))
+      : smoothstep(0.70, 0.93, noise(0.13, 0.21, 743))
+        * smoothstep(0.55, 0.85, noise(0.013, 0.025, 857));
     // Metres, independent of output resolution; wear never becomes raised rocky noise.
     const relief = depth * (fine * visibility * (alloy ? 0.0007 : 0.0005)
       - scuff * wear * 0.0008 - damage * wear * 0.00045);

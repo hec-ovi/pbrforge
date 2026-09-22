@@ -70,3 +70,27 @@ it('publishes the authored oxide mask in both metallic and packed response maps'
     rmSync(themesDir, { recursive: true, force: true });
   }
 });
+
+it.each([2411, 2251])('keeps worn composite housings predominantly intact at seed %s', seed => {
+  const surface: PatternSpec = {
+    kind: 'composite', colors: ['#646b66', '#373c38'], axis: 'y',
+    depth: 0.22, grain: 0.035, variation: 0.035, sheen: 0.08, wear: 1,
+  };
+  const worn = buildPattern(surface, [2, 2], 0.68, seed);
+  const clean = buildPattern({ ...surface, wear: 0 }, [2, 2], 0.68, seed);
+  let damaged = 0;
+  let intact = 0;
+  const side = 128;
+  for (let y = 0; y < side; y++) for (let x = 0; x < side; x++) {
+    const u = (x + 0.5) / side, v = (y + 0.5) / side;
+    const a = worn.sample(u, v, 1 / 1024, 1 / 1024);
+    const b = clean.sample(u, v, 1 / 1024, 1 / 1024);
+    // A meaningful localized roughness change, independent of the satin field.
+    if (a.roughness - b.roughness > 0.01) damaged++;
+    if (Math.abs(a.color.r - b.color.r) < 0.01) intact++;
+    expect(a.metallic).toBe(0);
+  }
+  expect(damaged / (side * side)).toBeGreaterThan(0.025);
+  expect(damaged / (side * side)).toBeLessThan(0.055);
+  expect(intact / (side * side)).toBeGreaterThan(0.90);
+});

@@ -4,6 +4,11 @@ Retained Imagegen albedo photographs feed pbrforge `from-image`. Primary panel f
 
 The reference-led manufactured set is authored through local `create` recipes in [interior-manufactured.json](../../batch/cyberpunk/interior-manufactured.json). Broad corporate fields use charcoal satin composite and brushed alloy with separate dielectric/conducting responses. Rich/mid/poor tiers carry distinct finish and wear, with a subdued service-alloy alias for exterior hardware. Original bounded holograms use the restrained translucent `lattice` finish.
 
+The poor-room GPU review prompted sparse composite abrasion instead of dense
+plaster-like mottling: broad wall housings keep their original color and most of
+their coating, while exposed service alloy retains stronger local oxidation.
+Texture dimensions, metre scale and geometry-owned panel edges are unchanged.
+
 | Style | Wall | Floor | Ceiling |
 | --- | --- | --- | --- |
 | Luxury | [limestone](prompts/luxury-wall.md) | [honed charcoal marble](prompts/luxury-floor.md) | [pearl coating](prompts/luxury-ceiling.md) |

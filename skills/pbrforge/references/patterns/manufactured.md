@@ -10,6 +10,9 @@ pixel footprint. `depth` controls submillimetre surface relief, independent of
 the image resolution. `grain` and `variation` control fine and broad albedo
 contrast; `sheen` controls independent 5–6 cm finish variation. `wear` exposes
 localized scuffs and oxide/dirt. Colors are the intact surface and wear color.
+Composite coating damage is sparse, leaving broad intact housing faces; bare
+alloy retains a more extensive oxide field. No tile edge is treated as a panel
+edge. Geometry supplies the real panel borders and service detailing.
 
 For metal use `physical.metallicFactor: 1`; the authored metallic map retains
 bare metal and reduces conductivity only in local oxidation. Composite is a
