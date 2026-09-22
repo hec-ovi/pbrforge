@@ -9,6 +9,12 @@ plaster-like mottling: broad wall housings keep their original color and most of
 their coating, while exposed service alloy retains stronger local oxidation.
 Texture dimensions, metre scale and geometry-owned panel edges are unchanged.
 
+The `lattice` hologram uses saturated cyan so the color-mask emission lane retains
+its visible signal. Its former muted source yielded an almost-black emission
+map. Authored strength 32 keeps the graphic readable at the game's fixed night
+exposure, below the fixture diffuser level; its enclosure's physical light
+records remain responsible for illuminating nearby surfaces.
+
 | Style | Wall | Floor | Ceiling |
 | --- | --- | --- | --- |
 | Luxury | [limestone](prompts/luxury-wall.md) | [honed charcoal marble](prompts/luxury-floor.md) | [pearl coating](prompts/luxury-ceiling.md) |

@@ -278,7 +278,7 @@
       64
     ],
     "variantId": "lattice",
-    "flatColor": "#3b949a",
+    "flatColor": "#209ab4",
     "flatNoise": 0,
     "emission": "color-mask",
     "physical": {
@@ -286,7 +286,7 @@
       "roughnessFactor": 0.28,
       "transmission": 0.72,
       "ior": 1.1,
-      "emissiveStrength": 1.15
+      "emissiveStrength": 32
     },
     "seed": 2333,
     "overwrite": true

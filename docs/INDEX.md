@@ -32,6 +32,7 @@ Version: 0.17.5.
 - [Street prop sources](../sources/street-props/INDEX.md) and [recipes](../batch/cyberpunk/street-props/): cardboard, wood, coating and polymer.
 - [Exterior sources](../sources/exterior-native/INDEX.md) and [recipes](../batch/cyberpunk/exterior-native/): cast, weathered and graphite concrete.
 - [Accepted Exterior finishes](../sources/exterior-native/accepted.json): fourteen native sets, exact counterparts and original source hashes.
+- The canonical `cyberpunk/concrete-monolith-graphite/mid#graphite` roof binding shares the existing monolith graphite maps and scale. Its separate identity lets one exterior select weathered walls and graphite roofs without conflicting variant choices on one key.
 - [Exterior accent recipes](../batch/cyberpunk/exterior-accents.json): blue and gold frame coatings with canonical `coat` variants.
 - [Interior sources](../sources/interiors/INDEX.md) and [recipes](../batch/cyberpunk/interiors/): luxury, damaged and capsule finishes.
 - [Manufactured interior recipes](../batch/cyberpunk/interior-manufactured.json): metric alloy and polymer surfaces, localized poor-tier oxidation, restrained holograms and exterior service-alloy aliases.

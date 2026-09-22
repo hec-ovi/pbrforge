@@ -22346,7 +22346,7 @@
         "roughnessFactor": 0.28,
         "transmission": 0.72,
         "ior": 1.1,
-        "emissiveStrength": 1.15
+        "emissiveStrength": 32
       },
       "variants": [
         {
@@ -22375,6 +22375,56 @@
             "ao": "assets/interior-hologram/rich/lattice/ao.ktx2",
             "emission": "assets/interior-hologram/rich/lattice/emission.ktx2",
             "metallicRoughness": "assets/metallic-roughness/51d5c3d40aab6e116eba5f129af23f357e3712a6b16e256e402c29e91cf70fe7.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/concrete-monolith-graphite/mid": {
+      "key": "cyberpunk/concrete-monolith-graphite/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          4,
+          4
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.88,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "graphite",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/graphite/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/graphite/normal.png",
+            "roughness": "assets/concrete-monolith/mid/graphite/roughness.png",
+            "metallic": "assets/concrete-monolith/mid/graphite/metallic.png",
+            "height": "assets/concrete-monolith/mid/graphite/height.png",
+            "ao": "assets/concrete-monolith/mid/graphite/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/e0a1711e8a51e1631d6a3f2735447cc445c81e8f0554ca1f9469abc3760a38a1.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/concrete-monolith/mid/graphite/basecolor.ktx2",
+            "normal": "assets/concrete-monolith/mid/graphite/normal.ktx2",
+            "roughness": "assets/concrete-monolith/mid/graphite/roughness.ktx2",
+            "metallic": "assets/concrete-monolith/mid/graphite/metallic.ktx2",
+            "height": "assets/concrete-monolith/mid/graphite/height.ktx2",
+            "ao": "assets/concrete-monolith/mid/graphite/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e0a1711e8a51e1631d6a3f2735447cc445c81e8f0554ca1f9469abc3760a38a1.ktx2"
           }
         }
       ]
