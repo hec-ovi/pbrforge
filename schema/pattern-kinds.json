@@ -1,5 +1,8 @@
 {
   "kinds": [
+    { "kind": "brushed-metal", "draws": "metric directional brushed alloy with shallow scuffs and dielectric oxide coverage", "reads": "colors, axis, depth, grain, variation, sheen, wear", "detail": "skills/pbrforge/references/patterns/manufactured.md" },
+    { "kind": "composite", "draws": "continuous satin polymer with millimetre mould texture, local abrasion and independent gloss", "reads": "colors, axis, depth, grain, variation, sheen, wear", "detail": "skills/pbrforge/references/patterns/manufactured.md" },
+    { "kind": "veneer", "draws": "fine directional architectural veneer with shallow pores and independent varnish response", "reads": "colors, axis, depth, grain, variation, sheen", "detail": "skills/pbrforge/references/patterns/veneer.md" },
     { "kind": "mineral", "draws": "continuous 6-11 mm aggregate, fine pores and sparse local wear", "reads": "face color, grain, variation, depth, sheen, wear", "detail": "skills/pbrforge/references/patterns/mineral.md" },
     { "kind": "aggregate", "draws": "8 mm aggregate, 16 cm binder variation and sparse millimetre surface fractures", "reads": "two colors, depth, grain, wear, wet, sheen", "detail": "skills/pbrforge/references/patterns/aggregate.md" },
     { "kind": "paving", "draws": "isotropic mineral grain, sparse pores and weathering beneath optional panel seams", "reads": "cells, line, bevel, depth, joint, wear", "detail": "skills/pbrforge/references/patterns/paving.md" },

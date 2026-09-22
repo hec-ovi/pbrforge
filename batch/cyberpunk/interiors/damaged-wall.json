@@ -1,8 +1,7 @@
 {
   "key": "cyberpunk/interior-damaged-wall/poor",
-  "path": "sources/interiors/damaged-wall.png",
-  "description": "Muted desaturated grey-green painted plaster architectural field, closely distributed tiny worn paint flakes and hairline crazing exposing mineral grey undercoat, lived-in low-income dystopian building finish, no isolated large peeling patch.",
   "alignment": "tile",
+  "description": "Continuous metric composite surface; complete panel divisions are supplied by fitted geometry",
   "tiling": {
     "worldSize": [
       2,
@@ -16,14 +15,29 @@
   "variantId": "field",
   "physical": {
     "metallicFactor": 0,
-    "roughnessFactor": 0.83
+    "roughnessFactor": 0.74
   },
-  "finish": {
-    "roughness": [
-      0.75,
-      0.91
+  "pattern": {
+    "kind": "composite",
+    "colors": [
+      "#646b66",
+      "#373c38"
     ],
-    "grain": 0.24,
-    "relief": 1
-  }
+    "axis": "y",
+    "depth": 0.45,
+    "grain": 0.07,
+    "variation": 0.09,
+    "sheen": 0.12,
+    "wear": 0.96
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "isotropic"
+  },
+  "seed": 2411,
+  "overwrite": true
 }

@@ -1,8 +1,7 @@
 {
   "key": "cyberpunk/interior-luxury-timber/rich",
-  "path": "sources/interiors/luxury-timber.png",
-  "description": "smoked walnut architectural veneer",
   "alignment": "tile",
+  "description": "Continuous metric veneer surface; complete panel divisions are supplied by fitted geometry",
   "tiling": {
     "worldSize": [
       2,
@@ -16,14 +15,29 @@
   "variantId": "field",
   "physical": {
     "metallicFactor": 0,
-    "roughnessFactor": 0.5
+    "roughnessFactor": 0.51
   },
-  "finish": {
-    "roughness": [
-      0.45,
-      0.57
+  "pattern": {
+    "kind": "veneer",
+    "colors": [
+      "#5a4030",
+      "#3e2c23"
     ],
-    "grain": 0.12,
-    "relief": 0.1
-  }
+    "axis": "y",
+    "depth": 0.24,
+    "grain": 0.18,
+    "variation": 0.12,
+    "sheen": 0.14,
+    "wear": 0.03
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "vertical"
+  },
+  "seed": 2401,
+  "overwrite": true
 }

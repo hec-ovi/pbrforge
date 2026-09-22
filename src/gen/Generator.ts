@@ -50,6 +50,7 @@ interface Source {
   normal?: Rgb;
   height?: Gray;
   roughness?: Gray;
+  metallic?: Gray;
   opacity?: Gray;
   screen?: { spec: Screen; artwork: Rgb };
   /** A tint is the same surface in another paint: it keeps the relief of the variant it came from. */
@@ -91,6 +92,7 @@ export class Generator {
 
     assertDecal(request, target);
     assertResponse(request, target);
+    assertManufactured(request, target);
     if (request.sourceAlbedo) ImageAlbedo.assertTarget(target.alignment, target.physical, target.finish);
 
     const [width, height] = request.resolution ?? [1024, 1024];
@@ -310,6 +312,16 @@ export class Generator {
   }
 }
 
+/** Authored conducting and dielectric maps must agree with their fallback substrate. */
+function assertManufactured(request: CreateRequest, target: Target): void {
+  const kind = request.pattern?.kind;
+  if (kind !== 'brushed-metal' && kind !== 'composite' && kind !== 'veneer') return;
+  const expected = kind === 'brushed-metal' ? 1 : 0;
+  if ((target.physical.metallicFactor ?? 0) !== expected) {
+    throw new MaterialsError('E_SCHEMA', `${kind} requires metallicFactor ${expected}; its response maps describe that substrate`);
+  }
+}
+
 /** Local damp response is an authored exception on an otherwise dry opaque mineral finish. */
 function assertResponse(request: CreateRequest, target: Target): void {
   const response = request.pattern?.response;
@@ -375,7 +387,7 @@ async function derivedMaps(
   const roughness = source.roughness ?? deriveRoughness(height, target.finish);
   return [
     ...(await reliefMaps(height, roughness, source.normal)),
-    ['metallic', await encodeGrayPng(deriveMetallic(source.basecolor, target.physical))],
+    ['metallic', await encodeGrayPng(source.metallic ?? deriveMetallic(source.basecolor, target.physical))],
     ...(source.opacity ? ([['opacity', await encodeGrayPng(source.opacity)]] as [MapName, Buffer][]) : []),
     ...(mode === 'luminance' || mode === 'color-mask'
       ? ([['emission', await encodeRgbPng(deriveEmission(source.basecolor, mode))]] as [MapName, Buffer][])

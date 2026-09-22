@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Version: 0.17.5, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
+Version: 0.17.6, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
 ## API
 

@@ -1,0 +1,294 @@
+[
+  {
+    "key": "cyberpunk/interior-alloy/rich",
+    "alignment": "tile",
+    "description": "Continuous metric brushed-metal surface; complete panel divisions are supplied by fitted geometry",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "variantId": "brushed",
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.34
+    },
+    "pattern": {
+      "kind": "brushed-metal",
+      "colors": [
+        "#82898d",
+        "#4c514b"
+      ],
+      "axis": "y",
+      "depth": 0.25,
+      "grain": 0.1,
+      "variation": 0.07,
+      "sheen": 0.1,
+      "wear": 0.015
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    },
+    "seed": 2137,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/interior-alloy/mid",
+    "alignment": "tile",
+    "description": "Continuous metric brushed-metal surface; complete panel divisions are supplied by fitted geometry",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "variantId": "brushed",
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.46
+    },
+    "pattern": {
+      "kind": "brushed-metal",
+      "colors": [
+        "#737b7e",
+        "#4c514b"
+      ],
+      "axis": "y",
+      "depth": 0.25,
+      "grain": 0.1,
+      "variation": 0.07,
+      "sheen": 0.1,
+      "wear": 0.15
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    },
+    "seed": 2138,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/interior-alloy/poor",
+    "alignment": "tile",
+    "description": "Continuous metric brushed-metal surface; complete panel divisions are supplied by fitted geometry",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "variantId": "brushed",
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.61
+    },
+    "pattern": {
+      "kind": "brushed-metal",
+      "colors": [
+        "#626968",
+        "#4c514b"
+      ],
+      "axis": "y",
+      "depth": 0.25,
+      "grain": 0.1,
+      "variation": 0.07,
+      "sheen": 0.1,
+      "wear": 0.9
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    },
+    "seed": 2139,
+    "overwrite": true,
+    "aliases": [
+      "cyberpunk/service-alloy/poor",
+      "cyberpunk/service-alloy/mid",
+      "cyberpunk/service-alloy/rich",
+      "cyberpunk/service-alloy/high_rich"
+    ]
+  },
+  {
+    "key": "cyberpunk/interior-composite/rich",
+    "alignment": "tile",
+    "description": "Continuous metric composite surface; complete panel divisions are supplied by fitted geometry",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "satin",
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.4
+    },
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#353d42",
+        "#333833"
+      ],
+      "axis": "y",
+      "depth": 0.28,
+      "grain": 0.06,
+      "variation": 0.08,
+      "sheen": 0.12,
+      "wear": 0.02
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "seed": 2249,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/interior-composite/mid",
+    "alignment": "tile",
+    "description": "Continuous metric composite surface; complete panel divisions are supplied by fitted geometry",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "satin",
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.49
+    },
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#4a5255",
+        "#333833"
+      ],
+      "axis": "y",
+      "depth": 0.28,
+      "grain": 0.06,
+      "variation": 0.08,
+      "sheen": 0.12,
+      "wear": 0.16
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "seed": 2250,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/interior-composite/poor",
+    "alignment": "tile",
+    "description": "Continuous metric composite surface; complete panel divisions are supplied by fitted geometry",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "satin",
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.73
+    },
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#626763",
+        "#333833"
+      ],
+      "axis": "y",
+      "depth": 0.28,
+      "grain": 0.06,
+      "variation": 0.08,
+      "sheen": 0.12,
+      "wear": 0.94
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "seed": 2251,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/interior-hologram/rich",
+    "alignment": "tile",
+    "description": "restrained translucent cyan for original bounded geometric holograms; geometry supplies the lattice",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      64,
+      64
+    ],
+    "variantId": "lattice",
+    "flatColor": "#3b949a",
+    "flatNoise": 0,
+    "emission": "color-mask",
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.28,
+      "transmission": 0.72,
+      "ior": 1.1,
+      "emissiveStrength": 1.15
+    },
+    "seed": 2333,
+    "overwrite": true
+  }
+]

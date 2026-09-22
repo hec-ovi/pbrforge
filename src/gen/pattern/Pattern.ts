@@ -50,6 +50,8 @@ export interface Texel {
   normal?: [number, number, number];
   height: number;
   roughness: number;
+  /** Optional authored metal/oxide coverage; omitted patterns use the physical factor. */
+  metallic?: number;
   /** Present only for transparent surface patterns. */
   opacity?: number;
 }

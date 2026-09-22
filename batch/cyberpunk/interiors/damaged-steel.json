@@ -1,8 +1,7 @@
 {
   "key": "cyberpunk/interior-damaged-steel/poor",
-  "path": "sources/interiors/damaged-steel.png",
-  "description": "worn blue gray painted steel for doors and service cases",
   "alignment": "tile",
+  "description": "Continuous metric brushed-metal surface; complete panel divisions are supplied by fitted geometry",
   "tiling": {
     "worldSize": [
       1,
@@ -10,20 +9,35 @@
     ]
   },
   "resolution": [
-    1024,
-    1024
+    512,
+    512
   ],
   "variantId": "field",
   "physical": {
-    "metallicFactor": 0,
-    "roughnessFactor": 0.7
+    "metallicFactor": 1,
+    "roughnessFactor": 0.61
   },
-  "finish": {
-    "roughness": [
-      0.61,
-      0.82
+  "pattern": {
+    "kind": "brushed-metal",
+    "colors": [
+      "#626968",
+      "#444a44"
     ],
-    "grain": 0.1,
-    "relief": 0.15
-  }
+    "axis": "y",
+    "depth": 0.4,
+    "grain": 0.14,
+    "variation": 0.09,
+    "sheen": 0.12,
+    "wear": 0.96
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "vertical"
+  },
+  "seed": 2423,
+  "overwrite": true
 }

@@ -127,7 +127,7 @@
       "required": ["kind", "colors"],
       "additionalProperties": false,
       "properties": {
-        "kind": { "enum": ["mineral", "aggregate", "paving", "window-grime", "concrete", "hexagon", "panel-grid", "louvre", "fixings", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "water", "incident-blood", "incident-tyre"] },
+        "kind": { "enum": ["brushed-metal", "composite", "veneer", "mineral", "aggregate", "paving", "window-grime", "concrete", "hexagon", "panel-grid", "louvre", "fixings", "slab", "stripe", "two-tone", "noise", "lane", "puddle", "lamp", "glyph-atlas", "grille", "water", "incident-blood", "incident-tyre"] },
         "response": { "$ref": "urn:urbe:surface-response", "description": "Optional tiled mineral response; omission preserves the dry maps." },
         "colors": {
           "type": "array",

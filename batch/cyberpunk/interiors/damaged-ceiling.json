@@ -1,8 +1,7 @@
 {
   "key": "cyberpunk/interior-damaged-ceiling/poor",
-  "path": "sources/interiors/damaged-ceiling.png",
-  "description": "Neutral brown-grey aged acoustic mineral fibre architectural field, fine compressed fibre and pinprick pores, subtle diffuse dust discoloration, old utility ceiling, no panel divisions.",
   "alignment": "tile",
+  "description": "Continuous metric composite surface; complete panel divisions are supplied by fitted geometry",
   "tiling": {
     "worldSize": [
       2,
@@ -16,14 +15,29 @@
   "variantId": "field",
   "physical": {
     "metallicFactor": 0,
-    "roughnessFactor": 0.87
+    "roughnessFactor": 0.79
   },
-  "finish": {
-    "roughness": [
-      0.81,
-      0.94
+  "pattern": {
+    "kind": "composite",
+    "colors": [
+      "#41494b",
+      "#242b2b"
     ],
-    "grain": 0.14,
-    "relief": 0.45
-  }
+    "axis": "y",
+    "depth": 0.36,
+    "grain": 0.08,
+    "variation": 0.1,
+    "sheen": 0.1,
+    "wear": 1
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "isotropic"
+  },
+  "seed": 2417,
+  "overwrite": true
 }

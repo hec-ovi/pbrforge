@@ -23,6 +23,8 @@ import { WaterSurface } from './WaterSurface.js';
 import { AggregateField } from './AggregateField.js';
 import { PavingField } from './PavingField.js';
 import { MineralFinish } from './MineralFinish.js';
+import { IndustrialFinish } from './IndustrialFinish.js';
+import { Veneer } from './Veneer.js';
 
 /** Sensible middle of the library: a 15 mm joint with a 10 mm chamfer, a shallow relief, faint grain. */
 const DEFAULTS = {
@@ -95,6 +97,11 @@ export function buildPattern(
   };
 
   switch (spec.kind) {
+    case 'brushed-metal':
+    case 'composite':
+      return new IndustrialFinish(params);
+    case 'veneer':
+      return new Veneer(params);
     case 'mineral':
       return new MineralFinish(params);
     case 'aggregate':

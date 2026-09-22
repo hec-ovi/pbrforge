@@ -8,6 +8,8 @@ Load a kind file only when creating or changing that drawer.
 
 | kind | detail |
 | --- | --- |
+| brushed-metal / composite | [manufactured.md](manufactured.md) |
+| veneer | [veneer.md](veneer.md) |
 | mineral | [mineral.md](mineral.md) |
 | aggregate | [aggregate.md](aggregate.md) |
 | paving | [paving.md](paving.md) |

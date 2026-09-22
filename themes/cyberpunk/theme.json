@@ -17284,20 +17284,12 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.87
-      },
-      "finish": {
-        "roughness": [
-          0.81,
-          0.94
-        ],
-        "grain": 0.14,
-        "relief": 0.45
+        "roughnessFactor": 0.79
       },
       "variants": [
         {
           "id": "field",
-          "class": "image",
+          "class": "pattern",
           "resolution": [
             1024,
             1024
@@ -17306,18 +17298,26 @@
             "basecolor": "assets/interior-damaged-ceiling/poor/field/basecolor.png",
             "normal": "assets/interior-damaged-ceiling/poor/field/normal.png",
             "roughness": "assets/interior-damaged-ceiling/poor/field/roughness.png",
+            "metallic": "assets/interior-damaged-ceiling/poor/field/metallic.png",
             "height": "assets/interior-damaged-ceiling/poor/field/height.png",
             "ao": "assets/interior-damaged-ceiling/poor/field/ao.png",
-            "metallic": "assets/interior-damaged-ceiling/poor/field/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/7386e20dda00df0f10b967c176da366d9ab5ce2a54fa853424accde65bdf4c8a.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           },
           "ktx2": {
             "basecolor": "assets/interior-damaged-ceiling/poor/field/basecolor.ktx2",
             "normal": "assets/interior-damaged-ceiling/poor/field/normal.ktx2",
             "roughness": "assets/interior-damaged-ceiling/poor/field/roughness.ktx2",
+            "metallic": "assets/interior-damaged-ceiling/poor/field/metallic.ktx2",
             "height": "assets/interior-damaged-ceiling/poor/field/height.ktx2",
             "ao": "assets/interior-damaged-ceiling/poor/field/ao.ktx2",
-            "metallic": "assets/interior-damaged-ceiling/poor/field/metallic.ktx2",
             "metallicRoughness": "assets/metallic-roughness/7386e20dda00df0f10b967c176da366d9ab5ce2a54fa853424accde65bdf4c8a.ktx2"
           }
         }
@@ -17384,20 +17384,12 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.83
-      },
-      "finish": {
-        "roughness": [
-          0.75,
-          0.91
-        ],
-        "grain": 0.24,
-        "relief": 1
+        "roughnessFactor": 0.74
       },
       "variants": [
         {
           "id": "field",
-          "class": "image",
+          "class": "pattern",
           "resolution": [
             1024,
             1024
@@ -17406,18 +17398,26 @@
             "basecolor": "assets/interior-damaged-wall/poor/field/basecolor.png",
             "normal": "assets/interior-damaged-wall/poor/field/normal.png",
             "roughness": "assets/interior-damaged-wall/poor/field/roughness.png",
+            "metallic": "assets/interior-damaged-wall/poor/field/metallic.png",
             "height": "assets/interior-damaged-wall/poor/field/height.png",
             "ao": "assets/interior-damaged-wall/poor/field/ao.png",
-            "metallic": "assets/interior-damaged-wall/poor/field/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/8ffb652b5c9346280b051b837f2a560dbf4c9adf098d204b2abc06a2e312479a.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           },
           "ktx2": {
             "basecolor": "assets/interior-damaged-wall/poor/field/basecolor.ktx2",
             "normal": "assets/interior-damaged-wall/poor/field/normal.ktx2",
             "roughness": "assets/interior-damaged-wall/poor/field/roughness.ktx2",
+            "metallic": "assets/interior-damaged-wall/poor/field/metallic.ktx2",
             "height": "assets/interior-damaged-wall/poor/field/height.ktx2",
             "ao": "assets/interior-damaged-wall/poor/field/ao.ktx2",
-            "metallic": "assets/interior-damaged-wall/poor/field/metallic.ktx2",
             "metallicRoughness": "assets/metallic-roughness/8ffb652b5c9346280b051b837f2a560dbf4c9adf098d204b2abc06a2e312479a.ktx2"
           }
         }
@@ -17680,20 +17680,12 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.5
-      },
-      "finish": {
-        "roughness": [
-          0.45,
-          0.57
-        ],
-        "grain": 0.12,
-        "relief": 0.1
+        "roughnessFactor": 0.51
       },
       "variants": [
         {
           "id": "field",
-          "class": "image",
+          "class": "pattern",
           "resolution": [
             1024,
             1024
@@ -17702,18 +17694,26 @@
             "basecolor": "assets/interior-luxury-timber/rich/field/basecolor.png",
             "normal": "assets/interior-luxury-timber/rich/field/normal.png",
             "roughness": "assets/interior-luxury-timber/rich/field/roughness.png",
+            "metallic": "assets/interior-luxury-timber/rich/field/metallic.png",
             "height": "assets/interior-luxury-timber/rich/field/height.png",
             "ao": "assets/interior-luxury-timber/rich/field/ao.png",
-            "metallic": "assets/interior-luxury-timber/rich/field/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/12646d7acc6839338882ade4532ffee7501878102347e5630ddb06a6245e27db.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
           },
           "ktx2": {
             "basecolor": "assets/interior-luxury-timber/rich/field/basecolor.ktx2",
             "normal": "assets/interior-luxury-timber/rich/field/normal.ktx2",
             "roughness": "assets/interior-luxury-timber/rich/field/roughness.ktx2",
+            "metallic": "assets/interior-luxury-timber/rich/field/metallic.ktx2",
             "height": "assets/interior-luxury-timber/rich/field/height.ktx2",
             "ao": "assets/interior-luxury-timber/rich/field/ao.ktx2",
-            "metallic": "assets/interior-luxury-timber/rich/field/metallic.ktx2",
             "metallicRoughness": "assets/metallic-roughness/12646d7acc6839338882ade4532ffee7501878102347e5630ddb06a6245e27db.ktx2"
           }
         }
@@ -18179,41 +18179,41 @@
         ]
       },
       "physical": {
-        "metallicFactor": 0,
-        "roughnessFactor": 0.7
-      },
-      "finish": {
-        "roughness": [
-          0.61,
-          0.82
-        ],
-        "grain": 0.1,
-        "relief": 0.15
+        "metallicFactor": 1,
+        "roughnessFactor": 0.61
       },
       "variants": [
         {
           "id": "field",
-          "class": "image",
+          "class": "pattern",
           "resolution": [
-            1024,
-            1024
+            512,
+            512
           ],
           "maps": {
             "basecolor": "assets/interior-damaged-steel/poor/field/basecolor.png",
             "normal": "assets/interior-damaged-steel/poor/field/normal.png",
             "roughness": "assets/interior-damaged-steel/poor/field/roughness.png",
+            "metallic": "assets/interior-damaged-steel/poor/field/metallic.png",
             "height": "assets/interior-damaged-steel/poor/field/height.png",
             "ao": "assets/interior-damaged-steel/poor/field/ao.png",
-            "metallic": "assets/interior-damaged-steel/poor/field/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/2aed3037b6ff06b736ae54df9144368c74a23e8f88d721aba0c26ef6bf157983.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
           },
           "ktx2": {
             "basecolor": "assets/interior-damaged-steel/poor/field/basecolor.ktx2",
             "normal": "assets/interior-damaged-steel/poor/field/normal.ktx2",
             "roughness": "assets/interior-damaged-steel/poor/field/roughness.ktx2",
+            "metallic": "assets/interior-damaged-steel/poor/field/metallic.ktx2",
             "height": "assets/interior-damaged-steel/poor/field/height.ktx2",
             "ao": "assets/interior-damaged-steel/poor/field/ao.ktx2",
-            "metallic": "assets/interior-damaged-steel/poor/field/metallic.ktx2",
             "metallicRoughness": "assets/metallic-roughness/2aed3037b6ff06b736ae54df9144368c74a23e8f88d721aba0c26ef6bf157983.ktx2"
           }
         }
@@ -22022,6 +22022,359 @@
             "height": "assets/interior-mirror/mid/silver/height.ktx2",
             "ao": "assets/interior-mirror/mid/silver/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/e1c45b94bbd3eb22ccc56d56ea8808fc7cb03c5ef8bca8173f978f6be796f1cf.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-alloy/rich": {
+      "key": "cyberpunk/interior-alloy/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.34
+      },
+      "variants": [
+        {
+          "id": "brushed",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/interior-alloy/rich/brushed/basecolor.png",
+            "normal": "assets/interior-alloy/rich/brushed/normal.png",
+            "roughness": "assets/interior-alloy/rich/brushed/roughness.png",
+            "metallic": "assets/interior-alloy/rich/brushed/metallic.png",
+            "height": "assets/interior-alloy/rich/brushed/height.png",
+            "ao": "assets/interior-alloy/rich/brushed/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/5c1c238d843211c64f8e3f9721e85850b101e4f5fc7fe89b078658d836c6291e.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-alloy/rich/brushed/basecolor.ktx2",
+            "normal": "assets/interior-alloy/rich/brushed/normal.ktx2",
+            "roughness": "assets/interior-alloy/rich/brushed/roughness.ktx2",
+            "metallic": "assets/interior-alloy/rich/brushed/metallic.ktx2",
+            "height": "assets/interior-alloy/rich/brushed/height.ktx2",
+            "ao": "assets/interior-alloy/rich/brushed/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/5c1c238d843211c64f8e3f9721e85850b101e4f5fc7fe89b078658d836c6291e.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-alloy/mid": {
+      "key": "cyberpunk/interior-alloy/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.46
+      },
+      "variants": [
+        {
+          "id": "brushed",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/interior-alloy/mid/brushed/basecolor.png",
+            "normal": "assets/interior-alloy/mid/brushed/normal.png",
+            "roughness": "assets/interior-alloy/mid/brushed/roughness.png",
+            "metallic": "assets/interior-alloy/mid/brushed/metallic.png",
+            "height": "assets/interior-alloy/mid/brushed/height.png",
+            "ao": "assets/interior-alloy/mid/brushed/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a362bd84579884cea1036c0274901ca764328a85515a545cccd1748b519030e7.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-alloy/mid/brushed/basecolor.ktx2",
+            "normal": "assets/interior-alloy/mid/brushed/normal.ktx2",
+            "roughness": "assets/interior-alloy/mid/brushed/roughness.ktx2",
+            "metallic": "assets/interior-alloy/mid/brushed/metallic.ktx2",
+            "height": "assets/interior-alloy/mid/brushed/height.ktx2",
+            "ao": "assets/interior-alloy/mid/brushed/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/a362bd84579884cea1036c0274901ca764328a85515a545cccd1748b519030e7.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-alloy/poor": {
+      "key": "cyberpunk/interior-alloy/poor",
+      "aliases": [
+        "cyberpunk/service-alloy/poor",
+        "cyberpunk/service-alloy/mid",
+        "cyberpunk/service-alloy/rich",
+        "cyberpunk/service-alloy/high_rich"
+      ],
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.61
+      },
+      "variants": [
+        {
+          "id": "brushed",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/interior-alloy/poor/brushed/basecolor.png",
+            "normal": "assets/interior-alloy/poor/brushed/normal.png",
+            "roughness": "assets/interior-alloy/poor/brushed/roughness.png",
+            "metallic": "assets/interior-alloy/poor/brushed/metallic.png",
+            "height": "assets/interior-alloy/poor/brushed/height.png",
+            "ao": "assets/interior-alloy/poor/brushed/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/44b303e989e408da6a892ba83ccb2a1be3ca65c47be31c49653a553a2dd5b6d1.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-alloy/poor/brushed/basecolor.ktx2",
+            "normal": "assets/interior-alloy/poor/brushed/normal.ktx2",
+            "roughness": "assets/interior-alloy/poor/brushed/roughness.ktx2",
+            "metallic": "assets/interior-alloy/poor/brushed/metallic.ktx2",
+            "height": "assets/interior-alloy/poor/brushed/height.ktx2",
+            "ao": "assets/interior-alloy/poor/brushed/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/44b303e989e408da6a892ba83ccb2a1be3ca65c47be31c49653a553a2dd5b6d1.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-composite/rich": {
+      "key": "cyberpunk/interior-composite/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.4
+      },
+      "variants": [
+        {
+          "id": "satin",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-composite/rich/satin/basecolor.png",
+            "normal": "assets/interior-composite/rich/satin/normal.png",
+            "roughness": "assets/interior-composite/rich/satin/roughness.png",
+            "metallic": "assets/interior-composite/rich/satin/metallic.png",
+            "height": "assets/interior-composite/rich/satin/height.png",
+            "ao": "assets/interior-composite/rich/satin/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ec42a156e0138366801e24dc513061fa441d585ca27914307ddbc59d5574f1bf.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-composite/rich/satin/basecolor.ktx2",
+            "normal": "assets/interior-composite/rich/satin/normal.ktx2",
+            "roughness": "assets/interior-composite/rich/satin/roughness.ktx2",
+            "metallic": "assets/interior-composite/rich/satin/metallic.ktx2",
+            "height": "assets/interior-composite/rich/satin/height.ktx2",
+            "ao": "assets/interior-composite/rich/satin/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/ec42a156e0138366801e24dc513061fa441d585ca27914307ddbc59d5574f1bf.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-composite/mid": {
+      "key": "cyberpunk/interior-composite/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.49
+      },
+      "variants": [
+        {
+          "id": "satin",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-composite/mid/satin/basecolor.png",
+            "normal": "assets/interior-composite/mid/satin/normal.png",
+            "roughness": "assets/interior-composite/mid/satin/roughness.png",
+            "metallic": "assets/interior-composite/mid/satin/metallic.png",
+            "height": "assets/interior-composite/mid/satin/height.png",
+            "ao": "assets/interior-composite/mid/satin/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ffdf89f660a2d88315ae2d6483e4ac47629a6615b04560bff6e74ee1d0a9fbed.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-composite/mid/satin/basecolor.ktx2",
+            "normal": "assets/interior-composite/mid/satin/normal.ktx2",
+            "roughness": "assets/interior-composite/mid/satin/roughness.ktx2",
+            "metallic": "assets/interior-composite/mid/satin/metallic.ktx2",
+            "height": "assets/interior-composite/mid/satin/height.ktx2",
+            "ao": "assets/interior-composite/mid/satin/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/ffdf89f660a2d88315ae2d6483e4ac47629a6615b04560bff6e74ee1d0a9fbed.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-composite/poor": {
+      "key": "cyberpunk/interior-composite/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.73
+      },
+      "variants": [
+        {
+          "id": "satin",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-composite/poor/satin/basecolor.png",
+            "normal": "assets/interior-composite/poor/satin/normal.png",
+            "roughness": "assets/interior-composite/poor/satin/roughness.png",
+            "metallic": "assets/interior-composite/poor/satin/metallic.png",
+            "height": "assets/interior-composite/poor/satin/height.png",
+            "ao": "assets/interior-composite/poor/satin/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d38ff288bbbea131cdc8425bb21548b4d92eae07a90c00f383aa2c86185cac5e.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-composite/poor/satin/basecolor.ktx2",
+            "normal": "assets/interior-composite/poor/satin/normal.ktx2",
+            "roughness": "assets/interior-composite/poor/satin/roughness.ktx2",
+            "metallic": "assets/interior-composite/poor/satin/metallic.ktx2",
+            "height": "assets/interior-composite/poor/satin/height.ktx2",
+            "ao": "assets/interior-composite/poor/satin/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/d38ff288bbbea131cdc8425bb21548b4d92eae07a90c00f383aa2c86185cac5e.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-hologram/rich": {
+      "key": "cyberpunk/interior-hologram/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.28,
+        "transmission": 0.72,
+        "ior": 1.1,
+        "emissiveStrength": 1.15
+      },
+      "variants": [
+        {
+          "id": "lattice",
+          "class": "flat",
+          "resolution": [
+            64,
+            64
+          ],
+          "maps": {
+            "basecolor": "assets/interior-hologram/rich/lattice/basecolor.png",
+            "normal": "assets/interior-hologram/rich/lattice/normal.png",
+            "roughness": "assets/interior-hologram/rich/lattice/roughness.png",
+            "metallic": "assets/interior-hologram/rich/lattice/metallic.png",
+            "height": "assets/interior-hologram/rich/lattice/height.png",
+            "ao": "assets/interior-hologram/rich/lattice/ao.png",
+            "emission": "assets/interior-hologram/rich/lattice/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/51d5c3d40aab6e116eba5f129af23f357e3712a6b16e256e402c29e91cf70fe7.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-hologram/rich/lattice/basecolor.ktx2",
+            "normal": "assets/interior-hologram/rich/lattice/normal.ktx2",
+            "roughness": "assets/interior-hologram/rich/lattice/roughness.ktx2",
+            "metallic": "assets/interior-hologram/rich/lattice/metallic.ktx2",
+            "height": "assets/interior-hologram/rich/lattice/height.ktx2",
+            "ao": "assets/interior-hologram/rich/lattice/ao.ktx2",
+            "emission": "assets/interior-hologram/rich/lattice/emission.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/51d5c3d40aab6e116eba5f129af23f357e3712a6b16e256e402c29e91cf70fe7.ktx2"
           }
         }
       ]

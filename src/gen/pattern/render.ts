@@ -7,6 +7,7 @@ export interface PatternMaps {
   normal?: Rgb;
   height: Gray;
   roughness: Gray;
+  metallic?: Gray;
   opacity?: Gray;
 }
 
@@ -18,6 +19,7 @@ export function renderPattern(pattern: Pattern, width: number, height: number): 
   const gloss = new Float32Array(width * height);
   const opacity = new Float32Array(width * height);
   let hasOpacity = false;
+  let metallic: Float32Array | undefined;
   const du = 1 / width;
   const dv = 1 / height;
   for (let y = 0; y < height; y++) {
@@ -34,6 +36,10 @@ export function renderPattern(pattern: Pattern, width: number, height: number): 
       }
       relief[i] = texel.height;
       gloss[i] = texel.roughness;
+      if (texel.metallic !== undefined) {
+        metallic ??= new Float32Array(width * height);
+        metallic[i] = texel.metallic;
+      }
       if (texel.opacity !== undefined) {
         opacity[i] = texel.opacity;
         hasOpacity = true;
@@ -45,6 +51,7 @@ export function renderPattern(pattern: Pattern, width: number, height: number): 
     ...(normal ? { normal: { data: normal, width, height } } : {}),
     height: { data: relief, width, height },
     roughness: { data: gloss, width, height },
+    ...(metallic ? { metallic: { data: metallic, width, height } } : {}),
     ...(hasOpacity ? { opacity: { data: opacity, width, height } } : {}),
   };
 }

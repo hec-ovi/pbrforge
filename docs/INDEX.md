@@ -34,6 +34,7 @@ Version: 0.17.5.
 - [Accepted Exterior finishes](../sources/exterior-native/accepted.json): fourteen native sets, exact counterparts and original source hashes.
 - [Exterior accent recipes](../batch/cyberpunk/exterior-accents.json): blue and gold frame coatings with canonical `coat` variants.
 - [Interior sources](../sources/interiors/INDEX.md) and [recipes](../batch/cyberpunk/interiors/): luxury, damaged and capsule finishes.
+- [Manufactured interior recipes](../batch/cyberpunk/interior-manufactured.json): metric alloy and polymer surfaces, localized poor-tier oxidation, restrained holograms and exterior service-alloy aliases.
 - [Room plates](../sources/window-rooms/INDEX.md) and [screen artwork](../sources/ads-codex/PROMPTS.md): retained images and authoring prompts.
 - [Paired facade recipes](../batch/cyberpunk/paired-facade.json): lounge backplate, photographed graphite metal, periodic aluminum brushing, clear glazing and room/light surface states.
 - [ComfyUI workflows](../templates/README.md): photographic and upscale templates.

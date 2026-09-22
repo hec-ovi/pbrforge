@@ -123,6 +123,9 @@ export interface Screen extends Display {
 }
 
 export type PatternKind =
+  | 'brushed-metal'
+  | 'composite'
+  | 'veneer'
   | 'mineral'
   | 'aggregate'
   | 'paving'
