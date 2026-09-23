@@ -1623,6 +1623,136 @@
                 }
               }
             }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "effect",
+              "maps",
+              "uv",
+              "parameters"
+            ],
+            "properties": {
+              "effect": {
+                "const": "led-matrix"
+              },
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "glyphs"
+                ],
+                "properties": {
+                  "glyphs": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  }
+                }
+              },
+              "uv": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "mode",
+                  "scale"
+                ],
+                "properties": {
+                  "mode": {
+                    "const": "metres"
+                  },
+                  "scale": {
+                    "type": "array",
+                    "items": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                }
+              },
+              "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "faceTint",
+                  "faceRoughness",
+                  "dotTint",
+                  "dotRoughness",
+                  "dotPitch",
+                  "dotRadius",
+                  "glyphBand",
+                  "glyphRange",
+                  "glyphAdvance",
+                  "litTint",
+                  "brightness",
+                  "scrollSpeed"
+                ],
+                "properties": {
+                  "faceTint": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-f]{6}$"
+                  },
+                  "faceRoughness": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "dotTint": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-f]{6}$"
+                  },
+                  "dotRoughness": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "dotPitch": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "dotRadius": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "glyphBand": {
+                    "type": "array",
+                    "items": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "glyphRange": {
+                    "type": "array",
+                    "items": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "glyphAdvance": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "litTint": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-f]{6}$"
+                  },
+                  "brightness": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "scrollSpeed": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
           }
         ]
       }

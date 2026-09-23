@@ -149,6 +149,58 @@
     {
       "target": "themes/cyberpunk/assets/letter-atlas/rich/neon/emission.png",
       "sha256": "9ab0f995cb9edc776a9380012fa4fd57503f5b77568dbec35c766d63c0b8dd4f"
+    },
+    {
+      "target": "themes/cyberpunk/assets/marquee-channel/rich/grimy/basecolor.png",
+      "sha256": "6746e1fcf8e0d6df93215c22bc6dae0d3f6cdb399b16dd56230e73fb62ef49da"
+    },
+    {
+      "target": "themes/cyberpunk/assets/marquee-channel/rich/grimy/normal.png",
+      "sha256": "ffb43a784273d234f00829a3a17fca5fe35581247827c380ad66655c64f8fe54"
+    },
+    {
+      "target": "themes/cyberpunk/assets/marquee-channel/rich/grimy/roughness.png",
+      "sha256": "d22534ed45cda2d8543c30e2e04dcb30a046a488c5f5e85bd2078bbfa97aed6e"
+    },
+    {
+      "target": "themes/cyberpunk/assets/marquee-channel/rich/grimy/ao.png",
+      "sha256": "ab618c1afbb267e7ea56a09557849d71aa45868b6929011867f2abcabe08db1a"
+    },
+    {
+      "target": "themes/cyberpunk/assets/marquee-frame/rich/amber/basecolor.png",
+      "sha256": "344caa1d0b65b15f28ba5ab7d8bc5a238a8cbc8ab721a15667f80ce0667c489f"
+    },
+    {
+      "target": "themes/cyberpunk/assets/marquee-frame/rich/source/normal.png",
+      "sha256": "7b4b7d210ee50a7827a9d3e9c641394f94f7b0880b88dd77fb35bbd65bbe887a"
+    },
+    {
+      "target": "themes/cyberpunk/assets/marquee-frame/rich/source/roughness.png",
+      "sha256": "52f0a90111a06fc707b2592394bbcc4db8099a4a242a58a85f4f4fb04185698d"
+    },
+    {
+      "target": "themes/cyberpunk/assets/marquee-frame/rich/source/ao.png",
+      "sha256": "6a3e1e3a850279b1bd9a49df474adac524f2cfe0c50fc39c160eb18a0a9cb97c"
+    },
+    {
+      "target": "themes/cyberpunk/assets/exterior-graphite-concrete/mid/native/basecolor.png",
+      "sha256": "9b7d8c749210e944dcfd3b23d68fb8d7398a289589de206229ebf08ec370cff8"
+    },
+    {
+      "target": "themes/cyberpunk/assets/exterior-graphite-concrete/mid/native/normal.png",
+      "sha256": "c40d105749598bcd1a04a404f5a84876680846874779d2020f4c832bf70864c9"
+    },
+    {
+      "target": "themes/cyberpunk/assets/exterior-graphite-concrete/mid/native/roughness.png",
+      "sha256": "02308e70faf67f9db9c353d81cd3300c2bc30453b55a5a437c570532e9a9f384"
+    },
+    {
+      "target": "themes/cyberpunk/assets/exterior-graphite-concrete/mid/native/ao.png",
+      "sha256": "1c39f41c142edbc8d51a368559effad4e792a631fb44141b03e2ceca82cf8745"
+    },
+    {
+      "target": "themes/cyberpunk/assets/letter-atlas/rich/panel/emission.png",
+      "sha256": "68af285d293aeb342e57d31f0c0178d93c2984c070332c7070b64da7341fbf50"
     }
   ],
   "surfaces": [
@@ -165,6 +217,11 @@
     "district-gutter-red",
     "district-gutter-yellow",
     "district-marquee",
-    "district-parking-light"
+    "district-parking-light",
+    "marquee-channel",
+    "marquee-frame",
+    "marquee-lip",
+    "marquee-cap",
+    "marquee-led"
   ]
 }

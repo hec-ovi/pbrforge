@@ -1626,6 +1626,175 @@
         "clamp",
         "clamp"
       ]
+    },
+    "marquee-channel-basecolor": {
+      "path": "themes/cyberpunk/assets/marquee-channel/rich/grimy/basecolor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "6746e1fcf8e0d6df93215c22bc6dae0d3f6cdb399b16dd56230e73fb62ef49da",
+      "colorSpace": "srgb",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-channel-normal": {
+      "path": "themes/cyberpunk/assets/marquee-channel/rich/grimy/normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "ffb43a784273d234f00829a3a17fca5fe35581247827c380ad66655c64f8fe54",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-channel-roughness": {
+      "path": "themes/cyberpunk/assets/marquee-channel/rich/grimy/roughness.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "d22534ed45cda2d8543c30e2e04dcb30a046a488c5f5e85bd2078bbfa97aed6e",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-channel-ao": {
+      "path": "themes/cyberpunk/assets/marquee-channel/rich/grimy/ao.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "ab618c1afbb267e7ea56a09557849d71aa45868b6929011867f2abcabe08db1a",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-frame-basecolor": {
+      "path": "themes/cyberpunk/assets/marquee-frame/rich/amber/basecolor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "344caa1d0b65b15f28ba5ab7d8bc5a238a8cbc8ab721a15667f80ce0667c489f",
+      "colorSpace": "srgb",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-frame-normal": {
+      "path": "themes/cyberpunk/assets/marquee-frame/rich/source/normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "7b4b7d210ee50a7827a9d3e9c641394f94f7b0880b88dd77fb35bbd65bbe887a",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-frame-roughness": {
+      "path": "themes/cyberpunk/assets/marquee-frame/rich/source/roughness.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "52f0a90111a06fc707b2592394bbcc4db8099a4a242a58a85f4f4fb04185698d",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-frame-ao": {
+      "path": "themes/cyberpunk/assets/marquee-frame/rich/source/ao.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "6a3e1e3a850279b1bd9a49df474adac524f2cfe0c50fc39c160eb18a0a9cb97c",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-cap-basecolor": {
+      "path": "themes/cyberpunk/assets/exterior-graphite-concrete/mid/native/basecolor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "9b7d8c749210e944dcfd3b23d68fb8d7398a289589de206229ebf08ec370cff8",
+      "colorSpace": "srgb",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-cap-normal": {
+      "path": "themes/cyberpunk/assets/exterior-graphite-concrete/mid/native/normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "c40d105749598bcd1a04a404f5a84876680846874779d2020f4c832bf70864c9",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-cap-roughness": {
+      "path": "themes/cyberpunk/assets/exterior-graphite-concrete/mid/native/roughness.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "02308e70faf67f9db9c353d81cd3300c2bc30453b55a5a437c570532e9a9f384",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-cap-ao": {
+      "path": "themes/cyberpunk/assets/exterior-graphite-concrete/mid/native/ao.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "sha256": "1c39f41c142edbc8d51a368559effad4e792a631fb44141b03e2ceca82cf8745",
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "marquee-led-glyphs": {
+      "path": "themes/cyberpunk/assets/letter-atlas/rich/panel/emission.png",
+      "resolution": [
+        1024,
+        768
+      ],
+      "sha256": "68af285d293aeb342e57d31f0c0178d93c2984c070332c7070b64da7341fbf50",
+      "colorSpace": "srgb",
+      "wrap": [
+        "clamp",
+        "clamp"
+      ]
     }
   },
   "surfaces": {
@@ -2921,6 +3090,151 @@
         "roughness": 0.22,
         "metalness": 0,
         "emissionIntensity": 3
+      }
+    },
+    "marquee-channel": {
+      "effect": "photographed",
+      "maps": {
+        "basecolor": "marquee-channel-basecolor",
+        "normal": "marquee-channel-normal",
+        "roughness": "marquee-channel-roughness",
+        "ao": "marquee-channel-ao"
+      },
+      "uv": {
+        "mode": "metres",
+        "scale": [
+          1,
+          1
+        ]
+      },
+      "parameters": {
+        "tint": "#c9ccc9",
+        "normalScale": 0.6,
+        "aoIntensity": 0.8,
+        "metalness": 0,
+        "roughnessGain": 1,
+        "roughnessBias": 0,
+        "roughnessRange": [
+          0.45,
+          0.8
+        ]
+      }
+    },
+    "marquee-frame": {
+      "effect": "photographed",
+      "maps": {
+        "basecolor": "marquee-frame-basecolor",
+        "normal": "marquee-frame-normal",
+        "roughness": "marquee-frame-roughness",
+        "ao": "marquee-frame-ao"
+      },
+      "uv": {
+        "mode": "metres",
+        "scale": [
+          1,
+          1
+        ]
+      },
+      "parameters": {
+        "tint": "#ffffff",
+        "normalScale": 0.4,
+        "aoIntensity": 0.5,
+        "metalness": 0,
+        "roughnessGain": 1,
+        "roughnessBias": -0.12,
+        "roughnessRange": [
+          0.35,
+          0.5
+        ]
+      }
+    },
+    "marquee-lip": {
+      "effect": "photographed",
+      "maps": {
+        "basecolor": "barrier-concrete-basecolor",
+        "normal": "barrier-concrete-normal",
+        "roughness": "barrier-concrete-roughness",
+        "ao": "barrier-concrete-ao"
+      },
+      "uv": {
+        "mode": "metres",
+        "scale": [
+          1,
+          1
+        ]
+      },
+      "parameters": {
+        "tint": "#7c828f",
+        "normalScale": 0.5,
+        "aoIntensity": 0.6,
+        "metalness": 0,
+        "roughnessGain": 1,
+        "roughnessBias": 0,
+        "roughnessRange": [
+          0.55,
+          0.75
+        ]
+      }
+    },
+    "marquee-cap": {
+      "effect": "photographed",
+      "maps": {
+        "basecolor": "marquee-cap-basecolor",
+        "normal": "marquee-cap-normal",
+        "roughness": "marquee-cap-roughness",
+        "ao": "marquee-cap-ao"
+      },
+      "uv": {
+        "mode": "metres",
+        "scale": [
+          2,
+          2
+        ]
+      },
+      "parameters": {
+        "tint": "#7b918e",
+        "normalScale": 0.35,
+        "aoIntensity": 0.5,
+        "metalness": 0,
+        "roughnessGain": 1,
+        "roughnessBias": -0.24,
+        "roughnessRange": [
+          0.45,
+          0.7
+        ]
+      }
+    },
+    "marquee-led": {
+      "effect": "led-matrix",
+      "maps": {
+        "glyphs": "marquee-led-glyphs"
+      },
+      "uv": {
+        "mode": "metres",
+        "scale": [
+          1,
+          1
+        ]
+      },
+      "parameters": {
+        "faceTint": "#1b1d1e",
+        "faceRoughness": 0.3,
+        "dotTint": "#8e8a82",
+        "dotRoughness": 0.3,
+        "dotPitch": 0.01,
+        "dotRadius": 0.0035,
+        "glyphBand": [
+          0.005,
+          0.225
+        ],
+        "glyphRange": [
+          0.2,
+          0.6
+        ],
+        "glyphAdvance": 0.6,
+        "litTint": "#fff2dc",
+        "brightness": 2.5,
+        "scrollSpeed": 0.8
       }
     }
   },

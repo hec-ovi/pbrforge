@@ -23,6 +23,7 @@ These change public behavior; they need orchestrator agreement.
 | Validate all rebrand resources before writing. | Names are checked first; each business/screen then writes in sequence. A later missing screen or letter variant can leave earlier writes. | Materials, world-branding callers |
 | Reject from-image duplicate keys before writing maps; publish multi-variant creates atomically. | FromImage writes map files before Database.write rejects an existing key. Generator writes each variant's files before later variants finish. An error does not guarantee an untouched database. | Materials and authoring callers |
 | Normalize unexpected library filesystem/backend exceptions at the public boundary. | Root operations pass through writer/decoder/backend failures. The CLI wraps them as E_INTERNAL; the library does not always throw MaterialsError. | Materials package callers |
+| Capped marquee LED face uses `marquee-led` (effect `led-matrix`, metre UVs), not `district-marquee`. | Streets' 2026-09-23 job names `district-marquee` for the LED field slot; Engine and Unreal have no `led-matrix` implementation yet. `district-marquee` stays unchanged for the retiring wedge. The orchestrator's task said panel UVs for the LED face; the segment spec publishes metre UVs and the dot lattice needs physical size, so the binding uses metres. | Materials, Streets, Engine, Unreal |
 
 ## Look pass 2026-09-18
 

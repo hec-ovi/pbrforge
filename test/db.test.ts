@@ -94,6 +94,33 @@ it('validates every published consumer binding and resolves the references it na
   expect(sources.size).toBe(Object.keys(native.textures).length);
 });
 
+it('binds the capped marquee run to catalog finishes at metre UVs and a lettered LED dot face', () => {
+  const native = JSON.parse(read('bindings/street-native.json').toString());
+  const path = (key: string, id: string, map: string) =>
+    `themes/cyberpunk/${(resolve(key).variants.find(variant => variant.id === id)!.maps as Record<string, string>)[map]}`;
+  const finishes: Record<string, [string, string]> = {
+    'marquee-channel': ['cyberpunk/marquee-channel/rich', 'grimy'],
+    'marquee-frame': ['cyberpunk/marquee-frame/rich', 'amber'],
+    'marquee-cap': ['cyberpunk/exterior-graphite-concrete/mid', 'native'],
+  };
+  for (const id of ['marquee-channel', 'marquee-frame', 'marquee-lip', 'marquee-cap']) {
+    const surface = native.surfaces[id];
+    expect(surface.uv.mode, id).toBe('metres');
+    for (const [slot, texture] of Object.entries(surface.maps) as [string, string][]) {
+      expect(native.textures[texture].wrap, `${id}.${slot}`).toEqual(['repeat', 'repeat']);
+      if (finishes[id]) expect(native.textures[texture].path, `${id}.${slot}`).toBe(path(...finishes[id], slot));
+    }
+  }
+  const led = native.surfaces['marquee-led'];
+  expect(led.effect).toBe('led-matrix');
+  expect(led.uv).toEqual({ mode: 'metres', scale: [1, 1] });
+  expect(native.textures[led.maps.glyphs].path).toBe(path('cyberpunk/letter-atlas/rich', 'panel', 'emission'));
+  const { dotPitch, dotRadius, glyphBand, glyphAdvance } = led.parameters;
+  expect(dotRadius).toBeLessThan(dotPitch / 2);
+  expect(glyphBand[1] - glyphBand[0]).toBeGreaterThan(10 * dotPitch);
+  expect(glyphAdvance).toBeGreaterThan(0);
+});
+
 it('retains every accepted exterior finish, its exact counterpart and the accepted source bytes', async () => {
   const keys = list({ theme: 'cyberpunk' });
   expect(manifest.finishes).toHaveLength(14);

@@ -319,5 +319,85 @@
       "roughnessFactor": 0.52,
       "metallicFactor": 0
     }
+  },
+  {
+    "key": "cyberpunk/marquee-channel/rich",
+    "alignment": "tile",
+    "description": "Grimy dark grey-green painted steel gutter channel with a soot film, rust flecks and bare steel chips",
+    "sourceAlbedo": {
+      "path": "sources/streets/marquee/channel.png"
+    },
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "grimy",
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.62
+    },
+    "finish": {
+      "roughness": [
+        0.5,
+        0.74
+      ],
+      "grain": 0.25,
+      "relief": 1.2
+    }
+  },
+  {
+    "key": "cyberpunk/marquee-frame/rich",
+    "alignment": "tile",
+    "description": "Amber enamel painted steel frame rail with sparse small chips and hairline scuffs",
+    "sourceAlbedo": {
+      "path": "sources/streets/marquee/frame.png"
+    },
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "variantId": "source",
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.5
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.56
+      ],
+      "grain": 0.12,
+      "relief": 0.6
+    }
+  },
+  {
+    "key": "cyberpunk/marquee-frame/rich",
+    "alignment": "tile",
+    "description": "amber frame paint tone",
+    "append": true,
+    "canonical": true,
+    "variantId": "amber",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "recolor": {
+      "from": "source",
+      "color": "#d39a26",
+      "strength": 0.5,
+      "value": 1.1
+    }
   }
 ]

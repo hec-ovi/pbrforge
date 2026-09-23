@@ -1,0 +1,6 @@
+Use case: photorealistic-natural
+Asset type: square game PBR basecolor texture, at least 1024 x 1024.
+Primary request: orthographic top-down close-up of a flat continuous painted steel surface from a grimy street gutter channel. Dark charcoal grey-green industrial enamel paint (around #2e3533) under a mottled film of dark oily soot and road grime. Many small chipped flecks and pinpoints spread evenly over the whole field: orange-brown rust (around #6b3a1e) and dark bare steel together cover about 10 percent of the area, plus faint dried grime speckles and fine abrasion. Represents a 1 metre square of painted surface.
+Composition: one single continuous field, not a grid of repeated copies. The field is seamless and tileable: it fills all four edges completely and the pattern continues beyond every edge with no border.
+Lighting: perfectly uniform flat diffuse albedo capture, no directional shadows, shine, reflections, highlights or vignette. The game lights it at any time of day.
+Constraints: fully opaque. No large rust patches, streaks or single marks that would repeat visibly. No ribs, steps, joints, bolts, rivets, borders, labels, text, objects, perspective or background. Geometry provides the channel steps.

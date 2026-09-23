@@ -1,5 +1,7 @@
 # Changelog
 
+0.18.0: capped marquee runs bind a grimy painted channel, amber frame, pale concrete lip, dark slate cap and a dot-matrix LED face whose dots light the placement text.
+
 0.17.5: luxury sidewalk panels, hex road, curbs and ordinary slabs carry visible joints, gloss and grit at the published scales.
 
 0.17.4: facade variants carry metre scaled blades, head combs, corner fixings and panel joints with matching PBR maps.

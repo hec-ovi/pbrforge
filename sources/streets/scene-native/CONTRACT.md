@@ -1,6 +1,6 @@
 # Native street surfaces
 
-Version: 0.17.5.
+Version: 0.18.0.
 
 Supplies the original district scans and renderer-neutral shading parameters from threejsscene. Input: surface identity and authored geometry attributes. Output: texture references and effect parameters in [binding](../../../bindings/street-native.json), validated by [schema](../../../schema/street-native.schema.json). Depends on no renderer. [Manifest](manifest.json) records source file SHA-256 hashes and revision.
 
@@ -17,7 +17,7 @@ Geometry publishes world position `P`, road-relative local height `H`, UV and in
 - `world-xz`: `P.xz / scale`, independent of mesh origin. Asphalt scale is 2 m.
 - `panel`: one full scan in 0..1 for every fitted slab or decal. U follows the slab row; V runs across it. Retain rectangular scans and the producer's orientation; no world tiling or scale inferred from panel pitch. Parking V=0 is the road entrance, V=1 the back of the 3 by 2.5 m panel.
 - `curb-band`: producer maps distance along each face over 2 m and across/height over 0.2 m; edge-ring tops normalize their band depth to one scan. Wider bands stretch across their width. UVs are already normalized; do not divide twice. Source wraps clamp both axes.
-- `metres`: producer publishes physical UVs, consumer divides by `scale`. Hardware is 1 m; perforated steel is 0.25 m. Barrier height `H` remains relative to the road even after instancing.
+- `metres`: producer publishes physical UVs, consumer divides by `scale`. Hardware is 1 m; perforated steel is 0.25 m. Barrier height `H` remains relative to the road even after instancing. LED faces run U along the field, left to right as seen from the road, and V from the road-side frame toward the curb.
 - `paint`: producer publishes mask UVs. Strips use along-distance / 2.7 + seeded phase (0..17); cross-width V is 0.155 + fraction * 0.69. Bars exchange along/across, with phase `station * 0.17`. Other marking silhouettes supply fitted equivalent UVs. Mask U repeats, V clamps.
 
 ## Shared asphalt sample
@@ -54,7 +54,10 @@ Parameter names below come directly from each surface's `parameters`. `T(slot)` 
 | `decal` | `C=T(basecolor).rgb`; alpha=`T(basecolor).a*opacity`; `R=roughness`. Blend once, depth test, no depth write. Enable polygon offset with the declared factor and default units 0. Geometry owns fitted placement and surface offset. |
 | `solid` | `C=tint`; `R=roughness`; `M=metalness`. |
 | `display` | `C=T(basecolor).rgb*tint`; emission=`C*brightness`; `R=roughness`; `M=0`. |
+| `led-matrix` | `q=UV/scale`, metres at scale 1; `c` is the nearest dot centre `(dotPitch*(i+(j mod 2)/2), dotPitch*sqrt(3)/2*j)` for integers i, j; `d=1-smoothstep(0.85*dotRadius,dotRadius,length(q-c))`; `m=smoothstep(glyphRange,G(c).g)`; `C=mix(faceTint,dotTint,d)`; `R=mix(faceRoughness,dotRoughness,d)`; `M=0`; emission=`litTint*brightness*d*m`. |
 
 Solid surfaces optionally emit `tint*emissionIntensity`, default zero. Authored photographed surfaces may use `world-xz` or metre UVs at their published repeat scale. District hexagons have 0.15 m lattice spacing, restrained joints and shallow relief; clean panel maps contain no authored scratches. Geometry defines slab seams and fitted marquee glyph UVs.
 
-`clearcoat`, where declared, is the physical coat weight. Uncoated clearcoat is zero. Coated defaults follow a dielectric IOR of 1.5. Photographed curb and gutter share maps but retain separate normal strength and gutter tint. The binding contains no LED screens or graffiti. Material selection and row composition belong to the street builder.
+`clearcoat`, where declared, is the physical coat weight. Uncoated clearcoat is zero. Coated defaults follow a dielectric IOR of 1.5. Photographed curb and gutter share maps but retain separate normal strength and gutter tint. The binding contains no ad screens or graffiti. Material selection and row composition belong to the street builder.
+
+LED faces letter the placement `text`, a list of [letter atlas](../../../CONTRACT.md#letter-atlas) glyph indices, in one row of square cells of side `s=glyphBand[1]-glyphBand[0]`. A cell runs from V=`glyphBand[0]` (glyph bottom, road side) to `glyphBand[1]` (glyph top, curb side). Glyph k starts at U=`u0+k*glyphAdvance*s`; the consumer chooses `u0`, and the message moves toward lower U at `scrollSpeed` metres per second, wrapping as the consumer arranges the run. `G(c)` samples the glyphs sheet at the dot centre inside the glyph whose cell centre is nearest along U, and is zero outside the band and the message, so each dot lights whole. The dot lattice stays fixed. Where it falls below the pixel footprint, a consumer may filter `d` toward its mean coverage `pi*dotRadius^2/(dotPitch^2*sqrt(3)/2)`. Only lit dots emit; the face and unlit dots take scene light, and no lighting is baked into any map.

@@ -22428,6 +22428,215 @@
           }
         }
       ]
+    },
+    "cyberpunk/residential-service-coating/mid": {
+      "key": "cyberpunk/residential-service-coating/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.65,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "teal",
+          "class": "flat",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/signage/mid/backplate/basecolor.png",
+            "normal": "assets/signage/mid/backplate/normal.png",
+            "roughness": "assets/signage/mid/backplate/roughness.png",
+            "metallic": "assets/signage/mid/backplate/metallic.png",
+            "height": "assets/signage/mid/backplate/height.png",
+            "ao": "assets/signage/mid/backplate/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/3325c257dfd617fd36ff4b1913b8a01e52fa212d8b437a80ab20ee164e566160.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/signage/mid/backplate/basecolor.ktx2",
+            "normal": "assets/signage/mid/backplate/normal.ktx2",
+            "roughness": "assets/signage/mid/backplate/roughness.ktx2",
+            "metallic": "assets/signage/mid/backplate/metallic.ktx2",
+            "height": "assets/signage/mid/backplate/height.ktx2",
+            "ao": "assets/signage/mid/backplate/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/3325c257dfd617fd36ff4b1913b8a01e52fa212d8b437a80ab20ee164e566160.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/factory-cassette-coating/mid": {
+      "key": "cyberpunk/factory-cassette-coating/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 0.58,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "blue",
+          "class": "flat",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/signage/rich/backplate/basecolor.png",
+            "normal": "assets/signage/rich/backplate/normal.png",
+            "roughness": "assets/signage/rich/backplate/roughness.png",
+            "metallic": "assets/signage/rich/backplate/metallic.png",
+            "height": "assets/signage/rich/backplate/height.png",
+            "ao": "assets/signage/rich/backplate/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/40e9724b66a4e1e582b50e1c35dff817b08b417000dff4ddeb06265741decd6c.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/signage/rich/backplate/basecolor.ktx2",
+            "normal": "assets/signage/rich/backplate/normal.ktx2",
+            "roughness": "assets/signage/rich/backplate/roughness.ktx2",
+            "metallic": "assets/signage/rich/backplate/metallic.ktx2",
+            "height": "assets/signage/rich/backplate/height.ktx2",
+            "ao": "assets/signage/rich/backplate/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/40e9724b66a4e1e582b50e1c35dff817b08b417000dff4ddeb06265741decd6c.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/marquee-channel/rich": {
+      "key": "cyberpunk/marquee-channel/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.62
+      },
+      "finish": {
+        "roughness": [
+          0.5,
+          0.74
+        ],
+        "grain": 0.25,
+        "relief": 1.2
+      },
+      "variants": [
+        {
+          "id": "grimy",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/marquee-channel/rich/grimy/basecolor.png",
+            "normal": "assets/marquee-channel/rich/grimy/normal.png",
+            "roughness": "assets/marquee-channel/rich/grimy/roughness.png",
+            "metallic": "assets/marquee-channel/rich/grimy/metallic.png",
+            "height": "assets/marquee-channel/rich/grimy/height.png",
+            "ao": "assets/marquee-channel/rich/grimy/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/c1785e155db749a83c889234f9242efe6909a0ac18551a4f36b4f691122b1389.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/marquee-channel/rich/grimy/basecolor.ktx2",
+            "normal": "assets/marquee-channel/rich/grimy/normal.ktx2",
+            "roughness": "assets/marquee-channel/rich/grimy/roughness.ktx2",
+            "metallic": "assets/marquee-channel/rich/grimy/metallic.ktx2",
+            "height": "assets/marquee-channel/rich/grimy/height.ktx2",
+            "ao": "assets/marquee-channel/rich/grimy/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/c1785e155db749a83c889234f9242efe6909a0ac18551a4f36b4f691122b1389.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/marquee-frame/rich": {
+      "key": "cyberpunk/marquee-frame/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.56
+        ],
+        "grain": 0.12,
+        "relief": 0.6
+      },
+      "variants": [
+        {
+          "id": "amber",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/marquee-frame/rich/amber/basecolor.png",
+            "normal": "assets/marquee-frame/rich/source/normal.png",
+            "roughness": "assets/marquee-frame/rich/source/roughness.png",
+            "metallic": "assets/marquee-frame/rich/source/metallic.png",
+            "height": "assets/marquee-frame/rich/source/height.png",
+            "ao": "assets/marquee-frame/rich/source/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d183423375a68202d10a552560730456551efe9e22f16642971057f603fcbd0e.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/marquee-frame/rich/amber/basecolor.ktx2",
+            "normal": "assets/marquee-frame/rich/source/normal.ktx2",
+            "roughness": "assets/marquee-frame/rich/source/roughness.ktx2",
+            "metallic": "assets/marquee-frame/rich/source/metallic.ktx2",
+            "height": "assets/marquee-frame/rich/source/height.ktx2",
+            "ao": "assets/marquee-frame/rich/source/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/d183423375a68202d10a552560730456551efe9e22f16642971057f603fcbd0e.ktx2"
+          }
+        },
+        {
+          "id": "source",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/marquee-frame/rich/source/basecolor.png",
+            "normal": "assets/marquee-frame/rich/source/normal.png",
+            "roughness": "assets/marquee-frame/rich/source/roughness.png",
+            "metallic": "assets/marquee-frame/rich/source/metallic.png",
+            "height": "assets/marquee-frame/rich/source/height.png",
+            "ao": "assets/marquee-frame/rich/source/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d183423375a68202d10a552560730456551efe9e22f16642971057f603fcbd0e.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/marquee-frame/rich/source/basecolor.ktx2",
+            "normal": "assets/marquee-frame/rich/source/normal.ktx2",
+            "roughness": "assets/marquee-frame/rich/source/roughness.ktx2",
+            "metallic": "assets/marquee-frame/rich/source/metallic.ktx2",
+            "height": "assets/marquee-frame/rich/source/height.ktx2",
+            "ao": "assets/marquee-frame/rich/source/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/d183423375a68202d10a552560730456551efe9e22f16642971057f603fcbd0e.ktx2"
+          }
+        }
+      ]
     }
   }
 }

@@ -40,4 +40,4 @@ Version: 0.17.5.
 - [Paired facade recipes](../batch/cyberpunk/paired-facade.json): lounge backplate, photographed graphite metal, periodic aluminum brushing, clear glazing and room/light surface states.
 - [ComfyUI workflows](../templates/README.md): photographic and upscale templates.
 
-- [District street recipes](../batch/cyberpunk/district-streets.json): fine hexagonal paving and glossy district panels, curbs and junction coatings. Native bindings expose the same authored maps to Streets.
+- [District street recipes](../batch/cyberpunk/district-streets.json): fine hexagonal paving and glossy district panels, curbs and junction coatings. Native bindings expose the same authored maps to Streets; [marquee run sources](../sources/streets/INDEX.md#marquee-run) add the channel and frame finishes and the dot-matrix LED face.
