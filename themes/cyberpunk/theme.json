@@ -13243,16 +13243,6 @@
             "ao": "assets/incident-blood/mid/directional-pool/ao.png",
             "opacity": "assets/incident-blood/mid/directional-pool/opacity.png",
             "metallicRoughness": "assets/metallic-roughness/aa065db6073bc733d62a5e30bcea085bae36198865fc2a8d5ebd4e7cde01512f.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/incident-blood/mid/directional-pool/basecolor.ktx2",
-            "normal": "assets/incident-blood/mid/directional-pool/normal.ktx2",
-            "roughness": "assets/incident-blood/mid/directional-pool/roughness.ktx2",
-            "metallic": "assets/incident-blood/mid/directional-pool/metallic.ktx2",
-            "height": "assets/incident-blood/mid/directional-pool/height.ktx2",
-            "ao": "assets/incident-blood/mid/directional-pool/ao.ktx2",
-            "opacity": "assets/incident-blood/mid/directional-pool/opacity.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/aa065db6073bc733d62a5e30bcea085bae36198865fc2a8d5ebd4e7cde01512f.ktx2"
           }
         }
       ]
@@ -13296,16 +13286,6 @@
             "ao": "assets/incident-tyre/poor/directional-transfer/ao.png",
             "opacity": "assets/incident-tyre/poor/directional-transfer/opacity.png",
             "metallicRoughness": "assets/metallic-roughness/474755426e1159f90200fee9a515b44398535bce9ad3f5522e027123e37513d3.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/incident-tyre/poor/directional-transfer/basecolor.ktx2",
-            "normal": "assets/incident-tyre/poor/directional-transfer/normal.ktx2",
-            "roughness": "assets/incident-tyre/poor/directional-transfer/roughness.ktx2",
-            "metallic": "assets/incident-tyre/poor/directional-transfer/metallic.ktx2",
-            "height": "assets/incident-tyre/poor/directional-transfer/height.ktx2",
-            "ao": "assets/incident-tyre/poor/directional-transfer/ao.ktx2",
-            "opacity": "assets/incident-tyre/poor/directional-transfer/opacity.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/474755426e1159f90200fee9a515b44398535bce9ad3f5522e027123e37513d3.ktx2"
           }
         }
       ]

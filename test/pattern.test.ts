@@ -83,7 +83,7 @@ it('publishes bounded damp response on a mineral tile while keeping the dry area
     .rejects.toMatchObject({ code: 'E_SCHEMA' });
 });
 
-it('fits a decal to its receiving face with a transparent edge inset', async () => {
+it('fits a decal to its receiving face with a transparent edge inset, its coverage in both opacity and basecolor alpha', async () => {
   const request: CreateRequest = {
     key: 'test/incident/mid', alignment: 'exact', aspect: [2, 1],
     description: 'fitted incident decal', resolution: [128, 64], seed: 14873,
@@ -97,6 +97,8 @@ it('fits a decal to its receiving face with a transparent edge inset', async () 
   const { data, info } = await sharp(join(themesDir, 'test', entry.variants[0].maps.opacity!))
     .extractChannel(0).raw().toBuffer({ resolveWithObject: true });
   expect(data.some(value => value > 0)).toBe(true);
+  const alpha = await sharp(join(themesDir, 'test', entry.variants[0].maps.basecolor)).extractChannel('alpha').raw().toBuffer();
+  expect(alpha.equals(data)).toBe(true);
   const { worldSize: [width, height], edgeInset } = entry.decal!;
   for (let y = 0; y < info.height; y++) for (let x = 0; x < info.width; x++) {
     const edge = Math.min((x + 0.5) / info.width * width, (info.width - x - 0.5) / info.width * width,

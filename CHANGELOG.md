@@ -1,5 +1,7 @@
 # Changelog
 
+0.18.1: every decal pattern writes its coverage into the basecolor alpha as well as the opacity map, so blood pools and tyre marks draw as their shapes; the two incident decals are regenerated and list no compressed siblings until compression runs again.
+
 0.18.0: capped marquee runs bind a grimy painted channel, amber frame, pale concrete lip, dark slate cap and a dot-matrix LED face whose dots light the placement text.
 
 0.17.5: luxury sidewalk panels, hex road, curbs and ordinary slabs carry visible joints, gloss and grit at the published scales.

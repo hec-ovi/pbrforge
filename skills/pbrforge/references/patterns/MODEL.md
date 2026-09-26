@@ -10,7 +10,7 @@ Each texel returns:
 - `height` 0..1, midplane 0.5
 - optional `normal` tangent direction from a metric profile, on every texel when supplied
 - `roughness` 0..1
-- `opacity` only on decals
+- `opacity` only on decals; it also becomes the basecolor alpha
 
 `create` rasters that, then writes **normal** from the metric profile when supplied, otherwise from height, and **AO** from height, **metallic** from `physical.metallicFactor`, **packed** from roughness + metallic.
 

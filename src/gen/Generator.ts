@@ -265,9 +265,8 @@ export class Generator {
     }
     const mode = request.emission ?? 'none';
     const files: [MapName, Buffer][] = [
-      ['basecolor', source.opacity && request.pattern?.kind === 'window-grime'
-        ? await encodeRgbaPng(source.basecolor, source.opacity)
-        : await encodeRgbPng(source.basecolor)],
+      // A decal's coverage rides in its basecolor alpha too, so one map draws it.
+      ['basecolor', source.opacity ? await encodeRgbaPng(source.basecolor, source.opacity) : await encodeRgbPng(source.basecolor)],
       ...(request.sourceImage
         ? await ImagePlate.maps(source.basecolor, target.physical)
         : source.screen

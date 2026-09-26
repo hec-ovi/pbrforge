@@ -51,7 +51,7 @@ Each variant keeps `maps` as map names to PNG path strings and publishes compres
 - Basecolor and emission are sRGB; data maps are linear. Normals use OpenGL +Y. Roughness and metallic are absolute values, bound with scalar factors 1; physical factors supply fallbacks when maps are omitted.
 - Packed metallic-roughness is linear RGB: R=255, G=roughness, B=metallic. It uses the same UVs and resolution as the separate maps, with factors 1.
 - `tiling.worldSize` is metres per repeat, one UV unit per tile. Bind the selected variant with `variant.tiling ?? entry.tiling`; existing variants without an override retain the entry scale. `aspect` is an exact-face ratio. Preserve scale and proportion. Geometry owns UVs, whole modules, borders, cuts and placement. `layout` publishes module size, joint width, origin and orientation in metres.
-- Decals clamp UV 0..1 to one fitted receiving face using declared world size, edge inset and normal offset. Clip to that face, keep depth testing and apply opacity once. Glass, reflection environments, animated water, collision and breakability behavior belong to the renderer/runtime.
+- Decals clamp UV 0..1 to one fitted receiving face using declared world size, edge inset and normal offset. A decal's basecolor is RGBA whose alpha is the same coverage as its `opacity` map, so the basecolor alone draws it. Clip to that face, keep depth testing and apply opacity once: the basecolor alpha or the opacity map, never both. Glass, reflection environments, animated water, collision and breakability behavior belong to the renderer/runtime.
 - `class` records provenance; `screen.artwork` is retained brandless source art for rebrand, not a rendered texture channel.
 
 ## Compression
