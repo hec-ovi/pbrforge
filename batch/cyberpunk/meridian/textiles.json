@@ -1,0 +1,142 @@
+[
+  {
+    "key": "cyberpunk/meridian-upholstery/rich",
+    "variantId": "charcoal",
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.25,
+        0.25
+      ]
+    },
+    "description": "Fine charcoal wool upholstery using the existing high quality photographic source at quarter-metre weave scale with shallow thread relief; no seams baked into cloth.",
+    "sourceAlbedo": {
+      "path": "themes/cyberpunk/assets/fabric/high_rich/1/basecolor.png"
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.84
+    },
+    "finish": {
+      "roughness": [
+        0.78,
+        0.92
+      ],
+      "grain": 0.06,
+      "relief": 0.2
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/meridian-bedding/rich",
+    "variantId": "ivory",
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.25,
+        0.25
+      ]
+    },
+    "description": "Fine ivory plain cotton bedding, high thread density at quarter-metre sample scale; folds and seams belong to modelled fabric.",
+    "sourceAlbedo": {
+      "path": "sources/meridian/bedding.png"
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.83
+    },
+    "finish": {
+      "roughness": [
+        0.75,
+        0.91
+      ],
+      "grain": 0.04,
+      "relief": 0.16
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/meridian-terry/rich",
+    "variantId": "ivory",
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.2,
+        0.2
+      ]
+    },
+    "description": "Short-loop ivory terry towelling at twenty-centimetre sample scale, natural soft cotton loops without patterned decoration.",
+    "sourceAlbedo": {
+      "path": "sources/meridian/terry.png"
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.93
+    },
+    "finish": {
+      "roughness": [
+        0.87,
+        0.99
+      ],
+      "grain": 0.1,
+      "relief": 0.3
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/meridian-upholstery/rich",
+    "variantId": "navy",
+    "append": true,
+    "alignment": "tile",
+    "description": "Deep muted navy fine upholstery for corporate office seating, neutral calibrated pigment separate from scene cyan illumination",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.25,
+        0.25
+      ]
+    },
+    "recolor": {
+      "from": "charcoal",
+      "color": "#233449",
+      "strength": 1,
+      "value": 1.15
+    }
+  }
+]

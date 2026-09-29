@@ -1,0 +1,39 @@
+{
+  "key": "cyberpunk/ivory-panel/rich",
+  "variantId": "meridian-satin",
+  "alignment": "tile",
+  "description": "Warm-neutral pale engineered ceramic-mineral panel finish guided by Biotechnica 20260927162615 and 20260927162635: calm satin surface, low contrast fine micrograin, minimal yellow bias, no concrete trowelling or baked panel seams",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.47
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.5
+    ],
+    "grain": 0.08,
+    "relief": 0.24
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "isotropic"
+  },
+  "sourceAlbedo": {
+    "path": "sources/meridian/ivory-engineered-mineral.png"
+  }
+}

@@ -508,8 +508,47 @@
             "ao": "assets/wall/rich/panel-graphite/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/42bc11e0b0f776b9b91125496143fc1d1f354333b30b7bcf5cc5e98239825715.ktx2"
           }
+        },
+        {
+          "id": "meridian-mineral",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/wall/rich/meridian-mineral/basecolor.png",
+            "normal": "assets/wall/rich/meridian-mineral/normal.png",
+            "roughness": "assets/wall/rich/meridian-mineral/roughness.png",
+            "metallic": "assets/wall/rich/meridian-mineral/metallic.png",
+            "height": "assets/wall/rich/meridian-mineral/height.png",
+            "ao": "assets/wall/rich/meridian-mineral/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/3c045a23e3b40e20c98b70ec1c8326e8fa25685e8aaad234e3c3d03704f2ffb0.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.58,
+          0.89
+        ],
+        "grain": 0.2,
+        "relief": 0.8
+      }
     },
     "cyberpunk/wall/high_rich": {
       "key": "cyberpunk/wall/high_rich",
@@ -2526,8 +2565,47 @@
             "ao": "assets/roof/mid/panel-square/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/63a236726394805b279a241049f4bad15df7675ad1b53a1a5296e42cbba1efc6.ktx2"
           }
+        },
+        {
+          "id": "meridian-mineral",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/roof/mid/meridian-mineral/basecolor.png",
+            "normal": "assets/roof/mid/meridian-mineral/normal.png",
+            "roughness": "assets/roof/mid/meridian-mineral/roughness.png",
+            "metallic": "assets/roof/mid/meridian-mineral/metallic.png",
+            "height": "assets/roof/mid/meridian-mineral/height.png",
+            "ao": "assets/roof/mid/meridian-mineral/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/1bd148be362402958af6b8c3578b3303262e786bc7c532f54b540d5930bcf701.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
         }
-      ]
+      ],
+      "finish": {
+        "roughness": [
+          0.74,
+          0.98
+        ],
+        "grain": 0.25,
+        "relief": 1.1
+      }
     },
     "cyberpunk/roof/rich": {
       "key": "cyberpunk/roof/rich",
@@ -22889,6 +22967,490 @@
             "height": "assets/interior-capsule-hex/mid/field/height.png",
             "ao": "assets/interior-capsule-hex/mid/field/ao.png",
             "metallicRoughness": "assets/metallic-roughness/a81fa4c9ec2990ae6a95fc3aaf45c96fa536f2394b3dfca87e93f6ba58eee6a8.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/meridian-lobby-stone/rich": {
+      "key": "cyberpunk/meridian-lobby-stone/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.58
+      },
+      "finish": {
+        "roughness": [
+          0.46,
+          0.73
+        ],
+        "grain": 0.1,
+        "relief": 0.3
+      },
+      "variants": [
+        {
+          "id": "honed",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/meridian-lobby-stone/rich/honed/basecolor.png",
+            "normal": "assets/meridian-lobby-stone/rich/honed/normal.png",
+            "roughness": "assets/meridian-lobby-stone/rich/honed/roughness.png",
+            "metallic": "assets/meridian-lobby-stone/rich/honed/metallic.png",
+            "height": "assets/meridian-lobby-stone/rich/honed/height.png",
+            "ao": "assets/meridian-lobby-stone/rich/honed/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/f9414967c43e50f291dadd70fc209ac15e7cbc81d020c05cfce000d8637c1dd4.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/meridian-wall-mineral/rich": {
+      "key": "cyberpunk/meridian-wall-mineral/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.74
+      },
+      "finish": {
+        "roughness": [
+          0.58,
+          0.89
+        ],
+        "grain": 0.2,
+        "relief": 0.8
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/meridian-wall-mineral/rich/field/basecolor.png",
+            "normal": "assets/meridian-wall-mineral/rich/field/normal.png",
+            "roughness": "assets/meridian-wall-mineral/rich/field/roughness.png",
+            "metallic": "assets/meridian-wall-mineral/rich/field/metallic.png",
+            "height": "assets/meridian-wall-mineral/rich/field/height.png",
+            "ao": "assets/meridian-wall-mineral/rich/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/11c7daa1aa56e9c5b7e38d4f1e675526abf5b2b1d9369724d866d4a5bacb7845.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/meridian-ceiling-metal/rich": {
+      "key": "cyberpunk/meridian-ceiling-metal/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.62
+      },
+      "finish": {
+        "roughness": [
+          0.47,
+          0.78
+        ],
+        "grain": 0.12,
+        "relief": 0.3
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/meridian-ceiling-metal/rich/field/basecolor.png",
+            "normal": "assets/meridian-ceiling-metal/rich/field/normal.png",
+            "roughness": "assets/meridian-ceiling-metal/rich/field/roughness.png",
+            "metallic": "assets/meridian-ceiling-metal/rich/field/metallic.png",
+            "height": "assets/meridian-ceiling-metal/rich/field/height.png",
+            "ao": "assets/meridian-ceiling-metal/rich/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/beb24be337dc592e25b2eb9678108b13be3df74063c66f742ca394b411ef22d8.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/meridian-roof-mineral/rich": {
+      "key": "cyberpunk/meridian-roof-mineral/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.88
+      },
+      "finish": {
+        "roughness": [
+          0.74,
+          0.98
+        ],
+        "grain": 0.25,
+        "relief": 1.1
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/meridian-roof-mineral/rich/field/basecolor.png",
+            "normal": "assets/meridian-roof-mineral/rich/field/normal.png",
+            "roughness": "assets/meridian-roof-mineral/rich/field/roughness.png",
+            "metallic": "assets/meridian-roof-mineral/rich/field/metallic.png",
+            "height": "assets/meridian-roof-mineral/rich/field/height.png",
+            "ao": "assets/meridian-roof-mineral/rich/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/4b091c88150797a653a8123bb3dd3827eb884993ac4025c3d0b04beb9e329437.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/bathroom-glass/rich": {
+      "key": "cyberpunk/bathroom-glass/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.09,
+        "transmission": 0.9,
+        "ior": 1.5,
+        "alphaMode": "OPAQUE"
+      },
+      "variants": [
+        {
+          "id": "clear",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/bathroom-glass/rich/clear/basecolor.png",
+            "normal": "assets/bathroom-glass/rich/clear/normal.png",
+            "roughness": "assets/bathroom-glass/rich/clear/roughness.png",
+            "metallic": "assets/bathroom-glass/rich/clear/metallic.png",
+            "height": "assets/bathroom-glass/rich/clear/height.png",
+            "ao": "assets/bathroom-glass/rich/clear/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/15df63b888a79f820a0fe7795f176677c119db310826dacfd251177cf0420aaa.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/bathroom-mirror/rich": {
+      "key": "cyberpunk/bathroom-mirror/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.22,
+        "alphaMode": "OPAQUE"
+      },
+      "variants": [
+        {
+          "id": "silver",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/bathroom-mirror/rich/silver/basecolor.png",
+            "normal": "assets/bathroom-mirror/rich/silver/normal.png",
+            "roughness": "assets/bathroom-mirror/rich/silver/roughness.png",
+            "metallic": "assets/bathroom-mirror/rich/silver/metallic.png",
+            "height": "assets/bathroom-mirror/rich/silver/height.png",
+            "ao": "assets/bathroom-mirror/rich/silver/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/2dd8dc6868a7b31ba0b81452c9fb1c0f313419a7f44b4475c6daed6529d1d7c9.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/meridian-upholstery/rich": {
+      "key": "cyberpunk/meridian-upholstery/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.25,
+          0.25
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.84
+      },
+      "finish": {
+        "roughness": [
+          0.78,
+          0.92
+        ],
+        "grain": 0.06,
+        "relief": 0.2
+      },
+      "variants": [
+        {
+          "id": "charcoal",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/meridian-upholstery/rich/charcoal/basecolor.png",
+            "normal": "assets/meridian-upholstery/rich/charcoal/normal.png",
+            "roughness": "assets/meridian-upholstery/rich/charcoal/roughness.png",
+            "metallic": "assets/meridian-upholstery/rich/charcoal/metallic.png",
+            "height": "assets/meridian-upholstery/rich/charcoal/height.png",
+            "ao": "assets/meridian-upholstery/rich/charcoal/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/edb0eff2ab1c3645c0e7598dd13a55a8e83df19174ff330f4b2debae7b7723ea.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        },
+        {
+          "id": "navy",
+          "tiling": {
+            "worldSize": [
+              0.25,
+              0.25
+            ]
+          },
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/meridian-upholstery/rich/navy/basecolor.png",
+            "normal": "assets/meridian-upholstery/rich/charcoal/normal.png",
+            "roughness": "assets/meridian-upholstery/rich/charcoal/roughness.png",
+            "metallic": "assets/meridian-upholstery/rich/charcoal/metallic.png",
+            "height": "assets/meridian-upholstery/rich/charcoal/height.png",
+            "ao": "assets/meridian-upholstery/rich/charcoal/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/edb0eff2ab1c3645c0e7598dd13a55a8e83df19174ff330f4b2debae7b7723ea.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/meridian-bedding/rich": {
+      "key": "cyberpunk/meridian-bedding/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.25,
+          0.25
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.83
+      },
+      "finish": {
+        "roughness": [
+          0.75,
+          0.91
+        ],
+        "grain": 0.04,
+        "relief": 0.16
+      },
+      "variants": [
+        {
+          "id": "ivory",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/meridian-bedding/rich/ivory/basecolor.png",
+            "normal": "assets/meridian-bedding/rich/ivory/normal.png",
+            "roughness": "assets/meridian-bedding/rich/ivory/roughness.png",
+            "metallic": "assets/meridian-bedding/rich/ivory/metallic.png",
+            "height": "assets/meridian-bedding/rich/ivory/height.png",
+            "ao": "assets/meridian-bedding/rich/ivory/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/7d6a3e1f19c5d9d822268c09335e2b9a6d75c79c64359322bd6e9b45d4013c1b.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/meridian-terry/rich": {
+      "key": "cyberpunk/meridian-terry/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.2,
+          0.2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.93
+      },
+      "finish": {
+        "roughness": [
+          0.87,
+          0.99
+        ],
+        "grain": 0.1,
+        "relief": 0.3
+      },
+      "variants": [
+        {
+          "id": "ivory",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/meridian-terry/rich/ivory/basecolor.png",
+            "normal": "assets/meridian-terry/rich/ivory/normal.png",
+            "roughness": "assets/meridian-terry/rich/ivory/roughness.png",
+            "metallic": "assets/meridian-terry/rich/ivory/metallic.png",
+            "height": "assets/meridian-terry/rich/ivory/height.png",
+            "ao": "assets/meridian-terry/rich/ivory/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/f5d09ce11c15b4f1f7e5965fe4347d8162926f9c9d41319cec30b3bf9ee2036c.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/ivory-panel/rich": {
+      "key": "cyberpunk/ivory-panel/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.47
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.5
+        ],
+        "grain": 0.08,
+        "relief": 0.24
+      },
+      "variants": [
+        {
+          "id": "meridian-satin",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/ivory-panel/rich/meridian-satin/basecolor.png",
+            "normal": "assets/ivory-panel/rich/meridian-satin/normal.png",
+            "roughness": "assets/ivory-panel/rich/meridian-satin/roughness.png",
+            "metallic": "assets/ivory-panel/rich/meridian-satin/metallic.png",
+            "height": "assets/ivory-panel/rich/meridian-satin/height.png",
+            "ao": "assets/ivory-panel/rich/meridian-satin/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/0af519f32639d3833065d4a210e6db9b292ed1697ed9b40659850ce2694e6fda.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         }
       ]

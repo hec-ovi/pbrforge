@@ -1,0 +1,162 @@
+[
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "emission": "none",
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "key": "cyberpunk/meridian-lobby-stone/rich",
+    "variantId": "honed",
+    "description": "Honed warm grey fossil limestone; 2 metre continuous texture with quiet mineral grain, natural mottling and restrained burnishing. Slab divisions are geometry, not baked grout.",
+    "sourceAlbedo": {
+      "path": "sources/meridian/lobby-stone.png"
+    },
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.58
+    },
+    "finish": {
+      "roughness": [
+        0.46,
+        0.73
+      ],
+      "grain": 0.1,
+      "relief": 0.3
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "emission": "none",
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "key": "cyberpunk/meridian-wall-mineral/rich",
+    "variantId": "field",
+    "description": "Warm graphite mineral panel finish; 2 metre continuous trowelled stone dust, shallow pores and nonuniform hand-finish. Large panel edges belong to geometry.",
+    "sourceAlbedo": {
+      "path": "sources/meridian/wall-mineral.png"
+    },
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.74
+    },
+    "finish": {
+      "roughness": [
+        0.58,
+        0.89
+      ],
+      "grain": 0.2,
+      "relief": 0.8
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "emission": "none",
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "key": "cyberpunk/meridian-ceiling-metal/rich",
+    "variantId": "field",
+    "description": "Satin peened graphite aluminium ceiling finish; continuous one metre material with fine mill texture, local finish variation and scattered gentle scuffs. Physical broad cassette joints are separate geometry.",
+    "sourceAlbedo": {
+      "path": "sources/meridian/ceiling-metal-peened.png"
+    },
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.62
+    },
+    "finish": {
+      "roughness": [
+        0.47,
+        0.78
+      ],
+      "grain": 0.12,
+      "relief": 0.3
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "emission": "none",
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "key": "cyberpunk/meridian-roof-mineral/rich",
+    "variantId": "field",
+    "description": "Weathered fine aggregate roof screed; reused verified photographic source with coarser pore relief and irregular dry roughness, no baked tile grid.",
+    "sourceAlbedo": {
+      "path": "themes/cyberpunk/assets/exterior-weathered-concrete/mid/native/basecolor.png"
+    },
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.88
+    },
+    "finish": {
+      "roughness": [
+        0.74,
+        0.98
+      ],
+      "grain": 0.25,
+      "relief": 1.1
+    }
+  }
+]

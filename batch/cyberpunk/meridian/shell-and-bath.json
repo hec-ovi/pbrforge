@@ -1,0 +1,132 @@
+[
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "emission": "none",
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "key": "cyberpunk/wall/rich",
+    "variantId": "meridian-mineral",
+    "description": "Warm graphite mineral panel finish; 2 metre continuous trowelled stone dust, shallow pores and nonuniform hand-finish. Large panel edges belong to geometry.",
+    "sourceAlbedo": {
+      "path": "sources/meridian/wall-mineral.png"
+    },
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.74
+    },
+    "finish": {
+      "roughness": [
+        0.58,
+        0.89
+      ],
+      "grain": 0.2,
+      "relief": 0.8
+    },
+    "append": true
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "emission": "none",
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "key": "cyberpunk/roof/mid",
+    "variantId": "meridian-mineral",
+    "description": "Weathered fine aggregate roof screed; reused verified photographic source with coarser pore relief and irregular dry roughness, no baked tile grid.",
+    "sourceAlbedo": {
+      "path": "themes/cyberpunk/assets/exterior-weathered-concrete/mid/native/basecolor.png"
+    },
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.88
+    },
+    "finish": {
+      "roughness": [
+        0.74,
+        0.98
+      ],
+      "grain": 0.25,
+      "relief": 1.1
+    },
+    "append": true
+  },
+  {
+    "key": "cyberpunk/bathroom-glass/rich",
+    "variantId": "clear",
+    "alignment": "tile",
+    "description": "Low-tint bathroom shower safety glass; subtle visible glass response, clear readable enclosure with modelled edge channels",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#eff5f1",
+    "flatNoise": 0.002,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.09,
+      "transmission": 0.9,
+      "ior": 1.5,
+      "alphaMode": "OPAQUE"
+    }
+  },
+  {
+    "key": "cyberpunk/bathroom-mirror/rich",
+    "variantId": "silver",
+    "alignment": "tile",
+    "description": "Opaque satin silver bathroom mirror backing, restrained rough reflection without glass transmission",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#c8cbce",
+    "flatNoise": 0.001,
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.22,
+      "alphaMode": "OPAQUE"
+    }
+  }
+]
