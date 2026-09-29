@@ -1,5 +1,7 @@
 # Changelog
 
+0.19.0: capsule and service interior coatings, a hexagonal resilient floor, worn gunmetal, linen and fine satin alloy; Corpo Plaza, Meridian, Sandra Dorsett, Gutierrez and Loft 1702 apartment finishes with veneer, stone, leather, textiles, tatami, artwork, glass, mirrors and lens colors; Meridian shell variants on the wall and roof kinds; and Hiromi terrace fern leaflets and stems. Recipes and accepted sources reproduce the published maps; the new variants list no compressed siblings until compression runs.
+
 0.18.1: every decal pattern writes its coverage into the basecolor alpha as well as the opacity map, so blood pools and tyre marks draw as their shapes; the two incident decals are regenerated and list no compressed siblings until compression runs again.
 
 0.18.0: capped marquee runs bind a grimy painted channel, amber frame, pale concrete lip, dark slate cap and a dot-matrix LED face whose dots light the placement text.
