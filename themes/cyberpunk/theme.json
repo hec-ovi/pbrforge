@@ -10142,6 +10142,30 @@
             "emission": "assets/light-fixture/rich/corpo-amber/emission.png",
             "metallicRoughness": "assets/metallic-roughness/80df3ebb384b808a34f417630f8354d68aaeba2ae216df25699ed06074e809bd.png"
           }
+        },
+        {
+          "id": "loft-red",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/rich/loft-red/basecolor.png",
+            "normal": "assets/light-fixture/rich/loft-red/normal.png",
+            "roughness": "assets/light-fixture/rich/loft-red/roughness.png",
+            "metallic": "assets/light-fixture/rich/loft-red/metallic.png",
+            "height": "assets/light-fixture/rich/loft-red/height.png",
+            "ao": "assets/light-fixture/rich/loft-red/ao.png",
+            "emission": "assets/light-fixture/rich/loft-red/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/204b822cf69e40696b6d1d48d354e7200c76791e561d60dd6074d5dfb45b3897.png"
+          }
         }
       ]
     },
@@ -24209,6 +24233,118 @@
               0
             ],
             "orientation": "vertical"
+          }
+        }
+      ]
+    },
+    "cyberpunk/loft1702-rug/rich": {
+      "key": "cyberpunk/loft1702-rug/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.4,
+          0.4
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.91
+      },
+      "finish": {
+        "roughness": [
+          0.85,
+          0.97
+        ],
+        "grain": 0.05,
+        "relief": 0.2
+      },
+      "variants": [
+        {
+          "id": "woven-source",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/loft1702-rug/rich/woven-source/basecolor.png",
+            "normal": "assets/loft1702-rug/rich/woven-source/normal.png",
+            "roughness": "assets/loft1702-rug/rich/woven-source/roughness.png",
+            "metallic": "assets/loft1702-rug/rich/woven-source/metallic.png",
+            "height": "assets/loft1702-rug/rich/woven-source/height.png",
+            "ao": "assets/loft1702-rug/rich/woven-source/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d405793fa23c11e326a047c17bcb1c72f7675875783a32816e18ed14eeca55a6.png"
+          }
+        },
+        {
+          "id": "red",
+          "tiling": {
+            "worldSize": [
+              0.4,
+              0.4
+            ]
+          },
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/loft1702-rug/rich/red/basecolor.png",
+            "normal": "assets/loft1702-rug/rich/woven-source/normal.png",
+            "roughness": "assets/loft1702-rug/rich/woven-source/roughness.png",
+            "metallic": "assets/loft1702-rug/rich/woven-source/metallic.png",
+            "height": "assets/loft1702-rug/rich/woven-source/height.png",
+            "ao": "assets/loft1702-rug/rich/woven-source/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d405793fa23c11e326a047c17bcb1c72f7675875783a32816e18ed14eeca55a6.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/loft1702-stone/rich": {
+      "key": "cyberpunk/loft1702-stone/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.28
+      },
+      "finish": {
+        "roughness": [
+          0.22,
+          0.34
+        ],
+        "grain": 0.025,
+        "relief": 0.035
+      },
+      "variants": [
+        {
+          "id": "pale",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/loft1702-stone/rich/pale/basecolor.png",
+            "normal": "assets/loft1702-stone/rich/pale/normal.png",
+            "roughness": "assets/loft1702-stone/rich/pale/roughness.png",
+            "metallic": "assets/loft1702-stone/rich/pale/metallic.png",
+            "height": "assets/loft1702-stone/rich/pale/height.png",
+            "ao": "assets/loft1702-stone/rich/pale/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/79b4c8280fd6d013ee15a682a57b17af288494cb58aad6d64ac788349f03128d.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
           }
         }
       ]

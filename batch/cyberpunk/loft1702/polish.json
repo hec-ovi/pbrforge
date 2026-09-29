@@ -1,0 +1,15 @@
+{
+  "key": "cyberpunk/loft1702-stone/rich",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.28
+  },
+  "finish": {
+    "roughness": [
+      0.22,
+      0.34
+    ],
+    "grain": 0.025,
+    "relief": 0.035
+  }
+}

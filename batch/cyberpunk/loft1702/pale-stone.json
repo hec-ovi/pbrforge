@@ -1,0 +1,39 @@
+{
+  "key": "cyberpunk/loft1702-stone/rich",
+  "variantId": "pale",
+  "alignment": "tile",
+  "description": "Apartment1702 quiet pale grey-white veined marble for circulation and wet walls, flat calibrated pigment and no baked grout or reflections",
+  "resolution": [
+    512,
+    512
+  ],
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "sourceAlbedo": {
+    "path": "sources/loft1702/pale-marble.png"
+  },
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.48
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.51
+    ],
+    "grain": 0.025,
+    "relief": 0.035
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "isotropic"
+  }
+}
