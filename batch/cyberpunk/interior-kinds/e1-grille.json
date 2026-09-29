@@ -1,0 +1,27 @@
+{
+  "key": "cyberpunk/e1-grille/high_rich",
+  "variantId": "diamond",
+  "path": "sources/interior-kinds/e1-diamond-grille.png",
+  "alignment": "exact",
+  "aspect": [
+    3,
+    1
+  ],
+  "description": "Black painted diamond expanded-metal mesh over a dark void for overhead service housing grilles, fitted once per grille face",
+  "resolution": [
+    1536,
+    512
+  ],
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.5
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.6
+    ],
+    "grain": 0.02,
+    "relief": 1.2
+  }
+}

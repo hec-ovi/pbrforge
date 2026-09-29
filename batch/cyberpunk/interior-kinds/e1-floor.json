@@ -1,0 +1,41 @@
+[
+  {
+    "key": "cyberpunk/e1-floor/high_rich",
+    "variantId": "dark-stone",
+    "alignment": "tile",
+    "description": "Dark teal-grey polished limestone for apartment floors, fine even mineral grain with a few faint hairline veins; slab joints are geometry",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.45
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.5
+      ],
+      "grain": 0.02,
+      "relief": 0.04
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/e1-floor-stone.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  }
+]

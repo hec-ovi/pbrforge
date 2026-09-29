@@ -1,0 +1,46 @@
+[
+  {
+    "key": "cyberpunk/e1-glass/high_rich",
+    "variantId": "caustic",
+    "alignment": "exact",
+    "aspect": [
+      2,
+      1
+    ],
+    "description": "Lit caustic water glass for the kitchen island base: white and cyan rippling light over deep teal, fitted once per glass face",
+    "resolution": [
+      1024,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.05,
+      "emissiveStrength": 10
+    },
+    "sourceImage": {
+      "path": "sources/interior-kinds/e1-caustic-glass.png"
+    }
+  },
+  {
+    "key": "cyberpunk/e1-screen/high_rich",
+    "variantId": "vending",
+    "alignment": "exact",
+    "aspect": [
+      16,
+      9
+    ],
+    "description": "Embedded kitchen vending and status display: five glowing product emblems with amber price tags on black, fitted once per screen face",
+    "resolution": [
+      1024,
+      576
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.06,
+      "emissiveStrength": 8
+    },
+    "sourceImage": {
+      "path": "sources/interior-kinds/e1-vending-screen.png"
+    }
+  }
+]

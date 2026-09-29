@@ -25031,6 +25031,160 @@
           }
         }
       ]
+    },
+    "cyberpunk/e1-floor/high_rich": {
+      "key": "cyberpunk/e1-floor/high_rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.5,
+          1.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.16
+      },
+      "finish": {
+        "roughness": [
+          0.12,
+          0.21
+        ],
+        "grain": 0.015,
+        "relief": 0.03
+      },
+      "variants": [
+        {
+          "id": "dark-stone",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/e1-floor/high_rich/dark-stone/basecolor.png",
+            "normal": "assets/e1-floor/high_rich/dark-stone/normal.png",
+            "roughness": "assets/e1-floor/high_rich/dark-stone/roughness.png",
+            "metallic": "assets/e1-floor/high_rich/dark-stone/metallic.png",
+            "height": "assets/e1-floor/high_rich/dark-stone/height.png",
+            "ao": "assets/e1-floor/high_rich/dark-stone/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/54c21dd10b00683c6c299af78820c9f1979ce91453bd9ac7f1321c4bbc53de01.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/e1-glass/high_rich": {
+      "key": "cyberpunk/e1-glass/high_rich",
+      "alignment": "exact",
+      "aspect": [
+        2,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.05,
+        "emissiveStrength": 10
+      },
+      "variants": [
+        {
+          "id": "caustic",
+          "class": "plate",
+          "resolution": [
+            1024,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/e1-glass/high_rich/caustic/basecolor.png",
+            "normal": "assets/e1-glass/high_rich/caustic/normal.png",
+            "roughness": "assets/e1-glass/high_rich/caustic/roughness.png",
+            "metallic": "assets/e1-glass/high_rich/caustic/metallic.png",
+            "height": "assets/e1-glass/high_rich/caustic/height.png",
+            "ao": "assets/e1-glass/high_rich/caustic/ao.png",
+            "emission": "assets/e1-glass/high_rich/caustic/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/8cbe21a8f1e5f2b27939163c27c1c02998593146bf0dfca2743604369549dfd2.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/e1-screen/high_rich": {
+      "key": "cyberpunk/e1-screen/high_rich",
+      "alignment": "exact",
+      "aspect": [
+        16,
+        9
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.06,
+        "emissiveStrength": 8
+      },
+      "variants": [
+        {
+          "id": "vending",
+          "class": "plate",
+          "resolution": [
+            1024,
+            576
+          ],
+          "maps": {
+            "basecolor": "assets/e1-screen/high_rich/vending/basecolor.png",
+            "normal": "assets/e1-screen/high_rich/vending/normal.png",
+            "roughness": "assets/e1-screen/high_rich/vending/roughness.png",
+            "metallic": "assets/e1-screen/high_rich/vending/metallic.png",
+            "height": "assets/e1-screen/high_rich/vending/height.png",
+            "ao": "assets/e1-screen/high_rich/vending/ao.png",
+            "emission": "assets/e1-screen/high_rich/vending/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/8df0daf649edf6e24e557618d26393b87b3bdb3f0812395a7546964c3c372fa0.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/e1-grille/high_rich": {
+      "key": "cyberpunk/e1-grille/high_rich",
+      "alignment": "exact",
+      "aspect": [
+        3,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.6
+        ],
+        "grain": 0.02,
+        "relief": 1.2
+      },
+      "variants": [
+        {
+          "id": "diamond",
+          "class": "image",
+          "resolution": [
+            1536,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/e1-grille/high_rich/diamond/basecolor.png",
+            "normal": "assets/e1-grille/high_rich/diamond/normal.png",
+            "roughness": "assets/e1-grille/high_rich/diamond/roughness.png",
+            "height": "assets/e1-grille/high_rich/diamond/height.png",
+            "ao": "assets/e1-grille/high_rich/diamond/ao.png",
+            "metallic": "assets/e1-grille/high_rich/diamond/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/e519e9690b89215265abb8ceed19f7d7f824935cd76fd6e45c9e2ff515077fd9.png"
+          }
+        }
+      ]
     }
   }
 }
