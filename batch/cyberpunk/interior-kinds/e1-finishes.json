@@ -1,0 +1,208 @@
+[
+  {
+    "key": "cyberpunk/e1-panel/high_rich",
+    "variantId": "cream",
+    "alignment": "tile",
+    "description": "Warm cream satin lacquer for broad fitted apartment wall panels, very low gloss, faint moulded grain; panel joints, fixings and bullnose edges are geometry",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        1.0,
+        1.0
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.45
+    },
+    "seed": 2609291,
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#d6c8ac",
+        "#c4b597"
+      ],
+      "grain": 0.01,
+      "variation": 0.018,
+      "sheen": 0.05,
+      "depth": 0.04,
+      "wear": 0
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/e1-ceiling/high_rich",
+    "variantId": "gloss-black",
+    "alignment": "tile",
+    "description": "Near-black high-gloss lacquer for apartment ceiling panels with soft broad reflections and no visible grain; panel grid and reveals are geometry",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        1.0,
+        1.0
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.1
+    },
+    "seed": 2609292,
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#111315"
+      ],
+      "grain": 0.004,
+      "variation": 0.006,
+      "sheen": 0.01,
+      "depth": 0,
+      "wear": 0
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/e1-housing/high_rich",
+    "variantId": "cool-grey",
+    "alignment": "tile",
+    "description": "Pale cool grey-blue satin metal for kitchen carcasses, overhead service housings and columns, fine vertical brushed grain; panel divisions, grilles and fixings are geometry",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        1.0,
+        1.0
+      ]
+    },
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.38
+    },
+    "seed": 2609293,
+    "pattern": {
+      "kind": "brushed-metal",
+      "colors": [
+        "#a7b1b7",
+        "#7e878c"
+      ],
+      "axis": "y",
+      "depth": 0.18,
+      "grain": 0.06,
+      "variation": 0.04,
+      "sheen": 0.06,
+      "wear": 0.01
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/e1-splash/high_rich",
+    "variantId": "tan",
+    "alignment": "tile",
+    "description": "Warm tan satin laminate for kitchen backsplash and tall door panels, very low gloss, fine even pigment; panel joints are geometry",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        1.0,
+        1.0
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.5
+    },
+    "seed": 2609294,
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#b7a386",
+        "#a8957a"
+      ],
+      "grain": 0.012,
+      "variation": 0.02,
+      "sheen": 0.05,
+      "depth": 0.03,
+      "wear": 0
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/e1-worktop/high_rich",
+    "variantId": "steel",
+    "alignment": "tile",
+    "description": "Dark satin stainless worktop with a slight blue cast and fine directional brushing along the counter run; edges and cut-outs are geometry",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        1.0,
+        1.0
+      ]
+    },
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.34
+    },
+    "seed": 2609295,
+    "pattern": {
+      "kind": "brushed-metal",
+      "colors": [
+        "#707983",
+        "#4a5058"
+      ],
+      "axis": "x",
+      "depth": 0.2,
+      "grain": 0.08,
+      "variation": 0.05,
+      "sheen": 0.08,
+      "wear": 0.01
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  }
+]

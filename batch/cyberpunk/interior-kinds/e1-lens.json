@@ -1,0 +1,22 @@
+[
+  {
+    "key": "cyberpunk/light-fixture/high_rich",
+    "variantId": "e1-cyan",
+    "append": true,
+    "alignment": "tile",
+    "description": "Apartment cyan reveal and cove diffuser for lit portal reveals, the glass rock pit and the kitchen under-cabinet line, actual cyan basecolor and emission",
+    "resolution": [
+      128,
+      128
+    ],
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "flatColor": "#12c3ff",
+    "flatNoise": 0,
+    "emission": "color-mask"
+  }
+]
