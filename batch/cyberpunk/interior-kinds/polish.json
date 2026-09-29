@@ -28,5 +28,50 @@
       "grain": 0.03,
       "relief": 0.05
     }
+  },
+  {
+    "key": "cyberpunk/r1-leather/rich",
+    "physical": {
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.32,
+        0.44
+      ],
+      "grain": 0.1,
+      "relief": 0.3
+    }
+  },
+  {
+    "key": "cyberpunk/r1-burl/rich",
+    "physical": {
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.18,
+        0.28
+      ],
+      "grain": 0.03,
+      "relief": 0.05
+    }
+  },
+  {
+    "key": "cyberpunk/r1-floor/rich",
+    "physical": {
+      "roughnessFactor": 0.4,
+      "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.36,
+        0.46
+      ],
+      "grain": 0.05,
+      "relief": 0.1
+    }
   }
 ]

@@ -1,0 +1,225 @@
+[
+  {
+    "key": "cyberpunk/r1-veneer/rich",
+    "variantId": "graphite",
+    "alignment": "tile",
+    "description": "Dark charcoal wood veneer with a faint green cast and straight fine vertical grain for office wall panels, satin; panel joints and inlays are geometry",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        1.5,
+        1.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.55
+    },
+    "finish": {
+      "roughness": [
+        0.46,
+        0.64
+      ],
+      "grain": 0.06,
+      "relief": 0.12
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/r1-graphite-veneer.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/r1-veneer/rich",
+    "variantId": "blue-grey",
+    "alignment": "tile",
+    "description": "Pale blue-grey stained timber with straight rift grain for the office door pier",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/r1-bluegrey-timber.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    },
+    "append": true
+  },
+  {
+    "key": "cyberpunk/r1-floor/rich",
+    "variantId": "walnut",
+    "alignment": "tile",
+    "description": "Warm golden-brown walnut floor wood with long straight grain along U, low gloss; board joints are geometry",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.47
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.52
+      ],
+      "grain": 0.05,
+      "relief": 0.1
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/r1-walnut-floor.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/r1-ceiling/rich",
+    "variantId": "walnut",
+    "alignment": "tile",
+    "description": "Continuous warm walnut ceiling veneer with fine straight grain along U and no plank joints, satin",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        3,
+        3
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.55
+    },
+    "finish": {
+      "roughness": [
+        0.5,
+        0.6
+      ],
+      "grain": 0.05,
+      "relief": 0.1
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/r1-walnut-ceiling.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/r1-leather/rich",
+    "variantId": "teal-navy",
+    "alignment": "tile",
+    "description": "Teal-navy pebbled leather upholstery for the fixed office bench; seams, piping and cushions are geometry",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.45
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.5
+      ],
+      "grain": 0.1,
+      "relief": 0.3
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/r1-teal-navy-leather.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/r1-burl/rich",
+    "variantId": "walnut",
+    "alignment": "tile",
+    "description": "Dark walnut burl veneer with warm orange figure for drawer chest trays, polished",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.45
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.5
+      ],
+      "grain": 0.03,
+      "relief": 0.05
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/r1-walnut-burl.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  }
+]
