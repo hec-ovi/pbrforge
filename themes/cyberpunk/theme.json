@@ -24116,6 +24116,102 @@
           }
         }
       ]
+    },
+    "cyberpunk/hiromi-fern/mid": {
+      "key": "cyberpunk/hiromi-fern/mid",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.57
+      },
+      "finish": {
+        "roughness": [
+          0.47,
+          0.67
+        ],
+        "grain": 0.06,
+        "relief": 0.18
+      },
+      "variants": [
+        {
+          "id": "leaf",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/hiromi-fern/mid/leaf/basecolor.png",
+            "normal": "assets/hiromi-fern/mid/leaf/normal.png",
+            "roughness": "assets/hiromi-fern/mid/leaf/roughness.png",
+            "height": "assets/hiromi-fern/mid/leaf/height.png",
+            "ao": "assets/hiromi-fern/mid/leaf/ao.png",
+            "metallic": "assets/hiromi-fern/mid/leaf/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/8e009f5fce382d0284768ee2a1ce201dcab94451a256e5327b7a54d1fed440a5.png"
+          }
+        },
+        {
+          "id": "shade",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/hiromi-fern/mid/shade/basecolor.png",
+            "normal": "assets/hiromi-fern/mid/leaf/normal.png",
+            "roughness": "assets/hiromi-fern/mid/leaf/roughness.png",
+            "height": "assets/hiromi-fern/mid/leaf/height.png",
+            "ao": "assets/hiromi-fern/mid/leaf/ao.png",
+            "metallic": "assets/hiromi-fern/mid/leaf/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/8e009f5fce382d0284768ee2a1ce201dcab94451a256e5327b7a54d1fed440a5.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/hiromi-fern-stem/mid": {
+      "key": "cyberpunk/hiromi-fern-stem/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.12,
+          0.12
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.72
+      },
+      "variants": [
+        {
+          "id": "rachis",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/hiromi-fern-stem/mid/rachis/basecolor.png",
+            "normal": "assets/hiromi-fern-stem/mid/rachis/normal.png",
+            "roughness": "assets/hiromi-fern-stem/mid/rachis/roughness.png",
+            "metallic": "assets/hiromi-fern-stem/mid/rachis/metallic.png",
+            "height": "assets/hiromi-fern-stem/mid/rachis/height.png",
+            "ao": "assets/hiromi-fern-stem/mid/rachis/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/de6b1092dce38587498fb79d324fce8be38860cf43067fb127df412e4fdb9dde.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          }
+        }
+      ]
     }
   }
 }

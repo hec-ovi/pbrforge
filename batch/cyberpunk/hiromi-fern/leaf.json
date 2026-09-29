@@ -1,0 +1,27 @@
+{
+  "key": "cyberpunk/hiromi-fern/mid",
+  "variantId": "leaf",
+  "alignment": "exact",
+  "aspect": [
+    1,
+    1
+  ],
+  "description": "Hiromi rooftop fern leaflet lamina: one fine central vein along V at U=0.5, restrained organic greens and small side veins, fitted once to explicit curved narrow leaflet geometry; no alpha silhouette or baked leaf card",
+  "resolution": [
+    512,
+    512
+  ],
+  "path": "sources/hiromi-fern/fern-lamina.png",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.57
+  },
+  "finish": {
+    "roughness": [
+      0.47,
+      0.67
+    ],
+    "grain": 0.06,
+    "relief": 0.18
+  }
+}
