@@ -24036,6 +24036,86 @@
           }
         }
       ]
+    },
+    "cyberpunk/gutierrez-art/rich": {
+      "key": "cyberpunk/gutierrez-art/rich",
+      "alignment": "exact",
+      "aspect": [
+        2,
+        1
+      ],
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.76
+      },
+      "finish": {
+        "roughness": [
+          0.7,
+          0.82
+        ],
+        "grain": 0.05,
+        "relief": 0.12
+      },
+      "variants": [
+        {
+          "id": "teal-copper",
+          "class": "image",
+          "resolution": [
+            1024,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/gutierrez-art/rich/teal-copper/basecolor.png",
+            "normal": "assets/gutierrez-art/rich/teal-copper/normal.png",
+            "roughness": "assets/gutierrez-art/rich/teal-copper/roughness.png",
+            "height": "assets/gutierrez-art/rich/teal-copper/height.png",
+            "ao": "assets/gutierrez-art/rich/teal-copper/ao.png",
+            "metallic": "assets/gutierrez-art/rich/teal-copper/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/07aceffb832d0cb2787e38a017b48ded0675da8a27d77169647992bd4c822e50.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/gutierrez-lacquer/rich": {
+      "key": "cyberpunk/gutierrez-lacquer/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.25,
+          0.25
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.29
+      },
+      "variants": [
+        {
+          "id": "ink",
+          "class": "pattern",
+          "resolution": [
+            256,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/gutierrez-lacquer/rich/ink/basecolor.png",
+            "normal": "assets/gutierrez-lacquer/rich/ink/normal.png",
+            "roughness": "assets/gutierrez-lacquer/rich/ink/roughness.png",
+            "metallic": "assets/gutierrez-lacquer/rich/ink/metallic.png",
+            "height": "assets/gutierrez-lacquer/rich/ink/height.png",
+            "ao": "assets/gutierrez-lacquer/rich/ink/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/fb54d252620e1583c2cf8a1f1bbb8619aa0d2461de420e6b5363ef890fc446cb.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
     }
   }
 }

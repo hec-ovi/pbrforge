@@ -1,0 +1,40 @@
+{
+  "key": "cyberpunk/gutierrez-lacquer/rich",
+  "variantId": "ink",
+  "alignment": "tile",
+  "description": "Quiet smooth ink-charcoal lacquer for Gutierrez office broad fitted wall panels, dielectric finish without large patina or moulded surface bumps; fine pigment and restrained satin reflection",
+  "resolution": [
+    256,
+    256
+  ],
+  "tiling": {
+    "worldSize": [
+      0.25,
+      0.25
+    ]
+  },
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.29
+  },
+  "seed": 270927804,
+  "pattern": {
+    "kind": "composite",
+    "colors": [
+      "#202729"
+    ],
+    "grain": 0.008,
+    "variation": 0.009,
+    "sheen": 0.006,
+    "depth": 0,
+    "wear": 0
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "isotropic"
+  }
+}

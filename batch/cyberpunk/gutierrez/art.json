@@ -1,0 +1,27 @@
+{
+  "key": "cyberpunk/gutierrez-art/rich",
+  "variantId": "teal-copper",
+  "alignment": "exact",
+  "aspect": [
+    2,
+    1
+  ],
+  "description": "Original Gutierrez-inspired restrained teal and copper abstract painting, dry-brush pigment under a separate modeled picture hood; no advertising or emission",
+  "resolution": [
+    1024,
+    512
+  ],
+  "path": "sources/gutierrez/teal-copper-art-v1.png",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.76
+  },
+  "finish": {
+    "roughness": [
+      0.7,
+      0.82
+    ],
+    "grain": 0.05,
+    "relief": 0.12
+  }
+}
