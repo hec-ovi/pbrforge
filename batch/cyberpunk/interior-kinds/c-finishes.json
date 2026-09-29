@@ -1,0 +1,236 @@
+[
+  {
+    "key": "cyberpunk/c7-plate/poor",
+    "variantId": "cream",
+    "alignment": "tile",
+    "description": "Warm beige cream painted wall plates with faint scuffs and a soft grime haze; plate joints are geometry",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.56
+    },
+    "finish": {
+      "roughness": [
+        0.5,
+        0.62
+      ],
+      "grain": 0.1,
+      "relief": 0.15
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/c7-cream-plate.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/c2-paint/poor",
+    "variantId": "green",
+    "alignment": "tile",
+    "description": "Olive grey-green corridor paint above the dado with faint water streaks and scuffs, matte",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.78
+    },
+    "finish": {
+      "roughness": [
+        0.7,
+        0.86
+      ],
+      "grain": 0.12,
+      "relief": 0.2
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/c2-olive-paint.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/c2-trunk/poor",
+    "variantId": "insulated",
+    "alignment": "tile",
+    "description": "Dirty ochre canvas lagging on exposed trunk pipes with two darker straps per metre across U; U runs along the pipe",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.85
+    },
+    "finish": {
+      "roughness": [
+        0.78,
+        0.92
+      ],
+      "grain": 0.2,
+      "relief": 0.6
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/c2-trunk-lagging.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  },
+  {
+    "key": "cyberpunk/c4-tile/poor",
+    "variantId": "terracotta",
+    "alignment": "tile",
+    "description": "Worn glazed orange-brown restroom floor tiles, 0.4 m squares with dark grout, three by three per repeat",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.55
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.72
+      ],
+      "grain": 0.1,
+      "relief": 1.2
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/c4-terracotta-tile.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "key": "cyberpunk/c4-paint/poor",
+    "variantId": "teal",
+    "alignment": "tile",
+    "description": "Deep teal green restroom and machine room paint with grime haze and faint drip streaks",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.62
+    },
+    "finish": {
+      "roughness": [
+        0.55,
+        0.72
+      ],
+      "grain": 0.1,
+      "relief": 0.2
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/c4-teal-paint.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/c6-padded/poor",
+    "variantId": "plum",
+    "alignment": "tile",
+    "description": "Dark plum quilted vinyl padding for studio walls, two by two square cushions per repeat",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.52
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.62
+      ],
+      "grain": 0.1,
+      "relief": 2.2
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/c6-plum-quilt.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  }
+]

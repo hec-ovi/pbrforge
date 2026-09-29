@@ -1,0 +1,42 @@
+[
+  {
+    "key": "cyberpunk/light-fixture/poor",
+    "variantId": "c-red",
+    "append": true,
+    "alignment": "tile",
+    "description": "Poor-building red neon tube lens for studio signs and atrium portal frames, actual red basecolor and emission",
+    "resolution": [
+      128,
+      128
+    ],
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "flatColor": "#ff1419",
+    "flatNoise": 0,
+    "emission": "color-mask"
+  },
+  {
+    "key": "cyberpunk/light-fixture/poor",
+    "variantId": "c-magenta",
+    "append": true,
+    "alignment": "tile",
+    "description": "Poor-building magenta neon tube lens for studio signs and atrium portal frames, actual magenta basecolor and emission",
+    "resolution": [
+      128,
+      128
+    ],
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "flatColor": "#ff4dbf",
+    "flatNoise": 0,
+    "emission": "color-mask"
+  }
+]

@@ -9945,6 +9945,54 @@
             "emission": "assets/light-fixture/poor/panel/emission.ktx2",
             "metallicRoughness": "assets/metallic-roughness/d50031da94f5bf95de19432d4459e6027afe8ab3aba2ca654842624708acdd10.ktx2"
           }
+        },
+        {
+          "id": "c-red",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/poor/c-red/basecolor.png",
+            "normal": "assets/light-fixture/poor/c-red/normal.png",
+            "roughness": "assets/light-fixture/poor/c-red/roughness.png",
+            "metallic": "assets/light-fixture/poor/c-red/metallic.png",
+            "height": "assets/light-fixture/poor/c-red/height.png",
+            "ao": "assets/light-fixture/poor/c-red/ao.png",
+            "emission": "assets/light-fixture/poor/c-red/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/78fa4b4531e47a2795fcf888be530f480c9fe1b02c4b8a88c1788510e0cb9397.png"
+          }
+        },
+        {
+          "id": "c-magenta",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/poor/c-magenta/basecolor.png",
+            "normal": "assets/light-fixture/poor/c-magenta/normal.png",
+            "roughness": "assets/light-fixture/poor/c-magenta/roughness.png",
+            "metallic": "assets/light-fixture/poor/c-magenta/metallic.png",
+            "height": "assets/light-fixture/poor/c-magenta/height.png",
+            "ao": "assets/light-fixture/poor/c-magenta/ao.png",
+            "emission": "assets/light-fixture/poor/c-magenta/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/80bdcd313db097e4ab69e6ff5c2ca9fe718779a057910b032b3dd174dc2702a0.png"
+          }
         }
       ]
     },
@@ -25767,6 +25815,300 @@
             "height": "assets/r1-burl/rich/walnut/height.png",
             "ao": "assets/r1-burl/rich/walnut/ao.png",
             "metallicRoughness": "assets/metallic-roughness/12b3785658d774208e011ec04b34ec40b6702844f9e5d2cc063961148389ad11.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/c7-plate/poor": {
+      "key": "cyberpunk/c7-plate/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.56
+      },
+      "finish": {
+        "roughness": [
+          0.5,
+          0.62
+        ],
+        "grain": 0.1,
+        "relief": 0.15
+      },
+      "variants": [
+        {
+          "id": "cream",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/c7-plate/poor/cream/basecolor.png",
+            "normal": "assets/c7-plate/poor/cream/normal.png",
+            "roughness": "assets/c7-plate/poor/cream/roughness.png",
+            "metallic": "assets/c7-plate/poor/cream/metallic.png",
+            "height": "assets/c7-plate/poor/cream/height.png",
+            "ao": "assets/c7-plate/poor/cream/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/482bb0a1aaafae3886417bbc9ad772d99595daad8f0da7d9bd079c7a1ad29158.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/c2-paint/poor": {
+      "key": "cyberpunk/c2-paint/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.78
+      },
+      "finish": {
+        "roughness": [
+          0.7,
+          0.86
+        ],
+        "grain": 0.12,
+        "relief": 0.2
+      },
+      "variants": [
+        {
+          "id": "green",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/c2-paint/poor/green/basecolor.png",
+            "normal": "assets/c2-paint/poor/green/normal.png",
+            "roughness": "assets/c2-paint/poor/green/roughness.png",
+            "metallic": "assets/c2-paint/poor/green/metallic.png",
+            "height": "assets/c2-paint/poor/green/height.png",
+            "ao": "assets/c2-paint/poor/green/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/2d3b33b77dd2c7d66bf6b92a9fae606146595633458df9026be4f89967ea32b4.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          }
+        }
+      ]
+    },
+    "cyberpunk/c2-trunk/poor": {
+      "key": "cyberpunk/c2-trunk/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.85
+      },
+      "finish": {
+        "roughness": [
+          0.78,
+          0.92
+        ],
+        "grain": 0.2,
+        "relief": 0.6
+      },
+      "variants": [
+        {
+          "id": "insulated",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/c2-trunk/poor/insulated/basecolor.png",
+            "normal": "assets/c2-trunk/poor/insulated/normal.png",
+            "roughness": "assets/c2-trunk/poor/insulated/roughness.png",
+            "metallic": "assets/c2-trunk/poor/insulated/metallic.png",
+            "height": "assets/c2-trunk/poor/insulated/height.png",
+            "ao": "assets/c2-trunk/poor/insulated/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/6d2d48767f4a9be45a5bf9a8b65d3e37a148ddc00e34c9c597d04020378b569d.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        }
+      ]
+    },
+    "cyberpunk/c4-tile/poor": {
+      "key": "cyberpunk/c4-tile/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.2,
+          1.2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.55
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.72
+        ],
+        "grain": 0.1,
+        "relief": 1.2
+      },
+      "variants": [
+        {
+          "id": "terracotta",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/c4-tile/poor/terracotta/basecolor.png",
+            "normal": "assets/c4-tile/poor/terracotta/normal.png",
+            "roughness": "assets/c4-tile/poor/terracotta/roughness.png",
+            "metallic": "assets/c4-tile/poor/terracotta/metallic.png",
+            "height": "assets/c4-tile/poor/terracotta/height.png",
+            "ao": "assets/c4-tile/poor/terracotta/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/3b40019ae7ef4ea01dadbafd60cb161281d347f725017ef0833a9cb7bd2c19ed.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/c4-paint/poor": {
+      "key": "cyberpunk/c4-paint/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.62
+      },
+      "finish": {
+        "roughness": [
+          0.55,
+          0.72
+        ],
+        "grain": 0.1,
+        "relief": 0.2
+      },
+      "variants": [
+        {
+          "id": "teal",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/c4-paint/poor/teal/basecolor.png",
+            "normal": "assets/c4-paint/poor/teal/normal.png",
+            "roughness": "assets/c4-paint/poor/teal/roughness.png",
+            "metallic": "assets/c4-paint/poor/teal/metallic.png",
+            "height": "assets/c4-paint/poor/teal/height.png",
+            "ao": "assets/c4-paint/poor/teal/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/1964031a4f7be3bc4a00a8ad4e82e4c0f30c09ff91cfef07956b351bba5e31e4.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          }
+        }
+      ]
+    },
+    "cyberpunk/c6-padded/poor": {
+      "key": "cyberpunk/c6-padded/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.52
+      },
+      "finish": {
+        "roughness": [
+          0.45,
+          0.62
+        ],
+        "grain": 0.1,
+        "relief": 2.2
+      },
+      "variants": [
+        {
+          "id": "plum",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/c6-padded/poor/plum/basecolor.png",
+            "normal": "assets/c6-padded/poor/plum/normal.png",
+            "roughness": "assets/c6-padded/poor/plum/roughness.png",
+            "metallic": "assets/c6-padded/poor/plum/metallic.png",
+            "height": "assets/c6-padded/poor/plum/height.png",
+            "ao": "assets/c6-padded/poor/plum/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/87421792c9bf4ded40fdf7a8532e49cf852a9a19792151d285c6ae697827daee.png"
           },
           "layout": {
             "family": "continuous",
