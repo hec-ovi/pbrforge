@@ -1,0 +1,47 @@
+[
+  {
+    "key": "cyberpunk/corpo-plaza-stone/rich",
+    "physical": {
+      "roughnessFactor": 0.19,
+      "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.14,
+        0.24
+      ],
+      "grain": 0.015,
+      "relief": 0.025
+    }
+  },
+  {
+    "key": "cyberpunk/corpo-plaza-veneer/rich",
+    "physical": {
+      "roughnessFactor": 0.36,
+      "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.3,
+        0.42
+      ],
+      "grain": 0.04,
+      "relief": 0.12
+    }
+  },
+  {
+    "key": "cyberpunk/corpo-plaza-leather/rich",
+    "physical": {
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.27,
+        0.41
+      ],
+      "grain": 0.07,
+      "relief": 0.2
+    }
+  }
+]

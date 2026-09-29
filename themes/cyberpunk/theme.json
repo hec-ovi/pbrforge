@@ -10118,6 +10118,30 @@
             "emission": "assets/light-fixture/rich/panel/emission.ktx2",
             "metallicRoughness": "assets/metallic-roughness/6f94a66a45aaf62bc7272f75e95557f487aabc2a84083795d3fe7ad542d7b93d.ktx2"
           }
+        },
+        {
+          "id": "corpo-amber",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/light-fixture/rich/corpo-amber/basecolor.png",
+            "normal": "assets/light-fixture/rich/corpo-amber/normal.png",
+            "roughness": "assets/light-fixture/rich/corpo-amber/roughness.png",
+            "metallic": "assets/light-fixture/rich/corpo-amber/metallic.png",
+            "height": "assets/light-fixture/rich/corpo-amber/height.png",
+            "ao": "assets/light-fixture/rich/corpo-amber/ao.png",
+            "emission": "assets/light-fixture/rich/corpo-amber/emission.png",
+            "metallicRoughness": "assets/metallic-roughness/80df3ebb384b808a34f417630f8354d68aaeba2ae216df25699ed06074e809bd.png"
+          }
         }
       ]
     },
@@ -23492,6 +23516,424 @@
               0
             ],
             "orientation": "vertical"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corpo-plaza-rug/rich": {
+      "key": "cyberpunk/corpo-plaza-rug/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.4,
+          0.4
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.85
+      },
+      "finish": {
+        "roughness": [
+          0.84,
+          0.96
+        ],
+        "grain": 0.05,
+        "relief": 0.25
+      },
+      "variants": [
+        {
+          "id": "charcoal",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-rug/rich/charcoal/basecolor.png",
+            "normal": "assets/corpo-plaza-rug/rich/charcoal/normal.png",
+            "roughness": "assets/corpo-plaza-rug/rich/charcoal/roughness.png",
+            "metallic": "assets/corpo-plaza-rug/rich/charcoal/metallic.png",
+            "height": "assets/corpo-plaza-rug/rich/charcoal/height.png",
+            "ao": "assets/corpo-plaza-rug/rich/charcoal/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/24969acdee58fc8d181ad900563cf9b9bc43ea8a322be6eb0899cc8daba4e132.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/biotechnica-upholstery/rich": {
+      "key": "cyberpunk/biotechnica-upholstery/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.2,
+          0.2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.85
+      },
+      "finish": {
+        "roughness": [
+          0.8,
+          0.94
+        ],
+        "grain": 0.06,
+        "relief": 0.25
+      },
+      "variants": [
+        {
+          "id": "ivory",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/biotechnica-upholstery/rich/ivory/basecolor.png",
+            "normal": "assets/biotechnica-upholstery/rich/ivory/normal.png",
+            "roughness": "assets/biotechnica-upholstery/rich/ivory/roughness.png",
+            "metallic": "assets/biotechnica-upholstery/rich/ivory/metallic.png",
+            "height": "assets/biotechnica-upholstery/rich/ivory/height.png",
+            "ao": "assets/biotechnica-upholstery/rich/ivory/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/2e45a994b22305344dbf02a5c537a4082100260fc953aef4b74e6f8ac0b4d2d6.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corpo-plaza-bedding/rich": {
+      "key": "cyberpunk/corpo-plaza-bedding/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.85
+      },
+      "finish": {
+        "roughness": [
+          0.7,
+          0.86
+        ],
+        "grain": 0.02,
+        "relief": 0.04
+      },
+      "variants": [
+        {
+          "id": "botanical",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-bedding/rich/botanical/basecolor.png",
+            "normal": "assets/corpo-plaza-bedding/rich/botanical/normal.png",
+            "roughness": "assets/corpo-plaza-bedding/rich/botanical/roughness.png",
+            "metallic": "assets/corpo-plaza-bedding/rich/botanical/metallic.png",
+            "height": "assets/corpo-plaza-bedding/rich/botanical/height.png",
+            "ao": "assets/corpo-plaza-bedding/rich/botanical/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/bbe6cb80bc927648cc57e9c832e2fcaa686e88492987f1d9ed0fc406397349dd.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corpo-plaza-glass/rich": {
+      "key": "cyberpunk/corpo-plaza-glass/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.015,
+        "transmission": 1,
+        "ior": 1.45
+      },
+      "variants": [
+        {
+          "id": "clear",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-glass/rich/clear/basecolor.png",
+            "normal": "assets/corpo-plaza-glass/rich/clear/normal.png",
+            "roughness": "assets/corpo-plaza-glass/rich/clear/roughness.png",
+            "metallic": "assets/corpo-plaza-glass/rich/clear/metallic.png",
+            "height": "assets/corpo-plaza-glass/rich/clear/height.png",
+            "ao": "assets/corpo-plaza-glass/rich/clear/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/19238d9510809a5c70c5396028226645a3699ce1f8ff8e870f008c4ea3072314.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corpo-plaza-mirror/rich": {
+      "key": "cyberpunk/corpo-plaza-mirror/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.035,
+        "alphaMode": "OPAQUE"
+      },
+      "variants": [
+        {
+          "id": "silver",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-mirror/rich/silver/basecolor.png",
+            "normal": "assets/corpo-plaza-mirror/rich/silver/normal.png",
+            "roughness": "assets/corpo-plaza-mirror/rich/silver/roughness.png",
+            "metallic": "assets/corpo-plaza-mirror/rich/silver/metallic.png",
+            "height": "assets/corpo-plaza-mirror/rich/silver/height.png",
+            "ao": "assets/corpo-plaza-mirror/rich/silver/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d67f2e17acc4974bdc7a1ecbff943163ffa0374bd6b9b474e12277a45eef7307.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corpo-plaza-veneer/rich": {
+      "key": "cyberpunk/corpo-plaza-veneer/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.36
+      },
+      "finish": {
+        "roughness": [
+          0.3,
+          0.42
+        ],
+        "grain": 0.04,
+        "relief": 0.12
+      },
+      "variants": [
+        {
+          "id": "walnut",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-veneer/rich/walnut/basecolor.png",
+            "normal": "assets/corpo-plaza-veneer/rich/walnut/normal.png",
+            "roughness": "assets/corpo-plaza-veneer/rich/walnut/roughness.png",
+            "height": "assets/corpo-plaza-veneer/rich/walnut/height.png",
+            "ao": "assets/corpo-plaza-veneer/rich/walnut/ao.png",
+            "metallic": "assets/corpo-plaza-veneer/rich/walnut/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/6c16fa824a5348fe7f4ceda38fd277230be65430b787f2d3ace4cef706e01135.png"
+          }
+        },
+        {
+          "id": "smoked",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-veneer/rich/smoked/basecolor.png",
+            "normal": "assets/corpo-plaza-veneer/rich/smoked/normal.png",
+            "roughness": "assets/corpo-plaza-veneer/rich/smoked/roughness.png",
+            "height": "assets/corpo-plaza-veneer/rich/smoked/height.png",
+            "ao": "assets/corpo-plaza-veneer/rich/smoked/ao.png",
+            "metallic": "assets/corpo-plaza-veneer/rich/smoked/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/167a94c688aa9a5bf1b8b373572ff6c1b4cb88f0ddc0ea2a1c8d25fdee83f77f.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corpo-plaza-stone/rich": {
+      "key": "cyberpunk/corpo-plaza-stone/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.19
+      },
+      "finish": {
+        "roughness": [
+          0.14,
+          0.24
+        ],
+        "grain": 0.015,
+        "relief": 0.025
+      },
+      "variants": [
+        {
+          "id": "polished",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-stone/rich/polished/basecolor.png",
+            "normal": "assets/corpo-plaza-stone/rich/polished/normal.png",
+            "roughness": "assets/corpo-plaza-stone/rich/polished/roughness.png",
+            "height": "assets/corpo-plaza-stone/rich/polished/height.png",
+            "ao": "assets/corpo-plaza-stone/rich/polished/ao.png",
+            "metallic": "assets/corpo-plaza-stone/rich/polished/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/229a4b8fa69d1df840366393ba518c583f4ce2c5000f8d70b2e14793bf906452.png"
+          }
+        },
+        {
+          "id": "basin",
+          "tiling": {
+            "worldSize": [
+              0.5,
+              0.5
+            ]
+          },
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-stone/rich/basin/basecolor.png",
+            "normal": "assets/corpo-plaza-stone/rich/basin/normal.png",
+            "roughness": "assets/corpo-plaza-stone/rich/basin/roughness.png",
+            "metallic": "assets/corpo-plaza-stone/rich/basin/metallic.png",
+            "height": "assets/corpo-plaza-stone/rich/basin/height.png",
+            "ao": "assets/corpo-plaza-stone/rich/basin/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/52823158e4ba6b60de4dbe8918dcc74534b1c64d9659823098d2e9112f67189e.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/corpo-plaza-leather/rich": {
+      "key": "cyberpunk/corpo-plaza-leather/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.2,
+          0.2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.34
+      },
+      "finish": {
+        "roughness": [
+          0.27,
+          0.41
+        ],
+        "grain": 0.07,
+        "relief": 0.2
+      },
+      "variants": [
+        {
+          "id": "cream",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/corpo-plaza-leather/rich/cream/basecolor.png",
+            "normal": "assets/corpo-plaza-leather/rich/cream/normal.png",
+            "roughness": "assets/corpo-plaza-leather/rich/cream/roughness.png",
+            "height": "assets/corpo-plaza-leather/rich/cream/height.png",
+            "ao": "assets/corpo-plaza-leather/rich/cream/ao.png",
+            "metallic": "assets/corpo-plaza-leather/rich/cream/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/69cf38cd1abfc9680a17cd14c3e84536c66869e6f8408b923aa1623e75b6236b.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/biotechnica-rug/rich": {
+      "key": "cyberpunk/biotechnica-rug/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.4,
+          0.4
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.92
+      },
+      "finish": {
+        "roughness": [
+          0.87,
+          0.97
+        ],
+        "grain": 0.06,
+        "relief": 0.22
+      },
+      "variants": [
+        {
+          "id": "woven-source",
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/biotechnica-rug/rich/woven-source/basecolor.png",
+            "normal": "assets/biotechnica-rug/rich/woven-source/normal.png",
+            "roughness": "assets/biotechnica-rug/rich/woven-source/roughness.png",
+            "metallic": "assets/biotechnica-rug/rich/woven-source/metallic.png",
+            "height": "assets/biotechnica-rug/rich/woven-source/height.png",
+            "ao": "assets/biotechnica-rug/rich/woven-source/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ad004ec9280bbb2fd9cd7bdcc43cf015a8889fada5f6489fb6d933783a857259.png"
+          }
+        },
+        {
+          "id": "ivory",
+          "tiling": {
+            "worldSize": [
+              0.4,
+              0.4
+            ]
+          },
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/biotechnica-rug/rich/ivory/basecolor.png",
+            "normal": "assets/biotechnica-rug/rich/woven-source/normal.png",
+            "roughness": "assets/biotechnica-rug/rich/woven-source/roughness.png",
+            "metallic": "assets/biotechnica-rug/rich/woven-source/metallic.png",
+            "height": "assets/biotechnica-rug/rich/woven-source/height.png",
+            "ao": "assets/biotechnica-rug/rich/woven-source/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ad004ec9280bbb2fd9cd7bdcc43cf015a8889fada5f6489fb6d933783a857259.png"
           }
         }
       ]

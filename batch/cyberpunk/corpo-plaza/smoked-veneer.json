@@ -1,0 +1,18 @@
+{
+  "key": "cyberpunk/corpo-plaza-veneer/rich",
+  "variantId": "smoked",
+  "append": true,
+  "alignment": "tile",
+  "description": "Deep smoked walnut furniture veneer for V Corpo Plaza private cabinets and shelving, preserves photographed fine grain without butt joints",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "path": "sources/corpo-plaza/walnut-smoked.png"
+}

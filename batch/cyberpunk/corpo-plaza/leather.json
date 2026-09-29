@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/corpo-plaza-leather/rich",
+  "variantId": "cream",
+  "alignment": "tile",
+  "resolution": [
+    512,
+    512
+  ],
+  "tiling": {
+    "worldSize": [
+      0.2,
+      0.2
+    ]
+  },
+  "description": "V Corpo Plaza reference leather surface, photographed continuous material with geometry-owned seams; no floor plank or grout joints",
+  "path": "sources/corpo-plaza/cream-leather.png",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.49
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.55
+    ],
+    "grain": 0.08,
+    "relief": 0.3
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/corpo-plaza-veneer/rich",
+  "variantId": "walnut",
+  "alignment": "tile",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "description": "V Corpo Plaza reference veneer surface, photographed continuous material with geometry-owned seams; no floor plank or grout joints",
+  "path": "sources/corpo-plaza/walnut-veneer.png",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.48
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.52
+    ],
+    "grain": 0.05,
+    "relief": 0.16
+  }
+}

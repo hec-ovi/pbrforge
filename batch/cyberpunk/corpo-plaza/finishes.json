@@ -1,0 +1,162 @@
+[
+  {
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.85
+    },
+    "tiling": {
+      "worldSize": [
+        0.4,
+        0.4
+      ]
+    },
+    "key": "cyberpunk/corpo-plaza-rug/rich",
+    "variantId": "charcoal",
+    "description": "Fine charcoal cut pile rug at furniture scale; existing photographed wool reduced from 2m to 0.4m repeat to remove oversized yarn",
+    "sourceAlbedo": {
+      "path": "themes/cyberpunk/assets/carpet/high_rich/1/basecolor.png"
+    },
+    "finish": {
+      "roughness": [
+        0.84,
+        0.96
+      ],
+      "grain": 0.05,
+      "relief": 0.25
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.85
+    },
+    "tiling": {
+      "worldSize": [
+        0.2,
+        0.2
+      ]
+    },
+    "key": "cyberpunk/biotechnica-upholstery/rich",
+    "variantId": "ivory",
+    "description": "Biotechnica Hotel 20260927162410 and 62413 pale ivory tightly woven public seating fabric, neutral pigment separate from cyan lighting",
+    "sourceAlbedo": {
+      "path": "sources/meridian/bedding.png"
+    },
+    "finish": {
+      "roughness": [
+        0.8,
+        0.94
+      ],
+      "grain": 0.06,
+      "relief": 0.25
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.85
+    },
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "key": "cyberpunk/corpo-plaza-bedding/rich",
+    "variantId": "botanical",
+    "description": "V Corpo Plaza 20260927171618/71614 midnight navy sateen with restrained antique gold botanical print, folds modelled separately",
+    "sourceAlbedo": {
+      "path": "sources/corpo-plaza/botanical-sateen.png"
+    },
+    "finish": {
+      "roughness": [
+        0.7,
+        0.86
+      ],
+      "grain": 0.02,
+      "relief": 0.04
+    }
+  },
+  {
+    "key": "cyberpunk/corpo-plaza-glass/rich",
+    "variantId": "clear",
+    "alignment": "tile",
+    "description": "Optically clear shower enclosure; full transmission removes the previous ten-percent diffuse grey slab contribution, fine edges remain modelled",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#fcfefd",
+    "flatNoise": 0,
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.015,
+      "transmission": 1,
+      "ior": 1.45
+    }
+  },
+  {
+    "key": "cyberpunk/corpo-plaza-mirror/rich",
+    "variantId": "silver",
+    "alignment": "tile",
+    "description": "Polished opaque silver mirror face; environment reflection only, cannot create an interior planar mirror through material maps",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#e2e3e3",
+    "flatNoise": 0,
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.035,
+      "alphaMode": "OPAQUE"
+    }
+  },
+  {
+    "key": "cyberpunk/light-fixture/rich",
+    "variantId": "corpo-amber",
+    "append": true,
+    "alignment": "tile",
+    "description": "Warm amber trough inlay diffuser pigment and emission for V Corpo Plaza vanity, separate from warm white hood",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "flatColor": "#ffad48",
+    "flatNoise": 0,
+    "emission": "luminance"
+  }
+]

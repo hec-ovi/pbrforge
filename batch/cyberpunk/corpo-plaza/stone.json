@@ -1,0 +1,29 @@
+{
+  "key": "cyberpunk/corpo-plaza-stone/rich",
+  "variantId": "polished",
+  "alignment": "tile",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "description": "V Corpo Plaza reference stone surface, photographed continuous material with geometry-owned seams; no floor plank or grout joints",
+  "path": "sources/corpo-plaza/charcoal-stone.png",
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.46
+  },
+  "finish": {
+    "roughness": [
+      0.45,
+      0.5
+    ],
+    "grain": 0.02,
+    "relief": 0.035
+  }
+}

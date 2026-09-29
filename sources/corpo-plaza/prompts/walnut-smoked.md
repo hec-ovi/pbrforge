@@ -1,0 +1,3 @@
+Edit of walnut-veneer.png.
+
+Edit this exact continuous photographic walnut veneer albedo: darken the pigment to rich SMOKED dark walnut (about 55–60% of its current brightness), preserving its fine natural grain, pores, warm-neutral brown hue, vertical orientation, absence of plank or butt joints and square flat scan framing. No crushed pure black, no orange/red color cast, no new knots or board divisions. Keep all details and scale the same. No baked reflections, highlights, shadows or lighting gradients. It is a dark stained cabinet veneer used beside black polished stone, not pale raw timber. Preserve seamless-looking borders; no added edges or vignette.

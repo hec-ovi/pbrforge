@@ -1,0 +1,84 @@
+[
+  {
+    "key": "cyberpunk/corpo-plaza-stone/rich",
+    "variantId": "basin",
+    "append": true,
+    "alignment": "tile",
+    "description": "Restrained near-black polished solid mineral trough finish based on V Corpo Plaza 20260927171717; fine low contrast mineral field without conspicuous veins",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "pattern": {
+      "kind": "mineral",
+      "colors": [
+        "#171a1b"
+      ],
+      "grain": 0.006,
+      "variation": 0.008,
+      "depth": 0,
+      "wear": 0,
+      "sheen": 0.004
+    }
+  },
+  {
+    "key": "cyberpunk/biotechnica-rug/rich",
+    "variantId": "woven-source",
+    "alignment": "tile",
+    "description": "Fine tightly woven ribbed rug source at forty centimetre physical repeat, no giant yarn or bold high_rich cloth folds",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.4,
+        0.4
+      ]
+    },
+    "sourceAlbedo": {
+      "path": "themes/cyberpunk/assets/carpet/poor/2/basecolor.png"
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.92
+    },
+    "finish": {
+      "roughness": [
+        0.87,
+        0.97
+      ],
+      "grain": 0.06,
+      "relief": 0.22
+    }
+  },
+  {
+    "key": "cyberpunk/biotechnica-rug/rich",
+    "variantId": "ivory",
+    "append": true,
+    "alignment": "tile",
+    "description": "Pale warm-neutral woven seating rug based on Biotechnica 20260927163052 and 163516; fine physical yarn scale with quiet beige pigment",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.4,
+        0.4
+      ]
+    },
+    "recolor": {
+      "from": "woven-source",
+      "color": "#d2c9b7",
+      "strength": 1,
+      "value": 1.5
+    }
+  }
+]
