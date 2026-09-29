@@ -1,0 +1,65 @@
+[
+  {
+    "key": "cyberpunk/sandra-tatami/mid",
+    "alignment": "tile",
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.88
+    },
+    "finish": {
+      "roughness": [
+        0.8,
+        0.95
+      ],
+      "grain": 0.05,
+      "relief": 0.12
+    },
+    "variantId": "bordered",
+    "description": "Sandra Dorsett 20260927165739 tan woven tatami with narrow charcoal cloth edges, two 0.9 by1.8metre mats per square repeat",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        1.8,
+        1.8
+      ]
+    },
+    "sourceAlbedo": {
+      "path": "sources/sandra-dorsett/tatami-bordered.png"
+    }
+  },
+  {
+    "key": "cyberpunk/sandra-tatami/mid",
+    "alignment": "tile",
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.88
+    },
+    "finish": {
+      "roughness": [
+        0.8,
+        0.95
+      ],
+      "grain": 0.05,
+      "relief": 0.12
+    },
+    "variantId": "woven",
+    "append": true,
+    "description": "Sandra Dorsett continuous tight horizontal woven rush grain, no border, suitable fitted mat details",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.45,
+        0.45
+      ]
+    },
+    "sourceAlbedo": {
+      "path": "sources/sandra-dorsett/tatami-woven.png"
+    }
+  }
+]

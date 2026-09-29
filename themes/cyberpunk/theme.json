@@ -23643,6 +23643,41 @@
         }
       ]
     },
+    "cyberpunk/sandra-frosted-glass/mid": {
+      "key": "cyberpunk/sandra-frosted-glass/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.32,
+        "transmission": 0.78,
+        "ior": 1.45
+      },
+      "variants": [
+        {
+          "id": "infill",
+          "class": "flat",
+          "resolution": [
+            128,
+            128
+          ],
+          "maps": {
+            "basecolor": "assets/sandra-frosted-glass/mid/infill/basecolor.png",
+            "normal": "assets/sandra-frosted-glass/mid/infill/normal.png",
+            "roughness": "assets/sandra-frosted-glass/mid/infill/roughness.png",
+            "metallic": "assets/sandra-frosted-glass/mid/infill/metallic.png",
+            "height": "assets/sandra-frosted-glass/mid/infill/height.png",
+            "ao": "assets/sandra-frosted-glass/mid/infill/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d820e206ace81dba3e48381ee3650a45512f4e061ea17f8fed4d8916a26bc458.png"
+          }
+        }
+      ]
+    },
     "cyberpunk/corpo-plaza-glass/rich": {
       "key": "cyberpunk/corpo-plaza-glass/rich",
       "alignment": "tile",
@@ -23934,6 +23969,70 @@
             "height": "assets/biotechnica-rug/rich/woven-source/height.png",
             "ao": "assets/biotechnica-rug/rich/woven-source/ao.png",
             "metallicRoughness": "assets/metallic-roughness/ad004ec9280bbb2fd9cd7bdcc43cf015a8889fada5f6489fb6d933783a857259.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/sandra-tatami/mid": {
+      "key": "cyberpunk/sandra-tatami/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.8,
+          1.8
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.88
+      },
+      "finish": {
+        "roughness": [
+          0.8,
+          0.95
+        ],
+        "grain": 0.05,
+        "relief": 0.12
+      },
+      "variants": [
+        {
+          "id": "bordered",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/sandra-tatami/mid/bordered/basecolor.png",
+            "normal": "assets/sandra-tatami/mid/bordered/normal.png",
+            "roughness": "assets/sandra-tatami/mid/bordered/roughness.png",
+            "metallic": "assets/sandra-tatami/mid/bordered/metallic.png",
+            "height": "assets/sandra-tatami/mid/bordered/height.png",
+            "ao": "assets/sandra-tatami/mid/bordered/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/79b32bcb7fc0bc93b0bb75c8942c276b0e876bf56b9e6bd1548a8c7741cbb533.png"
+          }
+        },
+        {
+          "id": "woven",
+          "tiling": {
+            "worldSize": [
+              0.45,
+              0.45
+            ]
+          },
+          "class": "image",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/sandra-tatami/mid/woven/basecolor.png",
+            "normal": "assets/sandra-tatami/mid/woven/normal.png",
+            "roughness": "assets/sandra-tatami/mid/woven/roughness.png",
+            "metallic": "assets/sandra-tatami/mid/woven/metallic.png",
+            "height": "assets/sandra-tatami/mid/woven/height.png",
+            "ao": "assets/sandra-tatami/mid/woven/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/9bc9b7d6f31cf9e278a6f0b4034a6557e62ae1cf2811259a7d1c4616820ded40.png"
           }
         }
       ]

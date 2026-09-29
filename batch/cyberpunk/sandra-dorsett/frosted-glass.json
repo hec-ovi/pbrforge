@@ -1,0 +1,24 @@
+{
+  "key": "cyberpunk/sandra-frosted-glass/mid",
+  "variantId": "infill",
+  "alignment": "tile",
+  "description": "Sandra timber lattice frosted pale infill, translucent with diffused view behind framed screen",
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "resolution": [
+    128,
+    128
+  ],
+  "flatColor": "#f0ede5",
+  "flatNoise": 0.004,
+  "physical": {
+    "metallicFactor": 0,
+    "roughnessFactor": 0.32,
+    "transmission": 0.78,
+    "ior": 1.45
+  }
+}
