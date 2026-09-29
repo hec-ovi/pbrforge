@@ -1,5 +1,7 @@
 # Changelog
 
+0.21.0: R1 office finishes (graphite and blue-grey veneer, walnut floor and ceiling, teal-navy leather, walnut burl) and poor-building finishes (C7 cream plates, C2 olive corridor paint and strapped pipe lagging, C4 terracotta tile and teal paint, C6 plum quilted padding, red and magenta neon lenses on `light-fixture/poor`). Grok sources, code-drawn grids and recipes reproduce the published maps, which publish their compressed siblings.
+
 0.20.0: interior kind finishes for the E1 apartment (cream satin wall panels, gloss black ceiling, polished teal-grey stone floor, cool grey brushed housings, tan splash laminate, blue-cast stainless worktop, an exact diamond mesh grille, lit caustic island glass, a vending screen and the `e1-cyan` lens on `light-fixture/high_rich`), B3 brushed gold trim, R1 graphite portal stone, worn ivory capsule enamel on a new `interior-capsule-enamel/poor` entry and C4 stall laminate. Grok sources and recipes reproduce the published maps, which publish their compressed siblings.
 
 0.19.0: capsule and service interior coatings, a hexagonal resilient floor, worn gunmetal, linen and fine satin alloy; Corpo Plaza, Meridian, Sandra Dorsett, Gutierrez and Loft 1702 apartment finishes with veneer, stone, leather, textiles, tatami, artwork, glass, mirrors and lens colors; Meridian shell variants on the wall and roof kinds; and Hiromi terrace fern leaflets and stems. Recipes and accepted sources reproduce the published maps; the new variants list no compressed siblings until compression runs.
