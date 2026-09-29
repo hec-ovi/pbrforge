@@ -1,0 +1,23 @@
+{
+  "key": "cyberpunk/interior-alloy/rich",
+  "variantId": "satin-fine",
+  "append": true,
+  "alignment": "tile",
+  "description": "Fine furniture-scale satin stainless: existing brushed alloy response maps retained exactly, neutral silver basecolor, ten centimetre texture repeat for submillimetre machining grain on sinks and taps",
+  "resolution": [
+    512,
+    512
+  ],
+  "tiling": {
+    "worldSize": [
+      0.1,
+      0.1
+    ]
+  },
+  "recolor": {
+    "from": "brushed",
+    "color": "#a0a0a0",
+    "strength": 1,
+    "value": 1
+  }
+}

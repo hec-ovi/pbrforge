@@ -1,0 +1,67 @@
+[
+  {
+    "key": "cyberpunk/interior-service-gunmetal/poor",
+    "variantId": "aged",
+    "alignment": "tile",
+    "description": "Continuous fine subdued dark gunmetal for worn furniture frames and sanitary casings, shallow brushed machining grain, sparse subtle oxidation and scratches; no panel lines, no broad camouflage damage blocks",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.54
+    },
+    "seed": 27092783,
+    "pattern": {
+      "kind": "brushed-metal",
+      "colors": [
+        "#4a4e50",
+        "#68645e"
+      ],
+      "axis": "y",
+      "grain": 0.014,
+      "variation": 0.025,
+      "sheen": 0.1,
+      "depth": 0.12,
+      "wear": 0.09
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  },
+  {
+    "key": "cyberpunk/interior-service-vinyl/poor",
+    "variantId": "umber",
+    "append": true,
+    "alignment": "tile",
+    "description": "Muted dark dirty-brown umber upholstery coating for poor residential seating, no yellow mustard or themed color; existing vinyl response preserved with smaller grain scale",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "recolor": {
+      "from": "ochre",
+      "color": "#54413a",
+      "strength": 1,
+      "value": 0.65
+    }
+  }
+]

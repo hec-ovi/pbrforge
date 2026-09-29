@@ -1,0 +1,257 @@
+[
+  {
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "emission": "none",
+    "key": "cyberpunk/interior-capsule-enamel/mid",
+    "variantId": "amber",
+    "description": "amber continuous molded coating informed by 2026-09-27 interior captures; geometry supplies panels and edge trim",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.37
+    },
+    "seed": 270927,
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#b66e34",
+        "#9e774f"
+      ],
+      "grain": 0.017,
+      "variation": 0.035,
+      "sheen": 0.1,
+      "depth": 0.08,
+      "wear": 0.03
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "emission": "none",
+    "key": "cyberpunk/interior-capsule-enamel/mid",
+    "variantId": "ivory",
+    "description": "ivory continuous molded coating informed by 2026-09-27 interior captures; geometry supplies panels and edge trim",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.4
+    },
+    "seed": 270927,
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#c7c0aa",
+        "#ada996"
+      ],
+      "grain": 0.017,
+      "variation": 0.035,
+      "sheen": 0.1,
+      "depth": 0.08,
+      "wear": 0.02
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    },
+    "append": true
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "emission": "none",
+    "key": "cyberpunk/interior-service-enamel/poor",
+    "variantId": "petrol",
+    "description": "petrol continuous molded coating informed by 2026-09-27 interior captures; geometry supplies panels and edge trim",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.62
+    },
+    "seed": 270927,
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#304f4d",
+        "#857d68"
+      ],
+      "grain": 0.017,
+      "variation": 0.035,
+      "sheen": 0.1,
+      "depth": 0.08,
+      "wear": 0.28
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      512,
+      512
+    ],
+    "emission": "none",
+    "key": "cyberpunk/interior-service-vinyl/poor",
+    "variantId": "ochre",
+    "description": "ochre continuous molded coating informed by 2026-09-27 interior captures; geometry supplies panels and edge trim",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6
+    },
+    "seed": 270927,
+    "pattern": {
+      "kind": "composite",
+      "colors": [
+        "#79603c",
+        "#524b3b"
+      ],
+      "grain": 0.017,
+      "variation": 0.035,
+      "sheen": 0.1,
+      "depth": 0.08,
+      "wear": 0.17
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "emission": "none",
+    "key": "cyberpunk/interior-capsule-hex/mid",
+    "variantId": "field",
+    "description": "Charcoal hexagonal resilient technical floor with shallow narrow joints, from capsule apartment reference 20260927172352_1; subdued ochre reflected light belongs to scene lights",
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "roughnessFactor": 0.69,
+      "metallicFactor": 0
+    },
+    "seed": 270928,
+    "pattern": {
+      "kind": "hexagon",
+      "colors": [
+        "#343738"
+      ],
+      "cells": [
+        7,
+        4
+      ],
+      "line": 0.008,
+      "bevel": 0.003,
+      "depth": 0.025,
+      "joint": 0.18,
+      "variation": 0.04,
+      "grain": 0.012,
+      "sheen": 0.1
+    }
+  },
+  {
+    "alignment": "tile",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "emission": "none",
+    "key": "cyberpunk/fabric/mid",
+    "append": true,
+    "variantId": "linen",
+    "description": "Warm ivory fine herringbone bedding recolored from existing photographed textile, half-metre repeat",
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "recolor": {
+      "from": "2",
+      "color": "#e2d7bd",
+      "strength": 1,
+      "value": 1.7
+    }
+  },
+  {
+    "key": "cyberpunk/interior-capsule-enamel/mid",
+    "variantId": "petrol",
+    "append": true,
+    "alignment": "tile",
+    "description": "Clean muted petrol teal capsule bed liner coating; pigment independent of cyan lights and without service paint damage",
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "resolution": [
+      512,
+      512
+    ],
+    "recolor": {
+      "from": "ivory",
+      "color": "#345957",
+      "strength": 1,
+      "value": 0.44
+    }
+  }
+]

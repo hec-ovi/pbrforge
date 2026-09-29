@@ -28,3 +28,25 @@ Additional faces: [walnut](../../batch/cyberpunk/interiors/luxury-timber.json) i
 [Loft brick](prompts/loft-brick.md) and [worn alloy](../../batch/cyberpunk/interiors/damaged-steel.json) cover 1 x 1 m. Worn alloy keeps a conducting surface except at localized oxide, with independent roughness and shallow scuff normals. [Ornament recipes](../../batch/cyberpunk/interior-ornaments.json) provide matte leaves, paper, bronze, fish and warm/cyan emissive lenses.
 
 [Display glazing](../../batch/cyberpunk/interior-display-glass.json) uses clear transmission and a flat optical surface for aquariums and hologram cases.
+
+## Capsule and service finishes
+
+These procedural and recolor variants carry neutral surface response for the capsule, poor and luxury rooms. Geometry owns panel edges, rounded reveals, damage patches and service routing; scene lights own the cyan and orange illumination.
+
+| Key under `cyberpunk/` | Variant | Repeat | Surface |
+| --- | --- | --- | --- |
+| `interior-capsule-enamel/mid` | `amber`, `ivory`, `petrol` | 1 m | Smooth molded housing coatings; `petrol` is a clean recolor of `ivory` for bed liners. |
+| `interior-capsule-hex/mid` | `field` | 2 m | Charcoal resilient floor, about 0.29 m hexagons with shallow narrow joints. |
+| `interior-service-enamel/poor` | `petrol` | 1 m | Sparse-scuffed painted lower wall bands and service equipment. |
+| `interior-service-vinyl/poor` | `ochre`, `umber` | 1 m, 0.5 m | Dull utility seating coating; `umber` is a muted brown recolor at the finer repeat. |
+| `interior-service-gunmetal/poor` | `aged` | 0.5 m | Continuous brushed gunmetal with sparse low-contrast oxidation, for worn frames and casings. |
+| `fabric/mid` | `linen` | 0.5 m | Ivory herringbone bedding, a recolor of the photographed variant `2`. |
+| `interior-alloy/rich` | `satin-fine` | 0.1 m | Neutral silver recolor of `brushed`, sharing its response maps, for sink and tap machining. |
+
+Every new variant passes the native 1.2 wrap gate. Variants with their own repeat override the entry scale; bind `variant.tiling ?? entry.tiling`.
+
+```sh
+npm run --silent pbrforge -- create batch/cyberpunk/interiors/capsule-service-finishes.json
+npm run --silent pbrforge -- create batch/cyberpunk/interiors/service-wear.json
+npm run --silent pbrforge -- create batch/cyberpunk/interiors/alloy-satin-fine.json
+```
