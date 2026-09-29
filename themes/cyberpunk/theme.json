@@ -10336,6 +10336,16 @@
             "ao": "assets/light-fixture/high_rich/e1-cyan/ao.png",
             "emission": "assets/light-fixture/high_rich/e1-cyan/emission.png",
             "metallicRoughness": "assets/metallic-roughness/1b5609af0c49134c3866c2bb3aeff4664b67ce1d58fa9da566f5cafb367e482f.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/light-fixture/high_rich/e1-cyan/basecolor.ktx2",
+            "normal": "assets/light-fixture/high_rich/e1-cyan/normal.ktx2",
+            "roughness": "assets/light-fixture/high_rich/e1-cyan/roughness.ktx2",
+            "metallic": "assets/light-fixture/high_rich/e1-cyan/metallic.ktx2",
+            "height": "assets/light-fixture/high_rich/e1-cyan/height.ktx2",
+            "ao": "assets/light-fixture/high_rich/e1-cyan/ao.ktx2",
+            "emission": "assets/light-fixture/high_rich/e1-cyan/emission.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/1b5609af0c49134c3866c2bb3aeff4664b67ce1d58fa9da566f5cafb367e482f.ktx2"
           }
         }
       ]
@@ -24864,6 +24874,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-panel/high_rich/cream/basecolor.ktx2",
+            "normal": "assets/e1-panel/high_rich/cream/normal.ktx2",
+            "roughness": "assets/e1-panel/high_rich/cream/roughness.ktx2",
+            "metallic": "assets/e1-panel/high_rich/cream/metallic.ktx2",
+            "height": "assets/e1-panel/high_rich/cream/height.ktx2",
+            "ao": "assets/e1-panel/high_rich/cream/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/0497b69a20e6b8cff2b22691ecdc26829999fbbf275f148dea62af89d0035a3f.ktx2"
           }
         }
       ]
@@ -24905,6 +24924,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-ceiling/high_rich/gloss-black/basecolor.ktx2",
+            "normal": "assets/e1-ceiling/high_rich/gloss-black/normal.ktx2",
+            "roughness": "assets/e1-ceiling/high_rich/gloss-black/roughness.ktx2",
+            "metallic": "assets/e1-ceiling/high_rich/gloss-black/metallic.ktx2",
+            "height": "assets/e1-ceiling/high_rich/gloss-black/height.ktx2",
+            "ao": "assets/e1-ceiling/high_rich/gloss-black/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/5e6572117e9f872f227e6643e74a9e4b9b7185ede4b72d5f7d858684b11543ba.ktx2"
           }
         }
       ]
@@ -24946,6 +24974,15 @@
               0
             ],
             "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-housing/high_rich/cool-grey/basecolor.ktx2",
+            "normal": "assets/e1-housing/high_rich/cool-grey/normal.ktx2",
+            "roughness": "assets/e1-housing/high_rich/cool-grey/roughness.ktx2",
+            "metallic": "assets/e1-housing/high_rich/cool-grey/metallic.ktx2",
+            "height": "assets/e1-housing/high_rich/cool-grey/height.ktx2",
+            "ao": "assets/e1-housing/high_rich/cool-grey/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e1f7a568f0fb6305240c879365bcd6c4684348163508446cddea969f3259412d.ktx2"
           }
         }
       ]
@@ -24987,6 +25024,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-splash/high_rich/tan/basecolor.ktx2",
+            "normal": "assets/e1-splash/high_rich/tan/normal.ktx2",
+            "roughness": "assets/e1-splash/high_rich/tan/roughness.ktx2",
+            "metallic": "assets/e1-splash/high_rich/tan/metallic.ktx2",
+            "height": "assets/e1-splash/high_rich/tan/height.ktx2",
+            "ao": "assets/e1-splash/high_rich/tan/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/b0d8c85b0922de0ee8b184c5f6d888c1bc77a275898b86c0662a821d2ec0b56b.ktx2"
           }
         }
       ]
@@ -25028,6 +25074,15 @@
               0
             ],
             "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-worktop/high_rich/steel/basecolor.ktx2",
+            "normal": "assets/e1-worktop/high_rich/steel/normal.ktx2",
+            "roughness": "assets/e1-worktop/high_rich/steel/roughness.ktx2",
+            "metallic": "assets/e1-worktop/high_rich/steel/metallic.ktx2",
+            "height": "assets/e1-worktop/high_rich/steel/height.ktx2",
+            "ao": "assets/e1-worktop/high_rich/steel/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/419d7d1376192eeb0280b58e64661b8530a6bcb0e15ec5a051c08ec427925a71.ktx2"
           }
         }
       ]
@@ -25069,6 +25124,15 @@
               0
             ],
             "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/b3-trim/rich/gold/basecolor.ktx2",
+            "normal": "assets/b3-trim/rich/gold/normal.ktx2",
+            "roughness": "assets/b3-trim/rich/gold/roughness.ktx2",
+            "metallic": "assets/b3-trim/rich/gold/metallic.ktx2",
+            "height": "assets/b3-trim/rich/gold/height.ktx2",
+            "ao": "assets/b3-trim/rich/gold/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/f268dae6158af441210dfc1f0f4bfeac971b3101eae6813a827581253527553e.ktx2"
           }
         }
       ]
@@ -25110,6 +25174,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/interior-capsule-enamel/poor/worn-ivory/basecolor.ktx2",
+            "normal": "assets/interior-capsule-enamel/poor/worn-ivory/normal.ktx2",
+            "roughness": "assets/interior-capsule-enamel/poor/worn-ivory/roughness.ktx2",
+            "metallic": "assets/interior-capsule-enamel/poor/worn-ivory/metallic.ktx2",
+            "height": "assets/interior-capsule-enamel/poor/worn-ivory/height.ktx2",
+            "ao": "assets/interior-capsule-enamel/poor/worn-ivory/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/2e6796df4fa9c4246ca99aba0015c89173c9ff5b977af0c1fa42ee922ae03270.ktx2"
           }
         }
       ]
@@ -25159,6 +25232,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-floor/high_rich/dark-stone/basecolor.ktx2",
+            "normal": "assets/e1-floor/high_rich/dark-stone/normal.ktx2",
+            "roughness": "assets/e1-floor/high_rich/dark-stone/roughness.ktx2",
+            "metallic": "assets/e1-floor/high_rich/dark-stone/metallic.ktx2",
+            "height": "assets/e1-floor/high_rich/dark-stone/height.ktx2",
+            "ao": "assets/e1-floor/high_rich/dark-stone/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/54c21dd10b00683c6c299af78820c9f1979ce91453bd9ac7f1321c4bbc53de01.ktx2"
           }
         }
       ]
@@ -25208,6 +25290,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/r1-portal/rich/stone/basecolor.ktx2",
+            "normal": "assets/r1-portal/rich/stone/normal.ktx2",
+            "roughness": "assets/r1-portal/rich/stone/roughness.ktx2",
+            "metallic": "assets/r1-portal/rich/stone/metallic.ktx2",
+            "height": "assets/r1-portal/rich/stone/height.ktx2",
+            "ao": "assets/r1-portal/rich/stone/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/a12cb1e35d56723a11e7160e87961cb6f600e2d330f0ce290369c41a140f2f9a.ktx2"
           }
         }
       ]
@@ -25257,6 +25348,15 @@
               0
             ],
             "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/c4-laminate/poor/stall/basecolor.ktx2",
+            "normal": "assets/c4-laminate/poor/stall/normal.ktx2",
+            "roughness": "assets/c4-laminate/poor/stall/roughness.ktx2",
+            "metallic": "assets/c4-laminate/poor/stall/metallic.ktx2",
+            "height": "assets/c4-laminate/poor/stall/height.ktx2",
+            "ao": "assets/c4-laminate/poor/stall/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/eb1c4c20dce6d7907f7e2bcb87ccc95c6ffbb6a304cd289dea9291e31cb3e160.ktx2"
           }
         }
       ]
@@ -25290,6 +25390,16 @@
             "ao": "assets/e1-glass/high_rich/caustic/ao.png",
             "emission": "assets/e1-glass/high_rich/caustic/emission.png",
             "metallicRoughness": "assets/metallic-roughness/8cbe21a8f1e5f2b27939163c27c1c02998593146bf0dfca2743604369549dfd2.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-glass/high_rich/caustic/basecolor.ktx2",
+            "normal": "assets/e1-glass/high_rich/caustic/normal.ktx2",
+            "roughness": "assets/e1-glass/high_rich/caustic/roughness.ktx2",
+            "metallic": "assets/e1-glass/high_rich/caustic/metallic.ktx2",
+            "height": "assets/e1-glass/high_rich/caustic/height.ktx2",
+            "ao": "assets/e1-glass/high_rich/caustic/ao.ktx2",
+            "emission": "assets/e1-glass/high_rich/caustic/emission.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/8cbe21a8f1e5f2b27939163c27c1c02998593146bf0dfca2743604369549dfd2.ktx2"
           }
         }
       ]
@@ -25323,6 +25433,16 @@
             "ao": "assets/e1-screen/high_rich/vending/ao.png",
             "emission": "assets/e1-screen/high_rich/vending/emission.png",
             "metallicRoughness": "assets/metallic-roughness/8df0daf649edf6e24e557618d26393b87b3bdb3f0812395a7546964c3c372fa0.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-screen/high_rich/vending/basecolor.ktx2",
+            "normal": "assets/e1-screen/high_rich/vending/normal.ktx2",
+            "roughness": "assets/e1-screen/high_rich/vending/roughness.ktx2",
+            "metallic": "assets/e1-screen/high_rich/vending/metallic.ktx2",
+            "height": "assets/e1-screen/high_rich/vending/height.ktx2",
+            "ao": "assets/e1-screen/high_rich/vending/ao.ktx2",
+            "emission": "assets/e1-screen/high_rich/vending/emission.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/8df0daf649edf6e24e557618d26393b87b3bdb3f0812395a7546964c3c372fa0.ktx2"
           }
         }
       ]
@@ -25362,6 +25482,15 @@
             "ao": "assets/e1-grille/high_rich/diamond/ao.png",
             "metallic": "assets/e1-grille/high_rich/diamond/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/e519e9690b89215265abb8ceed19f7d7f824935cd76fd6e45c9e2ff515077fd9.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/e1-grille/high_rich/diamond/basecolor.ktx2",
+            "normal": "assets/e1-grille/high_rich/diamond/normal.ktx2",
+            "roughness": "assets/e1-grille/high_rich/diamond/roughness.ktx2",
+            "height": "assets/e1-grille/high_rich/diamond/height.ktx2",
+            "ao": "assets/e1-grille/high_rich/diamond/ao.ktx2",
+            "metallic": "assets/e1-grille/high_rich/diamond/metallic.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e519e9690b89215265abb8ceed19f7d7f824935cd76fd6e45c9e2ff515077fd9.ktx2"
           }
         }
       ]
