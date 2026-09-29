@@ -34,7 +34,9 @@ Version: 0.17.5.
 - [Accepted Exterior finishes](../sources/exterior-native/accepted.json): fourteen native sets, exact counterparts and original source hashes.
 - The canonical `cyberpunk/concrete-monolith-graphite/mid#graphite` roof binding shares the existing monolith graphite maps and scale. Its separate identity lets one exterior select weathered walls and graphite roofs without conflicting variant choices on one key.
 - [Exterior accent recipes](../batch/cyberpunk/exterior-accents.json): blue and gold frame coatings with canonical `coat` variants.
-- [Interior sources](../sources/interiors/INDEX.md) and [recipes](../batch/cyberpunk/interiors/): luxury, damaged and capsule finishes.
+- [Interior sources](../sources/interiors/INDEX.md) and [recipes](../batch/cyberpunk/interiors/): luxury, damaged and capsule finishes, plus [capsule and service coatings](../sources/interiors/INDEX.md#capsule-and-service-finishes), a hexagonal floor, worn gunmetal, linen and fine satin alloy.
+- Apartment style sources and recipes: [Corpo Plaza](../sources/corpo-plaza/INDEX.md) veneer, stone, leather, textiles, glass and mirror; [Meridian](../sources/meridian/INDEX.md) lobby stone, mineral walls, ceiling metal, shell, textiles and bathroom optics; [Sandra Dorsett](../sources/sandra-dorsett/INDEX.md) tatami and lattice infill; [Gutierrez](../sources/gutierrez/INDEX.md) artwork and lacquer; [Loft 1702](../sources/loft1702/INDEX.md) marble, rug and red lens.
+- [Terrace fern sources](../sources/hiromi-fern/INDEX.md) and [recipes](../batch/cyberpunk/hiromi-fern/): exact leaflet lamina and stem fibres.
 - [Manufactured interior recipes](../batch/cyberpunk/interior-manufactured.json): metric alloy and polymer surfaces, localized poor-tier oxidation, restrained holograms and exterior service-alloy aliases.
 - [Room plates](../sources/window-rooms/INDEX.md) and [screen artwork](../sources/ads-codex/PROMPTS.md): retained images and authoring prompts.
 - [Paired facade recipes](../batch/cyberpunk/paired-facade.json): lounge backplate, photographed graphite metal, periodic aluminum brushing, clear glazing and room/light surface states.
