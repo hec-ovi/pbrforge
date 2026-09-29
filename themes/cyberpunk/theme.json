@@ -9968,6 +9968,16 @@
             "ao": "assets/light-fixture/poor/c-red/ao.png",
             "emission": "assets/light-fixture/poor/c-red/emission.png",
             "metallicRoughness": "assets/metallic-roughness/78fa4b4531e47a2795fcf888be530f480c9fe1b02c4b8a88c1788510e0cb9397.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/light-fixture/poor/c-red/basecolor.ktx2",
+            "normal": "assets/light-fixture/poor/c-red/normal.ktx2",
+            "roughness": "assets/light-fixture/poor/c-red/roughness.ktx2",
+            "metallic": "assets/light-fixture/poor/c-red/metallic.ktx2",
+            "height": "assets/light-fixture/poor/c-red/height.ktx2",
+            "ao": "assets/light-fixture/poor/c-red/ao.ktx2",
+            "emission": "assets/light-fixture/poor/c-red/emission.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/78fa4b4531e47a2795fcf888be530f480c9fe1b02c4b8a88c1788510e0cb9397.ktx2"
           }
         },
         {
@@ -9992,6 +10002,16 @@
             "ao": "assets/light-fixture/poor/c-magenta/ao.png",
             "emission": "assets/light-fixture/poor/c-magenta/emission.png",
             "metallicRoughness": "assets/metallic-roughness/80bdcd313db097e4ab69e6ff5c2ca9fe718779a057910b032b3dd174dc2702a0.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/light-fixture/poor/c-magenta/basecolor.ktx2",
+            "normal": "assets/light-fixture/poor/c-magenta/normal.ktx2",
+            "roughness": "assets/light-fixture/poor/c-magenta/roughness.ktx2",
+            "metallic": "assets/light-fixture/poor/c-magenta/metallic.ktx2",
+            "height": "assets/light-fixture/poor/c-magenta/height.ktx2",
+            "ao": "assets/light-fixture/poor/c-magenta/ao.ktx2",
+            "emission": "assets/light-fixture/poor/c-magenta/emission.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/80bdcd313db097e4ab69e6ff5c2ca9fe718779a057910b032b3dd174dc2702a0.ktx2"
           }
         }
       ]
@@ -25596,6 +25616,15 @@
               0
             ],
             "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/r1-veneer/rich/graphite/basecolor.ktx2",
+            "normal": "assets/r1-veneer/rich/graphite/normal.ktx2",
+            "roughness": "assets/r1-veneer/rich/graphite/roughness.ktx2",
+            "metallic": "assets/r1-veneer/rich/graphite/metallic.ktx2",
+            "height": "assets/r1-veneer/rich/graphite/height.ktx2",
+            "ao": "assets/r1-veneer/rich/graphite/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/856bc80c3b2ed2fe506a2768a1455329553c140cd74abb73d5de9c71c57682c1.ktx2"
           }
         },
         {
@@ -25627,6 +25656,15 @@
               0
             ],
             "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/r1-veneer/rich/blue-grey/basecolor.ktx2",
+            "normal": "assets/r1-veneer/rich/blue-grey/normal.ktx2",
+            "roughness": "assets/r1-veneer/rich/blue-grey/roughness.ktx2",
+            "metallic": "assets/r1-veneer/rich/blue-grey/metallic.ktx2",
+            "height": "assets/r1-veneer/rich/blue-grey/height.ktx2",
+            "ao": "assets/r1-veneer/rich/blue-grey/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e6eb8e1e526c2d50f92808dbc94cd086b60cbd04701b5a42aa0b7e605d381775.ktx2"
           }
         }
       ]
@@ -25676,6 +25714,15 @@
               0
             ],
             "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/r1-floor/rich/walnut/basecolor.ktx2",
+            "normal": "assets/r1-floor/rich/walnut/normal.ktx2",
+            "roughness": "assets/r1-floor/rich/walnut/roughness.ktx2",
+            "metallic": "assets/r1-floor/rich/walnut/metallic.ktx2",
+            "height": "assets/r1-floor/rich/walnut/height.ktx2",
+            "ao": "assets/r1-floor/rich/walnut/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/8de6555c0c3a45966b1f79473c499c3808f6b443b1bf6aa5d504f5d7d896ced0.ktx2"
           }
         }
       ]
@@ -25725,6 +25772,15 @@
               0
             ],
             "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/r1-ceiling/rich/walnut/basecolor.ktx2",
+            "normal": "assets/r1-ceiling/rich/walnut/normal.ktx2",
+            "roughness": "assets/r1-ceiling/rich/walnut/roughness.ktx2",
+            "metallic": "assets/r1-ceiling/rich/walnut/metallic.ktx2",
+            "height": "assets/r1-ceiling/rich/walnut/height.ktx2",
+            "ao": "assets/r1-ceiling/rich/walnut/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/21e6003daf87fc54c8ae6a420694f19a7b09b391b4027dd81306461e21e322d7.ktx2"
           }
         }
       ]
@@ -25774,6 +25830,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/r1-leather/rich/teal-navy/basecolor.ktx2",
+            "normal": "assets/r1-leather/rich/teal-navy/normal.ktx2",
+            "roughness": "assets/r1-leather/rich/teal-navy/roughness.ktx2",
+            "metallic": "assets/r1-leather/rich/teal-navy/metallic.ktx2",
+            "height": "assets/r1-leather/rich/teal-navy/height.ktx2",
+            "ao": "assets/r1-leather/rich/teal-navy/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/8b038e3eae3f89afe722dee199d6ec3961c253b53ce120a3aa4762278adc9766.ktx2"
           }
         }
       ]
@@ -25823,6 +25888,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/r1-burl/rich/walnut/basecolor.ktx2",
+            "normal": "assets/r1-burl/rich/walnut/normal.ktx2",
+            "roughness": "assets/r1-burl/rich/walnut/roughness.ktx2",
+            "metallic": "assets/r1-burl/rich/walnut/metallic.ktx2",
+            "height": "assets/r1-burl/rich/walnut/height.ktx2",
+            "ao": "assets/r1-burl/rich/walnut/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/12b3785658d774208e011ec04b34ec40b6702844f9e5d2cc063961148389ad11.ktx2"
           }
         }
       ]
@@ -25872,6 +25946,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/c7-plate/poor/cream/basecolor.ktx2",
+            "normal": "assets/c7-plate/poor/cream/normal.ktx2",
+            "roughness": "assets/c7-plate/poor/cream/roughness.ktx2",
+            "metallic": "assets/c7-plate/poor/cream/metallic.ktx2",
+            "height": "assets/c7-plate/poor/cream/height.ktx2",
+            "ao": "assets/c7-plate/poor/cream/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/482bb0a1aaafae3886417bbc9ad772d99595daad8f0da7d9bd079c7a1ad29158.ktx2"
           }
         }
       ]
@@ -25921,6 +26004,15 @@
               0
             ],
             "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/c2-paint/poor/green/basecolor.ktx2",
+            "normal": "assets/c2-paint/poor/green/normal.ktx2",
+            "roughness": "assets/c2-paint/poor/green/roughness.ktx2",
+            "metallic": "assets/c2-paint/poor/green/metallic.ktx2",
+            "height": "assets/c2-paint/poor/green/height.ktx2",
+            "ao": "assets/c2-paint/poor/green/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/2d3b33b77dd2c7d66bf6b92a9fae606146595633458df9026be4f89967ea32b4.ktx2"
           }
         }
       ]
@@ -25970,6 +26062,15 @@
               0
             ],
             "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/c2-trunk/poor/insulated/basecolor.ktx2",
+            "normal": "assets/c2-trunk/poor/insulated/normal.ktx2",
+            "roughness": "assets/c2-trunk/poor/insulated/roughness.ktx2",
+            "metallic": "assets/c2-trunk/poor/insulated/metallic.ktx2",
+            "height": "assets/c2-trunk/poor/insulated/height.ktx2",
+            "ao": "assets/c2-trunk/poor/insulated/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/6d2d48767f4a9be45a5bf9a8b65d3e37a148ddc00e34c9c597d04020378b569d.ktx2"
           }
         }
       ]
@@ -26019,6 +26120,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/c4-tile/poor/terracotta/basecolor.ktx2",
+            "normal": "assets/c4-tile/poor/terracotta/normal.ktx2",
+            "roughness": "assets/c4-tile/poor/terracotta/roughness.ktx2",
+            "metallic": "assets/c4-tile/poor/terracotta/metallic.ktx2",
+            "height": "assets/c4-tile/poor/terracotta/height.ktx2",
+            "ao": "assets/c4-tile/poor/terracotta/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/3b40019ae7ef4ea01dadbafd60cb161281d347f725017ef0833a9cb7bd2c19ed.ktx2"
           }
         }
       ]
@@ -26068,6 +26178,15 @@
               0
             ],
             "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/c4-paint/poor/teal/basecolor.ktx2",
+            "normal": "assets/c4-paint/poor/teal/normal.ktx2",
+            "roughness": "assets/c4-paint/poor/teal/roughness.ktx2",
+            "metallic": "assets/c4-paint/poor/teal/metallic.ktx2",
+            "height": "assets/c4-paint/poor/teal/height.ktx2",
+            "ao": "assets/c4-paint/poor/teal/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/1964031a4f7be3bc4a00a8ad4e82e4c0f30c09ff91cfef07956b351bba5e31e4.ktx2"
           }
         }
       ]
@@ -26117,6 +26236,15 @@
               0
             ],
             "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/c6-padded/poor/plum/basecolor.ktx2",
+            "normal": "assets/c6-padded/poor/plum/normal.ktx2",
+            "roughness": "assets/c6-padded/poor/plum/roughness.ktx2",
+            "metallic": "assets/c6-padded/poor/plum/metallic.ktx2",
+            "height": "assets/c6-padded/poor/plum/height.ktx2",
+            "ao": "assets/c6-padded/poor/plum/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/87421792c9bf4ded40fdf7a8532e49cf852a9a19792151d285c6ae697827daee.ktx2"
           }
         }
       ]
