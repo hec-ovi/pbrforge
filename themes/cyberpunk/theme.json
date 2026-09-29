@@ -25032,6 +25032,88 @@
         }
       ]
     },
+    "cyberpunk/b3-trim/rich": {
+      "key": "cyberpunk/b3-trim/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.5,
+          0.5
+        ]
+      },
+      "physical": {
+        "metallicFactor": 1,
+        "roughnessFactor": 0.3
+      },
+      "variants": [
+        {
+          "id": "gold",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/b3-trim/rich/gold/basecolor.png",
+            "normal": "assets/b3-trim/rich/gold/normal.png",
+            "roughness": "assets/b3-trim/rich/gold/roughness.png",
+            "metallic": "assets/b3-trim/rich/gold/metallic.png",
+            "height": "assets/b3-trim/rich/gold/height.png",
+            "ao": "assets/b3-trim/rich/gold/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/f268dae6158af441210dfc1f0f4bfeac971b3101eae6813a827581253527553e.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-capsule-enamel/poor": {
+      "key": "cyberpunk/interior-capsule-enamel/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.55
+      },
+      "variants": [
+        {
+          "id": "worn-ivory",
+          "class": "pattern",
+          "resolution": [
+            512,
+            512
+          ],
+          "maps": {
+            "basecolor": "assets/interior-capsule-enamel/poor/worn-ivory/basecolor.png",
+            "normal": "assets/interior-capsule-enamel/poor/worn-ivory/normal.png",
+            "roughness": "assets/interior-capsule-enamel/poor/worn-ivory/roughness.png",
+            "metallic": "assets/interior-capsule-enamel/poor/worn-ivory/metallic.png",
+            "height": "assets/interior-capsule-enamel/poor/worn-ivory/height.png",
+            "ao": "assets/interior-capsule-enamel/poor/worn-ivory/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/2e6796df4fa9c4246ca99aba0015c89173c9ff5b977af0c1fa42ee922ae03270.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
     "cyberpunk/e1-floor/high_rich": {
       "key": "cyberpunk/e1-floor/high_rich",
       "alignment": "tile",
@@ -25077,6 +25159,104 @@
               0
             ],
             "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/r1-portal/rich": {
+      "key": "cyberpunk/r1-portal/rich",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.38
+      },
+      "finish": {
+        "roughness": [
+          0.33,
+          0.44
+        ],
+        "grain": 0.03,
+        "relief": 0.05
+      },
+      "variants": [
+        {
+          "id": "stone",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/r1-portal/rich/stone/basecolor.png",
+            "normal": "assets/r1-portal/rich/stone/normal.png",
+            "roughness": "assets/r1-portal/rich/stone/roughness.png",
+            "metallic": "assets/r1-portal/rich/stone/metallic.png",
+            "height": "assets/r1-portal/rich/stone/height.png",
+            "ao": "assets/r1-portal/rich/stone/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a12cb1e35d56723a11e7160e87961cb6f600e2d330f0ce290369c41a140f2f9a.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          }
+        }
+      ]
+    },
+    "cyberpunk/c4-laminate/poor": {
+      "key": "cyberpunk/c4-laminate/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.55
+      },
+      "finish": {
+        "roughness": [
+          0.5,
+          0.62
+        ],
+        "grain": 0.1,
+        "relief": 0.15
+      },
+      "variants": [
+        {
+          "id": "stall",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/c4-laminate/poor/stall/basecolor.png",
+            "normal": "assets/c4-laminate/poor/stall/normal.png",
+            "roughness": "assets/c4-laminate/poor/stall/roughness.png",
+            "metallic": "assets/c4-laminate/poor/stall/metallic.png",
+            "height": "assets/c4-laminate/poor/stall/height.png",
+            "ao": "assets/c4-laminate/poor/stall/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/eb1c4c20dce6d7907f7e2bcb87ccc95c6ffbb6a304cd289dea9291e31cb3e160.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
           }
         }
       ]

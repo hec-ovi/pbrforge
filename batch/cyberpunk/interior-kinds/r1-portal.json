@@ -1,0 +1,41 @@
+[
+  {
+    "key": "cyberpunk/r1-portal/rich",
+    "variantId": "stone",
+    "alignment": "tile",
+    "description": "Honed dark graphite stone for the layered office doorway frame, fine crystalline grain and soft tonal drift; frame layers, returns and inlays are geometry",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        2,
+        2
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.45
+    },
+    "finish": {
+      "roughness": [
+        0.45,
+        0.52
+      ],
+      "grain": 0.03,
+      "relief": 0.05
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/r1-portal-stone.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "isotropic"
+    }
+  }
+]

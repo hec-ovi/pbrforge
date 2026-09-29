@@ -1,0 +1,32 @@
+[
+  {
+    "key": "cyberpunk/e1-floor/high_rich",
+    "physical": {
+      "roughnessFactor": 0.16,
+      "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.12,
+        0.21
+      ],
+      "grain": 0.015,
+      "relief": 0.03
+    }
+  },
+  {
+    "key": "cyberpunk/r1-portal/rich",
+    "physical": {
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0
+    },
+    "finish": {
+      "roughness": [
+        0.33,
+        0.44
+      ],
+      "grain": 0.03,
+      "relief": 0.05
+    }
+  }
+]

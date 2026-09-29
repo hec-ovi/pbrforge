@@ -1,0 +1,44 @@
+[
+  {
+    "key": "cyberpunk/b3-trim/rich",
+    "variantId": "gold",
+    "alignment": "tile",
+    "description": "Brushed gold metal for apartment plinth kicks and counter trims, fine directional brushing along the trim, satin reflection; profiles and returns are geometry",
+    "resolution": [
+      512,
+      512
+    ],
+    "tiling": {
+      "worldSize": [
+        0.5,
+        0.5
+      ]
+    },
+    "physical": {
+      "metallicFactor": 1,
+      "roughnessFactor": 0.3
+    },
+    "seed": 2609296,
+    "pattern": {
+      "kind": "brushed-metal",
+      "colors": [
+        "#c9a45e",
+        "#8c6d3a"
+      ],
+      "axis": "x",
+      "depth": 0.18,
+      "grain": 0.07,
+      "variation": 0.05,
+      "sheen": 0.07,
+      "wear": 0.01
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "horizontal"
+    }
+  }
+]

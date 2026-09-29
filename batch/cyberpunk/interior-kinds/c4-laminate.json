@@ -1,0 +1,41 @@
+[
+  {
+    "key": "cyberpunk/c4-laminate/poor",
+    "variantId": "stall",
+    "alignment": "tile",
+    "description": "Worn slate blue-grey plastic laminate for public restroom stall partitions and doors, fine hairline scratches, faint grime streaks and dull abrasion; panel edges, hinges and fixings are geometry",
+    "resolution": [
+      1024,
+      1024
+    ],
+    "tiling": {
+      "worldSize": [
+        1,
+        1
+      ]
+    },
+    "physical": {
+      "metallicFactor": 0,
+      "roughnessFactor": 0.55
+    },
+    "finish": {
+      "roughness": [
+        0.5,
+        0.62
+      ],
+      "grain": 0.1,
+      "relief": 0.15
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/c4-stall-laminate.png"
+    },
+    "layout": {
+      "family": "continuous",
+      "origin": [
+        0,
+        0
+      ],
+      "orientation": "vertical"
+    }
+  }
+]
