@@ -16,6 +16,8 @@ themes/*/assets/*/*/brand/
 !/docs/ISSUES.md
 inbox/
 .research/
+# Local authoring logs, measurement dumps and rejected sources.
+/recipes/
 
 # Local preview and reference captures.
 [Ss]creenshots/
