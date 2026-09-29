@@ -3,33 +3,31 @@
     "key": "cyberpunk/interior-capsule-enamel/poor",
     "variantId": "worn-ivory",
     "alignment": "tile",
-    "description": "Worn ivory enamel for capsule housing plates in poor rooms: dull coating with scattered grime, scuffs and small chips exposing a darker base; plate edges and hardware are geometry",
+    "description": "Worn ivory enamel for capsule housing plates in poor rooms: satin coating with a soft grime haze, fine scuffs and small chips showing a darker base; plate edges and hardware are geometry",
     "resolution": [
       512,
       512
     ],
     "tiling": {
       "worldSize": [
-        1.0,
-        1.0
+        1,
+        1
       ]
     },
     "physical": {
       "metallicFactor": 0,
       "roughnessFactor": 0.55
     },
-    "seed": 2609297,
-    "pattern": {
-      "kind": "composite",
-      "colors": [
-        "#c2baa3",
-        "#5e5646"
+    "finish": {
+      "roughness": [
+        0.5,
+        0.62
       ],
-      "grain": 0.02,
-      "variation": 0.05,
-      "sheen": 0.12,
-      "depth": 0.1,
-      "wear": 0.42
+      "grain": 0.12,
+      "relief": 0.2
+    },
+    "sourceAlbedo": {
+      "path": "sources/interior-kinds/capsule-worn-ivory.png"
     },
     "layout": {
       "family": "continuous",
