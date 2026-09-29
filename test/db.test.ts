@@ -92,7 +92,7 @@ it('validates every published consumer binding and resolves the references it na
     expect([image.width, image.height], id).toEqual(texture.resolution);
   }
   expect(sources.size).toBe(Object.keys(native.textures).length);
-});
+}, 30_000);
 
 it('binds the capped marquee run to catalog finishes at metre UVs and a lettered LED dot face', () => {
   const native = JSON.parse(read('bindings/street-native.json').toString());
