@@ -12,7 +12,9 @@
       "wrap": [
         "repeat",
         "repeat"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/broad-smudge/field/roughness.ktx2",
+      "ktx2Sha256": "c44b475664887978b64ae3d50c4134a9bca2aac31c58085e2d6fcf66843a51a8"
     },
     "fine-fingerprint": {
       "path": "themes/cyberpunk/assets/surface-detail/fine-fingerprint/field/roughness.png",
@@ -25,7 +27,9 @@
       "wrap": [
         "repeat",
         "repeat"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/fine-fingerprint/field/roughness.ktx2",
+      "ktx2Sha256": "b28cf1febc94b895c13a0c4a1b82ca906077730e068d1be9e64ff703dcf1ec3d"
     },
     "edge-scuff": {
       "path": "themes/cyberpunk/assets/surface-detail/edge-scuff/field/roughness.png",
@@ -38,7 +42,9 @@
       "wrap": [
         "repeat",
         "repeat"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/edge-scuff/field/roughness.ktx2",
+      "ktx2Sha256": "2c5fa64e950b9718c6f32c43688f4edbfc5e33e3e5408ffb6971c92fcdc31cbc"
     },
     "edge-chips": {
       "path": "themes/cyberpunk/assets/surface-detail/edge-chips/field/roughness.png",
@@ -51,7 +57,9 @@
       "wrap": [
         "repeat",
         "repeat"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/edge-chips/field/roughness.ktx2",
+      "ktx2Sha256": "5b62af94c555aba75177e1986e5813c4547cfcb31b15f6d31e0965cacc7ba4f1"
     },
     "dirt-dust": {
       "path": "themes/cyberpunk/assets/surface-detail/dirt-dust/field/roughness.png",
@@ -64,7 +72,9 @@
       "wrap": [
         "repeat",
         "repeat"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/dirt-dust/field/roughness.ktx2",
+      "ktx2Sha256": "abe97a88fbac0525aea5b7511b41870e7c46a3218801250ddd04aab80ee68d5c"
     },
     "dirt-streaks": {
       "path": "themes/cyberpunk/assets/surface-detail/dirt-streaks/field/roughness.png",
@@ -77,7 +87,9 @@
       "wrap": [
         "repeat",
         "repeat"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/dirt-streaks/field/roughness.ktx2",
+      "ktx2Sha256": "42d2dced965e691d734636580302791d331505a33ef9bee53b802cce8d8f9fd3"
     },
     "atlas-basecolor": {
       "path": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/basecolor.png",
@@ -90,7 +102,9 @@
       "wrap": [
         "clamp",
         "clamp"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/basecolor.ktx2",
+      "ktx2Sha256": "14ee477fe9243edc533f1072979f94d261f431b02fd6930ad57746e63bda429c"
     },
     "atlas-roughness": {
       "path": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/roughness.png",
@@ -103,7 +117,9 @@
       "wrap": [
         "clamp",
         "clamp"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/roughness.ktx2",
+      "ktx2Sha256": "6b6eaec4e5153890e8eb06a0645bf5344956e4566901fb196c1d5712defa63a3"
     },
     "atlas-opacity": {
       "path": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/opacity.png",
@@ -116,7 +132,9 @@
       "wrap": [
         "clamp",
         "clamp"
-      ]
+      ],
+      "ktx2": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/opacity.ktx2",
+      "ktx2Sha256": "3a0879afaeb38fce08acf60f315a4865c06528208e95294729f07a24d5d759a1"
     }
   },
   "masks": {
