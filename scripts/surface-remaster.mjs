@@ -38,6 +38,7 @@ function stretch(img,low=.08,high=.92){let hist=new Uint32Array(256);for(const v
   return gray(Float32Array.from(img.data,v=>low+(high-low)*clip((v*255-a)/(b-a))),img.width,img.height);}
 async function mask(id,w=1024,h=w){return stretch(luminance(await loadSource(id,w,h,{flatten:false})));}
 const requests=[],records=[];
+const previousResolutions=JSON.parse(fs.readFileSync(`${root}/previous-resolutions.json`));
 const existing=JSON.parse(fs.readFileSync('themes/cyberpunk/theme.json')).entries;
 async function publish(id,key,variant,base,height,roughness,{world=[2,2],metal=0,metalMap,ao,opacity,exact=false,layout,group='streets'}={}){
  const {width:w,height:h}=base;const dir=`${out}/prepared/${id}`;fs.mkdirSync(dir,{recursive:true});
@@ -159,11 +160,16 @@ const interiorSpecs=[
  ['c4-terracotta','cyberpunk/c4-tile/poor','terracotta','sources/interior-kinds/c4-terracotta-tile.png',[1.2,1.2],'terracotta',[.28,.74]],
  ['capsule-enamel','cyberpunk/interior-capsule-enamel/poor','worn-ivory','lacquer',[1,1],null,[.25,.65],[204,202,180]],
  ['capsule-ivory','cyberpunk/interior-capsule-enamel/mid','ivory','lacquer',[1,1],null,[.21,.6],[205,202,187]],
+ ['capsule-petrol','cyberpunk/interior-capsule-enamel/mid','petrol','painted',[1,1],null,[.24,.66],[38,78,83]],
+ ['legacy-e1-cream','cyberpunk/ivory-panel/rich','meridian-satin','lacquer',[1,1],null,[.2,.5],[216,210,192]],
+ ['legacy-e1-housing','cyberpunk/ivory-panel/mid','cool-grey','metal',[1,1],null,[.25,.58],[145,153,158]],
+ ['legacy-e1-steel','cyberpunk/interior-alloy/rich','brushed','metal',[1,1],null,[.22,.56],[110,120,126]],
+ ['b3-polished-stone','cyberpunk/corpo-plaza-stone/rich','polished','sources/corpo-plaza/charcoal-stone.png',[2,2],null,[.16,.51]],
  ['c4-teal','cyberpunk/c4-paint/poor','teal','painted',[2,2],null,[.28,.7]],
 ];
 if(mode==='masks'||mode==='all'){await masks();await engineAtlas();}
 if(mode==='atlas')await engineAtlas();
-for(const [group,specs]of [['streets',streetSpecs],['exteriors',exteriorSpecs],['interiors',interiorSpecs]])if(mode===group||mode==='all')for(const [id,key,variant,source,world,shape,range,color]of specs){let size=shape==='curb'?[2048,256]:shape==='hex'?[880,1016]:[1024,1024];await surface({id,key,variant,source,world,shape,range,color,group,size,metal:/alloy|worktop|metal-panel|b3-gold|grate|drain/.test(id)?1:0});}
+for(const [group,specs]of [['streets',streetSpecs],['exteriors',exteriorSpecs],['interiors',interiorSpecs]])if(mode===group||mode==='all')for(const [id,key,variant,source,world,shape,range,color]of specs){let size=group==='interiors'&&previousResolutions[key]?.[variant]?previousResolutions[key][variant]:shape==='curb'?[2048,256]:shape==='hex'?[880,1016]:[1024,1024];await surface({id,key,variant,source,world,shape,range,color,group,size,metal:/alloy|worktop|metal-panel|b3-gold|legacy-e1-steel|grate|drain/.test(id)?1:0});}
 // Sequential per request: later variants append to entries created earlier in this run.
 fs.writeFileSync(`${out}/${mode}-requests.json`,JSON.stringify(requests,null,2)+'\n');
 for(const req of requests){const live=JSON.parse(fs.readFileSync('themes/cyberpunk/theme.json')).entries;if(live[req.key])req.append=true;

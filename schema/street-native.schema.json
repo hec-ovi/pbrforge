@@ -126,6 +126,8 @@
             "type": "string",
             "pattern": "^themes/[a-z0-9_-]+/assets/(?:[a-z0-9_-]+/)*[a-z0-9_-]+\\.png$"
           },
+          "ktx2": { "type": "string", "pattern": "^themes/[a-z0-9_/-]+\\.ktx2$" },
+          "ktx2Sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
           "resolution": {
             "type": "array",
             "items": {

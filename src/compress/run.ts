@@ -1,4 +1,4 @@
-import { stat } from 'node:fs/promises';
+import { readFile, stat } from 'node:fs/promises';
 import { Catalog } from './Catalog.js';
 import { KtxEncoder } from './KtxEncoder.js';
 import { ThermalQueue } from './ThermalQueue.js';
@@ -10,7 +10,11 @@ export async function compress(argv: string[], runtime: CompressionRuntime): Pro
   const started = performance.now();
   const options = compressionOptions(argv);
   const catalog = new Catalog();
-  const jobs = await catalog.jobs(runtime.themesDir);
+  const keys: unknown = options.keys ? JSON.parse(await readFile(options.keys, 'utf8')) : undefined;
+  if (keys !== undefined && (!Array.isArray(keys) || !keys.length || keys.some(key => typeof key !== 'string'))) {
+    throw new Error('--keys must name a JSON array of catalog keys');
+  }
+  const jobs = await catalog.jobs(runtime.themesDir, keys ? new Set(keys as string[]) : undefined);
   const queue = new ThermalQueue(options.workers, options.maxTemp, runtime.readTemperature ?? readTemperature);
   const encoder = new KtxEncoder(runtime.executable);
   const summary: CompressionSummary = {

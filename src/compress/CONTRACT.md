@@ -17,3 +17,5 @@ Before each dispatch, sample all readable k10temp, coretemp and acpitz temperatu
 Encoding: [five rules](../../CONTRACT.md#compression). Tile mipmaps wrap; exact mipmaps clamp. Shared tile and exact counterparts retain tile filtering.
 
 Dependencies: [Materials](../../CONTRACT.md), Node.js, Ajv, Sharp and the official KTX Software CLI. CPU only.
+
+Native street and shared-detail binding textures also produce KTX2 siblings. Their texture records publish `ktx2` and `ktx2Sha256` while retaining the PNG path and hash. `--keys <file.json>` limits catalog compression to a nonempty array of canonical keys; binding textures are still included. Use this for a material release without rebuilding unrelated catalog assets.

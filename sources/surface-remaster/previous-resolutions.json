@@ -1,0 +1,198 @@
+{
+  "cyberpunk/ivory-panel/mid": {
+    "native": [
+      1024,
+      1024
+    ],
+    "cool-grey": [
+      1024,
+      1024
+    ],
+    "fixings": [
+      1024,
+      1024
+    ]
+  },
+  "cyberpunk/interior-alloy/rich": {
+    "brushed": [
+      512,
+      512
+    ],
+    "satin-fine": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/interior-alloy/mid": {
+    "brushed": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/interior-alloy/poor": {
+    "brushed": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/interior-capsule-enamel/mid": {
+    "amber": [
+      512,
+      512
+    ],
+    "ivory": [
+      512,
+      512
+    ],
+    "petrol": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/ivory-panel/rich": {
+    "meridian-satin": [
+      1024,
+      1024
+    ]
+  },
+  "cyberpunk/corpo-plaza-rug/rich": {
+    "charcoal": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/corpo-plaza-bedding/rich": {
+    "botanical": [
+      1024,
+      1024
+    ]
+  },
+  "cyberpunk/corpo-plaza-glass/rich": {
+    "clear": [
+      128,
+      128
+    ]
+  },
+  "cyberpunk/corpo-plaza-mirror/rich": {
+    "silver": [
+      128,
+      128
+    ]
+  },
+  "cyberpunk/corpo-plaza-veneer/rich": {
+    "walnut": [
+      1024,
+      1024
+    ],
+    "smoked": [
+      1024,
+      1024
+    ]
+  },
+  "cyberpunk/corpo-plaza-stone/rich": {
+    "polished": [
+      1024,
+      1024
+    ],
+    "basin": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/corpo-plaza-leather/rich": {
+    "cream": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/e1-panel/high_rich": {
+    "cream": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/e1-ceiling/high_rich": {
+    "gloss-black": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/e1-housing/high_rich": {
+    "cool-grey": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/e1-splash/high_rich": {
+    "tan": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/e1-worktop/high_rich": {
+    "steel": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/b3-trim/rich": {
+    "gold": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/interior-capsule-enamel/poor": {
+    "worn-ivory": [
+      512,
+      512
+    ]
+  },
+  "cyberpunk/e1-floor/high_rich": {
+    "dark-stone": [
+      1024,
+      1024
+    ]
+  },
+  "cyberpunk/c4-laminate/poor": {
+    "stall": [
+      1024,
+      1024
+    ]
+  },
+  "cyberpunk/e1-glass/high_rich": {
+    "caustic": [
+      1024,
+      512
+    ]
+  },
+  "cyberpunk/e1-screen/high_rich": {
+    "vending": [
+      1024,
+      576
+    ]
+  },
+  "cyberpunk/e1-grille/high_rich": {
+    "diamond": [
+      1536,
+      512
+    ]
+  },
+  "cyberpunk/r1-floor/rich": {
+    "walnut": [
+      1024,
+      1024
+    ]
+  },
+  "cyberpunk/c4-tile/poor": {
+    "terracotta": [
+      1024,
+      1024
+    ]
+  },
+  "cyberpunk/c4-paint/poor": {
+    "teal": [
+      1024,
+      1024
+    ]
+  }
+}

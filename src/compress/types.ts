@@ -4,6 +4,7 @@ export interface CompressionOptions {
   workers: number;
   maxTemp: number;
   force: boolean;
+  keys?: string;
 }
 
 export interface CompressionSummary {

@@ -126,3 +126,21 @@ it('drains to one worker above the ceiling and holds until four degrees below', 
   expect(queue.hottest).toBe(91);
   expect(queue.narrowed).toBe(1);
 });
+
+it('compresses binding-only textures and publishes their sibling hash without changing the PNG identity', async () => {
+  const { workspace, runtime, theme, maps } = await fixture();
+  await mkdir(join(workspace, 'bindings'));
+  const png = `themes/sample/${maps.basecolor}`;
+  const binding = { textures: { 'street-basecolor': { path: png, colorSpace: 'srgb', wrap: ['repeat', 'repeat'], sha256: 'master' } } };
+  const path = join(workspace, 'bindings/street-native.json');
+  await writeFile(path, JSON.stringify(binding));
+  const keysPath = join(workspace, 'keys.json'); await writeFile(keysPath, JSON.stringify(['sample/finish/mid']));
+  await compress(['--workers', '1', '--keys', keysPath], runtime);
+  const { readFile } = await import('node:fs/promises');
+  const published = JSON.parse(await readFile(path, 'utf8')).textures['street-basecolor'];
+  expect(published.path).toBe(png);
+  expect(published.sha256).toBe('master');
+  expect(published.ktx2).toBe(png.replace('.png', '.ktx2'));
+  expect(published.ktx2Sha256).toMatch(/^[a-f0-9]{64}$/);
+  expect((await stat(join(theme, maps.basecolor.replace('.png', '.ktx2')))).size).toBeGreaterThan(0);
+});
