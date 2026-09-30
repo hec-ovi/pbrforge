@@ -1,0 +1,170 @@
+[
+  {
+    "id": "broad-smudge",
+    "key": "cyberpunk/surface-detail/broad-smudge",
+    "variant": "field",
+    "group": "masks",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      2048,
+      2048
+    ],
+    "roughness": {
+      "min": 0.07999999821186066,
+      "max": 0.9200000166893005,
+      "mean": 0.46374573114522377,
+      "std": 0.21395788514418276
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "fine-fingerprint",
+    "key": "cyberpunk/surface-detail/fine-fingerprint",
+    "variant": "field",
+    "group": "masks",
+    "worldSize": [
+      0.25,
+      0.25
+    ],
+    "resolution": [
+      2048,
+      2048
+    ],
+    "roughness": {
+      "min": 0.07999999821186066,
+      "max": 0.9200000166893005,
+      "mean": 0.34374525201424255,
+      "std": 0.198586629253377
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "edge-scuff",
+    "key": "cyberpunk/surface-detail/edge-scuff",
+    "variant": "field",
+    "group": "masks",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      2048,
+      2048
+    ],
+    "roughness": {
+      "min": 0.00559999980032444,
+      "max": 1,
+      "mean": 0.21429972551366105,
+      "std": 0.2505599716331363
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "edge-chips",
+    "key": "cyberpunk/surface-detail/edge-chips",
+    "variant": "field",
+    "group": "masks",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      2048,
+      2048
+    ],
+    "roughness": {
+      "min": 0,
+      "max": 1,
+      "mean": 0.03521673448175034,
+      "std": 0.1286218588201028
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "dirt-dust",
+    "key": "cyberpunk/surface-detail/dirt-dust",
+    "variant": "field",
+    "group": "masks",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      2048,
+      2048
+    ],
+    "roughness": {
+      "min": 0.07999999821186066,
+      "max": 0.9200000166893005,
+      "mean": 0.42774558713806066,
+      "std": 0.16325703744211456
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "dirt-streaks",
+    "key": "cyberpunk/surface-detail/dirt-streaks",
+    "variant": "field",
+    "group": "masks",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      2048,
+      2048
+    ],
+    "roughness": {
+      "min": 0.07999999821186066,
+      "max": 0.9200000166893005,
+      "mean": 0.4498287967707899,
+      "std": 0.14966768859441817
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "decal-atlas",
+    "key": "cyberpunk/surface-detail/decal-atlas",
+    "variant": "six-marks",
+    "group": "masks",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      2048,
+      2048
+    ],
+    "roughness": {
+      "min": 0.12000013887882233,
+      "max": 0.9399996399879456,
+      "mean": 0.6233508271467159,
+      "std": 0.253254252919515
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  }
+]

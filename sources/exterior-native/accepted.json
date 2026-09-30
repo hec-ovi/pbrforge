@@ -51,7 +51,8 @@
       "key": "cyberpunk/exterior-cast-concrete/mid",
       "exactKey": "cyberpunk/exterior-cast-concrete-exact/mid",
       "variantId": "native",
-      "entrySha256": "99508bd913af49b51e02cfe28c22bedd4075084681f4618edce4bab1077ec74d"
+      "entrySha256": "e19994ebb9449542cfc9148fef96a5062f027e0dfd129ac3f1955c2a56d8f8ed",
+      "remaster": "sources/surface-remaster/INDEX.md"
     },
     {
       "key": "cyberpunk/exterior-chalk-coating/mid",
@@ -69,13 +70,15 @@
       "key": "cyberpunk/exterior-graphite-coating/mid",
       "exactKey": "cyberpunk/exterior-graphite-coating-exact/mid",
       "variantId": "native",
-      "entrySha256": "e4226fa77a852083aa5a80d61ca8d8a60793e7d04fe44e1bc48fd85ca6a34365"
+      "entrySha256": "2abf8febe3c327a061d74c25f420f01127682adfcf0ec815f183ced3a1b4357f",
+      "remaster": "sources/surface-remaster/INDEX.md"
     },
     {
       "key": "cyberpunk/exterior-graphite-concrete/mid",
       "exactKey": "cyberpunk/exterior-graphite-concrete-exact/mid",
       "variantId": "native",
-      "entrySha256": "97d22152a715f3f44eb01703f8680695eff55866ca924819d59e3930338f958e"
+      "entrySha256": "519faa59b532c9ae71b98f8ce00f8576a0a7408806b749da8e5e7c1ca01e3809",
+      "remaster": "sources/surface-remaster/INDEX.md"
     },
     {
       "key": "cyberpunk/exterior-mineral-concrete/mid",
@@ -87,7 +90,8 @@
       "key": "cyberpunk/exterior-weathered-concrete/mid",
       "exactKey": "cyberpunk/exterior-weathered-concrete-exact/mid",
       "variantId": "native",
-      "entrySha256": "f8280a1760b6d170afd2dc90c2104340f1f6d22f78c667c284289bca41622047"
+      "entrySha256": "9491858a8e70e29548ea3e857b88990db54b8a37d1da55392e678ab02757cb51",
+      "remaster": "sources/surface-remaster/INDEX.md"
     }
   ],
   "maps": {
@@ -484,7 +488,7 @@
       "channels": 3
     },
     "assets/exterior-cast-concrete/mid/native/basecolor.png": {
-      "sha256": "74add69d1d29f02db882e96c2e6ae231dfe750326864ef893e2c00b5ced0520a",
+      "sha256": "dd959d3f01f3102db6501d61b57a05fe73a6f14667841b76b9fc26ac9089129b",
       "resolution": [
         1024,
         1024
@@ -492,7 +496,7 @@
       "channels": 3
     },
     "assets/exterior-cast-concrete/mid/native/normal.png": {
-      "sha256": "b7b34406ae675ff1d79bc60b4f3c9ccf7e8f177663b75d9c4cc119439ec3056c",
+      "sha256": "dac18e0010a2a468cfa96860e156dfacd20c4249cc548fdbce4afd7b10359a1a",
       "resolution": [
         1024,
         1024
@@ -500,7 +504,7 @@
       "channels": 3
     },
     "assets/exterior-cast-concrete/mid/native/roughness.png": {
-      "sha256": "bc67199f9c1e14173fffa3ff060a9ae3762a9f467f466b36c6dcec8cd97ab611",
+      "sha256": "f574bd5ddbfe058f2cd44153085ef55af521856cd2812d5fad86d572a3cac561",
       "resolution": [
         1024,
         1024
@@ -508,7 +512,7 @@
       "channels": 3
     },
     "assets/exterior-cast-concrete/mid/native/height.png": {
-      "sha256": "86daa78698362df79d7ac3449c9cc6c0bab5a159ac6aa193cb717eebbe5d7077",
+      "sha256": "d8d99617d909188158cbf79c1dac7bbc7de73be32a2abbf116eb5643fab3c94e",
       "resolution": [
         1024,
         1024
@@ -516,7 +520,7 @@
       "channels": 3
     },
     "assets/exterior-cast-concrete/mid/native/ao.png": {
-      "sha256": "b702c84a69dbb9e831103e815a277a75f4cb47d651250af44e813bd32192e5fc",
+      "sha256": "c43df328240a338f665b9b42db56c6226b8ef5e68d81684a7388577a72e201f4",
       "resolution": [
         1024,
         1024
@@ -532,7 +536,7 @@
       "channels": 3
     },
     "assets/metallic-roughness/e2fac22573ed4503a1d362ba47f02be4892ef45c8051aeb389a94c9f0396fae7.png": {
-      "sha256": "f3cea4a3043022a3f863ec8f579c0fcf04cad5f482b42d59631d474469f419a0",
+      "sha256": "38968afc83b33ea861e42033ef390eef7b74b8790e213d50d1b5de41d9869549",
       "resolution": [
         1024,
         1024
@@ -652,7 +656,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-coating/mid/native/basecolor.png": {
-      "sha256": "8807f8caafa3e8014b6fbd8624a3cf70f8efa699060a4c21072ef52db3785202",
+      "sha256": "3b31bb9bc13e612f48753e99c24a209a24d033fbd3014e64c76a37ca28ba59cc",
       "resolution": [
         1024,
         1024
@@ -660,7 +664,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-coating/mid/native/normal.png": {
-      "sha256": "41ea84a1ef36b98a26afff2016c7039b07d2f4cd04e2e51f5ae21d7f285a5c45",
+      "sha256": "caa80a475cfd77183ac9b9776ce3eb44d79f047e0e4864d27a28f2a8fb5a5b44",
       "resolution": [
         1024,
         1024
@@ -668,7 +672,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-coating/mid/native/roughness.png": {
-      "sha256": "db73251276b22e12894203fe804b1099704ffbcc34477de867c505225bbc17b7",
+      "sha256": "6c53245cfe9a5b994b14c51c62049bc469e4c88a8a5f20b9246d054b72a95244",
       "resolution": [
         1024,
         1024
@@ -676,7 +680,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-coating/mid/native/height.png": {
-      "sha256": "25f2ea7d6294912882be7761df65ad13b066faa481c523085d7360399a5f9f74",
+      "sha256": "b3ee69121c7cc29723de1c2b77a9c57c275c567baeb06ba0451ed658560ab29b",
       "resolution": [
         1024,
         1024
@@ -684,7 +688,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-coating/mid/native/ao.png": {
-      "sha256": "bdd9d03ac71bd8540acd76ee1c4d496983e5a30f54f7cff4001e1e80373064f9",
+      "sha256": "74a1e148950a601d8eeb4f288350f9a59d97d2c3fc1f166807d9183ead9479ff",
       "resolution": [
         1024,
         1024
@@ -700,7 +704,7 @@
       "channels": 3
     },
     "assets/metallic-roughness/3e747a76b7a5ca448ff025316b36790b24040f9ec1de67f04a3cab67b9c062dc.png": {
-      "sha256": "aaa8507a742efbdd9ef7b37afc4e724c8c477d5a1d6129128cf8737cb8f1adda",
+      "sha256": "4cb406c42903e2f35bacb380a681a9cbe5a04d39d83d882046d457f261d0ef19",
       "resolution": [
         1024,
         1024
@@ -708,7 +712,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-concrete/mid/native/basecolor.png": {
-      "sha256": "9b7d8c749210e944dcfd3b23d68fb8d7398a289589de206229ebf08ec370cff8",
+      "sha256": "4766faf9cd18e56ab9fbc2861b6d3de497cef769a425986badb24db67e108a44",
       "resolution": [
         1024,
         1024
@@ -716,7 +720,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-concrete/mid/native/normal.png": {
-      "sha256": "c40d105749598bcd1a04a404f5a84876680846874779d2020f4c832bf70864c9",
+      "sha256": "dc42b93bef5d2ef9dca8f302c7a5fcf5dfb975312abcbdd76c6df4cbd75a4ff5",
       "resolution": [
         1024,
         1024
@@ -724,7 +728,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-concrete/mid/native/roughness.png": {
-      "sha256": "02308e70faf67f9db9c353d81cd3300c2bc30453b55a5a437c570532e9a9f384",
+      "sha256": "3ba8cfedcfd1a792706240a2f87451dca61f2db8b22245f093b2cd0fe5810ab9",
       "resolution": [
         1024,
         1024
@@ -732,7 +736,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-concrete/mid/native/height.png": {
-      "sha256": "2fcb80917d9f9fac8948dfb1214c8bd32f10e2a49fe7addae45e2a3cce85625e",
+      "sha256": "e9a0a7b4c6db44782cbd782ac881d29e8ff76869906d74d8ad2fecf6e53c67b6",
       "resolution": [
         1024,
         1024
@@ -740,7 +744,7 @@
       "channels": 3
     },
     "assets/exterior-graphite-concrete/mid/native/ao.png": {
-      "sha256": "1c39f41c142edbc8d51a368559effad4e792a631fb44141b03e2ceca82cf8745",
+      "sha256": "0c9ee0941524d636ebc32aea1fc077ff8522275ddd6dad5e8e2d8b5ef9abe5fa",
       "resolution": [
         1024,
         1024
@@ -756,7 +760,7 @@
       "channels": 3
     },
     "assets/metallic-roughness/d56781324702de0472ec1407b1fa2f37b517acb9df439e55c83a1f690653d44f.png": {
-      "sha256": "4969fb44571616742a413068832d13e39a6039b65062ff7b7423166fd5afe26e",
+      "sha256": "4418b64c8e0ff747a43988a039b2f275ce7759341748495fe5a845b1043ab7ab",
       "resolution": [
         1024,
         1024
@@ -820,7 +824,7 @@
       "channels": 3
     },
     "assets/exterior-weathered-concrete/mid/native/basecolor.png": {
-      "sha256": "01f511c76eb972da0246702e60c01d37904d60f042e1db21a3f45dbed7f038ff",
+      "sha256": "90d76ce6901b7aaf7edbf9fe5654c442f47fdf123a54714e4115965569f0a19d",
       "resolution": [
         1024,
         1024
@@ -828,7 +832,7 @@
       "channels": 3
     },
     "assets/exterior-weathered-concrete/mid/native/normal.png": {
-      "sha256": "ba3b7cbe72f49a2a36f39e0777cc36a2589e767594201ed3cf43d5265b797cbc",
+      "sha256": "fb63a366e70c2f976631a1c88c17ff8ac979c99a79ffdac8b63bd7005069a10e",
       "resolution": [
         1024,
         1024
@@ -836,7 +840,7 @@
       "channels": 3
     },
     "assets/exterior-weathered-concrete/mid/native/roughness.png": {
-      "sha256": "6d733ecb3e7890c195e4bea55e47945474c1119cdee405f8c44e72a1abeb7904",
+      "sha256": "cd6bea0bbf0824dea9fae601382f7f7e3e79ae9227ebb8f792bb1b6bce748806",
       "resolution": [
         1024,
         1024
@@ -844,7 +848,7 @@
       "channels": 3
     },
     "assets/exterior-weathered-concrete/mid/native/height.png": {
-      "sha256": "3c8a59d86e2b24c700707e53201bd926a7158379fba900cdc51d0746c141fe21",
+      "sha256": "48daa0697b5c43e2b788f49cd8f4401474689f73d479e8ec5607a40a7bec9b3f",
       "resolution": [
         1024,
         1024
@@ -852,7 +856,7 @@
       "channels": 3
     },
     "assets/exterior-weathered-concrete/mid/native/ao.png": {
-      "sha256": "12f7d401e2b57cf5f4188efd802b699b7a9635ac9bf58940ddc236acfddd1763",
+      "sha256": "b0790197a47b96363aaddec866d66e2f58a5fe3a37b1674ee1ebec7c816d7f72",
       "resolution": [
         1024,
         1024
@@ -868,7 +872,7 @@
       "channels": 3
     },
     "assets/metallic-roughness/7935a970ffec78d3162c63088a421e0f24c2ef0238bf743ecf736ccb00bff588.png": {
-      "sha256": "a18abac06255b616531bed8a9ce501f5ae427c7c4fce7eaa18e7b6df2ef7b9e8",
+      "sha256": "70fc808e905dbe4f989476a015f8783f6c6c0ffffe7cb21cb2c8355ccdb959c1",
       "resolution": [
         1024,
         1024

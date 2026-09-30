@@ -1,0 +1,266 @@
+[
+  {
+    "id": "weathered-concrete",
+    "key": "cyberpunk/concrete-monolith/mid",
+    "variant": "weathered",
+    "group": "exteriors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.5706890821456909,
+      "max": 0.949999988079071,
+      "mean": 0.7283051533759703,
+      "std": 0.07761018953914303
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "cast-concrete",
+    "key": "cyberpunk/exterior-cast-concrete/mid",
+    "variant": "native",
+    "group": "exteriors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.5708490610122681,
+      "max": 0.9336000084877014,
+      "mean": 0.7114808870722982,
+      "std": 0.06949462987462483
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "graphite-concrete",
+    "key": "cyberpunk/exterior-graphite-concrete/mid",
+    "variant": "native",
+    "group": "exteriors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.5606890916824341,
+      "max": 0.949999988079071,
+      "mean": 0.7183109730378305,
+      "std": 0.07762713583034399
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "weathered-exterior",
+    "key": "cyberpunk/exterior-weathered-concrete/mid",
+    "variant": "native",
+    "group": "exteriors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.5806890726089478,
+      "max": 0.949999988079071,
+      "mean": 0.7382924841998602,
+      "std": 0.07757490568950771
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "graphite-coating",
+    "key": "cyberpunk/exterior-graphite-coating/mid",
+    "variant": "native",
+    "group": "exteriors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.41999998688697815,
+      "max": 0.8035995364189148,
+      "mean": 0.5495018659348148,
+      "std": 0.08011189926948406
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "poor-concrete",
+    "key": "cyberpunk/concrete-monolith/poor",
+    "variant": "weathered",
+    "group": "exteriors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.6106890439987183,
+      "max": 0.949999988079071,
+      "mean": 0.7681311148168675,
+      "std": 0.07717338982705094
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "poor-teal-panel",
+    "key": "cyberpunk/exterior-painted-panel/poor",
+    "variant": "teal",
+    "group": "exteriors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.41999998688697815,
+      "max": 0.8335995078086853,
+      "mean": 0.5566806151038577,
+      "std": 0.0877356923285896
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "mid-teal-panel",
+    "key": "cyberpunk/exterior-painted-panel/mid",
+    "variant": "teal",
+    "group": "exteriors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.41999998688697815,
+      "max": 0.7535995244979858,
+      "mean": 0.5047605817476324,
+      "std": 0.07316197508058941
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "poor-service-alloy",
+    "key": "cyberpunk/service-alloy/poor",
+    "variant": "brushed",
+    "group": "exteriors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.4706882834434509,
+      "max": 0.8735995292663574,
+      "mean": 0.6282889661163154,
+      "std": 0.07766968745211258
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "poor-painted-metal",
+    "key": "cyberpunk/metal/poor",
+    "variant": "paint",
+    "group": "exteriors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.42446428537368774,
+      "max": 0.8835995197296143,
+      "mean": 0.6058506615983958,
+      "std": 0.08912428170552142
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "mid-painted-metal",
+    "key": "cyberpunk/metal/mid",
+    "variant": "paint",
+    "group": "exteriors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.41999998688697815,
+      "max": 0.8035995364189148,
+      "mean": 0.5452187292430324,
+      "std": 0.08119185481904388
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  }
+]

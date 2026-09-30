@@ -7191,16 +7191,22 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.76,
-        "metallicFactor": 1
+        "roughnessFactor": 1,
+        "metallicFactor": 0
       },
       "variants": [
         {
           "id": "paint",
-          "class": "flat",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
-            256,
-            256
+            1024,
+            1024
           ],
           "maps": {
             "basecolor": "assets/metal/poor/paint/basecolor.png",
@@ -7210,15 +7216,6 @@
             "height": "assets/metal/poor/paint/height.png",
             "ao": "assets/metal/poor/paint/ao.png",
             "metallicRoughness": "assets/metallic-roughness/d99caae787cc0d2b5bc0063f55e90212ea8b33a6a863fb77386383f97ef97661.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/metal/poor/paint/basecolor.ktx2",
-            "normal": "assets/metal/poor/paint/normal.ktx2",
-            "roughness": "assets/metal/poor/paint/roughness.ktx2",
-            "metallic": "assets/metal/poor/paint/metallic.ktx2",
-            "height": "assets/metal/poor/paint/height.ktx2",
-            "ao": "assets/metal/poor/paint/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/d99caae787cc0d2b5bc0063f55e90212ea8b33a6a863fb77386383f97ef97661.ktx2"
           }
         },
         {
@@ -7259,16 +7256,22 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.68,
-        "metallicFactor": 1
+        "roughnessFactor": 1,
+        "metallicFactor": 0
       },
       "variants": [
         {
           "id": "paint",
-          "class": "flat",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
-            256,
-            256
+            1024,
+            1024
           ],
           "maps": {
             "basecolor": "assets/metal/mid/paint/basecolor.png",
@@ -7278,15 +7281,6 @@
             "height": "assets/metal/mid/paint/height.png",
             "ao": "assets/metal/mid/paint/ao.png",
             "metallicRoughness": "assets/metallic-roughness/8c6cda8b04d5c7917c066e5f8bcdcd8965722b911a474fd134f2d776118b0b87.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/metal/mid/paint/basecolor.ktx2",
-            "normal": "assets/metal/mid/paint/normal.ktx2",
-            "roughness": "assets/metal/mid/paint/roughness.ktx2",
-            "metallic": "assets/metal/mid/paint/metallic.ktx2",
-            "height": "assets/metal/mid/paint/height.ktx2",
-            "ao": "assets/metal/mid/paint/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/8c6cda8b04d5c7917c066e5f8bcdcd8965722b911a474fd134f2d776118b0b87.ktx2"
           }
         },
         {
@@ -13940,7 +13934,6 @@
     "cyberpunk/concrete-monolith/mid": {
       "key": "cyberpunk/concrete-monolith/mid",
       "aliases": [
-        "cyberpunk/concrete-monolith/poor",
         "cyberpunk/concrete-monolith/rich",
         "cyberpunk/concrete-monolith/high_rich"
       ],
@@ -13952,7 +13945,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.88,
+        "roughnessFactor": 1,
         "metallicFactor": 0
       },
       "variants": [
@@ -13992,7 +13985,13 @@
         },
         {
           "id": "weathered",
-          "class": "pattern",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -14005,23 +14004,6 @@
             "height": "assets/concrete-monolith/mid/weathered/height.png",
             "ao": "assets/concrete-monolith/mid/weathered/ao.png",
             "metallicRoughness": "assets/metallic-roughness/5bbca0ea68b10fd15d86c33f5e7fd96157edcad32876019291e42a2c49fc2663.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "isotropic"
-          },
-          "ktx2": {
-            "basecolor": "assets/concrete-monolith/mid/weathered/basecolor.ktx2",
-            "normal": "assets/concrete-monolith/mid/weathered/normal.ktx2",
-            "roughness": "assets/concrete-monolith/mid/weathered/roughness.ktx2",
-            "metallic": "assets/concrete-monolith/mid/weathered/metallic.ktx2",
-            "height": "assets/concrete-monolith/mid/weathered/height.ktx2",
-            "ao": "assets/concrete-monolith/mid/weathered/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/5bbca0ea68b10fd15d86c33f5e7fd96157edcad32876019291e42a2c49fc2663.ktx2"
           }
         },
         {
@@ -15454,7 +15436,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.8,
+        "roughnessFactor": 1,
         "metallicFactor": 0
       },
       "variants": [
@@ -15582,6 +15564,75 @@
             "height": "assets/street-curb/mid/industrial/height.ktx2",
             "ao": "assets/street-curb/mid/industrial/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/8486bdb5bf316520dd3c2ce92220886b6fd60d2038dc2ab691069e9256f5579e.ktx2"
+          }
+        },
+        {
+          "id": "red",
+          "tiling": {
+            "worldSize": [
+              2,
+              0.25
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            2048,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/street-curb/mid/red/basecolor.png",
+            "normal": "assets/street-curb/mid/red/normal.png",
+            "roughness": "assets/street-curb/mid/red/roughness.png",
+            "metallic": "assets/street-curb/mid/red/metallic.png",
+            "height": "assets/street-curb/mid/red/height.png",
+            "ao": "assets/street-curb/mid/red/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/3b95f7d89e0f8421e388a4625bd0dc4caaace6b345de9f565743c13066d0dcd9.png"
+          }
+        },
+        {
+          "id": "yellow",
+          "tiling": {
+            "worldSize": [
+              2,
+              0.25
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            2048,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/street-curb/mid/yellow/basecolor.png",
+            "normal": "assets/street-curb/mid/yellow/normal.png",
+            "roughness": "assets/street-curb/mid/yellow/roughness.png",
+            "metallic": "assets/street-curb/mid/yellow/metallic.png",
+            "height": "assets/street-curb/mid/yellow/height.png",
+            "ao": "assets/street-curb/mid/yellow/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a4975f5739da662536355b5ebbb79b3d4e5006a08d91e8dc14646b3d9aabf5ef.png"
+          }
+        },
+        {
+          "id": "blue",
+          "tiling": {
+            "worldSize": [
+              2,
+              0.25
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            2048,
+            256
+          ],
+          "maps": {
+            "basecolor": "assets/street-curb/mid/blue/basecolor.png",
+            "normal": "assets/street-curb/mid/blue/normal.png",
+            "roughness": "assets/street-curb/mid/blue/roughness.png",
+            "metallic": "assets/street-curb/mid/blue/metallic.png",
+            "height": "assets/street-curb/mid/blue/height.png",
+            "ao": "assets/street-curb/mid/blue/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a636fac50bccd21556eae142ec08443a222a762d7f4d3ca9e1e9cb887f444175.png"
           }
         }
       ]
@@ -19541,7 +19592,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.84
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -19554,7 +19605,13 @@
       "variants": [
         {
           "id": "native",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -19563,19 +19620,10 @@
             "basecolor": "assets/exterior-cast-concrete/mid/native/basecolor.png",
             "normal": "assets/exterior-cast-concrete/mid/native/normal.png",
             "roughness": "assets/exterior-cast-concrete/mid/native/roughness.png",
+            "metallic": "assets/exterior-cast-concrete/mid/native/metallic.png",
             "height": "assets/exterior-cast-concrete/mid/native/height.png",
             "ao": "assets/exterior-cast-concrete/mid/native/ao.png",
-            "metallic": "assets/exterior-cast-concrete/mid/native/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/e2fac22573ed4503a1d362ba47f02be4892ef45c8051aeb389a94c9f0396fae7.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/exterior-cast-concrete/mid/native/basecolor.ktx2",
-            "normal": "assets/exterior-cast-concrete/mid/native/normal.ktx2",
-            "roughness": "assets/exterior-cast-concrete/mid/native/roughness.ktx2",
-            "height": "assets/exterior-cast-concrete/mid/native/height.ktx2",
-            "ao": "assets/exterior-cast-concrete/mid/native/ao.ktx2",
-            "metallic": "assets/exterior-cast-concrete/mid/native/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/e2fac22573ed4503a1d362ba47f02be4892ef45c8051aeb389a94c9f0396fae7.ktx2"
           }
         }
       ]
@@ -19585,7 +19633,7 @@
       "alignment": "exact",
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.84
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -19598,7 +19646,13 @@
       "variants": [
         {
           "id": "native",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -19607,19 +19661,10 @@
             "basecolor": "assets/exterior-cast-concrete/mid/native/basecolor.png",
             "normal": "assets/exterior-cast-concrete/mid/native/normal.png",
             "roughness": "assets/exterior-cast-concrete/mid/native/roughness.png",
+            "metallic": "assets/exterior-cast-concrete/mid/native/metallic.png",
             "height": "assets/exterior-cast-concrete/mid/native/height.png",
             "ao": "assets/exterior-cast-concrete/mid/native/ao.png",
-            "metallic": "assets/exterior-cast-concrete/mid/native/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/e2fac22573ed4503a1d362ba47f02be4892ef45c8051aeb389a94c9f0396fae7.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/exterior-cast-concrete/mid/native/basecolor.ktx2",
-            "normal": "assets/exterior-cast-concrete/mid/native/normal.ktx2",
-            "roughness": "assets/exterior-cast-concrete/mid/native/roughness.ktx2",
-            "height": "assets/exterior-cast-concrete/mid/native/height.ktx2",
-            "ao": "assets/exterior-cast-concrete/mid/native/ao.ktx2",
-            "metallic": "assets/exterior-cast-concrete/mid/native/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/e2fac22573ed4503a1d362ba47f02be4892ef45c8051aeb389a94c9f0396fae7.ktx2"
           }
         }
       ],
@@ -19835,7 +19880,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.57
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -19848,7 +19893,13 @@
       "variants": [
         {
           "id": "native",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -19857,19 +19908,10 @@
             "basecolor": "assets/exterior-graphite-coating/mid/native/basecolor.png",
             "normal": "assets/exterior-graphite-coating/mid/native/normal.png",
             "roughness": "assets/exterior-graphite-coating/mid/native/roughness.png",
+            "metallic": "assets/exterior-graphite-coating/mid/native/metallic.png",
             "height": "assets/exterior-graphite-coating/mid/native/height.png",
             "ao": "assets/exterior-graphite-coating/mid/native/ao.png",
-            "metallic": "assets/exterior-graphite-coating/mid/native/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/3e747a76b7a5ca448ff025316b36790b24040f9ec1de67f04a3cab67b9c062dc.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/exterior-graphite-coating/mid/native/basecolor.ktx2",
-            "normal": "assets/exterior-graphite-coating/mid/native/normal.ktx2",
-            "roughness": "assets/exterior-graphite-coating/mid/native/roughness.ktx2",
-            "height": "assets/exterior-graphite-coating/mid/native/height.ktx2",
-            "ao": "assets/exterior-graphite-coating/mid/native/ao.ktx2",
-            "metallic": "assets/exterior-graphite-coating/mid/native/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/3e747a76b7a5ca448ff025316b36790b24040f9ec1de67f04a3cab67b9c062dc.ktx2"
           }
         }
       ]
@@ -19879,7 +19921,7 @@
       "alignment": "exact",
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.57
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -19892,7 +19934,13 @@
       "variants": [
         {
           "id": "native",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -19901,19 +19949,10 @@
             "basecolor": "assets/exterior-graphite-coating/mid/native/basecolor.png",
             "normal": "assets/exterior-graphite-coating/mid/native/normal.png",
             "roughness": "assets/exterior-graphite-coating/mid/native/roughness.png",
+            "metallic": "assets/exterior-graphite-coating/mid/native/metallic.png",
             "height": "assets/exterior-graphite-coating/mid/native/height.png",
             "ao": "assets/exterior-graphite-coating/mid/native/ao.png",
-            "metallic": "assets/exterior-graphite-coating/mid/native/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/3e747a76b7a5ca448ff025316b36790b24040f9ec1de67f04a3cab67b9c062dc.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/exterior-graphite-coating/mid/native/basecolor.ktx2",
-            "normal": "assets/exterior-graphite-coating/mid/native/normal.ktx2",
-            "roughness": "assets/exterior-graphite-coating/mid/native/roughness.ktx2",
-            "height": "assets/exterior-graphite-coating/mid/native/height.ktx2",
-            "ao": "assets/exterior-graphite-coating/mid/native/ao.ktx2",
-            "metallic": "assets/exterior-graphite-coating/mid/native/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/3e747a76b7a5ca448ff025316b36790b24040f9ec1de67f04a3cab67b9c062dc.ktx2"
           }
         }
       ],
@@ -19933,7 +19972,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.82
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -19946,7 +19985,13 @@
       "variants": [
         {
           "id": "native",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -19955,19 +20000,10 @@
             "basecolor": "assets/exterior-graphite-concrete/mid/native/basecolor.png",
             "normal": "assets/exterior-graphite-concrete/mid/native/normal.png",
             "roughness": "assets/exterior-graphite-concrete/mid/native/roughness.png",
+            "metallic": "assets/exterior-graphite-concrete/mid/native/metallic.png",
             "height": "assets/exterior-graphite-concrete/mid/native/height.png",
             "ao": "assets/exterior-graphite-concrete/mid/native/ao.png",
-            "metallic": "assets/exterior-graphite-concrete/mid/native/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/d56781324702de0472ec1407b1fa2f37b517acb9df439e55c83a1f690653d44f.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/exterior-graphite-concrete/mid/native/basecolor.ktx2",
-            "normal": "assets/exterior-graphite-concrete/mid/native/normal.ktx2",
-            "roughness": "assets/exterior-graphite-concrete/mid/native/roughness.ktx2",
-            "height": "assets/exterior-graphite-concrete/mid/native/height.ktx2",
-            "ao": "assets/exterior-graphite-concrete/mid/native/ao.ktx2",
-            "metallic": "assets/exterior-graphite-concrete/mid/native/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/d56781324702de0472ec1407b1fa2f37b517acb9df439e55c83a1f690653d44f.ktx2"
           }
         }
       ]
@@ -19977,7 +20013,7 @@
       "alignment": "exact",
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.82
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -19990,7 +20026,13 @@
       "variants": [
         {
           "id": "native",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -19999,19 +20041,10 @@
             "basecolor": "assets/exterior-graphite-concrete/mid/native/basecolor.png",
             "normal": "assets/exterior-graphite-concrete/mid/native/normal.png",
             "roughness": "assets/exterior-graphite-concrete/mid/native/roughness.png",
+            "metallic": "assets/exterior-graphite-concrete/mid/native/metallic.png",
             "height": "assets/exterior-graphite-concrete/mid/native/height.png",
             "ao": "assets/exterior-graphite-concrete/mid/native/ao.png",
-            "metallic": "assets/exterior-graphite-concrete/mid/native/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/d56781324702de0472ec1407b1fa2f37b517acb9df439e55c83a1f690653d44f.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/exterior-graphite-concrete/mid/native/basecolor.ktx2",
-            "normal": "assets/exterior-graphite-concrete/mid/native/normal.ktx2",
-            "roughness": "assets/exterior-graphite-concrete/mid/native/roughness.ktx2",
-            "height": "assets/exterior-graphite-concrete/mid/native/height.ktx2",
-            "ao": "assets/exterior-graphite-concrete/mid/native/ao.ktx2",
-            "metallic": "assets/exterior-graphite-concrete/mid/native/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/d56781324702de0472ec1407b1fa2f37b517acb9df439e55c83a1f690653d44f.ktx2"
           }
         }
       ],
@@ -20129,7 +20162,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.88
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -20142,7 +20175,13 @@
       "variants": [
         {
           "id": "native",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -20151,19 +20190,10 @@
             "basecolor": "assets/exterior-weathered-concrete/mid/native/basecolor.png",
             "normal": "assets/exterior-weathered-concrete/mid/native/normal.png",
             "roughness": "assets/exterior-weathered-concrete/mid/native/roughness.png",
+            "metallic": "assets/exterior-weathered-concrete/mid/native/metallic.png",
             "height": "assets/exterior-weathered-concrete/mid/native/height.png",
             "ao": "assets/exterior-weathered-concrete/mid/native/ao.png",
-            "metallic": "assets/exterior-weathered-concrete/mid/native/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/7935a970ffec78d3162c63088a421e0f24c2ef0238bf743ecf736ccb00bff588.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/exterior-weathered-concrete/mid/native/basecolor.ktx2",
-            "normal": "assets/exterior-weathered-concrete/mid/native/normal.ktx2",
-            "roughness": "assets/exterior-weathered-concrete/mid/native/roughness.ktx2",
-            "height": "assets/exterior-weathered-concrete/mid/native/height.ktx2",
-            "ao": "assets/exterior-weathered-concrete/mid/native/ao.ktx2",
-            "metallic": "assets/exterior-weathered-concrete/mid/native/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/7935a970ffec78d3162c63088a421e0f24c2ef0238bf743ecf736ccb00bff588.ktx2"
           }
         }
       ]
@@ -20173,7 +20203,7 @@
       "alignment": "exact",
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.88
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -20186,7 +20216,13 @@
       "variants": [
         {
           "id": "native",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -20195,19 +20231,10 @@
             "basecolor": "assets/exterior-weathered-concrete/mid/native/basecolor.png",
             "normal": "assets/exterior-weathered-concrete/mid/native/normal.png",
             "roughness": "assets/exterior-weathered-concrete/mid/native/roughness.png",
+            "metallic": "assets/exterior-weathered-concrete/mid/native/metallic.png",
             "height": "assets/exterior-weathered-concrete/mid/native/height.png",
             "ao": "assets/exterior-weathered-concrete/mid/native/ao.png",
-            "metallic": "assets/exterior-weathered-concrete/mid/native/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/7935a970ffec78d3162c63088a421e0f24c2ef0238bf743ecf736ccb00bff588.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/exterior-weathered-concrete/mid/native/basecolor.ktx2",
-            "normal": "assets/exterior-weathered-concrete/mid/native/normal.ktx2",
-            "roughness": "assets/exterior-weathered-concrete/mid/native/roughness.ktx2",
-            "height": "assets/exterior-weathered-concrete/mid/native/height.ktx2",
-            "ao": "assets/exterior-weathered-concrete/mid/native/ao.ktx2",
-            "metallic": "assets/exterior-weathered-concrete/mid/native/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/7935a970ffec78d3162c63088a421e0f24c2ef0238bf743ecf736ccb00bff588.ktx2"
           }
         }
       ],
@@ -21607,7 +21634,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.48
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -21646,27 +21673,25 @@
         },
         {
           "id": "cool-grey",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
           ],
           "maps": {
             "basecolor": "assets/ivory-panel/mid/cool-grey/basecolor.png",
-            "normal": "assets/ivory-panel/mid/native/normal.png",
-            "roughness": "assets/ivory-panel/mid/native/roughness.png",
-            "metallic": "assets/ivory-panel/mid/native/metallic.png",
-            "height": "assets/ivory-panel/mid/native/height.png",
-            "ao": "assets/ivory-panel/mid/native/ao.png",
-            "metallicRoughness": "assets/metallic-roughness/31ac2096236909f2c8074e2849ba97efa7d852787775ff345bc410133074f711.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/ivory-panel/mid/cool-grey/basecolor.ktx2",
-            "normal": "assets/ivory-panel/mid/native/normal.ktx2",
-            "roughness": "assets/ivory-panel/mid/native/roughness.ktx2",
-            "metallic": "assets/ivory-panel/mid/native/metallic.ktx2",
-            "height": "assets/ivory-panel/mid/native/height.ktx2",
-            "ao": "assets/ivory-panel/mid/native/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/31ac2096236909f2c8074e2849ba97efa7d852787775ff345bc410133074f711.ktx2"
+            "normal": "assets/ivory-panel/mid/cool-grey/normal.png",
+            "roughness": "assets/ivory-panel/mid/cool-grey/roughness.png",
+            "metallic": "assets/ivory-panel/mid/cool-grey/metallic.png",
+            "height": "assets/ivory-panel/mid/cool-grey/height.png",
+            "ao": "assets/ivory-panel/mid/cool-grey/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/db7bca5a63452c6dddf5fde146daa740ed8dd2fc1aa202d02eb87ef56e29baff.png"
           }
         },
         {
@@ -22334,12 +22359,18 @@
       },
       "physical": {
         "metallicFactor": 1,
-        "roughnessFactor": 0.34
+        "roughnessFactor": 1
       },
       "variants": [
         {
           "id": "brushed",
-          "class": "pattern",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             512,
             512
@@ -22352,23 +22383,6 @@
             "height": "assets/interior-alloy/rich/brushed/height.png",
             "ao": "assets/interior-alloy/rich/brushed/ao.png",
             "metallicRoughness": "assets/metallic-roughness/5c1c238d843211c64f8e3f9721e85850b101e4f5fc7fe89b078658d836c6291e.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "vertical"
-          },
-          "ktx2": {
-            "basecolor": "assets/interior-alloy/rich/brushed/basecolor.ktx2",
-            "normal": "assets/interior-alloy/rich/brushed/normal.ktx2",
-            "roughness": "assets/interior-alloy/rich/brushed/roughness.ktx2",
-            "metallic": "assets/interior-alloy/rich/brushed/metallic.ktx2",
-            "height": "assets/interior-alloy/rich/brushed/height.ktx2",
-            "ao": "assets/interior-alloy/rich/brushed/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/5c1c238d843211c64f8e3f9721e85850b101e4f5fc7fe89b078658d836c6291e.ktx2"
           }
         },
         {
@@ -22457,7 +22471,6 @@
     "cyberpunk/interior-alloy/poor": {
       "key": "cyberpunk/interior-alloy/poor",
       "aliases": [
-        "cyberpunk/service-alloy/poor",
         "cyberpunk/service-alloy/mid",
         "cyberpunk/service-alloy/rich",
         "cyberpunk/service-alloy/high_rich"
@@ -22717,7 +22730,7 @@
         ]
       },
       "physical": {
-        "roughnessFactor": 0.88,
+        "roughnessFactor": 1,
         "metallicFactor": 0
       },
       "variants": [
@@ -22977,7 +22990,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.37
+        "roughnessFactor": 1
       },
       "variants": [
         {
@@ -23022,7 +23035,7 @@
               1
             ]
           },
-          "class": "pattern",
+          "class": "prepared",
           "resolution": [
             512,
             512
@@ -23035,23 +23048,6 @@
             "height": "assets/interior-capsule-enamel/mid/ivory/height.png",
             "ao": "assets/interior-capsule-enamel/mid/ivory/ao.png",
             "metallicRoughness": "assets/metallic-roughness/53585975b9e3072f98c988eddbe350cb9a409d15b392affc0e5c1d404d6dd2d7.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "isotropic"
-          },
-          "ktx2": {
-            "basecolor": "assets/interior-capsule-enamel/mid/ivory/basecolor.ktx2",
-            "normal": "assets/interior-capsule-enamel/mid/ivory/normal.ktx2",
-            "roughness": "assets/interior-capsule-enamel/mid/ivory/roughness.ktx2",
-            "metallic": "assets/interior-capsule-enamel/mid/ivory/metallic.ktx2",
-            "height": "assets/interior-capsule-enamel/mid/ivory/height.ktx2",
-            "ao": "assets/interior-capsule-enamel/mid/ivory/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/53585975b9e3072f98c988eddbe350cb9a409d15b392affc0e5c1d404d6dd2d7.ktx2"
           }
         },
         {
@@ -23062,27 +23058,19 @@
               1
             ]
           },
+          "class": "prepared",
           "resolution": [
             512,
             512
           ],
           "maps": {
             "basecolor": "assets/interior-capsule-enamel/mid/petrol/basecolor.png",
-            "normal": "assets/interior-capsule-enamel/mid/ivory/normal.png",
-            "roughness": "assets/interior-capsule-enamel/mid/ivory/roughness.png",
-            "metallic": "assets/interior-capsule-enamel/mid/ivory/metallic.png",
-            "height": "assets/interior-capsule-enamel/mid/ivory/height.png",
-            "ao": "assets/interior-capsule-enamel/mid/ivory/ao.png",
-            "metallicRoughness": "assets/metallic-roughness/53585975b9e3072f98c988eddbe350cb9a409d15b392affc0e5c1d404d6dd2d7.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/interior-capsule-enamel/mid/petrol/basecolor.ktx2",
-            "normal": "assets/interior-capsule-enamel/mid/ivory/normal.ktx2",
-            "roughness": "assets/interior-capsule-enamel/mid/ivory/roughness.ktx2",
-            "metallic": "assets/interior-capsule-enamel/mid/ivory/metallic.ktx2",
-            "height": "assets/interior-capsule-enamel/mid/ivory/height.ktx2",
-            "ao": "assets/interior-capsule-enamel/mid/ivory/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/53585975b9e3072f98c988eddbe350cb9a409d15b392affc0e5c1d404d6dd2d7.ktx2"
+            "normal": "assets/interior-capsule-enamel/mid/petrol/normal.png",
+            "roughness": "assets/interior-capsule-enamel/mid/petrol/roughness.png",
+            "metallic": "assets/interior-capsule-enamel/mid/petrol/metallic.png",
+            "height": "assets/interior-capsule-enamel/mid/petrol/height.png",
+            "ao": "assets/interior-capsule-enamel/mid/petrol/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ba6300df575d234ce4e6c387cb1abd3b59ec4c6bb3140cb0ace709f493ac47c2.png"
           }
         }
       ]
@@ -23796,7 +23784,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.47
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -23809,7 +23797,13 @@
       "variants": [
         {
           "id": "meridian-satin",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -23822,23 +23816,6 @@
             "height": "assets/ivory-panel/rich/meridian-satin/height.png",
             "ao": "assets/ivory-panel/rich/meridian-satin/ao.png",
             "metallicRoughness": "assets/metallic-roughness/0af519f32639d3833065d4a210e6db9b292ed1697ed9b40659850ce2694e6fda.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "isotropic"
-          },
-          "ktx2": {
-            "basecolor": "assets/ivory-panel/rich/meridian-satin/basecolor.ktx2",
-            "normal": "assets/ivory-panel/rich/meridian-satin/normal.ktx2",
-            "roughness": "assets/ivory-panel/rich/meridian-satin/roughness.ktx2",
-            "metallic": "assets/ivory-panel/rich/meridian-satin/metallic.ktx2",
-            "height": "assets/ivory-panel/rich/meridian-satin/height.ktx2",
-            "ao": "assets/ivory-panel/rich/meridian-satin/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/0af519f32639d3833065d4a210e6db9b292ed1697ed9b40659850ce2694e6fda.ktx2"
           }
         }
       ]
@@ -24185,7 +24162,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.36
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -24224,7 +24201,13 @@
         },
         {
           "id": "smoked",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -24233,19 +24216,10 @@
             "basecolor": "assets/corpo-plaza-veneer/rich/smoked/basecolor.png",
             "normal": "assets/corpo-plaza-veneer/rich/smoked/normal.png",
             "roughness": "assets/corpo-plaza-veneer/rich/smoked/roughness.png",
+            "metallic": "assets/corpo-plaza-veneer/rich/smoked/metallic.png",
             "height": "assets/corpo-plaza-veneer/rich/smoked/height.png",
             "ao": "assets/corpo-plaza-veneer/rich/smoked/ao.png",
-            "metallic": "assets/corpo-plaza-veneer/rich/smoked/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/167a94c688aa9a5bf1b8b373572ff6c1b4cb88f0ddc0ea2a1c8d25fdee83f77f.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/corpo-plaza-veneer/rich/smoked/basecolor.ktx2",
-            "normal": "assets/corpo-plaza-veneer/rich/smoked/normal.ktx2",
-            "roughness": "assets/corpo-plaza-veneer/rich/smoked/roughness.ktx2",
-            "height": "assets/corpo-plaza-veneer/rich/smoked/height.ktx2",
-            "ao": "assets/corpo-plaza-veneer/rich/smoked/ao.ktx2",
-            "metallic": "assets/corpo-plaza-veneer/rich/smoked/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/167a94c688aa9a5bf1b8b373572ff6c1b4cb88f0ddc0ea2a1c8d25fdee83f77f.ktx2"
           }
         }
       ]
@@ -24261,7 +24235,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.19
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -24274,7 +24248,13 @@
       "variants": [
         {
           "id": "polished",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -24283,19 +24263,10 @@
             "basecolor": "assets/corpo-plaza-stone/rich/polished/basecolor.png",
             "normal": "assets/corpo-plaza-stone/rich/polished/normal.png",
             "roughness": "assets/corpo-plaza-stone/rich/polished/roughness.png",
+            "metallic": "assets/corpo-plaza-stone/rich/polished/metallic.png",
             "height": "assets/corpo-plaza-stone/rich/polished/height.png",
             "ao": "assets/corpo-plaza-stone/rich/polished/ao.png",
-            "metallic": "assets/corpo-plaza-stone/rich/polished/metallic.png",
             "metallicRoughness": "assets/metallic-roughness/229a4b8fa69d1df840366393ba518c583f4ce2c5000f8d70b2e14793bf906452.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/corpo-plaza-stone/rich/polished/basecolor.ktx2",
-            "normal": "assets/corpo-plaza-stone/rich/polished/normal.ktx2",
-            "roughness": "assets/corpo-plaza-stone/rich/polished/roughness.ktx2",
-            "height": "assets/corpo-plaza-stone/rich/polished/height.ktx2",
-            "ao": "assets/corpo-plaza-stone/rich/polished/ao.ktx2",
-            "metallic": "assets/corpo-plaza-stone/rich/polished/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/229a4b8fa69d1df840366393ba518c583f4ce2c5000f8d70b2e14793bf906452.ktx2"
           }
         },
         {
@@ -24916,12 +24887,18 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.45
+        "roughnessFactor": 1
       },
       "variants": [
         {
           "id": "cream",
-          "class": "pattern",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             512,
             512
@@ -24934,23 +24911,6 @@
             "height": "assets/e1-panel/high_rich/cream/height.png",
             "ao": "assets/e1-panel/high_rich/cream/ao.png",
             "metallicRoughness": "assets/metallic-roughness/0497b69a20e6b8cff2b22691ecdc26829999fbbf275f148dea62af89d0035a3f.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "isotropic"
-          },
-          "ktx2": {
-            "basecolor": "assets/e1-panel/high_rich/cream/basecolor.ktx2",
-            "normal": "assets/e1-panel/high_rich/cream/normal.ktx2",
-            "roughness": "assets/e1-panel/high_rich/cream/roughness.ktx2",
-            "metallic": "assets/e1-panel/high_rich/cream/metallic.ktx2",
-            "height": "assets/e1-panel/high_rich/cream/height.ktx2",
-            "ao": "assets/e1-panel/high_rich/cream/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/0497b69a20e6b8cff2b22691ecdc26829999fbbf275f148dea62af89d0035a3f.ktx2"
           }
         }
       ]
@@ -24966,12 +24926,18 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.1
+        "roughnessFactor": 1
       },
       "variants": [
         {
           "id": "gloss-black",
-          "class": "pattern",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             512,
             512
@@ -24984,23 +24950,6 @@
             "height": "assets/e1-ceiling/high_rich/gloss-black/height.png",
             "ao": "assets/e1-ceiling/high_rich/gloss-black/ao.png",
             "metallicRoughness": "assets/metallic-roughness/5e6572117e9f872f227e6643e74a9e4b9b7185ede4b72d5f7d858684b11543ba.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "isotropic"
-          },
-          "ktx2": {
-            "basecolor": "assets/e1-ceiling/high_rich/gloss-black/basecolor.ktx2",
-            "normal": "assets/e1-ceiling/high_rich/gloss-black/normal.ktx2",
-            "roughness": "assets/e1-ceiling/high_rich/gloss-black/roughness.ktx2",
-            "metallic": "assets/e1-ceiling/high_rich/gloss-black/metallic.ktx2",
-            "height": "assets/e1-ceiling/high_rich/gloss-black/height.ktx2",
-            "ao": "assets/e1-ceiling/high_rich/gloss-black/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/5e6572117e9f872f227e6643e74a9e4b9b7185ede4b72d5f7d858684b11543ba.ktx2"
           }
         }
       ]
@@ -25016,12 +24965,18 @@
       },
       "physical": {
         "metallicFactor": 1,
-        "roughnessFactor": 0.38
+        "roughnessFactor": 1
       },
       "variants": [
         {
           "id": "cool-grey",
-          "class": "pattern",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             512,
             512
@@ -25034,23 +24989,6 @@
             "height": "assets/e1-housing/high_rich/cool-grey/height.png",
             "ao": "assets/e1-housing/high_rich/cool-grey/ao.png",
             "metallicRoughness": "assets/metallic-roughness/e1f7a568f0fb6305240c879365bcd6c4684348163508446cddea969f3259412d.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "vertical"
-          },
-          "ktx2": {
-            "basecolor": "assets/e1-housing/high_rich/cool-grey/basecolor.ktx2",
-            "normal": "assets/e1-housing/high_rich/cool-grey/normal.ktx2",
-            "roughness": "assets/e1-housing/high_rich/cool-grey/roughness.ktx2",
-            "metallic": "assets/e1-housing/high_rich/cool-grey/metallic.ktx2",
-            "height": "assets/e1-housing/high_rich/cool-grey/height.ktx2",
-            "ao": "assets/e1-housing/high_rich/cool-grey/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/e1f7a568f0fb6305240c879365bcd6c4684348163508446cddea969f3259412d.ktx2"
           }
         }
       ]
@@ -25116,12 +25054,18 @@
       },
       "physical": {
         "metallicFactor": 1,
-        "roughnessFactor": 0.34
+        "roughnessFactor": 1
       },
       "variants": [
         {
           "id": "steel",
-          "class": "pattern",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             512,
             512
@@ -25134,23 +25078,6 @@
             "height": "assets/e1-worktop/high_rich/steel/height.png",
             "ao": "assets/e1-worktop/high_rich/steel/ao.png",
             "metallicRoughness": "assets/metallic-roughness/419d7d1376192eeb0280b58e64661b8530a6bcb0e15ec5a051c08ec427925a71.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "horizontal"
-          },
-          "ktx2": {
-            "basecolor": "assets/e1-worktop/high_rich/steel/basecolor.ktx2",
-            "normal": "assets/e1-worktop/high_rich/steel/normal.ktx2",
-            "roughness": "assets/e1-worktop/high_rich/steel/roughness.ktx2",
-            "metallic": "assets/e1-worktop/high_rich/steel/metallic.ktx2",
-            "height": "assets/e1-worktop/high_rich/steel/height.ktx2",
-            "ao": "assets/e1-worktop/high_rich/steel/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/419d7d1376192eeb0280b58e64661b8530a6bcb0e15ec5a051c08ec427925a71.ktx2"
           }
         }
       ]
@@ -25166,12 +25093,18 @@
       },
       "physical": {
         "metallicFactor": 1,
-        "roughnessFactor": 0.3
+        "roughnessFactor": 1
       },
       "variants": [
         {
           "id": "gold",
-          "class": "pattern",
+          "tiling": {
+            "worldSize": [
+              0.5,
+              0.5
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             512,
             512
@@ -25184,23 +25117,6 @@
             "height": "assets/b3-trim/rich/gold/height.png",
             "ao": "assets/b3-trim/rich/gold/ao.png",
             "metallicRoughness": "assets/metallic-roughness/f268dae6158af441210dfc1f0f4bfeac971b3101eae6813a827581253527553e.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "horizontal"
-          },
-          "ktx2": {
-            "basecolor": "assets/b3-trim/rich/gold/basecolor.ktx2",
-            "normal": "assets/b3-trim/rich/gold/normal.ktx2",
-            "roughness": "assets/b3-trim/rich/gold/roughness.ktx2",
-            "metallic": "assets/b3-trim/rich/gold/metallic.ktx2",
-            "height": "assets/b3-trim/rich/gold/height.ktx2",
-            "ao": "assets/b3-trim/rich/gold/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/f268dae6158af441210dfc1f0f4bfeac971b3101eae6813a827581253527553e.ktx2"
           }
         }
       ]
@@ -25216,7 +25132,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.55
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -25229,7 +25145,13 @@
       "variants": [
         {
           "id": "worn-ivory",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             512,
             512
@@ -25242,23 +25164,6 @@
             "height": "assets/interior-capsule-enamel/poor/worn-ivory/height.png",
             "ao": "assets/interior-capsule-enamel/poor/worn-ivory/ao.png",
             "metallicRoughness": "assets/metallic-roughness/2e6796df4fa9c4246ca99aba0015c89173c9ff5b977af0c1fa42ee922ae03270.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "isotropic"
-          },
-          "ktx2": {
-            "basecolor": "assets/interior-capsule-enamel/poor/worn-ivory/basecolor.ktx2",
-            "normal": "assets/interior-capsule-enamel/poor/worn-ivory/normal.ktx2",
-            "roughness": "assets/interior-capsule-enamel/poor/worn-ivory/roughness.ktx2",
-            "metallic": "assets/interior-capsule-enamel/poor/worn-ivory/metallic.ktx2",
-            "height": "assets/interior-capsule-enamel/poor/worn-ivory/height.ktx2",
-            "ao": "assets/interior-capsule-enamel/poor/worn-ivory/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/2e6796df4fa9c4246ca99aba0015c89173c9ff5b977af0c1fa42ee922ae03270.ktx2"
           }
         }
       ]
@@ -25274,7 +25179,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.16
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -25287,7 +25192,13 @@
       "variants": [
         {
           "id": "dark-stone",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              1.5,
+              1.5
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -25300,23 +25211,6 @@
             "height": "assets/e1-floor/high_rich/dark-stone/height.png",
             "ao": "assets/e1-floor/high_rich/dark-stone/ao.png",
             "metallicRoughness": "assets/metallic-roughness/54c21dd10b00683c6c299af78820c9f1979ce91453bd9ac7f1321c4bbc53de01.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "isotropic"
-          },
-          "ktx2": {
-            "basecolor": "assets/e1-floor/high_rich/dark-stone/basecolor.ktx2",
-            "normal": "assets/e1-floor/high_rich/dark-stone/normal.ktx2",
-            "roughness": "assets/e1-floor/high_rich/dark-stone/roughness.ktx2",
-            "metallic": "assets/e1-floor/high_rich/dark-stone/metallic.ktx2",
-            "height": "assets/e1-floor/high_rich/dark-stone/height.ktx2",
-            "ao": "assets/e1-floor/high_rich/dark-stone/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/54c21dd10b00683c6c299af78820c9f1979ce91453bd9ac7f1321c4bbc53de01.ktx2"
           }
         }
       ]
@@ -25680,7 +25574,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.4
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -25693,7 +25587,13 @@
       "variants": [
         {
           "id": "walnut",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -25706,23 +25606,6 @@
             "height": "assets/r1-floor/rich/walnut/height.png",
             "ao": "assets/r1-floor/rich/walnut/ao.png",
             "metallicRoughness": "assets/metallic-roughness/8de6555c0c3a45966b1f79473c499c3808f6b443b1bf6aa5d504f5d7d896ced0.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "horizontal"
-          },
-          "ktx2": {
-            "basecolor": "assets/r1-floor/rich/walnut/basecolor.ktx2",
-            "normal": "assets/r1-floor/rich/walnut/normal.ktx2",
-            "roughness": "assets/r1-floor/rich/walnut/roughness.ktx2",
-            "metallic": "assets/r1-floor/rich/walnut/metallic.ktx2",
-            "height": "assets/r1-floor/rich/walnut/height.ktx2",
-            "ao": "assets/r1-floor/rich/walnut/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/8de6555c0c3a45966b1f79473c499c3808f6b443b1bf6aa5d504f5d7d896ced0.ktx2"
           }
         }
       ]
@@ -26086,7 +25969,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.55
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -26099,7 +25982,13 @@
       "variants": [
         {
           "id": "terracotta",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -26112,23 +26001,6 @@
             "height": "assets/c4-tile/poor/terracotta/height.png",
             "ao": "assets/c4-tile/poor/terracotta/ao.png",
             "metallicRoughness": "assets/metallic-roughness/3b40019ae7ef4ea01dadbafd60cb161281d347f725017ef0833a9cb7bd2c19ed.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "isotropic"
-          },
-          "ktx2": {
-            "basecolor": "assets/c4-tile/poor/terracotta/basecolor.ktx2",
-            "normal": "assets/c4-tile/poor/terracotta/normal.ktx2",
-            "roughness": "assets/c4-tile/poor/terracotta/roughness.ktx2",
-            "metallic": "assets/c4-tile/poor/terracotta/metallic.ktx2",
-            "height": "assets/c4-tile/poor/terracotta/height.ktx2",
-            "ao": "assets/c4-tile/poor/terracotta/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/3b40019ae7ef4ea01dadbafd60cb161281d347f725017ef0833a9cb7bd2c19ed.ktx2"
           }
         }
       ]
@@ -26144,7 +26016,7 @@
       },
       "physical": {
         "metallicFactor": 0,
-        "roughnessFactor": 0.62
+        "roughnessFactor": 1
       },
       "finish": {
         "roughness": [
@@ -26157,7 +26029,13 @@
       "variants": [
         {
           "id": "teal",
-          "class": "image",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
           "resolution": [
             1024,
             1024
@@ -26170,23 +26048,6 @@
             "height": "assets/c4-paint/poor/teal/height.png",
             "ao": "assets/c4-paint/poor/teal/ao.png",
             "metallicRoughness": "assets/metallic-roughness/1964031a4f7be3bc4a00a8ad4e82e4c0f30c09ff91cfef07956b351bba5e31e4.png"
-          },
-          "layout": {
-            "family": "continuous",
-            "origin": [
-              0,
-              0
-            ],
-            "orientation": "vertical"
-          },
-          "ktx2": {
-            "basecolor": "assets/c4-paint/poor/teal/basecolor.ktx2",
-            "normal": "assets/c4-paint/poor/teal/normal.ktx2",
-            "roughness": "assets/c4-paint/poor/teal/roughness.ktx2",
-            "metallic": "assets/c4-paint/poor/teal/metallic.ktx2",
-            "height": "assets/c4-paint/poor/teal/height.ktx2",
-            "ao": "assets/c4-paint/poor/teal/ao.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/1964031a4f7be3bc4a00a8ad4e82e4c0f30c09ff91cfef07956b351bba5e31e4.ktx2"
           }
         }
       ]
@@ -26245,6 +26106,1017 @@
             "height": "assets/c6-padded/poor/plum/height.ktx2",
             "ao": "assets/c6-padded/poor/plum/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/87421792c9bf4ded40fdf7a8532e49cf852a9a19792151d285c6ae697827daee.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/surface-detail/broad-smudge": {
+      "key": "cyberpunk/surface-detail/broad-smudge",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "prepared",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/surface-detail/broad-smudge/field/basecolor.png",
+            "normal": "assets/surface-detail/broad-smudge/field/normal.png",
+            "roughness": "assets/surface-detail/broad-smudge/field/roughness.png",
+            "metallic": "assets/surface-detail/broad-smudge/field/metallic.png",
+            "height": "assets/surface-detail/broad-smudge/field/height.png",
+            "ao": "assets/surface-detail/broad-smudge/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/0db1d5fd0d9665f21c066b10283ac613069e0c4264c610051b386b4a395455c1.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/surface-detail/fine-fingerprint": {
+      "key": "cyberpunk/surface-detail/fine-fingerprint",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.25,
+          0.25
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "prepared",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/surface-detail/fine-fingerprint/field/basecolor.png",
+            "normal": "assets/surface-detail/fine-fingerprint/field/normal.png",
+            "roughness": "assets/surface-detail/fine-fingerprint/field/roughness.png",
+            "metallic": "assets/surface-detail/fine-fingerprint/field/metallic.png",
+            "height": "assets/surface-detail/fine-fingerprint/field/height.png",
+            "ao": "assets/surface-detail/fine-fingerprint/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/e7b4c38bd6a35dbf395bd62c6828d3bdb28ad62063d39e7ba7163cc23e30bae3.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/surface-detail/edge-scuff": {
+      "key": "cyberpunk/surface-detail/edge-scuff",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "prepared",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/surface-detail/edge-scuff/field/basecolor.png",
+            "normal": "assets/surface-detail/edge-scuff/field/normal.png",
+            "roughness": "assets/surface-detail/edge-scuff/field/roughness.png",
+            "metallic": "assets/surface-detail/edge-scuff/field/metallic.png",
+            "height": "assets/surface-detail/edge-scuff/field/height.png",
+            "ao": "assets/surface-detail/edge-scuff/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a2f5a451b62d7d56b0bb88b1c5abbdd8a0da91142462e9d535c9e13b4c3480aa.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/surface-detail/edge-chips": {
+      "key": "cyberpunk/surface-detail/edge-chips",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "prepared",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/surface-detail/edge-chips/field/basecolor.png",
+            "normal": "assets/surface-detail/edge-chips/field/normal.png",
+            "roughness": "assets/surface-detail/edge-chips/field/roughness.png",
+            "metallic": "assets/surface-detail/edge-chips/field/metallic.png",
+            "height": "assets/surface-detail/edge-chips/field/height.png",
+            "ao": "assets/surface-detail/edge-chips/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/cf1ba7ad17a4d12ae1969875fd1900fa95a0622dca5da7dffa5438093484fc4b.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/surface-detail/dirt-dust": {
+      "key": "cyberpunk/surface-detail/dirt-dust",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "prepared",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/surface-detail/dirt-dust/field/basecolor.png",
+            "normal": "assets/surface-detail/dirt-dust/field/normal.png",
+            "roughness": "assets/surface-detail/dirt-dust/field/roughness.png",
+            "metallic": "assets/surface-detail/dirt-dust/field/metallic.png",
+            "height": "assets/surface-detail/dirt-dust/field/height.png",
+            "ao": "assets/surface-detail/dirt-dust/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/2f33e8169c435a3c1bd2c0f8d4d5d388b3c5782cd93733337ce918399be9f3f6.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/surface-detail/dirt-streaks": {
+      "key": "cyberpunk/surface-detail/dirt-streaks",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "field",
+          "class": "prepared",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/surface-detail/dirt-streaks/field/basecolor.png",
+            "normal": "assets/surface-detail/dirt-streaks/field/normal.png",
+            "roughness": "assets/surface-detail/dirt-streaks/field/roughness.png",
+            "metallic": "assets/surface-detail/dirt-streaks/field/metallic.png",
+            "height": "assets/surface-detail/dirt-streaks/field/height.png",
+            "ao": "assets/surface-detail/dirt-streaks/field/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/c1d767c076e4de0a25987b2a384db9998fff9bf7e0e415f81b31459b7a09a096.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/surface-detail/decal-atlas": {
+      "key": "cyberpunk/surface-detail/decal-atlas",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0,
+        "alphaMode": "BLEND"
+      },
+      "variants": [
+        {
+          "id": "engine-grid",
+          "class": "prepared",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/surface-detail/decal-atlas/engine-grid/basecolor.png",
+            "normal": "assets/surface-detail/decal-atlas/engine-grid/normal.png",
+            "roughness": "assets/surface-detail/decal-atlas/engine-grid/roughness.png",
+            "metallic": "assets/surface-detail/decal-atlas/engine-grid/metallic.png",
+            "height": "assets/surface-detail/decal-atlas/engine-grid/height.png",
+            "ao": "assets/surface-detail/decal-atlas/engine-grid/ao.png",
+            "opacity": "assets/surface-detail/decal-atlas/engine-grid/opacity.png",
+            "metallicRoughness": "assets/metallic-roughness/138ca1bf2a9a19db688d1e04b7ab37eed7634d8ad06b158b125b2dba569173ec.png"
+          }
+        },
+        {
+          "id": "six-marks",
+          "class": "prepared",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/surface-detail/decal-atlas/six-marks/basecolor.png",
+            "normal": "assets/surface-detail/decal-atlas/six-marks/normal.png",
+            "roughness": "assets/surface-detail/decal-atlas/six-marks/roughness.png",
+            "metallic": "assets/surface-detail/decal-atlas/six-marks/metallic.png",
+            "height": "assets/surface-detail/decal-atlas/six-marks/height.png",
+            "ao": "assets/surface-detail/decal-atlas/six-marks/ao.png",
+            "opacity": "assets/surface-detail/decal-atlas/six-marks/opacity.png",
+            "metallicRoughness": "assets/metallic-roughness/7cb01661d2a0242341287a5466316e46fe99dcb492edcec0d9676188531f1b39.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-asphalt/mid": {
+      "key": "cyberpunk/street-asphalt/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/clean/basecolor.png",
+            "normal": "assets/street-asphalt/mid/clean/normal.png",
+            "roughness": "assets/street-asphalt/mid/clean/roughness.png",
+            "metallic": "assets/street-asphalt/mid/clean/metallic.png",
+            "height": "assets/street-asphalt/mid/clean/height.png",
+            "ao": "assets/street-asphalt/mid/clean/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/fb725350acf5f9be0718232c241e83c19da894018c6f0700e7f95e7dfe5a7c90.png"
+          }
+        },
+        {
+          "id": "worn",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/worn/basecolor.png",
+            "normal": "assets/street-asphalt/mid/worn/normal.png",
+            "roughness": "assets/street-asphalt/mid/worn/roughness.png",
+            "metallic": "assets/street-asphalt/mid/worn/metallic.png",
+            "height": "assets/street-asphalt/mid/worn/height.png",
+            "ao": "assets/street-asphalt/mid/worn/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/79915439b93e5fdf3199a3912f224669e7a81cf7b0b7a9fa0e8906efb2d057a4.png"
+          }
+        },
+        {
+          "id": "patched",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/patched/basecolor.png",
+            "normal": "assets/street-asphalt/mid/patched/normal.png",
+            "roughness": "assets/street-asphalt/mid/patched/roughness.png",
+            "metallic": "assets/street-asphalt/mid/patched/metallic.png",
+            "height": "assets/street-asphalt/mid/patched/height.png",
+            "ao": "assets/street-asphalt/mid/patched/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/696ca9098169b913b2b0c8f1684fafff77a12342812ab72c5ef94ac62dcbea4f.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-sidewalk/mid": {
+      "key": "cyberpunk/street-sidewalk/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "slab",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-sidewalk/mid/slab/basecolor.png",
+            "normal": "assets/street-sidewalk/mid/slab/normal.png",
+            "roughness": "assets/street-sidewalk/mid/slab/roughness.png",
+            "metallic": "assets/street-sidewalk/mid/slab/metallic.png",
+            "height": "assets/street-sidewalk/mid/slab/height.png",
+            "ao": "assets/street-sidewalk/mid/slab/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/189b67ce456d1a8d887fa41dc15396404af47bfc325c0945de7ebb6787150b7c.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.006,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        },
+        {
+          "id": "walked",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-sidewalk/mid/walked/basecolor.png",
+            "normal": "assets/street-sidewalk/mid/walked/normal.png",
+            "roughness": "assets/street-sidewalk/mid/walked/roughness.png",
+            "metallic": "assets/street-sidewalk/mid/walked/metallic.png",
+            "height": "assets/street-sidewalk/mid/walked/height.png",
+            "ao": "assets/street-sidewalk/mid/walked/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/fc3fb3e40f932ef2865e603d2b7c3d153b0411f7d0387d35f8e973a93a25d066.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.006,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-coated/mid": {
+      "key": "cyberpunk/street-coated/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "red",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-coated/mid/red/basecolor.png",
+            "normal": "assets/street-coated/mid/red/normal.png",
+            "roughness": "assets/street-coated/mid/red/roughness.png",
+            "metallic": "assets/street-coated/mid/red/metallic.png",
+            "height": "assets/street-coated/mid/red/height.png",
+            "ao": "assets/street-coated/mid/red/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/7e3e1208a639f915d5478dc22cfc5d0b63b1298a3c0b8503d3daece1ecfe901b.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.006,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-hex/mid": {
+      "key": "cyberpunk/street-hex/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.2,
+          1.385640646
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "grey",
+          "class": "prepared",
+          "resolution": [
+            880,
+            1016
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey/basecolor.png",
+            "normal": "assets/street-hex/mid/grey/normal.png",
+            "roughness": "assets/street-hex/mid/grey/roughness.png",
+            "metallic": "assets/street-hex/mid/grey/metallic.png",
+            "height": "assets/street-hex/mid/grey/height.png",
+            "ao": "assets/street-hex/mid/grey/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/72c5914bb606deeeb0e08762f39b4b516dca95c29bae625da04a1105bb9da9e2.png"
+          }
+        },
+        {
+          "id": "orange",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            880,
+            1016
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange/basecolor.png",
+            "normal": "assets/street-hex/mid/orange/normal.png",
+            "roughness": "assets/street-hex/mid/orange/roughness.png",
+            "metallic": "assets/street-hex/mid/orange/metallic.png",
+            "height": "assets/street-hex/mid/orange/height.png",
+            "ao": "assets/street-hex/mid/orange/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/c5905af540a330f2963769af51ba980ceeba6a9a109cba4d752e7737b9f40488.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-paint/mid": {
+      "key": "cyberpunk/street-paint/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "yellow",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-paint/mid/yellow/basecolor.png",
+            "normal": "assets/street-paint/mid/yellow/normal.png",
+            "roughness": "assets/street-paint/mid/yellow/roughness.png",
+            "metallic": "assets/street-paint/mid/yellow/metallic.png",
+            "height": "assets/street-paint/mid/yellow/height.png",
+            "ao": "assets/street-paint/mid/yellow/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a148ecbcf0a008b401fa849b090698a9310614f2a044382dc45db1e768127a8b.png"
+          }
+        },
+        {
+          "id": "white",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-paint/mid/white/basecolor.png",
+            "normal": "assets/street-paint/mid/white/normal.png",
+            "roughness": "assets/street-paint/mid/white/roughness.png",
+            "metallic": "assets/street-paint/mid/white/metallic.png",
+            "height": "assets/street-paint/mid/white/height.png",
+            "ao": "assets/street-paint/mid/white/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/452e6b03cd2d75320954345ee7c460b396d73a716b8761b810b9c32274fc1070.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-drain/mid": {
+      "key": "cyberpunk/street-drain/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          0.8,
+          0.8
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 1
+      },
+      "variants": [
+        {
+          "id": "grate",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-drain/mid/grate/basecolor.png",
+            "normal": "assets/street-drain/mid/grate/normal.png",
+            "roughness": "assets/street-drain/mid/grate/roughness.png",
+            "metallic": "assets/street-drain/mid/grate/metallic.png",
+            "height": "assets/street-drain/mid/grate/height.png",
+            "ao": "assets/street-drain/mid/grate/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/f3f89d8024a24347f6abf65b2d450e57d817c12f88f74f67b66a01cf61d58df9.png"
+          }
+        },
+        {
+          "id": "slotted",
+          "tiling": {
+            "worldSize": [
+              0.8,
+              0.8
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-drain/mid/slotted/basecolor.png",
+            "normal": "assets/street-drain/mid/slotted/normal.png",
+            "roughness": "assets/street-drain/mid/slotted/roughness.png",
+            "metallic": "assets/street-drain/mid/slotted/metallic.png",
+            "height": "assets/street-drain/mid/slotted/height.png",
+            "ao": "assets/street-drain/mid/slotted/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/5947e2a6a889fb22348c6b23a43fcfbe47b389b326d515445a546102dcbd4251.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/concrete-monolith/poor": {
+      "key": "cyberpunk/concrete-monolith/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "weathered",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/poor/weathered/basecolor.png",
+            "normal": "assets/concrete-monolith/poor/weathered/normal.png",
+            "roughness": "assets/concrete-monolith/poor/weathered/roughness.png",
+            "metallic": "assets/concrete-monolith/poor/weathered/metallic.png",
+            "height": "assets/concrete-monolith/poor/weathered/height.png",
+            "ao": "assets/concrete-monolith/poor/weathered/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/aeea1e87b6f6e8ee3aaa3cf991bee400b9c2052a3ad8c7bca5e7c3e93c9eb138.png"
+          }
+        },
+        {
+          "id": "cast",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/cast/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/cast/normal.png",
+            "roughness": "assets/concrete-monolith/mid/cast/roughness.png",
+            "metallic": "assets/concrete-monolith/mid/cast/metallic.png",
+            "height": "assets/concrete-monolith/mid/cast/height.png",
+            "ao": "assets/concrete-monolith/mid/cast/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/b2b76f01bf4a0c5e37ef591ad2bb0fa02e8bf3cab043b36aea8c5e37f346bb97.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/concrete-monolith/mid/cast/basecolor.ktx2",
+            "normal": "assets/concrete-monolith/mid/cast/normal.ktx2",
+            "roughness": "assets/concrete-monolith/mid/cast/roughness.ktx2",
+            "metallic": "assets/concrete-monolith/mid/cast/metallic.ktx2",
+            "height": "assets/concrete-monolith/mid/cast/height.ktx2",
+            "ao": "assets/concrete-monolith/mid/cast/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/b2b76f01bf4a0c5e37ef591ad2bb0fa02e8bf3cab043b36aea8c5e37f346bb97.ktx2"
+          },
+          "tiling": {
+            "worldSize": [
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "id": "mineral",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/mineral/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/mineral/normal.png",
+            "roughness": "assets/concrete-monolith/mid/mineral/roughness.png",
+            "metallic": "assets/concrete-monolith/mid/mineral/metallic.png",
+            "height": "assets/concrete-monolith/mid/mineral/height.png",
+            "ao": "assets/concrete-monolith/mid/mineral/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/f1c630603d19fe510c47239dfa4807aa102ab77ff3c6bcd7eb4779c9eaf5bbd8.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/concrete-monolith/mid/mineral/basecolor.ktx2",
+            "normal": "assets/concrete-monolith/mid/mineral/normal.ktx2",
+            "roughness": "assets/concrete-monolith/mid/mineral/roughness.ktx2",
+            "metallic": "assets/concrete-monolith/mid/mineral/metallic.ktx2",
+            "height": "assets/concrete-monolith/mid/mineral/height.ktx2",
+            "ao": "assets/concrete-monolith/mid/mineral/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/f1c630603d19fe510c47239dfa4807aa102ab77ff3c6bcd7eb4779c9eaf5bbd8.ktx2"
+          },
+          "tiling": {
+            "worldSize": [
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "id": "graphite",
+          "class": "pattern",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/graphite/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/graphite/normal.png",
+            "roughness": "assets/concrete-monolith/mid/graphite/roughness.png",
+            "metallic": "assets/concrete-monolith/mid/graphite/metallic.png",
+            "height": "assets/concrete-monolith/mid/graphite/height.png",
+            "ao": "assets/concrete-monolith/mid/graphite/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/e0a1711e8a51e1631d6a3f2735447cc445c81e8f0554ca1f9469abc3760a38a1.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/concrete-monolith/mid/graphite/basecolor.ktx2",
+            "normal": "assets/concrete-monolith/mid/graphite/normal.ktx2",
+            "roughness": "assets/concrete-monolith/mid/graphite/roughness.ktx2",
+            "metallic": "assets/concrete-monolith/mid/graphite/metallic.ktx2",
+            "height": "assets/concrete-monolith/mid/graphite/height.ktx2",
+            "ao": "assets/concrete-monolith/mid/graphite/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e0a1711e8a51e1631d6a3f2735447cc445c81e8f0554ca1f9469abc3760a38a1.ktx2"
+          },
+          "tiling": {
+            "worldSize": [
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "id": "native-cast",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/native-cast/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/native-cast/normal.png",
+            "roughness": "assets/concrete-monolith/mid/native-cast/roughness.png",
+            "height": "assets/concrete-monolith/mid/native-cast/height.png",
+            "ao": "assets/concrete-monolith/mid/native-cast/ao.png",
+            "metallic": "assets/concrete-monolith/mid/native-cast/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/8aa08afa46080d72b3dd0187163515fb1f1268e73d12a3eea99a7b802719791a.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/concrete-monolith/mid/native-cast/basecolor.ktx2",
+            "normal": "assets/concrete-monolith/mid/native-cast/normal.ktx2",
+            "roughness": "assets/concrete-monolith/mid/native-cast/roughness.ktx2",
+            "height": "assets/concrete-monolith/mid/native-cast/height.ktx2",
+            "ao": "assets/concrete-monolith/mid/native-cast/ao.ktx2",
+            "metallic": "assets/concrete-monolith/mid/native-cast/metallic.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/8aa08afa46080d72b3dd0187163515fb1f1268e73d12a3eea99a7b802719791a.ktx2"
+          },
+          "tiling": {
+            "worldSize": [
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "id": "native-weathered",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/native-weathered/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/native-weathered/normal.png",
+            "roughness": "assets/concrete-monolith/mid/native-weathered/roughness.png",
+            "height": "assets/concrete-monolith/mid/native-weathered/height.png",
+            "ao": "assets/concrete-monolith/mid/native-weathered/ao.png",
+            "metallic": "assets/concrete-monolith/mid/native-weathered/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/4523f3d8552398cbf1e1bf2e3f4826e78058229981aa2776c50e59c1266cd9ff.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/concrete-monolith/mid/native-weathered/basecolor.ktx2",
+            "normal": "assets/concrete-monolith/mid/native-weathered/normal.ktx2",
+            "roughness": "assets/concrete-monolith/mid/native-weathered/roughness.ktx2",
+            "height": "assets/concrete-monolith/mid/native-weathered/height.ktx2",
+            "ao": "assets/concrete-monolith/mid/native-weathered/ao.ktx2",
+            "metallic": "assets/concrete-monolith/mid/native-weathered/metallic.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/4523f3d8552398cbf1e1bf2e3f4826e78058229981aa2776c50e59c1266cd9ff.ktx2"
+          },
+          "tiling": {
+            "worldSize": [
+              4,
+              4
+            ]
+          }
+        },
+        {
+          "id": "native-graphite",
+          "class": "image",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/concrete-monolith/mid/native-graphite/basecolor.png",
+            "normal": "assets/concrete-monolith/mid/native-graphite/normal.png",
+            "roughness": "assets/concrete-monolith/mid/native-graphite/roughness.png",
+            "height": "assets/concrete-monolith/mid/native-graphite/height.png",
+            "ao": "assets/concrete-monolith/mid/native-graphite/ao.png",
+            "metallic": "assets/concrete-monolith/mid/native-graphite/metallic.png",
+            "metallicRoughness": "assets/metallic-roughness/d3e252df337e0b21f543222efddba2679e0f525b10436e99b380b0888f5d86f6.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/concrete-monolith/mid/native-graphite/basecolor.ktx2",
+            "normal": "assets/concrete-monolith/mid/native-graphite/normal.ktx2",
+            "roughness": "assets/concrete-monolith/mid/native-graphite/roughness.ktx2",
+            "height": "assets/concrete-monolith/mid/native-graphite/height.ktx2",
+            "ao": "assets/concrete-monolith/mid/native-graphite/ao.ktx2",
+            "metallic": "assets/concrete-monolith/mid/native-graphite/metallic.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/d3e252df337e0b21f543222efddba2679e0f525b10436e99b380b0888f5d86f6.ktx2"
+          },
+          "tiling": {
+            "worldSize": [
+              4,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "cyberpunk/exterior-painted-panel/poor": {
+      "key": "cyberpunk/exterior-painted-panel/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "teal",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/exterior-painted-panel/poor/teal/basecolor.png",
+            "normal": "assets/exterior-painted-panel/poor/teal/normal.png",
+            "roughness": "assets/exterior-painted-panel/poor/teal/roughness.png",
+            "metallic": "assets/exterior-painted-panel/poor/teal/metallic.png",
+            "height": "assets/exterior-painted-panel/poor/teal/height.png",
+            "ao": "assets/exterior-painted-panel/poor/teal/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d4a362453a2f78d3b12d81c7066fc280a89d7c134913078047e0e4b532681ae4.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/exterior-painted-panel/mid": {
+      "key": "cyberpunk/exterior-painted-panel/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "teal",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/exterior-painted-panel/mid/teal/basecolor.png",
+            "normal": "assets/exterior-painted-panel/mid/teal/normal.png",
+            "roughness": "assets/exterior-painted-panel/mid/teal/roughness.png",
+            "metallic": "assets/exterior-painted-panel/mid/teal/metallic.png",
+            "height": "assets/exterior-painted-panel/mid/teal/height.png",
+            "ao": "assets/exterior-painted-panel/mid/teal/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/d15c58ad1f0cbb8280bd1268cec31f6168d60a7ad6df3ed1578dcaaefd6e81c7.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/service-alloy/poor": {
+      "key": "cyberpunk/service-alloy/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1,
+          1
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 1
+      },
+      "variants": [
+        {
+          "id": "brushed",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/service-alloy/poor/brushed/basecolor.png",
+            "normal": "assets/service-alloy/poor/brushed/normal.png",
+            "roughness": "assets/service-alloy/poor/brushed/roughness.png",
+            "metallic": "assets/service-alloy/poor/brushed/metallic.png",
+            "height": "assets/service-alloy/poor/brushed/height.png",
+            "ao": "assets/service-alloy/poor/brushed/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/4259d19c3c69ccc03af642a831043e664e5d98c6be20c6912c628625ba86aa6a.png"
+          }
+        }
+      ]
+    },
+    "cyberpunk/interior-octagon/mid": {
+      "key": "cyberpunk/interior-octagon/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.2,
+          1.2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "ivory-inserts",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/interior-octagon/mid/ivory-inserts/basecolor.png",
+            "normal": "assets/interior-octagon/mid/ivory-inserts/normal.png",
+            "roughness": "assets/interior-octagon/mid/ivory-inserts/roughness.png",
+            "metallic": "assets/interior-octagon/mid/ivory-inserts/metallic.png",
+            "height": "assets/interior-octagon/mid/ivory-inserts/height.png",
+            "ao": "assets/interior-octagon/mid/ivory-inserts/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/0eda0c3ea65b9b25eeb1c031112ec63d8f09ed88b19e77bb1e6b3d77621129a1.png"
           }
         }
       ]

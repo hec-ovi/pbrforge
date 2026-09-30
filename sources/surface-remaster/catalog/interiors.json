@@ -1,0 +1,434 @@
+[
+  {
+    "id": "octagon-tile",
+    "key": "cyberpunk/interior-octagon/mid",
+    "variant": "ivory-inserts",
+    "group": "interiors",
+    "worldSize": [
+      1.2,
+      1.2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.21872000396251678,
+      "max": 0.9399999976158142,
+      "mean": 0.3946005458969495,
+      "std": 0.1367205398633815
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "e1-cream",
+    "key": "cyberpunk/e1-panel/high_rich",
+    "variant": "cream",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.2590399980545044,
+      "max": 0.5,
+      "mean": 0.3680258501647131,
+      "std": 0.049597539151371155
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "e1-lacquer",
+    "key": "cyberpunk/e1-ceiling/high_rich",
+    "variant": "gloss-black",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.17510399222373962,
+      "max": 0.4000000059604645,
+      "mean": 0.27682412682361246,
+      "std": 0.04629103656909975
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "e1-teal-stone",
+    "key": "cyberpunk/e1-floor/high_rich",
+    "variant": "dark-stone",
+    "group": "interiors",
+    "worldSize": [
+      1.5,
+      1.5
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.23281599581241608,
+      "max": 0.5299999713897705,
+      "mean": 0.3585726153358024,
+      "std": 0.061506168993552504
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "e1-metal-panel",
+    "key": "cyberpunk/e1-housing/high_rich",
+    "variant": "cool-grey",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.30297601222991943,
+      "max": 0.5600000023841858,
+      "mean": 0.41922757346446815,
+      "std": 0.05290404174344638
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "e1-worktop",
+    "key": "cyberpunk/e1-worktop/high_rich",
+    "variant": "steel",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.2649439871311188,
+      "max": 0.5299999713897705,
+      "mean": 0.3848284351146276,
+      "std": 0.05455729298099179
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "r1-walnut",
+    "key": "cyberpunk/r1-floor/rich",
+    "variant": "walnut",
+    "group": "interiors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.29494398832321167,
+      "max": 0.5600000023841858,
+      "mean": 0.4070964591201971,
+      "std": 0.0547935631534742
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "b3-walnut",
+    "key": "cyberpunk/corpo-plaza-veneer/rich",
+    "variant": "smoked",
+    "group": "interiors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.29494398832321167,
+      "max": 0.5600000023841858,
+      "mean": 0.4070964591201971,
+      "std": 0.0547935631534742
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "b3-gold",
+    "key": "cyberpunk/b3-trim/rich",
+    "variant": "gold",
+    "group": "interiors",
+    "worldSize": [
+      0.5,
+      0.5
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.2990399897098541,
+      "max": 0.5400000214576721,
+      "mean": 0.4079882113679787,
+      "std": 0.049560312515886974
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "c4-terracotta",
+    "key": "cyberpunk/c4-tile/poor",
+    "variant": "terracotta",
+    "group": "interiors",
+    "worldSize": [
+      1.2,
+      1.2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.3705280125141144,
+      "max": 0.949999988079071,
+      "mean": 0.5603920982900661,
+      "std": 0.11356176165387183
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "capsule-enamel",
+    "key": "cyberpunk/interior-capsule-enamel/poor",
+    "variant": "worn-ivory",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.32872000336647034,
+      "max": 0.6499999761581421,
+      "mean": 0.47403446695443563,
+      "std": 0.06613005228884566
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "capsule-ivory",
+    "key": "cyberpunk/interior-capsule-enamel/mid",
+    "variant": "ivory",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.28675198554992676,
+      "max": 0.6000000238418579,
+      "mean": 0.42843360522135754,
+      "std": 0.06447680090821495
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "capsule-petrol",
+    "key": "cyberpunk/interior-capsule-enamel/mid",
+    "variant": "petrol",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.3226560056209564,
+      "max": 0.6600000262260437,
+      "mean": 0.4752361902840221,
+      "std": 0.06943655488663127
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "legacy-e1-cream",
+    "key": "cyberpunk/ivory-panel/rich",
+    "variant": "meridian-satin",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.2590399980545044,
+      "max": 0.5,
+      "mean": 0.36097869484777334,
+      "std": 0.04984488040426927
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "legacy-e1-housing",
+    "key": "cyberpunk/ivory-panel/mid",
+    "variant": "cool-grey",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.31494399905204773,
+      "max": 0.5799999833106995,
+      "mean": 0.4270765643222205,
+      "std": 0.05482936846152892
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "legacy-e1-steel",
+    "key": "cyberpunk/interior-alloy/rich",
+    "variant": "brushed",
+    "group": "interiors",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      512,
+      512
+    ],
+    "roughness": {
+      "min": 0.2869119942188263,
+      "max": 0.5600000023841858,
+      "mean": 0.41042929684476803,
+      "std": 0.05621054436920827
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "b3-polished-stone",
+    "key": "cyberpunk/corpo-plaza-stone/rich",
+    "variant": "polished",
+    "group": "interiors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.22888000309467316,
+      "max": 0.5099999904632568,
+      "mean": 0.34782957783504287,
+      "std": 0.05811438514793268
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "id": "c4-teal",
+    "key": "cyberpunk/c4-paint/poor",
+    "variant": "teal",
+    "group": "interiors",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "roughness": {
+      "min": 0.36265599727630615,
+      "max": 0.699999988079071,
+      "mean": 0.5053954934234071,
+      "std": 0.06973726215062082
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  }
+]

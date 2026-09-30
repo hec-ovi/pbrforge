@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "textures": {
+    "broad-smudge": {
+      "path": "themes/cyberpunk/assets/surface-detail/broad-smudge/field/roughness.png",
+      "sha256": "7779236871cdff8defa7da0977182899b92bddeb600164f6c6bf392af0f2fc78",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "fine-fingerprint": {
+      "path": "themes/cyberpunk/assets/surface-detail/fine-fingerprint/field/roughness.png",
+      "sha256": "6ba45105fbafa672be6ba98a8b468a915a6037a36cc64af1650365cf759bed47",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "edge-scuff": {
+      "path": "themes/cyberpunk/assets/surface-detail/edge-scuff/field/roughness.png",
+      "sha256": "1b26904a074c6e7f1c54714c82178d649c057a728793104cd4d8678785e2b4cd",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "edge-chips": {
+      "path": "themes/cyberpunk/assets/surface-detail/edge-chips/field/roughness.png",
+      "sha256": "09e7072705c3ecbcd5d225a1736c4c8d19993dff95bc14871c44a53d03ad7461",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "dirt-dust": {
+      "path": "themes/cyberpunk/assets/surface-detail/dirt-dust/field/roughness.png",
+      "sha256": "33e52b7b163af3c2353738f8490b356828f3c8d89eee31e00f66a37bc92768f5",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "dirt-streaks": {
+      "path": "themes/cyberpunk/assets/surface-detail/dirt-streaks/field/roughness.png",
+      "sha256": "345c6be35db2f616db191820733e79e70533f09e5a47e2a2901d7e80581d9e70",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "atlas-basecolor": {
+      "path": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/basecolor.png",
+      "sha256": "db53b864c07b76846dc47939764692339b915b2e778307cc055b64a1f302eafa",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "srgb",
+      "wrap": [
+        "clamp",
+        "clamp"
+      ]
+    },
+    "atlas-roughness": {
+      "path": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/roughness.png",
+      "sha256": "0de246390ab138fdf77f2c8f5d88468c86f78375cc8929473ebc2b254c2624d1",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "clamp",
+        "clamp"
+      ]
+    },
+    "atlas-opacity": {
+      "path": "themes/cyberpunk/assets/surface-detail/decal-atlas/engine-grid/opacity.png",
+      "sha256": "5aacb3f470c2a85c02676b291e89bc571b47e4a09cf1cd8fc470356d46a08ee8",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "clamp",
+        "clamp"
+      ]
+    }
+  },
+  "masks": {
+    "smudge": {
+      "key": "cyberpunk/surface-detail/broad-smudge",
+      "variant": "field",
+      "map": "roughness",
+      "texture": "broad-smudge",
+      "worldSize": [
+        2,
+        2
+      ],
+      "channel": "r",
+      "meaning": "0 absent, 1 strongest residue or wear"
+    },
+    "fingerprint": {
+      "key": "cyberpunk/surface-detail/fine-fingerprint",
+      "variant": "field",
+      "map": "roughness",
+      "texture": "fine-fingerprint",
+      "worldSize": [
+        0.25,
+        0.25
+      ],
+      "channel": "r",
+      "meaning": "0 absent, 1 strongest residue or wear"
+    },
+    "edge": {
+      "key": "cyberpunk/surface-detail/edge-scuff",
+      "variant": "field",
+      "map": "roughness",
+      "texture": "edge-scuff",
+      "worldSize": [
+        1,
+        1
+      ],
+      "channel": "r",
+      "meaning": "0 absent, 1 strongest residue or wear"
+    },
+    "edgeChips": {
+      "key": "cyberpunk/surface-detail/edge-chips",
+      "variant": "field",
+      "map": "roughness",
+      "texture": "edge-chips",
+      "worldSize": [
+        1,
+        1
+      ],
+      "channel": "r",
+      "meaning": "0 absent, 1 strongest residue or wear"
+    },
+    "macro": {
+      "key": "cyberpunk/surface-detail/dirt-dust",
+      "variant": "field",
+      "map": "roughness",
+      "texture": "dirt-dust",
+      "worldSize": [
+        2,
+        2
+      ],
+      "channel": "r",
+      "meaning": "0 absent, 1 strongest residue or wear"
+    },
+    "dirtStreaks": {
+      "key": "cyberpunk/surface-detail/dirt-streaks",
+      "variant": "field",
+      "map": "roughness",
+      "texture": "dirt-streaks",
+      "worldSize": [
+        2,
+        2
+      ],
+      "channel": "r",
+      "meaning": "0 absent, 1 strongest residue or wear"
+    }
+  },
+  "atlas": {
+    "key": "cyberpunk/surface-detail/decal-atlas",
+    "variant": "engine-grid",
+    "columns": 4,
+    "rows": 4,
+    "origin": "top-left",
+    "gutterPixels": 24,
+    "cells": [
+      {
+        "column": 0,
+        "row": 0,
+        "kind": "oil",
+        "uvRect": [
+          0,
+          0,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "column": 1,
+        "row": 0,
+        "kind": "oil",
+        "uvRect": [
+          0.25,
+          0,
+          0.5,
+          0.25
+        ]
+      },
+      {
+        "column": 2,
+        "row": 0,
+        "kind": "oil",
+        "uvRect": [
+          0.5,
+          0,
+          0.75,
+          0.25
+        ]
+      },
+      {
+        "column": 3,
+        "row": 0,
+        "kind": "tyre",
+        "uvRect": [
+          0.75,
+          0,
+          1,
+          0.25
+        ]
+      },
+      {
+        "column": 0,
+        "row": 1,
+        "kind": "crack",
+        "uvRect": [
+          0,
+          0.25,
+          0.25,
+          0.5
+        ]
+      },
+      {
+        "column": 1,
+        "row": 1,
+        "kind": "crack",
+        "uvRect": [
+          0.25,
+          0.25,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "column": 2,
+        "row": 1,
+        "kind": "crack",
+        "uvRect": [
+          0.5,
+          0.25,
+          0.75,
+          0.5
+        ]
+      },
+      {
+        "column": 3,
+        "row": 1,
+        "kind": "crack",
+        "uvRect": [
+          0.75,
+          0.25,
+          1,
+          0.5
+        ]
+      },
+      {
+        "column": 0,
+        "row": 2,
+        "kind": "water",
+        "uvRect": [
+          0,
+          0.5,
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "column": 1,
+        "row": 2,
+        "kind": "water",
+        "uvRect": [
+          0.25,
+          0.5,
+          0.5,
+          0.75
+        ]
+      },
+      {
+        "column": 2,
+        "row": 2,
+        "kind": "water",
+        "uvRect": [
+          0.5,
+          0.5,
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "column": 3,
+        "row": 2,
+        "kind": "water",
+        "uvRect": [
+          0.75,
+          0.5,
+          1,
+          0.75
+        ]
+      },
+      {
+        "column": 0,
+        "row": 3,
+        "kind": "gum",
+        "uvRect": [
+          0,
+          0.75,
+          0.25,
+          1
+        ]
+      },
+      {
+        "column": 1,
+        "row": 3,
+        "kind": "gum",
+        "uvRect": [
+          0.25,
+          0.75,
+          0.5,
+          1
+        ]
+      },
+      {
+        "column": 2,
+        "row": 3,
+        "kind": "paint-chip",
+        "uvRect": [
+          0.5,
+          0.75,
+          0.75,
+          1
+        ]
+      },
+      {
+        "column": 3,
+        "row": 3,
+        "kind": "paint-chip",
+        "uvRect": [
+          0.75,
+          0.75,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "engine-atlas",
+    "key": "cyberpunk/surface-detail/decal-atlas",
+    "variant": "engine-grid",
+    "group": "masks",
+    "worldSize": [
+      1,
+      1
+    ],
+    "resolution": [
+      2048,
+      2048
+    ],
+    "roughness": {
+      "min": 0.1600005328655243,
+      "max": 0.9199997186660767,
+      "mean": 0.6231311495364409,
+      "std": 0.2662219230403631
+    },
+    "seam": {
+      "x": 0,
+      "y": 0
+    }
+  }
+]
