@@ -38,3 +38,7 @@ Photographic generation needs ComfyUI. Local derivation, patterns, flat colors, 
 - CLI stdout is one JSON envelope, `{ok,verb,data}` or `{ok,verb,error}`. Report `error.code` and `error.message`; fix the named input before retrying. Exit 0 is success, 2 usage, 1 other failure.
 
 The preview is read-only. Pattern extension guidance lives in [ADD.md](references/patterns/ADD.md).
+
+## Prepared response maps
+
+When albedo cannot describe independent roughness (oily wipes, fingerprints, glaze) use `create --native` with `sourceMaps`: PNG paths for `basecolor`, `normal`, `roughness`, `metallic`, `height`, `ao`, and optional `opacity`. Prepare all maps at exactly `resolution`; every tiled channel passes the seam gate. Scalar maps are grayscale linear values; basecolor is sRGB, normal +Y. Prepared tiles allow up to 2048² pixels. Transparent coverage goes in `opacity`, with `physical.alphaMode: "BLEND"` or `"MASK"`; it also populates basecolor alpha. `pack` and compression work normally. Prepared variants retain their authored response; `refinish` deliberately excludes them. Reimport their recipe to change their finish.

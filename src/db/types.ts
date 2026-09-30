@@ -83,7 +83,7 @@ export interface Variant {
   /** Metres per repeat for this variant; falls back to the entry scale. */
   tiling?: { worldSize: [number, number] };
   /** How the maps were made. Consumers read the maps the same way either way. */
-  class?: 'image' | 'pattern' | 'flat' | 'plate';
+  class?: 'image' | 'pattern' | 'flat' | 'plate' | 'prepared';
   response?: SurfaceResponse;
   resolution: [number, number];
   maps: Partial<Record<MapName, string>> & { basecolor: string; normal: string; roughness: string; metallic: string };
@@ -202,6 +202,8 @@ export interface CreateRequest {
   sourceImage?: { path: string };
   /** Whole opaque tiled albedo imported locally, with derived nonemissive PBR maps. */
   sourceAlbedo?: { path: string };
+  /** Coordinated maps imported verbatim after size, scalar and wrap checks. */
+  sourceMaps?: Record<'basecolor' | 'normal' | 'roughness' | 'metallic' | 'height' | 'ao', string> & { opacity?: string };
   flatNoise?: number;
   pattern?: PatternSpec;
   /** Published world-space placement metadata for this variant. */

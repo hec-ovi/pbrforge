@@ -47,6 +47,7 @@ export function listVerb(argv: string[]): Record<string, unknown> {
 }
 
 function nativeSource(request: CreateRequest): string | undefined {
+  if (request.sourceMaps?.basecolor) return request.sourceMaps.basecolor;
   if (request.sourceImage?.path) return request.sourceImage.path;
   if (request.sourceAlbedo?.path) return request.sourceAlbedo.path;
   if (request.screens?.length && request.screens.every((screen) => screen.imagePath)) {
@@ -58,12 +59,12 @@ function nativeSource(request: CreateRequest): string | undefined {
 function assertNative(request: CreateRequest): void {
   if (request.pattern || request.flatColor || request.recolor) {
     throw new UsageError(
-      `--native is for a PNG from your image tool. Use sourceImage (exact), sourceAlbedo (tile), or screens[].imagePath. Not pattern, flatColor or recolor.`,
+      `--native is for a PNG from your image tool. Use sourceImage (exact), sourceAlbedo (tile), sourceMaps (prepared), or screens[].imagePath. Not pattern, flatColor or recolor.`,
     );
   }
   if (!nativeSource(request)) {
     throw new UsageError(
-      `--native needs a PNG path on the request (sourceImage, sourceAlbedo, or every screens[].imagePath). Generate it with your image tool first, then create.`,
+      `--native needs a PNG path on the request (sourceImage, sourceAlbedo, sourceMaps, or every screens[].imagePath). Generate it with your image tool first, then create.`,
     );
   }
 }
@@ -95,7 +96,7 @@ export async function createVerb(argv: string[]): Promise<Record<string, unknown
         && error.code === 'E_SEAM_CHECK_FAILED'
         && request.seed === undefined
         && !request.sourceAlbedo
-        && !request.sourceImage
+        && !request.sourceImage && !request.sourceMaps
       ) {
         const entry = await create({ ...request, seed: 9973 }, opts);
         created.push({ key: entry.key, variants: entry.variants.length, retry: true });

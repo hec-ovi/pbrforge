@@ -53,5 +53,5 @@ export class Refinisher {
  * on its own turn.
  */
 function photographed(variant: Variant): boolean {
-  return variant.class !== 'pattern' && variant.class !== 'plate' && !variant.screen && dirname(variant.maps.normal) === dirname(variant.maps.basecolor);
+  return variant.class !== 'prepared' && variant.class !== 'pattern' && variant.class !== 'plate' && !variant.screen && dirname(variant.maps.normal) === dirname(variant.maps.basecolor);
 }

@@ -95,6 +95,49 @@
         }
       }
     },
+    "sourceMaps": {
+      "type": "object",
+      "required": [
+        "basecolor",
+        "normal",
+        "roughness",
+        "metallic",
+        "height",
+        "ao"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "basecolor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "roughness": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metallic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "height": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ao": {
+          "type": "string",
+          "minLength": 1
+        },
+        "opacity": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "description": "Prepared coordinated PNG maps at exactly the requested resolution. Linear scalar channels, +Y normal, sRGB basecolor; tiled maps are seam checked. Up to 2048 squared."
+    },
     "sourceImage": {
       "type": "object",
       "required": ["path"],
@@ -354,6 +397,61 @@
         { "required": ["decal"] },
         { "required": ["brandName"] }, { "required": ["businessKind"] }
       ] }
+    }
+  }, {
+    "if": {
+      "required": [
+        "sourceMaps"
+      ]
+    },
+    "then": {
+      "properties": {
+        "variants": {
+          "const": 1
+        },
+        "emission": {
+          "const": "none"
+        }
+      },
+      "not": {
+        "anyOf": [
+          {
+            "required": [
+              "sourceAlbedo"
+            ]
+          },
+          {
+            "required": [
+              "sourceImage"
+            ]
+          },
+          {
+            "required": [
+              "pattern"
+            ]
+          },
+          {
+            "required": [
+              "flatColor"
+            ]
+          },
+          {
+            "required": [
+              "recolor"
+            ]
+          },
+          {
+            "required": [
+              "screens"
+            ]
+          },
+          {
+            "required": [
+              "finish"
+            ]
+          }
+        ]
+      }
     }
   }],
   "if": {

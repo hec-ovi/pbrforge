@@ -25,7 +25,7 @@ try {
         continue;
       }
       if (e instanceof MaterialsError && e.code === 'E_SEAM_CHECK_FAILED' && request.seed === undefined
-        && !request.sourceAlbedo && !request.sourceImage) {
+        && !request.sourceAlbedo && !request.sourceImage && !request.sourceMaps) {
         console.log(`seam check failed for ${request.key}, retrying with shifted seed`);
         const entry = await create({ ...request, seed: 9973 }, options);
         console.log(`created ${entry.key} (retry)`);

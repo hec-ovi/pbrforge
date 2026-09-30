@@ -29,6 +29,7 @@ import { recolor } from './recolor.js';
 import { screenEmission, screenGlass } from './screen.js';
 import { SourceImage } from './SourceImage.js';
 import { ImagePlate } from './ImagePlate.js';
+import { PreparedMaps } from './PreparedMaps.js';
 import { ImageAlbedo } from './ImageAlbedo.js';
 import { PackedMaps } from './PackedMaps.js';
 import { stampBrand } from './text.js';
@@ -51,6 +52,7 @@ interface Source {
   height?: Gray;
   roughness?: Gray;
   metallic?: Gray;
+  ao?: Gray;
   opacity?: Gray;
   screen?: { spec: Screen; artwork: Rgb };
   /** A tint is the same surface in another paint: it keeps the relief of the variant it came from. */
@@ -102,7 +104,7 @@ export class Generator {
     const start = target.base?.variants.length ?? 0;
 
     const variants: Variant[] = [];
-    const photographed = !request.pattern && !request.flatColor && !request.recolor && !request.sourceImage && request.emission !== 'image';
+    const photographed = !request.pattern && !request.flatColor && !request.recolor && !request.sourceImage && !request.sourceMaps && request.emission !== 'image';
     for (let v = 0; v < count; v++) {
       const id = request.variantId ?? String(start + v + 1);
       if (target.base?.variants.some((existing) => existing.id === id) && !request.overwrite) {
@@ -163,7 +165,7 @@ export class Generator {
       throw new MaterialsError('E_SCHEMA', 'exact alignment needs aspect');
     }
     const [, theme, kind, tier] = KEY.exec(base?.key ?? request.key)!;
-    const physical = base?.physical ?? request.physical ?? {};
+    const physical = request.sourceMaps ? { ...base?.physical, ...request.physical } : base?.physical ?? request.physical ?? {};
     // an appended variant joins the entry's finish, so every photographed variant of one entry shares a band
     const finish = base?.finish ?? resolveFinish(request.finish, physical);
     return { theme, kind, tier, alignment, tiling, physical, finish, base };
@@ -183,7 +185,7 @@ export class Generator {
       const ordered = request.canonical
         ? [...variants, ...kept.filter((v) => !variants.includes(v))]
         : [...kept, ...fresh];
-      return { ...target.base, ...(photographed ? { finish: target.finish } : {}), variants: ordered };
+      return { ...target.base, ...(request.sourceMaps ? { physical: target.physical } : {}), ...(photographed ? { finish: target.finish } : {}), variants: ordered };
     }
     return {
       key: request.key,
@@ -213,6 +215,7 @@ export class Generator {
     width: number,
     height: number,
   ): Promise<Source> {
+    if (request.sourceMaps) return PreparedMaps.load(request.sourceMaps, width, height, target.alignment, target.physical);
     if (request.sourceImage) {
       return { basecolor: await ImagePlate.load(request.sourceImage.path, width, height) };
     }
@@ -292,7 +295,7 @@ export class Generator {
     const variant: Variant = {
       id,
       ...(target.base && target.tiling && (request.tiling || source.reuse?.tiling) ? { tiling: target.tiling } : {}),
-      ...(request.sourceImage ? { class: 'plate' as const } : request.sourceAlbedo ? { class: 'image' as const }
+      ...(request.sourceMaps ? { class: 'prepared' as const } : request.sourceImage ? { class: 'plate' as const } : request.sourceAlbedo ? { class: 'image' as const }
         : request.pattern ? { class: 'pattern' as const } : request.flatColor ? { class: 'flat' as const } : {}),
       resolution: [source.basecolor.width, source.basecolor.height],
       maps,
@@ -347,7 +350,7 @@ function assertResolution(request: CreateRequest, target: Target, width: number,
     );
   }
   const pixels = width * height;
-  const limit = target.alignment === 'tile' ? MAX_TILE_PIXELS : MAX_EXACT_PIXELS;
+  const limit = target.alignment === 'tile' ? (request.sourceMaps ? 2048 * 2048 : MAX_TILE_PIXELS) : MAX_EXACT_PIXELS;
   if (width > MAX_SIDE || height > MAX_SIDE || pixels > limit) {
     throw new MaterialsError(
       'E_SCHEMA',
@@ -385,7 +388,8 @@ async function derivedMaps(
   const height = source.height ?? deriveHeight(source.basecolor, target.finish);
   const roughness = source.roughness ?? deriveRoughness(height, target.finish);
   return [
-    ...(await reliefMaps(height, roughness, source.normal)),
+    ...(await reliefMaps(height, roughness, source.normal)).filter(([name]) => name !== 'ao' || !source.ao),
+    ...(source.ao ? ([['ao', await encodeGrayPng(source.ao)]] as [MapName, Buffer][]) : []),
     ['metallic', await encodeGrayPng(source.metallic ?? deriveMetallic(source.basecolor, target.physical))],
     ...(source.opacity ? ([['opacity', await encodeGrayPng(source.opacity)]] as [MapName, Buffer][]) : []),
     ...(mode === 'luminance' || mode === 'color-mask'
@@ -399,7 +403,7 @@ function assertDecal(request: CreateRequest, target: Target): void {
   if (!request.decal) return;
   if (target.alignment !== 'exact') throw new MaterialsError('E_SCHEMA', 'a decal needs exact alignment');
   if (target.physical.alphaMode !== 'BLEND') throw new MaterialsError('E_SCHEMA', 'a decal needs alphaMode BLEND');
-  if (request.pattern?.kind !== 'incident-blood' && request.pattern?.kind !== 'incident-tyre' && request.pattern?.kind !== 'window-grime') {
+  if (!request.sourceMaps?.opacity && request.pattern?.kind !== 'incident-blood' && request.pattern?.kind !== 'incident-tyre' && request.pattern?.kind !== 'window-grime') {
     throw new MaterialsError('E_SCHEMA', 'a procedural decal needs a pattern with an opacity map');
   }
   const aspect = target.base?.aspect ?? request.aspect!;

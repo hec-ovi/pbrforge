@@ -136,3 +136,7 @@ Unexpected filesystem, image-decoder or caller-backend exceptions can propagate 
 ## Dependencies
 
 Node.js, Ajv and Sharp; optional ComfyUI for generation. Preview uses Three.js and browser APIs. No runtime dependency on another Urbe box. Binding data coordinates with [Atlas hydrology](../atlas/src/hydro/CONTRACT.md) and [Atlas street construction](../atlas/src/streets/construction/CONTRACT.md).
+
+### Prepared native response maps
+
+`create` accepts `sourceMaps` with complete, coordinated PNG channels (`basecolor`, `normal`, `roughness`, `metallic`, `height`, `ao`, optional `opacity`). Every channel must match the declared resolution exactly; data channels are grayscale linear bytes, basecolor sRGB, normals +Y. Tiled imports seam-check every channel and allow 2048² pixels. Opacity also enters basecolor alpha. A `prepared` variant retains independent authored roughness and is excluded from albedo-derived `refinish`; reimport its recipe instead. Source paths do not enter the catalog. Packing and compression consume these maps like any other variant.
