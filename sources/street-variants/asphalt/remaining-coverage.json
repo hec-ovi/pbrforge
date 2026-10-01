@@ -1,0 +1,27 @@
+{
+  "status": "Street material overhaul remains incomplete; do not label all62surfaceIDs finished.",
+  "thisBatch": "Four asphalt condition candidates only. Current clean/worn basecolor duplication is documented; live fix still depends on root integrating staged maps.",
+  "remaining": [
+    {
+      "family": "grey/orange hex",
+      "need": "Full genuinely different clean/stained/cracked/repaired histories and worn relief, then actual map routing/scale and all relevant reference comparisons. Earlier isolated worn-grey is not an accepted family."
+    },
+    {
+      "family": "red/blue/yellow curb and gutter",
+      "need": "Upper lip vs lower gutter wear, connected substrate loss, varied use and coherent straight/curved pieces. Claude owns gutter UV/geometry work. No curb set was authored in this batch."
+    },
+    {
+      "family": "hardware: drains, covers, access mesh/frame",
+      "need": "Material-response variation and production routing checks while preserving real holes/bars/silhouettes. A flat perforation map is not a substitute for geometry."
+    },
+    {
+      "family": "red coated walk",
+      "need": "Root controlled-light view confirms sealed sheen exists; remaining problems are repeated stain/patch identity and absent connected edge coating loss. A separate red follow-up is next; no global darkening/roughness reduction is inferred."
+    },
+    {
+      "family": "other62boundIDs",
+      "need": "Many IDs are aliases, paint, displays or role-specific finishes. Each active role needs its own coverage/acceptance evidence; existence of these four maps is not coverage of the entire binding."
+    }
+  ],
+  "acceptedComparisonsThisBatch": 0
+}

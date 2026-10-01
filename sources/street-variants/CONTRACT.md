@@ -4,7 +4,7 @@ The optional [binding](../../bindings/street-variants.json) supplements `street-
 
 `surfaces[surfaceId]` names a set. A set carries its physical `worldSize`, a shared construction frame, a selection domain, and weighted variants. Each variant names a resolved Materials key/variant and a complete override for `basecolor`, `normal`, `roughness`, `ao`. `textures` uses the existing native texture descriptor: path, SHA256, dimensions, colour space, wrapping and optional KTX2/hash. Identical resources are shared by content hash and colour space, even when catalog paths differ.
 
-The initial set covers eight concrete slab surface IDs with eight independently generated sources (two per condition): clean, stained, cracked and patched. Condition weights total 0.55, 0.28, 0.10 and 0.07, split equally among the two concrete takes. A separate four-source red-coated set binds the two confirmed coated sidewalk IDs; oxblood remains a sidewalk accent, not a road-shoulder designation. The unused legacy `oxide` ID remains unchanged until its placement role is confirmed. This is an initial batch, not completion of every surface family. Metal service panels, other coatings, hex, asphalt, curbs and graphics retain their current bindings until their own appropriate variants are authored.
+The initial set covers eight concrete slab surface IDs with eight independently generated sources (two per condition): clean, stained, cracked and patched. Condition weights total 0.55, 0.28, 0.10 and 0.07, split equally among the two concrete takes. A separate four-source red-coated set binds the two confirmed coated sidewalk IDs; oxblood remains a sidewalk accent, not a road-shoulder designation. The unused legacy `oxide` ID remains unchanged until its placement role is confirmed. This is an initial batch, not completion of every surface family. Metal service panels, other coatings, hex, curbs and graphics retain their current bindings until their own appropriate variants are authored.
 
 ## Engine selection
 
@@ -25,3 +25,9 @@ The binding fingerprints its base binding. A changed fingerprint requires a comp
 The concrete import passes the native seam gate. PBR response is authored separately from pigment: broad stains are not converted to deep relief. Matching colour/map edges preserves the construction frame, while the interior wear differs.
 
 Visual acceptance requires the actual engine selector: compare an extended slab run at walking and grazing views under the same light, including stable reload/LOD and clipping boundaries. Map validity is not that acceptance.
+
+## Asphalt condition candidates
+
+`sets.asphalt-conditions` contains four joint-free 2 m condition maps with shared boundary samples. It is deliberately unbound in `surfaces`: the native asphalt and parking effects have extra clean/base slots and different channel mixing, so the photographed-surface override would be incorrect. [Integration proposal](asphalt/integration-proposal.json) specifies the full coherent condition routing and preserves world-XZ sampling, parking entrance blending and all lane/gutter UVs. It requires an engine consumer change before activation.
+
+Weights are 0.80 clean, 0.15 stained, 0.03 cracked, 0.02 repaired. The world-cell domain is a proposed stable condition field, not authorization to cut geometry into 2 m panels. Preserve the native two-region sampling and its gradients; the consumer must decide how a coherent condition survives that crossfade. Do not infer that simple per-cell switching implements the existing sampling contract. Sparse repairs and cross-cell cracks may require placement content. Current clean/worn roughness and AO support is incomplete; never mix a clean colour with a stained response while claiming a full condition.

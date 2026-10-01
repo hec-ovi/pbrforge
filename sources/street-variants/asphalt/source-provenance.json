@@ -1,0 +1,86 @@
+[
+  {
+    "state": "clean",
+    "mode": "built-in image_gen",
+    "source": "exec-6dda9ca1-696b-45b1-9bce-f58d3ec0a9da.png",
+    "rawPath": "sources/street-variants/asphalt/raw/clean.png",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawSha256": "3196bf9db8b7a9379d00e61c46464bbac103be5e50045be173c57bff4e146112",
+    "promptFile": "prompts.json",
+    "preparedSize": [
+      1024,
+      1024
+    ],
+    "worldMetres": [
+      2,
+      2
+    ],
+    "resampling": "whole-image downsample; no upscaling"
+  },
+  {
+    "state": "stained",
+    "mode": "built-in image_gen",
+    "source": "exec-55c828f3-4a7c-4e0e-97f7-df2cd413822e.png",
+    "rawPath": "sources/street-variants/asphalt/raw/stained.png",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawSha256": "fab1ec4bceb0ee60d509099a3f3487c07e7c7bcef2644179ce0f56815f6df5f7",
+    "promptFile": "prompts.json",
+    "preparedSize": [
+      1024,
+      1024
+    ],
+    "worldMetres": [
+      2,
+      2
+    ],
+    "resampling": "whole-image downsample; no upscaling"
+  },
+  {
+    "state": "cracked",
+    "mode": "built-in image_gen",
+    "source": "exec-cb3d413b-c138-40f5-bba2-34d4aa0f241d.png",
+    "rawPath": "sources/street-variants/asphalt/raw/cracked.png",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawSha256": "b89e5f0d72d8ac8dcc6a32f843627fb4bea67a51105f639e5ebb3ee57d5b41c1",
+    "promptFile": "prompts.json",
+    "preparedSize": [
+      1024,
+      1024
+    ],
+    "worldMetres": [
+      2,
+      2
+    ],
+    "resampling": "whole-image downsample; no upscaling"
+  },
+  {
+    "state": "patched",
+    "mode": "built-in image_gen",
+    "source": "exec-fa099e75-9053-4d62-9bbe-e31ffe35e10c.png",
+    "rawPath": "sources/street-variants/asphalt/raw/patched.png",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "rawSha256": "6dfee145c7984e28669a8dfb75887d2692355fdccf6154ec14afc7e49757b169",
+    "promptFile": "prompts.json",
+    "preparedSize": [
+      1024,
+      1024
+    ],
+    "worldMetres": [
+      2,
+      2
+    ],
+    "resampling": "whole-image downsample; no upscaling"
+  }
+]

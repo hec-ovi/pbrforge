@@ -7,3 +7,5 @@ Each source describes a 2 m square precast pedestrian slab under diffuse, even i
 Resolved family: `cyberpunk/street-sidewalk/mid`, variants `slab-clean-1`, `slab-stained-1`, `slab-cracked-1`, `slab-patched-1`, and their `-2` counterparts. Red-coated slab sources and output inventory are under [red](red/catalog.json). Their complete PBR masters are published in the material catalog. The [companion binding contract](CONTRACT.md) provides per-panel selection without changing block sidewalk ownership or UVs.
 
 The first batch is a candidate pending engine selection and in-game visual acceptance. Additional material families need their own appropriate variants.
+
+The [asphalt condition family](asphalt/INDEX.md) provides four joint-free sources and an explicit native asphalt/parking integration proposal. It remains unbound until the consumer supports complete condition routing.

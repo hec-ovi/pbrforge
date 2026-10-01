@@ -22,7 +22,7 @@
     },
     "slab-clean-normal": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-1/normal.png",
-      "sha256": "2e944e2628e5207fd63c427600b3feeb545df5bf365459fa2e1667e8792a8cca",
+      "sha256": "a4250704ce442dd44236fc3493d07c96a99c8f35aa48f1a7a7f9fa4d079359ce",
       "resolution": [
         1024,
         1024
@@ -33,11 +33,11 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-1/normal.ktx2",
-      "ktx2Sha256": "f6d61f6b52758ec0831844196c23c9539b7445467be4c3e298c60f94d160a7b1"
+      "ktx2Sha256": "4207123e2d2c7c81e3201a453f612f2464528e894cde791c89fe8e1bc38a6462"
     },
     "slab-clean-roughness": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-1/roughness.png",
-      "sha256": "b345755bfb34aedbb61d26d519304e6e68ca856741d5b18872a0606e13170c6b",
+      "sha256": "dea43d89cb47572ca0a0fe20b47a28ffc3df3523d4ff89f2bbb2ba1202b889f3",
       "resolution": [
         1024,
         1024
@@ -48,7 +48,7 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-1/roughness.ktx2",
-      "ktx2Sha256": "d0677098d38af98d1c71675927b5a42df44c2fa04f1b75df62f03636852880dd"
+      "ktx2Sha256": "6ebafbfa630a06bf1195c7a1597dfeaa2c03745402790a0b3b96edbc01f2a1d6"
     },
     "slab-clean-ao": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-1/ao.png",
@@ -82,7 +82,7 @@
     },
     "slab-stained-normal": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-1/normal.png",
-      "sha256": "2277e85d4fd65d79dd6f74617db7481b3351de8a34ac7ba2e500b9464db3b634",
+      "sha256": "a9bac951d5d5742aaa4cf2fccf3687757739ebc8108603679f6ad5515fdb91d4",
       "resolution": [
         1024,
         1024
@@ -93,11 +93,11 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-1/normal.ktx2",
-      "ktx2Sha256": "6ec80d1511f81f599553ffb6e5296c1f4d8db54b409c3fc7315e425a22a8f640"
+      "ktx2Sha256": "11afa2c1ee58ac9b8007398afce1ef68d17324deacac73cc217a8900f14853fd"
     },
     "slab-stained-roughness": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-1/roughness.png",
-      "sha256": "32b3c1030ce316f0034dba6023f3df29bac2659dabf6efbeb7e755370686f5a9",
+      "sha256": "4d776010b4630adf5fb7187648751d87edb278d95a2856426cd96a760b85eb71",
       "resolution": [
         1024,
         1024
@@ -108,7 +108,7 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-1/roughness.ktx2",
-      "ktx2Sha256": "3394f2c53716bf6a7bb1fffdc4aacf0b56541ff85f8c16a1322311401616af33"
+      "ktx2Sha256": "e27e55c06505356b957ad1c7b601bb64209cab84b95b8e5f9901a9a4b1d421c0"
     },
     "slab-cracked-basecolor": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-1/basecolor.png",
@@ -127,7 +127,7 @@
     },
     "slab-cracked-normal": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-1/normal.png",
-      "sha256": "deadc9fbfa5a9e3c009ec2dfa84c06408196ff45de7066c0b2f12373d52efd1e",
+      "sha256": "5084041d7c0c172c65ce348643663e28c68df57e7b4d7674e72310411607697f",
       "resolution": [
         1024,
         1024
@@ -138,11 +138,11 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-1/normal.ktx2",
-      "ktx2Sha256": "6b50d1a47d27d35de59e0d5a54e0bc6db34fe831de92107fc8b366926ac0e6e7"
+      "ktx2Sha256": "28e6e42b6dbbd6eadc91747816677efb2584b4be0a7e92f95a465640f7ea9d1a"
     },
     "slab-cracked-roughness": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-1/roughness.png",
-      "sha256": "aed9fe4e9ebea0fa88d374e7a9cba3105de471ff368d5d94d9b0dc839a9e0c5c",
+      "sha256": "9ef46a00e25ea271dc41a836fff6553d2b057ee1b2b598e232efdd66bbf2005d",
       "resolution": [
         1024,
         1024
@@ -153,7 +153,7 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-1/roughness.ktx2",
-      "ktx2Sha256": "5fa47a6252829ad1f6b96b92ac1567988f39094aec5ea1f103840493753b6777"
+      "ktx2Sha256": "20919d8d6b400d788f5457be0d13025c2662e40a2127b7383f6d022d388ff02f"
     },
     "slab-cracked-ao": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-1/ao.png",
@@ -187,7 +187,7 @@
     },
     "slab-patched-normal": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-patched-1/normal.png",
-      "sha256": "623d3337234ae8643a40320a85fb98ee8e9c79a3252c762cb6f48128af3889d6",
+      "sha256": "dc63f1f037848752267b16ed2cc779a894c94d9cf8dbc771192b6e6114299fd3",
       "resolution": [
         1024,
         1024
@@ -198,11 +198,11 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-patched-1/normal.ktx2",
-      "ktx2Sha256": "2136c129384fe5c36118903984980650efe3ffba94438bde90c7b38f0427c2f2"
+      "ktx2Sha256": "6c19151bd56b12deeb5345b8cfec2fab414622249ab058fe7a4e778024ed6f11"
     },
     "slab-patched-roughness": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-patched-1/roughness.png",
-      "sha256": "dd3258975ca7d29bae5a996ad1c8a5d08ecba7a034d33fedb38f0b74d396d57c",
+      "sha256": "1d4abdb88fb511ded3b5958eb9de12edc60f37be7064d79033d1297d09936df8",
       "resolution": [
         1024,
         1024
@@ -213,7 +213,7 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-patched-1/roughness.ktx2",
-      "ktx2Sha256": "1636bdbf392a2d58f937af10ad74061cc31cdda3972256680c28a5ceba176d27"
+      "ktx2Sha256": "4bbb3cd94fd205f770cd35d16162e1fefa24a64b8e02bc85229e3f86756064da"
     },
     "slab-clean-b-basecolor": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-2/basecolor.png",
@@ -232,7 +232,7 @@
     },
     "slab-clean-b-normal": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-2/normal.png",
-      "sha256": "bb9423b2f00f38dadd08ca14d054876c79e2afa0c9b6591cbf414458e892e554",
+      "sha256": "be3b08e841f521f43e7d4a1843eeac60cebff3ca8c2a59d1aab87caa5f81d889",
       "resolution": [
         1024,
         1024
@@ -243,11 +243,11 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-2/normal.ktx2",
-      "ktx2Sha256": "1d782a4aa49691e5e8c15139a49b68b8bc28a2b6abc63b7494fd14bf2b4e9510"
+      "ktx2Sha256": "4b1eed8807fbddd57a016807be33be144c785e179c1ad5dcb8c25a04fd53685e"
     },
     "slab-clean-b-roughness": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-2/roughness.png",
-      "sha256": "c2fd93904f898a9ce5a8990315410a4fe856240e0d5fafac5a6f343fe872960e",
+      "sha256": "1e1d7b8c4027f444b8c8d2429ed37986654a3f9590a8de1077ce482c7ec63dde",
       "resolution": [
         1024,
         1024
@@ -258,7 +258,7 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-clean-2/roughness.ktx2",
-      "ktx2Sha256": "88fbddb86eb61d1944a923d1bbe2326ec7d473922955a885420fd243faa49676"
+      "ktx2Sha256": "e812a93567bff7ef4c476e08c607ee621a317079d4f52b801ef6b8a0d51b05a6"
     },
     "slab-stained-b-basecolor": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-2/basecolor.png",
@@ -277,7 +277,7 @@
     },
     "slab-stained-b-normal": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-2/normal.png",
-      "sha256": "fc32b0d3b89cf58926ff7c36a2af016c77782d87030f5fb89eec40dc4b23f643",
+      "sha256": "58d04fe5cb8e2d6a114eec9f7667fc756914ce22f7d4cff33d187cc1ee1ee06c",
       "resolution": [
         1024,
         1024
@@ -288,11 +288,11 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-2/normal.ktx2",
-      "ktx2Sha256": "998e33443e06a529dba739e939bf2835b323afce36fd1a801ca96eef0ec0beca"
+      "ktx2Sha256": "7ecec3523b08cf41cfbb4e3687641b72af7d8292b62af244d856f6967451ade8"
     },
     "slab-stained-b-roughness": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-2/roughness.png",
-      "sha256": "87ea617e1d9785e655f73b7d1134ff744c01f5171fc0bf94819253f5ae7b4465",
+      "sha256": "9ee725592852b74ced198941f3fd326cbc6c61d14563fbbce45637f38eedda4e",
       "resolution": [
         1024,
         1024
@@ -303,7 +303,7 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-stained-2/roughness.ktx2",
-      "ktx2Sha256": "4bac94ce01cdf1aeca6852252c7458b0e63c03dccd8e1012f43c71b5bb490050"
+      "ktx2Sha256": "b6782b80fa2faea7172a52520f95cf8bb11ed09ea750d4760bf0b30adf15071f"
     },
     "slab-cracked-b-basecolor": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-2/basecolor.png",
@@ -322,7 +322,7 @@
     },
     "slab-cracked-b-normal": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-2/normal.png",
-      "sha256": "c8298c5ac9b93c0c44fe231117ab5fe5bae579462bf79ea583935f8fe34dab33",
+      "sha256": "54d377f32f853bde2d4b844a1dff41903f943553c8b350612b6a5886030cf504",
       "resolution": [
         1024,
         1024
@@ -333,11 +333,11 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-2/normal.ktx2",
-      "ktx2Sha256": "592a5372d9e46212e384b40d53550dc7dcb00cb80e25491cedc42863870e139f"
+      "ktx2Sha256": "da1e50f99a0d8fc0a38d403b89f92efa1f018e93ed190a39db3954f65cb1454a"
     },
     "slab-cracked-b-roughness": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-2/roughness.png",
-      "sha256": "dec674b1cea8c371e22557b84b31ea8b6f079dffaad2add4e98b058c3bf3a39d",
+      "sha256": "86b3e29fcdd3dc1bfd2dade8b1a96cc3f51f0d88a3ee787fe5c2f6bbc331a762",
       "resolution": [
         1024,
         1024
@@ -348,7 +348,7 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-2/roughness.ktx2",
-      "ktx2Sha256": "dbbdba08012463b88d368edd6b8cfe802e31fe0c54b7dd4b6396b8fe12efeaba"
+      "ktx2Sha256": "6c98ed09a33751a5dce989be6e2ccee21787e7d2487942e108b5972962bbaf76"
     },
     "slab-cracked-b-ao": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-cracked-2/ao.png",
@@ -382,7 +382,7 @@
     },
     "slab-patched-b-normal": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-patched-2/normal.png",
-      "sha256": "30de4caab10fed3909201ffaf766281eff74648336eae365a451973abebd95be",
+      "sha256": "61dabca4993af8fdd15aa708fad3f7fea95f540603321e2134740a095a6d5e56",
       "resolution": [
         1024,
         1024
@@ -393,11 +393,11 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-patched-2/normal.ktx2",
-      "ktx2Sha256": "a3430ba85d8bf171d26144829b1ff46c0f59af4d044e2a47be53466096e34556"
+      "ktx2Sha256": "88d5f54420010dbaf92401b14d9498731f90c5429f617cfae7d93b104d265d50"
     },
     "slab-patched-b-roughness": {
       "path": "themes/cyberpunk/assets/street-sidewalk/mid/slab-patched-2/roughness.png",
-      "sha256": "1c0047efc489927bc6ddf96b3d686ec05956e1b1fd564eb07a08642f7fa270e0",
+      "sha256": "1e68186bd3c6c93f474bf660227af24cfffc2189b4a3d81ce7398028b6faf2f0",
       "resolution": [
         1024,
         1024
@@ -408,7 +408,7 @@
         "repeat"
       ],
       "ktx2": "themes/cyberpunk/assets/street-sidewalk/mid/slab-patched-2/roughness.ktx2",
-      "ktx2Sha256": "d38bf1f7b5778a5bc76b42b6ca34ae3cb80f1c27f4bbc41cc8ce01f693df9460"
+      "ktx2Sha256": "ec1da95626a00c123b21348dfef430f6cf400eb1ff944fd4091a9aa92398cf9c"
     },
     "red-coat-clean-basecolor": {
       "path": "themes/cyberpunk/assets/street-coated/mid/red-clean-1/basecolor.png",
@@ -619,6 +619,246 @@
       ],
       "ktx2": "themes/cyberpunk/assets/street-coated/mid/red-patched-1/roughness.ktx2",
       "ktx2Sha256": "ad58880fd0a97456b167318b5436356749856c06cba1adf0683e1fef6d91ca16"
+    },
+    "asphalt-condition-clean-basecolor": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-clean-1/basecolor.png",
+      "sha256": "21551b9995432f0a603ced44a4bbacd011347f8cf849cb670ec217aec8d4c0a8",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "srgb",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-clean-1/basecolor.ktx2",
+      "ktx2Sha256": "bf7d2b05494687d9d307c8d501fad649b7ac305e181c6884d4c189e7b039ed89"
+    },
+    "asphalt-condition-clean-normal": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-clean-1/normal.png",
+      "sha256": "bc496808641de5d6cd4137decd1c91d7147a4dee18d3f7a6253f6842368468d9",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-clean-1/normal.ktx2",
+      "ktx2Sha256": "02f3c40788576cd910396b17ad8c1bae9683f7accabf4ba542977f6b1b35f822"
+    },
+    "asphalt-condition-clean-roughness": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-clean-1/roughness.png",
+      "sha256": "71354584a6288e914c6a1d97d4256ae9bdcc7db45402d97ea6f8d5beb74fe009",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-clean-1/roughness.ktx2",
+      "ktx2Sha256": "b45cdbe1830feb6bed7b626301de2842793559d84389a26dd8a3c168f036f0b7"
+    },
+    "asphalt-condition-clean-ao": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-clean-1/ao.png",
+      "sha256": "b10836a35e99ccbe811eec9f5032f3e5ae4455599347169eb6d5198a5122090c",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-clean-1/ao.ktx2",
+      "ktx2Sha256": "110df1379b30ae1ee85985d50ede12c62337ec2a74ac47bfea722b774dcb0ec0"
+    },
+    "asphalt-condition-stained-basecolor": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-stained-1/basecolor.png",
+      "sha256": "a47bf5b247272716cd2154763bf69a614282ee120913bcae4d61629c38375406",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "srgb",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-stained-1/basecolor.ktx2",
+      "ktx2Sha256": "7edd3d9856aff4b1e8129c052a5c97369c385f8be2f7db6dcb0650d9ed9ff58e"
+    },
+    "asphalt-condition-stained-normal": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-stained-1/normal.png",
+      "sha256": "ec5ae5d5536f478ad034e14548d6e8baf8cf570ab224bc55d1a036634e276668",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-stained-1/normal.ktx2",
+      "ktx2Sha256": "48744f2c085f2c7b3aaae42fd508cc0c59d764662e14b7e8909f83b2ee4791ea"
+    },
+    "asphalt-condition-stained-roughness": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-stained-1/roughness.png",
+      "sha256": "0a0bac50d5137ccb0d1555af6ac6df78b7a397bb30fc7041f49b05a1a61bb656",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-stained-1/roughness.ktx2",
+      "ktx2Sha256": "31884afe4f2a24512dc70b713a7cf1e94023c8cd55533ea2106f1f3ece94b796"
+    },
+    "asphalt-condition-stained-ao": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-stained-1/ao.png",
+      "sha256": "69866d8dfa85d9357112be4c6801d71d9af5eb397bf22ca011be8f9aa7b7ed37",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-stained-1/ao.ktx2",
+      "ktx2Sha256": "a48276f555bdc4556efc9eb000baef3ef7cd961c666162650d93b27d829cc10f"
+    },
+    "asphalt-condition-cracked-basecolor": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-cracked-1/basecolor.png",
+      "sha256": "d425d7bf6345c735d11b717fb3ad1eb41c1414b81b5e0282a4642338139ebd10",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "srgb",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-cracked-1/basecolor.ktx2",
+      "ktx2Sha256": "aca8fcb581799d6993b9dd3e4a4ae9164be785d285a590148bb50eea6904a178"
+    },
+    "asphalt-condition-cracked-normal": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-cracked-1/normal.png",
+      "sha256": "c0357c180165d9dd63885e1a20bf7de917ab28d196256e33443cc71745e662e7",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-cracked-1/normal.ktx2",
+      "ktx2Sha256": "aa5b0fc50ab7a62d73b6fb1fd303b7a181eddf5f369978cfc631723fe59ba213"
+    },
+    "asphalt-condition-cracked-roughness": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-cracked-1/roughness.png",
+      "sha256": "df37382a1e0ba8df60f076e4d0562224ebb9afcc56322a61f4742e7d24c90aeb",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-cracked-1/roughness.ktx2",
+      "ktx2Sha256": "d2bdd7ac7bfdf93c85f51ef8bdd11b643bcc5a376ae0b9f84e6e10a2f0bc7fa4"
+    },
+    "asphalt-condition-cracked-ao": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-cracked-1/ao.png",
+      "sha256": "cd5c04a91c2b90ac6e9e11f7161b1b820609fc60eaf2016c04c987d68788a836",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-cracked-1/ao.ktx2",
+      "ktx2Sha256": "bdf58cbb6c301faffa74bc45b5d7ce2ee230dfe7504da98f7abfdce0c7cd124a"
+    },
+    "asphalt-condition-patched-basecolor": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-patched-1/basecolor.png",
+      "sha256": "e7cb7198806d452380ca529dd222491ae5291fec0b42f24fe38d088dd39ea15f",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "srgb",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-patched-1/basecolor.ktx2",
+      "ktx2Sha256": "c0031dc7db5ec3b9eb3c2456e431dae563c5e5e0cb4aeb33c4d0639f8ca694d0"
+    },
+    "asphalt-condition-patched-normal": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-patched-1/normal.png",
+      "sha256": "7da12380e17e72c0616416e5d2e5ab3b2535059df2879645ac240e948a5f2819",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-patched-1/normal.ktx2",
+      "ktx2Sha256": "1a56f8df3a07ad69822ef47e3fe5b150389340f72d07acdd557ff3745d27d420"
+    },
+    "asphalt-condition-patched-roughness": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-patched-1/roughness.png",
+      "sha256": "108b0835d78e54a32d3428fdf074e740e86c292bf714c6314b95367b180d1b2b",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-patched-1/roughness.ktx2",
+      "ktx2Sha256": "ffc4d1d159e13dd4988473065674308064c6bfcee9054bab6f40d99ea72f239e"
+    },
+    "asphalt-condition-patched-ao": {
+      "path": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-patched-1/ao.png",
+      "sha256": "da0cffdc78c5be1dd60ccfeb7f3fb837939af923bae64e4e86b935ceb35b8aa0",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorSpace": "linear",
+      "wrap": [
+        "repeat",
+        "repeat"
+      ],
+      "ktx2": "themes/cyberpunk/assets/street-asphalt/mid/asphalt-patched-1/ao.ktx2",
+      "ktx2Sha256": "0e63ce035c064895eba902d0cd1f9b2f0eda030a58d6106be49695679c22ae89"
     }
   },
   "sets": {
@@ -828,6 +1068,81 @@
             "normal": "red-coat-patched-normal",
             "roughness": "red-coat-patched-roughness",
             "ao": "red-coat-clean-ao"
+          }
+        }
+      ]
+    },
+    "asphalt-conditions": {
+      "worldSize": [
+        2,
+        2
+      ],
+      "structuralFrame": "continuous-asphalt-2m-v1",
+      "selection": {
+        "unit": "world-cell",
+        "salt": "asphalt-conditions-v1",
+        "fallback": "clean",
+        "uvTransform": "identity"
+      },
+      "variants": [
+        {
+          "id": "clean",
+          "condition": "clean",
+          "weight": 0.8,
+          "material": {
+            "key": "cyberpunk/street-asphalt/mid",
+            "variant": "asphalt-clean-1"
+          },
+          "maps": {
+            "basecolor": "asphalt-condition-clean-basecolor",
+            "normal": "asphalt-condition-clean-normal",
+            "roughness": "asphalt-condition-clean-roughness",
+            "ao": "asphalt-condition-clean-ao"
+          }
+        },
+        {
+          "id": "stained",
+          "condition": "stained",
+          "weight": 0.15,
+          "material": {
+            "key": "cyberpunk/street-asphalt/mid",
+            "variant": "asphalt-stained-1"
+          },
+          "maps": {
+            "basecolor": "asphalt-condition-stained-basecolor",
+            "normal": "asphalt-condition-stained-normal",
+            "roughness": "asphalt-condition-stained-roughness",
+            "ao": "asphalt-condition-stained-ao"
+          }
+        },
+        {
+          "id": "cracked",
+          "condition": "cracked",
+          "weight": 0.03,
+          "material": {
+            "key": "cyberpunk/street-asphalt/mid",
+            "variant": "asphalt-cracked-1"
+          },
+          "maps": {
+            "basecolor": "asphalt-condition-cracked-basecolor",
+            "normal": "asphalt-condition-cracked-normal",
+            "roughness": "asphalt-condition-cracked-roughness",
+            "ao": "asphalt-condition-cracked-ao"
+          }
+        },
+        {
+          "id": "patched",
+          "condition": "patched",
+          "weight": 0.02,
+          "material": {
+            "key": "cyberpunk/street-asphalt/mid",
+            "variant": "asphalt-patched-1"
+          },
+          "maps": {
+            "basecolor": "asphalt-condition-patched-basecolor",
+            "normal": "asphalt-condition-patched-normal",
+            "roughness": "asphalt-condition-patched-roughness",
+            "ao": "asphalt-condition-patched-ao"
           }
         }
       ]

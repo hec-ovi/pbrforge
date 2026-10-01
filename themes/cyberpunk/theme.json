@@ -26821,6 +26821,166 @@
             "ao": "assets/street-asphalt/mid/patched/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/696ca9098169b913b2b0c8f1684fafff77a12342812ab72c5ef94ac62dcbea4f.ktx2"
           }
+        },
+        {
+          "id": "asphalt-clean-1",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-clean-1/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-clean-1/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-clean-1/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-clean-1/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-clean-1/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-clean-1/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/9aeafa99bf6e54476e8552944294e4e967cc557d5279422125944eec18980fe4.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-clean-1/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-clean-1/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-clean-1/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-clean-1/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-clean-1/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-clean-1/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/9aeafa99bf6e54476e8552944294e4e967cc557d5279422125944eec18980fe4.ktx2"
+          }
+        },
+        {
+          "id": "asphalt-stained-1",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-stained-1/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-stained-1/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-stained-1/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-stained-1/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-stained-1/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-stained-1/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/a7e6c6d7e197e669de5cd5c8bac3606792b600dac3ecf267a42342a8709da169.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-stained-1/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-stained-1/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-stained-1/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-stained-1/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-stained-1/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-stained-1/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/a7e6c6d7e197e669de5cd5c8bac3606792b600dac3ecf267a42342a8709da169.ktx2"
+          }
+        },
+        {
+          "id": "asphalt-cracked-1",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-cracked-1/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-cracked-1/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-cracked-1/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-cracked-1/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-cracked-1/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-cracked-1/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/b8db6a7838ffc2a06d1388ca227d52ee18e00b3ac00daeb10137dd9b0e42249b.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-cracked-1/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-cracked-1/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-cracked-1/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-cracked-1/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-cracked-1/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-cracked-1/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/b8db6a7838ffc2a06d1388ca227d52ee18e00b3ac00daeb10137dd9b0e42249b.ktx2"
+          }
+        },
+        {
+          "id": "asphalt-patched-1",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-patched-1/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-patched-1/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-patched-1/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-patched-1/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-patched-1/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-patched-1/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/87cca4b5a55bc92e04e65c78787f5b6cc340e9a5f12f30bcf2f4c799c2413237.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-patched-1/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-patched-1/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-patched-1/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-patched-1/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-patched-1/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-patched-1/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/87cca4b5a55bc92e04e65c78787f5b6cc340e9a5f12f30bcf2f4c799c2413237.ktx2"
+          }
         }
       ]
     },

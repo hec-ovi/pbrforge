@@ -64,6 +64,7 @@ for (const [name, slot] of Object.entries(b.slots)) {
       const relative = 'themes/' + themeName + '/' + variant.maps[channel];
       await texture(slot.maps[channel], channel, relative);
       const t = b.textures[slot.maps[channel]];
+      assert.deepEqual(t.resolution, variant.resolution, name + ': catalog resolution differs');
       if (t.ktx2) assert.equal(t.ktx2, 'themes/' + themeName + '/' + variant.ktx2?.[channel], name + ': compressed catalog source mismatch');
     }
     if (name.endsWith('-concrete')) concrete.add(slot.source.key + '#' + slot.source.variant);
@@ -83,6 +84,7 @@ for (const [name, slot] of Object.entries(b.slots)) {
       const source = native.textures[id];
       assert(source, 'native texture absent: ' + id);
       await texture(id, channel, source.path, source.sha256);
+      assert.deepEqual(b.textures[id].resolution, source.resolution, id + ': native resolution differs');
       if (b.textures[id].ktx2) {
         assert.equal(b.textures[id].ktx2, source.ktx2);
         assert.equal(b.textures[id].ktx2Sha256, source.ktx2Sha256);

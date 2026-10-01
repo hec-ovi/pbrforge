@@ -19,8 +19,16 @@ const binding={version:1,baseBinding:{path:'bindings/street-native.json',sha256:
 const redFile=path.join(root,'sources/street-variants/red/catalog.json');
 if(fs.existsSync(redFile)){
  const red=read('sources/street-variants/red/catalog.json').map(r=>({...r,texturePrefix:'red-coat'}));
- binding.sets['red-coated-slabs']={worldSize:[2,2],structuralFrame:'coated-precast-2m-v1',selection:{unit:'panel',salt:'red-coated-variants-v1',fallback:'clean',uvTransform:'identity'},variants:red.map(r=>({id:r.id,condition:r.condition,weight:weights[r.condition],material:{key:r.key,variant:r.variant},maps:Object.fromEntries(['basecolor','normal','roughness','ao'].map(c=>[c,texture(r,c)]))}))};
+ binding.sets['red-coated-slabs']={worldSize:[2,2],structuralFrame:'coated-precast-2m-v1',selection:{unit:'panel',salt:'red-coated-variants-v1',fallback:'clean',uvTransform:'identity'},variants:red.map(r=>({id:r.id,condition:r.condition,weight:weights[r.condition]/red.filter(x=>x.condition===r.condition).length,material:{key:r.key,variant:r.variant},maps:Object.fromEntries(['basecolor','normal','roughness','ao'].map(c=>[c,texture(r,c)]))}))};
  for(const id of ['district-panel-red','oxblood'])binding.surfaces[id]='red-coated-slabs';
+}
+const asphaltFile=path.join(root,'sources/street-variants/asphalt/catalog.json');
+if(fs.existsSync(asphaltFile)){
+ const asphalt=read('sources/street-variants/asphalt/catalog.json').map(r=>({...r,texturePrefix:'asphalt-condition'}));
+ const asphaltWeights={clean:.80,stained:.15,cracked:.03,patched:.02};
+ // Intentionally no surfaces mapping: native asphalt/parking require coordinated
+ // clean+main slot adaptation, not the simple photographed-surface override.
+ binding.sets['asphalt-conditions']={worldSize:[2,2],structuralFrame:'continuous-asphalt-2m-v1',selection:{unit:'world-cell',salt:'asphalt-conditions-v1',fallback:'clean',uvTransform:'identity'},variants:asphalt.map(r=>({id:r.id,condition:r.condition,weight:asphaltWeights[r.condition],material:{key:r.key,variant:r.variant},maps:Object.fromEntries(['basecolor','normal','roughness','ao'].map(c=>[c,texture(r,c)]))}))};
 }
 fs.writeFileSync(path.join(root,'bindings/street-variants.json'),JSON.stringify(binding,null,2)+'\n');
 const native=read('schema/street-native.schema.json');

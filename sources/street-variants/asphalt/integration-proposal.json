@@ -1,0 +1,58 @@
+{
+  "status": "Proposal only; root owns live catalog/binding integration, Claude owns engine changes. No UV changes proposed.",
+  "key": "cyberpunk/street-asphalt/mid",
+  "variants": [
+    "asphalt-clean-1",
+    "asphalt-stained-1",
+    "asphalt-cracked-1",
+    "asphalt-patched-1"
+  ],
+  "nativeFamily": "asphalt",
+  "sampling": {
+    "preserve": "NativeSamples.road uses worldPosition.xz / sampling.asphalt.scale and blends two region-offset samples with unshifted gradients. Keep scale [2,2] and existing source UVs.",
+    "important": "The material field is world-xz even where source geometry publishes U-across/V-station. Do not rewire highway lane/gutter UVs for this asset batch.",
+    "uniqueMarks": "Current region-offset crossfade can duplicate/soften a repair or crack. These are condition-field candidates; exact sparse road repairs/multi-panel cracks need placement-aware content, not an assumption that a catalog variant alone makes them unique."
+  },
+  "defaultCleanWornPair": {
+    "surface": "asphalt",
+    "cleanBasecolor": "asphalt-clean-1.basecolor",
+    "cleanNormal": "asphalt-clean-1.normal",
+    "basecolor": "asphalt-stained-1.basecolor",
+    "normal": "asphalt-stained-1.normal",
+    "roughness": "asphalt-stained-1.roughness",
+    "ao": "asphalt-stained-1.ao",
+    "effectLimit": "Current effect blends clean/worn colour and normal with wear, but roughness and AO come only from the main/worn slots. A clean visual at wear=0 can still receive stained roughness. A fully coherent blend needs cleanRoughness/cleanAo support or an equivalent selected complete map set; send engine changes to Claude."
+  },
+  "fourConditionSelection": {
+    "rule": "Select a complete coordinated condition set, not only basecolor. Root chooses the opt-in binding/set name. No name or selector was installed by this task.",
+    "fixtureControl": "For an isolated condition fixture, set both cleanBasecolor/basecolor and cleanNormal/normal to that same chosen condition so wear interpolation cannot erase it; roughness and AO from the condition. This is a review control, not a default live binding recommendation.",
+    "productionConditionMeaning": "Crack and repair visibility must follow the selected condition/placement, not disappear arbitrarily because a global clean/worn colour blend happens to be low."
+  },
+  "parking": {
+    "preserveSlots": [
+      "parkingBasecolor",
+      "parkingNormal",
+      "parkingRoughness",
+      "parkingAo"
+    ],
+    "asphaltBranch": "Feed the same asphalt clean/worn or complete condition maps into basecolor, normal, roughness, ao, cleanBasecolor and cleanNormal. Keep the existing entrance mix/panel geometry intact.",
+    "effectLimits": [
+      "Parking colour blends clean/worn road colour before entrance mix.",
+      "Parking normal uses main road normal, not a cleanNormal wear blend.",
+      "Parking AO is parkingAo across the effect; road AO is currently not consumed for the asphalt portion.",
+      "The unused parking surface in some worlds still requires an explicit fixture or actual placement check."
+    ]
+  },
+  "directPhotographedSurfaces": {
+    "asphalt-clean": "Candidate asphalt-clean-1 full set; keep world-xz [2,2].",
+    "asphalt-patched": "Candidate asphalt-patched-1 full set for already-authorized repair routes; do not create new placement/road strips solely from the material ID."
+  },
+  "preserve": [
+    "road marking opacity and silhouette",
+    "lane/gutter UVs",
+    "street geometry",
+    "highway roadway mapping unless root explicitly opts into the new family",
+    "parking panel finish and entrance transition"
+  ],
+  "verification": "Root fixed-light close/grazing and long view for all four, details on/off, plus asphalt wear0/1 and parking entrance0/1. Compare real reference asphalt grain/polish/cracks and repair appearance before release."
+}

@@ -8,6 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {decodeRgb,luminance,wrapBlur,encodeRgbPng,encodeGrayPng} from '../dist/gen/pixels.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const themes=path.join(root,'themes'),out=path.join(root,'out/street-variants');
+const replace=process.argv.includes('--replace');
 fs.mkdirSync(out,{recursive:true});
 const size=1024, count=size*size, world=[2,2], pixel=world[0]/size;
 const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
@@ -19,6 +20,7 @@ const commonDir=path.join(themes,'cyberpunk/assets/street-sidewalk/mid/slab');
 const common={basecolor:await rgb(commonDir+'/basecolor.png'),roughness:await scalar(commonDir+'/roughness.png'),height:await scalar(commonDir+'/height.png'),normal:await rgb(commonDir+'/normal.png'),ao:await scalar(commonDir+'/ao.png')};
 const broad=await scalar(path.join(root,'sources/surface-remaster/raw/smudge.png'));
 const fine=await scalar(path.join(root,'sources/surface-remaster/raw/fingerprint.png'));
+const jointFrame=i=>{const x=i%size,y=Math.floor(i/size);return 1-smooth(.006,.018,Math.min(x,y,size-1-x,size-1-y)/(size-1))};
 const apron=i=>{const x=i%size,y=Math.floor(i/size);return 1-smooth(.035,.08,Math.min(x,y,size-1-x,size-1-y)/(size-1))};
 function normals(height){const data=new Uint8Array(count*3);for(let y=0;y<size;y++)for(let x=0;x<size;x++){
  const i=y*size+x,x0=(x+size-1)%size,x1=(x+1)%size,y0=(y+size-1)%size,y1=(y+1)%size;
@@ -49,12 +51,14 @@ for(const [index,id]of ['clean','stained','cracked','patched','clean-b','stained
   }
   // Shared physical border preserves the existing joint/anchor arrangement.
   for(let c=0;c<3;c++)base.data[i*3+c]=Math.round(clamp((base.data[i*3+c]/255+(target-mean))*(1-edge)+common.basecolor.data[i*3+c]/255*edge)*255);
-  rough[i]=clamp(rough[i]*(1-edge)+common.roughness[i]*edge,.2,.92);
+  const frame=jointFrame(i);rough[i]=clamp(rough[i]*(1-frame)+common.roughness[i]*frame,.2,.92);
  }
  const normal=normals(height),heightMap=new Float32Array(count);
  for(let i=0;i<count;i++){
-  const edge=apron(i);heightMap[i]=clamp((.5+height[i]/.006)*(1-edge)+common.height[i]*edge);ao[i]=ao[i]*(1-edge)+common.ao[i]*edge;
-  let n=[0,0,0];for(let c=0;c<3;c++)n[c]=(normal.data[i*3+c]/127.5-1)*(1-edge)+(common.normal.data[i*3+c]/127.5-1)*edge;
+  const edge=apron(i),frame=jointFrame(i),frameRelief=.15+.85*frame;
+  heightMap[i]=clamp((.5+height[i]/.006)*(1-edge)+(.5+(common.height[i]-.5)*frameRelief)*edge);ao[i]=ao[i]*(1-edge)+common.ao[i]*edge;
+  // Preserve the actual joint response; suppress inherited broad apron wrinkles.
+  let n=[0,0,0];for(let c=0;c<3;c++)n[c]=(normal.data[i*3+c]/127.5-1)*(1-edge)+(common.normal.data[i*3+c]/127.5-1)*(c<2?frameRelief:1)*edge;
   const len=Math.hypot(...n);for(let c=0;c<3;c++)normal.data[i*3+c]=Math.round((n[c]/len*.5+.5)*255);
  }
  const maps={basecolor:base,normal,roughness:gray(rough),height:gray(heightMap),ao:gray(ao),metallic:gray(new Float32Array(count))};
@@ -64,10 +68,10 @@ for(const [index,id]of ['clean','stained','cracked','patched','clean-b','stained
   fs.writeFileSync(sourceMaps[channel],await(channels===3?encodeRgbPng(img):encodeGrayPng(img)));
  }
  const variantId='slab-'+condition+'-'+pass;
- const request={key:'cyberpunk/street-sidewalk/mid',variantId,append:true,alignment:'tile',description:`Independent generated photographic source for ${id} precast slab, sealed pedestrian finish; common structural border and separately authored wear response`,resolution:[size,size],tiling:{worldSize:world},layout:{family:'panel',moduleSize:world,jointWidth:.006,origin:[0,0],orientation:'horizontal'},physical:{roughnessFactor:1,metallicFactor:0},sourceMaps};
+ const request={key:'cyberpunk/street-sidewalk/mid',variantId,append:true,overwrite:replace,alignment:'tile',description:`Independent generated photographic source for ${id} precast slab, sealed pedestrian finish; common structural border and separately authored wear response`,resolution:[size,size],tiling:{worldSize:world},layout:{family:'panel',moduleSize:world,jointWidth:.006,origin:[0,0],orientation:'horizontal'},physical:{roughnessFactor:1,metallicFactor:0},sourceMaps};
  const requestFile=path.join(out,id+'.json');fs.writeFileSync(requestFile,JSON.stringify(request,null,2)+'\n');
  const exists=JSON.parse(fs.readFileSync(path.join(themes,'cyberpunk/theme.json'))).entries[request.key]?.variants.some(v=>v.id===variantId);
- const imported=exists?{status:0,stdout:'existing variant retained'}:spawnSync(process.execPath,[path.join(root,'dist/cli/pbrforge.js'),'create',requestFile,'--native','--themes',themes],{encoding:'utf8',cwd:root});
+ const imported=exists&&!replace?{status:0,stdout:'existing variant retained'}:spawnSync(process.execPath,[path.join(root,'dist/cli/pbrforge.js'),'create',requestFile,'--native','--themes',themes],{encoding:'utf8',cwd:root});
  if(imported.status!==0)throw Error(imported.stdout+'\n'+imported.stderr);
  const resolved=spawnSync(process.execPath,[path.join(root,'dist/cli/pbrforge.js'),'resolve',request.key,'--themes',themes],{encoding:'utf8',cwd:root});if(resolved.status!==0)throw Error(resolved.stdout);
  const entry=JSON.parse(resolved.stdout).data.entry,variant=entry.variants.find(v=>v.id===variantId);
