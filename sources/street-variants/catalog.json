@@ -1,0 +1,202 @@
+[
+  {
+    "id": "clean",
+    "condition": "clean",
+    "key": "cyberpunk/street-sidewalk/mid",
+    "variant": "slab-clean-1",
+    "source": "sources/street-variants/clean.png",
+    "sourceSha256": "3936a5dee3eb35546a1a167c37248ed40d7e6c8ea907dd7c87146f007672bd6a",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-sidewalk/mid/slab-clean-1/basecolor.png",
+      "normal": "assets/street-sidewalk/mid/slab-clean-1/normal.png",
+      "roughness": "assets/street-sidewalk/mid/slab-clean-1/roughness.png",
+      "metallic": "assets/street-sidewalk/mid/slab-clean-1/metallic.png",
+      "height": "assets/street-sidewalk/mid/slab-clean-1/height.png",
+      "ao": "assets/street-sidewalk/mid/slab-clean-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/c54dbb9ad9d06d562881bda91db51fabffef97c353afd386b2a28b5a11e599db.png"
+    }
+  },
+  {
+    "id": "stained",
+    "condition": "stained",
+    "key": "cyberpunk/street-sidewalk/mid",
+    "variant": "slab-stained-1",
+    "source": "sources/street-variants/stained.png",
+    "sourceSha256": "b77bbdab66f6331396279be0f0a92970631c0422d3ab897b45a96606cb55ffc7",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-sidewalk/mid/slab-stained-1/basecolor.png",
+      "normal": "assets/street-sidewalk/mid/slab-stained-1/normal.png",
+      "roughness": "assets/street-sidewalk/mid/slab-stained-1/roughness.png",
+      "metallic": "assets/street-sidewalk/mid/slab-stained-1/metallic.png",
+      "height": "assets/street-sidewalk/mid/slab-stained-1/height.png",
+      "ao": "assets/street-sidewalk/mid/slab-stained-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/150125b4daf9af9bdf46a1360e12de00af41a4a5df4f66267f5ef1dce1e1af50.png"
+    }
+  },
+  {
+    "id": "cracked",
+    "condition": "cracked",
+    "key": "cyberpunk/street-sidewalk/mid",
+    "variant": "slab-cracked-1",
+    "source": "sources/street-variants/cracked.png",
+    "sourceSha256": "45b5f63689129d1a0833df70bca977e760325137c6493b957986e77fca520bc6",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-sidewalk/mid/slab-cracked-1/basecolor.png",
+      "normal": "assets/street-sidewalk/mid/slab-cracked-1/normal.png",
+      "roughness": "assets/street-sidewalk/mid/slab-cracked-1/roughness.png",
+      "metallic": "assets/street-sidewalk/mid/slab-cracked-1/metallic.png",
+      "height": "assets/street-sidewalk/mid/slab-cracked-1/height.png",
+      "ao": "assets/street-sidewalk/mid/slab-cracked-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/47c625484cab7be058c2e8bd3ca2c2619b0aa86cbdd860fe723fb219a9ce32a3.png"
+    }
+  },
+  {
+    "id": "patched",
+    "condition": "patched",
+    "key": "cyberpunk/street-sidewalk/mid",
+    "variant": "slab-patched-1",
+    "source": "sources/street-variants/patched.png",
+    "sourceSha256": "f45027540b5a48570f1642536468a6ce6e5d8b07a80a99ba8098d811f124f696",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-sidewalk/mid/slab-patched-1/basecolor.png",
+      "normal": "assets/street-sidewalk/mid/slab-patched-1/normal.png",
+      "roughness": "assets/street-sidewalk/mid/slab-patched-1/roughness.png",
+      "metallic": "assets/street-sidewalk/mid/slab-patched-1/metallic.png",
+      "height": "assets/street-sidewalk/mid/slab-patched-1/height.png",
+      "ao": "assets/street-sidewalk/mid/slab-patched-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/f123bdfcd5c8478c46a965f97efbc8d949fb4e70e76cf16d092420311e4bc03f.png"
+    }
+  },
+  {
+    "id": "clean-b",
+    "condition": "clean",
+    "key": "cyberpunk/street-sidewalk/mid",
+    "variant": "slab-clean-2",
+    "source": "sources/street-variants/clean-b.png",
+    "sourceSha256": "4187cdecc65c3e66c0b958b55177258d9e8dc7dd7277666f48e0e8d56870bcb0",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-sidewalk/mid/slab-clean-2/basecolor.png",
+      "normal": "assets/street-sidewalk/mid/slab-clean-2/normal.png",
+      "roughness": "assets/street-sidewalk/mid/slab-clean-2/roughness.png",
+      "metallic": "assets/street-sidewalk/mid/slab-clean-2/metallic.png",
+      "height": "assets/street-sidewalk/mid/slab-clean-2/height.png",
+      "ao": "assets/street-sidewalk/mid/slab-clean-2/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/866bff269268e704cfcb34f51e97f7812f52efe4ba07a9b5b8b4432d9dc2c94d.png"
+    }
+  },
+  {
+    "id": "stained-b",
+    "condition": "stained",
+    "key": "cyberpunk/street-sidewalk/mid",
+    "variant": "slab-stained-2",
+    "source": "sources/street-variants/stained-b.png",
+    "sourceSha256": "daca1106fd3d855052f278cae882cb30af97c784d34e73fe8fabfab1dfacd892",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-sidewalk/mid/slab-stained-2/basecolor.png",
+      "normal": "assets/street-sidewalk/mid/slab-stained-2/normal.png",
+      "roughness": "assets/street-sidewalk/mid/slab-stained-2/roughness.png",
+      "metallic": "assets/street-sidewalk/mid/slab-stained-2/metallic.png",
+      "height": "assets/street-sidewalk/mid/slab-stained-2/height.png",
+      "ao": "assets/street-sidewalk/mid/slab-stained-2/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/1fbf289ab84f6635781a2ba81b75a84d6f041990d66d5940724a406a12de7635.png"
+    }
+  },
+  {
+    "id": "cracked-b",
+    "condition": "cracked",
+    "key": "cyberpunk/street-sidewalk/mid",
+    "variant": "slab-cracked-2",
+    "source": "sources/street-variants/cracked-b.png",
+    "sourceSha256": "6818874910c3d1cae0a50f7d83087384dc603437e7040c214791e409b8a613a9",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-sidewalk/mid/slab-cracked-2/basecolor.png",
+      "normal": "assets/street-sidewalk/mid/slab-cracked-2/normal.png",
+      "roughness": "assets/street-sidewalk/mid/slab-cracked-2/roughness.png",
+      "metallic": "assets/street-sidewalk/mid/slab-cracked-2/metallic.png",
+      "height": "assets/street-sidewalk/mid/slab-cracked-2/height.png",
+      "ao": "assets/street-sidewalk/mid/slab-cracked-2/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/7c6f22cbbb83986370acf924374a7693544452990584c297fd3d6d4ec1337316.png"
+    }
+  },
+  {
+    "id": "patched-b",
+    "condition": "patched",
+    "key": "cyberpunk/street-sidewalk/mid",
+    "variant": "slab-patched-2",
+    "source": "sources/street-variants/patched-b.png",
+    "sourceSha256": "7c13c4d567e76bd9aae1f55d07893f6b10ffec154be5dde9cf3156e622c656da",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-sidewalk/mid/slab-patched-2/basecolor.png",
+      "normal": "assets/street-sidewalk/mid/slab-patched-2/normal.png",
+      "roughness": "assets/street-sidewalk/mid/slab-patched-2/roughness.png",
+      "metallic": "assets/street-sidewalk/mid/slab-patched-2/metallic.png",
+      "height": "assets/street-sidewalk/mid/slab-patched-2/height.png",
+      "ao": "assets/street-sidewalk/mid/slab-patched-2/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/d27fdcd94fa76f2e20ae92984e23820ad96155773a1266a31a7a0411cf1c8a0a.png"
+    }
+  }
+]

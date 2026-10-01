@@ -41,7 +41,7 @@ it('validates every published consumer binding and resolves the references it na
   const manifests = [
     ['exterior-styles', 'exterior-styles'], ['street-styles', 'street-styles'],
     ['street-markings', 'street-markings'], ['window-room-surfaces', 'window-room-surfaces'],
-    ['atlas-hydrology', 'atlas-hydrology-bindings'],
+    ['atlas-hydrology', 'atlas-hydrology-bindings'], ['street-variants', 'street-variants'],
   ];
   const seen = new Set<string>();
   function check(value: unknown): void {

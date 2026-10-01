@@ -1,0 +1,90 @@
+[
+  {
+    "state": "clean",
+    "method": "built-in image_gen",
+    "generationOutput": "exec-536b0b4b-7d8c-44ea-a636-3a4b1688b912.png",
+    "rawPath": "sources/street-variants/red/raw/clean.png",
+    "rawDimensions": [
+      1254,
+      1254
+    ],
+    "rawSha256": "0c859494b3cc9d0e9e587763bd28194f093919a1d7dcff67bc128e1685eae883",
+    "promptFile": "prompts.json",
+    "requestedSizeDescription": [
+      2048,
+      2048
+    ],
+    "preparedSize": [
+      1024,
+      1024
+    ],
+    "resampling": "whole-image downsample only, no upscaling",
+    "visualStatus": "raw source inspected; PBR response and in-game acceptance pending"
+  },
+  {
+    "state": "stained",
+    "method": "built-in image_gen",
+    "generationOutput": "exec-923bac11-7437-424d-8c70-7ef2ab7100f8.png",
+    "rawPath": "sources/street-variants/red/raw/stained.png",
+    "rawDimensions": [
+      1254,
+      1254
+    ],
+    "rawSha256": "f42d3c40ab6b38d08ba3c658dc32156fe1b27ba529785f72d92f5fba8a896795",
+    "promptFile": "prompts.json",
+    "requestedSizeDescription": [
+      2048,
+      2048
+    ],
+    "preparedSize": [
+      1024,
+      1024
+    ],
+    "resampling": "whole-image downsample only, no upscaling",
+    "visualStatus": "raw source inspected; PBR response and in-game acceptance pending"
+  },
+  {
+    "state": "cracked",
+    "method": "built-in image_gen",
+    "generationOutput": "exec-9a314b70-05c9-4640-bcd9-94ebabc82dd2.png",
+    "rawPath": "sources/street-variants/red/raw/cracked.png",
+    "rawDimensions": [
+      1254,
+      1254
+    ],
+    "rawSha256": "116c8992baa0721bd7122fcc87a265266c061630aea5413ce806cdfea6bd1f45",
+    "promptFile": "prompts.json",
+    "requestedSizeDescription": [
+      2048,
+      2048
+    ],
+    "preparedSize": [
+      1024,
+      1024
+    ],
+    "resampling": "whole-image downsample only, no upscaling",
+    "visualStatus": "raw source inspected; PBR response and in-game acceptance pending"
+  },
+  {
+    "state": "patched",
+    "method": "built-in image_gen",
+    "generationOutput": "exec-b0ab7b2c-d67a-463a-aa33-ce8ba17837f8.png",
+    "rawPath": "sources/street-variants/red/raw/patched.png",
+    "rawDimensions": [
+      1254,
+      1254
+    ],
+    "rawSha256": "31d72575b593ace51867f33a763b7dd264306d34b480d50d96bca8c8441665d7",
+    "promptFile": "prompts.json",
+    "requestedSizeDescription": [
+      2048,
+      2048
+    ],
+    "preparedSize": [
+      1024,
+      1024
+    ],
+    "resampling": "whole-image downsample only, no upscaling",
+    "visualStatus": "raw source inspected; PBR response and in-game acceptance pending"
+  }
+]

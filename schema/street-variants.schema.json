@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:street-variants",
+  "title": "Street surface variants companion binding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "baseBinding",
+    "textures",
+    "sets",
+    "surfaces"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "baseBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "const": "bindings/street-native.json"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "textures": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/texture"
+      }
+    },
+    "sets": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/set"
+      }
+    },
+    "surfaces": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    }
+  },
+  "$defs": {
+    "texture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "resolution",
+        "sha256",
+        "colorSpace",
+        "wrap"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^themes/[a-z0-9_-]+/assets/(?:[a-z0-9_-]+/)*[a-z0-9_-]+\\.png$"
+        },
+        "ktx2": {
+          "type": "string",
+          "pattern": "^themes/[a-z0-9_/-]+\\.ktx2$"
+        },
+        "ktx2Sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "resolution": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4096
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "colorSpace": {
+          "enum": [
+            "srgb",
+            "linear"
+          ]
+        },
+        "wrap": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "repeat",
+              "clamp"
+            ]
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "dependentRequired": {
+        "ktx2": [
+          "ktx2Sha256"
+        ],
+        "ktx2Sha256": [
+          "ktx2"
+        ]
+      }
+    },
+    "set": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "worldSize",
+        "structuralFrame",
+        "selection",
+        "variants"
+      ],
+      "properties": {
+        "worldSize": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "structuralFrame": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "selection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "salt",
+            "fallback",
+            "uvTransform"
+          ],
+          "properties": {
+            "unit": {
+              "enum": [
+                "panel",
+                "placement",
+                "world-cell"
+              ]
+            },
+            "salt": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "fallback": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "uvTransform": {
+              "const": "identity"
+            }
+          }
+        },
+        "variants": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "condition",
+              "weight",
+              "material",
+              "maps"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9_-]+$"
+              },
+              "condition": {
+                "enum": [
+                  "clean",
+                  "stained",
+                  "cracked",
+                  "patched",
+                  "scuffed",
+                  "weathered"
+                ]
+              },
+              "weight": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              },
+              "material": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "key",
+                  "variant"
+                ],
+                "properties": {
+                  "key": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9_-]+/[a-z0-9_-]+/[a-z0-9_-]+$"
+                  },
+                  "variant": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  }
+                }
+              },
+              "maps": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "basecolor",
+                  "normal",
+                  "roughness",
+                  "ao"
+                ],
+                "properties": {
+                  "basecolor": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "normal": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "roughness": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "ao": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

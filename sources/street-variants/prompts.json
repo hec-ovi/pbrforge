@@ -1,0 +1,93 @@
+{
+  "generator": "built-in image_gen",
+  "sources": [
+    {
+      "id": "clean",
+      "prompt": "A photorealistic material-source photograph, orthographic top-down, square, seamless/tileable, exactly the surface of ONE 2 metre by 2 metre grey precast urban pedestrian concrete slab. Fine dense cement paste, subtle mineral mottling, a few tiny pale aggregate flecks, a burnished used-but-clean sealed surface. Quiet neutral medium grey with slightly warm mineral undertone. Entire image is only the material, edge to edge; no frame, no surrounding tiles, no grout lines, no bolts, no seams, no perspective. Flat diffuse cross-polarized colour reference, NO shadows, NO highlights, NO directional lighting, NO vignette. Surface is flat and smooth enough to feel real under shoes, not gravel or rough stucco. No damage, no large stains, no cracks, no graffiti, no text. This is PBR base colour source photography, high fidelity natural subtle texture, not a beauty render. Generate at high square resolution, ideally 2048x2048.",
+      "path": "sources/street-variants/clean.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "sha256": "3936a5dee3eb35546a1a167c37248ed40d7e6c8ea907dd7c87146f007672bd6a",
+      "generationFile": "exec-346c42d8-78bc-460d-86fb-e5d6d4495bad.png"
+    },
+    {
+      "id": "stained",
+      "prompt": "A photorealistic PBR base-colour material-source photograph, orthographic top-down, square seamless/tileable, exactly ONE 2 metre by 2 metre grey precast city sidewalk slab. Smooth dense sealed cement, quiet neutral medium grey, fine pores and tiny pale aggregate flecks. This distinct used slab has a broad off-centre irregular old WATER TIDE MARK about 45 cm across, restrained dark grey pedestrian shoe/maintenance wipe traces, and two very small old pale mineral deposits. Most of the slab remains quiet usable grey; staining is subtle weathering, not a black puddle, no liquid, no shine. All marks taper out before the image edges; edges remain uninterrupted neutral concrete so neighbouring tiles can match. No surrounding tiles, no grout/seam, no bolts, no border, no perspective, no text or graffiti. Flat diffuse cross-polarized texture photography: NO shadows, NO specular highlights, NO directional illumination, NO vignette, no dramatic colour grading. High-fidelity natural surface, not procedural clouds or gravel. Generate high square resolution, ideally 2048x2048.",
+      "path": "sources/street-variants/stained.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "sha256": "b77bbdab66f6331396279be0f0a92970631c0422d3ab897b45a96606cb55ffc7",
+      "generationFile": "exec-c7c57064-5d5e-466c-97b3-7955f1a87d4c.png"
+    },
+    {
+      "id": "cracked",
+      "prompt": "Photorealistic PBR base-colour texture-source photo, orthographic top-down square seamless tile, representing one 2 metre by 2 metre fine grey precast city sidewalk slab. Dense smooth sealed cement with subtle mineral tone and tiny pale aggregate flecks, neutral medium grey. A single fine irregular HAIRLINE STRESS CRACK 1 to 3 mm wide enters a little inside the lower left quadrant, branches gently once, and ends naturally near the centre-right, about 1.1 metres long overall; it does not reach the edges. A few millimetres of pale abrasion by one short section, otherwise sound concrete. Tiny crack, restrained real use-wear; absolutely NOT shattered stone, not a crater, no broken chunks, no big black fissure, no rubble. All image edges have quiet unbroken matching grey concrete. NO tiled grid, no joints, no bolts, no borders, no text, no perspective. Uniform cross-polarized diffuse base-colour photography with NO baked shadows, NO highlights, NO vignette, no illumination gradients. High fidelity, ideally 2048x2048 square.",
+      "path": "sources/street-variants/cracked.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "sha256": "45b5f63689129d1a0833df70bca977e760325137c6493b957986e77fca520bc6",
+      "generationFile": "exec-6c523ab0-2127-49e5-b75f-971bf0b46ff6.png"
+    },
+    {
+      "id": "patched",
+      "prompt": "Photorealistic PBR base-colour texture-source photo, orthographic top-down, square seamless/tileable image of exactly one 2 metre by 2 metre smooth grey precast urban sidewalk slab. Neutral medium-grey dense cement with subtle mineral texture and tiny pale aggregate flecks. One old FLUSH REPAIR near the right lower quadrant: a 40cm by 65cm irregular mostly rectangular mortar patch, slightly warmer and paler than surrounding concrete, subtle trowel texture, thin healed perimeter, two tiny older circular filled drill marks nearby. The patch is level with the slab, not a raised slab, not metal, no shadow. Most of the image is quiet concrete. All marks remain at least 20cm from the image boundary; unbroken matching edge texture. No grid, no seams or grout, no bolts, no text, no perspective. Flat evenly lit cross-polarized material photography: NO specular highlights, NO shadows, NO vignette or colour grading. Real mild maintenance history, not graphic shapes, heavy destruction, coarse gravel or illustration. High square resolution, ideally 2048x2048.",
+      "path": "sources/street-variants/patched.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "sha256": "f45027540b5a48570f1642536468a6ce6e5d8b07a80a99ba8098d811f124f696",
+      "generationFile": "exec-819336bd-2d2a-4a7b-a3cc-caf413512926.png"
+    },
+    {
+      "id": "clean-b",
+      "prompt": "Photorealistic PBR base-colour material source, perfectly orthographic top-down square, exactly 2m by 2m of fine dense neutral grey precast pedestrian concrete. A smooth lightly sealed used sidewalk, subtle tiny mineral grains, not coarse gravel/stucco. Flat cross-polarized diffuse illumination; NO shadows, highlights, vignette, perspective, grid, joints, bolts, borders, text or surrounding objects. Seamlessly matching quiet grey material around all edges. High square resolution. A different clean batch: subtle broad trowel smoothing arcs and tiny sparse pale mineral inclusions; absolutely no crack, stain or repair. Texture should be restrained and physically flat.",
+      "path": "sources/street-variants/clean-b.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "sha256": "4187cdecc65c3e66c0b958b55177258d9e8dc7dd7277666f48e0e8d56870bcb0",
+      "generationFile": "exec-597e88cd-1100-42f6-a7cf-aa280e9caf0c.png"
+    },
+    {
+      "id": "stained-b",
+      "prompt": "Photorealistic PBR base-colour material source, perfectly orthographic top-down square, exactly 2m by 2m of fine dense neutral grey precast pedestrian concrete. A smooth lightly sealed used sidewalk, subtle tiny mineral grains, not coarse gravel/stucco. Flat cross-polarized diffuse illumination; NO shadows, highlights, vignette, perspective, grid, joints, bolts, borders, text or surrounding objects. Seamlessly matching quiet grey material around all edges. High square resolution. A distinct localized old smear with two soft elongated dull wipe traces in the upper-right quarter, plus a few restrained dried splash flecks near the lower centre. Shapes are oblique and asymmetrical, not circular rings and not clouds across the whole slab. Stains very low contrast and mostly within upper-right quarter; no crack or patch.",
+      "path": "sources/street-variants/stained-b.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "sha256": "daca1106fd3d855052f278cae882cb30af97c784d34e73fe8fabfab1dfacd892",
+      "generationFile": "exec-42a102f2-11aa-42ce-8410-fbf015f9732c.png"
+    },
+    {
+      "id": "cracked-b",
+      "prompt": "Photorealistic PBR base-colour material source, perfectly orthographic top-down square, exactly 2m by 2m of fine dense neutral grey precast pedestrian concrete. A smooth lightly sealed used sidewalk, subtle tiny mineral grains, not coarse gravel/stucco. Flat cross-polarized diffuse illumination; NO shadows, highlights, vignette, perspective, grid, joints, bolts, borders, text or surrounding objects. Seamlessly matching quiet grey material around all edges. High square resolution. One narrow 1-2mm hairline crack taking an irregular dogleg from the UPPER LEFT quarter down to the LOWER CENTRE, with one tiny branch in the middle. It terminates well inside all edges, follows no perfect diagonal, has very slight pale edge scuff. No destruction or loose chips, no large fissure, no water stain or repair patch.",
+      "path": "sources/street-variants/cracked-b.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "sha256": "6818874910c3d1cae0a50f7d83087384dc603437e7040c214791e409b8a613a9",
+      "generationFile": "exec-38622575-4022-414b-8f13-6b493679b04a.png"
+    },
+    {
+      "id": "patched-b",
+      "prompt": "Photorealistic PBR base-colour material source, perfectly orthographic top-down square, exactly 2m by 2m of fine dense neutral grey precast pedestrian concrete. A smooth lightly sealed used sidewalk, subtle tiny mineral grains, not coarse gravel/stucco. Flat cross-polarized diffuse illumination; NO shadows, highlights, vignette, perspective, grid, joints, bolts, borders, text or surrounding objects. Seamlessly matching quiet grey material around all edges. High square resolution. One narrow old HORIZONTAL flush mortar repair, about80cm wide by25cm tall, in the UPPER LEFT quarter. A mostly rectangular patch with softly uneven sides, slightly darker/warmer than the slab, fine trowel markings, level and sound. One tiny circular filled drill hole beside its right end. No raised lip or shadow, no crack or water stain. A genuinely different repair shape from a tall patch.",
+      "path": "sources/street-variants/patched-b.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "sha256": "7c13c4d567e76bd9aae1f55d07893f6b10ffec154be5dde9cf3156e622c656da",
+      "generationFile": "exec-2e8c90b8-7895-49e9-ae00-f4ea5842f82b.png"
+    }
+  ]
+}

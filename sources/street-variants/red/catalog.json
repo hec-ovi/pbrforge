@@ -1,0 +1,94 @@
+[
+  {
+    "id": "clean",
+    "condition": "clean",
+    "key": "cyberpunk/street-coated/mid",
+    "variant": "red-clean-1",
+    "maps": {
+      "basecolor": "assets/street-coated/mid/red-clean-1/basecolor.png",
+      "normal": "assets/street-coated/mid/red-clean-1/normal.png",
+      "roughness": "assets/street-coated/mid/red-clean-1/roughness.png",
+      "metallic": "assets/street-coated/mid/red-clean-1/metallic.png",
+      "height": "assets/street-coated/mid/red-clean-1/height.png",
+      "ao": "assets/street-coated/mid/red-clean-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/3588c66460df8fdf7ff5f7e77ffaf2a311e0c4689beee734f83d66ef4e98d56a.png"
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  {
+    "id": "stained",
+    "condition": "stained",
+    "key": "cyberpunk/street-coated/mid",
+    "variant": "red-stained-1",
+    "maps": {
+      "basecolor": "assets/street-coated/mid/red-stained-1/basecolor.png",
+      "normal": "assets/street-coated/mid/red-stained-1/normal.png",
+      "roughness": "assets/street-coated/mid/red-stained-1/roughness.png",
+      "metallic": "assets/street-coated/mid/red-stained-1/metallic.png",
+      "height": "assets/street-coated/mid/red-stained-1/height.png",
+      "ao": "assets/street-coated/mid/red-stained-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/2b53a4ab55b9acff95bfbaba42043ff0c2d460f1501bab8d29002a8ebb557fed.png"
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  {
+    "id": "cracked",
+    "condition": "cracked",
+    "key": "cyberpunk/street-coated/mid",
+    "variant": "red-cracked-1",
+    "maps": {
+      "basecolor": "assets/street-coated/mid/red-cracked-1/basecolor.png",
+      "normal": "assets/street-coated/mid/red-cracked-1/normal.png",
+      "roughness": "assets/street-coated/mid/red-cracked-1/roughness.png",
+      "metallic": "assets/street-coated/mid/red-cracked-1/metallic.png",
+      "height": "assets/street-coated/mid/red-cracked-1/height.png",
+      "ao": "assets/street-coated/mid/red-cracked-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/f206945cf2646ff39c248b00b4398b0561cf7d3c28b6781b8bb78ef6d9d687bb.png"
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  {
+    "id": "patched",
+    "condition": "patched",
+    "key": "cyberpunk/street-coated/mid",
+    "variant": "red-patched-1",
+    "maps": {
+      "basecolor": "assets/street-coated/mid/red-patched-1/basecolor.png",
+      "normal": "assets/street-coated/mid/red-patched-1/normal.png",
+      "roughness": "assets/street-coated/mid/red-patched-1/roughness.png",
+      "metallic": "assets/street-coated/mid/red-patched-1/metallic.png",
+      "height": "assets/street-coated/mid/red-patched-1/height.png",
+      "ao": "assets/street-coated/mid/red-patched-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/6727e4da72f736fbae9d83f34b1cd541daeadd0288a59375fd348ab131afa420.png"
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "worldSize": [
+      2,
+      2
+    ]
+  }
+]
