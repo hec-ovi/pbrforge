@@ -1,0 +1,27 @@
+{
+  "status": "Existing catalog reuse proposals only; no entries changed. Root must review on actual hardware.",
+  "bearing-steel": {
+    "key": "cyberpunk/service-alloy/poor",
+    "variant": "brushed",
+    "worldSizeMetres": [
+      1,
+      1
+    ],
+    "reason": "Prepared fine brushed metal with restrained normal relief and independent roughness; inspected maps. Better dull plate starting point than chrome.",
+    "physicalPolicy": "Use resolved absolute maps with their contract factors; keep steel metalness. Small hardware geometry and bevels remain model-owned."
+  },
+  "joint-rubber": {
+    "key": "cyberpunk/street-joint/mid",
+    "variant": "maintained",
+    "worldSizeMetres": [
+      0.5,
+      0.5
+    ],
+    "reason": "Closest existing continuous dark low-contrast, shallow, rough joint finish. Inspect on the elastomer pad before accepting; key is a joint finish, not proof of rubber chemistry.",
+    "rejectedCandidates": "All eight cyberpunk/rubber tier variants were inspected: raised circles/pebbles, diamond quilting, interlocking or cracked tile patterns; none is a plain highway elastomer. Do not select rubber/mid merely by name.",
+    "scope": "If root requires a dedicated elastomer source later, author a separate bounded task; no unrelated rubber catalog rewrite here."
+  },
+  "roadway": {
+    "action": "Preserve current highway wearing-course mapping and variant; no road/lane/gutter UV edits."
+  }
+}

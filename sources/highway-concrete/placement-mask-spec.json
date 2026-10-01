@@ -1,0 +1,88 @@
+{
+  "status": "Specification only; consumer/shader implementation belongs to Claude and is still required. No macro/base wear is baked into these candidates.",
+  "key": "cyberpunk/highway-concrete/mid",
+  "inputs": {
+    "slot": "Model material slot; hard gate every mask to its intended part",
+    "sourceStation": "Authored horizontal path station in metres. Do not substitute swept UV.u: the adapter defines that as physical 3D edge distance, differing on grades and turns.",
+    "worldPosition": "World metres, Y up",
+    "faceNormal": "Geometry face normal; preserve cap/chamfer distinction",
+    "supportBottom": "detail.supports[].bottom for the owning pier, not global world zero",
+    "supportTop": "detail.supports[].top for contact gating",
+    "deckElevationAtStation": "highwayFrameAt(structure,sourceStation).center.y or matching source elevation",
+    "jointStations": "detail.joints[].station",
+    "edgeDistanceOrFaceTag": "Actual cap/chamfer/edge identity for edge wear; not distance to a repeat-tile border"
+  },
+  "implementationConstraint": "Bind source ownership/support metadata with the instance or vertices; do not search every support/joint every frame. The existing generated geometry/adapter is source authority.",
+  "masks": [
+    {
+      "name": "pier-base-contact",
+      "slots": [
+        "pier-concrete"
+      ],
+      "formula": "slotGate * verticalFaceGate * (1 - smoothstep(0.08, 0.65, worldY - owningSupport.bottom))",
+      "verticalFaceGate": "1 - smoothstep(0.35, 0.70, abs(normal.y)); horizontal cap faces excluded",
+      "extentMetres": [
+        0.08,
+        0.65
+      ],
+      "expectedSamples": {
+        "atBottom": 1,
+        "atBottomPlus0.08": 1,
+        "atBottomPlus0.365": 0.5,
+        "atBottomPlus0.65": 0,
+        "atBottomPlus2": 0
+      },
+      "response": "Stable irregular dirt/splash concentrated near true base: up to ~15% local albedo darkening, roughness increases ~0.05\u20130.10; optional small damp core decreases roughness locally. Never lower the whole shaft brightness.",
+      "height": "No broad height displacement from dirt",
+      "forbidden": "No repeating 0.6 m band in UV/image space; no global worldY cutoff; do not stain every horizontal cap."
+    },
+    {
+      "name": "barrier-lower-splash",
+      "slots": [
+        "barrier-concrete"
+      ],
+      "formula": "slotGate * verticalFaceGate * (1 - smoothstep(0.03, 0.22, worldY - deckElevationAtStation))",
+      "response": "Weak irregular road-side lower splash; keep top mostly dry. Tune from actual render, preserve source concrete response.",
+      "height": "None from splash",
+      "forbidden": "No lane-line/gutter UV changes; do not treat uv.v modulo tile height as barrier height."
+    },
+    {
+      "name": "barrier-cap-use",
+      "slots": [
+        "barrier-concrete"
+      ],
+      "formula": "slotGate * actualCapOrChamferFaceGate * stableSparseUseField",
+      "response": "A slightly smoother cap, roughness reduced by at most ~0.08; small restrained edge marks. Real bevel geometry supplies silhouette/highlight.",
+      "forbidden": "Do not sprinkle chips over every planar face or invent a baked bevel at tile boundaries."
+    },
+    {
+      "name": "soffit-joint-deposit",
+      "slots": [
+        "soffit-concrete"
+      ],
+      "formula": "slotGate * downwardFaceGate * (1 - smoothstep(0.08, 0.80, min(abs(sourceStation - detail.joints[i].station))))",
+      "downwardFaceGate": "smoothstep(0.35,0.75,-normal.y)",
+      "extentMetres": [
+        0.08,
+        0.8
+      ],
+      "response": "Broad low-contrast deposit or a little retained moisture close to real joint/contact paths; roughly +/-0.06 roughness modulation, modest <=12% colour change. Avoid black joints on every texture repeat.",
+      "height": "None from grime",
+      "forbidden": "No long vertical rain stripes painted across a downward horizontal underside.",
+      "emptyJointList": "Return zero coverage when the structure has no authored joints."
+    },
+    {
+      "name": "web-fascia-runoff",
+      "slots": [
+        "deck-concrete",
+        "barrier-concrete"
+      ],
+      "formula": "slotGate * verticalFaceGate * realJointOrDripOriginMask * gravityAlignedStreakField(worldY)",
+      "response": "Restrained vertical runoff below an actual joint/drip edge. Direction follows gravity on upright webs/fascia; it does not follow a texture rotation.",
+      "height": "None from runoff",
+      "forbidden": "No arbitrary full-surface streak curtain, no borrowed wall-base shader with global height zero."
+    }
+  ],
+  "combination": "Start from authored maps. Use bounded coverage/mix, not repeated multiplicative wetness. Keep masks separated by slot and face orientation; dirt is not AO and does not change silhouette.",
+  "validation": "Two pier heights and two different support.bottom elevations: only lower ~0.6 m weathers. A jointed soffit and midspan should differ by station; vertical fascia runoff and horizontal underside deposits must remain directionally distinct. Compare masks on/off at fixed light/exposure/camera."
+}

@@ -28203,6 +28203,136 @@
         }
       ]
     },
+    "cyberpunk/highway-concrete/mid": {
+      "key": "cyberpunk/highway-concrete/mid",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          2,
+          2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "formed",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/highway-concrete/mid/formed/basecolor.png",
+            "normal": "assets/highway-concrete/mid/formed/normal.png",
+            "roughness": "assets/highway-concrete/mid/formed/roughness.png",
+            "metallic": "assets/highway-concrete/mid/formed/metallic.png",
+            "height": "assets/highway-concrete/mid/formed/height.png",
+            "ao": "assets/highway-concrete/mid/formed/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/573d4c52f3383a3a71396177040abcf775ae8a2e1448b74fab01859aa4b682d6.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/highway-concrete/mid/formed/basecolor.ktx2",
+            "normal": "assets/highway-concrete/mid/formed/normal.ktx2",
+            "roughness": "assets/highway-concrete/mid/formed/roughness.ktx2",
+            "metallic": "assets/highway-concrete/mid/formed/metallic.ktx2",
+            "height": "assets/highway-concrete/mid/formed/height.ktx2",
+            "ao": "assets/highway-concrete/mid/formed/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/573d4c52f3383a3a71396177040abcf775ae8a2e1448b74fab01859aa4b682d6.ktx2"
+          }
+        },
+        {
+          "id": "soffit",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/highway-concrete/mid/soffit/basecolor.png",
+            "normal": "assets/highway-concrete/mid/soffit/normal.png",
+            "roughness": "assets/highway-concrete/mid/soffit/roughness.png",
+            "metallic": "assets/highway-concrete/mid/soffit/metallic.png",
+            "height": "assets/highway-concrete/mid/soffit/height.png",
+            "ao": "assets/highway-concrete/mid/soffit/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/1e7c5afcb425cdc82923d5ef459c7ff57440e8694b8de248ad077026bfe1c936.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/highway-concrete/mid/soffit/basecolor.ktx2",
+            "normal": "assets/highway-concrete/mid/soffit/normal.ktx2",
+            "roughness": "assets/highway-concrete/mid/soffit/roughness.ktx2",
+            "metallic": "assets/highway-concrete/mid/soffit/metallic.ktx2",
+            "height": "assets/highway-concrete/mid/soffit/height.ktx2",
+            "ao": "assets/highway-concrete/mid/soffit/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/1e7c5afcb425cdc82923d5ef459c7ff57440e8694b8de248ad077026bfe1c936.ktx2"
+          }
+        },
+        {
+          "id": "pier",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/highway-concrete/mid/pier/basecolor.png",
+            "normal": "assets/highway-concrete/mid/pier/normal.png",
+            "roughness": "assets/highway-concrete/mid/pier/roughness.png",
+            "metallic": "assets/highway-concrete/mid/pier/metallic.png",
+            "height": "assets/highway-concrete/mid/pier/height.png",
+            "ao": "assets/highway-concrete/mid/pier/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/b1c67f80b965f8066865fbf3e89894b39647a2adfb3d3d42368f2dc789b1cf93.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "vertical"
+          },
+          "ktx2": {
+            "basecolor": "assets/highway-concrete/mid/pier/basecolor.ktx2",
+            "normal": "assets/highway-concrete/mid/pier/normal.ktx2",
+            "roughness": "assets/highway-concrete/mid/pier/roughness.ktx2",
+            "metallic": "assets/highway-concrete/mid/pier/metallic.ktx2",
+            "height": "assets/highway-concrete/mid/pier/height.ktx2",
+            "ao": "assets/highway-concrete/mid/pier/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/b1c67f80b965f8066865fbf3e89894b39647a2adfb3d3d42368f2dc789b1cf93.ktx2"
+          }
+        }
+      ]
+    },
     "cyberpunk/clinic-floor/high_rich": {
       "key": "cyberpunk/clinic-floor/high_rich",
       "alignment": "tile",

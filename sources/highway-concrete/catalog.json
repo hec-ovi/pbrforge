@@ -1,0 +1,65 @@
+[
+  {
+    "key": "cyberpunk/highway-concrete/mid",
+    "variant": "formed",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/highway-concrete/mid/formed/basecolor.png",
+      "normal": "assets/highway-concrete/mid/formed/normal.png",
+      "roughness": "assets/highway-concrete/mid/formed/roughness.png",
+      "metallic": "assets/highway-concrete/mid/formed/metallic.png",
+      "height": "assets/highway-concrete/mid/formed/height.png",
+      "ao": "assets/highway-concrete/mid/formed/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/573d4c52f3383a3a71396177040abcf775ae8a2e1448b74fab01859aa4b682d6.png"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-concrete/mid",
+    "variant": "soffit",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/highway-concrete/mid/soffit/basecolor.png",
+      "normal": "assets/highway-concrete/mid/soffit/normal.png",
+      "roughness": "assets/highway-concrete/mid/soffit/roughness.png",
+      "metallic": "assets/highway-concrete/mid/soffit/metallic.png",
+      "height": "assets/highway-concrete/mid/soffit/height.png",
+      "ao": "assets/highway-concrete/mid/soffit/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/1e7c5afcb425cdc82923d5ef459c7ff57440e8694b8de248ad077026bfe1c936.png"
+    }
+  },
+  {
+    "key": "cyberpunk/highway-concrete/mid",
+    "variant": "pier",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/highway-concrete/mid/pier/basecolor.png",
+      "normal": "assets/highway-concrete/mid/pier/normal.png",
+      "roughness": "assets/highway-concrete/mid/pier/roughness.png",
+      "metallic": "assets/highway-concrete/mid/pier/metallic.png",
+      "height": "assets/highway-concrete/mid/pier/height.png",
+      "ao": "assets/highway-concrete/mid/pier/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/b1c67f80b965f8066865fbf3e89894b39647a2adfb3d3d42368f2dc789b1cf93.png"
+    }
+  }
+]

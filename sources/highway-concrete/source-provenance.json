@@ -1,0 +1,65 @@
+[
+  {
+    "variant": "formed",
+    "mode": "built-in image_gen",
+    "original": "exec-46167521-40d2-41ac-bf5a-b6aaf3e516dd.png",
+    "rawPath": "sources/highway-concrete/raw/formed.png",
+    "rawDimensions": [
+      1254,
+      1254
+    ],
+    "rawSha256": "bbabd094b1af60b7aed2a3a9edd7d54cc6762ed3ffb253391c208e1f7e9c2e7d",
+    "preparedDimensions": [
+      1024,
+      1024
+    ],
+    "physicalMetres": [
+      2,
+      2
+    ],
+    "resampling": "whole-image downsample, no upscale",
+    "prompt": "prompts.json"
+  },
+  {
+    "variant": "soffit",
+    "mode": "built-in image_gen",
+    "original": "exec-831de266-0f8a-4dea-b817-6ff3f68ac39e.png",
+    "rawPath": "sources/highway-concrete/raw/soffit.png",
+    "rawDimensions": [
+      1254,
+      1254
+    ],
+    "rawSha256": "44ce9ee868025b18c30c6f6dd2a67d857a050875903dcb3d230dacea0abf8c96",
+    "preparedDimensions": [
+      1024,
+      1024
+    ],
+    "physicalMetres": [
+      2,
+      2
+    ],
+    "resampling": "whole-image downsample, no upscale",
+    "prompt": "prompts.json"
+  },
+  {
+    "variant": "pier",
+    "mode": "existing generated photographic source, reused",
+    "original": "sources/exterior-native/cast.png",
+    "rawPath": "sources/highway-concrete/raw/pier.png",
+    "rawDimensions": [
+      1254,
+      1254
+    ],
+    "rawSha256": "39f2d0f61687960c0ff68b95d0bfbdb1e2c1345b332df23c9d40edc9541572df",
+    "preparedDimensions": [
+      1024,
+      1024
+    ],
+    "physicalMetres": [
+      2,
+      2
+    ],
+    "resampling": "whole-image downsample, no upscale",
+    "prompt": "pier-original-prompt.txt"
+  }
+]

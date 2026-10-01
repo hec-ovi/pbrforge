@@ -48,3 +48,8 @@ Version: 0.22.1.
 - [Used urban surface remaster](../sources/surface-remaster/INDEX.md): generated sources, keys, physical scales, shared masks and decal layout.
 - [Surface detail binding](../bindings/surface-detail.json): engine roles, texture hashes and repeat sizes.
 - [0.22.1 release manifest](../releases/surface-remaster-0.22.1.json): checked PNG/KTX2 overlay inventory, including the sealed-street refinement.
+
+- [Street variation sources](../sources/street-variants/INDEX.md), [companion binding](../bindings/street-variants.json) and [selection contract](../sources/street-variants/CONTRACT.md): coordinated distinct condition variants, preserving native surface identity and UVs.
+
+- [Highway concrete sources](../sources/highway-concrete/INDEX.md): formed deck/barrier, soffit and pier candidates with physical scale and placement-weathering requirements.
+- [Interior floor authoring inventory](../sources/interior-floors/integration-manifest.json): clinic studs, quarter-turn utility ribs, red stone and grey stone, with portable import recipes and full PNG/KTX hashes.

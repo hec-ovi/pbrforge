@@ -1,0 +1,488 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urbe:highway-materials",
+  "title": "Authored highway PBR slot binding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewStatus",
+    "geometry",
+    "normalConvention",
+    "scalarMaps",
+    "placementWeathering",
+    "textures",
+    "slots"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "reviewStatus": {
+      "enum": [
+        "pending-render-acceptance",
+        "accepted"
+      ]
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "format",
+        "version",
+        "uvUnits",
+        "roadUv"
+      ],
+      "properties": {
+        "format": {
+          "const": "urbe-highway-content"
+        },
+        "version": {
+          "const": "1.0.0"
+        },
+        "uvUnits": {
+          "const": "metres"
+        },
+        "roadUv": {
+          "const": "u-left-to-right-metres-v-horizontal-station-metres"
+        }
+      }
+    },
+    "normalConvention": {
+      "const": "opengl-positive-y"
+    },
+    "scalarMaps": {
+      "const": "absolute-linear-values"
+    },
+    "placementWeathering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "reason"
+      ],
+      "properties": {
+        "mode": {
+          "const": "disabled-until-owner-coordinates"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 40
+        }
+      }
+    },
+    "textures": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/texture"
+      }
+    },
+    "slots": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "roadway",
+        "deck-concrete",
+        "soffit-concrete",
+        "pier-concrete",
+        "barrier-concrete",
+        "bearing-steel",
+        "joint-rubber"
+      ],
+      "properties": {
+        "roadway": {
+          "$ref": "#/$defs/slot"
+        },
+        "deck-concrete": {
+          "$ref": "#/$defs/slot"
+        },
+        "soffit-concrete": {
+          "$ref": "#/$defs/slot"
+        },
+        "pier-concrete": {
+          "$ref": "#/$defs/slot"
+        },
+        "barrier-concrete": {
+          "$ref": "#/$defs/slot"
+        },
+        "bearing-steel": {
+          "$ref": "#/$defs/slot"
+        },
+        "joint-rubber": {
+          "$ref": "#/$defs/slot"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "texture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "resolution",
+        "colorSpace",
+        "wrap"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^themes/[a-z0-9_-]+/assets/(?:[a-z0-9_-]+/)*[a-z0-9_-]+\\.png$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "resolution": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4096
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "colorSpace": {
+          "enum": [
+            "srgb",
+            "linear"
+          ]
+        },
+        "wrap": {
+          "const": [
+            "repeat",
+            "repeat"
+          ]
+        },
+        "ktx2": {
+          "type": "string",
+          "pattern": "^themes/[a-z0-9_-]+/assets/(?:[a-z0-9_-]+/)*[a-z0-9_-]+\\.ktx2$"
+        },
+        "ktx2Sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "dependentRequired": {
+        "ktx2": [
+          "ktx2Sha256"
+        ],
+        "ktx2Sha256": [
+          "ktx2"
+        ]
+      }
+    },
+    "slot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "maps",
+        "sampling",
+        "tuning"
+      ],
+      "properties": {
+        "source": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "key",
+                "variant"
+              ],
+              "properties": {
+                "type": {
+                  "const": "catalog"
+                },
+                "key": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_-]+/[a-z0-9_-]+/[a-z0-9_-]+$"
+                },
+                "variant": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9_-]+$"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "binding",
+                "surface",
+                "surfaceSha256",
+                "samplingSha256"
+              ],
+              "properties": {
+                "type": {
+                  "const": "native-surface"
+                },
+                "binding": {
+                  "const": "bindings/street-native.json"
+                },
+                "surface": {
+                  "const": "asphalt"
+                },
+                "surfaceSha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "samplingSha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              }
+            }
+          ]
+        },
+        "maps": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "basecolor",
+            "normal",
+            "roughness",
+            "ao"
+          ],
+          "properties": {
+            "basecolor": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "normal": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "roughness": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "metallic": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "height": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "ao": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "metallicRoughness": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "cleanBasecolor": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            },
+            "cleanNormal": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_-]+$"
+            }
+          }
+        },
+        "sampling": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "worldSize"
+          ],
+          "properties": {
+            "mode": {
+              "enum": [
+                "geometry-metres",
+                "native-world-xz"
+              ]
+            },
+            "worldSize": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        },
+        "tuning": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "colorGain",
+            "normalScale",
+            "roughnessFactor",
+            "metalnessFactor",
+            "aoIntensity",
+            "displacementScale"
+          ],
+          "properties": {
+            "colorGain": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0.5,
+                "maximum": 1.25
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "normalScale": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "roughnessFactor": {
+              "const": 1
+            },
+            "metalnessFactor": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "aoIntensity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "displacementScale": {
+              "const": 0
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "source": {
+                "properties": {
+                  "type": {
+                    "const": "catalog"
+                  }
+                },
+                "required": [
+                  "type"
+                ],
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "then": {
+            "properties": {
+              "maps": {
+                "required": [
+                  "basecolor",
+                  "normal",
+                  "roughness",
+                  "metallic",
+                  "height",
+                  "ao",
+                  "metallicRoughness"
+                ],
+                "type": "object",
+                "properties": {
+                  "basecolor": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "normal": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "roughness": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "metallic": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "height": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "ao": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "metallicRoughness": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "cleanBasecolor": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  },
+                  "cleanNormal": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]+$"
+                  }
+                }
+              },
+              "sampling": {
+                "properties": {
+                  "mode": {
+                    "const": "geometry-metres"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "source": {
+                "properties": {
+                  "type": {
+                    "const": "native-surface"
+                  }
+                },
+                "required": [
+                  "type"
+                ],
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "then": {
+            "properties": {
+              "sampling": {
+                "properties": {
+                  "mode": {
+                    "const": "native-world-xz"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        }
+      ]
+    }
+  }
+}
