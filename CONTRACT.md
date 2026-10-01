@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Version: 0.22.0, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
+Version: 0.22.1, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
 ## API
 
@@ -141,4 +141,4 @@ Node.js, Ajv and Sharp; optional ComfyUI for generation. Preview uses Three.js a
 
 `create` accepts `sourceMaps` with complete, coordinated PNG channels (`basecolor`, `normal`, `roughness`, `metallic`, `height`, `ao`, optional `opacity`). Every channel must match the declared resolution exactly; data channels are grayscale linear bytes, basecolor sRGB, normals +Y. Tiled imports seam-check every channel and allow 2048² pixels. Opacity also enters basecolor alpha. A `prepared` variant retains independent authored roughness and is excluded from albedo-derived `refinish`; reimport its recipe instead. Source paths do not enter the catalog. Packing and compression consume these maps like any other variant.
 
-The 0.22.0 used-surface catalog and physical scales are indexed in [surface-remaster](sources/surface-remaster/INDEX.md). [Shared masks and atlas binding](bindings/surface-detail.json) declares linear coverage channels, metre repeats and alpha atlas cells. [Release manifest](releases/surface-remaster-0.22.0.json) hashes the distributable PNG/KTX2 overlay; build it with `node scripts/package-surface-remaster.mjs` after `node scripts/verify-surface-remaster.mjs`.
+The used-surface catalog and physical scales are indexed in [surface-remaster](sources/surface-remaster/INDEX.md), including the 0.22.1 sealed-street refinement. [Shared masks and atlas binding](bindings/surface-detail.json) declares linear coverage channels, metre repeats and alpha atlas cells. [Release manifest](releases/surface-remaster-0.22.1.json) hashes the distributable PNG/KTX2 overlay; build it with `node scripts/package-surface-remaster.mjs` after `node scripts/verify-surface-remaster.mjs`.

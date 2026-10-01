@@ -1,5 +1,7 @@
 # Changelog
 
+0.22.1: refine sealed street finishes with quieter mineral albedo, restrained oily wipe contrast, sparse wear and darker seams; filter fine wear at its physical scale on each axis, including narrow curbs. Preserve street identities and coordinated PBR maps, refresh PNG/KTX2 bindings, and add a preparation-only recipe mode for isolated visual review.
+
 0.22.0: used urban surface remaster: 15 street variants, 11 poor and mid exterior variants and 18 interior hard-surface variants, with independent oily roughness, shallow coordinated relief, physical scales and native street bindings. Six seamless 2048² world-space masks and transparent 4×4 engine / 3×2 source decal atlases live under `surface-detail`. Prepared native imports validate every map; compression includes street and shared-detail bindings and publishes KTX2 hashes. Reproducible generated sources, catalog checks and a checksummed release manifest accompany the maps.
 
 0.21.0: R1 office finishes (graphite and blue-grey veneer, walnut floor and ceiling, teal-navy leather, walnut burl) and poor-building finishes (C7 cream plates, C2 olive corridor paint and strapped pipe lagging, C4 terracotta tile and teal paint, C6 plum quilted padding, red and magenta neon lenses on `light-fixture/poor`). Grok sources, code-drawn grids and recipes reproduce the published maps, which publish their compressed siblings.

@@ -1,6 +1,6 @@
 # Materials index
 
-Version: 0.22.0.
+Version: 0.22.1.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
@@ -47,4 +47,4 @@ Version: 0.22.0.
 
 - [Used urban surface remaster](../sources/surface-remaster/INDEX.md): generated sources, keys, physical scales, shared masks and decal layout.
 - [Surface detail binding](../bindings/surface-detail.json): engine roles, texture hashes and repeat sizes.
-- [0.22.0 release manifest](../releases/surface-remaster-0.22.0.json): checked PNG/KTX2 overlay inventory.
+- [0.22.1 release manifest](../releases/surface-remaster-0.22.1.json): checked PNG/KTX2 overlay inventory, including the sealed-street refinement.
