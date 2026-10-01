@@ -26,6 +26,20 @@ The concrete import passes the native seam gate. PBR response is authored separa
 
 Visual acceptance requires the actual engine selector: compare an extended slab run at walking and grazing views under the same light, including stable reload/LOD and clipping boundaries. Map validity is not that acceptance.
 
+## Required next-version adjacency behavior
+
+The current version-1 binding and independent FNV weighted choice above do **not** guarantee distinct neighboring units. They remain the reviewable content checkpoint. The next consumer contract must carry a new version or required capability; do not silently interpret version 1 as proof that adjacency is implemented.
+
+The user's requirement is a hard constraint: physical units in the same surface family that share a full edge must have different variant IDs. Build the complete authored physical-unit graph before choosing variants. Merge both triangles, clipped remainders and any subdivisions of one original unit into that unit first. Match shared physical edges across placement and streaming boundaries, including edges represented by multiple shorter segments. Corner-only contact is not adjacency. A world-cell represents the complete metric repeat domain, not each triangle or individual brick shown within the texture. Different surface IDs that resolve to the same set still share this constraint.
+
+Use stable physical unit and placement identities, world seed, set salt, and a deterministic graph-coloring order. UTF-8 lexical ordering of the canonical identity tuple is one reproducible ordering; draw order, instance index, loaded-chunk membership, frame time and LOD are forbidden. The engine owner must specify its exact coloring algorithm and persist or reproducibly derive the complete domain's assignments. A greedy choice that runs out of available colors must backtrack or use a valid deterministic coloring; silently repeating a neighbor or falling back to clean does not meet the constraint. Never recolor already visible neighbors when another chunk streams in.
+
+When selecting among variants that do not appear on an already assigned neighbor, exclude those neighbors' IDs and renormalize the remaining authored weights before the cumulative weighted choice. Condition probabilities are soft population targets, while distinct neighbors are mandatory. Check the realized distribution and report differences; these weights cannot be promised unchanged after exclusions. No channel may be chosen separately, and no random UV rotation or offset may replace a distinct coherent variant.
+
+The current asphalt inventory has a single clean variant with an 80% target. That target is infeasible on a regular connected grid under the distinct-neighbor constraint: one ID can cover at most half that grid. Do not force roughly half the road to be visibly damaged while claiming the 80% target. Add independently authored clean alternatives before adoption, then inspect the achieved clean/stained/cracked/patched distribution. Red clean alternatives and the other family distributions also require this review. Additional source work and a versioned engine selector are pending.
+
+Acceptance must report zero equal-ID shared-edge pairs over the complete domain, byte-stable assignments after reload/streaming/LOD, realized condition counts, coherent map-bundle selection, and a visually varied run under matched reference lighting. A graph audit alone cannot prove that two distinct textures look sufficiently different.
+
 ## Asphalt condition candidates
 
 `sets.asphalt-conditions` contains six joint-free 2 m condition maps (one clean control, one crack, two stains and two repairs) with shared boundary samples. It is deliberately unbound in `surfaces`: the native asphalt and parking effects have extra clean/base slots and different channel mixing, so the photographed-surface override would be incorrect. [Integration proposal](asphalt/integration-proposal.json) specifies the full coherent condition routing and preserves world-XZ sampling, parking entrance blending and all lane/gutter UVs. It requires an engine consumer change before activation.
