@@ -1,6 +1,6 @@
 # Materials index
 
-Version: 0.17.5.
+Version: 0.22.0.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
@@ -44,3 +44,7 @@ Version: 0.17.5.
 - [ComfyUI workflows](../templates/README.md): photographic and upscale templates.
 
 - [District street recipes](../batch/cyberpunk/district-streets.json): fine hexagonal paving and glossy district panels, curbs and junction coatings. Native bindings expose the same authored maps to Streets; [marquee run sources](../sources/streets/INDEX.md#marquee-run) add the channel and frame finishes and the dot-matrix LED face.
+
+- [Used urban surface remaster](../sources/surface-remaster/INDEX.md): generated sources, keys, physical scales, shared masks and decal layout.
+- [Surface detail binding](../bindings/surface-detail.json): engine roles, texture hashes and repeat sizes.
+- [0.22.0 release manifest](../releases/surface-remaster-0.22.0.json): checked PNG/KTX2 overlay inventory.
