@@ -1,0 +1,36 @@
+{
+  "key": "cyberpunk/e6-floor/high_rich",
+  "variantId": "grey-stone",
+  "alignment": "tile",
+  "description": "Warm light-grey fine branching-vein bathroom stone; fine sealed mineral body, independently authored wipe and dry-water response; no baked joints and negligible stone relief",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "tiling": {
+    "worldSize": [
+      2,
+      2
+    ]
+  },
+  "sourceMaps": {
+    "basecolor": "out/interior-floors/prepared/e6-grey-stone/basecolor.png",
+    "normal": "out/interior-floors/prepared/e6-grey-stone/normal.png",
+    "roughness": "out/interior-floors/prepared/e6-grey-stone/roughness.png",
+    "metallic": "out/interior-floors/prepared/e6-grey-stone/metallic.png",
+    "height": "out/interior-floors/prepared/e6-grey-stone/height.png",
+    "ao": "out/interior-floors/prepared/e6-grey-stone/ao.png"
+  },
+  "physical": {
+    "roughnessFactor": 1,
+    "metallicFactor": 0
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "isotropic"
+  }
+}

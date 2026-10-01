@@ -1,0 +1,50 @@
+{
+  "asset": "resilient-rubber-source.png",
+  "tool": "built-in image_gen.imagegen",
+  "mode": "generate",
+  "use_case": "product-mockup",
+  "prompt": "Use case: product-mockup\nAsset type: neutral photographic albedo source for a physically based manufactured resilient rubber floor material.\nPrimary request: ONE square seamless tileable swatch of dark charcoal finely grained manufactured resilient rubber. Show only the flat material filling the whole image edge to edge.\nStyle/medium: photorealistic material scan, with the natural fine restrained micrograin of dense manufactured rubber and only sparse very faint surface abrasion.\nComposition/framing: perfectly flat orthographic top-down. No object, room, camera perspective, border, slab edge, joints or features. The left/right and top/bottom boundaries must tile seamlessly.\nLighting: perfectly even diffuse cross-polarized scan illumination, neutral white balance, constant exposure across the whole image. Albedo only: no directional illumination, shadows, ambient occlusion, specular shine, reflections, vignette or gradient.\nColour: neutral dark charcoal rubber, readable fine low-contrast tonal detail; do not crush to featureless pure black. Near-uniform underlying colour with subtle authentic rubber variation.\nConstraints: this is a shared real rubber substrate. Its physical studs and quarter-turn ribs will be authored separately, so this source must remain smooth with only subtle irregular micrograin. Abrasion is sparse, faint and short.\nAvoid: raised studs, ribs, grooves, dimples, printed dots, stripes, regular patterns, fabric weave, threads, leather pores, stone aggregate, granules, pebbles, concrete, asphalt, pits, porous foam, cracks, chips, wood grain, large stains, grime islands, dust chunks, scratches arranged as a pattern, text, logos or watermarks.",
+  "transparent_background": false,
+  "input_images": [],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "mode_channels": "RGB",
+  "bytes": 2793235,
+  "sha256": "8bded5728616c148062e72c32033357afee1feb887651359fd5c0785d1d0d0d2",
+  "processing": "Byte-for-byte copy only. No resizing, upscaling, recolouring, map derivation, seam correction or source modification.",
+  "intended_use": "Neutral fine-grained rubber substrate. Physical studs, quarter-turn ribs and room-specific wear are authored independently downstream.",
+  "visual_inspection": {
+    "inspected": true,
+    "findings": [
+      "Neutral charcoal material fills the square edge to edge, with fine irregular manufactured grain.",
+      "No explicit studs, ribs, printed dots, stripes, joints, shadows, strong reflections, wood grain or fabric weave.",
+      "Low-contrast mottling and sparse faint abrasion; no coarse aggregate or deep pitting.",
+      "Physical rubber relief and directional room-floor structure are intentionally absent."
+    ],
+    "limitation": "This is a generated photographic-style albedo source, not a calibrated scanned material or a complete PBR material. No game/render acceptance is claimed."
+  },
+  "read_only_pixel_checks": {
+    "mean_rgb": [
+      61.05154,
+      60.87745,
+      60.72181
+    ],
+    "std_rgb": [
+      6.73802,
+      7.3494,
+      6.34779
+    ],
+    "edge_mean_abs_difference_0_255": {
+      "left_right": 6.05369,
+      "top_bottom": 5.43355
+    },
+    "interior_neighbor_mean_abs_difference_0_255": {
+      "x": 5.14418,
+      "y": 6.67089
+    },
+    "interpretation": "Opposite edges are not pixel-identical; edge differences are comparable to ordinary interior neighbour variation. No pronounced seam indicated by this preliminary numerical check. No tiling render or seam correction performed."
+  }
+}

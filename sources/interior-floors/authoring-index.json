@@ -1,0 +1,551 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen source photographs plus authored physical response maps",
+  "originalsPreserved": true,
+  "noUpscaling": true,
+  "entries": [
+    {
+      "key": "cyberpunk/clinic-floor/high_rich",
+      "variant": "studded-resilient",
+      "source": "resilient-rubber-source.png",
+      "nativeSourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "8bded5728616c148062e72c32033357afee1feb887651359fd5c0785d1d0d0d2",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "worldSize": [
+        0.64,
+        0.64
+      ],
+      "physicalPattern": {
+        "pitchMetres": 0.04,
+        "diameterMetres": 0.024,
+        "riseMetres": 0.0009
+      },
+      "heightEncoding": "height map = 0.5 + physical height metres / 0.002; tangent normals computed from physical metre gradients, +Y convention",
+      "maps": {
+        "basecolor": {
+          "sha256": "b28b096056e6f8e99f34f179161df069ccbc6b035cde4ae0cba444e39552ca4d",
+          "min": 35,
+          "max": 122,
+          "mean": 60.71777661641636
+        },
+        "normal": {
+          "sha256": "57462df0aacb52dc29c2d90efed3f06f5fe04be0ec7c672840293db34d129ffe",
+          "min": 63,
+          "max": 255,
+          "mean": 169.69426600133892
+        },
+        "roughness": {
+          "sha256": "a7c225e12da7489f0aa7906571ddef66a3e3bf1678acfbcc0ed75a1013b8805c",
+          "min": 0.4675000011920929,
+          "max": 0.7024999856948853,
+          "mean": 0.6099957476364466
+        },
+        "metallic": {
+          "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+          "min": 0,
+          "max": 0,
+          "mean": 0
+        },
+        "height": {
+          "sha256": "58601baf7d51ff5c310093d9ea58047ad75610c805752578707a067c401a399b",
+          "min": 0.49879738688468933,
+          "max": 0.9524575471878052,
+          "mean": 0.606856344531991
+        },
+        "ao": {
+          "sha256": "d9aa8935722ef612b2201a8fd8523ffe3aae7639a85c0c18e9a69d1c8f29b9cc",
+          "min": 0.9649999737739563,
+          "max": 1,
+          "mean": 0.9968449436246374
+        }
+      },
+      "roughness": {
+        "min": 0.4675000011920929,
+        "max": 0.7024999856948853,
+        "mean": 0.6099957476364466
+      },
+      "reliefMetres": {
+        "min": -0.0000024052287699305452,
+        "max": 0.0009049150394275784,
+        "mean": 0.00021371268867980745
+      },
+      "request": "batch/cyberpunk/interior-floors/clinic-studs.json",
+      "created": {
+        "created": [
+          {
+            "key": "cyberpunk/clinic-floor/high_rich",
+            "variants": 1
+          }
+        ],
+        "skipped": []
+      },
+      "resolved": {
+        "entry": {
+          "key": "cyberpunk/clinic-floor/high_rich",
+          "alignment": "tile",
+          "tiling": {
+            "worldSize": [
+              0.64,
+              0.64
+            ]
+          },
+          "physical": {
+            "roughnessFactor": 1,
+            "metallicFactor": 0
+          },
+          "variants": [
+            {
+              "id": "studded-resilient",
+              "class": "prepared",
+              "resolution": [
+                1024,
+                1024
+              ],
+              "maps": {
+                "basecolor": "assets/clinic-floor/high_rich/studded-resilient/basecolor.png",
+                "normal": "assets/clinic-floor/high_rich/studded-resilient/normal.png",
+                "roughness": "assets/clinic-floor/high_rich/studded-resilient/roughness.png",
+                "metallic": "assets/clinic-floor/high_rich/studded-resilient/metallic.png",
+                "height": "assets/clinic-floor/high_rich/studded-resilient/height.png",
+                "ao": "assets/clinic-floor/high_rich/studded-resilient/ao.png",
+                "metallicRoughness": "assets/metallic-roughness/8af92bd7e20af7572e0251d20796e9226ea7ec4a14f6af82d279f7584b3c811d.png"
+              },
+              "layout": {
+                "family": "continuous",
+                "origin": [
+                  0,
+                  0
+                ],
+                "orientation": "isotropic"
+              },
+              "ktx2": {
+                "basecolor": "assets/clinic-floor/high_rich/studded-resilient/basecolor.ktx2",
+                "normal": "assets/clinic-floor/high_rich/studded-resilient/normal.ktx2",
+                "roughness": "assets/clinic-floor/high_rich/studded-resilient/roughness.ktx2",
+                "metallic": "assets/clinic-floor/high_rich/studded-resilient/metallic.ktx2",
+                "height": "assets/clinic-floor/high_rich/studded-resilient/height.ktx2",
+                "ao": "assets/clinic-floor/high_rich/studded-resilient/ao.ktx2",
+                "metallicRoughness": "assets/metallic-roughness/8af92bd7e20af7572e0251d20796e9226ea7ec4a14f6af82d279f7584b3c811d.ktx2"
+              }
+            }
+          ]
+        }
+      },
+      "status": "technical candidate; real room/reference visual acceptance pending"
+    },
+    {
+      "key": "cyberpunk/interior-ribbed-floor/poor",
+      "variant": "quarter-turn",
+      "source": "resilient-rubber-source.png",
+      "nativeSourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "8bded5728616c148062e72c32033357afee1feb887651359fd5c0785d1d0d0d2",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "worldSize": [
+        1,
+        1
+      ],
+      "physicalPattern": {
+        "moduleMetres": 0.5,
+        "ribPitchMetres": 0.005,
+        "riseMetres": 0.00035,
+        "jointMetres": 0.0015
+      },
+      "heightEncoding": "height map = 0.5 + physical height metres / 0.002; tangent normals computed from physical metre gradients, +Y convention",
+      "maps": {
+        "basecolor": {
+          "sha256": "b28b096056e6f8e99f34f179161df069ccbc6b035cde4ae0cba444e39552ca4d",
+          "min": 35,
+          "max": 122,
+          "mean": 60.71777661641636
+        },
+        "normal": {
+          "sha256": "6f32452095c3c014429ed6d33f6aa828bca49a063c44270b826e518d13aedbb4",
+          "min": 105,
+          "max": 255,
+          "mean": 169.70532925915683
+        },
+        "roughness": {
+          "sha256": "c727a31f5e8ce37f4ea9c3e5ea08bbabd526b6b43ffdf90042ce2d4338ed5a7b",
+          "min": 0.5650008916854858,
+          "max": 0.7400000095367432,
+          "mean": 0.6451059656947677
+        },
+        "metallic": {
+          "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+          "min": 0,
+          "max": 0,
+          "mean": 0
+        },
+        "height": {
+          "sha256": "9387c37b445d93d784657a02cde3a7658b928d56369e235a6d623606d2a76515",
+          "min": 0.4993576407432556,
+          "max": 0.6763983368873596,
+          "mean": 0.5860988260666318
+        },
+        "ao": {
+          "sha256": "ee60abdd44482fdde60988693aebec56708901933575a9ea7ef8cf7de48832e3",
+          "min": 0.9850000143051147,
+          "max": 0.9999998807907104,
+          "mean": 0.9923813581092418
+        }
+      },
+      "roughness": {
+        "min": 0.5650008916854858,
+        "max": 0.7400000095367432,
+        "mean": 0.6451059656947677
+      },
+      "reliefMetres": {
+        "min": -0.000001284705831494648,
+        "max": 0.0003527966619003564,
+        "mean": 0.00017219765210858007
+      },
+      "request": "batch/cyberpunk/interior-floors/quarter-turn-ribs.json",
+      "created": {
+        "created": [
+          {
+            "key": "cyberpunk/interior-ribbed-floor/poor",
+            "variants": 1
+          }
+        ],
+        "skipped": []
+      },
+      "resolved": {
+        "entry": {
+          "key": "cyberpunk/interior-ribbed-floor/poor",
+          "alignment": "tile",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
+          "physical": {
+            "roughnessFactor": 1,
+            "metallicFactor": 0
+          },
+          "variants": [
+            {
+              "id": "quarter-turn",
+              "class": "prepared",
+              "resolution": [
+                1024,
+                1024
+              ],
+              "maps": {
+                "basecolor": "assets/interior-ribbed-floor/poor/quarter-turn/basecolor.png",
+                "normal": "assets/interior-ribbed-floor/poor/quarter-turn/normal.png",
+                "roughness": "assets/interior-ribbed-floor/poor/quarter-turn/roughness.png",
+                "metallic": "assets/interior-ribbed-floor/poor/quarter-turn/metallic.png",
+                "height": "assets/interior-ribbed-floor/poor/quarter-turn/height.png",
+                "ao": "assets/interior-ribbed-floor/poor/quarter-turn/ao.png",
+                "metallicRoughness": "assets/metallic-roughness/9e49a3b342bec31f255f242cf6bc3e5f84451e174720b27b77a17c2f55f92fde.png"
+              },
+              "layout": {
+                "family": "continuous",
+                "origin": [
+                  0,
+                  0
+                ],
+                "orientation": "isotropic"
+              },
+              "ktx2": {
+                "basecolor": "assets/interior-ribbed-floor/poor/quarter-turn/basecolor.ktx2",
+                "normal": "assets/interior-ribbed-floor/poor/quarter-turn/normal.ktx2",
+                "roughness": "assets/interior-ribbed-floor/poor/quarter-turn/roughness.ktx2",
+                "metallic": "assets/interior-ribbed-floor/poor/quarter-turn/metallic.ktx2",
+                "height": "assets/interior-ribbed-floor/poor/quarter-turn/height.ktx2",
+                "ao": "assets/interior-ribbed-floor/poor/quarter-turn/ao.ktx2",
+                "metallicRoughness": "assets/metallic-roughness/9e49a3b342bec31f255f242cf6bc3e5f84451e174720b27b77a17c2f55f92fde.ktx2"
+              }
+            }
+          ]
+        }
+      },
+      "status": "technical candidate; real room/reference visual acceptance pending"
+    },
+    {
+      "key": "cyberpunk/b2-floor/rich",
+      "variant": "red-stone",
+      "source": "b2-red-stone-quiet-source.png",
+      "nativeSourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "2d35bb497a2b2155062469487a7baebb1863822c86898e08219f0ba1d2cfa8bf",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "worldSize": [
+        2,
+        2
+      ],
+      "physicalPattern": {
+        "maximumGrainReliefMetres": 0.000008
+      },
+      "heightEncoding": "height map = 0.5 + physical height metres / 0.002; tangent normals computed from physical metre gradients, +Y convention",
+      "maps": {
+        "basecolor": {
+          "sha256": "541a9656d9d95a1ddabcd8702448029aec2bba83adefe002cfb5d288b41d6561",
+          "min": 13,
+          "max": 190,
+          "mean": 77.53807131448734
+        },
+        "normal": {
+          "sha256": "bf923140bd46e64ad791956ec81df7d0c2f18c87b43a7c7e5601bc038284f3f1",
+          "min": 127,
+          "max": 255,
+          "mean": 170.00000063579077
+        },
+        "roughness": {
+          "sha256": "bb09e89de5e7ff4fdf0b532e38b20ad23fcaa9bfbf99a7cfc683700ee7de27c9",
+          "min": 0.1875,
+          "max": 0.33250001072883606,
+          "mean": 0.24803552162744325
+        },
+        "metallic": {
+          "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+          "min": 0,
+          "max": 0,
+          "mean": 0
+        },
+        "height": {
+          "sha256": "ca41f89054f237def17118af983d83aebefd93c6cd71e434f15ed00fcaa6e9ad",
+          "min": 0.4984999895095825,
+          "max": 0.5015000104904175,
+          "mean": 0.4999999999976126
+        },
+        "ao": {
+          "sha256": "b04e44f8f7123ad9b6a95afeb8c4f75b63c29d58cd896e803f5a4ef282ef96e8",
+          "min": 1,
+          "max": 1,
+          "mean": 1
+        }
+      },
+      "roughness": {
+        "min": 0.1875,
+        "max": 0.33250001072883606,
+        "mean": 0.24803552162744325
+      },
+      "reliefMetres": {
+        "min": -0.0000029999964681337588,
+        "max": 0.0000029999964681337588,
+        "mean": 6.791909661719788e-26
+      },
+      "request": "batch/cyberpunk/interior-floors/b2-red-stone.json",
+      "created": {
+        "created": [
+          {
+            "key": "cyberpunk/b2-floor/rich",
+            "variants": 1
+          }
+        ],
+        "skipped": []
+      },
+      "resolved": {
+        "entry": {
+          "key": "cyberpunk/b2-floor/rich",
+          "alignment": "tile",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "physical": {
+            "roughnessFactor": 1,
+            "metallicFactor": 0
+          },
+          "variants": [
+            {
+              "id": "red-stone",
+              "class": "prepared",
+              "resolution": [
+                1024,
+                1024
+              ],
+              "maps": {
+                "basecolor": "assets/b2-floor/rich/red-stone/basecolor.png",
+                "normal": "assets/b2-floor/rich/red-stone/normal.png",
+                "roughness": "assets/b2-floor/rich/red-stone/roughness.png",
+                "metallic": "assets/b2-floor/rich/red-stone/metallic.png",
+                "height": "assets/b2-floor/rich/red-stone/height.png",
+                "ao": "assets/b2-floor/rich/red-stone/ao.png",
+                "metallicRoughness": "assets/metallic-roughness/ae7cfb2df4177f261723119fcf5e86617f39fb712454ded0c4c43b79c2abc5cb.png"
+              },
+              "layout": {
+                "family": "continuous",
+                "origin": [
+                  0,
+                  0
+                ],
+                "orientation": "isotropic"
+              },
+              "ktx2": {
+                "basecolor": "assets/b2-floor/rich/red-stone/basecolor.ktx2",
+                "normal": "assets/b2-floor/rich/red-stone/normal.ktx2",
+                "roughness": "assets/b2-floor/rich/red-stone/roughness.ktx2",
+                "metallic": "assets/b2-floor/rich/red-stone/metallic.ktx2",
+                "height": "assets/b2-floor/rich/red-stone/height.ktx2",
+                "ao": "assets/b2-floor/rich/red-stone/ao.ktx2",
+                "metallicRoughness": "assets/metallic-roughness/ae7cfb2df4177f261723119fcf5e86617f39fb712454ded0c4c43b79c2abc5cb.ktx2"
+              }
+            }
+          ]
+        }
+      },
+      "status": "technical candidate; real room/reference visual acceptance pending"
+    },
+    {
+      "key": "cyberpunk/e6-floor/high_rich",
+      "variant": "grey-stone",
+      "source": "e6-grey-stone-source.png",
+      "nativeSourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "fb145f52a811e880c135892798e0bb3a88fb4371c3d194e8cc937acd3fb26e07",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "worldSize": [
+        2,
+        2
+      ],
+      "physicalPattern": {
+        "maximumGrainReliefMetres": 0.000008
+      },
+      "heightEncoding": "height map = 0.5 + physical height metres / 0.002; tangent normals computed from physical metre gradients, +Y convention",
+      "maps": {
+        "basecolor": {
+          "sha256": "c98f924da8db4b5e2c8a05ed3a44475f85934d850c0e13a051f8a1961aa83658",
+          "min": 86,
+          "max": 238,
+          "mean": 174.52853043873722
+        },
+        "normal": {
+          "sha256": "bf923140bd46e64ad791956ec81df7d0c2f18c87b43a7c7e5601bc038284f3f1",
+          "min": 127,
+          "max": 255,
+          "mean": 170.00000063579077
+        },
+        "roughness": {
+          "sha256": "8d7857c2b61cd47758af36f063465a0268a2d0ef9444b248390ab5d4572f8cd8",
+          "min": 0.23499999940395355,
+          "max": 0.39500001072883606,
+          "mean": 0.30144736332397315
+        },
+        "metallic": {
+          "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+          "min": 0,
+          "max": 0,
+          "mean": 0
+        },
+        "height": {
+          "sha256": "ca41f89054f237def17118af983d83aebefd93c6cd71e434f15ed00fcaa6e9ad",
+          "min": 0.4984999895095825,
+          "max": 0.5015000104904175,
+          "mean": 0.4999999999976126
+        },
+        "ao": {
+          "sha256": "b04e44f8f7123ad9b6a95afeb8c4f75b63c29d58cd896e803f5a4ef282ef96e8",
+          "min": 1,
+          "max": 1,
+          "mean": 1
+        }
+      },
+      "roughness": {
+        "min": 0.23499999940395355,
+        "max": 0.39500001072883606,
+        "mean": 0.30144736332397315
+      },
+      "reliefMetres": {
+        "min": -0.0000029999964681337588,
+        "max": 0.0000029999964681337588,
+        "mean": 6.791909661719788e-26
+      },
+      "request": "batch/cyberpunk/interior-floors/e6-grey-stone.json",
+      "created": {
+        "created": [
+          {
+            "key": "cyberpunk/e6-floor/high_rich",
+            "variants": 1
+          }
+        ],
+        "skipped": []
+      },
+      "resolved": {
+        "entry": {
+          "key": "cyberpunk/e6-floor/high_rich",
+          "alignment": "tile",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "physical": {
+            "roughnessFactor": 1,
+            "metallicFactor": 0
+          },
+          "variants": [
+            {
+              "id": "grey-stone",
+              "class": "prepared",
+              "resolution": [
+                1024,
+                1024
+              ],
+              "maps": {
+                "basecolor": "assets/e6-floor/high_rich/grey-stone/basecolor.png",
+                "normal": "assets/e6-floor/high_rich/grey-stone/normal.png",
+                "roughness": "assets/e6-floor/high_rich/grey-stone/roughness.png",
+                "metallic": "assets/e6-floor/high_rich/grey-stone/metallic.png",
+                "height": "assets/e6-floor/high_rich/grey-stone/height.png",
+                "ao": "assets/e6-floor/high_rich/grey-stone/ao.png",
+                "metallicRoughness": "assets/metallic-roughness/dcbda0108676c3bed431c82dcd31fe92c0ebd99745447333f0fb0b16548c758c.png"
+              },
+              "layout": {
+                "family": "continuous",
+                "origin": [
+                  0,
+                  0
+                ],
+                "orientation": "isotropic"
+              },
+              "ktx2": {
+                "basecolor": "assets/e6-floor/high_rich/grey-stone/basecolor.ktx2",
+                "normal": "assets/e6-floor/high_rich/grey-stone/normal.ktx2",
+                "roughness": "assets/e6-floor/high_rich/grey-stone/roughness.ktx2",
+                "metallic": "assets/e6-floor/high_rich/grey-stone/metallic.ktx2",
+                "height": "assets/e6-floor/high_rich/grey-stone/height.ktx2",
+                "ao": "assets/e6-floor/high_rich/grey-stone/ao.ktx2",
+                "metallicRoughness": "assets/metallic-roughness/dcbda0108676c3bed431c82dcd31fe92c0ebd99745447333f0fb0b16548c758c.ktx2"
+              }
+            }
+          ]
+        }
+      },
+      "status": "technical candidate; real room/reference visual acceptance pending"
+    }
+  ],
+  "compression": {
+    "maps": 28,
+    "format": "KTX2",
+    "validation": "KTX Software validate passed each file",
+    "workers": 1
+  }
+}

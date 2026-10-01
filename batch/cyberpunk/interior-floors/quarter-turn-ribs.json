@@ -1,0 +1,36 @@
+{
+  "key": "cyberpunk/interior-ribbed-floor/poor",
+  "variantId": "quarter-turn",
+  "alignment": "tile",
+  "description": "Fine charcoal resilient ribbed floor modules; 0.5 m square quarter-turn arrangement, 5 mm ribs and 0.35 mm relief, quiet satin crests and rougher grooves",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "tiling": {
+    "worldSize": [
+      1,
+      1
+    ]
+  },
+  "sourceMaps": {
+    "basecolor": "out/interior-floors/prepared/quarter-turn-ribs/basecolor.png",
+    "normal": "out/interior-floors/prepared/quarter-turn-ribs/normal.png",
+    "roughness": "out/interior-floors/prepared/quarter-turn-ribs/roughness.png",
+    "metallic": "out/interior-floors/prepared/quarter-turn-ribs/metallic.png",
+    "height": "out/interior-floors/prepared/quarter-turn-ribs/height.png",
+    "ao": "out/interior-floors/prepared/quarter-turn-ribs/ao.png"
+  },
+  "physical": {
+    "roughnessFactor": 1,
+    "metallicFactor": 0
+  },
+  "layout": {
+    "family": "continuous",
+    "origin": [
+      0,
+      0
+    ],
+    "orientation": "isotropic"
+  }
+}

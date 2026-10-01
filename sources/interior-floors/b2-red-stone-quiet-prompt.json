@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "intent": "generate",
+  "role": "photographic albedo source",
+  "prompt": "Use case: photorealistic-natural. Make a square photographic PBR albedo swatch of smooth deep vermilion-red polished interior stone. This is a very QUIET stone: 97% of the area is broad clean unbroken muted red mineral body, with only THREE widely spaced extremely thin subtle pale-grey wandering hairline veins across the entire two-metre sample. The veins are very low contrast. Microscopically fine stone grain, visibly smooth dense sealed surface. No black speckles, pepper dots, tiny crack networks, granular aggregate, cloud texture, dirty stains or busy marble marbling. Flat top-down orthographic, exactly even neutral diffuse cross-polarized lighting, no shine or reflection baked into albedo, no shadows or gradients. Entire square fills edge to edge, seamless on all sides, no tiles, grout, borders, objects, text or watermark. Real photographic material detail. Colour and veins only: surface is perfectly planar, never cracked or carved.",
+  "generatedSource": "b2-red-stone-quiet-source.png",
+  "resolutionPolicy": "Preserve native output; downsample only for 1024px PBR channels. No upscaling.",
+  "inspection": "Broad quieter red fields and sparse hairline veins replace the rejected dense mineral network. Still a material candidate pending real room comparison.",
+  "licensingNote": "New generated material source; no screenshot pixels copied."
+}

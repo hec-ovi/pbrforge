@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "intent": "generate",
+  "role": "photographic albedo source",
+  "prompt": "Use case: photorealistic-natural. Asset type: native photographic albedo source for a physically based interior floor material, square image. Generate one flat top-down orthographic swatch of maintained light warm-grey limestone/marble, filling the entire image edge to edge, roughly two metres of uninterrupted stone. It has a very fine softly mottled grey mineral body, sparse thin branching off-white hairline veins with natural irregularity, and subtle scattered tiny use marks. The visual character is a refined large-slab bathroom floor, with quieter and much finer veins than dramatic Carrara marble. Neutral studio cross-polarized appearance: absolutely even diffuse illumination, no reflected lamps, no highlights or cast shadows, no colour cast, no baked ambient occlusion. Seamless across all four edges. The cut stone is flat and smooth; veins are colour variation, not cracks, grooves or bumps. No slab grid, grout, bevel, border, text, watermark, objects, floor drain, photographic perspective or room. Preserve realistic photographic microdetail, avoid cloudy painted noise or repeated synthetic squiggles. The final image is the base-colour source only; gloss and relief will be authored as separate maps. Opaque background.",
+  "generatedSource": "e6-grey-stone-source.png",
+  "resolutionPolicy": "Preserve native output; downsample only for 1024px PBR channels. No upscaling.",
+  "licensingNote": "New generated material source; no screenshot pixels copied."
+}
