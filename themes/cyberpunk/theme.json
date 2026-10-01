@@ -26728,6 +26728,12 @@
       "variants": [
         {
           "id": "clean",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
           "class": "prepared",
           "resolution": [
             1024,
@@ -26834,6 +26840,12 @@
       "variants": [
         {
           "id": "slab",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
           "class": "prepared",
           "resolution": [
             1024,
@@ -26934,6 +26946,12 @@
       "variants": [
         {
           "id": "red",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
           "class": "prepared",
           "resolution": [
             1024,
@@ -26989,6 +27007,12 @@
       "variants": [
         {
           "id": "grey",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
           "class": "prepared",
           "resolution": [
             880,
@@ -27063,6 +27087,12 @@
       "variants": [
         {
           "id": "yellow",
+          "tiling": {
+            "worldSize": [
+              1,
+              1
+            ]
+          },
           "class": "prepared",
           "resolution": [
             1024,
@@ -27137,6 +27167,12 @@
       "variants": [
         {
           "id": "grate",
+          "tiling": {
+            "worldSize": [
+              0.8,
+              0.8
+            ]
+          },
           "class": "prepared",
           "resolution": [
             1024,

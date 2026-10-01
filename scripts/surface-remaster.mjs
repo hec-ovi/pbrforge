@@ -8,6 +8,7 @@ import { decodeRgb, luminance, wrapBlur, encodeRgbPng, encodeGrayPng } from '../
 import { deriveHeight, deriveNormal, deriveAo, constantGray, flatNormal } from '../dist/gen/maps.js';
 import { seamScore } from '../dist/gen/seam.js';
 const mode = process.argv[2] ?? 'all';
+const prepareOnly = process.argv.includes('--prepare-only');
 const root = 'sources/surface-remaster';
 const out = 'out/surface-remaster';
 fs.mkdirSync(out, { recursive: true });
@@ -37,6 +38,22 @@ async function loadSource(id,w=1024,h=w,{flatten=true}={}) {
 function stretch(img,low=.08,high=.92){let hist=new Uint32Array(256);for(const v of img.data)hist[Math.round(v*255)]++;let a=0,b=255,total=0;for(let i=0;i<256;i++){total+=hist[i];if(total<img.data.length*.02)a=i;if(total<img.data.length*.98)b=i;}
   return gray(Float32Array.from(img.data,v=>low+(high-low)*clip((v*255-a)/(b-a))),img.width,img.height);}
 async function mask(id,w=1024,h=w){return stretch(luminance(await loadSource(id,w,h,{flatten:false})));}
+// Sample a filtered quarter-metre field before repeating it. Striding through
+// the full source aliases its ridges, and a square repeat crushes narrow curbs.
+async function fineWear(w,h,world){
+ const tw=Math.max(16,Math.round(w*.25/world[0])),th=Math.max(16,Math.round(h*.25/world[1]));
+ const tile=await mask('fingerprint',tw,th),data=new Float32Array(w*h);
+ for(let y=0;y<h;y++)for(let x=0;x<w;x++)data[y*w+x]=tile.data[(y%th)*tw+x%tw];
+ return gray(data,w,h);
+}
+// A sealed finish keeps the source's broad mineral variation, with its
+// aggregate subdued under the coating. Gloss wear is authored separately.
+function sealedAlbedo(base){
+ const lum=luminance(base),soft=wrapBlur(lum,3,2);let mean=0;
+ for(const value of soft.data)mean+=value/soft.data.length;
+ for(let i=0;i<lum.data.length;i++)for(let k=0;k<3;k++)
+  base.data[i*3+k]=clip(base.data[i*3+k]+255*(.45*(mean-soft.data[i])+.84*(soft.data[i]-lum.data[i])),0,255);
+}
 const requests=[],records=[];
 const previousResolutions=JSON.parse(fs.readFileSync(`${root}/previous-resolutions.json`));
 const existing=JSON.parse(fs.readFileSync('themes/cyberpunk/theme.json')).entries;
@@ -54,14 +71,19 @@ async function publish(id,key,variant,base,height,roughness,{world=[2,2],metal=0
 function recolor(base,target,strength=1){const lum=luminance(base);let avg=0;for(const v of lum.data)avg+=v/lum.data.length;for(let i=0;i<lum.data.length;i++)for(let k=0;k<3;k++){const val=target[k]*(.65+.35*lum.data[i]/avg);base.data[i*3+k]=clip(base.data[i*3+k]*(1-strength)+val*strength,0,255);}return base;}
 function response(base,broad,fine,range,grain=.1,relief=.15){const height=deriveHeight(base,{roughness:range,grain,relief});const roughness=gray(Float32Array.from(broad.data,(v,i)=>range[0]+(range[1]-range[0])*clip(.12+.76*v+.20*fine.data[i])),base.width,base.height);return {height,roughness};}
 async function surface(spec){let {id,key,variant='used',source='concrete',world=[2,2],shape,range=[.24,.73],color,group='streets',size=[1024,1024],metal=0}=spec;const [w,h]=size;
- let base=await loadSource(source,w,h);if(color)recolor(base,color);const broad=await mask('smudge',w,h),fine=await mask('fingerprint',w,h); // Fine mask repeats at its physical scale.
- const fdata=fine.data.slice();const repeats=Math.max(1,Math.round(world[0]/.25));for(let y=0;y<h;y++)for(let x=0;x<w;x++)fine.data[y*w+x]=fdata[((y*repeats)%h)*w+(x*repeats)%w];
+ let base=await loadSource(source,w,h);if(color)recolor(base,color);const broad=await mask('smudge',w,h);
+ const sealed=group==='streets'&&['slab','red-slab','curb','hex'].includes(shape);
+ const fine=sealed?await fineWear(w,h,world):await mask('fingerprint',w,h);
+ if(sealed)sealedAlbedo(base);
+ else {const fdata=fine.data.slice();const repeats=Math.max(1,Math.round(world[0]/.25));for(let y=0;y<h;y++)for(let x=0;x<w;x++)fine.data[y*w+x]=fdata[((y*repeats)%h)*w+(x*repeats)%w];}
  const {height,roughness}=response(base,broad,fine,range,.055,shape==='asphalt'?.5:.13);const metallic=constantGray(base,metal);
  const natural=luminance(base);
  for(let y=0;y<h;y++)for(let x=0;x<w;x++) {const i=y*w+x,u=x/w,v=y/h,b=broad.data[i],f=fine.data[i];let edge=0,joint=0,chip=0,polish=0;
+   if(sealed)roughness.data[i]=range[0]+(range[1]-range[0])*(.08+.82*smooth(.16,.84,b*.87+f*.13));
    if(shape==='slab'||shape==='red-slab'||shape==='curb'){
      const dx=Math.min(u,1-u)*world[0],dy=Math.min(v,1-v)*world[1],d=shape==='curb'?Math.min(dx,dy):Math.min(dx,dy);
      joint=1-smooth(.0015,.004,d);edge=1-smooth(.004,.07,d);chip=edge*smooth(.58,.8,b*.7+f*.3);
+     if(sealed&&shape!=='slab')chip=Math.max(chip,smooth(.73,.9,b)*smooth(.60,.83,f)*.4);
      polish=(1-edge)*smooth(.36,.72,b);height.data[i]-=joint*.15;roughness.data[i]=clip(roughness.data[i]+edge*.14-polish*.05,.16,.94);
      if(shape!=='curb'){for(const bx of [.018,.042,.958,.982]){const r=Math.hypot((u-bx)*world[0],(v-.06)*world[1]);if(r<.01){const rim=smooth(.0065,.008,r)*(1-smooth(.009,.011,r));height.data[i]-=.10*(1-rim);roughness.data[i]=.42;metallic.data[i]=1;for(let k=0;k<3;k++)base.data[i*3+k]=rim?110:48;}}
      }
@@ -88,7 +110,8 @@ async function surface(spec){let {id,key,variant='used',source='concrete',world=
    if(shape==='wall') {const streak=(Math.sin(u*Math.PI*38+Math.sin(v*6))*0.5+.5)*b;roughness.data[i]=clip(roughness.data[i]+streak*.08,.42,.95);}
    for(let k=0;k<3;k++){
      let value=base.data[i*3+k];if(chip>0)value=value*(1-chip)+(90+natural.data[i]*45)*chip;
-     value=value*(1-joint*.72)*(1-edge*.026)+polish*5;
+     value=value*(1-joint*.72)*(1-edge*(sealed?.10:.026))+polish*5;
+     if(sealed&&shape==='slab'){const fleck=smooth(.70,.88,b)*smooth(.66,.86,f);value=value*(1-fleck*.35)+192*fleck*.35;}
      base.data[i*3+k]=clip(value,0,255);
    }
  }
@@ -121,10 +144,10 @@ const streetSpecs=[
  ['asphalt-clean','cyberpunk/street-asphalt/mid','clean','asphalt',[2,2],'asphalt',[.59,.87]],
  ['asphalt-worn','cyberpunk/street-asphalt/mid','worn','asphalt',[2,2],'asphalt',[.39,.81]],
  ['asphalt-patched','cyberpunk/street-asphalt/mid','patched','asphalt',[2,2],'patched',[.43,.9]],
- ['sidewalk-slab','cyberpunk/street-sidewalk/mid','slab','concrete',[2,2],'slab',[.27,.73]],
- ['sidewalk-worn','cyberpunk/street-sidewalk/mid','walked','concrete',[2,2],'slab',[.22,.72],[117,117,109]],
- ['red-lane','cyberpunk/street-coated/mid','red','red',[2,2],'red-slab',[.22,.68]],
- ['curb-red','cyberpunk/street-curb/mid','red','red',[2,.25],'curb',[.27,.78]],
+ ['sidewalk-slab','cyberpunk/street-sidewalk/mid','slab','concrete',[2,2],'slab',[.26,.78],[142,138,128]],
+ ['sidewalk-worn','cyberpunk/street-sidewalk/mid','walked','concrete',[2,2],'slab',[.24,.75],[124,119,110]],
+ ['red-lane','cyberpunk/street-coated/mid','red','red',[2,2],'red-slab',[.23,.72],[153,69,51]],
+ ['curb-red','cyberpunk/street-curb/mid','red','red',[2,.25],'curb',[.28,.80],[165,65,46]],
  ['curb-yellow','cyberpunk/street-curb/mid','yellow','red',[2,.25],'curb',[.3,.8],[186,126,39]],
  ['curb-blue','cyberpunk/street-curb/mid','blue','painted',[2,.25],'curb',[.28,.77],[50,96,114]],
  ['hex-grey','cyberpunk/street-hex/mid','grey','concrete',[1.2,1.385640646],'hex',[.28,.72],[105,105,99]],
@@ -172,6 +195,7 @@ if(mode==='atlas')await engineAtlas();
 for(const [group,specs]of [['streets',streetSpecs],['exteriors',exteriorSpecs],['interiors',interiorSpecs]])if(mode===group||mode==='all')for(const [id,key,variant,source,world,shape,range,color]of specs){let size=group==='interiors'&&previousResolutions[key]?.[variant]?previousResolutions[key][variant]:shape==='curb'?[2048,256]:shape==='hex'?[880,1016]:[1024,1024];await surface({id,key,variant,source,world,shape,range,color,group,size,metal:/alloy|worktop|metal-panel|b3-gold|legacy-e1-steel|grate|drain/.test(id)?1:0});}
 // Sequential per request: later variants append to entries created earlier in this run.
 fs.writeFileSync(`${out}/${mode}-requests.json`,JSON.stringify(requests,null,2)+'\n');
+if(prepareOnly){fs.writeFileSync(`${out}/${mode}-report.json`,JSON.stringify(records,null,2)+'\n');console.log('prepared only; catalog unchanged');process.exit(0);}
 for(const req of requests){const live=JSON.parse(fs.readFileSync('themes/cyberpunk/theme.json')).entries;if(live[req.key])req.append=true;
  const file=`${out}/request.json`;fs.writeFileSync(file,JSON.stringify(req));const r=spawnSync('node',['dist/cli/pbrforge.js','create',file,'--native','--overwrite'],{encoding:'utf8'});if(r.status!==0)throw Error(r.stdout+r.stderr);console.log('published',req.key,req.variantId);
  const resolved=spawnSync('node',['dist/cli/pbrforge.js','resolve',req.key],{encoding:'utf8'});if(resolved.status!==0)throw Error(resolved.stdout+resolved.stderr);
