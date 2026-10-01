@@ -8,7 +8,7 @@
     "faceNormal": "Geometry face normal; preserve cap/chamfer distinction",
     "supportBottom": "detail.supports[].bottom for the owning pier, not global world zero",
     "supportTop": "detail.supports[].top for contact gating",
-    "deckElevationAtStation": "highwayFrameAt(structure,sourceStation).center.y or matching source elevation",
+    "deckElevationAtStation": "_highway_source.y from the authored mesh, or highwayFrameAt(structure, sourceStation).y",
     "jointStations": "detail.joints[].station",
     "edgeDistanceOrFaceTag": "Actual cap/chamfer/edge identity for edge wear; not distance to a repeat-tile border"
   },
@@ -84,5 +84,7 @@
     }
   ],
   "combination": "Start from authored maps. Use bounded coverage/mix, not repeated multiplicative wetness. Keep masks separated by slot and face orientation; dirt is not AO and does not change silhouette.",
-  "validation": "Two pier heights and two different support.bottom elevations: only lower ~0.6 m weathers. A jointed soffit and midspan should differ by station; vertical fascia runoff and horizontal underside deposits must remain directionally distinct. Compare masks on/off at fixed light/exposure/camera."
+  "validation": "Two pier heights and two different support.bottom elevations: only lower ~0.6 m weathers. A jointed soffit and midspan should differ by station; vertical fascia runoff and horizontal underside deposits must remain directionally distinct. Compare masks on/off at fixed light/exposure/camera.",
+  "ownershipContract": "engine/src/game/ground/HighwayOwnership.contract.json",
+  "ownershipProducer": "HIGHWAY_CONTENT_VERSION 1.0.0 with additive _highway_source/_highway_face attributes and geometry.userData.highwayContent.ownership support ranges; shader integration remains required"
 }
