@@ -1,0 +1,65 @@
+[
+  {
+    "state": "worn-edge",
+    "method": "built-in image_gen",
+    "generatedSource": "exec-e62918d4-a4fc-4e0a-bff5-bb0b37cf28d6.png",
+    "rawPath": "sources/street-variants/red/revision-2/raw/worn-edge.png",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "sha256": "b267c97284743fb111a178b4042fed43ec414bb44c7df8128c519d23c0cca286",
+    "finalSize": [
+      1024,
+      1024
+    ],
+    "worldSizeMetres": [
+      2,
+      2
+    ],
+    "processing": "whole-image downsample; no upscaling",
+    "prompt": "prompts.json"
+  },
+  {
+    "state": "stained-2",
+    "method": "built-in image_gen",
+    "generatedSource": "exec-9b202bb6-a38a-4e75-92fe-26b57b123b2a.png",
+    "rawPath": "sources/street-variants/red/revision-2/raw/stained-2.png",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "sha256": "1cc03e4c0b683f8b98c2de84bd47b8002765569d36c0e938758ff24465ae4eec",
+    "finalSize": [
+      1024,
+      1024
+    ],
+    "worldSizeMetres": [
+      2,
+      2
+    ],
+    "processing": "whole-image downsample; no upscaling",
+    "prompt": "prompts.json"
+  },
+  {
+    "state": "edge-repair",
+    "method": "built-in image_gen",
+    "generatedSource": "exec-2af11fc2-9b1d-4e1c-8aa9-8e13457c9239.png",
+    "rawPath": "sources/street-variants/red/revision-2/raw/edge-repair.png",
+    "rawSize": [
+      1254,
+      1254
+    ],
+    "sha256": "81a6c1763c716aa85b7db23cbca08ada612ad383cc772692a56790ae7aa68b7f",
+    "finalSize": [
+      1024,
+      1024
+    ],
+    "worldSizeMetres": [
+      2,
+      2
+    ],
+    "processing": "whole-image downsample; no upscaling",
+    "prompt": "prompts.json"
+  }
+]

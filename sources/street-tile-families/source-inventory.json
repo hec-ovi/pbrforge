@@ -1,0 +1,70 @@
+{
+  "nativeSourceUpscaling": false,
+  "photographs": [
+    {
+      "file": "raw/wipe-history.png",
+      "sha256": "30c29c0067d81d3020ff909a63ad580966095a8d81b20eb8eed67a4e4d69c3d3",
+      "bytes": 3169896,
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "originalPreserved": true,
+      "promptFile": "raw/prompts/wipe-history.txt",
+      "promptSha256": "9e075ff1e6c5522ee09f2e0db6d423241bbc851eb3b5d7331bd3dd83c442c301",
+      "tool": "Existing native remaster photograph reused unchanged",
+      "sourceLocation": "materials/sources/surface-remaster/raw/smudge.png"
+    },
+    {
+      "file": "raw/terracotta-face.png",
+      "sha256": "9090532e2a3b8e7f90944f604550eab239f306858f89ebbcf167b44ea1cf7638",
+      "bytes": 2935067,
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "originalPreserved": true,
+      "promptFile": "raw/prompts/terracotta-face.txt",
+      "promptSha256": "d7aa6155deca444ddb025deac6d8f3c532f5b4a84593312537b107ffce31b0a2",
+      "tool": "built-in image_gen.imagegen this task",
+      "sourceLocation": "exec-02cb8214-aa7a-4a11-a528-3d052e65b9f0.png"
+    },
+    {
+      "file": "raw/hex-mineral.png",
+      "sha256": "8ee8f0a31596e7cf0afcbeb319542bb656e000a2874ea5420855b4217fd037ef",
+      "bytes": 3581961,
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "originalPreserved": true,
+      "promptFile": "raw/prompts/hex-mineral.txt",
+      "promptSha256": "aaff4ce1cc8432bd0aa2df93df0f2911102ae45447ed9a058914da0485842977",
+      "tool": "Existing native remaster photograph reused unchanged",
+      "sourceLocation": "materials/sources/surface-remaster/raw/concrete.png"
+    }
+  ],
+  "sourceDetail": "Crop and output dimensions are recorded by family in author-report.json. All scale choices are art-authoring values, not photogrammetry.",
+  "scripts": {
+    "author-street-tile-families.mjs": {
+      "path": "scripts/author-street-tile-families.mjs",
+      "sha256": "b8b99eef095b4251487f24ea730c973652d8803241d654f2ca50e47dd29a519f"
+    },
+    "check-authored-street-tile-families.mjs": {
+      "path": "scripts/check-authored-street-tile-families.mjs",
+      "sha256": "f3611095311fba67a581c4a1d059f9fa30357b94bd1cee5bc7ab695509147688"
+    },
+    "publish.mjs": {
+      "path": "sources/street-tile-families/publish.mjs",
+      "sha256": "19104809817d425421ee84655465e1b22fedfe987bba8c67f361985328f1a846"
+    }
+  },
+  "toolMode": "built-in for new terracotta; no fallback API/CLI image generation",
+  "originalStagingScriptHashes": {
+    "author.mjs": "150e3bbb247b560ddebf98f768754c8b4163e07026ce56dc969289de927b4994",
+    "publish.mjs": "566d992d7d8a40549edff9eebc4c0d73e9270e526c6c6cf2661ada5fe8fb0f43",
+    "verify.mjs": "5a507a92051b80f6b013c722ec7bbe3dcc1821ea4e5a1287be99d836442da85f",
+    "review.py": "cd9df3ea36df13b40e66175e1f8164721c6c309968e955985c8eee87e2744d63"
+  },
+  "pathBase": "Photograph and prompt paths are relative to this source directory; script paths are relative to materials checkout."
+}

@@ -1,0 +1,122 @@
+{
+  "sources": [
+    {
+      "id": "stain-a",
+      "method": "built-in image_gen",
+      "originalPath": "exec-7519227a-1f75-47b6-a501-ff3a69dfd67d.png",
+      "archivedPath": "sources/street-variants/asphalt/revision-2/raw/stain-a.png",
+      "actualDimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "524e0fb053a092abf8b2ad2381f5ee5fb78e7d18eb27c6d3670aba2d01ab70d6",
+      "preparedDimensions": [
+        1024,
+        1024
+      ],
+      "wholeImageDownsample": true,
+      "upscaled": false,
+      "promptFile": "prompts.json",
+      "promptKey": "stain-a"
+    },
+    {
+      "id": "stain-b",
+      "method": "built-in image_gen",
+      "originalPath": "exec-60211384-973f-47fa-b384-7fb71f7b55c6.png",
+      "archivedPath": "sources/street-variants/asphalt/revision-2/raw/stain-b.png",
+      "actualDimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "e03620f90e93d9f57a365163f2ae639dfd4a7eac9409651e4458b2a3a073bd7e",
+      "preparedDimensions": [
+        1024,
+        1024
+      ],
+      "wholeImageDownsample": true,
+      "upscaled": false,
+      "promptFile": "prompts.json",
+      "promptKey": "stain-b"
+    },
+    {
+      "id": "repair-a",
+      "method": "built-in image_gen",
+      "originalPath": "exec-c4c8a41b-231f-4635-a42d-367be13480b8.png",
+      "archivedPath": "sources/street-variants/asphalt/revision-2/raw/repair-a.png",
+      "actualDimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "ea1fbe785e63da67eb4e80ab29c37d8a982480f988965d519830b9b908631ba1",
+      "preparedDimensions": [
+        1024,
+        1024
+      ],
+      "wholeImageDownsample": true,
+      "upscaled": false,
+      "promptFile": "prompts.json",
+      "promptKey": "repair-a"
+    },
+    {
+      "id": "repair-b",
+      "method": "built-in image_gen",
+      "originalPath": "exec-02b9c3cf-fad3-4635-a85a-c9659b294f0e.png",
+      "archivedPath": "sources/street-variants/asphalt/revision-2/raw/repair-b.png",
+      "actualDimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "7399842fc8eda163495bf05ea0cba2788a57362ddbadcfed1ba73c1b513a4a5f",
+      "preparedDimensions": [
+        1024,
+        1024
+      ],
+      "wholeImageDownsample": true,
+      "upscaled": false,
+      "promptFile": "prompts.json",
+      "promptKey": "repair-b"
+    }
+  ],
+  "baseline": "baseline/clean/",
+  "crackMask": "baseline/cracked-condition.png",
+  "inherited": {
+    "maps": [
+      {
+        "path": "baseline/clean/metallic.png",
+        "sha256": "a3acee77059e3c784c727f5bbee93338ed98fdc5e05ba57fcf31220a3511894d",
+        "origin": "../prepared/clean/metallic.png"
+      },
+      {
+        "path": "baseline/clean/roughness.png",
+        "sha256": "71354584a6288e914c6a1d97d4256ae9bdcc7db45402d97ea6f8d5beb74fe009",
+        "origin": "../prepared/clean/roughness.png"
+      },
+      {
+        "path": "baseline/clean/normal.png",
+        "sha256": "bc496808641de5d6cd4137decd1c91d7147a4dee18d3f7a6253f6842368468d9",
+        "origin": "../prepared/clean/normal.png"
+      },
+      {
+        "path": "baseline/clean/ao.png",
+        "sha256": "b10836a35e99ccbe811eec9f5032f3e5ae4455599347169eb6d5198a5122090c",
+        "origin": "../prepared/clean/ao.png"
+      },
+      {
+        "path": "baseline/clean/basecolor.png",
+        "sha256": "21551b9995432f0a603ced44a4bbacd011347f8cf849cb670ec217aec8d4c0a8",
+        "origin": "../prepared/clean/basecolor.png"
+      },
+      {
+        "path": "baseline/clean/height.png",
+        "sha256": "d794d6ca31bfa87cdb487579d2cd4bfae86264300996090ab1a795a2b7bd974f",
+        "origin": "../prepared/clean/height.png"
+      }
+    ],
+    "crack": {
+      "origin": "../masks/cracked-condition.png",
+      "copiedPath": "baseline/cracked-condition.png",
+      "rawPhotograph": "../raw/cracked.png",
+      "provenance": "../source-provenance.json"
+    }
+  }
+}

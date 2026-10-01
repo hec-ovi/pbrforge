@@ -601,6 +601,38 @@
     {
       "target": "themes/cyberpunk/assets/street-paint/mid/yellow/ao.png",
       "sha256": "bbab2221797d21d5fecc85460290be55115ef4599bafcc104000d88e05da368f"
+    },
+    {
+      "target": "themes/cyberpunk/assets/street-terracotta/poor/clean-a/basecolor.png",
+      "sha256": "4cc51a03b5416af631109f2aae1b1b3d9d8110b20e96a717dfd7b8d7243028f9"
+    },
+    {
+      "target": "themes/cyberpunk/assets/street-terracotta/poor/clean-a/normal.png",
+      "sha256": "d988e97f7414608cf448bf638de893e8fdc085ae670d2c71b6666a5325a045fc"
+    },
+    {
+      "target": "themes/cyberpunk/assets/street-terracotta/poor/clean-a/roughness.png",
+      "sha256": "2750fa0af74ece72e5fff9a5e143124b21ec8c3372241cbf16b6be3b08a17f99"
+    },
+    {
+      "target": "themes/cyberpunk/assets/street-terracotta/poor/clean-a/ao.png",
+      "sha256": "741c49f1d8530e0576447240a458f6fcd248d6a35f171a72cd4aa38b7cb984fb"
+    },
+    {
+      "target": "themes/cyberpunk/assets/street-hex/mid/grey-clean-a/basecolor.png",
+      "sha256": "9626636af2550001fc3689b5494bd6aed029dbe40fdd3719419a6f4fbeb395cf"
+    },
+    {
+      "target": "themes/cyberpunk/assets/street-hex/mid/grey-clean-a/normal.png",
+      "sha256": "d9aabd0d04bbb6b209089d919e31a578c9a1dedba3885f289761290287291644"
+    },
+    {
+      "target": "themes/cyberpunk/assets/street-hex/mid/grey-clean-a/roughness.png",
+      "sha256": "1a402fd55a34c4c1980c47d7d1f53f747dac779bcec91e0ae09831bd10ec5224"
+    },
+    {
+      "target": "themes/cyberpunk/assets/street-hex/mid/grey-clean-a/ao.png",
+      "sha256": "9a90d8806d9874bf721b9f03d28d0e3f64b3adb6e7efa64c3ae357a1e49975ae"
     }
   ],
   "surfaces": [
@@ -624,5 +656,15 @@
     "marquee-cap",
     "marquee-led"
   ],
-  "remaster": "sources/surface-remaster/INDEX.md"
+  "remaster": "sources/surface-remaster/INDEX.md",
+  "tileFamilies": {
+    "inventory": "sources/street-tile-families/INDEX.md",
+    "catalog": "sources/street-tile-families/catalog.json",
+    "bindingScript": "scripts/bind-metric-tile-surfaces.mjs",
+    "surfaces": [
+      "terracotta",
+      "basalt"
+    ],
+    "sampling": "existing world-XZ at catalog metre periods; horizontal paving only"
+  }
 }

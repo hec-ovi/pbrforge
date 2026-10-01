@@ -26981,6 +26981,246 @@
             "ao": "assets/street-asphalt/mid/asphalt-patched-1/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/87cca4b5a55bc92e04e65c78787f5b6cc340e9a5f12f30bcf2f4c799c2413237.ktx2"
           }
+        },
+        {
+          "id": "asphalt-clean-2",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-clean-2/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-clean-2/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-clean-2/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-clean-2/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-clean-2/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-clean-2/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/364c04d1efbc54343d9bbe124b635335b1c3c8e1c775856fa3f0a1f19440b4b5.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-clean-2/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-clean-2/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-clean-2/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-clean-2/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-clean-2/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-clean-2/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/364c04d1efbc54343d9bbe124b635335b1c3c8e1c775856fa3f0a1f19440b4b5.ktx2"
+          }
+        },
+        {
+          "id": "asphalt-stained-2",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-stained-2/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-stained-2/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-stained-2/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-stained-2/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-stained-2/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-stained-2/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ee593655da60d5f96a3fda13345761f67d1c4d22220785e8110f86a21557b317.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-stained-2/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-stained-2/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-stained-2/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-stained-2/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-stained-2/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-stained-2/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/ee593655da60d5f96a3fda13345761f67d1c4d22220785e8110f86a21557b317.ktx2"
+          }
+        },
+        {
+          "id": "asphalt-stained-3",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-stained-3/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-stained-3/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-stained-3/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-stained-3/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-stained-3/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-stained-3/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/12e57ffc98c0ea70abb419425292aa55dfec374d485a54de76a2bb17593c9699.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-stained-3/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-stained-3/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-stained-3/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-stained-3/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-stained-3/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-stained-3/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/12e57ffc98c0ea70abb419425292aa55dfec374d485a54de76a2bb17593c9699.ktx2"
+          }
+        },
+        {
+          "id": "asphalt-cracked-2",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-cracked-2/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-cracked-2/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-cracked-2/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-cracked-2/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-cracked-2/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-cracked-2/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/74702350b54f5888c86be859f8df58ce98e907edc24d44dddb724e071a7011ee.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-cracked-2/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-cracked-2/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-cracked-2/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-cracked-2/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-cracked-2/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-cracked-2/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/74702350b54f5888c86be859f8df58ce98e907edc24d44dddb724e071a7011ee.ktx2"
+          }
+        },
+        {
+          "id": "asphalt-patched-2",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-patched-2/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-patched-2/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-patched-2/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-patched-2/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-patched-2/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-patched-2/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/8a0d63812fb4f196f6936dc0ea66e9c35454b6908dcc097156fa0b42d9a03917.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-patched-2/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-patched-2/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-patched-2/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-patched-2/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-patched-2/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-patched-2/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/8a0d63812fb4f196f6936dc0ea66e9c35454b6908dcc097156fa0b42d9a03917.ktx2"
+          }
+        },
+        {
+          "id": "asphalt-patched-3",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-patched-3/basecolor.png",
+            "normal": "assets/street-asphalt/mid/asphalt-patched-3/normal.png",
+            "roughness": "assets/street-asphalt/mid/asphalt-patched-3/roughness.png",
+            "metallic": "assets/street-asphalt/mid/asphalt-patched-3/metallic.png",
+            "height": "assets/street-asphalt/mid/asphalt-patched-3/height.png",
+            "ao": "assets/street-asphalt/mid/asphalt-patched-3/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/cd5eca7d8eee7a968096e78afb7a2a426f05261a80f5976b16dd50310a63b523.png"
+          },
+          "layout": {
+            "family": "continuous",
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "isotropic"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-asphalt/mid/asphalt-patched-3/basecolor.ktx2",
+            "normal": "assets/street-asphalt/mid/asphalt-patched-3/normal.ktx2",
+            "roughness": "assets/street-asphalt/mid/asphalt-patched-3/roughness.ktx2",
+            "metallic": "assets/street-asphalt/mid/asphalt-patched-3/metallic.ktx2",
+            "height": "assets/street-asphalt/mid/asphalt-patched-3/height.ktx2",
+            "ao": "assets/street-asphalt/mid/asphalt-patched-3/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/cd5eca7d8eee7a968096e78afb7a2a426f05261a80f5976b16dd50310a63b523.ktx2"
+          }
         }
       ]
     },
@@ -27688,6 +27928,186 @@
             "ao": "assets/street-coated/mid/red-patched-1/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/6727e4da72f736fbae9d83f34b1cd541daeadd0288a59375fd348ab131afa420.ktx2"
           }
+        },
+        {
+          "id": "red-worn-edge-1",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-coated/mid/red-worn-edge-1/basecolor.png",
+            "normal": "assets/street-coated/mid/red-worn-edge-1/normal.png",
+            "roughness": "assets/street-coated/mid/red-worn-edge-1/roughness.png",
+            "metallic": "assets/street-coated/mid/red-worn-edge-1/metallic.png",
+            "height": "assets/street-coated/mid/red-worn-edge-1/height.png",
+            "ao": "assets/street-coated/mid/red-worn-edge-1/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/8dbba898a7e9b1defeab49dd3da0926b165ad4ae45b2641790f1bb8d8694a075.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.006,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-coated/mid/red-worn-edge-1/basecolor.ktx2",
+            "normal": "assets/street-coated/mid/red-worn-edge-1/normal.ktx2",
+            "roughness": "assets/street-coated/mid/red-worn-edge-1/roughness.ktx2",
+            "metallic": "assets/street-coated/mid/red-worn-edge-1/metallic.ktx2",
+            "height": "assets/street-coated/mid/red-worn-edge-1/height.ktx2",
+            "ao": "assets/street-coated/mid/red-worn-edge-1/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/8dbba898a7e9b1defeab49dd3da0926b165ad4ae45b2641790f1bb8d8694a075.ktx2"
+          }
+        },
+        {
+          "id": "red-worn-edge-2",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-coated/mid/red-worn-edge-2/basecolor.png",
+            "normal": "assets/street-coated/mid/red-worn-edge-2/normal.png",
+            "roughness": "assets/street-coated/mid/red-worn-edge-2/roughness.png",
+            "metallic": "assets/street-coated/mid/red-worn-edge-2/metallic.png",
+            "height": "assets/street-coated/mid/red-worn-edge-2/height.png",
+            "ao": "assets/street-coated/mid/red-worn-edge-2/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/63dfc406451937105d1b1e1bb907be99b14aea33af4b206fa1c2b93ba1b23856.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.006,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-coated/mid/red-worn-edge-2/basecolor.ktx2",
+            "normal": "assets/street-coated/mid/red-worn-edge-2/normal.ktx2",
+            "roughness": "assets/street-coated/mid/red-worn-edge-2/roughness.ktx2",
+            "metallic": "assets/street-coated/mid/red-worn-edge-2/metallic.ktx2",
+            "height": "assets/street-coated/mid/red-worn-edge-2/height.ktx2",
+            "ao": "assets/street-coated/mid/red-worn-edge-2/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/63dfc406451937105d1b1e1bb907be99b14aea33af4b206fa1c2b93ba1b23856.ktx2"
+          }
+        },
+        {
+          "id": "red-stained-2",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-coated/mid/red-stained-2/basecolor.png",
+            "normal": "assets/street-coated/mid/red-stained-2/normal.png",
+            "roughness": "assets/street-coated/mid/red-stained-2/roughness.png",
+            "metallic": "assets/street-coated/mid/red-stained-2/metallic.png",
+            "height": "assets/street-coated/mid/red-stained-2/height.png",
+            "ao": "assets/street-coated/mid/red-stained-2/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/11eb78fc79343b514570d8247d010604cace26a9ed5e6c038f17186eb02ff1cd.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.006,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-coated/mid/red-stained-2/basecolor.ktx2",
+            "normal": "assets/street-coated/mid/red-stained-2/normal.ktx2",
+            "roughness": "assets/street-coated/mid/red-stained-2/roughness.ktx2",
+            "metallic": "assets/street-coated/mid/red-stained-2/metallic.ktx2",
+            "height": "assets/street-coated/mid/red-stained-2/height.ktx2",
+            "ao": "assets/street-coated/mid/red-stained-2/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/11eb78fc79343b514570d8247d010604cace26a9ed5e6c038f17186eb02ff1cd.ktx2"
+          }
+        },
+        {
+          "id": "red-patched-2",
+          "tiling": {
+            "worldSize": [
+              2,
+              2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-coated/mid/red-patched-2/basecolor.png",
+            "normal": "assets/street-coated/mid/red-patched-2/normal.png",
+            "roughness": "assets/street-coated/mid/red-patched-2/roughness.png",
+            "metallic": "assets/street-coated/mid/red-patched-2/metallic.png",
+            "height": "assets/street-coated/mid/red-patched-2/height.png",
+            "ao": "assets/street-coated/mid/red-patched-2/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/9876a8bc3bb4400c79a6023b1a3d44e616411a56296d5f1d5fee9fe6ea2c0ae0.png"
+          },
+          "layout": {
+            "family": "panel",
+            "moduleSize": [
+              2,
+              2
+            ],
+            "jointWidth": 0.006,
+            "origin": [
+              0,
+              0
+            ],
+            "orientation": "horizontal"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-coated/mid/red-patched-2/basecolor.ktx2",
+            "normal": "assets/street-coated/mid/red-patched-2/normal.ktx2",
+            "roughness": "assets/street-coated/mid/red-patched-2/roughness.ktx2",
+            "metallic": "assets/street-coated/mid/red-patched-2/metallic.ktx2",
+            "height": "assets/street-coated/mid/red-patched-2/height.ktx2",
+            "ao": "assets/street-coated/mid/red-patched-2/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/9876a8bc3bb4400c79a6023b1a3d44e616411a56296d5f1d5fee9fe6ea2c0ae0.ktx2"
+          }
         }
       ]
     },
@@ -27767,6 +28187,518 @@
             "height": "assets/street-hex/mid/orange/height.ktx2",
             "ao": "assets/street-hex/mid/orange/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/c5905af540a330f2963769af51ba980ceeba6a9a109cba4d752e7737b9f40488.ktx2"
+          }
+        },
+        {
+          "id": "grey-clean-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey-clean-a/basecolor.png",
+            "normal": "assets/street-hex/mid/grey-clean-a/normal.png",
+            "roughness": "assets/street-hex/mid/grey-clean-a/roughness.png",
+            "metallic": "assets/street-hex/mid/grey-clean-a/metallic.png",
+            "height": "assets/street-hex/mid/grey-clean-a/height.png",
+            "ao": "assets/street-hex/mid/grey-clean-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/b75d210ec4fe9772af0948313cc7faf68341286a3a55808f2076748c289a0ec1.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/grey-clean-a/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/grey-clean-a/normal.ktx2",
+            "roughness": "assets/street-hex/mid/grey-clean-a/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/grey-clean-a/metallic.ktx2",
+            "height": "assets/street-hex/mid/grey-clean-a/height.ktx2",
+            "ao": "assets/street-hex/mid/grey-clean-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/b75d210ec4fe9772af0948313cc7faf68341286a3a55808f2076748c289a0ec1.ktx2"
+          }
+        },
+        {
+          "id": "grey-clean-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey-clean-b/basecolor.png",
+            "normal": "assets/street-hex/mid/grey-clean-b/normal.png",
+            "roughness": "assets/street-hex/mid/grey-clean-b/roughness.png",
+            "metallic": "assets/street-hex/mid/grey-clean-b/metallic.png",
+            "height": "assets/street-hex/mid/grey-clean-b/height.png",
+            "ao": "assets/street-hex/mid/grey-clean-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/5e3c48685149eb3ae173dc30c44f1e56583a0a9fbcb266fa56a6e4873fa9b90b.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/grey-clean-b/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/grey-clean-b/normal.ktx2",
+            "roughness": "assets/street-hex/mid/grey-clean-b/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/grey-clean-b/metallic.ktx2",
+            "height": "assets/street-hex/mid/grey-clean-b/height.ktx2",
+            "ao": "assets/street-hex/mid/grey-clean-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/5e3c48685149eb3ae173dc30c44f1e56583a0a9fbcb266fa56a6e4873fa9b90b.ktx2"
+          }
+        },
+        {
+          "id": "grey-stained-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey-stained-a/basecolor.png",
+            "normal": "assets/street-hex/mid/grey-stained-a/normal.png",
+            "roughness": "assets/street-hex/mid/grey-stained-a/roughness.png",
+            "metallic": "assets/street-hex/mid/grey-stained-a/metallic.png",
+            "height": "assets/street-hex/mid/grey-stained-a/height.png",
+            "ao": "assets/street-hex/mid/grey-stained-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/c492f297350a4bdd3ebe863d3fc5ce9b213106f0ebfd89d834c8fa2190b2a2b1.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/grey-stained-a/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/grey-stained-a/normal.ktx2",
+            "roughness": "assets/street-hex/mid/grey-stained-a/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/grey-stained-a/metallic.ktx2",
+            "height": "assets/street-hex/mid/grey-stained-a/height.ktx2",
+            "ao": "assets/street-hex/mid/grey-stained-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/c492f297350a4bdd3ebe863d3fc5ce9b213106f0ebfd89d834c8fa2190b2a2b1.ktx2"
+          }
+        },
+        {
+          "id": "grey-stained-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey-stained-b/basecolor.png",
+            "normal": "assets/street-hex/mid/grey-stained-b/normal.png",
+            "roughness": "assets/street-hex/mid/grey-stained-b/roughness.png",
+            "metallic": "assets/street-hex/mid/grey-stained-b/metallic.png",
+            "height": "assets/street-hex/mid/grey-stained-b/height.png",
+            "ao": "assets/street-hex/mid/grey-stained-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/9b23152667613b0ba8ab4214541574d1eb4ce7eb8a811bd8456c202503263c57.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/grey-stained-b/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/grey-stained-b/normal.ktx2",
+            "roughness": "assets/street-hex/mid/grey-stained-b/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/grey-stained-b/metallic.ktx2",
+            "height": "assets/street-hex/mid/grey-stained-b/height.ktx2",
+            "ao": "assets/street-hex/mid/grey-stained-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/9b23152667613b0ba8ab4214541574d1eb4ce7eb8a811bd8456c202503263c57.ktx2"
+          }
+        },
+        {
+          "id": "grey-cracked-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey-cracked-a/basecolor.png",
+            "normal": "assets/street-hex/mid/grey-cracked-a/normal.png",
+            "roughness": "assets/street-hex/mid/grey-cracked-a/roughness.png",
+            "metallic": "assets/street-hex/mid/grey-cracked-a/metallic.png",
+            "height": "assets/street-hex/mid/grey-cracked-a/height.png",
+            "ao": "assets/street-hex/mid/grey-cracked-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/60ea1b159a003f8eb507ed9b62e0a724b77e14f43d1ee0fcc1b1955bf7d89fce.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/grey-cracked-a/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/grey-cracked-a/normal.ktx2",
+            "roughness": "assets/street-hex/mid/grey-cracked-a/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/grey-cracked-a/metallic.ktx2",
+            "height": "assets/street-hex/mid/grey-cracked-a/height.ktx2",
+            "ao": "assets/street-hex/mid/grey-cracked-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/60ea1b159a003f8eb507ed9b62e0a724b77e14f43d1ee0fcc1b1955bf7d89fce.ktx2"
+          }
+        },
+        {
+          "id": "grey-cracked-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey-cracked-b/basecolor.png",
+            "normal": "assets/street-hex/mid/grey-cracked-b/normal.png",
+            "roughness": "assets/street-hex/mid/grey-cracked-b/roughness.png",
+            "metallic": "assets/street-hex/mid/grey-cracked-b/metallic.png",
+            "height": "assets/street-hex/mid/grey-cracked-b/height.png",
+            "ao": "assets/street-hex/mid/grey-cracked-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/83ffa9cebbcb5f674c62dcf8c87c52a3bf557b34a3f9932c9c97de164d7eec79.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/grey-cracked-b/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/grey-cracked-b/normal.ktx2",
+            "roughness": "assets/street-hex/mid/grey-cracked-b/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/grey-cracked-b/metallic.ktx2",
+            "height": "assets/street-hex/mid/grey-cracked-b/height.ktx2",
+            "ao": "assets/street-hex/mid/grey-cracked-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/83ffa9cebbcb5f674c62dcf8c87c52a3bf557b34a3f9932c9c97de164d7eec79.ktx2"
+          }
+        },
+        {
+          "id": "grey-patched-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey-patched-a/basecolor.png",
+            "normal": "assets/street-hex/mid/grey-patched-a/normal.png",
+            "roughness": "assets/street-hex/mid/grey-patched-a/roughness.png",
+            "metallic": "assets/street-hex/mid/grey-patched-a/metallic.png",
+            "height": "assets/street-hex/mid/grey-patched-a/height.png",
+            "ao": "assets/street-hex/mid/grey-patched-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/3b80d7403fbe822e6e5cfab29e061da24eb75a409e86a8ed4f496a5cdbf7eaaa.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/grey-patched-a/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/grey-patched-a/normal.ktx2",
+            "roughness": "assets/street-hex/mid/grey-patched-a/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/grey-patched-a/metallic.ktx2",
+            "height": "assets/street-hex/mid/grey-patched-a/height.ktx2",
+            "ao": "assets/street-hex/mid/grey-patched-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/3b80d7403fbe822e6e5cfab29e061da24eb75a409e86a8ed4f496a5cdbf7eaaa.ktx2"
+          }
+        },
+        {
+          "id": "grey-patched-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/grey-patched-b/basecolor.png",
+            "normal": "assets/street-hex/mid/grey-patched-b/normal.png",
+            "roughness": "assets/street-hex/mid/grey-patched-b/roughness.png",
+            "metallic": "assets/street-hex/mid/grey-patched-b/metallic.png",
+            "height": "assets/street-hex/mid/grey-patched-b/height.png",
+            "ao": "assets/street-hex/mid/grey-patched-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/1d14d34f6b8e7e092ac913fa37f29f59af39b5fa89324e6b84db9bd51b7f9675.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/grey-patched-b/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/grey-patched-b/normal.ktx2",
+            "roughness": "assets/street-hex/mid/grey-patched-b/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/grey-patched-b/metallic.ktx2",
+            "height": "assets/street-hex/mid/grey-patched-b/height.ktx2",
+            "ao": "assets/street-hex/mid/grey-patched-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/1d14d34f6b8e7e092ac913fa37f29f59af39b5fa89324e6b84db9bd51b7f9675.ktx2"
+          }
+        },
+        {
+          "id": "orange-clean-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange-clean-a/basecolor.png",
+            "normal": "assets/street-hex/mid/orange-clean-a/normal.png",
+            "roughness": "assets/street-hex/mid/orange-clean-a/roughness.png",
+            "metallic": "assets/street-hex/mid/orange-clean-a/metallic.png",
+            "height": "assets/street-hex/mid/orange-clean-a/height.png",
+            "ao": "assets/street-hex/mid/orange-clean-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ec3292d7c59d62908dd810a5671ec2d56dfae1498ed94b9b3983a81ba1191016.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/orange-clean-a/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/orange-clean-a/normal.ktx2",
+            "roughness": "assets/street-hex/mid/orange-clean-a/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/orange-clean-a/metallic.ktx2",
+            "height": "assets/street-hex/mid/orange-clean-a/height.ktx2",
+            "ao": "assets/street-hex/mid/orange-clean-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/ec3292d7c59d62908dd810a5671ec2d56dfae1498ed94b9b3983a81ba1191016.ktx2"
+          }
+        },
+        {
+          "id": "orange-clean-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange-clean-b/basecolor.png",
+            "normal": "assets/street-hex/mid/orange-clean-b/normal.png",
+            "roughness": "assets/street-hex/mid/orange-clean-b/roughness.png",
+            "metallic": "assets/street-hex/mid/orange-clean-b/metallic.png",
+            "height": "assets/street-hex/mid/orange-clean-b/height.png",
+            "ao": "assets/street-hex/mid/orange-clean-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/8f8b77c57568ee5a7b82ed6e99b6469290a7a50ec8af12ddc0f868743d83b132.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/orange-clean-b/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/orange-clean-b/normal.ktx2",
+            "roughness": "assets/street-hex/mid/orange-clean-b/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/orange-clean-b/metallic.ktx2",
+            "height": "assets/street-hex/mid/orange-clean-b/height.ktx2",
+            "ao": "assets/street-hex/mid/orange-clean-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/8f8b77c57568ee5a7b82ed6e99b6469290a7a50ec8af12ddc0f868743d83b132.ktx2"
+          }
+        },
+        {
+          "id": "orange-stained-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange-stained-a/basecolor.png",
+            "normal": "assets/street-hex/mid/orange-stained-a/normal.png",
+            "roughness": "assets/street-hex/mid/orange-stained-a/roughness.png",
+            "metallic": "assets/street-hex/mid/orange-stained-a/metallic.png",
+            "height": "assets/street-hex/mid/orange-stained-a/height.png",
+            "ao": "assets/street-hex/mid/orange-stained-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/495005eaad67c9a11db64845f01fa4446f10e91e5e0ba723547a58764e81683b.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/orange-stained-a/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/orange-stained-a/normal.ktx2",
+            "roughness": "assets/street-hex/mid/orange-stained-a/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/orange-stained-a/metallic.ktx2",
+            "height": "assets/street-hex/mid/orange-stained-a/height.ktx2",
+            "ao": "assets/street-hex/mid/orange-stained-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/495005eaad67c9a11db64845f01fa4446f10e91e5e0ba723547a58764e81683b.ktx2"
+          }
+        },
+        {
+          "id": "orange-stained-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange-stained-b/basecolor.png",
+            "normal": "assets/street-hex/mid/orange-stained-b/normal.png",
+            "roughness": "assets/street-hex/mid/orange-stained-b/roughness.png",
+            "metallic": "assets/street-hex/mid/orange-stained-b/metallic.png",
+            "height": "assets/street-hex/mid/orange-stained-b/height.png",
+            "ao": "assets/street-hex/mid/orange-stained-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/9e04c722535bd3b6cbd749de4b5c3ad21e879366dd85072ffcecf62ffae33371.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/orange-stained-b/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/orange-stained-b/normal.ktx2",
+            "roughness": "assets/street-hex/mid/orange-stained-b/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/orange-stained-b/metallic.ktx2",
+            "height": "assets/street-hex/mid/orange-stained-b/height.ktx2",
+            "ao": "assets/street-hex/mid/orange-stained-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/9e04c722535bd3b6cbd749de4b5c3ad21e879366dd85072ffcecf62ffae33371.ktx2"
+          }
+        },
+        {
+          "id": "orange-cracked-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange-cracked-a/basecolor.png",
+            "normal": "assets/street-hex/mid/orange-cracked-a/normal.png",
+            "roughness": "assets/street-hex/mid/orange-cracked-a/roughness.png",
+            "metallic": "assets/street-hex/mid/orange-cracked-a/metallic.png",
+            "height": "assets/street-hex/mid/orange-cracked-a/height.png",
+            "ao": "assets/street-hex/mid/orange-cracked-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/43c62f96d9695586f0fb2ed6a0dd00ca4d2d0928471d44c09c7212b66dc7361d.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/orange-cracked-a/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/orange-cracked-a/normal.ktx2",
+            "roughness": "assets/street-hex/mid/orange-cracked-a/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/orange-cracked-a/metallic.ktx2",
+            "height": "assets/street-hex/mid/orange-cracked-a/height.ktx2",
+            "ao": "assets/street-hex/mid/orange-cracked-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/43c62f96d9695586f0fb2ed6a0dd00ca4d2d0928471d44c09c7212b66dc7361d.ktx2"
+          }
+        },
+        {
+          "id": "orange-cracked-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange-cracked-b/basecolor.png",
+            "normal": "assets/street-hex/mid/orange-cracked-b/normal.png",
+            "roughness": "assets/street-hex/mid/orange-cracked-b/roughness.png",
+            "metallic": "assets/street-hex/mid/orange-cracked-b/metallic.png",
+            "height": "assets/street-hex/mid/orange-cracked-b/height.png",
+            "ao": "assets/street-hex/mid/orange-cracked-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/fc631399762c6ed891e491a08acc0820e01518bd5fe107ebfac1bacbc64784a5.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/orange-cracked-b/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/orange-cracked-b/normal.ktx2",
+            "roughness": "assets/street-hex/mid/orange-cracked-b/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/orange-cracked-b/metallic.ktx2",
+            "height": "assets/street-hex/mid/orange-cracked-b/height.ktx2",
+            "ao": "assets/street-hex/mid/orange-cracked-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/fc631399762c6ed891e491a08acc0820e01518bd5fe107ebfac1bacbc64784a5.ktx2"
+          }
+        },
+        {
+          "id": "orange-patched-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange-patched-a/basecolor.png",
+            "normal": "assets/street-hex/mid/orange-patched-a/normal.png",
+            "roughness": "assets/street-hex/mid/orange-patched-a/roughness.png",
+            "metallic": "assets/street-hex/mid/orange-patched-a/metallic.png",
+            "height": "assets/street-hex/mid/orange-patched-a/height.png",
+            "ao": "assets/street-hex/mid/orange-patched-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/db6822d43006974626940144be5a39f6c637d5ec8743d11f68e5218793399089.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/orange-patched-a/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/orange-patched-a/normal.ktx2",
+            "roughness": "assets/street-hex/mid/orange-patched-a/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/orange-patched-a/metallic.ktx2",
+            "height": "assets/street-hex/mid/orange-patched-a/height.ktx2",
+            "ao": "assets/street-hex/mid/orange-patched-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/db6822d43006974626940144be5a39f6c637d5ec8743d11f68e5218793399089.ktx2"
+          }
+        },
+        {
+          "id": "orange-patched-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.385640646
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1182
+          ],
+          "maps": {
+            "basecolor": "assets/street-hex/mid/orange-patched-b/basecolor.png",
+            "normal": "assets/street-hex/mid/orange-patched-b/normal.png",
+            "roughness": "assets/street-hex/mid/orange-patched-b/roughness.png",
+            "metallic": "assets/street-hex/mid/orange-patched-b/metallic.png",
+            "height": "assets/street-hex/mid/orange-patched-b/height.png",
+            "ao": "assets/street-hex/mid/orange-patched-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/89d9274feab4242b77321bd33856268e31f475ccc0a90411b173ebf733920995.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-hex/mid/orange-patched-b/basecolor.ktx2",
+            "normal": "assets/street-hex/mid/orange-patched-b/normal.ktx2",
+            "roughness": "assets/street-hex/mid/orange-patched-b/roughness.ktx2",
+            "metallic": "assets/street-hex/mid/orange-patched-b/metallic.ktx2",
+            "height": "assets/street-hex/mid/orange-patched-b/height.ktx2",
+            "ao": "assets/street-hex/mid/orange-patched-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/89d9274feab4242b77321bd33856268e31f475ccc0a90411b173ebf733920995.ktx2"
           }
         }
       ]
@@ -28689,6 +29621,272 @@
             "height": "assets/e6-floor/high_rich/grey-stone/height.ktx2",
             "ao": "assets/e6-floor/high_rich/grey-stone/ao.ktx2",
             "metallicRoughness": "assets/metallic-roughness/dcbda0108676c3bed431c82dcd31fe92c0ebd99745447333f0fb0b16548c758c.ktx2"
+          }
+        }
+      ]
+    },
+    "cyberpunk/street-terracotta/poor": {
+      "key": "cyberpunk/street-terracotta/poor",
+      "alignment": "tile",
+      "tiling": {
+        "worldSize": [
+          1.2,
+          1.2
+        ]
+      },
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "clean-a",
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-terracotta/poor/clean-a/basecolor.png",
+            "normal": "assets/street-terracotta/poor/clean-a/normal.png",
+            "roughness": "assets/street-terracotta/poor/clean-a/roughness.png",
+            "metallic": "assets/street-terracotta/poor/clean-a/metallic.png",
+            "height": "assets/street-terracotta/poor/clean-a/height.png",
+            "ao": "assets/street-terracotta/poor/clean-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/88fba32fa43ed3f133b9c58ad0f016dda89d497447d2005b5461d0baff1bd67e.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-terracotta/poor/clean-a/basecolor.ktx2",
+            "normal": "assets/street-terracotta/poor/clean-a/normal.ktx2",
+            "roughness": "assets/street-terracotta/poor/clean-a/roughness.ktx2",
+            "metallic": "assets/street-terracotta/poor/clean-a/metallic.ktx2",
+            "height": "assets/street-terracotta/poor/clean-a/height.ktx2",
+            "ao": "assets/street-terracotta/poor/clean-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/88fba32fa43ed3f133b9c58ad0f016dda89d497447d2005b5461d0baff1bd67e.ktx2"
+          }
+        },
+        {
+          "id": "clean-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-terracotta/poor/clean-b/basecolor.png",
+            "normal": "assets/street-terracotta/poor/clean-b/normal.png",
+            "roughness": "assets/street-terracotta/poor/clean-b/roughness.png",
+            "metallic": "assets/street-terracotta/poor/clean-b/metallic.png",
+            "height": "assets/street-terracotta/poor/clean-b/height.png",
+            "ao": "assets/street-terracotta/poor/clean-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/ff0b28eeb95d5d68884161d9c3ff41334c198d1563f678f0d8a1876e8de08c45.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-terracotta/poor/clean-b/basecolor.ktx2",
+            "normal": "assets/street-terracotta/poor/clean-b/normal.ktx2",
+            "roughness": "assets/street-terracotta/poor/clean-b/roughness.ktx2",
+            "metallic": "assets/street-terracotta/poor/clean-b/metallic.ktx2",
+            "height": "assets/street-terracotta/poor/clean-b/height.ktx2",
+            "ao": "assets/street-terracotta/poor/clean-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/ff0b28eeb95d5d68884161d9c3ff41334c198d1563f678f0d8a1876e8de08c45.ktx2"
+          }
+        },
+        {
+          "id": "stained-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-terracotta/poor/stained-a/basecolor.png",
+            "normal": "assets/street-terracotta/poor/stained-a/normal.png",
+            "roughness": "assets/street-terracotta/poor/stained-a/roughness.png",
+            "metallic": "assets/street-terracotta/poor/stained-a/metallic.png",
+            "height": "assets/street-terracotta/poor/stained-a/height.png",
+            "ao": "assets/street-terracotta/poor/stained-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/3a445aa113da4c5c3acab0e88034988e86a6082889d2f6277b7871dd92fc8ed4.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-terracotta/poor/stained-a/basecolor.ktx2",
+            "normal": "assets/street-terracotta/poor/stained-a/normal.ktx2",
+            "roughness": "assets/street-terracotta/poor/stained-a/roughness.ktx2",
+            "metallic": "assets/street-terracotta/poor/stained-a/metallic.ktx2",
+            "height": "assets/street-terracotta/poor/stained-a/height.ktx2",
+            "ao": "assets/street-terracotta/poor/stained-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/3a445aa113da4c5c3acab0e88034988e86a6082889d2f6277b7871dd92fc8ed4.ktx2"
+          }
+        },
+        {
+          "id": "stained-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-terracotta/poor/stained-b/basecolor.png",
+            "normal": "assets/street-terracotta/poor/stained-b/normal.png",
+            "roughness": "assets/street-terracotta/poor/stained-b/roughness.png",
+            "metallic": "assets/street-terracotta/poor/stained-b/metallic.png",
+            "height": "assets/street-terracotta/poor/stained-b/height.png",
+            "ao": "assets/street-terracotta/poor/stained-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/c1d127048471aee0837e602a917364cd4536c8bbfdf6b9edc4cc91b50cadafa8.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-terracotta/poor/stained-b/basecolor.ktx2",
+            "normal": "assets/street-terracotta/poor/stained-b/normal.ktx2",
+            "roughness": "assets/street-terracotta/poor/stained-b/roughness.ktx2",
+            "metallic": "assets/street-terracotta/poor/stained-b/metallic.ktx2",
+            "height": "assets/street-terracotta/poor/stained-b/height.ktx2",
+            "ao": "assets/street-terracotta/poor/stained-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/c1d127048471aee0837e602a917364cd4536c8bbfdf6b9edc4cc91b50cadafa8.ktx2"
+          }
+        },
+        {
+          "id": "cracked-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-terracotta/poor/cracked-a/basecolor.png",
+            "normal": "assets/street-terracotta/poor/cracked-a/normal.png",
+            "roughness": "assets/street-terracotta/poor/cracked-a/roughness.png",
+            "metallic": "assets/street-terracotta/poor/cracked-a/metallic.png",
+            "height": "assets/street-terracotta/poor/cracked-a/height.png",
+            "ao": "assets/street-terracotta/poor/cracked-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/7d2f3ea353695fc40f2ec318a1df27c0f13be62a6ce4e657a448760c4ca434c4.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-terracotta/poor/cracked-a/basecolor.ktx2",
+            "normal": "assets/street-terracotta/poor/cracked-a/normal.ktx2",
+            "roughness": "assets/street-terracotta/poor/cracked-a/roughness.ktx2",
+            "metallic": "assets/street-terracotta/poor/cracked-a/metallic.ktx2",
+            "height": "assets/street-terracotta/poor/cracked-a/height.ktx2",
+            "ao": "assets/street-terracotta/poor/cracked-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/7d2f3ea353695fc40f2ec318a1df27c0f13be62a6ce4e657a448760c4ca434c4.ktx2"
+          }
+        },
+        {
+          "id": "cracked-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-terracotta/poor/cracked-b/basecolor.png",
+            "normal": "assets/street-terracotta/poor/cracked-b/normal.png",
+            "roughness": "assets/street-terracotta/poor/cracked-b/roughness.png",
+            "metallic": "assets/street-terracotta/poor/cracked-b/metallic.png",
+            "height": "assets/street-terracotta/poor/cracked-b/height.png",
+            "ao": "assets/street-terracotta/poor/cracked-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/e9c37560e1c15b6a79ed06ca6539cf7c5ad81c25142a81da7e17b19dbaf534a8.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-terracotta/poor/cracked-b/basecolor.ktx2",
+            "normal": "assets/street-terracotta/poor/cracked-b/normal.ktx2",
+            "roughness": "assets/street-terracotta/poor/cracked-b/roughness.ktx2",
+            "metallic": "assets/street-terracotta/poor/cracked-b/metallic.ktx2",
+            "height": "assets/street-terracotta/poor/cracked-b/height.ktx2",
+            "ao": "assets/street-terracotta/poor/cracked-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/e9c37560e1c15b6a79ed06ca6539cf7c5ad81c25142a81da7e17b19dbaf534a8.ktx2"
+          }
+        },
+        {
+          "id": "patched-a",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-terracotta/poor/patched-a/basecolor.png",
+            "normal": "assets/street-terracotta/poor/patched-a/normal.png",
+            "roughness": "assets/street-terracotta/poor/patched-a/roughness.png",
+            "metallic": "assets/street-terracotta/poor/patched-a/metallic.png",
+            "height": "assets/street-terracotta/poor/patched-a/height.png",
+            "ao": "assets/street-terracotta/poor/patched-a/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/056dc57e34c58b66380e5ab28112adbd6fc55a9e4e10461817b75775605b2cb1.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-terracotta/poor/patched-a/basecolor.ktx2",
+            "normal": "assets/street-terracotta/poor/patched-a/normal.ktx2",
+            "roughness": "assets/street-terracotta/poor/patched-a/roughness.ktx2",
+            "metallic": "assets/street-terracotta/poor/patched-a/metallic.ktx2",
+            "height": "assets/street-terracotta/poor/patched-a/height.ktx2",
+            "ao": "assets/street-terracotta/poor/patched-a/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/056dc57e34c58b66380e5ab28112adbd6fc55a9e4e10461817b75775605b2cb1.ktx2"
+          }
+        },
+        {
+          "id": "patched-b",
+          "tiling": {
+            "worldSize": [
+              1.2,
+              1.2
+            ]
+          },
+          "class": "prepared",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "maps": {
+            "basecolor": "assets/street-terracotta/poor/patched-b/basecolor.png",
+            "normal": "assets/street-terracotta/poor/patched-b/normal.png",
+            "roughness": "assets/street-terracotta/poor/patched-b/roughness.png",
+            "metallic": "assets/street-terracotta/poor/patched-b/metallic.png",
+            "height": "assets/street-terracotta/poor/patched-b/height.png",
+            "ao": "assets/street-terracotta/poor/patched-b/ao.png",
+            "metallicRoughness": "assets/metallic-roughness/afc410f424dbda56081fe252a6e7f4c703ee80af31fed51cfc554c4951570169.png"
+          },
+          "ktx2": {
+            "basecolor": "assets/street-terracotta/poor/patched-b/basecolor.ktx2",
+            "normal": "assets/street-terracotta/poor/patched-b/normal.ktx2",
+            "roughness": "assets/street-terracotta/poor/patched-b/roughness.ktx2",
+            "metallic": "assets/street-terracotta/poor/patched-b/metallic.ktx2",
+            "height": "assets/street-terracotta/poor/patched-b/height.ktx2",
+            "ao": "assets/street-terracotta/poor/patched-b/ao.ktx2",
+            "metallicRoughness": "assets/metallic-roughness/afc410f424dbda56081fe252a6e7f4c703ee80af31fed51cfc554c4951570169.ktx2"
           }
         }
       ]

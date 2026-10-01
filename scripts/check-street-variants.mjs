@@ -2,7 +2,7 @@ import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} fro
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p))),hash=p=>createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
 const b=read('bindings/street-variants.json'),base=read(b.baseBinding.path),theme=read('themes/cyberpunk/theme.json');
 const validate=new Ajv2020({strict:true}).compile(read('schema/street-variants.schema.json'));assert(validate(b),JSON.stringify(validate.errors));assert.equal(hash(b.baseBinding.path),b.baseBinding.sha256);
-for(const[id,set]of Object.entries(b.surfaces)){assert(base.surfaces[id],id);assert(b.sets[set],set);}
+for(const[id,set]of Object.entries(b.surfaces)){assert(base.surfaces[id],id);assert(b.sets[set],set);if(b.sets[set].selection.unit==='world-cell'){assert.equal(base.surfaces[id].uv.mode,'world-xz',id+': world-cell family needs confirmed metric sampling');assert.deepEqual(base.surfaces[id].uv.scale,b.sets[set].worldSize,id+': native and catalog world scales differ');}}
 const used=new Set();
 for(const[name,set]of Object.entries(b.sets)){
  assert.equal(new Set(set.variants.map(v=>v.id)).size,set.variants.length);assert(set.variants.some(v=>v.id===set.selection.fallback));assert(Math.abs(set.variants.reduce((s,v)=>s+v.weight,0)-1)<1e-9);

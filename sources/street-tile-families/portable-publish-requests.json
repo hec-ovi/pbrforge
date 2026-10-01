@@ -1,0 +1,722 @@
+[
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "grey-clean-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "grey street tiles; clean a. Intact construction with restrained local wipe and sparse fine abrasive hairlines; no major damage. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/grey-clean-a/basecolor.png",
+      "normal": "prepared/grey-clean-a/normal.png",
+      "roughness": "prepared/grey-clean-a/roughness.png",
+      "metallic": "prepared/grey-clean-a/metallic.png",
+      "height": "prepared/grey-clean-a/height.png",
+      "ao": "prepared/grey-clean-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "grey-clean-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "grey street tiles; clean b. Intact construction with restrained local wipe and sparse fine abrasive hairlines; no major damage. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/grey-clean-b/basecolor.png",
+      "normal": "prepared/grey-clean-b/normal.png",
+      "roughness": "prepared/grey-clean-b/roughness.png",
+      "metallic": "prepared/grey-clean-b/metallic.png",
+      "height": "prepared/grey-clean-b/height.png",
+      "ao": "prepared/grey-clean-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "grey-stained-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "grey street tiles; stained a. Two irregular oil/residue islands, independent dull scuff island, light boundary dirt and local suppressed hex ring relief. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/grey-stained-a/basecolor.png",
+      "normal": "prepared/grey-stained-a/normal.png",
+      "roughness": "prepared/grey-stained-a/roughness.png",
+      "metallic": "prepared/grey-stained-a/metallic.png",
+      "height": "prepared/grey-stained-a/height.png",
+      "ao": "prepared/grey-stained-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "grey-stained-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "grey street tiles; stained b. Two irregular oil/residue islands, independent dull scuff island, light boundary dirt and local suppressed hex ring relief. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/grey-stained-b/basecolor.png",
+      "normal": "prepared/grey-stained-b/normal.png",
+      "roughness": "prepared/grey-stained-b/roughness.png",
+      "metallic": "prepared/grey-stained-b/metallic.png",
+      "height": "prepared/grey-stained-b/height.png",
+      "ao": "prepared/grey-stained-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "grey-cracked-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "grey street tiles; cracked a. Localized branching cracks in selected tile faces tied to their own joints, rough chipped lips and residue at affected edges. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/grey-cracked-a/basecolor.png",
+      "normal": "prepared/grey-cracked-a/normal.png",
+      "roughness": "prepared/grey-cracked-a/roughness.png",
+      "metallic": "prepared/grey-cracked-a/metallic.png",
+      "height": "prepared/grey-cracked-a/height.png",
+      "ao": "prepared/grey-cracked-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "grey-cracked-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "grey street tiles; cracked b. Localized branching cracks in selected tile faces tied to their own joints, rough chipped lips and residue at affected edges. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/grey-cracked-b/basecolor.png",
+      "normal": "prepared/grey-cracked-b/normal.png",
+      "roughness": "prepared/grey-cracked-b/roughness.png",
+      "metallic": "prepared/grey-cracked-b/metallic.png",
+      "height": "prepared/grey-cracked-b/height.png",
+      "ao": "prepared/grey-cracked-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "grey-patched-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "grey street tiles; patched a. Selected complete tiles/modules replaced or resealed with fresh pigment/gloss and localized new grout, preserving existing joint alignment. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/grey-patched-a/basecolor.png",
+      "normal": "prepared/grey-patched-a/normal.png",
+      "roughness": "prepared/grey-patched-a/roughness.png",
+      "metallic": "prepared/grey-patched-a/metallic.png",
+      "height": "prepared/grey-patched-a/height.png",
+      "ao": "prepared/grey-patched-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "grey-patched-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "grey street tiles; patched b. Selected complete tiles/modules replaced or resealed with fresh pigment/gloss and localized new grout, preserving existing joint alignment. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/grey-patched-b/basecolor.png",
+      "normal": "prepared/grey-patched-b/normal.png",
+      "roughness": "prepared/grey-patched-b/roughness.png",
+      "metallic": "prepared/grey-patched-b/metallic.png",
+      "height": "prepared/grey-patched-b/height.png",
+      "ao": "prepared/grey-patched-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "orange-clean-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "orange street tiles; clean a. Intact construction with restrained local wipe and sparse fine abrasive hairlines; no major damage. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/orange-clean-a/basecolor.png",
+      "normal": "prepared/orange-clean-a/normal.png",
+      "roughness": "prepared/orange-clean-a/roughness.png",
+      "metallic": "prepared/orange-clean-a/metallic.png",
+      "height": "prepared/orange-clean-a/height.png",
+      "ao": "prepared/orange-clean-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "orange-clean-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "orange street tiles; clean b. Intact construction with restrained local wipe and sparse fine abrasive hairlines; no major damage. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/orange-clean-b/basecolor.png",
+      "normal": "prepared/orange-clean-b/normal.png",
+      "roughness": "prepared/orange-clean-b/roughness.png",
+      "metallic": "prepared/orange-clean-b/metallic.png",
+      "height": "prepared/orange-clean-b/height.png",
+      "ao": "prepared/orange-clean-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "orange-stained-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "orange street tiles; stained a. Two irregular oil/residue islands, independent dull scuff island, light boundary dirt and local suppressed hex ring relief. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/orange-stained-a/basecolor.png",
+      "normal": "prepared/orange-stained-a/normal.png",
+      "roughness": "prepared/orange-stained-a/roughness.png",
+      "metallic": "prepared/orange-stained-a/metallic.png",
+      "height": "prepared/orange-stained-a/height.png",
+      "ao": "prepared/orange-stained-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "orange-stained-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "orange street tiles; stained b. Two irregular oil/residue islands, independent dull scuff island, light boundary dirt and local suppressed hex ring relief. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/orange-stained-b/basecolor.png",
+      "normal": "prepared/orange-stained-b/normal.png",
+      "roughness": "prepared/orange-stained-b/roughness.png",
+      "metallic": "prepared/orange-stained-b/metallic.png",
+      "height": "prepared/orange-stained-b/height.png",
+      "ao": "prepared/orange-stained-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "orange-cracked-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "orange street tiles; cracked a. Localized branching cracks in selected tile faces tied to their own joints, rough chipped lips and residue at affected edges. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/orange-cracked-a/basecolor.png",
+      "normal": "prepared/orange-cracked-a/normal.png",
+      "roughness": "prepared/orange-cracked-a/roughness.png",
+      "metallic": "prepared/orange-cracked-a/metallic.png",
+      "height": "prepared/orange-cracked-a/height.png",
+      "ao": "prepared/orange-cracked-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "orange-cracked-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "orange street tiles; cracked b. Localized branching cracks in selected tile faces tied to their own joints, rough chipped lips and residue at affected edges. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/orange-cracked-b/basecolor.png",
+      "normal": "prepared/orange-cracked-b/normal.png",
+      "roughness": "prepared/orange-cracked-b/roughness.png",
+      "metallic": "prepared/orange-cracked-b/metallic.png",
+      "height": "prepared/orange-cracked-b/height.png",
+      "ao": "prepared/orange-cracked-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "orange-patched-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "orange street tiles; patched a. Selected complete tiles/modules replaced or resealed with fresh pigment/gloss and localized new grout, preserving existing joint alignment. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/orange-patched-a/basecolor.png",
+      "normal": "prepared/orange-patched-a/normal.png",
+      "roughness": "prepared/orange-patched-a/roughness.png",
+      "metallic": "prepared/orange-patched-a/metallic.png",
+      "height": "prepared/orange-patched-a/height.png",
+      "ao": "prepared/orange-patched-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-hex/mid",
+    "variantId": "orange-patched-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.385640646
+      ]
+    },
+    "resolution": [
+      1024,
+      1182
+    ],
+    "description": "orange street tiles; patched b. Selected complete tiles/modules replaced or resealed with fresh pigment/gloss and localized new grout, preserving existing joint alignment. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/orange-patched-b/basecolor.png",
+      "normal": "prepared/orange-patched-b/normal.png",
+      "roughness": "prepared/orange-patched-b/roughness.png",
+      "metallic": "prepared/orange-patched-b/metallic.png",
+      "height": "prepared/orange-patched-b/height.png",
+      "ao": "prepared/orange-patched-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-terracotta/poor",
+    "variantId": "clean-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "terracotta street tiles; clean a. Intact construction with restrained local wipe and sparse fine abrasive hairlines; no major damage. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/terracotta-clean-a/basecolor.png",
+      "normal": "prepared/terracotta-clean-a/normal.png",
+      "roughness": "prepared/terracotta-clean-a/roughness.png",
+      "metallic": "prepared/terracotta-clean-a/metallic.png",
+      "height": "prepared/terracotta-clean-a/height.png",
+      "ao": "prepared/terracotta-clean-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-terracotta/poor",
+    "variantId": "clean-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "terracotta street tiles; clean b. Intact construction with restrained local wipe and sparse fine abrasive hairlines; no major damage. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/terracotta-clean-b/basecolor.png",
+      "normal": "prepared/terracotta-clean-b/normal.png",
+      "roughness": "prepared/terracotta-clean-b/roughness.png",
+      "metallic": "prepared/terracotta-clean-b/metallic.png",
+      "height": "prepared/terracotta-clean-b/height.png",
+      "ao": "prepared/terracotta-clean-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-terracotta/poor",
+    "variantId": "stained-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "terracotta street tiles; stained a. Two irregular oil/residue islands, independent dull scuff island, light boundary dirt and local suppressed hex ring relief. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/terracotta-stained-a/basecolor.png",
+      "normal": "prepared/terracotta-stained-a/normal.png",
+      "roughness": "prepared/terracotta-stained-a/roughness.png",
+      "metallic": "prepared/terracotta-stained-a/metallic.png",
+      "height": "prepared/terracotta-stained-a/height.png",
+      "ao": "prepared/terracotta-stained-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-terracotta/poor",
+    "variantId": "stained-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "terracotta street tiles; stained b. Two irregular oil/residue islands, independent dull scuff island, light boundary dirt and local suppressed hex ring relief. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/terracotta-stained-b/basecolor.png",
+      "normal": "prepared/terracotta-stained-b/normal.png",
+      "roughness": "prepared/terracotta-stained-b/roughness.png",
+      "metallic": "prepared/terracotta-stained-b/metallic.png",
+      "height": "prepared/terracotta-stained-b/height.png",
+      "ao": "prepared/terracotta-stained-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-terracotta/poor",
+    "variantId": "cracked-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "terracotta street tiles; cracked a. Localized branching cracks in selected tile faces tied to their own joints, rough chipped lips and residue at affected edges. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/terracotta-cracked-a/basecolor.png",
+      "normal": "prepared/terracotta-cracked-a/normal.png",
+      "roughness": "prepared/terracotta-cracked-a/roughness.png",
+      "metallic": "prepared/terracotta-cracked-a/metallic.png",
+      "height": "prepared/terracotta-cracked-a/height.png",
+      "ao": "prepared/terracotta-cracked-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-terracotta/poor",
+    "variantId": "cracked-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "terracotta street tiles; cracked b. Localized branching cracks in selected tile faces tied to their own joints, rough chipped lips and residue at affected edges. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/terracotta-cracked-b/basecolor.png",
+      "normal": "prepared/terracotta-cracked-b/normal.png",
+      "roughness": "prepared/terracotta-cracked-b/roughness.png",
+      "metallic": "prepared/terracotta-cracked-b/metallic.png",
+      "height": "prepared/terracotta-cracked-b/height.png",
+      "ao": "prepared/terracotta-cracked-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-terracotta/poor",
+    "variantId": "patched-a",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "terracotta street tiles; patched a. Selected complete tiles/modules replaced or resealed with fresh pigment/gloss and localized new grout, preserving existing joint alignment. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/terracotta-patched-a/basecolor.png",
+      "normal": "prepared/terracotta-patched-a/normal.png",
+      "roughness": "prepared/terracotta-patched-a/roughness.png",
+      "metallic": "prepared/terracotta-patched-a/metallic.png",
+      "height": "prepared/terracotta-patched-a/height.png",
+      "ao": "prepared/terracotta-patched-a/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  },
+  {
+    "key": "cyberpunk/street-terracotta/poor",
+    "variantId": "patched-b",
+    "alignment": "tile",
+    "tiling": {
+      "worldSize": [
+        1.2,
+        1.2
+      ]
+    },
+    "resolution": [
+      1024,
+      1024
+    ],
+    "description": "terracotta street tiles; patched b. Selected complete tiles/modules replaced or resealed with fresh pigment/gloss and localized new grout, preserving existing joint alignment. Photographic intrinsic source; independent seeded use history; isolated review candidate.",
+    "sourceMaps": {
+      "basecolor": "prepared/terracotta-patched-b/basecolor.png",
+      "normal": "prepared/terracotta-patched-b/normal.png",
+      "roughness": "prepared/terracotta-patched-b/roughness.png",
+      "metallic": "prepared/terracotta-patched-b/metallic.png",
+      "height": "prepared/terracotta-patched-b/height.png",
+      "ao": "prepared/terracotta-patched-b/ao.png"
+    },
+    "physical": {
+      "roughnessFactor": 1,
+      "metallicFactor": 0
+    },
+    "append": true,
+    "overwrite": true
+  }
+]

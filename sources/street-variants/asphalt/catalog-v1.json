@@ -1,0 +1,94 @@
+[
+  {
+    "id": "clean",
+    "condition": "clean",
+    "key": "cyberpunk/street-asphalt/mid",
+    "variant": "asphalt-clean-1",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-asphalt/mid/asphalt-clean-1/basecolor.png",
+      "normal": "assets/street-asphalt/mid/asphalt-clean-1/normal.png",
+      "roughness": "assets/street-asphalt/mid/asphalt-clean-1/roughness.png",
+      "metallic": "assets/street-asphalt/mid/asphalt-clean-1/metallic.png",
+      "height": "assets/street-asphalt/mid/asphalt-clean-1/height.png",
+      "ao": "assets/street-asphalt/mid/asphalt-clean-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/9aeafa99bf6e54476e8552944294e4e967cc557d5279422125944eec18980fe4.png"
+    }
+  },
+  {
+    "id": "stained",
+    "condition": "stained",
+    "key": "cyberpunk/street-asphalt/mid",
+    "variant": "asphalt-stained-1",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-asphalt/mid/asphalt-stained-1/basecolor.png",
+      "normal": "assets/street-asphalt/mid/asphalt-stained-1/normal.png",
+      "roughness": "assets/street-asphalt/mid/asphalt-stained-1/roughness.png",
+      "metallic": "assets/street-asphalt/mid/asphalt-stained-1/metallic.png",
+      "height": "assets/street-asphalt/mid/asphalt-stained-1/height.png",
+      "ao": "assets/street-asphalt/mid/asphalt-stained-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/a7e6c6d7e197e669de5cd5c8bac3606792b600dac3ecf267a42342a8709da169.png"
+    }
+  },
+  {
+    "id": "cracked",
+    "condition": "cracked",
+    "key": "cyberpunk/street-asphalt/mid",
+    "variant": "asphalt-cracked-1",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-asphalt/mid/asphalt-cracked-1/basecolor.png",
+      "normal": "assets/street-asphalt/mid/asphalt-cracked-1/normal.png",
+      "roughness": "assets/street-asphalt/mid/asphalt-cracked-1/roughness.png",
+      "metallic": "assets/street-asphalt/mid/asphalt-cracked-1/metallic.png",
+      "height": "assets/street-asphalt/mid/asphalt-cracked-1/height.png",
+      "ao": "assets/street-asphalt/mid/asphalt-cracked-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/b8db6a7838ffc2a06d1388ca227d52ee18e00b3ac00daeb10137dd9b0e42249b.png"
+    }
+  },
+  {
+    "id": "patched",
+    "condition": "patched",
+    "key": "cyberpunk/street-asphalt/mid",
+    "variant": "asphalt-patched-1",
+    "worldSize": [
+      2,
+      2
+    ],
+    "resolution": [
+      1024,
+      1024
+    ],
+    "maps": {
+      "basecolor": "assets/street-asphalt/mid/asphalt-patched-1/basecolor.png",
+      "normal": "assets/street-asphalt/mid/asphalt-patched-1/normal.png",
+      "roughness": "assets/street-asphalt/mid/asphalt-patched-1/roughness.png",
+      "metallic": "assets/street-asphalt/mid/asphalt-patched-1/metallic.png",
+      "height": "assets/street-asphalt/mid/asphalt-patched-1/height.png",
+      "ao": "assets/street-asphalt/mid/asphalt-patched-1/ao.png",
+      "metallicRoughness": "assets/metallic-roughness/87cca4b5a55bc92e04e65c78787f5b6cc340e9a5f12f30bcf2f4c799c2413237.png"
+    }
+  }
+]
