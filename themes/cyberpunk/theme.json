@@ -29025,33 +29025,22 @@
         },
         {
           "id": "native-cast",
-          "class": "image",
+          "class": "prepared",
           "resolution": [
             1024,
             1024
           ],
           "maps": {
-            "basecolor": "assets/concrete-monolith/mid/native-cast/basecolor.png",
-            "normal": "assets/concrete-monolith/mid/native-cast/normal.png",
-            "roughness": "assets/concrete-monolith/mid/native-cast/roughness.png",
-            "height": "assets/concrete-monolith/mid/native-cast/height.png",
-            "ao": "assets/concrete-monolith/mid/native-cast/ao.png",
-            "metallic": "assets/concrete-monolith/mid/native-cast/metallic.png",
-            "metallicRoughness": "assets/metallic-roughness/8aa08afa46080d72b3dd0187163515fb1f1268e73d12a3eea99a7b802719791a.png"
-          },
-          "ktx2": {
-            "basecolor": "assets/concrete-monolith/mid/native-cast/basecolor.ktx2",
-            "normal": "assets/concrete-monolith/mid/native-cast/normal.ktx2",
-            "roughness": "assets/concrete-monolith/mid/native-cast/roughness.ktx2",
-            "height": "assets/concrete-monolith/mid/native-cast/height.ktx2",
-            "ao": "assets/concrete-monolith/mid/native-cast/ao.ktx2",
-            "metallic": "assets/concrete-monolith/mid/native-cast/metallic.ktx2",
-            "metallicRoughness": "assets/metallic-roughness/8aa08afa46080d72b3dd0187163515fb1f1268e73d12a3eea99a7b802719791a.ktx2"
+            "basecolor": "assets/concrete-monolith/poor/cast-panel/basecolor.png",
+            "normal": "assets/concrete-monolith/poor/cast-panel/normal.png",
+            "roughness": "assets/concrete-monolith/poor/cast-panel/roughness.png",
+            "ao": "assets/concrete-monolith/poor/cast-panel/ao.png",
+            "metallic": "assets/concrete-monolith/poor/cast-panel/metallic.png"
           },
           "tiling": {
             "worldSize": [
-              4,
-              4
+              2.4,
+              2.4
             ]
           }
         },
