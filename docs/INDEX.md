@@ -1,6 +1,6 @@
 # Materials index
 
-Version: 0.22.1.
+Version: 0.23.0.
 
 | Surface | Purpose | Input / output | Dependencies |
 | --- | --- | --- | --- |
