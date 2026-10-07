@@ -1,0 +1,10 @@
+{
+  "name": "graffiti-lattice",
+  "prompt": "Pure-black tags with a bitten tower and the stencil line LATTICE EATS NAMES.",
+  "worldSizeMetres": [
+    2.0,
+    1.0
+  ],
+  "notes": "Invented. Background pure #000000. Sampled pure-black fraction 0.92. Corners [(0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]. 2048x1024.",
+  "hangs": "Service alleys behind compute halls."
+}

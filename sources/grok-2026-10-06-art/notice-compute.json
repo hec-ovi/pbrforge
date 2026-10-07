@@ -1,0 +1,9 @@
+{
+  "name": "notice-compute",
+  "prompt": "Worn A4 notice. RESIDENTIAL COMPUTE RATIONING \u2014 ZONE 4. Stamps, serial KC-4-18831, a Code 39 barcode and a QR code of that serial.",
+  "worldSizeMetres": [
+    0.21,
+    0.297
+  ],
+  "notes": "Lettering drawn in-engine so the words are exact. Opaque RGB, flat, straight-on, no frame. 1240x1754, about 1:1.414. QR payload KC-4-18831, version 1-L."
+}

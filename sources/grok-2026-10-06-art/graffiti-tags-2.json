@@ -1,0 +1,9 @@
+{
+  "name": "graffiti-tags-2",
+  "prompt": "Different hands from graffiti-tags-1, on pure black, with a stencil eye and the stencil line WHO FILED YOU?",
+  "worldSizeMetres": [
+    2.0,
+    1.0
+  ],
+  "notes": "Background is pure #000000. Stencil text is exact. Sampled pure-black fraction 0.93. Corners [(0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]. 2048x1024, 2:1, 2 m by 1 m."
+}

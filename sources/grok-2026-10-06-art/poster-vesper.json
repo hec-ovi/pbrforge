@@ -1,0 +1,10 @@
+{
+  "name": "poster-vesper",
+  "prompt": "Devotional poster for the Chapel of Vesper, a grief-storage cult. Violet and cream, a ring and a flame. The line VESPER KEEPS THE WEIGHT.",
+  "worldSizeMetres": [
+    0.6,
+    0.9
+  ],
+  "notes": "Lettering drawn in-engine so the words are exact. Opaque RGB, flat, straight-on, no frame. Invented. 1024x1536, 2:3, 0.6 m by 0.9 m.",
+  "hangs": "Stairwells and clinic waiting rooms."
+}

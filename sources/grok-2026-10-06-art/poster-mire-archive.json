@@ -1,0 +1,10 @@
+{
+  "name": "poster-mire-archive",
+  "prompt": "Dealer's poster for MIRE ARCHIVE, sellers of discarded model checkpoints. Ivory, charcoal, brass, a red wax seal. The line BUY WHAT THEY FORGOT.",
+  "worldSizeMetres": [
+    0.6,
+    0.9
+  ],
+  "notes": "Lettering drawn in-engine so the words are exact. Opaque RGB, flat, straight-on, no frame. Invented. 1024x1536, 2:3, 0.6 m by 0.9 m.",
+  "hangs": "Night-market stalls, and ironically in a quiet rich lobby."
+}

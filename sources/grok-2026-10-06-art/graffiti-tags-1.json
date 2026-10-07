@@ -1,0 +1,9 @@
+{
+  "name": "graffiti-tags-1",
+  "prompt": "Dense tags, scrawls and doodled faces in red, teal and dark marker on pure black. Scribbles, not a mural.",
+  "worldSizeMetres": [
+    2.0,
+    1.0
+  ],
+  "notes": "Background is pure #000000 so it can be keyed. Marker ink is never #000000. Sampled pure-black fraction 0.91. Corners [(0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]. 2048x1024, 2:1, 2 m by 1 m."
+}
