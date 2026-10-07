@@ -2,7 +2,7 @@
   "version": 1,
   "baseBinding": {
     "path": "bindings/street-native.json",
-    "sha256": "62d6c69d9e3a3ad3c7e7f52dd696150b832ad6e91783029a3e21a23a24bdee69"
+    "sha256": "8e922b71c68e94b61366b5b334f9e21179c3359bf7b30404b54c87184bee583d"
   },
   "textures": {
     "slab-clean-basecolor": {
@@ -3333,12 +3333,6 @@
     "district-panel-blue": "concrete-slabs",
     "district-panel-dark": "concrete-slabs",
     "district-panel-red": "red-coated-slabs",
-    "oxblood": "red-coated-slabs",
-    "district-hex": "hex-grey",
-    "district-junction-blue": "hex-grey",
-    "basalt": "hex-grey",
-    "hex-orange": "hex-orange",
-    "district-junction-yellow": "hex-orange",
-    "terracotta": "terracotta-court"
+    "oxblood": "red-coated-slabs"
   }
 }
