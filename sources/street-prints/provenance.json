@@ -1,0 +1,24 @@
+{
+  "source": "Grok image sheets (2026-10-06 art set), kept outside the repository",
+  "sha256": {
+    "kiosk-noodles": "b1a76c5b3e9ce1fde10c8b1f0f010dc7302e795935f23f11914d4a63aaf3e0df",
+    "kiosk-pawn": "140191ce7992d126ccc1edf121a28d8cba28f95bcfd12a023e4a182fa7984f86",
+    "kiosk-micro": "929f9c1b6c262ae029c38126f67749fc50de074dfc4d9caeba2c81c504f1fe7e",
+    "pizza-box-top": "c9365f93b992173f2a2d50b21eaa71e2e00821326b6652450204d15814e08a25",
+    "art-abstract": "d2c9438ef50ed53c92a597a04f01806d77d29eccc2a48b8c224a0fe9dc2e4252",
+    "poster-vesper": "5b7cbcea75e1225a6c290be8875c1a94bb841c3e39b15b45dac84655c7de8cb3",
+    "poster-mire-archive": "25b1d47e5b9b3a4e64f54275cfd775d56a107c330de13429207db98cc851075c",
+    "poster-mind-online": "f9c4bb0f579ecd512180e187a4f497e4c0c7813bd735c51036b7c1ee23491e42",
+    "ad-salt-signal": "b7e33bd48bdcf51be084f4fe255e70b5d82bb618a028449a8cd7c46399e60eba",
+    "newspaper-front": "3d9cbd19883c0fcee4ad5275575d1285d2902e9041ec0c8f5e18dd0b2e1b89f0",
+    "notice-dream-levy": "9aef49a423277842d6dc9e284e207d57374d50fa78ca74b3b21a15b78a746130",
+    "notice-compute": "3ef8835ac5cb8fb80ff2c71ae26932132b6ca2bf71bec0b2f18226f50cdd0b82",
+    "stickers-sheet": "809b1c6dd28d020a6d09922121a238f07b2af556a96f3d4f5f1cc5b4fb8036ef",
+    "ad-neural-link": "23a9eac71e5ef8b88ffc219bd233d2c7e788de1de2ab254730988b2b55734aa6",
+    "ad-upload": "0d4079ef9256738f060c7a52689aec01525530ad597266970e0658729d1ab4d7",
+    "poster-trust-model": "45573ec17f4cfae570ea0ce092c20e36fc3cda274234f9088d3f69bbd658a8ac",
+    "poster-alignment": "fa7232e3c9c3d44f186d6eeac81b7629414a414c2b6a5988658c9ee228382d86",
+    "poster-thoughts-data": "b3de0205364a7f1e11df4db00f876201708c79d8b7872abea47e394c8875cb4a",
+    "art-ink": "0c3377eb57f7a38f122c7ac9a88b02da4bc8c1df82042c0bb09bb5715e8c9927"
+  }
+}

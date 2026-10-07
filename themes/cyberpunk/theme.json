@@ -31432,6 +31432,34 @@
           }
         }
       ]
+    },
+    "cyberpunk/street-prints/poor": {
+      "key": "cyberpunk/street-prints/poor",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        1
+      ],
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "variants": [
+        {
+          "id": "sheet",
+          "class": "plate",
+          "resolution": [
+            2048,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/street-prints/poor/sheet/basecolor.png",
+            "normal": "assets/street-prints/poor/sheet/normal.png",
+            "roughness": "assets/street-prints/poor/sheet/roughness.png",
+            "metallic": "assets/street-prints/poor/sheet/metallic.png"
+          }
+        }
+      ]
     }
   }
 }
