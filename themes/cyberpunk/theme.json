@@ -29890,6 +29890,36 @@
           }
         }
       ]
+    },
+    "cyberpunk/graffiti-atlas/poor": {
+      "key": "cyberpunk/graffiti-atlas/poor",
+      "alignment": "exact",
+      "aspect": [
+        1,
+        2
+      ],
+      "physical": {
+        "roughnessFactor": 1,
+        "metallicFactor": 0,
+        "alphaMode": "BLEND"
+      },
+      "variants": [
+        {
+          "id": "markers",
+          "class": "plate",
+          "resolution": [
+            1024,
+            2048
+          ],
+          "maps": {
+            "basecolor": "assets/graffiti-atlas/poor/markers/basecolor.png",
+            "normal": "assets/graffiti-atlas/poor/markers/normal.png",
+            "roughness": "assets/graffiti-atlas/poor/markers/roughness.png",
+            "metallic": "assets/graffiti-atlas/poor/markers/metallic.png",
+            "opacity": "assets/graffiti-atlas/poor/markers/opacity.png"
+          }
+        }
+      ]
     }
   }
 }

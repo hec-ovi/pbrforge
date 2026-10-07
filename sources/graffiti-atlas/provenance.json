@@ -1,0 +1,44 @@
+{
+  "key": "cyberpunk/graffiti-atlas/poor",
+  "variant": "markers",
+  "rows": [
+    {
+      "sheet": "graffiti-marker-1",
+      "row": 0,
+      "sha256": "3d3774f3d3380d6c431e0dcdb1c6918608d69b7db27a40b2406747a2b5e3ef7e",
+      "worldSizeMetres": [
+        2,
+        1
+      ]
+    },
+    {
+      "sheet": "graffiti-marker-2",
+      "row": 1,
+      "sha256": "ed93efcc6f69c4892bfb1bc432d5a8dec3afbc60a0763aaa0c96e912aaff2c91",
+      "worldSizeMetres": [
+        2,
+        1
+      ]
+    },
+    {
+      "sheet": "graffiti-tags-1",
+      "row": 2,
+      "sha256": "e828cbf63342135b9c30044e243b38632167dbf0a0b34257d88cc5708ebce200",
+      "worldSizeMetres": [
+        2,
+        1
+      ]
+    },
+    {
+      "sheet": "graffiti-tags-2",
+      "row": 3,
+      "sha256": "0285eea28c69c627f92bba8d0ea562af8667b2cb288df9f4753a08e1731a0b8f",
+      "worldSizeMetres": [
+        2,
+        1
+      ]
+    }
+  ],
+  "source": "Grok image sheets painted on pure #000000 (2026-10-06 art set), kept outside the repository",
+  "keyed": "coverage from the brightest channel, smoothstep 10..80 of 255; colour unmixed from black"
+}
