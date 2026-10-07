@@ -13,7 +13,7 @@
       },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "maintained" },
-        "paving": { "kind": "street-paving", "variant": "maintained" },
+        "paving": { "kind": "street-precast-maintained", "variant": "finish" },
         "border": { "kind": "street-border", "variant": "maintained" },
         "curb": { "kind": "street-curb", "variant": "maintained" }
       }
@@ -30,7 +30,7 @@
       },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "salvaged" },
-        "paving": { "kind": "street-paving", "variant": "salvaged" },
+        "paving": { "kind": "street-precast-salvaged", "variant": "finish" },
         "border": { "kind": "street-border", "variant": "salvaged" },
         "curb": { "kind": "street-curb", "variant": "salvaged" }
       }
@@ -47,7 +47,7 @@
       },
       "surfaces": {
         "road": { "kind": "street-road", "variant": "industrial" },
-        "paving": { "kind": "street-paving", "variant": "industrial" },
+        "paving": { "kind": "street-precast-industrial", "variant": "finish" },
         "border": { "kind": "street-border", "variant": "industrial" },
         "curb": { "kind": "street-curb", "variant": "industrial" }
       }
