@@ -2,7 +2,7 @@
 
 Purpose: generates and stores themed PBR material sets that callers resolve by key.
 
-Version: 0.24.0, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
+Version: 0.25.0, matching `urbe-materials`. Package exports, schemas, catalog keys and consumer bindings are public boundaries. Breaking changes require orchestrator coordination.
 
 ## API
 
@@ -74,6 +74,7 @@ Each variant keeps `maps` as map names to PNG path strings and publishes compres
 | [Street markings](bindings/street-markings.json) | [Schema](schema/street-markings.schema.json) | White and dark-orange coatings; geometry owns marking silhouettes. |
 | [Scenic rooms](bindings/window-room-surfaces.json) | [Schema](schema/window-room-surfaces.schema.json) | Five receiving faces and back-image pools for office, apartment and lobby. Preserve aspect when cropping scenic plates. |
 | [Hydrology](bindings/atlas-hydrology.json) | [Schema](schema/atlas-hydrology-bindings.schema.json) | Explicit water.lagoon, water.river and water.sea-coast key/variant pairs. |
+| [Street prints](bindings/street-prints.json) | none | The `cyberpunk/street-prints/poor#sheet` plate: each named print (kiosk fascias, posters, notices, ads, newspaper, pizza lid, art, stickers) as pixels, UV `[u0, v0, u1, v1]` with v = 0 at the top, and its size in metres. |
 
 Resolve named bindings without guessing paths or substituting unrelated entries. Materials owns the published catalog and bindings; consumers own geometry and rendering. The catalog schema has no output-version or revision field; these remain [open decisions](docs/ISSUES.md).
 
