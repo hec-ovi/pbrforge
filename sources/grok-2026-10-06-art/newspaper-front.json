@@ -1,0 +1,10 @@
+{
+  "name": "newspaper-front",
+  "prompt": "Photographed cheap tabloid, THE KLAMM LEDGER. Headlines: MODEL RULES ON A CASE THAT WAS NEVER FILED; ZONE 4 LOSES ANOTHER HOUR; VESPER TAKES IN MORE THAN IT CAN HOLD. Grainy tower photo.",
+  "worldSizeMetres": [
+    0.29,
+    0.435
+  ],
+  "notes": "Imagine image_gen. Masthead and the three headlines are the real words. The narrow body columns are printer's garbage, not sentences. An ink splatter sits under the masthead. Frame is 832x1248, 2:3, because that is the generator's portrait; the ask was 1:1.4. Physical size follows the pixels: 0.29 m by 0.435 m.",
+  "hangs": "Cafe counters, lobby benches, the floor of a lift."
+}

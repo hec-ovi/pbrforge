@@ -1,0 +1,10 @@
+{
+  "name": "stickers-sheet",
+  "prompt": "Twenty separate stickers on pure black: Halcyon, Salt & Signal, Never Die, Mire, Vesper, Dream Levy, Who Filed You?, Curfew, Doss the file-pet, Null Set, Soft Leak, Klamm Ledger, Parcel Pie, Alignment, Zone 4, Still Open, the Eye, Training Data, Second Broth, Mind Online.",
+  "worldSizeMetres": [
+    1.0,
+    1.0
+  ],
+  "notes": "Drawn so every label is exact and the gaps are pure #000000. Sampled black fraction 0.41. Corners [(0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]. 2048x2048.",
+  "hangs": "Wardrobe pods, lockers, stair doors."
+}

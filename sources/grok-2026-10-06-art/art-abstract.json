@@ -1,0 +1,9 @@
+{
+  "name": "art-abstract",
+  "prompt": "Calm abstract for a kind A lobby: large fields of warm ivory and soft charcoal, one brass accent. No text, no frame.",
+  "worldSizeMetres": [
+    0.8,
+    0.8
+  ],
+  "notes": "Generated painting, opaque RGB PNG. The brief gave no metre size; 0.8 m matches the ink wash. 1024x1024."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "art-ink",
+  "prompt": "Minimal ink-wash on warm paper filling the frame: a few dry gray towers in the lower third, thin rain strokes, mostly empty paper. No text, no seal.",
+  "worldSizeMetres": [
+    0.8,
+    0.8
+  ],
+  "notes": "Generated painting, then saved as opaque RGB PNG. 1024x1024, 1:1, 0.8 m by 0.8 m. No lettering."
+}

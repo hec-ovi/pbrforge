@@ -1,0 +1,10 @@
+{
+  "name": "kiosk-noodles",
+  "prompt": "Lit fascia, SECOND BROTH, BOWL 4 IS THE ONE. Noodle stall.",
+  "worldSizeMetres": [
+    2.0,
+    1.0
+  ],
+  "notes": "Imagine image_gen. The two required lines are exact. Extra stall clutter is also in the photo: a hand-lettered PORK BONE / CHICKEN / SPICY board and price tickets. 1408x704, 2:1, not the asked 4:1.",
+  "hangs": "Street kiosk fascia, noodle stall."
+}

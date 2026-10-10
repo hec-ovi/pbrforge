@@ -1,0 +1,9 @@
+{
+  "name": "ad-upload",
+  "prompt": "Garish peeling ad for a cheap consciousness-backup clinic, SECOND LIFE CLINIC, the lines NEVER DIE. and MONTHLY PLANS.",
+  "worldSizeMetres": [
+    0.6,
+    0.9
+  ],
+  "notes": "Lettering drawn in-engine so the words are exact. Opaque RGB, flat, straight-on, no frame. Peel shows the paper under the ink. 1024x1536, 2:3, 0.6 m by 0.9 m."
+}

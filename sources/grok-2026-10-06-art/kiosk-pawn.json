@@ -1,0 +1,10 @@
+{
+  "name": "kiosk-pawn",
+  "prompt": "Lit fascia, VOSS & DAUGHTER, MEND / PAWN. Pawn and repair.",
+  "worldSizeMetres": [
+    2.0,
+    1.0
+  ],
+  "notes": "Imagine image_gen. Both lines are exact. The ask was 4:1; the generator's widest frame is 2:1, so this is 1408x704 and 2.0 m by 1.0 m.",
+  "hangs": "Street kiosk fascia, pawn and repair."
+}

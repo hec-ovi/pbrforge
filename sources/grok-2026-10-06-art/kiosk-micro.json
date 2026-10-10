@@ -1,0 +1,10 @@
+{
+  "name": "kiosk-micro",
+  "prompt": "Lit fascia, STILL OPEN, MILK \u00b7 CHARGE \u00b7 ASPIRIN. 24/7 micro-store.",
+  "worldSizeMetres": [
+    2.0,
+    1.0
+  ],
+  "notes": "Imagine image_gen. Both lines are exact. A small plate reads 21-4R. 1408x704, 2:1, not the asked 4:1.",
+  "hangs": "Street kiosk fascia, all-night micro-store."
+}

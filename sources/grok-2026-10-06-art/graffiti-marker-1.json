@@ -1,0 +1,10 @@
+{
+  "name": "graffiti-marker-1",
+  "prompt": "Photographed marker and spray on pure black. Thick drips, faded tags under newer paint, doodled faces. Readable words FILE, NULL, VESPER, and WHO FILED YOU?",
+  "worldSizeMetres": [
+    2.0,
+    1.0
+  ],
+  "notes": "Imagine image_gen, then gray haze keyed to #000000. Sampled pure-black fraction 0.35. Corners [(0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]. Some under-tags are illegible paint, not required words. 1408x704, 2:1.",
+  "hangs": "Alley concrete and shutter steel."
+}

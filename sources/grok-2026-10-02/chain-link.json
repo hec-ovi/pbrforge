@@ -1,0 +1,9 @@
+{
+  "name": "chain-link",
+  "prompt": "Orthographic photograph of galvanized chain-link fence filling the square frame, woven diamond mesh on a pure black ground, even flat light, straight-on, seamless 0.6 metre tile.",
+  "worldSizeMetres": [
+    0.6,
+    0.6
+  ],
+  "notes": "Drawn, not generated, so the repeat is exact. Galvanized diamond mesh on pure black (0,0,0) for the cutout. 1024x1024 opaque RGB. Real size 0.6 m square, eight waves across, about a 75 mm mesh, for the mechanical room cage. Wires are periodic in both axes; opposite edges match by construction. A one-pixel highlight sits on the wire so it reads round. No cast shadow."
+}

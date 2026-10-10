@@ -1,0 +1,9 @@
+{
+  "name": "marble-white-grey",
+  "prompt": "Orthographic photograph of a white marble slab filling the square frame edge to edge. Soft grey veins drift across the whole surface and run off every edge, several quiet veins rather than one mark in the middle, the same pale tone on every side. Flat even studio light, matte stone, straight-on view of a one-metre slab, seamless texture photograph.",
+  "worldSizeMetres": [
+    1,
+    1
+  ],
+  "notes": "White-grey marble, soft drifting veins, flat even light, straight-on. 1024x1024 opaque RGB. Real size 1 m square for kind B floors and counters. Opposite-edge mean difference is about 3.7 left/right and 2.6 top/bottom. 2x2 shows the veins continuing without a hard seam or a single centred blot."
+}

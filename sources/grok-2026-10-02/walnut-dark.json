@@ -1,0 +1,9 @@
+{
+  "name": "walnut-dark",
+  "prompt": "Orthographic photograph of rift-sawn dark walnut veneer filling the square frame edge to edge. Every grain line is straight, parallel, and vertical, a deep even brown with only quiet fine figure, and those lines run off the top and bottom as one continuous anonymous field. Flat even studio light, the same tone on every edge, matte surface, straight-on view of a one-metre panel, seamless texture photograph.",
+  "worldSizeMetres": [
+    1,
+    1
+  ],
+  "notes": "Dark walnut veneer, straight rift-sawn grain, flat even light, straight-on. 1024x1024 opaque RGB. Real size 1 m square for kind B and the lift car walls. First attempt had repeating cathedral arches, so this is the rift-sawn retry. Opposite-edge mean difference is about 3.6 left/right and 5.8 top/bottom. 2x2 shows no seam line and no repeating arch. Fine grain will still repeat every metre."
+}

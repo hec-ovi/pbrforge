@@ -1,0 +1,10 @@
+{
+  "name": "pizza-box-top",
+  "prompt": "Greasy cardboard lid for PARCEL PIE. Line: A SLICE WITH YOUR NUMBER ON IT. Number 4091. ROW 12.",
+  "worldSizeMetres": [
+    0.4,
+    0.4
+  ],
+  "notes": "Imagine image_gen. Those four lines are exact. Also printed: DELIVERED HOT and CONSUMER #4091. 1024x1024.",
+  "hangs": "On a table, a bed, or the floor beside a capsule."
+}

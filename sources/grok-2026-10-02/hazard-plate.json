@@ -1,0 +1,9 @@
+{
+  "name": "hazard-plate",
+  "prompt": "Flat orthographic warning plate filling the frame, safety yellow and black, reading DANGER on a black header and HIGH VOLTAGE beside a lightning-bolt triangle. Even light, straight-on, 0.30 by 0.20 metre plate.",
+  "worldSizeMetres": [
+    0.3,
+    0.2
+  ],
+  "notes": "Drawn so the words are exact: DANGER, HIGH VOLTAGE. Not a generated image. 1536x1024 opaque RGB, aspect 3:2, matching 0.30 m by 0.20 m. The plate fills the frame edge to edge: black border, yellow field, black header, yellow lettering, black triangle with a yellow field and a black lightning bolt. Flat, no screws, no shadow. Use alignment exact. Height-from-brightness will treat the black border and lettering as recessed."
+}

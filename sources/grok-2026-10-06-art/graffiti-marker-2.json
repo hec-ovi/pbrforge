@@ -1,0 +1,10 @@
+{
+  "name": "graffiti-marker-2",
+  "prompt": "A second photographed graffiti wall on pure black. Large VESPER, with FILE and NULL, drips, faded layers, faces.",
+  "worldSizeMetres": [
+    2.0,
+    1.0
+  ],
+  "notes": "Imagine image_gen, gray haze keyed to #000000. Sampled pure-black fraction 0.39. Corners [(0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]. 1408x704, 2:1.",
+  "hangs": "The other side of the service alley."
+}

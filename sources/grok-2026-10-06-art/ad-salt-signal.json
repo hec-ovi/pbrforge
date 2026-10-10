@@ -1,0 +1,10 @@
+{
+  "name": "ad-salt-signal",
+  "prompt": "Peeling corner-shop ad for SALT & SIGNAL stim gum. Black and lime. The lines ONE STICK. and ONE HOUR.",
+  "worldSizeMetres": [
+    0.6,
+    0.9
+  ],
+  "notes": "Lettering drawn in-engine so the words are exact. Opaque RGB, flat, straight-on, no frame. Invented. 1024x1536, 2:3, 0.6 m by 0.9 m.",
+  "hangs": "Inside noodle bars and lift lobbies, taped at eye height."
+}

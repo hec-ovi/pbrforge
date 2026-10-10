@@ -1,0 +1,9 @@
+{
+  "name": "poster-mind-online",
+  "prompt": "State propaganda poster, sun-faded cream and teal. An eye over a lattice, a crowd of silhouettes, the line THE MIND IS ONLINE.",
+  "worldSizeMetres": [
+    0.6,
+    0.9
+  ],
+  "notes": "Lettering drawn in-engine so the words are exact. Opaque RGB, flat, straight-on, no frame. 1024x1536, 2:3, 0.6 m by 0.9 m."
+}

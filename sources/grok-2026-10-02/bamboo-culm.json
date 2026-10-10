@@ -1,0 +1,9 @@
+{
+  "name": "bamboo-culm",
+  "prompt": "Orthographic macro photograph of unrolled bamboo internode skin filling the square frame edge to edge. Fine vertical fibres cover every part of the surface, and the colour is the same green-gold mix at the left edge, the right edge, the top, and the bottom, with only small local mottling, a faint waxy bloom, and a few tiny scattered scars. Flat even light, one continuous anonymous field, seamless texture of a 16 centimetre square.",
+  "worldSizeMetres": [
+    0.16,
+    0.16
+  ],
+  "notes": "Overwrite of the culm-mat. Unrolled skin of one internode: vertical fibres, green-gold, faint bloom, tiny scars. No nodes, no gaps, no separate stalks. 1024x1024 opaque RGB. Real size 0.16 m square, about the circumference of a 5 cm culm. Large-scale row and column tone was removed on the CPU so the surface stays flat; fibre and small scars remain. After that, opposite-edge mean difference is about 4-8 left/right and 7-10 top/bottom. 2x2 shows no hard seam. A few pale bloom patches and short scars will repeat every 0.16 m."
+}
